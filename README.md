@@ -2,7 +2,7 @@
 
 A source-led static site for project-owned system reviews, article provenance, and benchmark records. Review criteria live in [REVIEW.md](REVIEW.md); metric formulas live in [METRICS.md](METRICS.md). Source inspection and measured workload outcomes are separate evidence types. The site does not calculate a composite score or rank systems.
 
-The project assessment roster is stored in [data/project-assessments.json](data/project-assessments.json). Detailed source articles are stored in [data/system-articles.json](data/system-articles.json) and companion article JSON files in `data/`. Atlas information, where retained, is attributed only as discovery metadata and is not used as a project assessment.
+Project assessment criteria and roster policy are stored in [data/project-assessments.json](data/project-assessments.json); no system roster is currently configured. Detailed source articles are stored in [data/system-articles.json](data/system-articles.json) and companion article JSON files in `data/`. Atlas information, where retained, is attributed only as discovery metadata and is not used as a project assessment.
 
 ## Requirements
 

@@ -97,7 +97,7 @@ select{font:inherit;color:var(--ink);background:var(--surface);border:1px solid 
 .article-head .lead{font:600 1.22rem/1.5 var(--serif);max-width:70ch}
 .status-line{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}
 .article-meta{font-size:.8rem;line-height:1.9;color:var(--muted);overflow-wrap:anywhere}
-.article-meta code,.assessment-row code{font:400 .76rem var(--mono);overflow-wrap:anywhere}
+.article-meta code{font:400 .76rem var(--mono);overflow-wrap:anywhere}
 .article-callout{border-left:4px solid var(--orange);background:#fff2e9;padding:16px 20px;color:#583c2b;line-height:1.65}
 .section-nav{display:flex;gap:6px;flex-wrap:wrap;padding:14px 0 24px}
 .section-nav a{font-size:.75rem;text-decoration:none;padding:7px 9px;border:1px solid #b8c3d4;color:#263a5b;background:#fff}
@@ -127,15 +127,11 @@ select{font:inherit;color:var(--ink);background:var(--surface);border:1px solid 
 .criteria-list h2{font:700 1.05rem var(--serif);letter-spacing:-.02em;margin:0 0 8px}
 .criteria-list p{font-size:.85rem;color:#52627a;line-height:1.58}
 .criteria-list span{font:400 .68rem var(--mono);color:var(--blue-dark)}
-.assessment-row{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;padding:22px 0;border-top:1px solid var(--line)}
-.assessment-row h2,.results-list h3{font:700 1.3rem var(--serif);letter-spacing:-.03em;margin-bottom:8px}
-.assessment-row>div>p{color:var(--muted);font-size:.86rem;line-height:1.6}
-.assessment-row>div:last-child{display:flex;align-items:flex-start;gap:8px;flex-direction:column}
-.assessment-row a,.results-list a{color:var(--blue-dark);overflow-wrap:anywhere}
+.results-list h3{font:700 1.3rem var(--serif);letter-spacing:-.03em;margin-bottom:8px}
+.results-list a{color:var(--blue-dark);overflow-wrap:anywhere}
 .results-list{margin-top:46px;padding-top:24px;border-top:2px solid var(--ink)}
 .results-list>p{color:var(--muted);max-width:70ch}
 .results-list article{padding:17px 0;border-top:1px solid var(--line)}
-.results-list li{color:var(--muted);font-size:.83rem;margin:8px 0}
 @media(max-width:760px){
   .topbar{align-items:flex-start;padding:15px 5vw;flex-direction:column;gap:10px}
   .topbar nav{gap:4px;flex-wrap:wrap}
@@ -153,7 +149,6 @@ select{font:inherit;color:var(--ink);background:var(--surface);border:1px solid 
   .metric-row{grid-template-columns:1fr;gap:6px}
   .source-list li{flex-direction:column;gap:4px}
   .source-list li span{text-align:left}
-  .assessment-row{grid-template-columns:1fr}
   .criteria-list{grid-template-columns:1fr}
 }
 @media(max-width:440px){
