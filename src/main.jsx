@@ -62,7 +62,7 @@ function App() {
       </section>
       <section className="evidence-strip"><div><span className="status-chip reviewed">Reviewed from code</span><p>Findings are scoped to the pinned upstream revision and linked sources.</p></div><div><span className="status-chip pending">Benchmark not run</span><p>No workload observations are implied by source review.</p></div><a href="#/catalog">See project assessment records <span aria-hidden="true">↗</span></a></section>
     </main>}
-    <footer className="footer"><span>Memory systems comparison</span><span>Project criteria · source evidence · measured results</span><span><strong>RooAGI develops Membrick.</strong> Reviews conducted using the RooAGI Agents Platform. Contact: <a href="mailto:lw@rooagi.com">lw@rooagi.com</a></span><a href="METRICS.md">Metric definitions</a></footer>
+    <footer className="footer"><span>Memory systems comparison</span><span>Project criteria · source evidence · measured results</span><span><strong>Each system review is conducted end-to-end by a RooAGI agent on the RooAGI Agents Platform.</strong> RooAGI develops Membrick. Contact: <a href="mailto:lw@rooagi.com">lw@rooagi.com</a></span><a href="METRICS.md">Metric definitions</a></footer>
   </div>;
 }
 
@@ -117,7 +117,7 @@ function methodBlocks(markdown) {
 }
 
 function ReviewMethod() {
-  return <main className="method-page"><nav className="breadcrumbs" aria-label="Breadcrumb"><a href="#/">System reviews</a><span aria-hidden="true">/</span><span>Review method</span></nav><header className="method-head"><p className="kicker">Project-owned method</p><h1>Review method</h1><p className="lead">How source evidence, project assessments, benchmark measurements, and remaining unknowns are recorded.</p><p className="method-credit">The <a href="https://neoneye.github.io/agent-memory-atlas/" {...externalLinkProps('https://neoneye.github.io/agent-memory-atlas/')}>Agent Memory Atlas<NewTabNotice/></a> inspired this project and helped us discover systems to study. Our reviews are based on independent inspection of upstream source.</p></header><article className="method-content">{methodBlocks(reviewMethodMarkdown)}</article><nav className="article-bottom"><a href="#/">← Return to all systems</a><a href="#/catalog">Project assessment →</a></nav></main>;
+  return <main className="method-page"><nav className="breadcrumbs" aria-label="Breadcrumb"><a href="#/">System reviews</a><span aria-hidden="true">/</span><span>Review method</span></nav><header className="method-head"><p className="kicker">Project-owned method</p><h1>Review method</h1><p className="lead">How source evidence, project assessments, benchmark measurements, and remaining unknowns are recorded.</p><p className="method-credit">Each system review is conducted end-to-end by a RooAGI agent using the RooAGI Agents Platform. The <a href="https://neoneye.github.io/agent-memory-atlas/" {...externalLinkProps('https://neoneye.github.io/agent-memory-atlas/')}>Agent Memory Atlas<NewTabNotice/></a> inspired this project and helped us discover systems to study. RooAGI develops Membrick.</p></header><article className="method-content">{methodBlocks(reviewMethodMarkdown)}</article><nav className="article-bottom"><a href="#/">← Return to all systems</a><a href="#/catalog">Project assessment →</a></nav></main>;
 }
 
 function Article({article:a}) {
