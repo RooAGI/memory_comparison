@@ -62,7 +62,7 @@ function App() {
       </section>
       <section className="evidence-strip"><div><span className="status-chip reviewed">Reviewed from code</span><p>Findings are scoped to the pinned upstream revision and linked sources.</p></div><div><span className="status-chip pending">Benchmark not run</span><p>No workload observations are implied by source review.</p></div><a href="#/catalog">See project assessment records <span aria-hidden="true">↗</span></a></section>
     </main>}
-    <footer className="footer"><span>Memory systems comparison</span><span>Project criteria · source evidence · measured results</span><a href="METRICS.md">Metric definitions</a></footer>
+    <footer className="footer"><span>Memory systems comparison</span><span>Project criteria · source evidence · measured results</span><span>Reviews conducted using the <strong>RooAGI Agents Platform</strong>. Contact: <a href="mailto:lw@rooagi.com">lw@rooagi.com</a></span><a href="METRICS.md">Metric definitions</a></footer>
   </div>;
 }
 
