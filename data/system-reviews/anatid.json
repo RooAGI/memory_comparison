@@ -1,0 +1,332 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "anatid",
+    "name": "anatid",
+    "repository": "https://github.com/thedatasense/anatid",
+    "branch": "main",
+    "revision": "aa7edcdfb5fe220f855c6c74943f7090b561854b",
+    "reviewed_at": "2026-11-24T20:38:55Z",
+    "review_timezone": "UTC (2026-11-24 12:38:55 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/thedatasense/anatid/blob/aa7edcdfb5fe220f855c6c74943f7090b561854b/README.md","checked_urls":["https://github.com/thedatasense/anatid/blob/aa7edcdfb5fe220f855c6c74943f7090b561854b/README.md","https://github.com/thedatasense/anatid/blob/aa7edcdfb5fe220f855c6c74943f7090b561854b/SECURITY.md","https://github.com/thedatasense/anatid/blob/aa7edcdfb5fe220f855c6c74943f7090b561854b/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "anatid is an embedded Python memory library using a DuckDB file for versioned facts, entities, relationships, and source episodes. It combines temporal SQL visibility with graph, BM25, and optional vector retrieval. This review describes selected documentation and code at the pinned head; it did not run anatid or its benchmarks.",
+    "atlas_locator": {
+      "ordinal": 54,
+      "name": "anatid",
+      "slug": "anatid",
+      "listed_repository": "https://github.com/thedatasense/anatid",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/anatid.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/thedatasense/anatid/blob/aa7edcdfb5fe220f855c6c74943f7090b561854b/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/thedatasense/anatid/blob/aa7edcdfb5fe220f855c6c74943f7090b561854b/README.md"
+    ],
+    "contact_email_note": "No published contact email was found in the official pinned repository README. No commit metadata, personal profile email, third-party directory, or inferred address was used.",
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository page",
+        "path": "repository",
+        "symbol": "canonical thedatasense/anatid; default branch main",
+        "url": "https://github.com/thedatasense/anatid"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "head aa7edcdfb5fe220f855c6c74943f7090b561854b; updated 2026-09-11T02:13:21Z",
+        "url": "https://github.com/thedatasense/anatid/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed full commit",
+        "path": "commit",
+        "symbol": "aa7edcdfb5fe220f855c6c74943f7090b561854b",
+        "url": "https://github.com/thedatasense/anatid/commit/aa7edcdfb5fe220f855c6c74943f7090b561854b"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "library overview, operations, installation, limitations, integrations",
+        "url": "https://github.com/thedatasense/anatid/blob/aa7edcdfb5fe220f855c6c74943f7090b561854b/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Architecture documentation",
+        "path": "docs/architecture.md",
+        "symbol": "tables, temporal versions, visibility, derived indexes, graph traversal and limits",
+        "url": "https://github.com/thedatasense/anatid/blob/aa7edcdfb5fe220f855c6c74943f7090b561854b/docs/architecture.md"
+      },
+      {
+        "id": "visibility",
+        "label": "Visibility implementation",
+        "path": "src/anatid/visibility.py",
+        "symbol": "tenant and bitemporal row predicates; visibility checks",
+        "url": "https://github.com/thedatasense/anatid/blob/aa7edcdfb5fe220f855c6c74943f7090b561854b/src/anatid/visibility.py"
+      },
+      {
+        "id": "recall",
+        "label": "Recall implementation",
+        "path": "src/anatid/recall.py",
+        "symbol": "text/vector/graph arms, fusion, index health and scan ceiling",
+        "url": "https://github.com/thedatasense/anatid/blob/aa7edcdfb5fe220f855c6c74943f7090b561854b/src/anatid/recall.py"
+      },
+      {
+        "id": "verbs",
+        "label": "Mutation verbs",
+        "path": "src/anatid/verbs.py",
+        "symbol": "memory, relation and episode mutation operations",
+        "url": "https://github.com/thedatasense/anatid/blob/aa7edcdfb5fe220f855c6c74943f7090b561854b/src/anatid/verbs.py"
+      },
+      {
+        "id": "schema",
+        "label": "Storage schema",
+        "path": "src/anatid/schema.py",
+        "symbol": "canonical objects and temporal system columns",
+        "url": "https://github.com/thedatasense/anatid/blob/aa7edcdfb5fe220f855c6c74943f7090b561854b/src/anatid/schema.py"
+      },
+      {
+        "id": "erasure",
+        "label": "Erasure implementation",
+        "path": "src/anatid/erasure.py",
+        "symbol": "purge integration tables and registered erasure hooks",
+        "url": "https://github.com/thedatasense/anatid/blob/aa7edcdfb5fe220f855c6c74943f7090b561854b/src/anatid/erasure.py"
+      },
+      {
+        "id": "derived",
+        "label": "Derived index implementation",
+        "path": "src/anatid/derived.py",
+        "symbol": "generation/journal framework and status reporting",
+        "url": "https://github.com/thedatasense/anatid/blob/aa7edcdfb5fe220f855c6c74943f7090b561854b/src/anatid/derived.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "benchmark and evidence domains; no anatid run",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "shared status record; no anatid measurement",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned workload only; not run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated roster",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 54 identity, listed locator, attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas attribution source",
+        "path": "content/systems/anatid.md",
+        "symbol": "curated entry locator only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/anatid.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes anatid as an embedded graph-memory library for AI agents, implemented in Python over DuckDB. It also offers MCP and OpenAI Agents SDK integrations and an optional single-owner server profile for callers that need multiple processes to share a file.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The architecture document describes a single DuckDB file containing entities, memories, source episodes, typed edges, audit rows, and sidecar tables for search. Built-in memory and edge rows carry tenant, valid-time and transaction-time fields, writer, source episode, confidence, and a version number. Memory and relationship updates append a new physical version under the same logical ID.",
+        "sources": [
+          "architecture",
+          "schema"
+        ]
+      },
+      {
+        "text": "The default embedded profile has no server or background thread. Full-text, graph adjacency, and optional vector structures are derived from canonical tables. The derived-index framework stores index definitions in the file and journals changes alongside canonical writes; explicit maintenance builds and publishes generations.",
+        "sources": [
+          "architecture",
+          "derived"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The README and mutation API expose remember, relate, supersede, correct, reinforce, forget, unrelate, episode, and update operations. Corrections close the prior transaction-time version and append a new version in one transaction; correct can change a belief and its related edges together. Soft forget closes the current transaction-time version, while hard forget purges the memory and related indexed and integration data that the implementation can identify.",
+        "sources": [
+          "readme",
+          "verbs",
+          "architecture",
+          "erasure"
+        ]
+      },
+      {
+        "text": "Recall combines available vector similarity, BM25 text matching, and graph expansion from entity seeds, then fuses ranked results. Without an embedding, vector search is absent; graph seeds can be inferred from names in the query or supplied explicitly. The API returns which arms and seeds participated, ranks and scores, and notes about fallback conditions.",
+        "sources": [
+          "readme",
+          "recall"
+        ]
+      },
+      {
+        "text": "Visibility is rendered through a shared predicate that includes tenant and valid/transaction time. The code uses half-open time intervals and filters derived-index candidates against the same visibility rule; current-state indexes cannot answer historical reads and are bypassed for those reads.",
+        "sources": [
+          "visibility",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The source episode and writer fields provide provenance for stored facts, and supersession edges connect changed claims. The README describes provenance queries that return supporting episodes and the correction chain. These afford source tracing; this review did not evaluate whether generated answers accurately cite their evidence.",
+        "sources": [
+          "readme",
+          "architecture",
+          "verbs"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "The inspected code defines text, graph, and optional vector retrieval with ranked fusion. No benchmark question set or abstention behavior was run in this review.",
+        "sources": [
+          "recall",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and staleness",
+        "status": "unmeasured",
+        "evidence": "Versioned supersede/correct operations and historical reads are visible in source. No correction probes or stale-value measurements were run.",
+        "sources": [
+          "verbs",
+          "visibility",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Hard forget removes canonical and derived-index rows and has hooks for integration tables. This review did not run erasure probes across all storage surfaces, backups, or external copies.",
+        "sources": [
+          "erasure",
+          "architecture",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Tenant predicates are centralized in the inspected visibility implementation, but no cross-tenant runtime probes were run. The embedded profile's actual boundary is file ownership; this is not a hosted multi-tenant service assessment.",
+        "sources": [
+          "visibility",
+          "architecture",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Episodes, writers, version history, and provenance are source-visible evidence fields. No generated-claim support or citation-coverage adjudication was performed.",
+        "sources": [
+          "architecture",
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Source documents describe index maintenance, fallback paths, and per-call retrieval arms. No timing measurements were collected for this review.",
+        "sources": [
+          "architecture",
+          "recall",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No model-backed extraction or answering workload was run, and no token or cost accounting was collected.",
+        "sources": [
+          "readme",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "DuckDB stores canonical rows plus optional derived generations and journals. No storage-size measurement was collected.",
+        "sources": [
+          "architecture",
+          "derived",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The architecture document notes that prune performs a query followed by one transaction per removed memory, so a mid-operation failure can leave earlier removals committed. Read verbs also do not automatically share one transaction snapshot; callers needing a consistent multi-arm read can wrap the operation in a transaction.",
+        "sources": [
+          "architecture"
+        ]
+      },
+      {
+        "text": "The inspected docs describe exact vector scans by default, with an optional HNSW backend; vector search is subject to a brute-force ceiling unless callers permit a slow scan or use a suitable index. Derived indexes can fall back to canonical SQL, trading latency for correctness under documented conditions.",
+        "sources": [
+          "architecture",
+          "recall",
+          "derived"
+        ]
+      },
+      {
+        "text": "Tenant IDs scope rows within a file, but DuckDB does not provide row-level access control; the project describes one file per tenant as the real isolation boundary. The optional server profile adds a principal check before opening a file. This review did not inspect every server or integration authorization path.",
+        "sources": [
+          "architecture",
+          "visibility",
+          "readme"
+        ]
+      },
+      {
+        "text": "This is a bounded review of selected README, architecture, visibility, recall, schema, mutation, erasure, and derived-index sources. It did not inspect every integration, persistence/export path, deployment setup, or operational control. No runtime behavior is established here.",
+        "sources": [
+          "readme",
+          "architecture",
+          "visibility",
+          "recall",
+          "verbs",
+          "erasure",
+          "derived"
+        ]
+      }
+    ],
+    "benchmark_note": "Benchmark not run. Source-visible design details are not measured performance or quality results. The upstream project publishes its own benchmark documentation, which is not reproduced or treated as a measurement from this review.",
+    "project_metric_sources": [
+      "metrics",
+      "record",
+      "fixture"
+    ]
+  }
+}

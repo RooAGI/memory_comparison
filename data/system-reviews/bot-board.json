@@ -1,0 +1,329 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "bot-board",
+    "name": "Bot Board",
+    "repository": "https://github.com/jalemieux/bot_board",
+    "branch": "main",
+    "revision": "8a98c0f18bb60c44d0637bc418b8fa2d333c9c90",
+    "reviewed_at": "2026-11-24T23:49:45Z",
+    "review_timezone": "UTC (2026-11-24 15:49:45 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/jalemieux/bot_board/blob/8a98c0f18bb60c44d0637bc418b8fa2d333c9c90/README.md","checked_urls":["https://github.com/jalemieux/bot_board/blob/8a98c0f18bb60c44d0637bc418b8fa2d333c9c90/README.md","https://github.com/jalemieux/bot_board/blob/8a98c0f18bb60c44d0637bc418b8fa2d333c9c90/SECURITY.md","https://github.com/jalemieux/bot_board/blob/8a98c0f18bb60c44d0637bc418b8fa2d333c9c90/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "Bot Board is a self-hosted collaboration board for coding agents. Its workspace knowledge base stores path-addressed Markdown documents as append-only revisions with author, reason, and source strings; agents retrieve them through API paths and channel references. This review describes source behavior at the verified GitHub mirror head and includes no runtime or benchmark result.",
+    "atlas_locator": {
+      "ordinal": 97,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/bot-board.md",
+      "listed_repository": "https://github.com/jalemieux/bot_board"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/jalemieux/bot_board/blob/8a98c0f18bb60c44d0637bc418b8fa2d333c9c90/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/jalemieux/bot_board/blob/8a98c0f18bb60c44d0637bc418b8fa2d333c9c90/README.md",
+      "https://github.com/jalemieux/bot_board/blob/8a98c0f18bb60c44d0637bc418b8fa2d333c9c90/SECURITY.md",
+      "https://jalemieux.github.io/bot_board/"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical public repository",
+        "path": "repository",
+        "symbol": "official GitHub repository; README identifies this as a mirror of self-hosted Forgejo development",
+        "url": "https://github.com/jalemieux/bot_board"
+      },
+      {
+        "id": "head",
+        "label": "Verified current main head",
+        "path": "commit",
+        "symbol": "full current head 8a98c0f18bb60c44d0637bc418b8fa2d333c9c90",
+        "url": "https://github.com/jalemieux/bot_board/commit/8a98c0f18bb60c44d0637bc418b8fa2d333c9c90"
+      },
+      {
+        "id": "feed",
+        "label": "Official main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "latest main entry; updated 2026-11-23T21:46:18Z",
+        "url": "https://github.com/jalemieux/bot_board/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "application purpose, shared workspace knowledge base, API retrieval model, reconciliation and mirror status",
+        "url": "https://github.com/jalemieux/bot_board/blob/8a98c0f18bb60c44d0637bc418b8fa2d333c9c90/README.md"
+      },
+      {
+        "id": "workspaces",
+        "label": "Workspace and knowledge implementation",
+        "path": "app/workspaces.py",
+        "symbol": "knowledge_docs schema, workspace scope, write/delete/history implementation and limits",
+        "url": "https://github.com/jalemieux/bot_board/blob/8a98c0f18bb60c44d0637bc418b8fa2d333c9c90/app/workspaces.py"
+      },
+      {
+        "id": "main",
+        "label": "HTTP API and token scope",
+        "path": "app/main.py",
+        "symbol": "knowledge API contract, auth dependencies and workspace endpoint summary",
+        "url": "https://github.com/jalemieux/bot_board/blob/8a98c0f18bb60c44d0637bc418b8fa2d333c9c90/app/main.py"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "anonymous reads, registration, private-read recommendations, network threat model and disclosure route",
+        "url": "https://github.com/jalemieux/bot_board/blob/8a98c0f18bb60c44d0637bc418b8fa2d333c9c90/SECURITY.md"
+      },
+      {
+        "id": "site",
+        "label": "Official project website",
+        "path": "project site",
+        "symbol": "public project overview and contact check",
+        "url": "https://jalemieux.github.io/bot_board/"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "benchmark domains and protocol; not a Bot Board result",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "shared status record; no Bot Board run asserted",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned workload only; no Bot Board workload was run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated system roster",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 97 identity, listed locator and attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas attribution source, identity only",
+        "path": "content/systems/bot-board.md",
+        "symbol": "catalog source attribution; descriptive assessment fields excluded",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/bot-board.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official GitHub repository is owned by the account jalemieux. Its README describes Bot Board as a self-hosted message board for coding harnesses and says the public GitHub repository mirrors development on self-hosted Forgejo. The reviewed memory component is part of the application, not a separate memory service.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Each workspace owns a shared knowledge base in SQLite. The knowledge_docs table stores workspace ID, path, revision, Markdown body, reason, serialized source strings, deleted flag, author ID and timestamp. A uniqueness constraint on workspace/path/revision and a matching lookup index support versioned document reads.",
+        "sources": [
+          "workspaces"
+        ]
+      },
+      {
+        "text": "Documents are path-addressed rather than separate filesystem files. Channels can point to knowledge paths and mark references mandatory. The API keeps content out of the default prompt and directs agents to read the index and relevant documents on demand.",
+        "sources": [
+          "readme",
+          "main"
+        ]
+      },
+      {
+        "text": "The knowledge base belongs to a workspace alongside channels, bots and threads. Workspace tokens scope bot operations; human and admin routes have broader access. The project's security document notes that network exposure and private-read settings affect who can read the board.",
+        "sources": [
+          "workspaces",
+          "main",
+          "security"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write/update: PUT /api/knowledge/{path} accepts body, base_revision, reason and sources. The implementation checks the path and writer, rejects blank or over-200,000-byte bodies, disallows writes to archived workspaces, and compares base_revision with the current revision under a write lock. A stale write conflicts; a valid write inserts a new revision.",
+        "sources": [
+          "main",
+          "workspaces"
+        ]
+      },
+      {
+        "text": "Delete: DELETE requires the current base revision and appends a deleted revision with an empty body. Previous revisions remain in history and can be read by revision number, so this operation removes the current document but does not erase its prior text.",
+        "sources": [
+          "main",
+          "workspaces"
+        ]
+      },
+      {
+        "text": "Retrieval: the API lists current paths, revisions, byte counts and update times; q searches paths and bodies. A direct path read returns the current document or a requested prior revision. History is newest first and the helper defaults to 50 revisions. The inspected path uses direct lookup and substring search, not semantic ranking.",
+        "sources": [
+          "main",
+          "workspaces"
+        ]
+      },
+      {
+        "text": "Scope: document queries include workspace ID and path. Bot tokens normally scope access to one workspace; humans can see all workspaces and admin-workspace bots can use cross-workspace routes. SECURITY.md warns that anonymous reads and open registration are defaults unless private reads and an invite code are configured. This is source/documentation evidence, not an isolation test.",
+        "sources": [
+          "workspaces",
+          "main",
+          "security"
+        ]
+      },
+      {
+        "text": "Provenance: each revision carries author, reason, source strings and timestamp. The compare-and-set revision prevents a stale write from silently overwriting a newer one. The inspected code stores sources as strings but does not resolve or validate them against messages or links.",
+        "sources": [
+          "workspaces"
+        ]
+      },
+      {
+        "text": "Source-visible limits and observability: document bodies are capped at 200,000 UTF-8 bytes; history has a default page size of 50; current listings expose byte count and update time. No memory-specific latency or quality telemetry was measured.",
+        "sources": [
+          "workspaces",
+          "main"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Path/list reads and substring search are visible; no answerability or abstention probes were run.",
+        "sources": [
+          "main",
+          "workspaces",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Compare-and-set revisions reject stale writes, but agent-level correction behavior was not evaluated.",
+        "sources": [
+          "workspaces",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "A deleted current revision remains recoverable from prior history; no deletion probes were run.",
+        "sources": [
+          "workspaces",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Workspace query scoping and token checks are visible, with configuration-dependent public reads documented; no isolation workload was run.",
+        "sources": [
+          "workspaces",
+          "main",
+          "security",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Revision source strings are stored but not resolved or validated by the inspected code.",
+        "sources": [
+          "workspaces",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "A path/revision index is present, but no operation timings were collected.",
+        "sources": [
+          "workspaces",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No scheduled acknowledgment-to-recall probes were run.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No workload or provider accounting was collected for knowledge operations.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "SQLite rows and the write-size cap are visible, but corpus storage was not measured.",
+        "sources": [
+          "workspaces",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a selected source review of one verified GitHub mirror commit. Bot Board and its deployment configuration were not run. Source inspection does not establish retrieval usefulness, agent-level correction, complete erasure, configured isolation, or operational performance.",
+        "sources": [
+          "head",
+          "readme",
+          "security",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "The knowledge store is path-addressed Markdown, not a typed evidence graph. Source strings are not validated against their targets, and deleted document bodies remain accessible through revision history.",
+        "sources": [
+          "workspaces"
+        ]
+      },
+      {
+        "text": "The full API, UI, and authorization surface was not exhaustively audited. The README identifies GitHub as a mirror of self-hosted Forgejo development; this review verifies the public mirror snapshot, not unmirrored Forgejo changes.",
+        "sources": [
+          "readme",
+          "security",
+          "head"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No Bot Board runtime, tests or benchmark workload was executed. Project metric definitions, fixture and shared execution-status record describe the proposed protocol; they are not Bot Board results.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      }
+    ]
+  }
+}

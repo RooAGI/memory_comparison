@@ -1,0 +1,389 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "agents-remember",
+    "name": "Agents Remember",
+    "repository": "https://github.com/Foxfire1st/agents-remember",
+    "branch": "main",
+    "revision": "f41e34b43195feafb98f011d18e6a9b746b76c34",
+    "reviewed_at": "2026-11-24T19:18:20Z",
+    "review_timezone": "UTC (2026-11-24 11:18:20 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Agents Remember gives coding agents a Git-versioned knowledge tree with source-path cards, structured records and a workflow that checks recorded knowledge against code changes. The reviewed source describes repository-scoped memory, a derived read index, Curator-authored updates and bounded path or record reads.",
+    "atlas_locator": {
+      "ordinal": 29,
+      "name": "Agents Remember",
+      "slug": "agents-remember",
+      "listed_repository": "https://github.com/Foxfire1st/agents-remember",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agents-remember.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/Foxfire1st/agents-remember/blob/f41e34b43195feafb98f011d18e6a9b746b76c34/README.md",
+      "note": "No published contact email found in the checked official repository README."
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository and default branch",
+        "path": "repository page",
+        "symbol": "Foxfire1st/agents-remember; public repository; main is default",
+        "url": "https://github.com/Foxfire1st/agents-remember"
+      },
+      {
+        "id": "history",
+        "label": "Official main branch Atom feed",
+        "path": "commits/main.atom",
+        "symbol": "Current main head",
+        "url": "https://github.com/Foxfire1st/agents-remember/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Current full head commit",
+        "path": "commit",
+        "symbol": "f41e34b43195feafb98f011d18e6a9b746b76c34",
+        "url": "https://github.com/Foxfire1st/agents-remember/commit/f41e34b43195feafb98f011d18e6a9b746b76c34"
+      },
+      {
+        "id": "readme",
+        "label": "Official repository README",
+        "path": "README.md",
+        "symbol": "Product purpose, setup, product status, no published email",
+        "url": "https://github.com/Foxfire1st/agents-remember/blob/f41e34b43195feafb98f011d18e6a9b746b76c34/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Architecture documentation",
+        "path": "docs/architecture.md",
+        "symbol": "Programs, roots, repositories, ownership, logs, reads",
+        "url": "https://github.com/Foxfire1st/agents-remember/blob/f41e34b43195feafb98f011d18e6a9b746b76c34/docs/architecture.md"
+      },
+      {
+        "id": "knowledge-doc",
+        "label": "Knowledge System reference",
+        "path": "docs/reference/knowledge-system.md",
+        "symbol": "Text source of truth, record kinds, status, validation, writes and reads",
+        "url": "https://github.com/Foxfire1st/agents-remember/blob/f41e34b43195feafb98f011d18e6a9b746b76c34/docs/reference/knowledge-system.md"
+      },
+      {
+        "id": "mcp-doc",
+        "label": "MCP tools reference",
+        "path": "docs/reference/mcp-tools.md",
+        "symbol": "read_ar_files and knowledge_read selection and bounds; knowledge_write",
+        "url": "https://github.com/Foxfire1st/agents-remember/blob/f41e34b43195feafb98f011d18e6a9b746b76c34/docs/reference/mcp-tools.md"
+      },
+      {
+        "id": "schema",
+        "label": "Derived knowledge index schema",
+        "path": "mcp/src/agents_remember/memory/knowledge/schema.py",
+        "symbol": "Logical index tables and immutability/digest details",
+        "url": "https://github.com/Foxfire1st/agents-remember/blob/f41e34b43195feafb98f011d18e6a9b746b76c34/mcp/src/agents_remember/memory/knowledge/schema.py"
+      },
+      {
+        "id": "records",
+        "label": "Knowledge record codecs and digest verification",
+        "path": "mcp/src/agents_remember/memory/knowledge/records.py",
+        "symbol": "Decode revision payload and verify digest",
+        "url": "https://github.com/Foxfire1st/agents-remember/blob/f41e34b43195feafb98f011d18e6a9b746b76c34/mcp/src/agents_remember/memory/knowledge/records.py"
+      },
+      {
+        "id": "writer",
+        "label": "Knowledge writer",
+        "path": "mcp/src/agents_remember/application/knowledge_writer/writer.py",
+        "symbol": "Plan/validate/write workflow",
+        "url": "https://github.com/Foxfire1st/agents-remember/blob/f41e34b43195feafb98f011d18e6a9b746b76c34/mcp/src/agents_remember/application/knowledge_writer/writer.py"
+      },
+      {
+        "id": "authoring",
+        "label": "Record authoring and code anchors",
+        "path": "mcp/src/agents_remember/application/knowledge_writer/authoring.py",
+        "symbol": "IDs, source anchors, revisions, provenance and history rows",
+        "url": "https://github.com/Foxfire1st/agents-remember/blob/f41e34b43195feafb98f011d18e6a9b746b76c34/mcp/src/agents_remember/application/knowledge_writer/authoring.py"
+      },
+      {
+        "id": "read",
+        "label": "Knowledge read selection",
+        "path": "mcp/src/agents_remember/application/knowledge_read.py",
+        "symbol": "Read-only selected snapshot and bound continuation",
+        "url": "https://github.com/Foxfire1st/agents-remember/blob/f41e34b43195feafb98f011d18e6a9b746b76c34/mcp/src/agents_remember/application/knowledge_read.py"
+      },
+      {
+        "id": "mcp-knowledge",
+        "label": "MCP knowledge tool handlers",
+        "path": "mcp/src/agents_remember/mcp/tools/knowledge.py",
+        "symbol": "Knowledge read/write tool payloads, scope selection and reports",
+        "url": "https://github.com/Foxfire1st/agents-remember/blob/f41e34b43195feafb98f011d18e6a9b746b76c34/mcp/src/agents_remember/mcp/tools/knowledge.py"
+      },
+      {
+        "id": "index",
+        "label": "Derived index builder",
+        "path": "mcp/src/agents_remember/memory/knowledge_index/build.py",
+        "symbol": "Parse text tree, index records and sidecars, report malformed entries",
+        "url": "https://github.com/Foxfire1st/agents-remember/blob/f41e34b43195feafb98f011d18e6a9b746b76c34/mcp/src/agents_remember/memory/knowledge_index/build.py"
+      },
+      {
+        "id": "read-ar",
+        "label": "Path-oriented memory reader",
+        "path": "mcp/src/agents_remember/application/read_files.py",
+        "symbol": "Per-repository path selection and location responses",
+        "url": "https://github.com/Foxfire1st/agents-remember/blob/f41e34b43195feafb98f011d18e6a9b746b76c34/mcp/src/agents_remember/application/read_files.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Metric evaluation protocol",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Shared benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project run status; not a system measurement",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned workload only",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated roster entry",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 29 identity, listed locator and attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas-attribution",
+        "label": "Catalog source attribution for roster identity",
+        "path": "Atlas report at pinned catalog revision",
+        "symbol": "Identity/source attribution only",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agents-remember.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents Agents Remember as a Git-backed memory and change-review product for coding agents. The repository describes a Python package with an MCP tool server and dashboard plus a Paseo host that coordinates role agents.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Settings map configured code repositories to separate memory repositories under a coordination root. The tool server resolves repository identity from settings, rejects repositories not listed there, and writes MCP call logs under the coordination root or task enclosure.",
+        "sources": [
+          "architecture",
+          "mcp-doc"
+        ]
+      },
+      {
+        "text": "The memory repository's Git-versioned text tree is canonical: Markdown onboarding cards, JSON sidecars with citations/realizations/proofs, route overviews, JSON knowledge records and Curator history files. Records have stable IDs, origins, statuses and revisions.",
+        "sources": [
+          "knowledge-doc"
+        ]
+      },
+      {
+        "text": "SQLite is a derived index rather than canonical storage. The inspected index schema includes repository, invariant/revision, family/revision, membership, source-anchor and realization-claim tables; record decoding verifies stored revision digests, and malformed inputs are represented as index problems rather than guessed.",
+        "sources": [
+          "schema",
+          "records",
+          "index"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The Curator authors semantic content in a hand-off list. The knowledge writer supplies IDs, source anchors, revisions, origin and history-row bindings, validates the write, and can plan or write files. The MCP writer does not make a Git commit; Git provides the surrounding history.",
+        "sources": [
+          "knowledge-doc",
+          "writer",
+          "authoring",
+          "mcp-knowledge"
+        ]
+      },
+      {
+        "text": "Records are not physically deleted through the documented knowledge model; a record leaves active use through status retired. Validation requires records present in the comparison base to remain in the candidate tree, so retirement does not erase Git history.",
+        "sources": [
+          "knowledge-doc",
+          "authoring"
+        ]
+      },
+      {
+        "text": "read_ar_files names card locations and records governing up to 20 requested code paths. knowledge_read selects typed views of records and returns IDs, states and file locations rather than record text; large selections are paged with a continuation bound to the same selection and snapshot.",
+        "sources": [
+          "mcp-doc",
+          "read",
+          "mcp-knowledge",
+          "read-ar"
+        ]
+      },
+      {
+        "text": "Currentness is computed against the requested code commit or working tree by comparing recorded anchors; the repository presents code currentness and the record state but does not thereby certify semantic correctness.",
+        "sources": [
+          "knowledge-doc",
+          "authoring",
+          "mcp-knowledge"
+        ]
+      },
+      {
+        "text": "Scope is selected by configured repository and task worktree roots. This is repository/task context routing, not evidence of authenticated tenant isolation; shared-host or multi-user authorization was not tested.",
+        "sources": [
+          "architecture",
+          "mcp-doc",
+          "mcp-knowledge"
+        ]
+      },
+      {
+        "text": "Origin and history associate authored knowledge with tasks or foundation waves, hand-off entries and evidence. Sidecars connect citations, code realizations and test proofs to records. These links support traceability but do not prove a recorded assertion is true or that a test covers every claim.",
+        "sources": [
+          "knowledge-doc",
+          "authoring",
+          "index",
+          "mcp-doc"
+        ]
+      },
+      {
+        "text": "Source-visible bounds include at most 20 paths in read_ar_files and 32 items by default per knowledge_read page, with continuations for larger selections and a token threshold. The index builder memoizes parsed documents by content SHA within a process; MCP logs and reports expose counts, refusals and validation findings. These are implementation/documentation observations, not performance or completeness results.",
+        "sources": [
+          "mcp-doc",
+          "index",
+          "architecture"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "The reviewed interfaces select and name records and cards; no answerability or abstention workload was run.",
+        "sources": [
+          "mcp-doc",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Revision history, currentness checks and retirement are visible in source; no correction or stale-value probes were run.",
+        "sources": [
+          "knowledge-doc",
+          "authoring",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The documented model retires records and preserves prior Git history; no deletion-leakage probes were run.",
+        "sources": [
+          "knowledge-doc",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Repository selection and task-scoped roots are visible in source and docs; no cross-scope or multi-user probes were run.",
+        "sources": [
+          "architecture",
+          "mcp-doc",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Citation sidecars, anchors, realization/proof links and provenance are visible; claim support and citation coverage were not adjudicated.",
+        "sources": [
+          "knowledge-doc",
+          "authoring",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Reads use a derived index and bounded pages; no latency distributions or write-to-recall delay measurements were collected.",
+        "sources": [
+          "index",
+          "mcp-doc",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The system exposes bounded responses and uses a derived SQLite index; no token, cost, or storage measurements were collected.",
+        "sources": [
+          "mcp-doc",
+          "schema",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code and documentation",
+        "evidence": "Path/page limits, parse caching, MCP call logs and structured reports are visible. They do not establish runtime efficiency or observability coverage.",
+        "sources": [
+          "mcp-doc",
+          "index",
+          "architecture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded inspection of the official README, architecture and knowledge-system references, plus selected current code at the verified full SHA. The product, tests and benchmarks were not run.",
+        "sources": [
+          "readme",
+          "architecture",
+          "knowledge-doc",
+          "writer",
+          "read"
+        ]
+      },
+      {
+        "text": "Repository and task scope selection do not establish tenant authorization or secure multi-user deployment. Retirement and Git history do not establish erasure from backups, exports or external systems.",
+        "sources": [
+          "architecture",
+          "knowledge-doc",
+          "mcp-doc"
+        ]
+      },
+      {
+        "text": "Anchors and provenance help inspect where knowledge came from and whether referenced code changed; they cannot alone establish truth, answer quality or proof adequacy. Runtime behavior, performance and all benchmark outcomes remain unknown.",
+        "sources": [
+          "knowledge-doc",
+          "authoring",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No Agents Remember system, benchmark workload, or test suite was executed; no metric values were produced. Project metrics, fixture and shared status record describe protocol/status and are not results for this system.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

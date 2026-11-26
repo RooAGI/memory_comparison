@@ -1,0 +1,530 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 178,
+    "slug": "cyrene-agent",
+    "name": "Cyrene Agent",
+    "repository": "https://github.com/Playa-Cyrene/Cyrene-Agent",
+    "listed_repository": "https://github.com/Playa-Cyrene/Cyrene-Agent",
+    "branch": "master",
+    "revision": "f6d8a5edce2b1ae3847a69022f880c49c221dc50",
+    "reviewed_at": "2026-11-25T10:27:31Z",
+    "review_timezone": "UTC (2026-11-25 02:27:31 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Cyrene Agent is a Windows Electron/TypeScript desktop companion with a layered local memory store, hybrid vector/BM25 recall, DMAE prompt selection, and a separate optional social-context store keyed by conversation. This review describes selected code and documentation at the verified master head; no runtime, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 178,
+      "name": "Cyrene Agent",
+      "slug": "cyrene-agent",
+      "listed_repository": "https://github.com/Playa-Cyrene/Cyrene-Agent",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cyrene-agent.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/README.en.md",
+      "checked_urls": [
+        "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/README.en.md",
+        "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/README.md",
+        "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/SECURITY.md",
+        "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/.github/CONTRIBUTING.md"
+      ],
+      "note": "The official English README's Contact section directs users to GitHub Issues and pull requests and publishes no email. The Chinese README and contribution guide were also checked; no repository SECURITY.md is present at the reviewed head. No commit/profile metadata, personal profile, third-party directory or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/README.en.md",
+      "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/README.md",
+      "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/SECURITY.md",
+      "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/.github/CONTRIBUTING.md"
+    ],
+    "contact_email_note": "No contact email was published in the official README pages; the README.en.md Contact section invites GitHub Issues and pull requests. SECURITY.md was checked and is absent at the reviewed head.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[177], ordinal 178: Cyrene Agent, slug cyrene-agent, explicit listed repository locator and pinned Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/cyrene-agent.md",
+        "symbol": "Pinned source used only for curated identity and listed-locator attribution; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cyrene-agent.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository refs",
+        "symbol": "git ls-remote --symref resolved HEAD to refs/heads/master at the reviewed full SHA",
+        "url": "https://github.com/Playa-Cyrene/Cyrene-Agent"
+      },
+      {
+        "id": "head",
+        "label": "Verified upstream head",
+        "path": "commit metadata",
+        "symbol": "Current master commit f6d8a5edce2b1ae3847a69022f880c49c221dc50; commit time 2026-11-22T23:41:32+08:00; shallow checkout matched",
+        "url": "https://github.com/Playa-Cyrene/Cyrene-Agent/commit/f6d8a5edce2b1ae3847a69022f880c49c221dc50"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned English README",
+        "path": "README.en.md",
+        "symbol": "Project purpose, memory layers, retrieval notes and contact section; no email published",
+        "url": "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/README.en.md"
+      },
+      {
+        "id": "types",
+        "label": "Memory data model",
+        "path": "src/main/memory/memory-types.ts",
+        "symbol": "L0/L1/L2 types, source conversation, evidence, lifecycle and local recallability predicate",
+        "url": "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/src/main/memory/memory-types.ts"
+      },
+      {
+        "id": "store",
+        "label": "Memory store operations",
+        "path": "src/main/memory/memory-store.ts",
+        "symbol": "L0/L1 overwrite, L2/evidence creation, deletion, recall updates, status and content edits",
+        "url": "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/src/main/memory/memory-store.ts"
+      },
+      {
+        "id": "storeio",
+        "label": "Memory persistence",
+        "path": "src/main/memory/memory-store-io.ts",
+        "symbol": "User-data memory.json path, backup and direct JSON file write",
+        "url": "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/src/main/memory/memory-store-io.ts"
+      },
+      {
+        "id": "manager",
+        "label": "Memory write manager",
+        "path": "src/main/memory/memory-manager.ts",
+        "symbol": "Candidate filters, L0 explicit-fact gate, L1 routing, L2 write and vector synchronization",
+        "url": "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/src/main/memory/memory-manager.ts"
+      },
+      {
+        "id": "scheduler",
+        "label": "Memory maintenance scheduler",
+        "path": "src/main/memory/memory-scheduler.ts",
+        "symbol": "Conversation-tagged pending turns, background judge/write, conflict, reflection and decay cadence",
+        "url": "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/src/main/memory/memory-scheduler.ts"
+      },
+      {
+        "id": "judge",
+        "label": "Memory candidate judge",
+        "path": "src/main/memory/memory-judge.ts",
+        "symbol": "Candidate post-filters, explicit L0 requirement, evidence overclaim filtering and conversation attribution",
+        "url": "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/src/main/memory/memory-judge.ts"
+      },
+      {
+        "id": "rag",
+        "label": "RAG memory index and recall",
+        "path": "src/main/rag/index.ts",
+        "symbol": "L2 vector writes, canonical recallability allowlist, vector cleanup and user memory recall",
+        "url": "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/src/main/rag/index.ts"
+      },
+      {
+        "id": "retriever",
+        "label": "Hybrid retrieval implementation",
+        "path": "src/main/rag/retriever.ts",
+        "symbol": "Vector/BM25 weighted retrieval, optional reranker and token-cache warmup",
+        "url": "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/src/main/rag/retriever.ts"
+      },
+      {
+        "id": "socialtypes",
+        "label": "Social atom model",
+        "path": "src/main/social-context/types.ts",
+        "symbol": "Conversation-keyed atom types, status and evidence fields",
+        "url": "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/src/main/social-context/types.ts"
+      },
+      {
+        "id": "socialstore",
+        "label": "Social atom store",
+        "path": "src/main/social-context/store.ts",
+        "symbol": "Conversation-filtered reads, expiry/status filtering, supersede/resolve mutations and JSON persistence",
+        "url": "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/src/main/social-context/store.ts"
+      },
+      {
+        "id": "socialextract",
+        "label": "Social atom extraction and validation",
+        "path": "src/main/social-context/extractor.ts",
+        "symbol": "Strict source-turn quote validation, role and conversation checks, operation bounds and expiry",
+        "url": "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/src/main/social-context/extractor.ts"
+      },
+      {
+        "id": "socialretrieval",
+        "label": "Social atom ranking",
+        "path": "src/main/social-context/retrieval.ts",
+        "symbol": "BM25 scoring, active/expiry filter, 30-day half-life and top-k retrieval",
+        "url": "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/src/main/social-context/retrieval.ts"
+      },
+      {
+        "id": "socialservice",
+        "label": "Social context service",
+        "path": "src/main/services/social-context/social-context-service.ts",
+        "symbol": "Separate chat-social-atoms.json store, structured LLM extraction and operational counters",
+        "url": "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/src/main/services/social-context/social-context-service.ts"
+      },
+      {
+        "id": "runtime",
+        "label": "Chat social context integration",
+        "path": "src/main/orchestrator/agent-runtime.ts",
+        "symbol": "Conversation ID passed to social atom filtering and top-five retrieval",
+        "url": "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/src/main/orchestrator/agent-runtime.ts"
+      },
+      {
+        "id": "inject",
+        "label": "Always-on memory injection",
+        "path": "src/main/orchestrator/index.ts",
+        "symbol": "L0/L1 profile injection and bounded active L2 prompt injection",
+        "url": "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/src/main/orchestrator/index.ts"
+      },
+      {
+        "id": "trace",
+        "label": "Memory mutation trace",
+        "path": "src/main/memory/memory-trace.ts",
+        "symbol": "Append-only JSONL operation records and warning-only trace-write failures",
+        "url": "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/src/main/memory/memory-trace.ts"
+      },
+      {
+        "id": "audit",
+        "label": "Memory store audit",
+        "path": "src/main/memory/memory-audit.ts",
+        "symbol": "Checks for missing evidence, overclaims, conflict markers, stale sync and broken resolution links",
+        "url": "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/src/main/memory/memory-audit.ts"
+      },
+      {
+        "id": "dmae",
+        "label": "L2 DMAE prompt selector",
+        "path": "src/main/memory/l2-dmae-manager.ts",
+        "symbol": "Pinned and activation-selected L2 prompt candidates; selector excludes archived rows",
+        "url": "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/src/main/memory/l2-dmae-manager.ts"
+      },
+      {
+        "id": "tools",
+        "label": "Memory tool registry",
+        "path": "src/main/orchestrator/tools/registry/tool-registry.ts",
+        "symbol": "read_memory and write_memory descriptions and candidate routing",
+        "url": "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/src/main/orchestrator/tools/registry/tool-registry.ts"
+      },
+      {
+        "id": "contributing",
+        "label": "Official contribution guide",
+        "path": ".github/CONTRIBUTING.md",
+        "symbol": "Memory decision/conflict strategy contribution pointers; checked for contact context",
+        "url": "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/.github/CONTRIBUTING.md"
+      },
+      {
+        "id": "scope",
+        "label": "Memory recall scope implementation",
+        "path": "src/main/rag/index.ts",
+        "symbol": "Canonical user-memory recallability allowlist; no conversationId predicate in the inspected path",
+        "url": "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/src/main/rag/index.ts"
+      },
+      {
+        "id": "provenance",
+        "label": "Memory evidence and provenance model",
+        "path": "src/main/memory/memory-types.ts",
+        "symbol": "L2 source conversation/message fields and linked MemoryEvidence record shape",
+        "url": "https://github.com/Playa-Cyrene/Cyrene-Agent/blob/f6d8a5edce2b1ae3847a69022f880c49c221dc50/src/main/memory/memory-types.ts"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Definitions for benchmark domains; no system measurements",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned fixture only; no Cyrene Agent run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "No Cyrene Agent result produced by this source review",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "Catalog ordinal 178 is Cyrene Agent (slug cyrene-agent), with the explicit listed locator Playa-Cyrene/Cyrene-Agent. The pinned Atlas entry is retained for roster identity and locator attribution only; the assessment below uses official upstream sources.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The official repository's default branch is master. `git ls-remote --symref` and a shallow checkout resolve it to f6d8a5edce2b1ae3847a69022f880c49c221dc50; the commit timestamp is 2026-11-22T23:41:32+08:00. The source review was recorded at 2026-11-25T10:27:31Z.",
+        "sources": [
+          "repo",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README describes a Windows Electron/TypeScript desktop companion. Its memory is presented as L0 core profile, L1 recent state and L2 conversational memories, alongside the DMAE Worldbook. The main profile store is memory.json under Electron userData; RAG vectors and chat-social atoms use separate files.",
+        "sources": [
+          "readme",
+          "types",
+          "storeio",
+          "socialservice"
+        ]
+      },
+      {
+        "text": "L0 holds named profile fields and a permanent note; L1 holds recent goals, preferences and current project. L2 entries hold content, trigger text, source conversation, timestamps, access counters, weight, pin/status, RAG sync identifiers, optional source quote, conflict/resolution fields and evidence IDs. A local recallability predicate requires active or aging status plus synced status and a RAG ID.",
+        "sources": [
+          "types"
+        ]
+      },
+      {
+        "text": "The store persists structured data as JSON. L2 writes create an evidence row and an initially active memory; the manager then writes an embedding/vector record and marks the memory synced, or records sync failure. Search combines vector and BM25 scores and may apply a cross-encoder reranker. A separate social atom subsystem stores short-term, long-term and open-loop chat continuity items.",
+        "sources": [
+          "store",
+          "manager",
+          "rag",
+          "retriever",
+          "socialtypes",
+          "socialstore"
+        ]
+      }
+    ],
+    "write_update_delete": [
+      {
+        "text": "Automatic turn capture queues eligible turns for a background memory judge, grouped by conversation. It checks the source is still current before and after model work, filters candidates and writes accepted L0/L1/L2 records. L0 automatic updates require an explicit user-attributed fact and respect the profile pin; L1 fields are replaced, while L2 records are added then synchronized to RAG. Periodic resolver, reflection/compression and decay work is scheduled at different turn intervals.",
+        "sources": [
+          "scheduler",
+          "judge",
+          "manager",
+          "store"
+        ]
+      },
+      {
+        "text": "The read_memory/write_memory tools expose direct profile and L2 inspection plus explicit memory writes. L0 and L1 update by replacing profile fields. L2 body edits are available through the Obsidian import path and reset vector sync pending until reindex; conflict resolution can change statuses and link superseded or merged entries. The source does not expose a generic in-place L2 fact correction in the manager path.",
+        "sources": [
+          "tools",
+          "store",
+          "manager",
+          "types",
+          "rag"
+        ]
+      },
+      {
+        "text": "deleteL2 removes an L2 record and its evidence rows from memory.json and records a trace entry. That method does not itself delete the associated vector; separate RAG deletion and reconciliation paths handle stale vectors, so this method alone does not prove complete cleanup. No external backups/provider copies were tested.",
+        "sources": [
+          "store",
+          "rag",
+          "audit"
+        ]
+      },
+      {
+        "text": "L2 status and weight are adjusted through recall/pinning and decay operations; archived rows are excluded from the DMAE prompt selector, while vector recall uses the stricter active-or-aging, synced-and-indexed predicate. Weight decay is documented as manually callable from the manager but the relevant implementation comments say it is not attached to production scheduling.",
+        "sources": [
+          "store",
+          "dmae",
+          "manager",
+          "rag"
+        ]
+      }
+    ],
+    "retrieval": [
+      {
+        "text": "The hybrid retriever searches vector and BM25 candidates, normalizes and combines their scores with 0.7 vector and 0.3 BM25 weights, and optionally reranks the top candidates with a cross-encoder. Without an embedding provider it falls back to BM25. User-memory search first creates an allowlist by joining indexed entries to currently recallable canonical L2 rows.",
+        "sources": [
+          "retriever",
+          "rag",
+          "types"
+        ]
+      },
+      {
+        "text": "The desktop context path selects a bounded set of active L2 entries through DMAE; the tool registry also offers direct read of L0/L1 and L2 by ID, while history recall is a separate RAG path. The code describes retrieval mechanisms and limits, not answer accuracy or relevance outcomes.",
+        "sources": [
+          "inject",
+          "dmae",
+          "tools",
+          "rag",
+          "readme"
+        ]
+      }
+    ],
+    "scope": "The main L0/L1/L2 profile and user-memory retrieval are local to the desktop user's userData store; records carry sourceConversationId but inspected L2 search does not filter by it, and the prompt path draws from the shared profile. A separate optional social-context store applies conversationId filtering on reads and validates supersede/resolve targets within that conversation. Thus conversation isolation is explicit for social atoms but not shown for the default profile/L2 memory path; no isolation probes were run.",
+    "scope_sources": [
+      "types",
+      "storeio",
+      "rag",
+      "inject",
+      "socialtypes",
+      "socialstore",
+      "socialextract",
+      "runtime",
+      "socialservice"
+    ],
+    "provenance": "L2 records carry source conversation and optional source-message identifiers; evidence rows link to memory ID, quote snippet, conversation and message IDs, plus source status. The current store creates the evidence quote from triggerText (or content), bounded to 300 characters; it is not independently verified there as a verbatim transcript span. Social atoms have stronger source linkage: extraction checks that evidenceQuote is a literal substring of the referenced turn and validates turn role and conversation ID before accepting operations. An audit helper flags missing evidence chains, overclaims, stale sync, active conflicts and broken resolution links. None of this measures answer-level factual support.",
+    "provenance_sources": [
+      "types",
+      "store",
+      "socialtypes",
+      "socialextract",
+      "audit"
+    ],
+    "efficiency": "The code uses local JSON-backed records, vector and BM25 retrieval, a cached tokenization path, optional reranking and background turn maintenance. Memory trace events append operation/status/IDs and limited details; social extraction logs accepted/rejected counts and retry/repair counts. These are implementation-level observability signals only; no latency, token, cost or storage measurements were taken.",
+    "efficiency_sources": [
+      "storeio",
+      "retriever",
+      "scheduler",
+      "trace",
+      "socialservice",
+      "metrics"
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "No adjudicated recall fixture or answer outcomes were run.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "result",
+          "retriever"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Conflict and lifecycle paths were inspected, but no correction probes were executed or adjudicated.",
+        "sources": [
+          "store",
+          "manager",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Application deletion and vector cleanup paths were inspected; no post-delete probe or backup/provider-copy check was run.",
+        "sources": [
+          "store",
+          "rag",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation leak rate",
+        "status": "unmeasured",
+        "evidence": "Scope behavior was inspected in code; no cross-conversation or cross-user probe was run.",
+        "sources": [
+          "scope",
+          "socialstore",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Stored evidence linkage and quote validation were inspected; generated answers were not captured and scored.",
+        "sources": [
+          "provenance",
+          "socialextract",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No latency samples or distribution were collected.",
+        "sources": [
+          "retriever",
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Writes are queued and vector synchronization can be pending; no timed write-recall probes were performed.",
+        "sources": [
+          "scheduler",
+          "manager",
+          "rag",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No provider usage or monetary cost was collected for the reviewed flows.",
+        "sources": [
+          "scheduler",
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No corpus-size or per-item storage measurements were taken.",
+        "sources": [
+          "storeio",
+          "rag",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a selected source review of profile/L2 storage, ingestion, hybrid retrieval, DMAE prompt selection, social atom extraction and ranking, audit and traces; it does not cover every model provider, channel, UI route or storage operation.",
+        "sources": [
+          "readme",
+          "scheduler",
+          "manager",
+          "rag",
+          "socialservice",
+          "runtime"
+        ]
+      },
+      {
+        "text": "The README and code describe functionality, not independent benchmark results. Project benchmark status remains not_run; all metric domains above are unmeasured for this review.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "text": "Source inspection does not prove runtime correctness, protection against concurrent writes or adversarial scope leakage, full erasure from vector backups and external copies, or whether every channel uses the same memory policy.",
+        "sources": [
+          "storeio",
+          "store",
+          "rag",
+          "socialstore",
+          "socialservice"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Cyrene Agent runtime, benchmarks or tests were run. Source observations are not benchmark results."
+    },
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "No measurements were produced for this source review; profile descriptions and code inspection are not benchmark results."
+    }
+  }
+}

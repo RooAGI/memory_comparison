@@ -1,0 +1,313 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 100,
+    "slug": "brain-md",
+    "name": "brain.md",
+    "repository": "https://github.com/mindmuxai/brain.md",
+    "listed_repository": "https://github.com/mindmuxai/brain.md",
+    "branch": "main",
+    "revision": "02e77c3bb5ca3a5e51130af03f43d4bc5723c6a6",
+    "reviewed_at": "2026-11-25T00:01:10Z",
+    "review_timezone": "UTC (2026-11-24 16:01:10 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "brain.md is a repository-native memory toolkit for coding agents. It uses Markdown files plus a small Node.js CLI to store durable project knowledge, with explicit commands for reading, writing, revising, indexing, and archiving pages.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/brain-md.md"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/mindmuxai/brain.md/blob/02e77c3bb5ca3a5e51130af03f43d4bc5723c6a6/SECURITY.md",
+      "note": "The official README publishes no contact email; the official SECURITY.md path was checked and not found at the reviewed revision."
+    },
+    "contact_email": null,
+    "contact_checked_sources": [
+      "https://github.com/mindmuxai/brain.md/blob/02e77c3bb5ca3a5e51130af03f43d4bc5723c6a6/README.md",
+      "https://github.com/mindmuxai/brain.md/blob/02e77c3bb5ca3a5e51130af03f43d4bc5723c6a6/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[99], position 100; name, slug, listed repository, and Atlas attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas attribution only",
+        "path": "content/systems/brain-md.md",
+        "symbol": "Roster source URL pinned at Atlas revision 19199a4fc249e89c0793be06f0b166b358089ba0",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/brain-md.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "",
+        "symbol": "Canonical mindmuxai/brain.md repository; main is the default branch",
+        "url": "https://github.com/mindmuxai/brain.md"
+      },
+      {
+        "id": "head-feed",
+        "label": "Official main commit feed",
+        "path": "",
+        "symbol": "Full current main head 02e77c3bb5ca3a5e51130af03f43d4bc5723c6a6; feed updated 2026-11-13T08:45:21Z",
+        "url": "https://github.com/mindmuxai/brain.md/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream head",
+        "path": "",
+        "symbol": "Full reviewed commit SHA 02e77c3bb5ca3a5e51130af03f43d4bc5723c6a6",
+        "url": "https://github.com/mindmuxai/brain.md/commit/02e77c3bb5ca3a5e51130af03f43d4bc5723c6a6"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project model, CLI, hooks, bounds, integration, stewardship",
+        "url": "https://github.com/mindmuxai/brain.md/blob/02e77c3bb5ca3a5e51130af03f43d4bc5723c6a6/README.md"
+      },
+      {
+        "id": "cli",
+        "label": "Brain CLI",
+        "path": "skills/brain-page/bin/brain.mjs",
+        "symbol": "CLI commands and mutation orchestration",
+        "url": "https://github.com/mindmuxai/brain.md/blob/02e77c3bb5ca3a5e51130af03f43d4bc5723c6a6/skills/brain-page/bin/brain.mjs"
+      },
+      {
+        "id": "library",
+        "label": "Shared brain library",
+        "path": "skills/brain-page/lib/brain.mjs",
+        "symbol": "Brain path resolution, page operations, indexing, and link lint",
+        "url": "https://github.com/mindmuxai/brain.md/blob/02e77c3bb5ca3a5e51130af03f43d4bc5723c6a6/skills/brain-page/lib/brain.mjs"
+      },
+      {
+        "id": "skill",
+        "label": "Brain page operating manual",
+        "path": "skills/brain-page/SKILL.md",
+        "symbol": "Page schema, CLI contracts, scope, context recovery, and integrity caveats",
+        "url": "https://github.com/mindmuxai/brain.md/blob/02e77c3bb5ca3a5e51130af03f43d4bc5723c6a6/skills/brain-page/SKILL.md"
+      },
+      {
+        "id": "security",
+        "label": "Official SECURITY.md path checked",
+        "path": "SECURITY.md",
+        "symbol": "Not found at reviewed revision; checked for published contact",
+        "url": "https://github.com/mindmuxai/brain.md/blob/02e77c3bb5ca3a5e51130af03f43d4bc5723c6a6/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Recall, correction, deletion, scope, evidence, latency, cost, storage metric domains",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned planned workload cases, not results",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project-wide execution status, not a brain.md result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The repository is maintained under the MindMux organization; its README describes brain.md as led and incubated by MindMux. It is a CLI and set of agent skills/protocol files rather than a hosted memory service. The data lives in a project's repository or a configured sidecar directory.",
+        "sources": [
+          "repo",
+          "readme",
+          "skill"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The brain CLI is a zero-dependency Node.js ESM script. A shared library resolves the brain directory from .mindmux/preferences.json's optional brainRoot, relative to the project root when needed, and otherwise uses ./brain. The directory contains an auto-generated index, six fixed root-page slots, and pages/<id>.md records.",
+        "sources": [
+          "cli",
+          "library",
+          "skill"
+        ]
+      },
+      {
+        "text": "A page has generated frontmatter including ID, category, title, status, timestamps and optional tags/source, a rewritable compiled_truth section, and a visible timeline of typed entries such as decision, evidence, reversal, or note. Root-page slots cover background, architecture, flow, mindmap, stack, and roadmap; root pages have no timeline and rely on Git history for revision history.",
+        "sources": [
+          "cli",
+          "skill",
+          "readme"
+        ]
+      },
+      {
+        "text": "The CLI and companion skills define the operating protocol. Agent configuration files can be wired with a marked instruction block; optional Claude Code and Codex SessionStart hooks add a page listing to session context. The README describes the brain as agent-agnostic because the shared contract is Markdown and a BRAIN.md instruction file.",
+        "sources": [
+          "readme",
+          "skill",
+          "cli"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "create-page validates a kebab-case page ID, writes generated frontmatter and a starter timeline entry, then rebuilds the index. update-truth replaces the current-truth section and appends a decision entry in one atomic file replacement. append-timeline adds a typed entry; set-tags changes tags; archive-page marks a page archived and can append a reversal entry. Six root pages can be written through update-root. Existing timeline entries are not rewritten by these commands.",
+        "sources": [
+          "cli",
+          "library",
+          "skill"
+        ]
+      },
+      {
+        "text": "The current CLI and operating manual expose no page-delete or timeline-delete command. Archiving changes lifecycle status but does not erase page contents. The README says uninstalling the toolkit does not touch project brain data. The inspected source establishes an archive path, not a deletion or secure-erasure guarantee.",
+        "sources": [
+          "cli",
+          "skill",
+          "readme"
+        ]
+      },
+      {
+        "text": "list-pages returns page IDs, titles, categories, and statuses; read-page and read-root load selected Markdown. reindex rebuilds an index whose entries summarize pages with their first compiled-truth sentence; lint-links checks current-truth and root-page wiki-links. Retrieval is explicit by listing and page ID, not semantic or embedding search. The SessionStart integration supplies a listing snapshot, while page bodies are loaded on demand.",
+        "sources": [
+          "cli",
+          "library",
+          "skill",
+          "readme"
+        ]
+      },
+      {
+        "text": "A brain is selected by the invoking project root and can be redirected to a repository sidecar with brainRoot. Records have no tenant or user scope field and directory selection is not an authorization boundary. The Codex hook command embeds an absolute project path, so users are instructed to reinstall after moving a project or using another clone/worktree. No isolation workload was run.",
+        "sources": [
+          "library",
+          "skill",
+          "readme"
+        ]
+      },
+      {
+        "text": "Timeline entries preserve caller-provided summaries, kinds, optional source strings, and affected page IDs alongside current truth. CLI commands append history during truth updates and do not rewrite prior timeline entries; root-page history relies on Git. This is human-readable change context, but the inspected schema does not require claim-level citations, evidence excerpts, confidence, or independent review. Manual edits bypass CLI invariants, so CLI append behavior is not tamper-proof immutability.",
+        "sources": [
+          "cli",
+          "library",
+          "skill",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Explicit page listing and ID-based reads are present; no semantic retrieval or answerability evaluation was inspected.",
+        "sources": [
+          "cli",
+          "library",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Truth rewrite is paired with a timeline entry; no correction or stale-value probe was adjudicated.",
+        "sources": [
+          "cli",
+          "skill",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Archive exists; no deletion command or post-deletion leakage evaluation was found.",
+        "sources": [
+          "cli",
+          "skill",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Project-root and sidecar directory selection are visible; no isolation workload was run.",
+        "sources": [
+          "library",
+          "skill",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Timeline accepts source strings, but claim-level citations are not required by the inspected model.",
+        "sources": [
+          "cli",
+          "skill",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Index rebuild and bounded Codex snapshot are source-visible; no timing was collected.",
+        "sources": [
+          "cli",
+          "library",
+          "readme",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "Markdown files and hook snapshot bounds are visible; no token, price, or storage measurements were collected.",
+        "sources": [
+          "readme",
+          "skill",
+          "metrics"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a read-only review of selected official documentation and code at the pinned head. It does not establish capture quality, retrieval success, stale-belief correction in practice, or erasure behavior across Git history and backups. Concurrent edits, large brains, all integrations, and non-POSIX environments were not evaluated.",
+        "sources": [
+          "readme",
+          "cli",
+          "library",
+          "skill"
+        ]
+      },
+      {
+        "text": "The source describes CLI invariants as correct-by-construction, while also stating manual edits are unsupported and can silently break them. The CLI and tests were not executed, so this review makes no runtime claim about those guarantees.",
+        "sources": [
+          "readme",
+          "skill"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. This review did not execute brain.md, a benchmark workload, or tests.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Project metric definitions and the versioned fixture describe evaluation plans; the project-wide execution status is not a brain.md result.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ]
+  }
+}

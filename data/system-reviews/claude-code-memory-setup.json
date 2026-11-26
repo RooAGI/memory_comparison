@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "article": {
+    "ordinal": 123,
+    "slug": "claude-code-memory-setup",
+    "name": "claude-code-memory-setup",
+    "repository": "https://github.com/lucasrosati/claude-code-memory-setup",
+    "listed_repository": "https://github.com/lucasrosati/claude-code-memory-setup",
+    "branch": "main",
+    "revision": "4cd2e6bd4319fcb2e8d24c2407a864516e7c133a",
+    "reviewed_at": "2026-11-25T08:04:10Z",
+    "review_timezone": "UTC (checked 2026-11-25 00:04:10 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "A setup guide that combines Claude Code commands and a SessionEnd hook with an Obsidian markdown vault, a chat import pipeline, and a recommended code graph workflow. The repository provides scripts and instructions rather than a standalone memory service; this is a pinned source review, not a runtime or benchmark result.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/claude-code-memory-setup.md"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/lucasrosati/claude-code-memory-setup/blob/4cd2e6bd4319fcb2e8d24c2407a864516e7c133a/README.md",
+      "note": "The official pinned README was checked and does not publish a contact email."
+    },
+    "contact_email": null,
+    "contact_checked_sources": [
+      "https://github.com/lucasrosati/claude-code-memory-setup/blob/4cd2e6bd4319fcb2e8d24c2407a864516e7c133a/README.md"
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated roster entry and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[122], ordinal 123; name, slug, explicit listed repository, and Atlas source attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/claude-code-memory-setup.md",
+        "symbol": "Pinned catalog attribution at revision 19199a4fc249e89c0793be06f0b166b358089ba0; identity and locator context only",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/claude-code-memory-setup.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "",
+        "symbol": "Public repository, canonical locator, default branch main",
+        "url": "https://github.com/lucasrosati/claude-code-memory-setup"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed current main head",
+        "path": "",
+        "symbol": "Latest main commit verified from official GitHub commit history and patch; full SHA 4cd2e6bd4319fcb2e8d24c2407a864516e7c133a; commit authored 2026-10-20 21:15:44 -0700",
+        "url": "https://github.com/lucasrosati/claude-code-memory-setup/commit/4cd2e6bd4319fcb2e8d24c2407a864516e7c133a"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README and contact check",
+        "path": "README.md",
+        "symbol": "Guide architecture, installation, import workflow, scope recommendations, Graphify description, documented limits and claimed token figures; checked for published contact email",
+        "url": "https://github.com/lucasrosati/claude-code-memory-setup/blob/4cd2e6bd4319fcb2e8d24c2407a864516e7c133a/README.md"
+      },
+      {
+        "id": "importer",
+        "label": "Pinned chat import processor",
+        "path": "scripts/claude_to_obsidian.py",
+        "symbol": "detect_origin; extract_tags; build_frontmatter; collect_vault_notes; insert_wikilinks; process_file; CLI flags and file writes",
+        "url": "https://github.com/lucasrosati/claude-code-memory-setup/blob/4cd2e6bd4319fcb2e8d24c2407a864516e7c133a/scripts/claude_to_obsidian.py"
+      },
+      {
+        "id": "autosave",
+        "label": "Pinned SessionEnd auto-save hook",
+        "path": "scripts/session_autosave.py",
+        "symbol": "JSONL transcript parsing, metadata extraction, minimum user-message filter, project log routing, timestamped output and error logging",
+        "url": "https://github.com/lucasrosati/claude-code-memory-setup/blob/4cd2e6bd4319fcb2e8d24c2407a864516e7c133a/scripts/session_autosave.py"
+      },
+      {
+        "id": "save",
+        "label": "Pinned /save command workflow",
+        "path": "commands/save.md",
+        "symbol": "Session log, memory consolidation criteria, duplicate check, write destinations, corrections, and user confirmation guidance",
+        "url": "https://github.com/lucasrosati/claude-code-memory-setup/blob/4cd2e6bd4319fcb2e8d24c2407a864516e7c133a/commands/save.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "./METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "./fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "./results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The repository owner is the GitHub account lucasrosati. The project is a setup guide and collection of scripts and command prompt files for Claude Code and an Obsidian vault, rather than a hosted memory service or a packaged database.",
+        "sources": [
+          "repo",
+          "readme",
+          "save",
+          "autosave"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The system is assembled from a user-managed Obsidian vault, markdown slash-command instructions, a Python chat-export importer, a Claude Code SessionEnd hook, and a separately installed Graphify tool described by the guide. The reviewed repository does not include Obsidian or Graphify implementation code; those components are dependencies/recommendations, not assessed here.",
+        "sources": [
+          "readme",
+          "save",
+          "autosave",
+          "importer"
+        ]
+      },
+      {
+        "text": "Imported chats are ordinary Markdown files with YAML fields for title, tags, source, origin, created date, processed time, status, and type. The processor derives origin from the input path or content indicators, tags through a keyword map, and created date from file modification time. Session logs contain extracted objective, touched paths, command samples, and timestamps; /save instructions additionally specify durable notes and project memory destinations.",
+        "sources": [
+          "importer",
+          "autosave",
+          "save"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Chat import recursively finds Markdown exports, strips simple existing frontmatter, adds generated metadata and optional wikilinks, then writes to vault/chats/<origin>/<filename>. The optional --move flag deletes the original after writing; --dry-run avoids file writes. Same-name imports target the same destination path, so the implementation can replace a prior imported file.",
+        "sources": [
+          "importer"
+        ]
+      },
+      {
+        "text": "The /save command instructs Claude Code to write a session log and then conditionally consolidate decisions, reusable insights, project conventions, durable facts, and corrections. It directs the agent to grep for duplicates and update existing matching notes; a new project convention is proposed for confirmation. The repository supplies instructions for these edits, not a transactional memory API or enforced structured update operation.",
+        "sources": [
+          "save",
+          "readme"
+        ]
+      },
+      {
+        "text": "The SessionEnd hook parses transcript JSONL without an LLM call, skips sessions with fewer than two user messages, and writes a timestamped automatic log. It selects a project log folder from the working-directory basename when that vault folder exists, otherwise falls back to the vault-wide logs directory; hook errors are recorded in a separate log and do not propagate to Claude Code.",
+        "sources": [
+          "autosave",
+          "readme"
+        ]
+      },
+      {
+        "text": "Retrieval is by the agent following /resume instructions, reading recent logs, project instructions/decisions, and vault notes; users can also use Obsidian search and graph features. The import script adds wikilinks to the first matching occurrence of each existing note name outside inline/fenced code, but the reviewed repository does not provide a query API, ranking service, answerability check, or retrieval evaluation.",
+        "sources": [
+          "save",
+          "readme",
+          "importer"
+        ]
+      },
+      {
+        "text": "Deletion is not exposed as a general memory API. The README says not to delete notes without asking; users can edit or remove vault files manually. The importer’s --move deletes source exports after copying, while rerunning an import may overwrite a destination file. The inspected source does not establish deletion across vault copies, Obsidian history, backups, or external exports.",
+        "sources": [
+          "readme",
+          "importer",
+          "save"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "The guide describes agent-mediated reading of notes and graph output, but no eligible answerability cases, correctness adjudication, or abstention workload was run.",
+        "sources": [
+          "readme",
+          "save",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "The /save instructions direct updates to equivalent notes and allow corrections, but no correction probes or stale-value measurements were performed; update correctness is not enforced by a repository API.",
+        "sources": [
+          "save",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The importer can delete its source export under --move and notes can be manually removed, but no deletion leakage probes or complete-erasure audit was run.",
+        "sources": [
+          "importer",
+          "readme",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "The guide organizes notes by origin and project folder and routes hook logs using a working-directory basename. These are file organization/routing rules; no access-control boundary or cross-project isolation workload was tested.",
+        "sources": [
+          "importer",
+          "autosave",
+          "save",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Imported notes retain basic source/origin/time metadata and auto-logs retain transcript-derived facts, but source verification and claim-level citation support in later answers were not evaluated.",
+        "sources": [
+          "importer",
+          "autosave",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The hook is implemented as local transcript parsing and the README describes an import schedule, but no timings or write-to-recall measurements were collected.",
+        "sources": [
+          "autosave",
+          "readme",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The README explicitly qualifies its historical token-reduction figures as author-reported and unreproducible from published inputs; no token, cost, or storage measurements were collected in this review.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a read-only source review at the verified current main head. The system, scripts, tests, benchmarks, or runtime workflows were not executed. Source inspection cannot establish successful installation, reliable extraction, retrieval quality, deletion completeness, isolation, latency, cost, or end-to-end token savings.",
+        "sources": [
+          "repo",
+          "head",
+          "readme",
+          "metrics"
+        ]
+      },
+      {
+        "text": "Project and origin placement are conventions implemented by filenames, folders, command instructions, and working-directory names. The inspected repository does not establish a security boundary between projects or users; vault access and Obsidian behavior depend on the surrounding environment.",
+        "sources": [
+          "importer",
+          "autosave",
+          "save",
+          "readme"
+        ]
+      },
+      {
+        "text": "The official README was checked for a contact email and publishes none; contact_email is null and the exact checked README URL is recorded.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No system runtime, tests, benchmark workload, or commands from the reviewed project were executed for this review.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "The project's metric definitions and fixture describe evaluation domains and planned cases, not measured outcomes for this system.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,372 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 303,
+    "slug": "hive-mind",
+    "name": "HiveMind (projectmentor)",
+    "repository": "https://github.com/projectmentor/hive-mind",
+    "listed_repository": "https://github.com/projectmentor/hive-mind",
+    "branch": "main",
+    "revision": "296dc41b15126280d40b9cfdb18aca5f2286f3f5",
+    "reviewed_at": "2026-11-25T23:18:05Z",
+    "review_timezone": "UTC (checked 2026-11-25 15:18:05 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "HiveMind is a self-hosted peer-to-peer memory system whose append-only signed journal is replicated among devices and indexed locally by SQLite/FTS5. Confidence is projected from independent corroboration and owner governance. Its shared-hive access model and persistent journal history are material boundaries; benchmark behavior was not measured.",
+    "atlas_locator": {
+      "ordinal": 303,
+      "name": "HiveMind (projectmentor)",
+      "slug": "hive-mind",
+      "listed_repository": "https://github.com/projectmentor/hive-mind",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hive-mind.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "catalog_revision": "739b63e97e116b2ea43dd4bcaa6df79addd3fef7",
+      "note": "Curated identity and locator attribution only; not assessment evidence."
+    },
+    "contact": {
+      "email": "hello@projectmentor.org",
+      "source_url": "https://github.com/projectmentor/hive-mind/blob/296dc41b15126280d40b9cfdb18aca5f2286f3f5/README.md",
+      "checked_urls": [
+        "https://github.com/projectmentor/hive-mind/blob/296dc41b15126280d40b9cfdb18aca5f2286f3f5/README.md"
+      ],
+      "note": "Published in the official README at the reviewed commit. No commit/profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": "hello@projectmentor.org",
+    "contact_email_source_url": "https://github.com/projectmentor/hive-mind/blob/296dc41b15126280d40b9cfdb18aca5f2286f3f5/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/projectmentor/hive-mind/blob/296dc41b15126280d40b9cfdb18aca5f2286f3f5/README.md"
+    ],
+    "contact_email_note": "The official README at the reviewed commit publishes hello@projectmentor.org. No commit/profile metadata, third-party directory, or inferred address was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[302], ordinal 303: name, slug, explicit listed repository locator, pinned Atlas attribution and roster revision",
+        "url": "../memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/hive-mind.md",
+        "symbol": "Pinned attribution for curated identity and locator; not used as assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hive-mind.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository metadata",
+        "path": "repository API",
+        "symbol": "Canonical projectmentor/hive-mind repository and default branch main",
+        "url": "https://api.github.com/repos/projectmentor/hive-mind"
+      },
+      {
+        "id": "head",
+        "label": "Official current main head",
+        "path": "commits/main API",
+        "symbol": "Full SHA 296dc41b15126280d40b9cfdb18aca5f2286f3f5; latest commit timestamp 2026-10-18T17:24:17Z",
+        "url": "https://api.github.com/repos/projectmentor/hive-mind/commits/main"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "System overview, CLI usage, storage/sync description, integrations, limitations and published contact email",
+        "url": "https://github.com/projectmentor/hive-mind/blob/296dc41b15126280d40b9cfdb18aca5f2286f3f5/README.md"
+      },
+      {
+        "id": "internals",
+        "label": "Pinned official internals guide",
+        "path": "docs/INTERNALS.md",
+        "symbol": "Journal and SQLite architecture, confidence/evidence projections, link authority, Merkle synchronization and performance notes",
+        "url": "https://github.com/projectmentor/hive-mind/blob/296dc41b15126280d40b9cfdb18aca5f2286f3f5/docs/INTERNALS.md"
+      },
+      {
+        "id": "cli",
+        "label": "Pinned official CLI reference",
+        "path": "docs/CLI_REFERENCE.md",
+        "symbol": "remember/decide/propose/retract/search, forget/unforget, scope and membership operations",
+        "url": "https://github.com/projectmentor/hive-mind/blob/296dc41b15126280d40b9cfdb18aca5f2286f3f5/docs/CLI_REFERENCE.md"
+      },
+      {
+        "id": "journal",
+        "label": "Pinned journal and store implementation",
+        "path": "hivemind/parts/02_store_journal.py",
+        "symbol": "SQLite WAL/FTS5 tables and journal-backed state",
+        "url": "https://github.com/projectmentor/hive-mind/blob/296dc41b15126280d40b9cfdb18aca5f2286f3f5/hivemind/parts/02_store_journal.py"
+      },
+      {
+        "id": "links",
+        "label": "Pinned link, correction and forget implementation",
+        "path": "hivemind/parts/06_links_forget.py",
+        "symbol": "Link authority, supersession/resolution semantics and evidence effects",
+        "url": "https://github.com/projectmentor/hive-mind/blob/296dc41b15126280d40b9cfdb18aca5f2286f3f5/hivemind/parts/06_links_forget.py"
+      },
+      {
+        "id": "read-api",
+        "label": "Pinned search and read API implementation",
+        "path": "hivemind/parts/08_read_api.py",
+        "symbol": "Read-only paginated search over facts, decisions and ideas with confidence/status filters",
+        "url": "https://github.com/projectmentor/hive-mind/blob/296dc41b15126280d40b9cfdb18aca5f2286f3f5/hivemind/parts/08_read_api.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Benchmark domains and measurement definitions; no HiveMind result",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Shared benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Synthetic protocol only; not executed for HiveMind",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Shared benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project-wide execution status, not a HiveMind result",
+        "url": "../../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes HiveMind as shared memory for agents across machines, with no central server. This repository provides a CLI, a local sync daemon and agent integrations; the README identifies ProjectMentor and Certified Project Management, LLC as project/copyright holder and labels the software alpha.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The catalog identifies ordinal 303 as HiveMind (projectmentor), slug hive-mind, with an explicit listed repository URL. The Atlas attribution is retained only for curated roster context.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Daily JSONL journal files are the source of truth. Entries carry device identity, per-device sequence, type, timestamp, payload, previous-entry hash and cryptographic signature fields; stable references use (node_id, seq). The journal is append-only.",
+        "sources": [
+          "internals",
+          "journal"
+        ]
+      },
+      {
+        "text": "Every device builds a local SQLite store.db projection from its journal. The store uses WAL and FTS5, and indexes facts alongside decisions, ideas, entities, links and journal identities; it can be rebuilt without losing the authoritative journal.",
+        "sources": [
+          "internals",
+          "journal"
+        ]
+      },
+      {
+        "text": "Peers exchange missing journal entries through Merkle chunk hashes, with 100 entries per chunk described in the internals guide. The README describes periodic and on-demand sync over Tailscale, full local copies and offline operation.",
+        "sources": [
+          "readme",
+          "internals"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The CLI exposes explicit fact, decision, hypothesis, retraction and entity writes. Facts that repeat identical text corroborate an existing fact rather than count as an independent assertion. Writes are journaled and then projected to SQLite; decision and fact references use stable journal identities.",
+        "sources": [
+          "cli",
+          "internals",
+          "journal"
+        ]
+      },
+      {
+        "text": "The reviewed interface does not edit or physically delete journal entries. A normal retraction adds negative evidence; an owner-signed forget lowers the exact content to the forget floor and hides it from ordinary search, while owner-only unforget can reverse that state. The journal retains the content.",
+        "sources": [
+          "readme",
+          "cli",
+          "internals",
+          "links"
+        ]
+      },
+      {
+        "text": "Decision replacement is expressed through supersedes links. The implementation distinguishes hard, authorized links that take effect from evidence-only links that record a proposed relationship but do not replace the target. Supports, contradicts and resolves links contribute evidence according to their type and authority.",
+        "sources": [
+          "cli",
+          "internals",
+          "links"
+        ]
+      },
+      {
+        "text": "Search uses SQLite FTS5 and supports facts, decisions and ideas, tags, confidence/status filters, and confidence, recency, importance or utility ranking. Effective confidence and learned ranking values may decay at query time. The inspected search implementation is text-search based; no vector retrieval path was identified in these sources.",
+        "sources": [
+          "cli",
+          "internals",
+          "read-api"
+        ]
+      },
+      {
+        "text": "The basic access boundary is one shared hive. The README and internals describe owner admission for write participation and whole-hive replication; the reviewed fact schema has no per-project or per-user authorization key. Tags can filter results but do not create access isolation.",
+        "sources": [
+          "readme",
+          "internals",
+          "journal",
+          "cli"
+        ]
+      },
+      {
+        "text": "Journal signatures and hash chains preserve event attribution. The source label identifies app/context/instance but is self-declared; device keys authenticate the writing device. Confidence weights distinct device/app/instance identities, discounts same-device agents, gates on owner admission and caps corroboration from a single principal.",
+        "sources": [
+          "internals",
+          "journal"
+        ]
+      },
+      {
+        "text": "The CLI and README document status, stats, peers and health checks, and describe a read-only local dashboard with corpus and device information. The read API reuses the same projections as CLI search; observability surfaces do not establish measured quality or performance.",
+        "sources": [
+          "readme",
+          "cli",
+          "read-api"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Search, ranking and confidence thresholds are implemented; no answerable or unanswerable fixture probes were run.",
+        "sources": [
+          "cli",
+          "read-api",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Retraction, forget and superseding-decision paths exist; no correction history or stale-value probe was executed.",
+        "sources": [
+          "cli",
+          "links",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leak rate",
+        "status": "unmeasured",
+        "evidence": "Owner forget changes projected visibility but does not erase journal bytes; no post-forget probes or storage audit were run.",
+        "sources": [
+          "internals",
+          "links",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation leak rate",
+        "status": "unmeasured",
+        "evidence": "The documented access boundary is the shared hive; no isolation workload was run.",
+        "sources": [
+          "readme",
+          "internals",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Signed provenance and evidence links are represented, but no generated factual claims or citations were adjudicated.",
+        "sources": [
+          "internals",
+          "links",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "The internals guide includes an upstream-reported timing example; this review did not reproduce or measure it.",
+        "sources": [
+          "internals",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timed write acknowledgment or scheduled correct-recall observations were collected.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No model/API token usage or price schedule was captured for a run.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Journal and SQLite storage are documented, but no corpus-attributed persistent byte count was measured.",
+        "sources": [
+          "internals",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded inspection of the official README, CLI reference, internals documentation and selected code at one verified commit. HiveMind, its tests and benchmarks were not run; source inspection cannot establish user-level answer quality, concurrency behavior or runtime security.",
+        "sources": [
+          "readme",
+          "cli",
+          "internals"
+        ]
+      },
+      {
+        "text": "The append-only journal retains forgotten content. Peers, exports and backups can hold copies; those copies and complete erasure behavior were outside this review. A forget is a visibility/governance state, not physical erasure.",
+        "sources": [
+          "readme",
+          "internals",
+          "links"
+        ]
+      },
+      {
+        "text": "One hive is a shared read corpus. The reviewed sources do not establish per-project or per-user confidentiality boundaries within it; tags are organizational/search metadata. Multi-device access control was not dynamically tested.",
+        "sources": [
+          "readme",
+          "internals",
+          "cli"
+        ]
+      },
+      {
+        "text": "The README calls HiveMind alpha and says its agent contract changes across minor versions. The internals guide reports whole-journal projection work and one upstream timing example, but this review did not independently measure scale or performance.",
+        "sources": [
+          "readme",
+          "internals"
+        ]
+      }
+    ],
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "The metric definitions and fixture specify a project protocol. The shared execution status is not a HiveMind result; no HiveMind benchmark was run."
+    }
+  }
+}

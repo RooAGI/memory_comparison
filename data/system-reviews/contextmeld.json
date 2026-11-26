@@ -1,0 +1,434 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 149,
+    "slug": "contextmeld",
+    "name": "ContextMeld",
+    "repository": "https://github.com/Ste2027/ContextMeld",
+    "listed_repository": "https://github.com/Ste2027/ContextMeld",
+    "branch": "master",
+    "revision": "77d0acbdeda5769d181e7398dcea32be4e70edc9",
+    "reviewed_at": "2026-11-25T09:04:39Z",
+    "review_timezone": "UTC (2026-11-25 01:04:39 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "ContextMeld is a local-first Tauri desktop workspace that indexes supported Claude Code and Codex session files into SQLite, offers literal full-text search, and lets a person author reusable scoped memories and include selected notes in an edited cross-agent handoff. Memory notes are not automatically injected into agent sessions. This assessment is pinned to the verified current master head; no runtime, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 149,
+      "name": "ContextMeld",
+      "slug": "contextmeld",
+      "listed_repository": "https://github.com/Ste2027/ContextMeld",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/contextmeld.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/Ste2027/ContextMeld/blob/77d0acbdeda5769d181e7398dcea32be4e70edc9/README.md",
+      "checked_urls": [
+        "https://github.com/Ste2027/ContextMeld/blob/77d0acbdeda5769d181e7398dcea32be4e70edc9/README.md",
+        "https://github.com/Ste2027/ContextMeld/blob/77d0acbdeda5769d181e7398dcea32be4e70edc9/SECURITY.md"
+      ],
+      "note": "Checked the official pinned README and SECURITY.md for a published contact email. Neither publishes one; SECURITY.md directs vulnerability reports to GitHub private vulnerability reporting when available, or asks users to contact maintainers privately."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/Ste2027/ContextMeld/blob/77d0acbdeda5769d181e7398dcea32be4e70edc9/README.md",
+      "https://github.com/Ste2027/ContextMeld/blob/77d0acbdeda5769d181e7398dcea32be4e70edc9/SECURITY.md"
+    ],
+    "contact_email_note": "No email was published in the checked official README or SECURITY.md. The security policy recommends GitHub private vulnerability reporting when available or private contact before disclosure. No commit/profile metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated roster entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[148], ordinal 149; identity and listed locator",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/contextmeld.md",
+        "symbol": "Pinned Atlas entry used only to attribute the catalog identity/locator, not as assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/contextmeld.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Public repository page shows master as default branch and head prefix 77d0acb",
+        "url": "https://github.com/Ste2027/ContextMeld"
+      },
+      {
+        "id": "feed",
+        "label": "Official master commit feed",
+        "path": "commits/master.atom",
+        "symbol": "Current full master head 77d0acbdeda5769d181e7398dcea32be4e70edc9; feed updated 2026-09-06T19:40:40Z",
+        "url": "https://github.com/Ste2027/ContextMeld/commits/master.atom"
+      },
+      {
+        "id": "head",
+        "label": "Official reviewed commit",
+        "path": "commit/77d0acbdeda5769d181e7398dcea32be4e70edc9",
+        "symbol": "Full current upstream head, independently matched by git ls-remote and shallow checkout",
+        "url": "https://github.com/Ste2027/ContextMeld/commit/77d0acbdeda5769d181e7398dcea32be4e70edc9"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product, architecture, privacy, supported adapters, capabilities and limitations",
+        "url": "https://github.com/Ste2027/ContextMeld/blob/77d0acbdeda5769d181e7398dcea32be4e70edc9/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Pinned official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Security boundaries, storage exposure and vulnerability reporting contact check",
+        "url": "https://github.com/Ste2027/ContextMeld/blob/77d0acbdeda5769d181e7398dcea32be4e70edc9/SECURITY.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Pinned architecture decisions",
+        "path": "docs/architecture.md",
+        "symbol": "React/Tauri/Rust boundaries, SQLite transactions, indexing, FTS, watcher and tradeoffs",
+        "url": "https://github.com/Ste2027/ContextMeld/blob/77d0acbdeda5769d181e7398dcea32be4e70edc9/docs/architecture.md"
+      },
+      {
+        "id": "memories_doc",
+        "label": "Pinned memory user guide",
+        "path": "docs/memories.md",
+        "symbol": "Memory use, scope, revision conflicts, trash/restore and handoff behavior",
+        "url": "https://github.com/Ste2027/ContextMeld/blob/77d0acbdeda5769d181e7398dcea32be4e70edc9/docs/memories.md"
+      },
+      {
+        "id": "schema",
+        "label": "Pinned memory schema migration",
+        "path": "src-tauri/migrations/002_memories.sql",
+        "symbol": "Memory columns, scope constraint and FTS triggers",
+        "url": "https://github.com/Ste2027/ContextMeld/blob/77d0acbdeda5769d181e7398dcea32be4e70edc9/src-tauri/migrations/002_memories.sql"
+      },
+      {
+        "id": "memory_store",
+        "label": "Pinned memory persistence and retrieval",
+        "path": "src-tauri/src/memories.rs",
+        "symbol": "Memory model, validation, list/search/save/trash/export/import operations",
+        "url": "https://github.com/Ste2027/ContextMeld/blob/77d0acbdeda5769d181e7398dcea32be4e70edc9/src-tauri/src/memories.rs"
+      },
+      {
+        "id": "memory_commands",
+        "label": "Pinned memory command API",
+        "path": "src-tauri/src/memory_commands.rs",
+        "symbol": "Typed Tauri commands for memory operations and export",
+        "url": "https://github.com/Ste2027/ContextMeld/blob/77d0acbdeda5769d181e7398dcea32be4e70edc9/src-tauri/src/memory_commands.rs"
+      },
+      {
+        "id": "memory_export",
+        "label": "Pinned context handoff builder",
+        "path": "src/features/ContextExport.tsx",
+        "symbol": "Candidate filtering, explicit memory staging and editable Markdown/JSON handoff",
+        "url": "https://github.com/Ste2027/ContextMeld/blob/77d0acbdeda5769d181e7398dcea32be4e70edc9/src/features/ContextExport.tsx"
+      },
+      {
+        "id": "database",
+        "label": "Pinned SQLite lifecycle and session search",
+        "path": "src-tauri/src/database.rs",
+        "symbol": "WAL, migrations, transactional session import and full-text search",
+        "url": "https://github.com/Ste2027/ContextMeld/blob/77d0acbdeda5769d181e7398dcea32be4e70edc9/src-tauri/src/database.rs"
+      },
+      {
+        "id": "verification",
+        "label": "Pinned upstream verification record",
+        "path": "docs/verification.md",
+        "symbol": "Upstream-reported v0.2.0 checks and stated Windows verification boundary; not reproduced here",
+        "url": "https://github.com/Ste2027/ContextMeld/blob/77d0acbdeda5769d181e7398dcea32be4e70edc9/docs/verification.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Planned benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Project baseline execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents ContextMeld as an independent, MIT-licensed local desktop app built with Tauri, Rust, and React. It reads supported coding-agent history, provides search and memory management, and prepares handoffs; it does not start agents or submit prompts.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      },
+      {
+        "text": "The official repository page identifies master as the default branch. Its official master commit feed reports full head 77d0acbdeda5769d181e7398dcea32be4e70edc9 at 2026-09-06T19:40:40Z; read-only git ls-remote and a shallow checkout independently resolved to the same SHA.",
+        "sources": [
+          "repo",
+          "feed",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The app is divided into React views, typed Tauri IPC, Rust services, and a SQLite database with FTS5. Provider adapters parse local Claude Code and Codex session JSONL into normalized sessions and ordered events. The React layer invokes commands rather than reading directories or launching shell commands directly.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The SQLite database includes session/project/event indexes and a separate memories table. Memory rows contain UUID, title/body, a constrained global/project/agent scope, project path, agent associations, tags, revision, created/updated timestamps, and optional deleted_at. Triggers mirror active memory title/body/labels into an FTS5 library index and remove trashed notes from that index.",
+        "sources": [
+          "schema",
+          "memory_store"
+        ]
+      },
+      {
+        "text": "The memory interface is a person-authored notes library, not an autonomous memory-writing agent or background prompt store. Project memory uses a project path; agent memory associates one or more provider names. The guide says notes are offered to an agent only through an explicitly reviewed context export.",
+        "sources": [
+          "memories_doc",
+          "memory_store",
+          "memory_export"
+        ]
+      },
+      {
+        "text": "The session index uses SQLite FTS5 and transactionally replaces a session's events and search rows during import. The architecture guide describes a single connection behind a mutex, WAL mode, bounded/paginated IPC, native file watching for detected supported roots, and manual reindexing when filesystem notifications are missed.",
+        "sources": [
+          "architecture",
+          "database",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: a user creates a memory with title, body, scope, optional project or agent association, and tags. Validation bounds title/body/tags and rejects missing project/agent scope details. Inserts use generated UUIDs; archive import validates a bounded JSON format and skips exact active duplicates. No model or agent memory-write API was found in the inspected memory command surface.",
+        "sources": [
+          "memories_doc",
+          "memory_store",
+          "memory_commands"
+        ]
+      },
+      {
+        "text": "Update: saving an existing note requires its current revision and increments revision after an optimistic compare-and-swap. A stale or deleted row is rejected with a reload error instead of silently overwriting another edit. The docs describe this as conflict protection; no multi-window update workload was run.",
+        "sources": [
+          "memories_doc",
+          "memory_store"
+        ]
+      },
+      {
+        "text": "Delete and restore: the UI's trash operation sets deleted_at and increments revision; restore clears deleted_at and increments it again. Triggers remove deleted memories from FTS, while the row remains stored. The reviewed API provides no permanent memory purge, so trash is reversible logical deletion rather than physical erasure.",
+        "sources": [
+          "memories_doc",
+          "memory_store",
+          "schema"
+        ]
+      },
+      {
+        "text": "Retrieval: general local search uses SQLite FTS5 for indexed session content and active memories, with results ordered by rank and bounded. The memory library also supports literal substring filtering with scope selection and pagination. Handoff construction loads candidate notes and filters global notes, project notes matching the session project, or agent notes matching the source agent; a user may explicitly stage selected notes, after which they are included in the editable handoff. The app does not automatically inject memory into an agent.",
+        "sources": [
+          "readme",
+          "database",
+          "memory_store",
+          "memories_doc",
+          "memory_export"
+        ]
+      },
+      {
+        "text": "Scope isolation: the memory schema constrains the scope label to global/project/agent, and the handoff UI applies project-path and source-agent matching to candidate notes. The Rust list API can filter only the scope category; it does not itself enforce project or agent association. Explicitly staged memories are added to the handoff regardless of the automatic candidate predicate. This is a product workflow filter, not a general authorization boundary.",
+        "sources": [
+          "schema",
+          "memory_store",
+          "memory_export"
+        ]
+      },
+      {
+        "text": "Provenance/evidence: memory records preserve author-entered content and metadata (scope, project, agents, tags, revisions and timestamps); the schema does not store source citations or a mutation history beyond the current revision and timestamps. Session events preserve normalized event kind, role, source identity, time, tool name and call ID where available. These fields provide origin/context metadata, not factual verification or claim-level evidence.",
+        "sources": [
+          "schema",
+          "memory_store",
+          "database",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Efficiency/observability: code uses FTS5, bounded searches and pages, import transactions, source-file fingerprints, incremental filesystem watching, and explicit memory export limits. The README advertises dashboard counts for sessions, projects, events, calls, models and errors; architecture notes describe bounded import diagnostics and status/manual scan because filesystem notifications are not a durable queue. The local SQLite index is not encrypted and may contain private transcript text.",
+        "sources": [
+          "readme",
+          "architecture",
+          "memory_store",
+          "security"
+        ]
+      },
+      {
+        "text": "Limitations: official documentation says search is literal full-text rather than semantic; changed session files are reparsed as a unit; support is limited to Claude Code and Codex session formats, while other listed agents are detection-only/planned. Memory notes stay local and require explicit selection for handoff. The index and exported handoff files are not encrypted, and trash does not permanently erase rows.",
+        "sources": [
+          "readme",
+          "memories_doc",
+          "memory_store",
+          "security"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "Search and memory retrieval paths were inspected, but no answerable query set or adjudicated answers were run.",
+        "sources": [
+          "database",
+          "memory_store",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Revision-checked edits are source-visible, but no correction probes or stale-value adjudication were run.",
+        "sources": [
+          "memory_store",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Trash removes a note from active FTS and supports restore; no post-trash retrieval or residual-storage check was run.",
+        "sources": [
+          "memory_store",
+          "schema",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Scope isolation leak rate",
+        "status": "unmeasured",
+        "evidence": "Scope category constraints and UI handoff filtering were inspected; no paired allowed/forbidden cross-project or cross-agent workload was run.",
+        "sources": [
+          "schema",
+          "memory_export",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Memory metadata and transcript source fields were inspected; no claim-level answer citations were produced or adjudicated.",
+        "sources": [
+          "memory_store",
+          "database",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "FTS and bounded query implementations were inspected; no latency samples were collected.",
+        "sources": [
+          "database",
+          "memory_store",
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Write and retrieval code were inspected; no timed write-then-recall probe was run.",
+        "sources": [
+          "memory_store",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "The inspected memory and handoff paths do not report model usage; no token or provider-cost data was collected.",
+        "sources": [
+          "readme",
+          "memory_export",
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "SQLite schema and FTS indexing were inspected; no corpus size or per-memory storage measurement was made.",
+        "sources": [
+          "schema",
+          "database",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected the official README, security policy, architecture and memory guides, memory schema/store/commands, context handoff builder, SQLite lifecycle/search, and upstream verification record. It did not inspect every parser, adapter, UI workflow, or deployment configuration.",
+        "sources": [
+          "readme",
+          "security",
+          "architecture",
+          "memories_doc",
+          "schema",
+          "memory_store",
+          "memory_commands",
+          "memory_export",
+          "database",
+          "verification"
+        ]
+      },
+      {
+        "text": "The repository's v0.2.0 verification page reports upstream checks and a Windows synthetic demo on 2026-09-06; these are the project's own claims at that time and were not reproduced or treated as benchmark results in this review.",
+        "sources": [
+          "verification",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "text": "Source inspection does not establish live search quality, scope behavior under all call paths, recovery from missed OS events in a user's environment, deletion of copies/backups, or release behavior on every target platform. The system, tests, and benchmarks were not run for this assessment.",
+        "sources": [
+          "architecture",
+          "readme",
+          "security",
+          "metrics",
+          "result"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No ContextMeld runtime, tests, or benchmarks were run. The upstream verification document is a versioned project check record, not a measurement of the project-defined memory benchmark metrics."
+    }
+  }
+}

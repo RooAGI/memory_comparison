@@ -1,0 +1,382 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "maka",
+    "name": "Apache Maka",
+    "repository": "https://github.com/apache/maka",
+    "branch": "main",
+    "revision": "16e3a7703eccf5f08b62fcb341b7b903f9a3e7e3",
+    "reviewed_at": "2026-11-24T21:11:34Z",
+    "review_timezone": "UTC (2026-11-24 13:07:01 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Apache Maka is an Apache incubating, local-first agent workspace. Its memory behavior has two complementary parts: a revisioned personal/project fact store with evidence and explicit edits, and a searchable, indexed record of authorized conversation history. The project is a full agent workspace, not a standalone memory library.",
+    "atlas_locator": {
+      "ordinal": 62,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/maka.md",
+      "listed_repository": "https://github.com/apache/maka"
+    },
+    "contact": {
+      "email": "security@maka.app",
+      "source_url": "https://github.com/apache/maka/blob/16e3a7703eccf5f08b62fcb341b7b903f9a3e7e3/SECURITY.md",
+      "note": "The official SECURITY.md publishes this address for private vulnerability reports."
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official Apache Maka GitHub repository",
+        "path": "repository page",
+        "symbol": "canonical apache/maka repository; current default branch main",
+        "url": "https://github.com/apache/maka"
+      },
+      {
+        "id": "head",
+        "label": "Verified main branch head",
+        "path": "commit",
+        "symbol": "main HEAD 16e3a7703eccf5f08b62fcb341b7b903f9a3e7e3",
+        "url": "https://github.com/apache/maka/commit/16e3a7703eccf5f08b62fcb341b7b903f9a3e7e3"
+      },
+      {
+        "id": "readme",
+        "label": "Official repository README",
+        "path": "README.md",
+        "symbol": "local-first workspace overview, Runtime Host, repository layout",
+        "url": "https://github.com/apache/maka/blob/16e3a7703eccf5f08b62fcb341b7b903f9a3e7e3/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "published security contact and trust boundaries",
+        "url": "https://github.com/apache/maka/blob/16e3a7703eccf5f08b62fcb341b7b903f9a3e7e3/SECURITY.md"
+      },
+      {
+        "id": "memory-model",
+        "label": "Memory domain types",
+        "path": "plugins/agent/facts/src/memory.rs",
+        "symbol": "memory record, version, edits, scopes, evidence and recall output types",
+        "url": "https://github.com/apache/maka/blob/16e3a7703eccf5f08b62fcb341b7b903f9a3e7e3/plugins/agent/facts/src/memory.rs"
+      },
+      {
+        "id": "memory-owner",
+        "label": "Memory owner and access control",
+        "path": "plugins/agent/native/src/owner/memory.rs",
+        "symbol": "memory scopes, authorization, reads and write/reconcile dispatch",
+        "url": "https://github.com/apache/maka/blob/16e3a7703eccf5f08b62fcb341b7b903f9a3e7e3/plugins/agent/native/src/owner/memory.rs"
+      },
+      {
+        "id": "memory-resolution",
+        "label": "Memory resolution and mutation implementation",
+        "path": "plugins/agent/state/src/memory/resolution.rs",
+        "symbol": "evidence verification, optimistic revision checks, correction, suppression, restoration and relation application",
+        "url": "https://github.com/apache/maka/blob/16e3a7703eccf5f08b62fcb341b7b903f9a3e7e3/plugins/agent/state/src/memory/resolution.rs"
+      },
+      {
+        "id": "memory-matching",
+        "label": "Memory matching implementation",
+        "path": "plugins/agent/state/src/memory/matching.rs",
+        "symbol": "content digests, matching and evidence bookkeeping",
+        "url": "https://github.com/apache/maka/blob/16e3a7703eccf5f08b62fcb341b7b903f9a3e7e3/plugins/agent/state/src/memory/matching.rs"
+      },
+      {
+        "id": "memory-recall",
+        "label": "Memory fact retrieval",
+        "path": "plugins/agent/state/src/memory/recall.rs",
+        "symbol": "scoped FTS query, active assertions, evidence visibility and output limits",
+        "url": "https://github.com/apache/maka/blob/16e3a7703eccf5f08b62fcb341b7b903f9a3e7e3/plugins/agent/state/src/memory/recall.rs"
+      },
+      {
+        "id": "recall-store",
+        "label": "Conversation recall store",
+        "path": "plugins/agent/state/src/recall.rs",
+        "symbol": "indexed message model and capture/search/context API",
+        "url": "https://github.com/apache/maka/blob/16e3a7703eccf5f08b62fcb341b7b903f9a3e7e3/plugins/agent/state/src/recall.rs"
+      },
+      {
+        "id": "recall-index",
+        "label": "Conversation recall index",
+        "path": "plugins/agent/state/src/recall/index.rs",
+        "symbol": "source event projection, indexed messages, attachments, references, rebuild",
+        "url": "https://github.com/apache/maka/blob/16e3a7703eccf5f08b62fcb341b7b903f9a3e7e3/plugins/agent/state/src/recall/index.rs"
+      },
+      {
+        "id": "recall-query",
+        "label": "Conversation recall query and context",
+        "path": "plugins/agent/state/src/recall/query.rs",
+        "symbol": "owner/session/time filters, ranking and bounded context",
+        "url": "https://github.com/apache/maka/blob/16e3a7703eccf5f08b62fcb341b7b903f9a3e7e3/plugins/agent/state/src/recall/query.rs"
+      },
+      {
+        "id": "recall-terms",
+        "label": "Conversation recall term index",
+        "path": "plugins/agent/state/src/recall/terms.rs",
+        "symbol": "FTS5 gram index and literal match query generation",
+        "url": "https://github.com/apache/maka/blob/16e3a7703eccf5f08b62fcb341b7b903f9a3e7e3/plugins/agent/state/src/recall/terms.rs"
+      },
+      {
+        "id": "assistant-recall",
+        "label": "Assistant Recall orchestration",
+        "path": "plugins/agent/assistant/src/recall/search.rs",
+        "symbol": "authorized history search, context lookup and Recall tool definitions",
+        "url": "https://github.com/apache/maka/blob/16e3a7703eccf5f08b62fcb341b7b903f9a3e7e3/plugins/agent/assistant/src/recall/search.rs"
+      },
+      {
+        "id": "recall-types",
+        "label": "Recall query and passage contracts",
+        "path": "plugins/agent/assistant/src/recall/types.rs",
+        "symbol": "query bounds, result fields, source pointers and user-facing semantics",
+        "url": "https://github.com/apache/maka/blob/16e3a7703eccf5f08b62fcb341b7b903f9a3e7e3/plugins/agent/assistant/src/recall/types.rs"
+      },
+      {
+        "id": "history-contract",
+        "label": "Session history API contract",
+        "path": "plugins/agent/ports/src/session/history.rs",
+        "symbol": "authorized history reads, immutable row addresses and source citations",
+        "url": "https://github.com/apache/maka/blob/16e3a7703eccf5f08b62fcb341b7b903f9a3e7e3/plugins/agent/ports/src/session/history.rs"
+      },
+      {
+        "id": "recall-ui",
+        "label": "Workbench conversation search",
+        "path": "products/maka/workbench/app/RecallSearch.tsx",
+        "symbol": "UI search, one-session/all-readable-session choice and streaming results",
+        "url": "https://github.com/apache/maka/blob/16e3a7703eccf5f08b62fcb341b7b903f9a3e7e3/products/maka/workbench/app/RecallSearch.tsx"
+      },
+      {
+        "id": "session-recap",
+        "label": "Session recap implementation",
+        "path": "plugins/agent/session-recap/src/recap.rs",
+        "symbol": "bounded model-generated cached recap tied to source history access",
+        "url": "https://github.com/apache/maka/blob/16e3a7703eccf5f08b62fcb341b7b903f9a3e7e3/plugins/agent/session-recap/src/recap.rs"
+      },
+      {
+        "id": "session-removal",
+        "label": "Session data removal",
+        "path": "plugins/agent/state/src/store/removal.rs",
+        "symbol": "retired Run cleanup and Recall index/content release",
+        "url": "https://github.com/apache/maka/blob/16e3a7703eccf5f08b62fcb341b7b903f9a3e7e3/plugins/agent/state/src/store/removal.rs"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "comparison metric formulas and measurement boundaries",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "global not_run status; no Maka benchmark measurements",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned workload only",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated system roster",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 62, name, slug, listed repository and Atlas source attribution only",
+        "url": "../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository identifies Apache Maka (Incubating) as a local-first agent workspace for terminal and desktop use. A Rust Runtime Host owns model execution, permissions, sandboxing, and SQLite state; the repository is an integrated application/platform rather than a standalone memory package.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The official SECURITY.md publishes security@maka.app for private vulnerability reports. This is a security contact, not a general maintainer email.",
+        "sources": [
+          "security"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Code observation: Maka has a durable conversation-history path and a structured memory-fact path. Run facts and immutable content live behind the Runtime Host’s SQLite event log. The Recall store projects selected history events into an indexed message view; a separate memory store keeps current memory records, versions, relations, and evidence. The fact model includes UUID ID, revision and assertion counters, recall mode, active/unresolved/suppressed state, body, fact/preference/instruction metadata, and timestamps.",
+        "sources": [
+          "readme",
+          "memory-model",
+          "recall-store",
+          "recall-index",
+          "memory-resolution"
+        ]
+      },
+      {
+        "text": "Conversation Recall indexes user, assistant, tool-call, and tool-result material with message/session/turn identifiers, source position, timestamps, attachments, content references, field spans, and origin metadata. It preserves a link to source history rather than treating the derived index as the authority. Session recap is another derived artifact: a bounded model summary cached with an operation receipt and source sequence fence.",
+        "sources": [
+          "recall-index",
+          "recall-store",
+          "session-recap"
+        ]
+      },
+      {
+        "text": "Maka keeps personal facts and project facts distinct. The memory namespace derives from the active Run owner; personal facts use a personal location, while project facts bind to a project workspace identity and session permission basis. The official workspace is local-first; this review did not inspect remote synchronization or establish cross-device memory behavior.",
+        "sources": [
+          "memory-model",
+          "memory-owner",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Fact writes and updates — code observation: user-facing management accepts Create, Correct, Delete, Restore, SetAlways, and AddEvidence edits. Updates carry expected revisions; the resolver checks the current snapshot before commit and retries resolution if the scope changed. A batch is validated before writes and applied within a savepoint. Conflicting or unresolved semantic comparisons can leave an item unresolved rather than silently replacing another fact. Agent extraction paths are admitted only under the owner’s memory policy and permitted Session context.",
+        "sources": [
+          "memory-model",
+          "memory-owner",
+          "memory-resolution"
+        ]
+      },
+      {
+        "text": "Delete and restore — code observation: Delete changes the fact’s lifecycle to suppressed and suppresses related assertions in the scope; it is a revisioned state change, not evidence in this review of physical byte erasure. Restore creates a new revision through the explicit restore edit. Conversation Sessions can be archived or removed; removal cleanup deletes per-Run recall index rows and schedules referenced content for release. The review did not verify backup, filesystem, or low-level SQLite recovery erasure.",
+        "sources": [
+          "memory-model",
+          "memory-resolution",
+          "session-removal"
+        ]
+      },
+      {
+        "text": "Fact retrieval — code observation: Recall searches active, current facts in the caller’s personal and, when admitted, project scopes. It uses an FTS5 prefix query and optional modified-time bounds, excludes facts outside temporal validity, pages at most 16 facts, examines at most 64 matching keys per page, and enforces a 32 KiB rendered fact budget. Results return IDs, revisions, scope, temporal/type metadata, source references, and an evidence-completeness flag; callers can continue with a cursor.",
+        "sources": [
+          "memory-recall",
+          "recall-types",
+          "memory-model"
+        ]
+      },
+      {
+        "text": "Conversation retrieval — code observation: Recall searches indexed history using case-insensitive Unicode-normalized literal substring matches. Terms have OR semantics; results rank first by distinct matched terms, then match density, then recency and stable identifiers. Queries may restrict a Session and time interval; passages carry message/turn/session IDs, source row address and history fence, with neighboring-message windows and a SessionRead pointer for the full source. Default neighbor windows are four messages before and after; explicit result limit is optional and omission returns all matches. The current live uncompacted tail of an agent’s turn is excluded.",
+        "sources": [
+          "assistant-recall",
+          "recall-query",
+          "recall-types"
+        ]
+      },
+      {
+        "text": "Scope isolation — code observation: fact access rechecks the caller’s identity, memory policy, project/session binding, workspace observation, and scope. Agent reads are denied when memory read is disabled, for incognito Sessions, and for disallowed child/tool/remote origins; an agent cannot request another project Session’s facts. Conversation Recall builds its store from the authorized Run owner and Session prefix, filters to ready/visible Sessions, honors caller history-read authority, and rechecks authority around the worker operation. These are inspected source predicates, not leakage test results.",
+        "sources": [
+          "memory-owner",
+          "memory-recall",
+          "recall-query",
+          "assistant-recall",
+          "history-contract"
+        ]
+      },
+      {
+        "text": "Provenance and evidence — code observation: memory writes may cite an immutable conversation source by Session, sequence, item index, fact ID, byte range, fingerprint, and exact quote. The resolver verifies the source fact, SHA-256 fingerprint, quote range, and exact text before accepting that provenance. User operations have operation IDs and observation time. Memory versions retain body/metadata/source/method; corrections, conflicts, and equivalent/replaced relations have explicit revision history. This establishes traceability to a source, not truth of the claim.",
+        "sources": [
+          "memory-model",
+          "memory-resolution",
+          "memory-matching"
+        ]
+      },
+      {
+        "text": "Conversation passages include a stable history row pointer and source IDs; system-level evidence can therefore be opened through authorized SessionRead. The fact store checks whether cited source material remains visible and reports incomplete evidence as a gap. Restricted spans can mask indexed text. These mechanisms provide source linkage and access checks; they do not guarantee that generated answers cite or accurately interpret every returned passage.",
+        "sources": [
+          "recall-types",
+          "history-contract",
+          "memory-recall",
+          "recall-index"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention are unmeasured. Source exposes keyword/prefix fact search and literal conversation search; no answer-quality or abstention probes were run.",
+        "sources": [
+          "memory-recall",
+          "recall-query",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate are unmeasured. The code has revisioned corrections, temporal metadata, conflict resolution, and suppression; no correction workload was run.",
+        "sources": [
+          "memory-model",
+          "memory-resolution",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Deletion leakage is unmeasured. Fact deletion suppresses assertions, and Session removal releases indexed Run history through a cleanup path; no post-delete probes or physical-erasure audit were performed.",
+        "sources": [
+          "memory-resolution",
+          "session-removal",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Scope-isolation leakage is unmeasured. Source contains owner, scope, project/session, and readable-history filters; no cross-scope workload was run.",
+        "sources": [
+          "memory-owner",
+          "recall-query",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Evidence support and citation coverage are unmeasured. Memory can retain verified source quotes and Recall returns source pointers, but no answer claim adjudication or citation workload was run.",
+        "sources": [
+          "memory-model",
+          "memory-resolution",
+          "recall-types",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Latency and write-to-recall delay are unmeasured. No Maka runtime, benchmark, or timing observations were collected.",
+        "sources": [
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Tokens, cost, and storage efficiency are unmeasured. Recap generation caps model output at 1,024 tokens and conversation recall uses indexed text, but these code bounds do not establish total token use, cost, or storage efficiency.",
+        "sources": [
+          "session-recap",
+          "recall-index",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency and observability: SQLite FTS5 gram indexes support conversation lookup; search uses paged candidate scans and caller-selected result budgets, while fact retrieval is capped by page size and byte budget. The code surfaces search gaps, incomplete evidence, stable source pointers, and recap pending/ready/failed receipts. These are implementation observations, not latency, throughput, or reliability measurements.",
+        "sources": [
+          "recall-terms",
+          "recall-query",
+          "memory-recall",
+          "session-recap",
+          "metrics"
+        ]
+      }
+    ],
+    "limits": [
+      "This bounded review covered the repository README and SECURITY.md plus current memory domain, owner, resolution, retrieval, conversation index, query, assistant contract, UI, recap, and removal paths at one upstream SHA.",
+      "The project is a broad local agent workspace. This review does not characterize every model provider, plugin, tool, UI, or state lifecycle path.",
+      "Source inspection does not establish runtime retrieval quality, scope isolation, deletion completeness, backup behavior, SQLite forensic recoverability, performance, cost, or storage consumption. No runtime, benchmark, or tests were run.",
+      "Conversation recall is keyword/literal-substring based in the inspected code; no embedding or semantic conversation ranking path was identified in the inspected retrieval files. The fact resolver may perform model-assisted semantic resolution, but its quality was not evaluated.",
+      "The official README and SECURITY.md were checked for contact; SECURITY.md publishes security@maka.app. No general project contact email was sought from commit metadata or personal profiles."
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "text": "Benchmark not run. The shared execution record is not_run and the fixture is a planned workload, not a Maka result. This review did not run Maka, benchmarks, or tests; all metric domains remain unmeasured.",
+      "sources": [
+        "metrics",
+        "record",
+        "fixture"
+      ]
+    }
+  }
+}

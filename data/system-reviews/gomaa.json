@@ -1,0 +1,356 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 264,
+    "slug": "gomaa",
+    "name": "Gomaa",
+    "repository": "https://github.com/M4F-S/gomaa",
+    "listed_repository": "https://github.com/M4F-S/gomaa",
+    "branch": "main",
+    "revision": "3764b37797b3a0ba68e7f767a84ca401d209c825",
+    "reviewed_at": "2026-11-25T21:20:49Z",
+    "review_timezone": "UTC (checked 2026-11-25 13:20:49 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Gomaa pairs a human-readable Obsidian Markdown vault with SQLite or PostgreSQL memory stores and exposes scoped retrieval through library, CLI, MCP, and adapter paths. This source review does not reproduce upstream performance claims or measure runtime quality.",
+    "atlas_locator": {
+      "ordinal": 264,
+      "name": "Gomaa",
+      "slug": "gomaa",
+      "listed_repository": "https://github.com/M4F-S/gomaa",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/gomaa.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/M4F-S/gomaa/blob/3764b37797b3a0ba68e7f767a84ca401d209c825/README.md",
+      "checked_urls": [
+        "https://github.com/M4F-S/gomaa/blob/3764b37797b3a0ba68e7f767a84ca401d209c825/README.md",
+        "https://github.com/M4F-S/gomaa/blob/3764b37797b3a0ba68e7f767a84ca401d209c825/SECURITY.md"
+      ],
+      "note": "Checked only official pinned README and SECURITY.md for published contact email; neither contained one. No commit/profile metadata, package metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/M4F-S/gomaa/blob/3764b37797b3a0ba68e7f767a84ca401d209c825/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/M4F-S/gomaa/blob/3764b37797b3a0ba68e7f767a84ca401d209c825/README.md",
+      "https://github.com/M4F-S/gomaa/blob/3764b37797b3a0ba68e7f767a84ca401d209c825/SECURITY.md"
+    ],
+    "contact_email_note": "No email was published in the checked official pinned README or SECURITY.md; the security policy refers to GitHub private vulnerability reporting. No profile or package metadata was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[263], ordinal 264; identity, explicit locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/gomaa.md",
+        "symbol": "Pinned attribution for curated identity and locator only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/gomaa.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "",
+        "symbol": "GitHub repository page identifies public M4F-S/gomaa and default branch main",
+        "url": "https://github.com/M4F-S/gomaa"
+      },
+      {
+        "id": "head",
+        "label": "Official main commit feed and verified Git head",
+        "path": "",
+        "symbol": "main.atom full head; git ls-remote and shallow checkout agree",
+        "url": "https://github.com/M4F-S/gomaa/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project scope and upstream feature/performance statements, treated as unverified claims",
+        "url": "https://github.com/M4F-S/gomaa/blob/3764b37797b3a0ba68e7f767a84ca401d209c825/README.md"
+      },
+      {
+        "id": "core",
+        "label": "Pinned memory orchestration",
+        "path": "gomaa/core.py",
+        "symbol": "UnifiedMemorySystem composition, remember, forget, recall, sync and rollback paths",
+        "url": "https://github.com/M4F-S/gomaa/blob/3764b37797b3a0ba68e7f767a84ca401d209c825/gomaa/core.py"
+      },
+      {
+        "id": "base",
+        "label": "Pinned store interface",
+        "path": "gomaa/stores/base.py",
+        "symbol": "Store contract for upsert/delete, scoped retrieval, lifecycle, graph and ancillary memory",
+        "url": "https://github.com/M4F-S/gomaa/blob/3764b37797b3a0ba68e7f767a84ca401d209c825/gomaa/stores/base.py"
+      },
+      {
+        "id": "factory",
+        "label": "Pinned store selection",
+        "path": "gomaa/stores/__init__.py",
+        "symbol": "SQLite/PostgreSQL store selection and fallback behavior",
+        "url": "https://github.com/M4F-S/gomaa/blob/3764b37797b3a0ba68e7f767a84ca401d209c825/gomaa/stores/__init__.py"
+      },
+      {
+        "id": "sqlite",
+        "label": "Pinned SQLite store",
+        "path": "gomaa/stores/sqlite.py",
+        "symbol": "SQLite note fields, upsert/version/delete, scope filters and search",
+        "url": "https://github.com/M4F-S/gomaa/blob/3764b37797b3a0ba68e7f767a84ca401d209c825/gomaa/stores/sqlite.py"
+      },
+      {
+        "id": "postgres",
+        "label": "Pinned PostgreSQL store",
+        "path": "gomaa/stores/postgres.py",
+        "symbol": "PostgreSQL store schema/query scope and vector/text retrieval",
+        "url": "https://github.com/M4F-S/gomaa/blob/3764b37797b3a0ba68e7f767a84ca401d209c825/gomaa/stores/postgres.py"
+      },
+      {
+        "id": "vault",
+        "label": "Pinned Markdown vault",
+        "path": "gomaa/vault.py",
+        "symbol": "Frontmatter, safe path generation, atomic file writes, reads and wiki-link extraction",
+        "url": "https://github.com/M4F-S/gomaa/blob/3764b37797b3a0ba68e7f767a84ca401d209c825/gomaa/vault.py"
+      },
+      {
+        "id": "security",
+        "label": "Pinned admission control",
+        "path": "gomaa/security.py",
+        "symbol": "Length and injection-pattern rejection plus best-effort duplicate/title checks",
+        "url": "https://github.com/M4F-S/gomaa/blob/3764b37797b3a0ba68e7f767a84ca401d209c825/gomaa/security.py"
+      },
+      {
+        "id": "rank",
+        "label": "Pinned shared recall ranker",
+        "path": "gomaa/recall_rank.py",
+        "symbol": "Read-only candidate fusion, staleness/supersession filters, ranking and budget formatting",
+        "url": "https://github.com/M4F-S/gomaa/blob/3764b37797b3a0ba68e7f767a84ca401d209c825/gomaa/recall_rank.py"
+      },
+      {
+        "id": "service",
+        "label": "Pinned read-only recall service",
+        "path": "gomaa/recall_service.py",
+        "symbol": "HTTP recall, embedding cache, candidate retrieval, timing and optional JSONL logs",
+        "url": "https://github.com/M4F-S/gomaa/blob/3764b37797b3a0ba68e7f767a84ca401d209c825/gomaa/recall_service.py"
+      },
+      {
+        "id": "embedder",
+        "label": "Pinned embedding provider",
+        "path": "gomaa/embedder.py",
+        "symbol": "Local, remote and hash fallback providers and encoder identity",
+        "url": "https://github.com/M4F-S/gomaa/blob/3764b37797b3a0ba68e7f767a84ca401d209c825/gomaa/embedder.py"
+      },
+      {
+        "id": "mcp",
+        "label": "Pinned MCP server",
+        "path": "gomaa/mcp_server.py",
+        "symbol": "MCP tool surface and argument handling",
+        "url": "https://github.com/M4F-S/gomaa/blob/3764b37797b3a0ba68e7f767a84ca401d209c825/gomaa/mcp_server.py"
+      },
+      {
+        "id": "security-policy",
+        "label": "Pinned official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Private vulnerability reporting instructions; no email published",
+        "url": "https://github.com/M4F-S/gomaa/blob/3764b37797b3a0ba68e7f767a84ca401d209c825/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation domains and metric definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned benchmark fixture, not executed in this task",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project execution status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared benchmark execution status, not a Gomaa result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents Gomaa as a local-first agent memory engine with framework integrations and standalone deployment options. The repository contains the memory implementation and integrations, rather than only a remote hosted service.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "UnifiedMemorySystem composes a vault manager, embedder, admission control, selected MemoryStore, optional shared store, consolidation engine, and prospective-memory support. The store interface spans notes, retrieval, lifecycle, graph links, timeline, episodic events, playbooks, and working memory.",
+        "sources": [
+          "core",
+          "base",
+          "factory"
+        ]
+      },
+      {
+        "text": "Semantic notes are persisted as Obsidian-compatible Markdown with YAML frontmatter and corresponding database rows; fields include title/content/tags/type/status/salience, embedding identity, scope, origin, lifecycle and access information. Wiki links are projected into graph relations.",
+        "sources": [
+          "vault",
+          "sqlite",
+          "postgres"
+        ]
+      },
+      {
+        "text": "The vault path builder rejects traversal components and ensures resolved paths remain below the vault root; writes use a temporary sibling and atomic replacement. Sync reads canonical note titles from frontmatter and indexes notes from their actual paths.",
+        "sources": [
+          "vault",
+          "core"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "remember applies selected control-token neutralization and admission checks, embeds accepted content, writes the Markdown note, upserts the store row and graph links, and logs a timeline action. On database failure it attempts to restore or remove the vault file.",
+        "sources": [
+          "core",
+          "security",
+          "vault",
+          "sqlite"
+        ]
+      },
+      {
+        "text": "Same-title, same-scope upserts retain prior versions in the SQLite store before updating the current row. Admission duplicate and title checks are best-effort; failures in those checks are logged and bypassed.",
+        "sources": [
+          "sqlite",
+          "security"
+        ]
+      },
+      {
+        "text": "forget matches title and wing/room, removes the database row, and by default deletes matching vault files; it searches matching content in other scopes to reduce sync resurrection risk and supports dry-run. This is not a tombstone or verified erasure from backups.",
+        "sources": [
+          "core",
+          "sqlite",
+          "vault"
+        ]
+      },
+      {
+        "text": "Recall supports semantic, keyword, graph, associative-PPR, procedural, episodic, and hybrid modes. Wing and room predicates are applied only when callers provide scope; broad unscoped searches are therefore possible.",
+        "sources": [
+          "core",
+          "base",
+          "sqlite",
+          "postgres"
+        ]
+      },
+      {
+        "text": "The separate read-only recall service uses a shared ranker, bounded candidate window and formatted character budget; optional logs record query, selected titles, latency and output characters. Its shared recall defaults off; UnifiedMemorySystem.recall defaults include_shared to true.",
+        "sources": [
+          "rank",
+          "service",
+          "core"
+        ]
+      },
+      {
+        "text": "The current ranker removes superseded and probe-tagged rows and demotes perishable notes by age. Its code comments cite frozen-set tuning, but this assessment did not reproduce those results.",
+        "sources": [
+          "rank"
+        ]
+      },
+      {
+        "text": "The store schema carries origin, status, confidence, supersession, embedding identity and lifecycle fields, but neither a source citation nor a rejected-write audit record is mandatory. Recalled answer evidence is not established by this implementation review.",
+        "sources": [
+          "sqlite",
+          "postgres",
+          "security",
+          "core"
+        ]
+      },
+      {
+        "text": "The read-only service can cache query embeddings and append JSONL telemetry; stores expose timeline and statistics. The README also states performance and test figures that this review did not independently verify.",
+        "sources": [
+          "service",
+          "sqlite",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention: retrieval modes and result formatting are implemented; correctness and abstention are unmeasured.",
+        "sources": [
+          "core",
+          "rank"
+        ]
+      },
+      {
+        "text": "Correction and staleness: versioned upserts, supersession fields, and perishable ranking exist; correction accuracy and stale-value rate are unmeasured.",
+        "sources": [
+          "sqlite",
+          "rank"
+        ]
+      },
+      {
+        "text": "Deletion: forget coordinates database and vault removal; deletion leakage and backup propagation are unmeasured.",
+        "sources": [
+          "core",
+          "vault"
+        ]
+      },
+      {
+        "text": "Scope: queries accept wing/room predicates and may include a shared store; cross-scope isolation is unmeasured.",
+        "sources": [
+          "sqlite",
+          "postgres",
+          "core"
+        ]
+      },
+      {
+        "text": "Evidence: provenance fields and activity logging exist, but citations are optional; evidence support and citation coverage are unmeasured.",
+        "sources": [
+          "sqlite",
+          "core"
+        ]
+      },
+      {
+        "text": "Efficiency: a recall endpoint logs latency and output size; latency, write-to-recall delay, tokens, cost, and storage efficiency were not measured.",
+        "sources": [
+          "service",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected selected current source and official docs but did not execute Gomaa, tests, or benchmarks; source presence does not show that configured retrieval is correct or that a deployment is isolated.",
+        "sources": [
+          "readme",
+          "core",
+          "service"
+        ]
+      },
+      {
+        "text": "External backups, cloud-sync copies, concurrent edits, and deployment-level credential/authorization boundaries were not evaluated. Optional provenance and unscoped recall remain application-level risks.",
+        "sources": [
+          "vault",
+          "core",
+          "postgres",
+          "service"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Gomaa runtime, test suite, or project benchmark workload was run. Upstream README figures are not treated as reproduced or as project benchmark results.",
+      "metric_definitions": "../METRICS.md",
+      "fixture": "../fixtures/memory-benchmark-v1.json",
+      "execution_status": "../results/initial-baselines-status.json"
+    }
+  }
+}

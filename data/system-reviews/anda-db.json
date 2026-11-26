@@ -1,0 +1,335 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 56,
+    "slug": "anda-db",
+    "name": "Anda DB",
+    "repository": "https://github.com/ldclabs/anda-db",
+    "listed_repository": "https://github.com/ldclabs/anda-db",
+    "branch": "main",
+    "revision": "e9c4959a24619fcf84b0e8afaf199dd19b44b09b",
+    "reviewed_at": "2026-11-24T20:46:42Z",
+    "review_timezone": "UTC (2026-11-24 12:46:42 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Anda DB is an embedded Rust document database and workspace of storage, retrieval, and KIP components for persistent agent memory. The Cognitive Nexus models concepts, claims, evidence, and activity, with belief projected from assertions at read time. This is a pinned source review, not a runtime or benchmark evaluation.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/anda-db.md"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/ldclabs/anda-db/blob/e9c4959a24619fcf84b0e8afaf199dd19b44b09b/README.md",
+      "note": "No published contact email was found in the official pinned README or official project website."
+    },
+    "contact_email": null,
+    "contact_checked_sources": [
+      "https://github.com/ldclabs/anda-db/blob/e9c4959a24619fcf84b0e8afaf199dd19b44b09b/README.md",
+      "https://anda.ai/"
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog order and entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[55], ordinal 56; name/slug/listed repository and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Curated Atlas source attribution only",
+        "path": "content/systems/anda-db.md",
+        "symbol": "Roster attribution at revision 19199a4fc249e89c0793be06f0b166b358089ba0",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/anda-db.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "",
+        "symbol": "Canonical public repository; default branch main",
+        "url": "https://github.com/ldclabs/anda-db"
+      },
+      {
+        "id": "head-feed",
+        "label": "Official main branch commit feed",
+        "path": "",
+        "symbol": "Current main head e9c4959a24619fcf84b0e8afaf199dd19b44b09b",
+        "url": "https://github.com/ldclabs/anda-db/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream head",
+        "path": "",
+        "symbol": "Full reviewed commit SHA",
+        "url": "https://github.com/ldclabs/anda-db/commit/e9c4959a24619fcf84b0e8afaf199dd19b44b09b"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned README",
+        "path": "README.md",
+        "symbol": "Workspace architecture, storage, indexes, deployment modes, operating constraints",
+        "url": "https://github.com/ldclabs/anda-db/blob/e9c4959a24619fcf84b0e8afaf199dd19b44b09b/README.md"
+      },
+      {
+        "id": "nexus-doc",
+        "label": "Cognitive Nexus technical reference",
+        "path": "docs/anda_cognitive_nexus.md",
+        "symbol": "Model, KQL/KML, transactions, scope, limits, query work budget",
+        "url": "https://github.com/ldclabs/anda-db/blob/e9c4959a24619fcf84b0e8afaf199dd19b44b09b/docs/anda_cognitive_nexus.md"
+      },
+      {
+        "id": "tx",
+        "label": "Nexus transaction engine",
+        "path": "rs/anda_cognitive_nexus/src/tx.rs",
+        "symbol": "Staged declarative mutations, versions, commit receipts and atomic visibility",
+        "url": "https://github.com/ldclabs/anda-db/blob/e9c4959a24619fcf84b0e8afaf199dd19b44b09b/rs/anda_cognitive_nexus/src/tx.rs"
+      },
+      {
+        "id": "space",
+        "label": "MemorySpace store",
+        "path": "rs/anda_cognitive_nexus/src/store/space.rs",
+        "symbol": "Space ownership, policies, lifecycle, and per-Space commit sequence",
+        "url": "https://github.com/ldclabs/anda-db/blob/e9c4959a24619fcf84b0e8afaf199dd19b44b09b/rs/anda_cognitive_nexus/src/store/space.rs"
+      },
+      {
+        "id": "history",
+        "label": "Nexus element version history",
+        "path": "rs/anda_cognitive_nexus/src/store/history.rs",
+        "symbol": "Append-only version rows, historical reads, and version removal/payload purge support",
+        "url": "https://github.com/ldclabs/anda-db/blob/e9c4959a24619fcf84b0e8afaf199dd19b44b09b/rs/anda_cognitive_nexus/src/store/history.rs"
+      },
+      {
+        "id": "purge",
+        "label": "Governance purge implementation",
+        "path": "rs/anda_cognitive_nexus/src/governance/purge.rs",
+        "symbol": "Authorization, legal hold, reference policy, purge stub and erasure",
+        "url": "https://github.com/ldclabs/anda-db/blob/e9c4959a24619fcf84b0e8afaf199dd19b44b09b/rs/anda_cognitive_nexus/src/governance/purge.rs"
+      },
+      {
+        "id": "projection",
+        "label": "Epistemic Projection implementation",
+        "path": "rs/anda_cognitive_nexus/src/projection/mod.rs",
+        "symbol": "Belief projection, conflict handling, evidence provenance limits",
+        "url": "https://github.com/ldclabs/anda-db/blob/e9c4959a24619fcf84b0e8afaf199dd19b44b09b/rs/anda_cognitive_nexus/src/projection/mod.rs"
+      },
+      {
+        "id": "website",
+        "label": "Official Anda project website",
+        "path": "",
+        "symbol": "Contact-list follow-up; no published contact email found",
+        "url": "https://anda.ai/"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Proposed recall, correction, deletion, scope, evidence, and efficiency metrics",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Execution status remains not_run; no Anda DB results",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned workload, not benchmark results",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The upstream repository identifies LDC Labs in its copyright/license text and presents Anda DB as a modular Rust workspace rather than a single hosted memory service. It includes the embedded database, KIP SDK, Rust Cognitive Nexus reference engine, service crates, a shard proxy, Python binding, and independent TypeScript KIP engine for Cloudflare Durable Objects.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The embedded storage layer uses schema-aware collections with B-Tree exact/range indexes, BM25 full-text search, and HNSW vector search. Its object_store abstraction supports local and cloud object storage; optional wrappers provide metadata/conditional updates and chunked AES-GCM encryption.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The Cognitive Nexus stores Concepts, Propositions, Assertions, Evidence, and Activities, alongside MemorySpace, transaction, schema, governance-control, and version-history collections. A Proposition is truth-neutral; an Assertion records an actor stance, confidence, valid time, and evidence. Belief is projected from Assertions under a named policy and is not stored as truth.",
+        "sources": [
+          "nexus-doc",
+          "projection"
+        ]
+      },
+      {
+        "text": "A MemorySpace is an ownership and policy boundary with principals, classification and policy defaults, schema environment version, and a monotonically increasing commit sequence. Semantic topics belong in Concepts, not in Space boundaries.",
+        "sources": [
+          "space",
+          "nexus-doc"
+        ]
+      },
+      {
+        "text": "Anda DB’s workspace includes the KIP SDK and Rust Cognitive Nexus reference implementation; the root README also describes HTTP service and sharding layers, a Python binding, and a TypeScript KIP engine on Cloudflare Durable Objects sharing a conformance fixture suite.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "KML supports creation, upsert, proposition and evidence/assertion/activity creation, field and lifecycle updates, retention changes, and merge operations. Mutation plans are declarative and staged before commit; forward references allow cyclic provenance. Changed elements receive one version increment per transaction, and no-effect writes do not claim a transition.",
+        "sources": [
+          "nexus-doc",
+          "tx"
+        ]
+      },
+      {
+        "text": "The transaction engine commits rows, receipts/change records, and version history as one Cognitive Nexus state transition. The technical reference describes in-process write-lock atomic visibility and redo recovery; the version history stores complete row versions for AS OF reads.",
+        "sources": [
+          "tx",
+          "history",
+          "nexus-doc"
+        ]
+      },
+      {
+        "text": "Corrections can supersede earlier Assertions; world changes close valid-time intervals while preserving prior claims; misrecording repair is a separate protected operation. Different actors’ disagreement can coexist. Projection can return contested, uncertain, rejected, or insufficient states, but its documentation says evidence quality is not automatically evaluated.",
+        "sources": [
+          "nexus-doc",
+          "projection"
+        ]
+      },
+      {
+        "text": "Archive and tombstone are lifecycle changes that preserve records and normally remove non-active elements from default matching. PURGE is the destructive path: inspected code checks authorization and legal holds, defaults to refusing erasure of referenced elements, removes historical versions, and leaves an identity/audit stub with a content digest.",
+        "sources": [
+          "nexus-doc",
+          "purge",
+          "history"
+        ]
+      },
+      {
+        "text": "KQL supports graph matching, traversal, filters, projections, aggregates, paging, historical coordinates, and text/vector search. The database combines BM25 and HNSW candidates with reciprocal-rank fusion and can narrow with B-Tree filters. Belief queries use the projection rather than treating a Proposition row as current truth.",
+        "sources": [
+          "readme",
+          "nexus-doc",
+          "projection"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "KQL retrieval and belief projection expose accepted, contested, uncertain, rejected, and insufficient states. No answerable or unsupported probes were run.",
+        "sources": [
+          "nexus-doc",
+          "projection"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Assertion lifecycle, valid-time intervals, transaction history, and supersession are represented in source. No correction or stale-value probes were run.",
+        "sources": [
+          "nexus-doc",
+          "history"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "PURGE removes current element content and recorded versions while leaving an audit stub. Backups and external copies are outside this inspected boundary; no deletion-leak probe was run.",
+        "sources": [
+          "purge",
+          "history"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Space is a first-class ownership boundary and query context is described as Space-bound and authorization-aware. No cross-Space probes or deployment auth checks were run.",
+        "sources": [
+          "space",
+          "nexus-doc"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Assertions and Activities can refer to Evidence and preserve provenance, but the projection does not automatically evaluate evidence quality. No claim-support adjudication was run.",
+        "sources": [
+          "nexus-doc",
+          "projection"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Indexes, fused search, query budgets, and history reads are visible in source/docs. No latency or write-to-recall timing was collected.",
+        "sources": [
+          "readme",
+          "nexus-doc",
+          "history"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and persistent storage",
+        "status": "unmeasured",
+        "evidence": "The workspace describes storage backends and model integrations but this review collected no token, cost, or storage measurements.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded inspection of selected source and documentation at the reviewed SHA. It does not establish runtime correctness, answer quality, backend parity, deployed authorization, crash recovery in practice, deletion completeness, or performance.",
+        "sources": [
+          "nexus-doc",
+          "readme"
+        ]
+      },
+      {
+        "text": "The Cognitive Nexus documents a shared 100,000 intermediate candidate/work budget; LIMIT does not bypass it. Historical reads also consume bounded query work and may fail explicitly rather than scan without bound.",
+        "sources": [
+          "nexus-doc",
+          "history"
+        ]
+      },
+      {
+        "text": "The repository states that each database has one live writer and that sharded deployments must route each Space to exactly one process. This review did not test multi-process coordination or cross-tenant isolation.",
+        "sources": [
+          "readme",
+          "nexus-doc"
+        ]
+      },
+      {
+        "text": "Evidence links and a mathematically defined belief projection do not establish source truth: evidence quality is not automatically evaluated. The inspected subset does not cover every engine adapter, server path, or external retention layer.",
+        "sources": [
+          "projection",
+          "nexus-doc"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No Anda DB system execution, benchmark workload, build, or tests were run for this review. Source structures, documentation statements, and repository-reported activity are not results from this review.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "The project metric definitions, benchmark fixture, and initial execution status are linked for context only; planned domains and case counts are not measurements.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,347 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "agno",
+    "name": "Agno",
+    "repository": "https://github.com/agno-agi/agno",
+    "branch": "main",
+    "revision": "bd24f44997b3cc86b3cfa9f6608bacc0353c601f",
+    "reviewed_at": "2026-11-24T19:30:38Z",
+    "review_timezone": "UTC (2026-11-24 11:30:38 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/agno-agi/agno/blob/bd24f44997b3cc86b3cfa9f6608bacc0353c601f/README.md","checked_urls":["https://github.com/agno-agi/agno/blob/bd24f44997b3cc86b3cfa9f6608bacc0353c601f/README.md","https://github.com/agno-agi/agno/blob/bd24f44997b3cc86b3cfa9f6608bacc0353c601f/SECURITY.md","https://github.com/agno-agi/agno/blob/bd24f44997b3cc86b3cfa9f6608bacc0353c601f/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "Agno is an agent platform with a typed learning subsystem for user profiles, long-term user memories, session context, entity memory, learned knowledge, and decision logs. The source review describes configurable extraction and tool-mediated updates; it reports no benchmark measurements.",
+    "atlas_locator": {
+      "ordinal": 33,
+      "name": "Agno",
+      "slug": "agno",
+      "listed_repository": "https://github.com/agno-agi/agno",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agno.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/agno-agi/agno/blob/bd24f44997b3cc86b3cfa9f6608bacc0353c601f/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/agno-agi/agno/blob/bd24f44997b3cc86b3cfa9f6608bacc0353c601f/README.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository and default branch",
+        "path": "repository",
+        "symbol": "canonical agno-agi/agno; default branch main",
+        "url": "https://github.com/agno-agi/agno"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "head bd24f44997b3cc86b3cfa9f6608bacc0353c601f",
+        "url": "https://github.com/agno-agi/agno/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream head commit",
+        "path": "commit",
+        "symbol": "full SHA bd24f44997b3cc86b3cfa9f6608bacc0353c601f",
+        "url": "https://github.com/agno-agi/agno/commit/bd24f44997b3cc86b3cfa9f6608bacc0353c601f"
+      },
+      {
+        "id": "readme",
+        "label": "Official README: platform and memory capabilities",
+        "path": "README.md",
+        "url": "https://github.com/agno-agi/agno/blob/bd24f44997b3cc86b3cfa9f6608bacc0353c601f/README.md"
+      },
+      {
+        "id": "config",
+        "label": "Learning types, modes, scopes, and configuration",
+        "path": "libs/agno/agno/learn/config.py",
+        "symbol": "LearningMode; UserProfileConfig; UserMemoryConfig; EntityMemoryConfig; DecisionLogConfig",
+        "url": "https://github.com/agno-agi/agno/blob/bd24f44997b3cc86b3cfa9f6608bacc0353c601f/libs/agno/agno/learn/config.py"
+      },
+      {
+        "id": "machine",
+        "label": "Learning machine orchestration",
+        "path": "libs/agno/agno/learn/machine.py",
+        "symbol": "LearningMachine",
+        "url": "https://github.com/agno-agi/agno/blob/bd24f44997b3cc86b3cfa9f6608bacc0353c601f/libs/agno/agno/learn/machine.py"
+      },
+      {
+        "id": "user-memory",
+        "label": "User memory store",
+        "path": "libs/agno/agno/learn/stores/user_memory.py",
+        "symbol": "UserMemoryStore.recall; process; update; delete; clear",
+        "url": "https://github.com/agno-agi/agno/blob/bd24f44997b3cc86b3cfa9f6608bacc0353c601f/libs/agno/agno/learn/stores/user_memory.py"
+      },
+      {
+        "id": "user-profile",
+        "label": "Structured user profile store",
+        "path": "libs/agno/agno/learn/stores/user_profile.py",
+        "symbol": "UserProfileStore",
+        "url": "https://github.com/agno-agi/agno/blob/bd24f44997b3cc86b3cfa9f6608bacc0353c601f/libs/agno/agno/learn/stores/user_profile.py"
+      },
+      {
+        "id": "session-context",
+        "label": "Session context store",
+        "path": "libs/agno/agno/learn/stores/session_context.py",
+        "symbol": "SessionContextStore",
+        "url": "https://github.com/agno-agi/agno/blob/bd24f44997b3cc86b3cfa9f6608bacc0353c601f/libs/agno/agno/learn/stores/session_context.py"
+      },
+      {
+        "id": "entity-memory",
+        "label": "Entity memory store and tool contract",
+        "path": "libs/agno/agno/learn/stores/entity_memory.py",
+        "symbol": "remember_about; link_entities; search_entities; forget; entity namespaces",
+        "url": "https://github.com/agno-agi/agno/blob/bd24f44997b3cc86b3cfa9f6608bacc0353c601f/libs/agno/agno/learn/stores/entity_memory.py"
+      },
+      {
+        "id": "learn-schemas",
+        "label": "Learning schemas and typed records",
+        "path": "libs/agno/agno/learn/schemas.py",
+        "symbol": "Memories; UserProfile; EntityMemory; facts and events",
+        "url": "https://github.com/agno-agi/agno/blob/bd24f44997b3cc86b3cfa9f6608bacc0353c601f/libs/agno/agno/learn/schemas.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../../results/initial-baselines-status.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog identity and attribution only",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 33",
+        "url": "../../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository README presents Agno as a self-managing agent platform that builds agents, teams, and workflows and can run them as services on AgentOS. The learning package is a library subsystem inside that platform, not a separately described memory-only service.",
+        "sources": [
+          "repo",
+          "readme",
+          "config"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "`LearningMode` defines ALWAYS (automatic extraction), AGENTIC (the agent writes through tools), PROPOSE, and HITL modes. The configuration source limits PROPOSE to learned knowledge and describes HITL as reserved; the stores do not uniformly support every mode. Learning configurations separate structured user profile, unstructured user memory, session context, learned knowledge, entity memory, and decision logs.",
+        "sources": [
+          "config",
+          "machine"
+        ]
+      },
+      {
+        "text": "The learning configuration uses dataclasses and allows database and model dependencies to be supplied per store. Entity memory is AGENTIC-only and stores facts, events, entity properties, and relationships; its tool surface includes remember_about, link_entities, search_entities, and forget. This is a typed collection of learning stores, rather than one universal memory record.",
+        "sources": [
+          "config",
+          "entity-memory",
+          "learn-schemas"
+        ]
+      },
+      {
+        "text": "User profile is the structured user record, while user memory stores unstructured observations that do not fit profile fields. Session context and decision logs are separate learning types with their own scopes and configs. The details and persistence semantics depend on the configured store/database.",
+        "sources": [
+          "config",
+          "user-profile",
+          "user-memory",
+          "session-context"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: in ALWAYS mode, UserMemoryStore.process extracts from conversation messages when a model is configured; in AGENTIC mode, the agent can use its memory tools to add, update, delete, or clear memories. User profile extraction can update structured profile fields, while entity memory is recorded through agent tools and has no extraction pass.",
+        "sources": [
+          "config",
+          "user-memory",
+          "user-profile",
+          "entity-memory"
+        ]
+      },
+      {
+        "text": "Update and correction: the user-memory store exposes add/update/delete operations and profile updates are field based. Entity memory upserts an entity and can retire an individual fact by recording supersession metadata; forgetting an entity archives it. These operations do not establish measured correction accuracy or a general mutation audit trail.",
+        "sources": [
+          "user-memory",
+          "user-profile",
+          "entity-memory",
+          "learn-schemas"
+        ]
+      },
+      {
+        "text": "Delete: user memory supports deleting selected memories and clearing a user's memories. Entity `forget` retires a fact or archives an entity, so archival should not be read as physical erasure. This review did not verify backend retention, replicas, backups, or deletion across every learning type.",
+        "sources": [
+          "user-memory",
+          "entity-memory"
+        ]
+      },
+      {
+        "text": "Retrieval: user memory recall requires a user ID and returns that user's stored memory object. Entity search can find entities by query or list them by recency; entity context exposes live facts and related events. The inspected source supports a lexical relevance path, but this review did not establish semantic-search quality or end-to-end recall behavior for every configured backend.",
+        "sources": [
+          "user-memory",
+          "entity-memory",
+          "learn-schemas"
+        ]
+      },
+      {
+        "text": "Scope: user memories are selected by user_id, and the store documentation states that all agents using the same database see that user's memories; agent_id and team_id are audit fields rather than additional retrieval boundaries. Entity namespaces distinguish private-to-user, shared global (the documented default), and custom group scopes. Effective isolation remains dependent on how callers configure and enforce those scopes.",
+        "sources": [
+          "user-memory",
+          "entity-memory",
+          "config"
+        ]
+      },
+      {
+        "text": "Provenance and evidence: entity facts/events can have record IDs and time/supersession fields, and entities may point to an optional note; user memories carry IDs and content. The inspected schemas do not establish source-document passages, claim-level citations, or an evidence adjudication workflow for generated answers.",
+        "sources": [
+          "entity-memory",
+          "learn-schemas",
+          "user-memory"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Store APIs and entity search behavior are source observations; no answerability, abstention, or retrieval-quality cases were run.",
+        "sources": [
+          "user-memory",
+          "entity-memory",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Update and entity fact supersession paths are present, but no before/after correction probes were run.",
+        "sources": [
+          "user-memory",
+          "entity-memory",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Delete, clear, and archive operations are visible. No post-delete retrieval, backend, replica, or backup probes were run.",
+        "sources": [
+          "user-memory",
+          "entity-memory",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "User-ID selection and entity namespaces are documented in source. No forbidden cross-user, cross-agent, or cross-namespace probes were run.",
+        "sources": [
+          "user-memory",
+          "entity-memory",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "The inspected learning records do not establish claim-level evidence links or adjudicated citations. No answer claims were scored.",
+        "sources": [
+          "learn-schemas",
+          "entity-memory",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Automatic extraction can invoke a model and operations use configured databases, but no end-to-end timing or write visibility probes were collected.",
+        "sources": [
+          "config",
+          "user-memory",
+          "entity-memory",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The source exposes model/database configuration; no usage, provider cost, database size, or bytes-per-memory measurements were collected.",
+        "sources": [
+          "config",
+          "machine",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code and documentation",
+        "evidence": "The learning configuration uses dataclasses and makes model/database choices explicit. ALWAYS-mode memory extraction adds a model call; store retrieval is database-backed. These code facts do not establish runtime latency, cost, or storage efficiency.",
+        "sources": [
+          "config",
+          "user-memory",
+          "entity-memory"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded review inspected the official README and selected learning configuration, user memory, and entity memory sources at the verified head. It did not trace all agent integrations, all database adapters/migrations, all learned-knowledge or session-context operations, or every retrieval path.",
+        "sources": [
+          "readme",
+          "config",
+          "machine",
+          "user-memory",
+          "entity-memory"
+        ]
+      },
+      {
+        "text": "The user-memory store's user-only scope means agent/team identifiers do not provide independent retrieval isolation in that store. Entity namespaces are caller-selected, and this review did not test authorization boundaries or database policies.",
+        "sources": [
+          "user-memory",
+          "entity-memory"
+        ]
+      },
+      {
+        "text": "The source review cannot determine extraction correctness, retrieval quality, correction freshness, deletion completeness, evidence support, performance, token use, cost, or storage efficiency. No Agno runtime, benchmarks, or tests were run.",
+        "sources": [
+          "user-memory",
+          "entity-memory",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No Agno runtime, benchmark workload, or tests were executed. The project metric definitions, fixture, and result status are evaluation protocol/status references, not Agno benchmark results.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      }
+    ]
+  }
+}

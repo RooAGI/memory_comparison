@@ -1,0 +1,384 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "brainapi",
+    "name": "BrainAPI",
+    "repository": "https://github.com/Lumen-Labs/brainapi2",
+    "branch": "main",
+    "revision": "a94b911a87f54f5ba4fb4942850a19e1ba0e8e95",
+    "reviewed_at": "2026-11-25T00:05:47Z",
+    "review_timezone": "UTC (2026-11-24 16:05:47 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":"hello@lumen-labs.ai","source_url":"https://github.com/Lumen-Labs/brainapi2/blob/a94b911a87f54f5ba4fb4942850a19e1ba0e8e95/README.md","note":"Published in the official README for commercial licensing."},
+    "summary": "BrainAPI is a Python service that turns ingested material into an event-centered knowledge graph and exposes graph, passage, and typed-fact retrieval. This review distinguishes README design descriptions and selected current code paths from unmeasured behavior.",
+    "atlas_locator": {
+      "ordinal": 101,
+      "name": "BrainAPI",
+      "slug": "brainapi",
+      "listed_repository": "https://github.com/Lumen-Labs/brainapi2",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/brainapi.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": "hello@lumen-labs.ai",
+    "contact_email_source_url": "https://github.com/Lumen-Labs/brainapi2/blob/a94b911a87f54f5ba4fb4942850a19e1ba0e8e95/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/Lumen-Labs/brainapi2/blob/a94b911a87f54f5ba4fb4942850a19e1ba0e8e95/README.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository",
+        "path": "repository",
+        "symbol": "Canonical public repository Lumen-Labs/brainapi2",
+        "url": "https://github.com/Lumen-Labs/brainapi2"
+      },
+      {
+        "id": "repo-meta",
+        "label": "GitHub repository metadata",
+        "path": "api.github.com/repos/Lumen-Labs/brainapi2",
+        "symbol": "Canonical name, visibility and default branch main",
+        "url": "https://api.github.com/repos/Lumen-Labs/brainapi2"
+      },
+      {
+        "id": "main-head",
+        "label": "Current main commit API",
+        "path": "commits/main",
+        "symbol": "Current main head a94b911a87f54f5ba4fb4942850a19e1ba0e8e95",
+        "url": "https://api.github.com/repos/Lumen-Labs/brainapi2/commits/main"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed full head commit",
+        "path": "commit",
+        "symbol": "Reviewed full SHA a94b911a87f54f5ba4fb4942850a19e1ba0e8e95",
+        "url": "https://github.com/Lumen-Labs/brainapi2/commit/a94b911a87f54f5ba4fb4942850a19e1ba0e8e95"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Product description, event graph, ingestion, retrieval, documented limits and published contact",
+        "url": "https://github.com/Lumen-Labs/brainapi2/blob/a94b911a87f54f5ba4fb4942850a19e1ba0e8e95/README.md"
+      },
+      {
+        "id": "intent-model",
+        "label": "Intent memory models",
+        "path": "src/core/intent/models.py",
+        "symbol": "IntentFact, FactSource, status, validity, recall and mutation result fields",
+        "url": "https://github.com/Lumen-Labs/brainapi2/blob/a94b911a87f54f5ba4fb4942850a19e1ba0e8e95/src/core/intent/models.py"
+      },
+      {
+        "id": "intent-service",
+        "label": "Intent memory service",
+        "path": "src/core/intent/service.py",
+        "symbol": "Remember, correction, source passage writes and retirement orchestration",
+        "url": "https://github.com/Lumen-Labs/brainapi2/blob/a94b911a87f54f5ba4fb4942850a19e1ba0e8e95/src/core/intent/service.py"
+      },
+      {
+        "id": "intent-retrieval",
+        "label": "Intent retrieval",
+        "path": "src/core/intent/retrieve.py",
+        "symbol": "Hybrid keyword, vector, neighbor and passage retrieval; filtering and ranking",
+        "url": "https://github.com/Lumen-Labs/brainapi2/blob/a94b911a87f54f5ba4fb4942850a19e1ba0e8e95/src/core/intent/retrieve.py"
+      },
+      {
+        "id": "intent-status",
+        "label": "Intent status and provenance mapping",
+        "path": "src/core/intent/status.py",
+        "symbol": "Status calculation and source metadata mapping",
+        "url": "https://github.com/Lumen-Labs/brainapi2/blob/a94b911a87f54f5ba4fb4942850a19e1ba0e8e95/src/core/intent/status.py"
+      },
+      {
+        "id": "intent-retire",
+        "label": "Intent retirement",
+        "path": "src/core/intent/retire.py",
+        "symbol": "Retirement, validity closure and chronology guards",
+        "url": "https://github.com/Lumen-Labs/brainapi2/blob/a94b911a87f54f5ba4fb4942850a19e1ba0e8e95/src/core/intent/retire.py"
+      },
+      {
+        "id": "intent-brain",
+        "label": "Intent brain and writer identity",
+        "path": "src/core/intent/brain.py",
+        "symbol": "Brain token resolution helper and token-derived writer identity",
+        "url": "https://github.com/Lumen-Labs/brainapi2/blob/a94b911a87f54f5ba4fb4942850a19e1ba0e8e95/src/core/intent/brain.py"
+      },
+      {
+        "id": "verification",
+        "label": "Fact verification service",
+        "path": "src/core/verification/service.py",
+        "symbol": "Verify, reject and reset operations with principal and history metadata",
+        "url": "https://github.com/Lumen-Labs/brainapi2/blob/a94b911a87f54f5ba4fb4942850a19e1ba0e8e95/src/core/verification/service.py"
+      },
+      {
+        "id": "mcp-guard",
+        "label": "BrainPAT scope guard",
+        "path": "src/services/mcp/utils.py",
+        "symbol": "BrainPAT validation and brain_id authorization",
+        "url": "https://github.com/Lumen-Labs/brainapi2/blob/a94b911a87f54f5ba4fb4942850a19e1ba0e8e95/src/services/mcp/utils.py"
+      },
+      {
+        "id": "context-retrieval",
+        "label": "Context retrieval controller",
+        "path": "src/services/api/controllers/retrieve.py",
+        "symbol": "Context retrieval pipelines, passage collection and profiling hooks",
+        "url": "https://github.com/Lumen-Labs/brainapi2/blob/a94b911a87f54f5ba4fb4942850a19e1ba0e8e95/src/services/api/controllers/retrieve.py"
+      },
+      {
+        "id": "validity",
+        "label": "Validity and temporal helpers",
+        "path": "src/core/saving/validity.py",
+        "symbol": "Valid-time and record-time semantics for facts and passages",
+        "url": "https://github.com/Lumen-Labs/brainapi2/blob/a94b911a87f54f5ba4fb4942850a19e1ba0e8e95/src/core/saving/validity.py"
+      },
+      {
+        "id": "profiler",
+        "label": "Request stage profiler",
+        "path": "src/lib/tracing/profiler.py",
+        "symbol": "Source-visible stage wall/CPU/IO timing and privacy-safe log report",
+        "url": "https://github.com/Lumen-Labs/brainapi2/blob/a94b911a87f54f5ba4fb4942850a19e1ba0e8e95/src/lib/tracing/profiler.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "../METRICS.md",
+        "symbol": "Shared evaluation metric definitions, not a BrainAPI result",
+        "url": "METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "../fixtures/memory-benchmark-v1.json",
+        "symbol": "Shared planned synthetic workload, not a BrainAPI run",
+        "url": "fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark status",
+        "path": "../results/initial-baselines-status.json",
+        "symbol": "Shared execution record currently marked not_run; no metric values",
+        "url": "results/initial-baselines-status.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated system roster",
+        "path": "../data/memory-systems.json",
+        "symbol": "Ordinal 101 identity, slug, listed locator and source attribution only",
+        "url": "data/memory-systems.json"
+      },
+      {
+        "id": "atlas-attribution",
+        "label": "Atlas catalog attribution",
+        "path": "pinned report",
+        "symbol": "Catalog identity/locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/brainapi.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository describes BrainAPI as a knowledge graph backed memory service for agents and applications, implemented as a Python API/server with REST and MCP interfaces, worker processes, and an optional console. The README names Lumen Labs as the project organization; this review does not infer individual maintainer roles.",
+        "sources": [
+          "repo",
+          "repo-meta",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README's ingestion design sends text through specialized Scout, Observations, Architect, and Janitor agents. It models actions as event hubs linked to actor, target, and context, preserving a graph path for multi-step retrieval. The repository separately supports passage and vector search; this is a documented product architecture description, not an end-to-end runtime confirmation.",
+        "sources": [
+          "readme",
+          "context-retrieval"
+        ]
+      },
+      {
+        "text": "The inspected intent-memory API has a typed IntentFact with stable fact ID, text, verification status, subject/predicate/object, valid and invalid times, supersession pointer, source fields, writer, retirement reason, and fact kind. Source passages are a separate retrieval lane. This layer is distinct from the README's graph-ingestion pipeline.",
+        "sources": [
+          "intent-model",
+          "intent-status",
+          "intent-service"
+        ]
+      },
+      {
+        "text": "BrainAPI exposes a brain_id scope. Intent helpers resolve a supplied BrainPAT against that brain; the guard rejects a token scoped to a different brain. The helper also derives a writer label from a truncated SHA-256 token digest. This source slice does not establish organization-wide tenancy behavior beyond brain-level access.",
+        "sources": [
+          "intent-brain",
+          "mcp-guard"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Document ingestion is described as asynchronous: POST /ingest returns a task ID while worker agents extract entities, observations and graph relationships. The README describes a lightweight mode that skips some extraction and validation work. This review did not inspect every ingestion worker or validate those claims at runtime.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The inspected intent service can remember typed facts and associate source keys/passages. It parses subject-predicate-object claims, writes graph nodes/relationships, tracks source metadata and validity, and serializes conflicting writes per brain, subject and predicate using Redis when available plus an in-process lock fallback. The latest main commit also changes extraction to use the configured LLM with regex fallback, as visible in the reviewed head commit.",
+        "sources": [
+          "intent-service",
+          "intent-retire",
+          "intent-brain",
+          "main-head"
+        ]
+      },
+      {
+        "text": "Correction is a versioning/retirement operation: the service records a replacement and closes eligible prior relationships with valid_to/invalid_at and superseded_by metadata. The current code avoids closing a later-dated fact when an older fact arrives. This changes stored relationship properties; the README's broad append-only statement therefore describes event history at a high level, not an absence of mutable lifecycle metadata.",
+        "sources": [
+          "intent-service",
+          "intent-retire",
+          "validity",
+          "readme",
+          "head"
+        ]
+      },
+      {
+        "text": "The inspected fact actions include verify, reject, and reset. Verification and rejection require a principal and append state-transition history metadata. Rejection changes retrieval status; it is not evidence of physical erasure. I did not find a general destructive delete operation in the inspected intent models/service slices, and the README says graph events are retained rather than deleted.",
+        "sources": [
+          "verification",
+          "intent-model",
+          "readme"
+        ]
+      },
+      {
+        "text": "Context retrieval combines passage channels and graph paths, with source code defining bounded candidate collectors, rank fusion, relevance filtering, and optional request-stage profiling. Intent recall separately collects keyword graph matches, vector seeds, neighboring graph relationships, and matching passages, then merges, temporal-filters, conflict-annotates and ranks facts. The current main commit updates intent recall/check to reuse hybrid retrieval rather than a fixed 2,000-fact scan.",
+        "sources": [
+          "context-retrieval",
+          "intent-retrieval",
+          "validity",
+          "head",
+          "main-head"
+        ]
+      },
+      {
+        "text": "Fact provenance can include source document, URL, source key, writer, verification state, verifier/source/note history, validity timestamps and supersession identifiers. Retrieval returns fact/source evidence fields; provenance establishes the recorded source path, not that the claim is true. The generic context route can also return source passages and graph triples.",
+        "sources": [
+          "intent-model",
+          "intent-status",
+          "verification",
+          "readme",
+          "context-retrieval"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "metric": "Answerable recall and abstention",
+        "status": "not_measured",
+        "evidence": "Hybrid retrieval and unmatched-result fields are implemented in the inspected paths; no adjudicated query workload was run.",
+        "sources": [
+          "intent-retrieval",
+          "intent-model",
+          "metrics"
+        ]
+      },
+      {
+        "metric": "Correction and stale values",
+        "status": "not_measured",
+        "evidence": "Temporal validity and supersession paths are visible in code; no corrected-value probes were executed.",
+        "sources": [
+          "intent-retire",
+          "validity",
+          "metrics"
+        ]
+      },
+      {
+        "metric": "Deletion leakage",
+        "status": "not_measured",
+        "evidence": "Rejection/retirement paths were inspected, but no deletion leak workload or general hard-delete path was verified.",
+        "sources": [
+          "verification",
+          "intent-retire",
+          "metrics"
+        ]
+      },
+      {
+        "metric": "Scope isolation",
+        "status": "not_measured",
+        "evidence": "BrainPAT-to-brain authorization checks are source-visible; no cross-brain isolation probes were run.",
+        "sources": [
+          "intent-brain",
+          "mcp-guard",
+          "metrics"
+        ]
+      },
+      {
+        "metric": "Evidence and citations",
+        "status": "not_measured",
+        "evidence": "Facts retain source metadata and context can return source passages/graph triples; evidence support precision was not measured.",
+        "sources": [
+          "intent-model",
+          "intent-status",
+          "context-retrieval",
+          "metrics"
+        ]
+      },
+      {
+        "metric": "Latency and write-to-recall delay",
+        "status": "not_measured",
+        "evidence": "The source defines stage timing and bounded query collectors; no runtime measurements or ingest-to-recall timing were collected.",
+        "sources": [
+          "profiler",
+          "context-retrieval",
+          "metrics"
+        ]
+      },
+      {
+        "metric": "Tokens, cost, and storage",
+        "status": "not_measured",
+        "evidence": "The README describes pipeline modes and the repo has cost-related paths; this review did not establish measured tokens, costs, or storage efficiency.",
+        "sources": [
+          "readme",
+          "metrics"
+        ]
+      },
+      {
+        "metric": "Efficiency and observability",
+        "status": "not_measured",
+        "evidence": "The source exposes request stage spans, wall/CPU/IO timing, candidate counts and privacy-safe diagnostic logs; these are code observations, not runtime telemetry from this review.",
+        "sources": [
+          "profiler",
+          "context-retrieval"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded review of selected current README, intent-memory, verification, retrieval, authorization, validity and profiling sources. It did not inspect every storage adapter, ingest worker, route, plugin, or deployment configuration.",
+        "sources": [
+          "readme",
+          "intent-service",
+          "context-retrieval"
+        ]
+      },
+      {
+        "text": "The README's claims about traceable graph paths, append-only history and retrieval targets are documentation statements. Source-visible fact retirement mutates relationship lifecycle metadata, while the selected slice does not establish physical deletion across passage stores, backups, or exports.",
+        "sources": [
+          "readme",
+          "intent-retire",
+          "verification"
+        ]
+      },
+      {
+        "text": "No service, model, or benchmark was executed. This review cannot establish retrieval quality, correction accuracy, deletion leakage, isolation under deployment, latency, cost, or production reliability.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is not_run. No BrainAPI service, tests, or benchmark workload was run. The shared project fixture and execution record define/report the project's benchmark process but contain no BrainAPI measurement.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ]
+  }
+}

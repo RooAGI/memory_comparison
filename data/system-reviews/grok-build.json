@@ -1,0 +1,446 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 276,
+    "slug": "grok-build",
+    "name": "Grok Build",
+    "repository": "https://github.com/xai-org/grok-build",
+    "listed_repository": "https://github.com/xai-org/grok-build",
+    "branch": "main",
+    "revision": "2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8",
+    "reviewed_at": "2026-11-25T22:05:05Z",
+    "review_timezone": "UTC (checked 2026-11-25 14:05:05 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Grok Build is a Rust coding-agent CLI/TUI with cross-session memory. The inspected head contains two isolated pipelines: legacy Markdown notes and session logs with a SQLite hybrid-search index, and an opt-in v2 topic/observation pipeline with scoped access, durable capture, Dream consolidation, a generated manifest, and tombstone-based forgetting. Memory is experimental and disabled by default in the user guide. No runtime, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 276,
+      "name": "Grok Build",
+      "slug": "grok-build",
+      "listed_repository": "https://github.com/xai-org/grok-build",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/grok-build.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/README.md",
+      "checked_urls": [
+        "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/README.md",
+        "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/SECURITY.md"
+      ],
+      "note": "Checked the official pinned README and SECURITY.md. Neither publishes a contact email; SECURITY.md directs vulnerability reports to HackerOne. No commit/profile metadata, package metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/README.md",
+      "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/SECURITY.md"
+    ],
+    "contact_email_note": "No contact email was published in the official pinned README or SECURITY.md checked for this review.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[275], ordinal 276; roster identity, explicit repository locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/grok-build.md",
+        "symbol": "Pinned curated attribution for identity/locator only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/grok-build.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository metadata",
+        "path": "",
+        "symbol": "GitHub repository API identifies xai-org/grok-build and default branch main",
+        "url": "https://api.github.com/repos/xai-org/grok-build"
+      },
+      {
+        "id": "head",
+        "label": "Official current main commit API",
+        "path": "",
+        "symbol": "Full current main head SHA and commit metadata",
+        "url": "https://api.github.com/repos/xai-org/grok-build/commits/main"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official repository README",
+        "path": "README.md",
+        "symbol": "Product description, Rust source scope, sync model, repository layout, and documentation entry point; checked for contact email",
+        "url": "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/README.md"
+      },
+      {
+        "id": "guide",
+        "label": "Pinned official memory user guide",
+        "path": "crates/codegen/xai-grok-pager/docs/user-guide/13-memory.md",
+        "symbol": "Memory enablement, legacy/v2 layout and user operations, retrieval configuration, observability statement, and stated defaults",
+        "url": "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/crates/codegen/xai-grok-pager/docs/user-guide/13-memory.md"
+      },
+      {
+        "id": "docs",
+        "label": "Official Grok Build online overview",
+        "path": "",
+        "symbol": "Official product overview and supported interactive/headless/ACP usage",
+        "url": "https://docs.x.ai/build/overview"
+      },
+      {
+        "id": "lib",
+        "label": "Pinned memory crate module map",
+        "path": "crates/codegen/xai-grok-memory/src/lib.rs",
+        "symbol": "Legacy and v2 pipeline split, feature gating, module/API exports, and embedding batch path",
+        "url": "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/crates/codegen/xai-grok-memory/src/lib.rs"
+      },
+      {
+        "id": "storage",
+        "label": "Pinned memory file storage",
+        "path": "crates/codegen/xai-grok-memory/src/storage.rs",
+        "symbol": "Legacy and v2 roots, global/workspace directories, Markdown paths, mode isolation, and file operations",
+        "url": "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/crates/codegen/xai-grok-memory/src/storage.rs"
+      },
+      {
+        "id": "index",
+        "label": "Pinned SQLite memory index",
+        "path": "crates/codegen/xai-grok-memory/src/index.rs",
+        "symbol": "Chunk records, FTS5, optional sqlite-vec, reindex behavior, and graceful lexical fallback",
+        "url": "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/crates/codegen/xai-grok-memory/src/index.rs"
+      },
+      {
+        "id": "backend",
+        "label": "Pinned legacy retrieval backend",
+        "path": "crates/codegen/xai-grok-memory/src/backend.rs",
+        "symbol": "MemoryBackend implementation, shared query configuration, fresh per-query SQLite index, WAL, and retrieval observations",
+        "url": "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/crates/codegen/xai-grok-memory/src/backend.rs"
+      },
+      {
+        "id": "search",
+        "label": "Pinned legacy hybrid search",
+        "path": "crates/codegen/xai-grok-memory/src/search.rs",
+        "symbol": "FTS5/vector merge, temporal decay, source/access weighting, content-free filtering, and MMR",
+        "url": "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/crates/codegen/xai-grok-memory/src/search.rs"
+      },
+      {
+        "id": "archive",
+        "label": "Pinned memory archive builder",
+        "path": "crates/codegen/xai-grok-memory/src/archive.rs",
+        "symbol": "Session and MEMORY.md archive inputs, file size cap, no-follow regular-file handling, and snapshot behavior",
+        "url": "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/crates/codegen/xai-grok-memory/src/archive.rs"
+      },
+      {
+        "id": "v2",
+        "label": "Pinned v2 storage and manifest foundation",
+        "path": "crates/codegen/xai-grok-memory/src/v2.rs",
+        "symbol": "Isolated scope stores, state database, lexical index, topic/inbox/archive/manifest model, and manifest budgets",
+        "url": "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/crates/codegen/xai-grok-memory/src/v2.rs"
+      },
+      {
+        "id": "capture",
+        "label": "Pinned v2 durable capture pipeline",
+        "path": "crates/codegen/xai-grok-memory/src/v2_capture.rs",
+        "symbol": "Typed immutable observations, capture jobs/leases, bounded fields, hash-based recovery, and crash reconciliation",
+        "url": "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/crates/codegen/xai-grok-memory/src/v2_capture.rs"
+      },
+      {
+        "id": "consolidation",
+        "label": "Pinned v2 Dream consolidation",
+        "path": "crates/codegen/xai-grok-memory/src/v2_consolidation.rs",
+        "symbol": "Leased observation snapshots, replayable consolidation, topic create/update/delete/rename/merge/split operations, and evidence paths",
+        "url": "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/crates/codegen/xai-grok-memory/src/v2_consolidation.rs"
+      },
+      {
+        "id": "access",
+        "label": "Pinned v2 filesystem access policy",
+        "path": "crates/codegen/xai-grok-memory/src/v2_access.rs",
+        "symbol": "Scope path checks, symlink/traversal rejection, topic/inbox write restrictions, read-before-edit snapshots, and immutable observation behavior",
+        "url": "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/crates/codegen/xai-grok-memory/src/v2_access.rs"
+      },
+      {
+        "id": "maintenance",
+        "label": "Pinned v2 forgetting and retention",
+        "path": "crates/codegen/xai-grok-memory/src/v2_maintenance.rs",
+        "symbol": "Hash-checked forgetting, durable tombstones, removal reconciliation, protected targets, and bounded retention",
+        "url": "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/crates/codegen/xai-grok-memory/src/v2_maintenance.rs"
+      },
+      {
+        "id": "reads",
+        "label": "Pinned v2 topic read ledger",
+        "path": "crates/codegen/xai-grok-memory/src/v2_topic_reads.rs",
+        "symbol": "Per-topic read counts, advisory compact-index ranking, and bounded best-effort read accounting",
+        "url": "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/crates/codegen/xai-grok-memory/src/v2_topic_reads.rs"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation domains and metric formulas; not a Grok Build result",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned workload; not executed in this review",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status; not a Grok Build measurement",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "security",
+        "label": "Pinned official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Security vulnerability reports use the official HackerOne program; checked for a contact email",
+        "url": "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/SECURITY.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Grok Build as SpaceXAI's Rust terminal coding-agent harness and TUI, with interactive, headless, and Agent Client Protocol entry points. The repository is periodically synced from the monorepo, so this review covers the public source snapshot at its verified GitHub head, not an asserted current monorepo state.",
+        "sources": [
+          "readme",
+          "docs",
+          "repo",
+          "head"
+        ]
+      },
+      {
+        "text": "The memory user guide calls memory experimental and disabled by default. It describes a legacy Markdown/session-log path and a separate v2 path; the crate module documentation confirms the pipelines do not share files, search, flush, or Dream.",
+        "sources": [
+          "guide",
+          "lib",
+          "storage"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Legacy storage places global MEMORY.md and per-workspace MEMORY.md plus dated session logs below ~/.grok/memory/. The workspace directory is derived from the workspace path; v2 uses a separate ~/.grok/memory-v2 root with global and workspace scopes, and the code says v2 never reads or writes the legacy tree.",
+        "sources": [
+          "guide",
+          "storage",
+          "lib"
+        ]
+      },
+      {
+        "text": "The v2 scope foundation contains topics, an observation inbox, archive, generated MEMORY.md manifest, durable SQLite state, and a lexical index. The manifest is bounded by bytes and entries; it is an index of topic files rather than the topic bodies themselves. The legacy memory archive includes session logs and global/workspace MEMORY.md; the builder skips symlinks and non-regular files and caps each file at 8 MiB.",
+        "sources": [
+          "v2",
+          "guide"
+        ]
+      },
+      {
+        "text": "Legacy index rows represent text chunks with path, line range, source, content hash, creation time, and access count. SQLite FTS5 is always used; sqlite-vec enables optional vector KNN, and the crate can fall back to lexical-only search.",
+        "sources": [
+          "index",
+          "search",
+          "lib"
+        ]
+      },
+      {
+        "text": "Grok exposes memory through session integration, first-turn context injection, memory_search and memory_get tools, /memory browsing, /remember, /flush, /dream, and CLI clearing. The user guide and source describe the configured feature gate; memory is not initialized when disabled.",
+        "sources": [
+          "guide",
+          "lib",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Legacy automatic session-end saves create a metadata summary without an LLM call; /flush requests an LLM-generated summary into a dated session log. /remember appends an approved durable statement to global or workspace MEMORY.md, and Dream consolidates session logs and notes into organized memory. The public guide says automatic session saves skip trivial sessions and memory is off by default.",
+        "sources": [
+          "guide",
+          "storage"
+        ]
+      },
+      {
+        "text": "Legacy update is file-oriented: notes can be edited directly or changed through remember/forget flows, with a file watcher reindexing edits and removing stale chunks after file deletion. The guide characterizes model-driven forget as best effort and recommends direct file editing for guaranteed removal.",
+        "sources": [
+          "guide",
+          "storage",
+          "index"
+        ]
+      },
+      {
+        "text": "In v2, capture persists bounded typed observations with session ID, turn range, job identity, ordinal/count, and content hashes. Files are made durable before outcome rows; reconciliation can adopt only complete hash-consistent sets after a crash.",
+        "sources": [
+          "capture"
+        ]
+      },
+      {
+        "text": "V2 Dream claims an inbox snapshot under a lease, performs model work outside transactions, then applies replayable operations to create, update, delete, rename, merge, or split topic files. Operations carry evidence paths, and lease generations are checked at mutation boundaries.",
+        "sources": [
+          "consolidation"
+        ]
+      },
+      {
+        "text": "V2 model-visible writes are scoped to Markdown files directly under topics/ or observations/_inbox/. Replacing a file requires an earlier ordinary read and unchanged content snapshot; observations are append-only. Writes are atomically published and refresh the generated manifest.",
+        "sources": [
+          "access",
+          "v2"
+        ]
+      },
+      {
+        "text": "V2 forgetting uses an exact scope-relative path, caller-supplied BLAKE3 content hash, and reason. The module commits a tombstone before removing the file, then reconciles removal; protected paths and files above the documented size bound are rejected.",
+        "sources": [
+          "maintenance",
+          "access"
+        ]
+      },
+      {
+        "text": "Legacy retrieval combines FTS5 with optional vector KNN, normalizes and merges chunk results, removes empty/scaffold content, applies temporal decay to session chunks, source weights and access-count boost, then optional MMR and a result limit. Vector or embedding failure degrades to FTS-only.",
+        "sources": [
+          "search",
+          "backend",
+          "index",
+          "guide"
+        ]
+      },
+      {
+        "text": "The guide documents first-turn injection, searches after compaction, and explicit memory_search/memory_get tools. For v2, the generated manifest helps the model select topic files; actual topic reads increment an advisory per-path counter used to rank compact-index entries, and a busy ledger falls back to path order.",
+        "sources": [
+          "guide",
+          "v2",
+          "reads",
+          "access"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable recall and abstention: legacy retrieval implements configurable lexical/hybrid ranking; v2 exposes a bounded manifest and topic reads. No answerable-recall or abstention workload was run.",
+        "sources": [
+          "search",
+          "index",
+          "v2",
+          "reads",
+          "metrics"
+        ]
+      },
+      {
+        "text": "Correction and staleness: legacy notes can be rewritten or removed, and only session memories receive temporal decay and a staleness hint. V2 supports topic operations and hash-checked edits; correction accuracy and stale-value rates are unmeasured.",
+        "sources": [
+          "guide",
+          "search",
+          "access",
+          "consolidation",
+          "metrics"
+        ]
+      },
+      {
+        "text": "Deletion: legacy forget is documented as best effort and direct edits rely on watcher reindexing; v2 has hash-checked forget with a durable tombstone. No deletion-leak or recovery workload was run.",
+        "sources": [
+          "guide",
+          "maintenance",
+          "index",
+          "metrics"
+        ]
+      },
+      {
+        "text": "Scope isolation: global and workspace scopes are distinct; workspace files are path-derived and docs say repository clones/worktrees share a workspace scope. V2 access rejects paths outside configured roots, symlinks, and traversal. No cross-scope probe was run.",
+        "sources": [
+          "guide",
+          "storage",
+          "access",
+          "metrics"
+        ]
+      },
+      {
+        "text": "Evidence and citations: v2 captures source session/turn metadata and consolidation operations record evidence paths and hashes; this establishes internal lineage inputs, not answer-level citation guarantees. Evidence-support precision and citation coverage are unmeasured.",
+        "sources": [
+          "capture",
+          "consolidation",
+          "maintenance",
+          "metrics"
+        ]
+      },
+      {
+        "text": "Latency and write-to-recall delay: legacy session-end summaries require no LLM call, while flush and Dream involve model work; v2 capture is durable and subsequent consolidation/index convergence is a separate stage. No timing or recall-delay probes were collected.",
+        "sources": [
+          "guide",
+          "capture",
+          "consolidation",
+          "metrics"
+        ]
+      },
+      {
+        "text": "Tokens and cost: user documentation describes model-based flush and Dream and local retrieval configuration, but this review collected no token or price data. Cost is unmeasured, not zero.",
+        "sources": [
+          "guide",
+          "metrics"
+        ]
+      },
+      {
+        "text": "Storage efficiency: legacy stores Markdown plus SQLite and optional vectors; v2 stores Markdown topics/observations, SQLite state, archive, and lexical index with file/entry limits and retention. Attributable storage bytes and compression efficiency were not measured.",
+        "sources": [
+          "storage",
+          "index",
+          "v2",
+          "capture",
+          "maintenance",
+          "metrics"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a source-based review of the public snapshot at the verified head. Grok Build, its tests, model-backed flush/Dream operations, managed services, and the project benchmark fixture were not run.",
+        "sources": [
+          "readme",
+          "guide",
+          "head",
+          "fixture"
+        ]
+      },
+      {
+        "text": "The repository is periodically synced from a monorepo. The verified public GitHub head is a valid review pin, but its code may lag or differ from the monorepo and product release.",
+        "sources": [
+          "readme",
+          "head"
+        ]
+      },
+      {
+        "text": "The guide mixes the v2 overview with detailed legacy workflows. This review uses source modules to distinguish pipelines; a full host-level audit of every integration and v2 user-facing rollout configuration was outside the inspected paths.",
+        "sources": [
+          "guide",
+          "lib",
+          "storage",
+          "access"
+        ]
+      },
+      {
+        "text": "Scope keys and filesystem guards are implementation evidence, not a tested guarantee against malicious local processes, host misconfiguration, or all deployment isolation failures. Network filesystems are explicitly unsupported for v2 coordination.",
+        "sources": [
+          "guide",
+          "access",
+          "capture",
+          "consolidation"
+        ]
+      },
+      {
+        "text": "The checked source and documentation do not establish retrieval quality, factual correctness, model output fidelity, deletion leakage, operational latency, token usage, cost, or storage efficiency.",
+        "sources": [
+          "metrics",
+          "guide",
+          "search",
+          "maintenance"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Grok Build runtime, tests, model calls, or benchmark workload were executed. Source inspection and upstream test code are not measured results.",
+      "metric_definitions": "../METRICS.md",
+      "fixture": "../fixtures/memory-benchmark-v1.json",
+      "execution_status": "../results/initial-baselines-status.json"
+    }
+  }
+}

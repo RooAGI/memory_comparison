@@ -1,0 +1,362 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 138,
+    "slug": "cognitive-spatial-memory",
+    "name": "Cognitive Spatial Memory",
+    "repository": "https://github.com/munch2u-a11y/Cognitive-Spatial-Memory",
+    "listed_repository": "https://github.com/munch2u-a11y/Cognitive-Spatial-Memory",
+    "branch": "main",
+    "revision": "39df03a18d202a25f4c066d662109f85128886ef",
+    "reviewed_at": "2026-11-25T08:37:24Z",
+    "review_timezone": "UTC (2026-11-25 00:37:24 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Cognitive Spatial Memory maps text embeddings to a persistent 8D manifold and retrieves nearby points with a recency- and weight-modulated gravity score. The review covers the official README and repository audit documentation at the verified main head; deletion, isolation, answer evidence, and runtime performance were not established. No runtime, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 138,
+      "name": "Cognitive Spatial Memory",
+      "slug": "cognitive-spatial-memory",
+      "listed_repository": "https://github.com/munch2u-a11y/Cognitive-Spatial-Memory",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cognitive-spatial-memory.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": "helix.agi.email@gmail.com",
+      "source_url": "https://github.com/munch2u-a11y/Cognitive-Spatial-Memory/blob/39df03a18d202a25f4c066d662109f85128886ef/README.md",
+      "checked_urls": [
+        "https://github.com/munch2u-a11y/Cognitive-Spatial-Memory/blob/39df03a18d202a25f4c066d662109f85128886ef/README.md"
+      ],
+      "note": "The official pinned README publishes this address for commercial licensing questions; it is not represented as technical support contact."
+    },
+    "contact_email": "helix.agi.email@gmail.com",
+    "contact_email_source_url": "https://github.com/munch2u-a11y/Cognitive-Spatial-Memory/blob/39df03a18d202a25f4c066d662109f85128886ef/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/munch2u-a11y/Cognitive-Spatial-Memory/blob/39df03a18d202a25f4c066d662109f85128886ef/README.md"
+    ],
+    "contact_email_note": "Official pinned README lists helix.agi.email@gmail.com for commercial licensing questions.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[137], ordinal 138: Cognitive Spatial Memory, slug cognitive-spatial-memory, explicit locator and pinned Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/cognitive-spatial-memory.md",
+        "symbol": "Pinned entry used only to verify catalog identity and locator; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cognitive-spatial-memory.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Public repository page identifies main as default branch",
+        "url": "https://github.com/munch2u-a11y/Cognitive-Spatial-Memory"
+      },
+      {
+        "id": "feed",
+        "label": "Official main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Full main head 39df03a18d202a25f4c066d662109f85128886ef; feed updated 2026-05-23T22:38:36Z",
+        "url": "https://github.com/munch2u-a11y/Cognitive-Spatial-Memory/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified upstream head",
+        "path": "commit",
+        "symbol": "39df03a18d202a25f4c066d662109f85128886ef",
+        "url": "https://github.com/munch2u-a11y/Cognitive-Spatial-Memory/commit/39df03a18d202a25f4c066d662109f85128886ef"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README and contact check",
+        "path": "README.md",
+        "symbol": "API, architecture, backend options, belief store, claims and published licensing contact",
+        "url": "https://github.com/munch2u-a11y/Cognitive-Spatial-Memory/blob/39df03a18d202a25f4c066d662109f85128886ef/README.md"
+      },
+      {
+        "id": "entry_code",
+        "label": "Pinned SpatialMemory entry-point source",
+        "path": "spatial_memory/__init__.py",
+        "symbol": "Constructor defaults, store persistence plus spatial registration, get_context, and stats",
+        "url": "https://github.com/munch2u-a11y/Cognitive-Spatial-Memory/blob/39df03a18d202a25f4c066d662109f85128886ef/spatial_memory/__init__.py"
+      },
+      {
+        "id": "core",
+        "label": "Pinned core engine audit",
+        "path": "docs/audit_part1_core_engine.md",
+        "symbol": "Projection, point model, KD-tree, gravity ranking and compute cost description",
+        "url": "https://github.com/munch2u-a11y/Cognitive-Spatial-Memory/blob/39df03a18d202a25f4c066d662109f85128886ef/docs/audit_part1_core_engine.md"
+      },
+      {
+        "id": "entry",
+        "label": "Pinned mind engine and entry point audit",
+        "path": "docs/audit_part2_mind_engine_entry.md",
+        "symbol": "Dual spaces, pulse lifecycle, SpatialMemory API and persistence integration description",
+        "url": "https://github.com/munch2u-a11y/Cognitive-Spatial-Memory/blob/39df03a18d202a25f4c066d662109f85128886ef/docs/audit_part2_mind_engine_entry.md"
+      },
+      {
+        "id": "peripheral",
+        "label": "Pinned peripheral systems audit",
+        "path": "docs/audit_part3_peripheral_systems.md",
+        "symbol": "Preconscious retrieval, belief lifecycle, storage backends and provider abstraction",
+        "url": "https://github.com/munch2u-a11y/Cognitive-Spatial-Memory/blob/39df03a18d202a25f4c066d662109f85128886ef/docs/audit_part3_peripheral_systems.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Project benchmark domain definitions; referenced for unmeasured domains",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Workload specification only; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "This review did not execute a benchmark; status is not_run",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The curated catalog lists ordinal 138 as Cognitive Spatial Memory, slug cognitive-spatial-memory, with an explicit locator; pinned Atlas attribution is recorded for roster identity only.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The official repository page identifies main as default branch. Its main commit feed reports full head 39df03a18d202a25f4c066d662109f85128886ef at 2026-05-23T22:38:36Z, matching the catalog revision.",
+        "sources": [
+          "repo",
+          "feed",
+          "head"
+        ]
+      },
+      {
+        "text": "The official README publishes helix.agi.email@gmail.com for commercial licensing questions; it is not identified here as technical support.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "SpatialMemory exposes store, query and get_context over a physics-engine and spatial-mind layer. Text embeddings are projected to an eight-dimensional cognitive space, where KD-tree neighbors are ranked using temperature, mass and squared distance.",
+        "sources": [
+          "readme",
+          "core",
+          "entry"
+        ]
+      },
+      {
+        "text": "The docs describe separate belief and episodic-memory spaces sharing a projection matrix. Points carry position, type, confidence or importance, content and pulse timestamps; belief records are also categorized JSON files.",
+        "sources": [
+          "core",
+          "entry",
+          "peripheral"
+        ]
+      },
+      {
+        "text": "Episodic storage is pluggable, with JSONL, SQLite and ChromaDB named by the README. The README calls JSONL the default and append-only; belief confidence recalculation/pruning belongs to the separate belief lifecycle.",
+        "sources": [
+          "readme",
+          "peripheral"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: store embeds and projects text, registers the point in the manifold, and persists through the selected backend. The basic documented API does not describe extraction, deduplication or comparison with existing episodic items.",
+        "sources": [
+          "readme",
+          "entry"
+        ]
+      },
+      {
+        "text": "Update/delete: no point update, forget, or delete method is described for the basic SpatialMemory API. JSONL is described as append-only. The belief lifecycle can recalculate confidence and prune low-confidence beliefs, but reviewed documentation does not establish general deletion across stored records and manifold state.",
+        "sources": [
+          "readme",
+          "entry",
+          "peripheral"
+        ]
+      },
+      {
+        "text": "Retrieval: query returns gravity-ranked nearby items; get_context advances attention and formats the neighborhood. The preconscious path can extract concepts, query around each, suppress repeats and add scratchpad context.",
+        "sources": [
+          "readme",
+          "entry",
+          "peripheral"
+        ]
+      },
+      {
+        "text": "Scope: reviewed point/API descriptions expose no tenant, user, agent or project filters. Strong isolation therefore is not established by the cited material and would require a caller or deployment boundary.",
+        "sources": [
+          "readme",
+          "core"
+        ]
+      },
+      {
+        "text": "Provenance: points carry content and pulse/type/weight fields, but the reviewed descriptions do not show source-document IDs, claim citations, trust states or mutation audit. Confidence and importance affect ranking, not evidence validity.",
+        "sources": [
+          "core",
+          "peripheral"
+        ]
+      },
+      {
+        "text": "Efficiency: docs describe a lazily rebuilt KD-tree and a 512-anchor gravity grid, with field computation described as proportional to point count times anchor count. This is not a measured latency result.",
+        "sources": [
+          "core"
+        ]
+      },
+      {
+        "text": "Observability: one internal field tracks gravity-field computation time. The inspected README and audit docs do not describe production tracing or a memory API metrics surface.",
+        "sources": [
+          "core",
+          "readme",
+          "peripheral"
+        ]
+      },
+      {
+        "text": "Unknowns include consistency between persisted beliefs and spatial points, exact scheduling/integration of belief pruning, and behavior across every backend and failure path; no runtime was inspected.",
+        "sources": [
+          "readme",
+          "entry",
+          "peripheral"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "The docs describe gravity ranking and context injection; no adjudicated retrieval workload was executed.",
+        "sources": [
+          "readme",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale retrieval",
+        "status": "unmeasured",
+        "evidence": "The basic point API has no documented correction path; no correction probes were run.",
+        "sources": [
+          "entry",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "General deletion guarantees were not established and no post-delete probes were run.",
+        "sources": [
+          "peripheral",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "No cross-scope workload was run; basic API isolation was not established by inspected docs.",
+        "sources": [
+          "readme",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "No answer-level source-support audit was performed.",
+        "sources": [
+          "core",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No timing distribution was collected.",
+        "sources": [
+          "core",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timed write-then-recall workload was run.",
+        "sources": [
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No model token or cost accounting was performed.",
+        "sources": [
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No corpus storage measurement was collected.",
+        "sources": [
+          "metrics"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This assessment relies on the pinned README and three repository-authored audit documents; it did not independently inspect every implementation path or validate the docs' line-specific descriptions.",
+        "sources": [
+          "readme",
+          "core",
+          "entry",
+          "peripheral"
+        ]
+      },
+      {
+        "text": "No system execution, tests, or benchmarks were run. Retrieval quality, correction, deletion, isolation, evidence support, latency, token/cost use and storage efficiency remain unmeasured.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "text": "The basic API descriptions do not establish tenant isolation or general point deletion. The relationship between belief lifecycle pruning, persisted memory, and in-memory spatial points remains unknown.",
+        "sources": [
+          "readme",
+          "entry",
+          "peripheral"
+        ]
+      },
+      {
+        "text": "The README's physics-inspired ranking and RAG replacement statements describe design goals, not independently demonstrated answer quality.",
+        "sources": [
+          "readme",
+          "core"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Cognitive Spatial Memory runtime, tests or benchmark execution was performed."
+    }
+  }
+}

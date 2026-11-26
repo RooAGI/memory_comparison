@@ -1,0 +1,361 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 148,
+    "slug": "contextlattice",
+    "name": "ContextLattice",
+    "repository": "https://github.com/sheawinkler/ContextLattice",
+    "listed_repository": "https://github.com/sheawinkler/ContextLattice",
+    "branch": "main",
+    "revision": "087f89365508e601a4fb0101fd5bcc6d5e7fac3e",
+    "reviewed_at": "2026-11-25T09:03:52Z",
+    "review_timezone": "UTC (2026-11-25 01:03:52 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "ContextLattice is a local-first context and memory layer with a Go/Rust gateway, project/file memory records, temporal claims, and bounded evidence-oriented retrieval. This assessment is pinned to the verified main head; no runtime, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 148,
+      "name": "ContextLattice",
+      "slug": "contextlattice",
+      "listed_repository": "https://github.com/sheawinkler/ContextLattice",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/contextlattice.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": null,
+      "checked_urls": [
+        "https://github.com/sheawinkler/ContextLattice/blob/087f89365508e601a4fb0101fd5bcc6d5e7fac3e/README.md"
+      ],
+      "note": "No published contact email was found in the official pinned README; no commit/profile metadata or third-party directories were used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/sheawinkler/ContextLattice/blob/087f89365508e601a4fb0101fd5bcc6d5e7fac3e/README.md"
+    ],
+    "contact_email_note": "No published contact email found in the official pinned README.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[147], ordinal 148: ContextLattice, slug contextlattice, explicit repository locator and pinned Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/contextlattice.md",
+        "symbol": "Pinned entry retained only for identity and locator attribution; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/contextlattice.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Public repository page identifies main as default branch",
+        "url": "https://github.com/sheawinkler/ContextLattice"
+      },
+      {
+        "id": "feed",
+        "label": "Official main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Full current main head 087f89365508e601a4fb0101fd5bcc6d5e7fac3e; feed updated 2026-11-24T09:35:24Z",
+        "url": "https://github.com/sheawinkler/ContextLattice/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream head",
+        "path": "commit",
+        "symbol": "087f89365508e601a4fb0101fd5bcc6d5e7fac3e",
+        "url": "https://github.com/sheawinkler/ContextLattice/commit/087f89365508e601a4fb0101fd5bcc6d5e7fac3e"
+      },
+      {
+        "id": "readme",
+        "label": "Official README at reviewed head",
+        "path": "README.md",
+        "symbol": "Purpose, architecture, CLI, retrieval, evidence and documented operating model",
+        "url": "https://github.com/sheawinkler/ContextLattice/blob/087f89365508e601a4fb0101fd5bcc6d5e7fac3e/README.md"
+      },
+      {
+        "id": "store",
+        "label": "Gateway memory store",
+        "path": "services/gateway-go/memory_store.go",
+        "symbol": "Memory event/current-state model, fields and bounded storage policies",
+        "url": "https://github.com/sheawinkler/ContextLattice/blob/087f89365508e601a4fb0101fd5bcc6d5e7fac3e/services/gateway-go/memory_store.go"
+      },
+      {
+        "id": "v1",
+        "label": "Gateway v1 memory API",
+        "path": "services/gateway-go/memory_v1.go",
+        "symbol": "Project/file memory ID, GET and patch update behavior",
+        "url": "https://github.com/sheawinkler/ContextLattice/blob/087f89365508e601a4fb0101fd5bcc6d5e7fac3e/services/gateway-go/memory_v1.go"
+      },
+      {
+        "id": "retrieval",
+        "label": "Current-state retrieval implementation",
+        "path": "services/gateway-go/memory_current_state_search.go",
+        "symbol": "Project-scoped lexical/topic ranking, ancestor fallback and current-state path",
+        "url": "https://github.com/sheawinkler/ContextLattice/blob/087f89365508e601a4fb0101fd5bcc6d5e7fac3e/services/gateway-go/memory_current_state_search.go"
+      },
+      {
+        "id": "lifecycle",
+        "label": "Memory lifecycle rules",
+        "path": "services/gateway-go/memory_lifecycle.go",
+        "symbol": "Retired/superseded/retracted/ephemeral filtering and tombstone data-class check",
+        "url": "https://github.com/sheawinkler/ContextLattice/blob/087f89365508e601a4fb0101fd5bcc6d5e7fac3e/services/gateway-go/memory_lifecycle.go"
+      },
+      {
+        "id": "claims",
+        "label": "Temporal claim model and store",
+        "path": "services/gateway-go/temporal_claim_graph.go",
+        "symbol": "Claim provenance, validity, support/opposition, status and relation fields",
+        "url": "https://github.com/sheawinkler/ContextLattice/blob/087f89365508e601a4fb0101fd5bcc6d5e7fac3e/services/gateway-go/temporal_claim_graph.go"
+      },
+      {
+        "id": "telemetry",
+        "label": "Memory graph telemetry",
+        "path": "services/gateway-go/memory_graph_telemetry.go",
+        "symbol": "Graph counts, connectedness, quality, recommendations and store metadata",
+        "url": "https://github.com/sheawinkler/ContextLattice/blob/087f89365508e601a4fb0101fd5bcc6d5e7fac3e/services/gateway-go/memory_graph_telemetry.go"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned workload only; no ContextLattice run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "No measured result is claimed by this source review",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The catalog attributes the explicit locator https://github.com/sheawinkler/ContextLattice to ordinal 148. The official README describes a local-first context/memory layer for coding agents, with CLI, dashboard, HTTP, and MCP surfaces; this review does not infer a separate maintainer identity.",
+        "sources": [
+          "catalog",
+          "atlas",
+          "repo",
+          "readme"
+        ]
+      },
+      {
+        "text": "The README identifies Go and Rust as the active application path and says Python is used for tooling rather than the live request path. The inspected code here is representative Go gateway code, not a complete survey of each service.",
+        "sources": [
+          "readme",
+          "store",
+          "retrieval"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The gateway memory entry carries project/file/topic identity, agent/session identifiers, tags, summary, content hash/reference, lifecycle, storage tier, object ID, horizon, confidence, source, task attribution, and structured references. The store policy separates history, current-state, access, edge, and optional content-blob paths.",
+        "sources": [
+          "store"
+        ]
+      },
+      {
+        "text": "A separate temporal claim schema stores project, subject, predicate, object, statement, topic, lifecycle status, valid-from/to and observed time, confidence, supersedes/contradicts/causal links, support/opposition evidence, verification, provenance, agent/session, revision, and timestamps.",
+        "sources": [
+          "claims"
+        ]
+      },
+      {
+        "text": "The README describes validated durable writes before asynchronous index fanout and bounded retrieval into context packs with source receipts and degraded-coverage reporting. Those are documented design claims; the complete integration and failure paths were not traced.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: README's remember command is the user-facing save example. The gateway store distinguishes durable history and current state; its entry model can retain source, content hash/reference, and caller/task attribution.",
+        "sources": [
+          "readme",
+          "store"
+        ]
+      },
+      {
+        "text": "Update: the inspected v1 handler parses a project/file memory ID, fetches the previous payload, overlays the supplied patch, and writes the merged payload. Temporal claims also expose revision and supersession/validity fields.",
+        "sources": [
+          "v1",
+          "claims"
+        ]
+      },
+      {
+        "text": "Delete and retirement: lifecycle helpers suppress retired, superseded, retracted, ephemeral and test states from ordinary default surfacing, and identify tombstones by data class. These logical filters do not establish physical erasure from append history, blobs, indexes, backups, or copies; no general hard-delete handler was inspected.",
+        "sources": [
+          "lifecycle",
+          "store"
+        ]
+      },
+      {
+        "text": "Retrieval: the inspected current-state lane needs both project and query, scores lexical coverage/Jaccard/topic overlap, and can fill sparse exact-topic results from the nearest topic ancestor. It explicitly stays within the selected project; historical as-of reads are routed elsewhere. Broader README-described source merging was not exhaustively inspected.",
+        "sources": [
+          "retrieval",
+          "readme"
+        ]
+      },
+      {
+        "text": "Scope: the inspected current-state search returns no rows without a project and does not widen an ancestor fallback into a project-wide scan. This is evidence about that lane only, not a guarantee across every adapter, provider, or caller.",
+        "sources": [
+          "retrieval",
+          "readme"
+        ]
+      },
+      {
+        "text": "Provenance: memory entries can hold hashes/references, source, agent/session and task attribution; temporal claims carry support/opposition evidence references and provenance/verification maps. These fields support tracing but do not prove generated answer claims are supported.",
+        "sources": [
+          "store",
+          "claims",
+          "readme"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: store policy caps startup history reads, scan and rollup work, while the README describes bounded context packs and async fanout. Graph telemetry reports document and edge counts, connectedness/isolation, edge types, quality and recommendations; no performance results were gathered.",
+        "sources": [
+          "store",
+          "readme",
+          "telemetry"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "A lexical scoring path and evidence-aware response surfaces are visible, but no adjudicated answerability or abstention workload was run.",
+        "sources": [
+          "retrieval",
+          "readme",
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Patch updates and temporal supersession/validity fields exist; no correction or stale-value probes were run.",
+        "sources": [
+          "v1",
+          "claims",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Logical lifecycle filtering and tombstones exist; no post-delete probes across retained history, indexes, backups, or copies were performed.",
+        "sources": [
+          "lifecycle",
+          "store",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Project filtering is explicit in the inspected current-state lane; no cross-project, cross-user, or hostile-caller workload was run.",
+        "sources": [
+          "retrieval",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Provenance and claim evidence structures exist, but no generated answers were adjudicated for source support or citation correctness.",
+        "sources": [
+          "claims",
+          "readme",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No latency distribution was collected.",
+        "sources": [
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timed write-then-recall workload was run.",
+        "sources": [
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No provider usage or cost accounting was performed.",
+        "sources": [
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Source reveals history, current-state and optional content-blob structures; no corpus size or per-item storage measurement was collected.",
+        "sources": [
+          "store",
+          "metrics"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review covered the README and selected Go gateway files for memory storage, v1 update, lifecycle, current-state search, temporal claims, and graph telemetry. It did not inspect every adapter, MCP/HTTP integration, Rust service, configuration, or end-to-end error path.",
+        "sources": [
+          "readme",
+          "store",
+          "v1",
+          "retrieval",
+          "lifecycle",
+          "claims",
+          "telemetry"
+        ]
+      },
+      {
+        "text": "Documentation statements about bounded evidence, durable persistence, and integration coverage are not independent runtime findings. Source structure cannot establish recall quality, correction quality across lanes, full deletion, cross-tenant isolation, evidence support, operational reliability, or performance.",
+        "sources": [
+          "readme",
+          "metrics"
+        ]
+      },
+      {
+        "text": "No ContextLattice runtime, tests, or benchmarks were run. All project metric domains are unmeasured for this review.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No ContextLattice runtime, tests, or benchmarks were run. Source observations and upstream documentation are not benchmark results."
+    }
+  }
+}

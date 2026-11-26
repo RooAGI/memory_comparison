@@ -1,0 +1,464 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 137,
+    "slug": "cognis",
+    "name": "Cognis",
+    "repository": "https://github.com/fpytloun/cognis",
+    "listed_repository": "https://github.com/fpytloun/cognis",
+    "branch": "main",
+    "revision": "7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80",
+    "reviewed_at": "2026-11-25T08:38:45Z",
+    "review_timezone": "UTC (2026-11-25 00:38:45 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Cognis is a cloud-native agent controller that delegates durable memory to Mnemory. Its memory contribution is policy-controlled recall and write orchestration, an authenticated provider adapter, built-in memory tools, and a durable queue with optional event-bound trusted evidence. This source review does not assess Mnemory's internal memory implementation and includes no runtime measurements.",
+    "atlas_locator": {
+      "ordinal": 137,
+      "name": "Cognis",
+      "slug": "cognis",
+      "listed_repository": "https://github.com/fpytloun/cognis",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cognis.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": null,
+      "checked_urls": [
+        "https://github.com/fpytloun/cognis/blob/7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80/README.md",
+        "https://github.com/fpytloun/cognis/blob/7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80/SECURITY.md",
+        "https://github.com/fpytloun/cognis/blob/7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80/SUPPORT.md"
+      ],
+      "note": "No published contact email found. The official pinned README was checked; SECURITY.md and SUPPORT.md are absent at the reviewed head. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/fpytloun/cognis/blob/7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80/README.md",
+      "https://github.com/fpytloun/cognis/blob/7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80/SECURITY.md",
+      "https://github.com/fpytloun/cognis/blob/7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80/SUPPORT.md"
+    ],
+    "contact_email_note": "No contact email found in the official README. SECURITY.md and SUPPORT.md do not exist at the reviewed head.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[136], ordinal 137: Cognis, slug cognis, explicit listed repository locator, pinned Atlas attribution",
+        "url": "../memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/cognis.md",
+        "symbol": "Pinned attribution used only to resolve curated name, slug, and listed locator; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cognis.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository metadata",
+        "path": "repository API",
+        "symbol": "Canonical public fpytloun/cognis repository; default_branch main",
+        "url": "https://api.github.com/repos/fpytloun/cognis"
+      },
+      {
+        "id": "repo_page",
+        "label": "Official GitHub repository page",
+        "path": "repository page",
+        "symbol": "Public fpytloun/cognis upstream page",
+        "url": "https://github.com/fpytloun/cognis"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Official current main ref at review: 7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80",
+        "url": "https://github.com/fpytloun/cognis/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream head",
+        "path": "commit",
+        "symbol": "Full current main SHA 7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80; commit authored 2026-11-13T13:54:44+01:00",
+        "url": "https://github.com/fpytloun/cognis/commit/7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project description, architecture, companion Mnemory service, memory integration overview; checked for contact",
+        "url": "https://github.com/fpytloun/cognis/blob/7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80/README.md"
+      },
+      {
+        "id": "backend",
+        "label": "Mnemory backend configuration",
+        "path": "cognis/providers/backends/memory/mnemory.py",
+        "symbol": "Three modes and their bootstrap/automatic recall/remember/tool policies",
+        "url": "https://github.com/fpytloun/cognis/blob/7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80/cognis/providers/backends/memory/mnemory.py"
+      },
+      {
+        "id": "policy",
+        "label": "Memory runtime policy",
+        "path": "cognis/providers/memory/policy.py",
+        "symbol": "Provider-neutral frozen policy, option resolution, SHA-256 policy fingerprint",
+        "url": "https://github.com/fpytloun/cognis/blob/7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80/cognis/providers/memory/policy.py"
+      },
+      {
+        "id": "provider",
+        "label": "Mnemory HTTP provider",
+        "path": "cognis/providers/memory/mnemory.py",
+        "symbol": "Authenticated recall/remember, CRUD, retry/circuit-breaker behavior, response validation and session mismatch handling",
+        "url": "https://github.com/fpytloun/cognis/blob/7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80/cognis/providers/memory/mnemory.py"
+      },
+      {
+        "id": "tools",
+        "label": "Built-in memory tools",
+        "path": "cognis/tools/builtin/memory.py",
+        "symbol": "Search/find/ask/add/update/delete and artifact tool schemas and handlers",
+        "url": "https://github.com/fpytloun/cognis/blob/7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80/cognis/tools/builtin/memory.py"
+      },
+      {
+        "id": "context",
+        "label": "Context recall integration",
+        "path": "cognis/core/context.py",
+        "symbol": "Policy-gated automatic recall during context preparation with session scope and timeout",
+        "url": "https://github.com/fpytloun/cognis/blob/7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80/cognis/core/context.py"
+      },
+      {
+        "id": "queue",
+        "label": "Remember retry queue",
+        "path": "cognis/core/remember_queue.py",
+        "symbol": "Durable queue, event-pointer payloads, replay/lease/retry logic and queue/evidence metrics",
+        "url": "https://github.com/fpytloun/cognis/blob/7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80/cognis/core/remember_queue.py"
+      },
+      {
+        "id": "queue_model",
+        "label": "Remember queue row model",
+        "path": "cognis/store/models.py",
+        "symbol": "Relational queue row schema and indexes",
+        "url": "https://github.com/fpytloun/cognis/blob/7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80/cognis/store/models.py"
+      },
+      {
+        "id": "evidence",
+        "label": "Trusted evidence wire contract",
+        "path": "cognis/providers/memory/evidence.py",
+        "symbol": "Strict user-event envelope, canonical event binding/hash and typed rejection schema",
+        "url": "https://github.com/fpytloun/cognis/blob/7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80/cognis/providers/memory/evidence.py"
+      },
+      {
+        "id": "trusted",
+        "label": "Trusted evidence lifecycle policy",
+        "path": "cognis/core/trusted_evidence.py",
+        "symbol": "Admission provenance, owner-bound evidence marker and low-cardinality outcome/age metrics",
+        "url": "https://github.com/fpytloun/cognis/blob/7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80/cognis/core/trusted_evidence.py"
+      },
+      {
+        "id": "agent_loop",
+        "label": "Automatic remember orchestration",
+        "path": "cognis/core/agent_loop.py",
+        "symbol": "Post-turn enqueue, event IDs/hashes, policy gate and trusted-evidence dependency",
+        "url": "https://github.com/fpytloun/cognis/blob/7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80/cognis/core/agent_loop.py"
+      },
+      {
+        "id": "external",
+        "label": "Managed external memory policy",
+        "path": "cognis/core/external_managed_policy.py",
+        "symbol": "Disables ambient recall/remember and applies memory tool allowlist/mutation floor",
+        "url": "https://github.com/fpytloun/cognis/blob/7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80/cognis/core/external_managed_policy.py"
+      },
+      {
+        "id": "nfr",
+        "label": "Operations and NFR guide",
+        "path": "docs/specs/13-nfr-operations.md",
+        "symbol": "Provider health/latency, queue observability, operational behavior",
+        "url": "https://github.com/fpytloun/cognis/blob/7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80/docs/specs/13-nfr-operations.md"
+      },
+      {
+        "id": "compat",
+        "label": "Trusted semantic compatibility notes",
+        "path": "docs/trusted-semantic-compatibility.md",
+        "symbol": "Explicit note that auto-remember does not perform historical reconciliation; delivery and rejection caveats",
+        "url": "https://github.com/fpytloun/cognis/blob/7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80/docs/trusted-semantic-compatibility.md"
+      },
+      {
+        "id": "readme_contact",
+        "label": "Official README contact check",
+        "path": "README.md",
+        "symbol": "Checked official project README for a published contact email; only example placeholder addresses found",
+        "url": "https://github.com/fpytloun/cognis/blob/7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80/README.md"
+      },
+      {
+        "id": "security_contact",
+        "label": "Official SECURITY.md contact check",
+        "path": "SECURITY.md",
+        "symbol": "Checked exact path; file absent at reviewed head",
+        "url": "https://github.com/fpytloun/cognis/blob/7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80/SECURITY.md"
+      },
+      {
+        "id": "support_contact",
+        "label": "Official SUPPORT.md contact check",
+        "path": "SUPPORT.md",
+        "symbol": "Checked exact path; file absent at reviewed head",
+        "url": "https://github.com/fpytloun/cognis/blob/7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80/SUPPORT.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Definitions for recall, correction, deletion, scope, evidence, efficiency and latency domains",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned workload specification only; no Cognis execution",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "No Cognis benchmark result from this source review; status remains not_run",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The curated catalog lists ordinal 137 as Cognis, slug cognis, with explicit locator https://github.com/fpytloun/cognis. The pinned Atlas entry is retained for roster attribution only, not as assessment evidence.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The official GitHub repository API identifies fpytloun/cognis as a public repository with main as its default branch; the official main ref and shallow checkout both report 7f1d5aee813d4a9e6a67d4703e45ccb90ab0eb80.",
+        "sources": [
+          "repo",
+          "feed",
+          "head"
+        ]
+      },
+      {
+        "text": "Cognis describes itself as a cloud-native Agent OS/controller for self-hosted agents. It owns orchestration and delegates persistent memory and recall to the companion Mnemory service.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Cognis resolves backend options into a frozen per-turn policy controlling bootstrap context, automatic recall, automatic remembering, and explicit tool availability. Mnemory offers full-auto, proactive, and on-demand modes; a policy fingerprint hashes configuration and instruction identity.",
+        "sources": [
+          "backend",
+          "policy"
+        ]
+      },
+      {
+        "text": "Mnemory remains the persistent memory system. Cognis implements the authenticated HTTP adapter and built-in memory tools, while the controller's relational database stores queued remember work. Production queue rows reference durable events and identities instead of embedding conversation text.",
+        "sources": [
+          "readme",
+          "provider",
+          "tools",
+          "queue",
+          "queue_model"
+        ]
+      },
+      {
+        "text": "Cognis models optional trusted ingestion as a strict signed event envelope bound to source event content and user/owner/session/conversation/turn identity. Its lifecycle records describe admission and delivery outcomes, not memory truth or answer support.",
+        "sources": [
+          "evidence",
+          "trusted",
+          "compat"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: when policy enables auto-remember, the agent loop enqueues eligible user/assistant turn event references. The queue later reads source events and dispatches to Mnemory; the optional trusted evidence route binds an authenticated user event to its canonical hash and requires an enabled configuration and eligible owner allowlist.",
+        "sources": [
+          "agent_loop",
+          "queue",
+          "evidence",
+          "trusted"
+        ]
+      },
+      {
+        "text": "Update and delete: built-in tools call Mnemory for add, batch add, update, delete, list, and artifact operations. The provider uses conditional If-Match revisions where alias-mediated mutations supply one; bootstrap identity replacement removes labeled old entries and carefully limits ambiguous legacy cleanup. The external service owns actual mutation semantics.",
+        "sources": [
+          "tools",
+          "provider"
+        ]
+      },
+      {
+        "text": "Retrieval: context preparation can issue a bounded, session-scoped search-mode recall when the policy enables it. Explicit memory_search, memory_find, and memory_ask tools provide semantic search, multi-angle query generation, and synthesized answers respectively; find/ask incur additional LLM calls. Cognis does not define the external ranking algorithm.",
+        "sources": [
+          "context",
+          "provider",
+          "tools"
+        ]
+      },
+      {
+        "text": "Scope isolation: provider calls require a user identity in a scoped runtime context and sign a JWT with that subject, adding agent and owner headers when available. Recall includes a Mnemory session ID and labels. Managed external channels disable ambient automatic recall and remember; mutations are denied and searches need an explicit safety allowance.",
+        "sources": [
+          "provider",
+          "context",
+          "external"
+        ]
+      },
+      {
+        "text": "Provenance: ordinary queue entries use durable Intaris event references. Trusted evidence entries add event hashes, identities, admission markers, and typed delivery outcomes. This is source-event lineage, not a Cognis-owned memory record provenance model or claim-level citation feature.",
+        "sources": [
+          "queue",
+          "queue_model",
+          "evidence",
+          "trusted"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: provider calls use retries and circuit-breaker handling; ordinary remember treats transport failure as outcome-unknown to avoid unsafe replay. Queue depth/retry/drop/success/replay and trusted evidence outcome/age metrics are defined; the operations guide documents provider health and queue depth/age reporting.",
+        "sources": [
+          "provider",
+          "queue",
+          "trusted",
+          "nfr"
+        ]
+      },
+      {
+        "text": "Known operational caveats include external Mnemory availability, separate ordinary and trusted write semantics, terminal trusted rejections that do not mean ingestion succeeded, and no automatic historical reconciliation through ordinary auto-remember.",
+        "sources": [
+          "provider",
+          "compat",
+          "nfr"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "The controller integrates recall and degraded-context handling, but no answerable/unanswerable gold workload was executed.",
+        "sources": [
+          "context",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale retrieval",
+        "status": "unmeasured",
+        "evidence": "Update and replacement routes are wired; no correction probes or stale-value rate were measured.",
+        "sources": [
+          "provider",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Cognis forwards deletion to Mnemory; no residual-store or post-delete retrieval check was performed.",
+        "sources": [
+          "provider",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Identity binding and managed-channel restrictions are visible in source; no cross-user or cross-agent workload was executed.",
+        "sources": [
+          "provider",
+          "external",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Trusted writes bind to an input event, but no stored-memory or answer-level evidence audit was performed.",
+        "sources": [
+          "evidence",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "Timing and health instruments are defined; no latency distribution was collected.",
+        "sources": [
+          "provider",
+          "nfr",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timed write-then-recall workload was run.",
+        "sources": [
+          "queue",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No memory-operation token or provider-cost accounting was performed.",
+        "sources": [
+          "tools",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Cognis queue storage is distinct from Mnemory's corpus; no corpus-size measurement was collected.",
+        "sources": [
+          "queue_model",
+          "metrics"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This source review covers selected README, policy/backend, provider, context, memory tools, queue, evidence, managed-channel and operations files. It does not cover every API route, deployment configuration or failure path.",
+        "sources": [
+          "readme",
+          "provider",
+          "queue",
+          "nfr"
+        ]
+      },
+      {
+        "text": "Mnemory implementation is outside the reviewed repository. Its retrieval algorithm, memory schema, correction/deletion guarantees, internal scope enforcement, retention and stored-record provenance remain unknown here.",
+        "sources": [
+          "readme",
+          "provider",
+          "tools"
+        ]
+      },
+      {
+        "text": "No Cognis runtime, tests or benchmarks were run. Recall quality, abstention, correction, deletion completeness, scope isolation, latency, write-to-recall delay, cost and storage efficiency remain unmeasured.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "text": "Trusted evidence status and policy fingerprints establish request/admission lifecycle metadata, not that a saved memory is true or that a generated answer cites supporting evidence.",
+        "sources": [
+          "evidence",
+          "trusted",
+          "compat"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Cognis runtime, tests or benchmark execution was performed. Source observations and documented targets are not benchmark results."
+    }
+  }
+}

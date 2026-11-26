@@ -1,0 +1,343 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "cortex-hub",
+    "name": "Cortex Hub",
+    "ordinal": 161,
+    "repository": "https://github.com/lktiep/cortex-hub",
+    "listed_repository": "https://github.com/lktiep/cortex-hub",
+    "branch": "master",
+    "revision": "173a612df830b70e9d3d8632a4ae95e7b9adf670",
+    "reviewed_at": "2026-11-25T09:38:33Z",
+    "review_timezone": "UTC (2026-11-25 01:38:33 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Cortex Hub is a self-hosted TypeScript platform that exposes agent memory and a shared knowledge base through MCP. Its mem9 memory path stores facts in Qdrant and combines dense vectors with a lexical BM25 arm; a separate knowledge path stores documents and supports tags, project filters, hall types, validity dates, and file links. This is a source review pinned to the repository head, not a runtime or benchmark assessment.",
+    "atlas_locator": {
+      "ordinal": 161,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cortex-hub.md",
+      "listed_repository": "https://github.com/lktiep/cortex-hub"
+    },
+    "contact": {
+      "email": null,
+      "source_url": null,
+      "checked_urls": [
+        "https://github.com/lktiep/cortex-hub/blob/173a612df830b70e9d3d8632a4ae95e7b9adf670/README.md"
+      ],
+      "note": "The official pinned README was checked for a published contact email; none was found."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/lktiep/cortex-hub/blob/173a612df830b70e9d3d8632a4ae95e7b9adf670/README.md"
+    ],
+    "contact_email_note": "No published contact email was found in the official pinned README. No commit/profile metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official GitHub repository metadata",
+        "path": "GitHub repository API",
+        "symbol": "Public canonical repository; default branch master",
+        "url": "https://api.github.com/repos/lktiep/cortex-hub"
+      },
+      {
+        "id": "history",
+        "label": "Official master branch history",
+        "path": "commits/master.atom",
+        "symbol": "Current master head 173a612df830b70e9d3d8632a4ae95e7b9adf670; feed updated 2026-10-30T03:20:03Z",
+        "url": "https://github.com/lktiep/cortex-hub/commits/master.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified full-SHA head commit",
+        "path": "commit",
+        "symbol": "Current master head 173a612df830b70e9d3d8632a4ae95e7b9adf670",
+        "url": "https://github.com/lktiep/cortex-hub/commit/173a612df830b70e9d3d8632a4ae95e7b9adf670"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Product scope, memory/knowledge behavior, architecture and benchmark claims",
+        "url": "https://github.com/lktiep/cortex-hub/blob/173a612df830b70e9d3d8632a4ae95e7b9adf670/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Architecture overview",
+        "path": "docs/architecture/overview.md",
+        "symbol": "MCP, mem9, Qdrant, knowledge and telemetry architecture",
+        "url": "https://github.com/lktiep/cortex-hub/blob/173a612df830b70e9d3d8632a4ae95e7b9adf670/docs/architecture/overview.md"
+      },
+      {
+        "id": "mem9",
+        "label": "mem9 memory engine",
+        "path": "packages/shared-mem9/src/memory.ts",
+        "symbol": "Memory write/update/delete, hybrid search, deduplication and user/agent filters",
+        "url": "https://github.com/lktiep/cortex-hub/blob/173a612df830b70e9d3d8632a4ae95e7b9adf670/packages/shared-mem9/src/memory.ts"
+      },
+      {
+        "id": "memory_tools",
+        "label": "MCP memory tools",
+        "path": "apps/hub-mcp/src/tools/memory.ts",
+        "symbol": "Project/branch namespace construction and memory store/search/delete tool behavior",
+        "url": "https://github.com/lktiep/cortex-hub/blob/173a612df830b70e9d3d8632a4ae95e7b9adf670/apps/hub-mcp/src/tools/memory.ts"
+      },
+      {
+        "id": "mem9_proxy",
+        "label": "Dashboard API mem9 proxy",
+        "path": "apps/dashboard-api/src/routes/mem9-proxy.ts",
+        "symbol": "Session and organization memory scope, access checks, store/search/delete and health path",
+        "url": "https://github.com/lktiep/cortex-hub/blob/173a612df830b70e9d3d8632a4ae95e7b9adf670/apps/dashboard-api/src/routes/mem9-proxy.ts"
+      },
+      {
+        "id": "knowledge_tools",
+        "label": "MCP knowledge tools",
+        "path": "apps/hub-mcp/src/tools/knowledge.ts",
+        "symbol": "Knowledge document writes, filters, temporal query parameters and returned excerpts",
+        "url": "https://github.com/lktiep/cortex-hub/blob/173a612df830b70e9d3d8632a4ae95e7b9adf670/apps/hub-mcp/src/tools/knowledge.ts"
+      },
+      {
+        "id": "schema",
+        "label": "Dashboard database schema",
+        "path": "apps/dashboard-api/src/db/schema.sql",
+        "symbol": "API key, organization, project, query/usage telemetry and session records",
+        "url": "https://github.com/lktiep/cortex-hub/blob/173a612df830b70e9d3d8632a4ae95e7b9adf670/apps/dashboard-api/src/db/schema.sql"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Metric domains and definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Workload specification only; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Execution status; no Cortex Hub measurement from this review",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster entry (identity/locator only)",
+        "path": "content/systems/cortex-hub.md",
+        "symbol": "Pinned roster identity and listed locator only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cortex-hub.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Cortex Hub as a self-hosted backend for persistent agent memory, shared knowledge, code intelligence, and quality workflows, exposed through an MCP endpoint. It is a deployable platform rather than a hosted memory API; the README names a Docker Compose deployment and local service components.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The reviewed public repository is the explicit catalog locator. GitHub's repository API identifies lktiep/cortex-hub as public, non-fork, and defaulting to master; its current master feed and head commit page identify the full reviewed revision.",
+        "sources": [
+          "repo",
+          "history",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The architecture has an MCP gateway, a Hono dashboard API, a web dashboard, Qdrant, GitNexus code graph, and supporting local embedding/LLM services. The memory MCP handlers proxy to dashboard API routes; the dashboard API owns the in-process mem9 instance and Qdrant connection.",
+        "sources": [
+          "readme",
+          "architecture",
+          "memory_tools",
+          "mem9_proxy"
+        ]
+      },
+      {
+        "text": "There are two different memory-like records. mem9 stores a memory string in a Qdrant point with an ID, content hash, user_id, agent_id, optional metadata, and created/updated timestamps. The knowledge path accepts a title and full content plus tags, project ID, contributing agent, hall type, validFrom, file paths, and category; it automatically chunks and embeds documents.",
+        "sources": [
+          "mem9",
+          "knowledge_tools",
+          "readme"
+        ]
+      },
+      {
+        "text": "The README describes SQLite as the application database for sessions, quality, usage, and knowledge metadata, while Qdrant holds vectors. The inspected schema also records API keys and organization bindings, projects, query logs with latency/status, and usage token counts.",
+        "sources": [
+          "readme",
+          "architecture",
+          "schema"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Memory writes call mem9.add. With an LLM configured, the implementation documents fact extraction followed by ADD/UPDATE/DELETE/NONE decisions, then embedding and Qdrant persistence; without an LLM, each input message is kept verbatim before embedding. Exact normalized text hashes support deduplication. An LLM-selected update replaces a point by ID; an LLM-selected delete removes it.",
+        "sources": [
+          "mem9",
+          "mem9_proxy"
+        ]
+      },
+      {
+        "text": "Memory search embeds the query and searches the dense vector arm plus a BM25-style sparse arm when the collection supports sparse vectors, then fuses ranks and blends recency. If a collection lacks a sparse index, initialization warns and search falls back to vectors only. MCP search walks branch then project scope and accumulates up to the requested limit; deletion is exposed by memory ID.",
+        "sources": [
+          "mem9",
+          "memory_tools"
+        ]
+      },
+      {
+        "text": "Knowledge writes are separate from mem9: the MCP tool forwards a document to the knowledge API with source='agent' and sourceAgentId. Search can filter by tags, project, hall type, and asOf; passing a result ID returns the full document. The README describes explicit invalidation with a supersededBy link and timeline endpoint, and recipe capture/derived/fixed lineage. This review did not inspect every knowledge route or migration, so details beyond these documented contracts remain out of scope.",
+        "sources": [
+          "knowledge_tools",
+          "readme"
+        ]
+      },
+      {
+        "text": "For memory scope, the MCP tool constructs a user_id from caller-supplied project and branch, project alone, or agent identity. The dashboard proxy resolves an unscoped call to the active session project when available and uses key-specific scope for organization-bound keys without a session project; it also checks whether a bound key may access the requested project or memory before store/search/delete. Branch memory search falls back to project scope. These are source-visible controls, not a measured isolation result.",
+        "sources": [
+          "memory_tools",
+          "mem9_proxy",
+          "schema"
+        ]
+      },
+      {
+        "text": "Knowledge records can carry source agent, category, tags, hall type, project, file paths, validity start, and the README describes invalidation/supersession and recipe lineage. The mem9 point records agent/user IDs, timestamps, content hash and optional arbitrary metadata. Retrieved results expose content and IDs, but the inspected memory tool contract does not provide a required source citation or claim-level evidence format for generated answers.",
+        "sources": [
+          "knowledge_tools",
+          "mem9",
+          "readme"
+        ]
+      },
+      {
+        "text": "The mem9 path uses shared initialized configuration, query/result limits, Qdrant filtering, a bounded 1,000-point sample to estimate BM25 average document length, and hybrid-arm over-fetching. Architecture documentation describes per-tool timing/logging; the schema includes query latency/status and model token usage. These are mechanisms and logging fields, not measured efficiency results.",
+        "sources": [
+          "mem9",
+          "memory_tools",
+          "mem9_proxy",
+          "architecture",
+          "schema"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention — unmeasured. Hybrid retrieval and empty-result responses are present; no answerability or abstention cases were scored.",
+        "sources": [
+          "mem9",
+          "memory_tools",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured. LLM-selected memory updates and knowledge invalidation/supersession are implemented or documented; no post-correction workload was run.",
+        "sources": [
+          "mem9",
+          "readme",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Deletion leakage — unmeasured. Memory deletion removes a Qdrant point and knowledge routes provide lifecycle operations; no post-delete probes, physical-storage inspection, or backup checks were made.",
+        "sources": [
+          "mem9",
+          "memory_tools",
+          "readme",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Scope isolation — unmeasured. User/agent filters and session/organization project checks are source-visible; no cross-scope leakage workload was run.",
+        "sources": [
+          "mem9",
+          "memory_tools",
+          "mem9_proxy",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Evidence support precision and citation coverage — unmeasured. Knowledge has origin/lineage fields and memories have metadata, but no claim-level citation contract was established in the inspected tool paths; no generated claims were adjudicated.",
+        "sources": [
+          "knowledge_tools",
+          "mem9",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Retrieval latency and write-to-recall delay — unmeasured. The project schema can log tool latency, but this review collected no timing samples or timed write/recall probes.",
+        "sources": [
+          "architecture",
+          "schema",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Tokens and cost — unmeasured. Token-usage fields and configurable provider routing exist; no runtime token counts or charges were collected.",
+        "sources": [
+          "readme",
+          "schema",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Storage efficiency — unmeasured. Qdrant and SQLite storage roles are documented, but no corpus-attributed storage size was measured.",
+        "sources": [
+          "readme",
+          "schema",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded review inspected the official README and architecture overview, mem9 implementation and MCP/API memory paths, knowledge MCP tools, and database schema. It did not inspect every API route, knowledge migration, deployment override, embedding provider, or all integration hooks.",
+        "sources": [
+          "readme",
+          "architecture",
+          "mem9",
+          "memory_tools",
+          "mem9_proxy",
+          "knowledge_tools",
+          "schema"
+        ]
+      },
+      {
+        "text": "Source inspection cannot establish runtime correctness, retrieval quality, correction or deletion outcomes, effective deployed key/session grants, data retention or physical erasure, latency, token/cost totals, or storage efficiency. No Cortex Hub runtime, tests, or benchmarks were run.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "The README contains upstream benchmark figures and performance examples, but this review did not reproduce or independently adjudicate them, and they are not project benchmark results. The memory implementation also falls back to vector-only search for a collection without the lexical index; operational performance and collection migration state are unknown here.",
+        "sources": [
+          "readme",
+          "mem9",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Cortex Hub runtime, tests, or benchmark workload was executed. Upstream README claims and source observations are not measurements from this review.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

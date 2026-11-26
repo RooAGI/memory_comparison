@@ -1,0 +1,337 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "cua",
+    "name": "Cua",
+    "ordinal": 177,
+    "repository": "https://github.com/trycua/cua",
+    "listed_repository": "https://github.com/trycua/cua",
+    "branch": "main",
+    "revision": "848e2a561a5f8b01286d855afb58bc1ac19a150c",
+    "reviewed_at": "2026-11-25T10:26:40Z",
+    "review_timezone": "UTC (2026-11-25 02:26:40 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Cua is a computer-use platform and toolkit spanning desktop automation, sandboxes, VMs, and agent integrations. Its current repository includes a narrow Computer History preview for local action metadata, but marks that feature deprecated and off by default; Cua is not presented as a general-purpose persistent memory system.",
+    "atlas_locator": {
+      "ordinal": 177,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cua.md",
+      "listed_repository": "https://github.com/trycua/cua"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/trycua/cua/blob/848e2a561a5f8b01286d855afb58bc1ac19a150c/README.md",
+      "note": "Checked the official repository README; it publishes no contact email."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/trycua/cua/blob/848e2a561a5f8b01286d855afb58bc1ac19a150c/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/trycua/cua/blob/848e2a561a5f8b01286d855afb58bc1ac19a150c/README.md"
+    ],
+    "contact_email_note": "No email is published in the official README at the reviewed revision. No email was inferred from commit or profile metadata.",
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Public trycua/cua; main is default branch",
+        "url": "https://github.com/trycua/cua"
+      },
+      {
+        "id": "head",
+        "label": "Official main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Current main head 848e2a561a5f8b01286d855afb58bc1ac19a150c, updated 2026-11-25T09:02:16Z",
+        "url": "https://github.com/trycua/cua/commits/main.atom"
+      },
+      {
+        "id": "commit",
+        "label": "Verified current head commit",
+        "path": "commit",
+        "symbol": "Full main head 848e2a561a5f8b01286d855afb58bc1ac19a150c; commit page shows it on main",
+        "url": "https://github.com/trycua/cua/commit/848e2a561a5f8b01286d855afb58bc1ac19a150c"
+      },
+      {
+        "id": "readme",
+        "label": "Official repository README",
+        "path": "README.md",
+        "symbol": "Project/components and use cases",
+        "url": "https://github.com/trycua/cua/blob/848e2a561a5f8b01286d855afb58bc1ac19a150c/README.md"
+      },
+      {
+        "id": "driver",
+        "label": "Cua Driver README",
+        "path": "libs/cua-driver/README.md",
+        "symbol": "Integration surfaces, permission modes, Computer History deprecation/status and data exclusions",
+        "url": "https://github.com/trycua/cua/blob/848e2a561a5f8b01286d855afb58bc1ac19a150c/libs/cua-driver/README.md"
+      },
+      {
+        "id": "history_core",
+        "label": "Computer History core implementation",
+        "path": "libs/cua-driver/rust/crates/cua-driver-core/src/history.rs",
+        "symbol": "Encrypted metadata event store, bounded nonblocking writer, queue, retention/quota, query cap and health errors",
+        "url": "https://github.com/trycua/cua/blob/848e2a561a5f8b01286d855afb58bc1ac19a150c/libs/cua-driver/rust/crates/cua-driver-core/src/history.rs"
+      },
+      {
+        "id": "history_runtime",
+        "label": "Computer History runtime integration",
+        "path": "libs/cua-driver/rust/crates/cua-driver/src/history_runtime.rs",
+        "symbol": "Preview admission, installed-product verification and local daemon integration",
+        "url": "https://github.com/trycua/cua/blob/848e2a561a5f8b01286d855afb58bc1ac19a150c/libs/cua-driver/rust/crates/cua-driver/src/history_runtime.rs"
+      },
+      {
+        "id": "event_schema",
+        "label": "Computer History event schema",
+        "path": "libs/cua-driver/docs/computer-history-event-v0.schema.json",
+        "symbol": "Fixed-field event types, opaque identifiers, action outcomes and access/health events",
+        "url": "https://github.com/trycua/cua/blob/848e2a561a5f8b01286d855afb58bc1ac19a150c/libs/cua-driver/docs/computer-history-event-v0.schema.json"
+      },
+      {
+        "id": "profile",
+        "label": "Computer History encrypted file profile",
+        "path": "libs/cua-driver/docs/computer-history-profile-v1.cddl",
+        "symbol": "CBOR sequence and COSE_Encrypt0 record structure",
+        "url": "https://github.com/trycua/cua/blob/848e2a561a5f8b01286d855afb58bc1ac19a150c/libs/cua-driver/docs/computer-history-profile-v1.cddl"
+      },
+      {
+        "id": "architecture",
+        "label": "Computer History architecture",
+        "path": "libs/cua-driver/docs/computer-history-architecture.md",
+        "symbol": "Preview 0 boundaries and staged architecture",
+        "url": "https://github.com/trycua/cua/blob/848e2a561a5f8b01286d855afb58bc1ac19a150c/libs/cua-driver/docs/computer-history-architecture.md"
+      },
+      {
+        "id": "preview",
+        "label": "Computer History preview guide",
+        "path": "libs/cua-driver/docs/computer-history-preview.md",
+        "symbol": "Retention/quota, read tools, cryptographic deletion, stored/omitted fields and platform key stores",
+        "url": "https://github.com/trycua/cua/blob/848e2a561a5f8b01286d855afb58bc1ac19a150c/libs/cua-driver/docs/computer-history-preview.md"
+      },
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 177, name, slug, listed repository and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster entry",
+        "path": "content/systems/cua.md",
+        "symbol": "Identity/locator attribution only, not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cua.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Workload only; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "No Cua measured result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Cua as a set of computer-use tools and infrastructure: Cua Spaces, Cua Driver, Lume, a sandbox SDK/CLI, CUA-S1, and Cua Bench. Its citation metadata names Cua AI, Inc.; the repository is a product suite and framework, rather than a standalone memory database.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The repository combines several layers: Cua Driver exposes computer inspection and action tools to agents over MCP or CLI and provides native Python/TypeScript SDKs; the Cua SDK and CLI manage local containers, VMs, images, and Spaces; Cua Spaces provides desktop environments; Lume manages local VMs; Cua Bench supports evaluation. This is the documented computer-use architecture, not a general-purpose user-fact memory architecture.",
+        "sources": [
+          "readme",
+          "driver"
+        ]
+      },
+      {
+        "text": "Computer History is a distinct opt-in preview that records Cua-mediated actions, session lifecycle, control, access, and writer-health events. Its event schema uses opaque session/action IDs, monotonic sequence numbers, timestamps, platform and capability fields, optional fixed application identity, and enumerated outcomes, routes, evidence kinds, and health categories; it excludes free-form content.",
+        "sources": [
+          "architecture",
+          "event_schema",
+          "preview"
+        ]
+      },
+      {
+        "text": "The implementation sends events to a bounded, nonblocking writer queue and stores them as a CBOR sequence of COSE_Encrypt0 records. The documented profile uses ChaCha20-Poly1305 with keys protected by the platform credential store; per-chunk keys are derived from a namespace root key. The implementation defines 7-day retention, a 100 MiB quota, a 512-event writer queue, and a 200-event query cap.",
+        "sources": [
+          "history_core",
+          "profile",
+          "preview"
+        ]
+      },
+      {
+        "text": "GitHub identifies main as the default branch. The official main Atom feed reported 848e2a561a5f8b01286d855afb58bc1ac19a150c as the current head, updated 2026-11-25T09:02:16Z; the commit page identifies that full SHA on main. Review recorded 2026-11-25 10:26:40 UTC (02:26:40 PST; America/Los_Angeles).",
+        "sources": [
+          "repo",
+          "head",
+          "commit"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The preview records only activity mediated by Cua Driver, not ambient desktop activity. It deliberately omits screenshots, raw keystrokes or typed text, clipboard, raw tool arguments/results, accessibility trees, paths, window titles, URLs, and free-form diagnostics.",
+        "sources": [
+          "architecture",
+          "preview",
+          "event_schema"
+        ]
+      },
+      {
+        "text": "Event capture uses a nonblocking try-send path, so queue backpressure or storage failure does not fail the computer action. The bounded writer, fixed schema, encrypted chunks, health categories, retention and quota are source-visible engineering controls; no latency or reliability measurements were collected.",
+        "sources": [
+          "history_core",
+          "event_schema"
+        ]
+      },
+      {
+        "text": "The preview is documented as deprecated and off by default; its tools are scheduled for removal after 26 Nov 2026. It offers enable, pause, resume, disable, status, list/show, and delete controls. Documentation says disable preserves history; delete destroys the namespace key and removes encrypted files. The core also has an offline purge path. No update or correction operation is documented for event records.",
+        "sources": [
+          "driver",
+          "preview",
+          "history_core",
+          "history_runtime"
+        ]
+      },
+      {
+        "text": "Agents can use permission-gated, read-only history_status and history_query tools; the preview guide says queries return at most 200 metadata events and record a fixed access-audit event. No vector, semantic, or relevance-ranking mechanism is specified in the inspected guide; it does not establish general memory retrieval.",
+        "sources": [
+          "driver",
+          "preview",
+          "event_schema"
+        ]
+      },
+      {
+        "text": "History is described as local and encrypted, with platform-specific credential stores and separate namespaces for installed and local-development builds. The inspected design does not establish tenant, project, or agent identity isolation; local device/profile boundaries are not equivalent to tested access-control guarantees.",
+        "sources": [
+          "preview",
+          "architecture",
+          "history_runtime"
+        ]
+      },
+      {
+        "text": "Event fields record action outcome categories and limited evidence kinds such as accessibility/browser/value readback or window change. These are provenance about Cua Driver actions, not source-document citations or claim-level support for arbitrary agent answers.",
+        "sources": [
+          "event_schema",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The preview has local CLI and permission-gated agent reads, along with health categories for dropped events, quota, key, writer, and storage failures. The repository describes no broader memory indexing, consolidation, or memory-specific telemetry; source inspection does not measure cost, tokens, storage efficiency, or query latency.",
+        "sources": [
+          "history_core",
+          "preview",
+          "driver"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention — unmeasured. The preview exposes bounded history reads, but no general memory retrieval workload or answerability probe was run.",
+        "sources": [
+          "preview",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured. No event correction contract or correction workload was documented or executed.",
+        "sources": [
+          "event_schema",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Deletion leakage — unmeasured. A delete and offline purge path are documented/implemented, but no runtime deletion or residual-data probe was run.",
+        "sources": [
+          "history_core",
+          "preview",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Scope isolation — unmeasured. Device-local key namespaces are visible, but no tenant, project, agent, or session isolation test was run.",
+        "sources": [
+          "history_runtime",
+          "preview",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Evidence support precision and citation coverage — unmeasured. Structured action evidence categories exist, but no answer-citation evaluation was run.",
+        "sources": [
+          "event_schema",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Retrieval latency and write-to-recall delay — unmeasured. The nonblocking writer path is source-visible; no runtime timing probe was run.",
+        "sources": [
+          "history_core",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Token use and cost — unmeasured. No memory-specific model usage or cost data was collected.",
+        "sources": [
+          "readme",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Storage efficiency — unmeasured. Quota and retention limits are documented, but no history-size or corpus-attributed storage measurement was collected.",
+        "sources": [
+          "history_core",
+          "preview",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Source-visible controls include encryption, fixed event fields, nonblocking writes, bounded queries, retention/quota, and health events. These are implementation/documentation observations, not measurements of security, performance, or reliability.",
+        "sources": [
+          "history_core",
+          "event_schema",
+          "preview"
+        ]
+      }
+    ],
+    "limits": [
+      "This is a bounded review of the official root and Driver documentation plus the Computer History core/runtime, event schema, and file-profile sources at one verified main SHA. It did not inspect every platform key adapter, tool integration, or deployment.",
+      "Cua is a broad computer-use platform. The inspected docs do not define it as a general-purpose memory system; this assessment treats Computer History as the narrow memory-adjacent feature.",
+      "Computer History is documented as deprecated and off by default, with tool removal scheduled after 26 Nov 2026. Runtime availability was not tested.",
+      "The feature records action metadata, not full conversations or desktop state. It therefore cannot support general recall from screenshots, typed content, clipboard data, or ambient activity.",
+      "The encrypted store is bounded by documented retention and quota, but physical erasure from backups, snapshots, copied ciphertext, SSD wear leveling, or already decrypted process memory is not guaranteed by the preview guide.",
+      "No Cua runtime, tests, or benchmarks were run. All project benchmark domains remain unmeasured."
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Cua runtime, tests, or benchmark workload was executed. Code and documentation observations are not measurements.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

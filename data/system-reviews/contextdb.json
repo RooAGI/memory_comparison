@@ -1,0 +1,400 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 147,
+    "slug": "contextdb",
+    "name": "contextdb",
+    "repository": "https://github.com/context-graph-ai/contextdb",
+    "branch": "dev",
+    "revision": "df1cf70274d1e204c1b5f9b8f71f67be35609239",
+    "reviewed_at": "2026-11-25T09:00:35Z",
+    "review_timezone": "UTC (2026-11-25 01:00:35 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": "security@contextdb.tech",
+      "source_url": "https://github.com/context-graph-ai/contextdb/blob/df1cf70274d1e204c1b5f9b8f71f67be35609239/SECURITY.md",
+      "checked_urls": [
+        "https://github.com/context-graph-ai/contextdb/blob/df1cf70274d1e204c1b5f9b8f71f67be35609239/README.md",
+        "https://github.com/context-graph-ai/contextdb/blob/df1cf70274d1e204c1b5f9b8f71f67be35609239/SECURITY.md"
+      ],
+      "note": "Official SECURITY.md publishes security@contextdb.tech for vulnerability reports; only official repository documentation was checked."
+    },
+    "contact_email": "security@contextdb.tech",
+    "contact_email_source_url": "https://github.com/context-graph-ai/contextdb/blob/df1cf70274d1e204c1b5f9b8f71f67be35609239/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/context-graph-ai/contextdb/blob/df1cf70274d1e204c1b5f9b8f71f67be35609239/README.md",
+      "https://github.com/context-graph-ai/contextdb/blob/df1cf70274d1e204c1b5f9b8f71f67be35609239/SECURITY.md"
+    ],
+    "contact_email_note": "Official SECURITY.md publishes security@contextdb.tech for vulnerability reports.",
+    "summary": "ContextDB is an embedded Rust database substrate for agentic-memory applications. It combines relational rows, bounded graph traversal, and exact vector search under transactional storage and policy constraints, while leaving the memory schema and agent-level selection logic to the application. This is a source review; no runtime or benchmark results were collected.",
+    "atlas_locator": {
+      "ordinal": 147,
+      "name": "contextdb",
+      "slug": "contextdb",
+      "listed_repository": "https://github.com/context-graph-ai/contextdb",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/contextdb.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated memory-system roster",
+        "path": "data/memory-systems.json",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/contextdb.md",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/contextdb.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository",
+        "symbol": "Public repository; default branch dev",
+        "url": "https://github.com/context-graph-ai/contextdb"
+      },
+      {
+        "id": "head_feed",
+        "label": "Official dev commit feed",
+        "path": "commits/dev.atom",
+        "symbol": "df1cf70274d1e204c1b5f9b8f71f67be35609239",
+        "url": "https://github.com/context-graph-ai/contextdb/commits/dev.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed full commit",
+        "path": "commit",
+        "symbol": "df1cf70274d1e204c1b5f9b8f71f67be35609239",
+        "url": "https://github.com/context-graph-ai/contextdb/commit/df1cf70274d1e204c1b5f9b8f71f67be35609239"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "url": "https://github.com/context-graph-ai/contextdb/blob/df1cf70274d1e204c1b5f9b8f71f67be35609239/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "url": "https://github.com/context-graph-ai/contextdb/blob/df1cf70274d1e204c1b5f9b8f71f67be35609239/SECURITY.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Architecture and implementation guide",
+        "path": "docs/architecture.md",
+        "url": "https://github.com/context-graph-ai/contextdb/blob/df1cf70274d1e204c1b5f9b8f71f67be35609239/docs/architecture.md"
+      },
+      {
+        "id": "capabilities",
+        "label": "Capability index and stated limits",
+        "path": "docs/capability-index.md",
+        "url": "https://github.com/context-graph-ai/contextdb/blob/df1cf70274d1e204c1b5f9b8f71f67be35609239/docs/capability-index.md"
+      },
+      {
+        "id": "query_language",
+        "label": "Query language, mutation, policy, and authorization reference",
+        "path": "docs/query-language.md",
+        "url": "https://github.com/context-graph-ai/contextdb/blob/df1cf70274d1e204c1b5f9b8f71f67be35609239/docs/query-language.md"
+      },
+      {
+        "id": "sync_guide",
+        "label": "Sync and custody guide",
+        "path": "docs/sync-two-machines.md",
+        "url": "https://github.com/context-graph-ai/contextdb/blob/df1cf70274d1e204c1b5f9b8f71f67be35609239/docs/sync-two-machines.md"
+      },
+      {
+        "id": "engine_source",
+        "label": "Engine database implementation",
+        "path": "crates/contextdb-engine/src/database.rs",
+        "url": "https://github.com/context-graph-ai/contextdb/blob/df1cf70274d1e204c1b5f9b8f71f67be35609239/crates/contextdb-engine/src/database.rs"
+      },
+      {
+        "id": "metric_defs",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "result",
+        "label": "Shared benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official project describes ContextDB as an embedded Rust database for agentic-memory applications, combining relational rows, bounded graph traversal, and vector similarity in one transactional store. It supplies storage and policy primitives rather than a prescribed memory schema or agent-facing memory model.",
+        "sources": [
+          "readme",
+          "capabilities"
+        ]
+      },
+      {
+        "text": "The roster position is 147: ContextDB, slug contextdb, listed repository https://github.com/context-graph-ai/contextdb, with repository_status explicit. The pinned Atlas record is retained only for identity and locator attribution, not as assessment evidence.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The official repository page identifies dev as the default branch; its official dev Atom feed identifies current head df1cf70274d1e204c1b5f9b8f71f67be35609239 at 2026-11-25T04:08:55Z. The commit page and source links pin the reviewed revision.",
+        "sources": [
+          "repo",
+          "head_feed",
+          "head"
+        ]
+      },
+      {
+        "text": "The official security policy publishes security@contextdb.tech for vulnerability reports.",
+        "sources": [
+          "security"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README and architecture guide describe a Rust workspace with a relational row store as canonical data, secondary graph adjacency and vector structures, SQL parsing/planning, an engine, and CLI and sync-server crates. A single-file embedded store uses MVCC snapshots to coordinate relational, graph, and vector state in transactions; the schema is supplied by the application.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Graph queries use bounded breadth-first traversal with edge-type and direction controls. Vector columns support cosine distance and exact search; the current docs say indexed search is unavailable and the clustered index is disabled. These facilities do not imply built-in embeddings or a memory-specific data model.",
+        "sources": [
+          "readme",
+          "architecture",
+          "capabilities"
+        ]
+      },
+      {
+        "text": "The engine source and architecture guide describe a single writer per database file, concurrent readers, and scoped read sessions. The relational source is authoritative while graph and vector indexes are derived structures.",
+        "sources": [
+          "engine_source",
+          "architecture"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: callers define tables and constraints, then use SQL INSERT, UPDATE, upsert, and DELETE or the Rust API. Transactions accumulate mutations in a write set and publish relational, graph, and vector changes atomically; schema constraints such as IMMUTABLE, STATE MACHINE, DAG, foreign keys, and PROPAGATE are enforced by the engine.",
+        "sources": [
+          "readme",
+          "query_language",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Update and correction: ordinary UPDATE/upsert is available subject to constraints. An IMMUTABLE column cannot be rewritten; the query guide illustrates correction by inserting a new row and marking the prior row superseded. HISTORY ALL retains superseded versions by default; HISTORY CURRENT ONLY permits maintenance to reclaim older versions, and does not restore history once removed.",
+        "sources": [
+          "query_language",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Delete and retention: SQL DELETE and DROP TABLE are supported. RETAIN can expire rows; maintenance and MVCC reader snapshots affect when old versions and physical pages can be reclaimed. The documentation distinguishes logical visibility/removal from file shrinkage and does not promise forensic erasure or removal from operator-held backups. Sync custody describes an all-or-nothing fleet erasure boundary for its governed units.",
+        "sources": [
+          "query_language",
+          "architecture",
+          "capabilities",
+          "sync_guide"
+        ]
+      },
+      {
+        "text": "Retrieval: SQL selects and bounded graph traversals can filter and order rows; vector columns support exact cosine-distance search and result limits. Scoped handles can constrain rows by context, scope label, and optional ACL principal. The CLI has bounded reads with refusal rather than silent truncation; the embedded execute API has a distinct uncapped contract. ContextDB itself does not select or generate agent memories.",
+        "sources": [
+          "readme",
+          "query_language",
+          "capabilities",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Scope isolation: the database has no general multi-tenant orchestration. Context/scope/ACL constraints are opt-in application declarations and handle settings; authorization behavior differs for live owner-scoped handles and direct reads of a closed store, where file permissions govern access. The capability index says --tenant-id is a sync namespace whose members replicate together, not a tenant-isolation boundary.",
+        "sources": [
+          "query_language",
+          "capabilities",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Provenance and evidence: there is no built-in epistemic memory provenance or claim-evidence model. Applications can use immutable columns, state transitions, history, event/custody manifests, and sync receipts to preserve declared records and delivery history. Those mechanisms record database state or transport custody; they do not verify the truth of an agent-generated claim.",
+        "sources": [
+          "readme",
+          "query_language",
+          "sync_guide",
+          "capabilities"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: MVCC separates readers from serialized writers; architecture documents bounded work/memory accounting, paged reads, maintenance, snapshots, and exact vector search. The engine exposes subscriptions, plugin lifecycle/query hooks, tracing warnings for guarded contention, and finite read/cursor budgets in supported surfaces. These are design and instrumentation descriptions, not measured latency, cost, or storage-efficiency results.",
+        "sources": [
+          "readme",
+          "architecture",
+          "query_language",
+          "capabilities"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "The database exposes SQL, graph and exact vector retrieval but no agent-level memory policy; no quality or abstention workload was run.",
+        "sources": [
+          "readme",
+          "metric_defs",
+          "result",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Update, state-machine, immutable-column, and history policies are documented; no correction sequence was executed.",
+        "sources": [
+          "query_language",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Logical deletion, retention, MVCC cleanup, and sync erasure boundaries are documented; no post-delete retrieval or residual-copy check was run.",
+        "sources": [
+          "query_language",
+          "architecture",
+          "sync_guide",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Context, scope, ACL, and sync namespaces are documented as separate mechanisms; no cross-scope or cross-tenant isolation workload was run.",
+        "sources": [
+          "query_language",
+          "capabilities",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "No built-in claim-support or citation-verification layer was identified; no adjudication workload was run.",
+        "sources": [
+          "readme",
+          "capabilities",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "Bounded reads and exact vector search are source-visible; no latency workload was run.",
+        "sources": [
+          "architecture",
+          "capabilities",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Transactional writes, maintenance, and synchronization are documented; no acknowledgment-to-recall timing was measured.",
+        "sources": [
+          "architecture",
+          "sync_guide",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "ContextDB is a database substrate and this review collected no model-token or provider-cost data.",
+        "sources": [
+          "readme",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The architecture describes page storage, retention, history cleanup, and compaction behavior; no corpus-attributable storage measurement was made.",
+        "sources": [
+          "architecture",
+          "metric_defs",
+          "result"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "ContextDB is a storage engine with no built-in schema, embeddings model, agent integration policy, or memory-selection behavior; applications must define their own records and retrieval logic.",
+        "sources": [
+          "readme",
+          "capabilities",
+          "query_language"
+        ]
+      },
+      {
+        "text": "The graph language is a bounded subset rather than full SQL/PGQ; vector retrieval is exact-only in this release, and the clustered/indexed route is disabled. The documented design envelope is 10K–1M rows per database with sparse graphs and bounded depth, not a guarantee for every workload.",
+        "sources": [
+          "capabilities",
+          "architecture",
+          "readme"
+        ]
+      },
+      {
+        "text": "The repository explicitly excludes general multi-tenant orchestration, Python and TypeScript bindings, and built-in cross-tenant isolation. ACL/context controls are opt-in and deployment boundaries remain material.",
+        "sources": [
+          "capabilities",
+          "query_language"
+        ]
+      },
+      {
+        "text": "Logical deletion, retention, version cleanup, file compaction, and backup recovery are distinct. Documentation does not promise secure forensic erasure or that a reclaimed logical row immediately reduces file size.",
+        "sources": [
+          "architecture",
+          "query_language",
+          "sync_guide",
+          "capabilities"
+        ]
+      },
+      {
+        "text": "This review inspected selected official README, architecture, capability, query-language, sync, and engine sources at the current dev head. It did not audit every crate, adapter, or deployment; no checkout was available through the read-only command environment, so source was inspected on official SHA-pinned GitHub pages. No runtime, tests, or benchmarks were run.",
+        "sources": [
+          "readme",
+          "architecture",
+          "capabilities",
+          "query_language",
+          "sync_guide",
+          "engine_source",
+          "head"
+        ]
+      }
+    ],
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "This source assessment did not run ContextDB, tests, or benchmarks. Design documentation and curated Atlas fields are not benchmark results."
+    }
+  }
+}

@@ -1,0 +1,355 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 291,
+    "slug": "hermes-memory-installer",
+    "name": "Hermes Memory Installer",
+    "repository": "https://github.com/mage0535/hermes-memory-installer",
+    "branch": "main",
+    "revision": "049d9ac628e516da2462cf7bada5460aec3d62a3",
+    "reviewed_at": "2026-11-25T22:53:32Z",
+    "review_timezone": "UTC (2026-11-25 14:53:32 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/mage0535/hermes-memory-installer/blob/049d9ac628e516da2462cf7bada5460aec3d62a3/README.md",
+      "note": "Checked the official pinned README; no contact email was published."
+    },
+    "summary": "An agent-agnostic memory sidecar that indexes agent sessions, Hindsight facts and curated knowledge, archives sessions to gbrain, and generates fused recall context. This review records source observations, not measured quality or performance.",
+    "atlas_locator": {
+      "ordinal": 291,
+      "name": "Hermes Memory Installer",
+      "slug": "hermes-memory-installer",
+      "listed_repository": "https://github.com/mage0535/hermes-memory-installer",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hermes-memory-installer.md",
+      "revision": "049d9ac628e516da2462cf7bada5460aec3d62a3"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/mage0535/hermes-memory-installer/blob/049d9ac628e516da2462cf7bada5460aec3d62a3/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/mage0535/hermes-memory-installer/blob/049d9ac628e516da2462cf7bada5460aec3d62a3/README.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical public repository and default branch",
+        "path": "repository",
+        "symbol": "default branch main",
+        "url": "https://github.com/mage0535/hermes-memory-installer"
+      },
+      {
+        "id": "head",
+        "label": "Current main branch head",
+        "path": "commit",
+        "symbol": "full SHA 049d9ac628e516da2462cf7bada5460aec3d62a3",
+        "url": "https://github.com/mage0535/hermes-memory-installer/commit/049d9ac628e516da2462cf7bada5460aec3d62a3"
+      },
+      {
+        "id": "feed",
+        "label": "Official current main commits feed",
+        "path": "commits/main.atom",
+        "symbol": "branch head feed",
+        "url": "https://github.com/mage0535/hermes-memory-installer/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Official project README; checked for contact email",
+        "path": "README.md",
+        "url": "https://github.com/mage0535/hermes-memory-installer/blob/049d9ac628e516da2462cf7bada5460aec3d62a3/README.md"
+      },
+      {
+        "id": "architecture-doc",
+        "label": "Memory Sidecar architecture",
+        "path": "ARCHITECTURE.md",
+        "url": "https://github.com/mage0535/hermes-memory-installer/blob/049d9ac628e516da2462cf7bada5460aec3d62a3/ARCHITECTURE.md"
+      },
+      {
+        "id": "rebuild",
+        "label": "Governance index schema, source derivation, rebuild and query paths",
+        "path": "scripts/memory_governance_rebuild.py",
+        "url": "https://github.com/mage0535/hermes-memory-installer/blob/049d9ac628e516da2462cf7bada5460aec3d62a3/scripts/memory_governance_rebuild.py"
+      },
+      {
+        "id": "retrieval",
+        "label": "Tiered retrieval, rank fusion, metrics and context generation",
+        "path": "scripts/tiered_context_injector.py",
+        "url": "https://github.com/mage0535/hermes-memory-installer/blob/049d9ac628e516da2462cf7bada5460aec3d62a3/scripts/tiered_context_injector.py"
+      },
+      {
+        "id": "archive",
+        "label": "Session archival into gbrain",
+        "path": "scripts/session_to_gbrain.py",
+        "url": "https://github.com/mage0535/hermes-memory-installer/blob/049d9ac628e516da2462cf7bada5460aec3d62a3/scripts/session_to_gbrain.py"
+      },
+      {
+        "id": "family",
+        "label": "Recall family and query routing",
+        "path": "scripts/memory_family_registry.py",
+        "url": "https://github.com/mage0535/hermes-memory-installer/blob/049d9ac628e516da2462cf7bada5460aec3d62a3/scripts/memory_family_registry.py"
+      },
+      {
+        "id": "policy",
+        "label": "Policy metadata model and temporal/supersession fields",
+        "path": "governance/policy.py",
+        "url": "https://github.com/mage0535/hermes-memory-installer/blob/049d9ac628e516da2462cf7bada5460aec3d62a3/governance/policy.py"
+      },
+      {
+        "id": "policy-write",
+        "label": "Policy injection and decay apply boundary",
+        "path": "governance/inject_policy.py",
+        "url": "https://github.com/mage0535/hermes-memory-installer/blob/049d9ac628e516da2462cf7bada5460aec3d62a3/governance/inject_policy.py"
+      },
+      {
+        "id": "eval",
+        "label": "Evaluation metric implementation",
+        "path": "memory_eval/metrics.py",
+        "url": "https://github.com/mage0535/hermes-memory-installer/blob/049d9ac628e516da2462cf7bada5460aec3d62a3/memory_eval/metrics.py"
+      },
+      {
+        "id": "adapter",
+        "label": "Synthetic and live evaluation adapter contract",
+        "path": "memory_eval/adapters.py",
+        "url": "https://github.com/mage0535/hermes-memory-installer/blob/049d9ac628e516da2462cf7bada5460aec3d62a3/memory_eval/adapters.py"
+      },
+      {
+        "id": "ops",
+        "label": "Operator report and subsystem health summary",
+        "path": "memory_ops/report.py",
+        "url": "https://github.com/mage0535/hermes-memory-installer/blob/049d9ac628e516da2462cf7bada5460aec3d62a3/memory_ops/report.py"
+      },
+      {
+        "id": "acceptance",
+        "label": "Runtime acceptance check",
+        "path": "scripts/sidecar_acceptance_check.py",
+        "url": "https://github.com/mage0535/hermes-memory-installer/blob/049d9ac628e516da2462cf7bada5460aec3d62a3/scripts/sidecar_acceptance_check.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "../../METRICS.md",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Shared benchmark execution status",
+        "path": "../../results/initial-baselines-status.json",
+        "url": "../../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Versioned synthetic benchmark fixture",
+        "path": "../../fixtures/memory-benchmark-v1.json",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog identity and locator attribution",
+        "path": "../memory-systems.json",
+        "url": "../memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The project README describes an external, agent-agnostic memory sidecar with Python scripts and an installer; it relies on agent data-home files and configured Hindsight, gbrain, and PostgreSQL services rather than modifying the agent runtime.",
+        "sources": [
+          "readme",
+          "architecture-doc",
+          "repo",
+          "head",
+          "feed",
+          "roster"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The documented design combines hot local context, Hindsight facts, archived session search and gbrain pages, plus curated Markdown knowledge. Retrieval routes query families, gathers candidates, fuses ranks and generates context for agent use.",
+        "sources": [
+          "readme",
+          "architecture-doc",
+          "retrieval",
+          "family"
+        ]
+      },
+      {
+        "text": "The governance SQLite database derives session_index, hindsight_index, memory_hubs, memory_objects and knowledge_note_index rows with FTS5 companions. Canonical objects carry source references, entity and hub labels, confidence/freshness, validity, conflict group, version and status metadata.",
+        "sources": [
+          "rebuild"
+        ]
+      },
+      {
+        "text": "The index is a projection of agent state, Hindsight and notes; rebuild clears/repopulates derived tables. Session archival separately creates or updates gbrain pages from session files.",
+        "sources": [
+          "rebuild",
+          "archive"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write/archive: the inspected sidecar code reads source memories and creates indexes; it delegates fact storage to the configured memory service. The session_to_gbrain path parses sessions and writes gbrain pages and links with checkpointed processing.",
+        "sources": [
+          "rebuild",
+          "archive",
+          "readme"
+        ]
+      },
+      {
+        "text": "Update/delete: index refresh replaces its derived rows, reflecting source changes on a subsequent rebuild. The policy layer records validity and supersession metadata; policy injection and decay are dry-run by default and require --apply to persist. Decay marks candidates and does not delete source memories. No general cross-store erase operation was established.",
+        "sources": [
+          "rebuild",
+          "policy",
+          "policy-write",
+          "architecture-doc"
+        ]
+      },
+      {
+        "text": "Retrieval: the injector combines recent local sessions, lexical/governance results and optional live Hindsight, then applies reciprocal-rank fusion, reranking, feedback adjustments and context routing before atomically writing generated Markdown.",
+        "sources": [
+          "retrieval",
+          "family"
+        ]
+      },
+      {
+        "text": "Scope: AGENT_HOME separates local configuration and state; profile isolation check/soak scripts exist. The inspected Hindsight-derived index does not provide a general tenant authorization model; shared external services require deployment controls.",
+        "sources": [
+          "readme",
+          "rebuild",
+          "acceptance"
+        ]
+      },
+      {
+        "text": "Provenance: derived objects retain source reference IDs to sessions or Hindsight items, and policy rows retain source layer, sanitized provenance and temporal/conflict metadata. These mechanisms do not prove that generated claims are supported or cited.",
+        "sources": [
+          "rebuild",
+          "policy"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: rebuild uses batched inserts and FTS5, semantic indexing is optional, and retrieval supports cached governance reads and bounded queues. The repository includes evaluation, recall metrics, health reporting, dashboards and OpenMetrics; none were exercised during this review.",
+        "sources": [
+          "rebuild",
+          "retrieval",
+          "eval",
+          "ops",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Recall layers and evaluation adapter exist; no adjudicated system run was performed.",
+        "sources": [
+          "retrieval",
+          "adapter",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Temporal/supersession metadata is represented in policy; no correction probes were measured.",
+        "sources": [
+          "policy",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leak rate",
+        "status": "unmeasured",
+        "evidence": "Derived indexes can be rebuilt and policy rows can become inactive; external-store deletion behavior was not validated.",
+        "sources": [
+          "rebuild",
+          "policy",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation leak rate",
+        "status": "unmeasured",
+        "evidence": "Local profile isolation helpers exist; no forbidden-scope probe was run.",
+        "sources": [
+          "acceptance",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source references are retained, but no response claims/citations were adjudicated.",
+        "sources": [
+          "rebuild",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "Instrumentation paths exist; no run-specific latency observations were collected.",
+        "sources": [
+          "retrieval",
+          "record"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No acknowledged write and timed recall sequence was executed.",
+        "sources": [
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No token usage or provider charge data were collected.",
+        "sources": [
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Multiple local and external stores are involved; no attributed byte measurements were collected.",
+        "sources": [
+          "readme",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded source inspection at the verified main head. Runtime behavior, reliability, recall quality, deployed authorization, complete deletion across providers/backups, latency, token/cost use and storage efficiency remain unverified. No system, tests, or benchmark workload was run.",
+        "sources": [
+          "readme",
+          "rebuild",
+          "retrieval",
+          "record"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "benchmark_status is not_run. The repository's evaluation code and project fixture define possible measurement procedures but are not results for this system.",
+        "sources": [
+          "eval",
+          "adapter",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

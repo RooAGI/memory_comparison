@@ -1,0 +1,329 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 289,
+    "slug": "hermes-agent",
+    "name": "Hermes Agent",
+    "repository": "https://github.com/NousResearch/hermes-agent",
+    "listed_repository": "https://github.com/NousResearch/hermes-agent",
+    "branch": "main",
+    "revision": "3113542d64752423e1e9d2ff13bfbd2ce764dea9",
+    "reviewed_at": "2026-11-25T22:44:26Z",
+    "review_timezone": "UTC (checked local time: 2026-11-25 14:44:26 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Hermes Agent combines small, bounded profile memory files that are injected at session start with searchable conversation history stored in SQLite. The memory tool supports adding, patching, removing, and batched writes; session_search retrieves actual prior messages through FTS5. This review describes current documentation and selected source, not measured memory quality or performance.",
+    "atlas_locator": {
+      "ordinal": 289,
+      "name": "Hermes Agent",
+      "slug": "hermes-agent",
+      "listed_repository": "https://github.com/NousResearch/hermes-agent",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hermes-agent.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": "security@nousresearch.com",
+      "source_url": "https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/SECURITY.md",
+      "checked_urls": [
+        "https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/SECURITY.md"
+      ],
+      "note": "The official pinned SECURITY.md publishes security@nousresearch.com as a private vulnerability reporting contact. This is the security contact, not asserted to be a general support address."
+    },
+    "contact_email": "security@nousresearch.com",
+    "contact_email_source_url": "https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/SECURITY.md"
+    ],
+    "contact_email_note": "The official pinned SECURITY.md publishes security@nousresearch.com for private vulnerability reports; no claim is made that it is a general support address.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[288], ordinal 289; Hermes Agent identity, listed repository and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/hermes-agent.md",
+        "symbol": "Pinned attribution used only for roster identity and locator context; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hermes-agent.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "NousResearch/hermes-agent; default branch main",
+        "url": "https://github.com/NousResearch/hermes-agent"
+      },
+      {
+        "id": "head",
+        "label": "Official main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Current main head 3113542d64752423e1e9d2ff13bfbd2ce764dea9; feed updated 2026-11-25T21:49:23Z",
+        "url": "https://github.com/NousResearch/hermes-agent/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project purpose, entry points, integrations, learning loop and session-search overview",
+        "url": "https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/README.md"
+      },
+      {
+        "id": "memory-docs",
+        "label": "Official persistent memory guide",
+        "path": "Persistent Memory documentation",
+        "symbol": "Stores, prompt snapshot, operations, capacity, session boundary, security scanning and write approval",
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/memory"
+      },
+      {
+        "id": "memory-tool",
+        "label": "Memory tool implementation",
+        "path": "tools/memory_tool.py",
+        "symbol": "Memory tool actions, target schema, profile memory directory and write gate",
+        "url": "https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/tools/memory_tool.py"
+      },
+      {
+        "id": "memory-store",
+        "label": "Memory store implementation",
+        "path": "tools/memory_tool_store.py",
+        "symbol": "File-backed bounded entries, parsing, threat scanning, patch/remove and atomic persistence",
+        "url": "https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/tools/memory_tool_store.py"
+      },
+      {
+        "id": "session-search",
+        "label": "Session search implementation",
+        "path": "tools/session_search_tool.py",
+        "symbol": "FTS5 discovery and scroll/read/browse shapes over persisted session messages",
+        "url": "https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/tools/session_search_tool.py"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Single-tenant personal-agent model and trust boundary; security contact email",
+        "url": "https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation domains and protocol definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned evaluation fixture, not a Hermes result",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project baseline run status, not a Hermes result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository describes Hermes Agent as an open-source personal agent developed by Nous Research, with CLI, messaging gateway, desktop and TUI surfaces. It is an agent application with built-in persistent memory and session search, and can also connect external memory provider plugins. No individual maintainer identity is inferred from commit or profile metadata.",
+        "sources": [
+          "repo",
+          "readme",
+          "memory-docs"
+        ]
+      },
+      {
+        "text": "The curated roster places this system at ordinal 289 with slug hermes-agent, an explicit repository locator, and Agent Memory Atlas attribution. This metadata is used only for identity and locator context, not as assessment evidence.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The built-in curated memory consists of two Markdown files per Hermes home/profile: MEMORY.md for agent notes and USER.md for user preferences. The official guide documents character limits of 2,200 and 1,375 respectively. MemoryStore parses entries separated by a section-sign delimiter, enforces per-store character budgets, scans candidate text for threat patterns, and writes files atomically.",
+        "sources": [
+          "memory-docs",
+          "memory-tool",
+          "memory-store"
+        ]
+      },
+      {
+        "text": "At session initialization, the two stores are rendered into a prompt block with usage counts and entry delimiters. The injected block is a frozen snapshot for that session: writes persist to disk immediately, but the current prompt does not change. The source explains this as preserving a stable prompt prefix and cache.",
+        "sources": [
+          "memory-docs",
+          "memory-tool",
+          "memory-store"
+        ]
+      },
+      {
+        "text": "A separate session-history path persists CLI and messaging transcripts in the profile's SQLite state store with FTS5 indexing. session_search has discovery, scroll, read, and browse shapes. Discovery searches and deduplicates hits by session lineage, then hydrates selected messages; returned content is actual stored messages, not an LLM-generated summary.",
+        "sources": [
+          "memory-docs",
+          "session-search"
+        ]
+      },
+      {
+        "text": "External memory providers are separate plugin integrations that can run alongside built-in files. Their storage model and behavior depend on the provider and are outside this built-in memory source review.",
+        "sources": [
+          "memory-docs",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The memory tool accepts a top-level target of memory or user and supports add, patch, remove, or a batch of operations. Add appends an entry; patch replaces a unique substring within an entry while preserving the rest; remove deletes a matching entry. Exact duplicate additions are rejected as duplicates. The store validates final batch size so a set of removals/shortening patches and additions can fit atomically under the character limit.",
+        "sources": [
+          "memory-docs",
+          "memory-tool",
+          "memory-store"
+        ]
+      },
+      {
+        "text": "Updates are explicit rather than automatic: the model chooses the target and mutation. Patch and remove use old_text matching; ambiguous or repeated matches are rejected. The tool has no read action because current entries are placed in the system prompt, while live tool responses expose state on writes. The docs distinguish patch from the removed whole-entry replace action to avoid accidentally discarding unrelated facts.",
+        "sources": [
+          "memory-docs",
+          "memory-tool",
+          "memory-store"
+        ]
+      },
+      {
+        "text": "Removing an entry deletes it from the curated file; this review found no tombstone or built-in correction-history log for those file mutations. The /journey interface also documents deleting memory chunks and editing stored chunks. Session-history retrieval is separately documented as browse/read/search; this review did not establish a user-facing deletion lifecycle for transcript messages.",
+        "sources": [
+          "memory-docs",
+          "memory-tool",
+          "memory-store",
+          "session-search"
+        ]
+      },
+      {
+        "text": "For past conversations, discovery uses FTS5 and returns matching messages plus session metadata. Calls can scroll around a message, read a session, or browse sessions. The implementation bounds returned message content and discovery scanning, filters hidden integration/subagent sources, and demotes cron sessions so repetitive scheduled activity does not crowd interactive sessions. This is search over recorded text, not semantic fact extraction.",
+        "sources": [
+          "memory-docs",
+          "session-search"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "not_measured",
+        "evidence": "Curated entries are injected without retrieval selection; historical sessions are queried by FTS5. No answerable/unanswerable benchmark or abstention adjudication was run.",
+        "sources": [
+          "memory-docs",
+          "session-search",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction and staleness",
+        "status": "not_measured",
+        "evidence": "Explicit patch/remove operations and bounded writes are source-visible. No correction accuracy or stale-value probes were run.",
+        "sources": [
+          "memory-tool",
+          "memory-store",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion",
+        "status": "not_measured",
+        "evidence": "Curated-file removal is documented; no deletion-leak evaluation was run, and transcript retention/deletion behavior was not established in this review.",
+        "sources": [
+          "memory-docs",
+          "memory-store",
+          "session-search",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "not_measured",
+        "evidence": "Built-in files are profile-scoped, while the security policy describes the application as single-tenant and profiles under one OS user as sharing a trust envelope. No cross-profile leakage probe was run.",
+        "sources": [
+          "memory-tool",
+          "memory-docs",
+          "security",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence and citations",
+        "status": "not_measured",
+        "evidence": "Memory entries and session messages can be surfaced to the model, but the inspected paths do not establish an answer-level source citation or evidence-support guarantee. No evidence adjudication was run.",
+        "sources": [
+          "memory-store",
+          "session-search",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Latency, write-to-recall delay, tokens/cost, storage",
+        "status": "not_measured",
+        "evidence": "The code and guide describe bounded prompt-injected stores and FTS5 search, but this review collected no latency, delay, token, cost, or storage measurements.",
+        "sources": [
+          "memory-docs",
+          "session-search",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a read-only review of the official repository page, current main feed, pinned README, selected memory and session-search source, official persistent-memory guide, and security policy. Hermes Agent, its tests, and benchmark workloads were not run.",
+        "sources": [
+          "repo",
+          "head",
+          "readme",
+          "memory-docs",
+          "memory-tool",
+          "memory-store",
+          "session-search",
+          "security"
+        ]
+      },
+      {
+        "text": "The memory tool and threat-pattern scanning operate inside the agent process. The official security policy explicitly treats in-process filters and approval gates as heuristics, not security boundaries; it describes Hermes as a single-tenant personal agent. Profiles sharing one OS user are within the same trust envelope, so profile scoping should not be read as tenant isolation.",
+        "sources": [
+          "memory-docs",
+          "security"
+        ]
+      },
+      {
+        "text": "The curated stores have hard character limits and do not auto-compact. A memory saved in the current session does not enter its frozen prompt snapshot until a later session; the official guide recommends creating session boundaries to make updated memory visible and to use historical search as intended.",
+        "sources": [
+          "memory-docs",
+          "memory-store"
+        ]
+      },
+      {
+        "text": "The review did not determine full transcript retention policy, cross-profile authorization enforcement, external provider behavior, retrieval answer quality, or deletion erasure from all secondary artifacts. Those require additional source review or runtime probes.",
+        "sources": [
+          "session-search",
+          "security",
+          "memory-docs"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json",
+      "note": "No Hermes Agent runtime, tests, or benchmark workload was run. Project metric definitions, fixture, and execution status are protocol/status references only, not Hermes measurements."
+    }
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "agent-memory-doctrine",
+    "name": "Agent Memory (MythologIQ)",
+    "repository": "https://github.com/MythologIQ-Labs-LLC/agent-memory",
+    "branch": "main",
+    "revision": "c16bccfe7bab147f086dfb3681ae2b55f6481b53",
+    "reviewed_at": "2026-11-23T23:46:14Z",
+    "review_timezone": "UTC (checked 15:46:14 PST)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "A Python reference runtime for governed agent memory, with temporal and canonical state, retrieval and lifecycle controls. The repository qualifies a single-host SQLite profile for its RC release; broader multi-host and heterogeneous composition goals remain unqualified. This review is pinned source inspection, not a workload result.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/MythologIQ-Labs-LLC/agent-memory"
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Repository, default branch and reviewed head",
+        "path": "repository",
+        "symbol": "main; head c16bccfe7bab147f086dfb3681ae2b55f6481b53",
+        "url": "https://github.com/MythologIQ-Labs-LLC/agent-memory/commit/c16bccfe7bab147f086dfb3681ae2b55f6481b53"
+      },
+      {
+        "id": "readme",
+        "label": "README at reviewed commit",
+        "path": "README.md",
+        "symbol": "current runtime profile; project boundaries; API example",
+        "url": "https://github.com/MythologIQ-Labs-LLC/agent-memory/blob/c16bccfe7bab147f086dfb3681ae2b55f6481b53/README.md"
+      },
+      {
+        "id": "maturity",
+        "label": "Substrate inventory and maturity",
+        "path": "docs/43-substrate-inventory-and-maturity.md",
+        "symbol": "SQLiteTemporalGraph; sqlite_single_host_v1; scope of qualification",
+        "url": "https://github.com/MythologIQ-Labs-LLC/agent-memory/blob/c16bccfe7bab147f086dfb3681ae2b55f6481b53/docs/43-substrate-inventory-and-maturity.md"
+      },
+      {
+        "id": "api",
+        "label": "Public API contract",
+        "path": "docs/44-public-api-contract.md",
+        "symbol": "propose; approve; commit; recall; forget; history; stages and envelopes",
+        "url": "https://github.com/MythologIQ-Labs-LLC/agent-memory/blob/c16bccfe7bab147f086dfb3681ae2b55f6481b53/docs/44-public-api-contract.md"
+      },
+      {
+        "id": "recall-plan",
+        "label": "Governed recall planner",
+        "path": "docs/26-governed-recall-planner.md",
+        "symbol": "discovery and traversal boundaries; canonical admission",
+        "url": "https://github.com/MythologIQ-Labs-LLC/agent-memory/blob/c16bccfe7bab147f086dfb3681ae2b55f6481b53/docs/26-governed-recall-planner.md"
+      },
+      {
+        "id": "sqlite",
+        "label": "SQLite canonical substrate implementation",
+        "path": "reference/agentmem_ref/state/sqlite_substrate.py",
+        "symbol": "SQLiteTemporalGraph; schema/profile; canonical facts and episodes; lexical candidates; transactions",
+        "url": "https://github.com/MythologIQ-Labs-LLC/agent-memory/blob/c16bccfe7bab147f086dfb3681ae2b55f6481b53/reference/agentmem_ref/state/sqlite_substrate.py"
+      },
+      {
+        "id": "adapter",
+        "label": "Governed adapter implementation",
+        "path": "reference/agentmem_ref/runtime/adapter.py",
+        "symbol": "commit_proposal; governed_delete; tombstone; undeclared_residue; admission prefilter",
+        "url": "https://github.com/MythologIQ-Labs-LLC/agent-memory/blob/c16bccfe7bab147f086dfb3681ae2b55f6481b53/reference/agentmem_ref/runtime/adapter.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "./METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "./results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The public repository is maintained under MythologIQ-Labs-LLC. Its README describes `agent-memory-reference` as a Python package with an `AgentMemory` facade and governed local runtime. The README explicitly characterizes it as an active release-candidate reference/conformance implementation, not a production 1.0 service or certified security boundary.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The architecture separates a canonical temporal substrate from memory behavior, runtime governance, and the public API. The substrate inventory names `InMemoryTemporalGraph` as the reference implementation and `SQLiteTemporalGraph` as the RC-qualified single-host canonical substrate; it places epistemic, procedural, and predictive memory above that layer. The Python package topology includes core, state, contracts, runtime, memory, API, CRG, harness, and evaluation packages.",
+        "sources": [
+          "maturity",
+          "readme"
+        ]
+      },
+      {
+        "text": "For the qualified `sqlite_single_host_v1` profile, SQLite is the canonical durable state for facts and episodes. The implementation documents one local database, WAL, `synchronous=FULL`, foreign-key enforcement, explicit transactions, durable identifier progress, integrity checks, and backup support. The qualification is bounded to one host; the repository does not claim distributed persistence, multi-host consensus, or horizontal scaling.",
+        "sources": [
+          "sqlite",
+          "maturity"
+        ]
+      },
+      {
+        "text": "The public API uses versioned, schema-backed envelopes. Its stages include proposal and decision, approval, commit, recall/admission, forget, history/posture inspection, and action authorization/execution evidence. Internal adapter dataclasses are not the public contract.",
+        "sources": [
+          "api"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write path: `propose` validates and evaluates a proposal without writing; `approve` discharges authority with qualified evidence or a narrowly applicable external attestation; `commit` forwards those inputs to the governed adapter and returns a receipt, commit state, and refusal when applicable. The README's `remember` facade is a convenience over this versioned contract. A successful storage write alone does not create authority.",
+        "sources": [
+          "api",
+          "readme",
+          "sqlite"
+        ]
+      },
+      {
+        "text": "Correction and currentness: the API contract distinguishes current-state admission from historical-evidence admission, and says history inspection can return retained commit/deletion events and rejected-value history for superseded values. The adapter source includes temporal/current-state and replacement handling. These paths document mechanisms; this review did not verify correction detection or whether a corrected value is consistently preferred in runtime answers.",
+        "sources": [
+          "api",
+          "adapter"
+        ]
+      },
+      {
+        "text": "Deletion: `forget` resolves the current fact and delegates to governed deletion; unknown targets are refused. The adapter records a receipt/event and tombstone state, and exposes an `undeclared_residue` inspection for derived references. These do not establish physical erasure from every projection, backup, export, or downstream copy; end-to-end deletion across all representations remains unknown from this inspection.",
+        "sources": [
+          "api",
+          "adapter",
+          "maturity"
+        ]
+      },
+      {
+        "text": "Retrieval: the public contract describes raw discovery followed by a necessary domain-eligibility prefilter, canonical governed admission, then return-budget selection. Candidates that fail the prefilter are excluded from caller-visible candidate lists, ranking evidence, route provenance, and ordinary recall events. Returned candidates are still rechecked at canonical admission. The SQLite substrate also implements deterministic lexical candidate generation and provenance-neighbor lookup; no quality or speed follows from this code description.",
+        "sources": [
+          "api",
+          "recall-plan",
+          "sqlite"
+        ]
+      },
+      {
+        "text": "Scope: the documented prefilter and canonical admission check cover tenant, scope metadata, isolation domains and required compartments, shared-space membership, project, and task; canonical admission additionally rechecks lifecycle, dispute, deletion, and derivation. The recall-planner document describes prefiltering seeds again before graph/shared-evidence traversal. These are implementation and contract observations, not a security certification or a measured cross-tenant isolation result.",
+        "sources": [
+          "api",
+          "recall-plan",
+          "readme"
+        ]
+      },
+      {
+        "text": "Provenance and evidence: the contract separates retrieved memories from retrieval-evidence/causal trace, returns admission decisions and reasons, and provides history/provenance inspection. Commit and deletion paths can return receipts and audit events. The inspected sources do not establish claim-level citations for generated answers or the accuracy of evidence support.",
+        "sources": [
+          "api",
+          "adapter"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Source documents define discovery and admission paths, but there is no target-specific capture or adjudication here. Correct recall and abstention rates are unknown.",
+        "sources": [
+          "api",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction and stale-value behavior",
+        "status": "code_observation; unmeasured",
+        "evidence": "History, rejected-value records and temporal/current-state mechanisms are documented. Correction accuracy and stale-answer rate require runtime probes and adjudication; neither is measured.",
+        "sources": [
+          "api",
+          "adapter",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion",
+        "status": "code_observation; unmeasured",
+        "evidence": "Governed forget, tombstone and residue-inspection paths are present in the inspected contract/source. No deletion workload or post-delete probes were run, so a leak rate and all-projection erasure guarantee are unknown.",
+        "sources": [
+          "api",
+          "adapter",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "code_observation; unmeasured",
+        "evidence": "The contract and recall planner specify domain prefiltering and canonical rechecks. This does not establish a runtime isolation guarantee; no paired permitted/forbidden scope probes were run.",
+        "sources": [
+          "api",
+          "recall-plan",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "code_observation; unmeasured",
+        "evidence": "The API carries evidence references, admission records and receipts. Claim-support precision and citation coverage need captured responses and adjudication; neither is available.",
+        "sources": [
+          "api",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No latency sample, percentile, or runtime performance result was produced in this source review. Lexical candidate code is not a latency measurement.",
+        "sources": [
+          "sqlite",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No write acknowledgement or scheduled recall probe was captured, so the delay and success fraction are unknown.",
+        "sources": [
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "No model usage, provider price, or storage-boundary observation was captured for this system.",
+        "sources": [
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a pinned inspection of selected README, API/architecture documents, SQLite substrate code, and governed-adapter code. It does not establish behavior for every retrieval route, all optional backends, every projection, or every deployment. The repository itself says the production-credible SQLite profile is single-host and that a production 1.0 security boundary and distributed/multi-host persistence are not qualified.",
+        "sources": [
+          "readme",
+          "maturity"
+        ]
+      },
+      {
+        "text": "The source establishes documented contracts and implementation structure at the reviewed SHA. It cannot establish answer quality, correction success, complete deletion, practical tenant isolation, operational reliability, or efficiency without executed and adjudicated workloads.",
+        "sources": [
+          "api",
+          "maturity",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is **not run**. The project status file is an execution-status record, not a measured result: it reports no observations, null metric denominators, and no run for the four seeded baseline systems. It has no Agent Memory target row. This review did not run a system workload or benchmark; fixture probe counts remain planned counts, not measurements.",
+        "sources": [
+          "record",
+          "metrics"
+        ]
+      },
+      {
+        "text": "Project metric definitions are linked separately from source observations. No Agent Memory benchmark score, comparative ranking, or measured latency, token/cost, or storage result is claimed here.",
+        "sources": [
+          "metrics",
+          "record"
+        ]
+      }
+    ]
+  }
+}

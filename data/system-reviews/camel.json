@@ -1,0 +1,313 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 111,
+    "slug": "camel",
+    "name": "CAMEL",
+    "repository": "https://github.com/camel-ai/camel",
+    "branch": "master",
+    "revision": "c9f270d06b80d408809ff4553557a7f5ec4aef64",
+    "reviewed_at": "2026-11-25T07:40:58Z",
+    "review_timezone": "UTC (2026-11-24 23:40:58 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": "camel-ai@eigent.ai",
+      "source_url": "https://github.com/camel-ai/camel/blob/c9f270d06b80d408809ff4553557a7f5ec4aef64/README.md",
+      "checked_urls": [
+        "https://github.com/camel-ai/camel/blob/c9f270d06b80d408809ff4553557a7f5ec4aef64/README.md"
+      ],
+      "note": "The official pinned README publishes camel-ai@eigent.ai under Community & Contact."
+    },
+    "contact_email": "camel-ai@eigent.ai",
+    "contact_email_source_url": "https://github.com/camel-ai/camel/blob/c9f270d06b80d408809ff4553557a7f5ec4aef64/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/camel-ai/camel/blob/c9f270d06b80d408809ff4553557a7f5ec4aef64/README.md"
+    ],
+    "summary": "CAMEL is a multi-agent framework with a modular memory package. Its memory interfaces represent message records, adapt chat-history and vector stores, and assemble records into agent context. The defaults are in-memory stores; long-term memory combines conversation history with vector recall. This is a source review, not a measured evaluation.",
+    "atlas_locator": {
+      "ordinal": 111,
+      "name": "CAMEL",
+      "slug": "camel",
+      "listed_repository": "https://github.com/camel-ai/camel",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/camel.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository",
+        "path": "repository",
+        "url": "https://github.com/camel-ai/camel"
+      },
+      {
+        "id": "head",
+        "label": "Verified master head",
+        "path": "commit",
+        "symbol": "c9f270d06b80d408809ff4553557a7f5ec4aef64",
+        "url": "https://github.com/camel-ai/camel/commit/c9f270d06b80d408809ff4553557a7f5ec4aef64"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "url": "https://github.com/camel-ai/camel/blob/c9f270d06b80d408809ff4553557a7f5ec4aef64/README.md"
+      },
+      {
+        "id": "cookbook",
+        "label": "Official memory cookbook",
+        "path": "docs/cookbooks/advanced_features/agents_with_memory.ipynb",
+        "url": "https://github.com/camel-ai/camel/blob/c9f270d06b80d408809ff4553557a7f5ec4aef64/docs/cookbooks/advanced_features/agents_with_memory.ipynb"
+      },
+      {
+        "id": "base",
+        "label": "Memory interfaces",
+        "path": "camel/memories/base.py",
+        "url": "https://github.com/camel-ai/camel/blob/c9f270d06b80d408809ff4553557a7f5ec4aef64/camel/memories/base.py"
+      },
+      {
+        "id": "memories",
+        "label": "Memory implementations",
+        "path": "camel/memories/agent_memories.py",
+        "url": "https://github.com/camel-ai/camel/blob/c9f270d06b80d408809ff4553557a7f5ec4aef64/camel/memories/agent_memories.py"
+      },
+      {
+        "id": "records",
+        "label": "Memory record model",
+        "path": "camel/memories/records.py",
+        "url": "https://github.com/camel-ai/camel/blob/c9f270d06b80d408809ff4553557a7f5ec4aef64/camel/memories/records.py"
+      },
+      {
+        "id": "chat",
+        "label": "Chat history block",
+        "path": "camel/memories/blocks/chat_history_block.py",
+        "url": "https://github.com/camel-ai/camel/blob/c9f270d06b80d408809ff4553557a7f5ec4aef64/camel/memories/blocks/chat_history_block.py"
+      },
+      {
+        "id": "vector",
+        "label": "Vector database block",
+        "path": "camel/memories/blocks/vectordb_block.py",
+        "url": "https://github.com/camel-ai/camel/blob/c9f270d06b80d408809ff4553557a7f5ec4aef64/camel/memories/blocks/vectordb_block.py"
+      },
+      {
+        "id": "agent",
+        "label": "ChatAgent integration",
+        "path": "camel/agents/chat_agent.py",
+        "url": "https://github.com/camel-ai/camel/blob/c9f270d06b80d408809ff4553557a7f5ec4aef64/camel/agents/chat_agent.py"
+      },
+      {
+        "id": "roster",
+        "label": "Curated identity and attribution entry",
+        "path": "data/memory-systems.json",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas attribution only",
+        "path": "content/systems/camel.md",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/camel.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "CAMEL is a multi-agent framework; its memory package offers chat-history and vector-memory components that integrate with ChatAgent.",
+        "sources": [
+          "readme",
+          "cookbook",
+          "agent"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "AgentMemory extends the memory-block contract with retrieval and context-creation operations. ChatAgent defaults to ChatHistoryMemory; the memory wrappers allow callers to inject alternate storage backends.",
+        "sources": [
+          "base",
+          "memories",
+          "agent"
+        ]
+      },
+      {
+        "text": "MemoryRecord stores a message, backend role, UUID, timestamp, string metadata, and agent_id. Vector payloads preserve the serialized record, so the indexed unit remains a message.",
+        "sources": [
+          "records",
+          "vector"
+        ]
+      },
+      {
+        "text": "ChatHistoryMemory defaults to in-memory key-value storage. VectorDBBlock defaults to OpenAIEmbedding and in-memory Qdrant; LongtermAgentMemory composes chat and vector blocks.",
+        "sources": [
+          "memories",
+          "chat",
+          "vector",
+          "cookbook"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write — chat history serializes and appends records. Vector memory embeds nonempty message text and stores vectors with record payloads; LongtermAgentMemory writes to both stores and tracks the latest user message as its current topic.",
+        "sources": [
+          "chat",
+          "vector",
+          "memories"
+        ]
+      },
+      {
+        "text": "Update/delete — chat history supports pop, selected-index removal, and clear, preserving an initial system/developer message during indexed or pop removal. Vector memory does not support individual pop/index removal and exposes clear; combined long-term pop/index operations modify chat history while vector records remain.",
+        "sources": [
+          "chat",
+          "memories"
+        ]
+      },
+      {
+        "text": "Retrieval — chat history returns all records or a bounded recent window. Vector retrieval embeds the current topic and requests top-k similar records; the memory block constructs a query without an agent or tenant filter.",
+        "sources": [
+          "chat",
+          "vector",
+          "memories"
+        ]
+      },
+      {
+        "text": "Scope isolation — wrappers attach agent_id to records, but the inspected vector query does not filter by it. The core memory path alone therefore does not establish tenant isolation; isolation depends on storage configuration or backend behavior.",
+        "sources": [
+          "memories",
+          "vector",
+          "records"
+        ]
+      },
+      {
+        "text": "Provenance/evidence — records retain role, time, UUID, and optional metadata. The inspected record and vector interfaces do not add claim-level citations, trust/confidence states, or edit audit history.",
+        "sources": [
+          "records",
+          "vector",
+          "base"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "The vector path selects top-k by similarity, but no judged answer-quality or abstention workload was run.",
+        "sources": [
+          "vector",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction and stale values",
+        "status": "unmeasured",
+        "evidence": "Chat history exposes record removal while vector memory lacks individual removal; no correction workload was run.",
+        "sources": [
+          "chat",
+          "memories",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No post-delete retrieval or deletion leakage probe was run.",
+        "sources": [
+          "memories",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "The inspected vector query has no scope filter; no cross-agent isolation workload was run.",
+        "sources": [
+          "vector",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Records contain role and metadata fields, but no claim-support evaluation was run.",
+        "sources": [
+          "records",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Efficiency and observability",
+        "status": "unmeasured",
+        "evidence": "Top-k bounds vector results, but no latency, tokens, cost, storage, or memory-specific telemetry measurements were collected.",
+        "sources": [
+          "memories",
+          "vector",
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "Default stores are in-memory. Durable persistence requires a configured backend; vector records cannot be individually removed through the reviewed memory API.",
+        "sources": [
+          "chat",
+          "vector",
+          "memories",
+          "cookbook"
+        ]
+      },
+      {
+        "text": "The reviewed core vector-memory query does not filter on agent_id. Production isolation, retention, and security depend on selected backend and deployment configuration and were not tested here.",
+        "sources": [
+          "records",
+          "vector"
+        ]
+      },
+      {
+        "text": "This is source inspection at the verified master head. It does not establish runtime behavior, retrieval quality, isolation, performance, or behavior of every optional backend integration.",
+        "sources": [
+          "repo",
+          "head",
+          "base",
+          "memories",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is not_run. Project metrics, fixtures, and execution status describe evaluation protocol and project state, not CAMEL results. No CAMEL system, benchmark, or tests were run.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ]
+  }
+}

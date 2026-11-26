@@ -1,0 +1,300 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 235,
+    "slug": "fava-trails",
+    "name": "FAVA Trails",
+    "repository": "https://github.com/MachineWisdomAI/fava-trails",
+    "listed_repository": "https://github.com/MachineWisdomAI/fava-trails",
+    "branch": "main",
+    "revision": "aff22ae2eb3b0b032fa7c75c9a4d9afadf742dd8",
+    "reviewed_at": "2026-11-25T20:17:13Z",
+    "review_timezone": "UTC (checked 2026-11-25 12:17:13 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "FAVA Trails is an MCP memory server for reviewed agent decisions and observations. It stores Markdown thought records in a separate Jujutsu/Git data repository, gates shared recall on approval, and uses lexical substring matching; this source review collected no runtime or benchmark measurements.",
+    "atlas_locator": {
+      "ordinal": 235,
+      "name": "FAVA Trails",
+      "slug": "fava-trails",
+      "listed_repository": "https://github.com/MachineWisdomAI/fava-trails",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/fava-trails.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/MachineWisdomAI/fava-trails/blob/aff22ae2eb3b0b032fa7c75c9a4d9afadf742dd8/README.md",
+      "checked_urls": [
+        "https://github.com/MachineWisdomAI/fava-trails/blob/aff22ae2eb3b0b032fa7c75c9a4d9afadf742dd8/README.md",
+        "https://fava-trails.org/"
+      ],
+      "note": "Checked the official pinned README and official project website for a published email; neither published an address. No commit/profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/MachineWisdomAI/fava-trails/blob/aff22ae2eb3b0b032fa7c75c9a4d9afadf742dd8/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/MachineWisdomAI/fava-trails/blob/aff22ae2eb3b0b032fa7c75c9a4d9afadf742dd8/README.md",
+      "https://fava-trails.org/"
+    ],
+    "contact_email_note": "Neither the official pinned README nor the official project website publishes a contact email. No commit/profile metadata, third-party directory, or inferred address was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[234], ordinal 235; FAVA Trails identity, explicit listed repository locator and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/fava-trails.md",
+        "symbol": "Pinned roster identity and locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/fava-trails.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository metadata",
+        "path": "GitHub repository API",
+        "symbol": "Canonical repository and default branch main",
+        "url": "https://api.github.com/repos/MachineWisdomAI/fava-trails"
+      },
+      {
+        "id": "head",
+        "label": "Official current main head",
+        "path": "GitHub commits API",
+        "symbol": "Current main head aff22ae2eb3b0b032fa7c75c9a4d9afadf742dd8; commit timestamp 2026-11-23T14:00:51Z",
+        "url": "https://api.github.com/repos/MachineWisdomAI/fava-trails/commits/main"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product/architecture, lifecycle, retrieval behavior, scope and stated limitations",
+        "url": "https://github.com/MachineWisdomAI/fava-trails/blob/aff22ae2eb3b0b032fa7c75c9a4d9afadf742dd8/README.md"
+      },
+      {
+        "id": "governance",
+        "label": "Governed recall guide",
+        "path": "docs/governed-recall.md",
+        "symbol": "Visibility modes, identity boundary, supersession, approval provenance and interrupted writes",
+        "url": "https://github.com/MachineWisdomAI/fava-trails/blob/aff22ae2eb3b0b032fa7c75c9a4d9afadf742dd8/docs/governed-recall.md"
+      },
+      {
+        "id": "models",
+        "label": "Thought data model source",
+        "path": "src/fava_trails/models.py",
+        "symbol": "Thought frontmatter, lifecycle statuses, source types and metadata fields",
+        "url": "https://github.com/MachineWisdomAI/fava-trails/blob/aff22ae2eb3b0b032fa7c75c9a4d9afadf742dd8/src/fava_trails/models.py"
+      },
+      {
+        "id": "trail",
+        "label": "Trail manager source",
+        "path": "src/fava_trails/trail.py",
+        "symbol": "Thought write/update/supersession/retrieval, per-trail locking, VCS operations and recall orchestration",
+        "url": "https://github.com/MachineWisdomAI/fava-trails/blob/aff22ae2eb3b0b032fa7c75c9a4d9afadf742dd8/src/fava_trails/trail.py"
+      },
+      {
+        "id": "retrieval",
+        "label": "Retrieval baseline",
+        "path": "docs/retrieval-baseline.md",
+        "symbol": "Documented lexical matching predicate and search limits",
+        "url": "https://github.com/MachineWisdomAI/fava-trails/blob/aff22ae2eb3b0b032fa7c75c9a4d9afadf742dd8/docs/retrieval-baseline.md"
+      },
+      {
+        "id": "website",
+        "label": "Official project website",
+        "path": "https://fava-trails.org/",
+        "symbol": "Official site content and contact-email check",
+        "url": "https://fava-trails.org/"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes FAVA Trails as an open-source agent memory system by Machine Wisdom AI. The engine runs as an MCP server while the operator's separate data repository stores durable thought records; this review does not infer individual maintainer identity from commit or profile metadata.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The engine coordinates MCP calls, TrailManager instances, typed thought models, lifecycle hooks, and a Jujutsu backend. Durable Markdown thought records live in a separate operator-controlled data repository, with Jujutsu colocated alongside Git.",
+        "sources": [
+          "readme",
+          "trail",
+          "models"
+        ]
+      },
+      {
+        "text": "Thought frontmatter includes an identifier, parent and supersession links, agent identity, confidence, source type, lifecycle status, timestamp, typed relationships, and project/branch/tag metadata. Draft, proposed, approved, rejected, error, and tombstoned are the six statuses in the current model.",
+        "sources": [
+          "models"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "save_thought creates a draft; propose_truth requests a configured Trust Gate decision or explicit operator approval and promotes an approved thought to its source-type namespace. Rejected thoughts are frozen and revised as a new draft linked by parent_id.",
+        "sources": [
+          "readme",
+          "governance",
+          "trail"
+        ]
+      },
+      {
+        "text": "update_thought edits mutable record content while preserving frontmatter, and refuses approved, rejected, tombstoned, or superseded records. Approved corrections use a draft successor; only successful approval retires the predecessor from default recall while preserving lineage.",
+        "sources": [
+          "trail",
+          "governance"
+        ]
+      },
+      {
+        "text": "The reviewed README and governed-recall guide do not document a user-facing content deletion operation. TrailManager.forget abandons a Jujutsu revision, which does not establish logical thought deletion or erasure from repository history, backups, or remotes. The model's tombstoned status alone does not prove a deletion path or guarantee.",
+        "sources": [
+          "trail",
+          "models",
+          "governance"
+        ]
+      },
+      {
+        "text": "Governed recall returns approved records without an approved successor. Authoring mode limits draft/proposed reads to the process-configured agent; operator history mode can select statuses and superseded records. Search lowercases and whitespace-splits the query and requires every token as a substring of searchable record fields; synonyms and paraphrases may not match.",
+        "sources": [
+          "governance",
+          "retrieval",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Visibility and lexical matching were inspected; no answers were produced or scored.",
+        "sources": [
+          "governance",
+          "retrieval",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Approved successor handling was inspected; no correction probes were run.",
+        "sources": [
+          "trail",
+          "governance",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No product-level content deletion path or post-delete probe was verified.",
+        "sources": [
+          "trail",
+          "models",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Process-owned identity and visibility filtering were inspected; no cross-scope workload was run.",
+        "sources": [
+          "governance",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Review and lineage metadata were inspected; no response claims were adjudicated against source passages.",
+        "sources": [
+          "models",
+          "governance",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No runtime timing samples were collected.",
+        "sources": [
+          "trail",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost and storage",
+        "status": "unmeasured",
+        "evidence": "No workload usage or persistent-storage measurements were collected.",
+        "sources": [
+          "readme",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The Trust Gate is a quality-control step with limited context, not factual verification; upstream notes that convincing false claims can still be approved and approved records can disagree.",
+        "sources": [
+          "readme",
+          "governance"
+        ]
+      },
+      {
+        "text": "Upstream warns that a shared MCP endpoint or shared filesystem is one identity boundary, not per-caller isolation. Search is lexical and misses paraphrases or synonyms. Main-branch documentation may be ahead of a user's installed release.",
+        "sources": [
+          "readme",
+          "governance",
+          "retrieval"
+        ]
+      },
+      {
+        "text": "The inspected interface does not establish content deletion semantics, erasure from version history or remote copies, runtime correctness, or measured performance. This review did not run the system, tests, or benchmarks.",
+        "sources": [
+          "readme",
+          "governance",
+          "trail",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No FAVA Trails runtime, tests, or benchmarks were run. Source observations and project evaluation definitions are not FAVA Trails results."
+    }
+  }
+}

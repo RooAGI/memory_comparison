@@ -1,0 +1,325 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 105,
+    "slug": "buzz",
+    "name": "Buzz",
+    "repository": "https://github.com/block/buzz",
+    "listed_repository": "https://github.com/block/buzz",
+    "branch": "main",
+    "revision": "61c070d5915e11ef8f24b32d6f4f217132294320",
+    "reviewed_at": "2026-11-25T00:35:23Z",
+    "review_timezone": "UTC (2026-11-24 16:35:23 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":"buzz@block.xyz","source_url":"https://github.com/block/buzz/blob/61c070d5915e11ef8f24b32d6f4f217132294320/SECURITY.md","note":"Published in the official security policy."},
+    "summary": "Buzz is a self-hostable collaboration workspace whose agent-memory slice is NIP-AE: encrypted per-agent/owner engrams, a memory CLI, and ACP session-time core-profile injection. This is a pinned source review, not a runtime or benchmark result.",
+    "atlas_locator": {
+      "ordinal": 105,
+      "name": "Buzz",
+      "slug": "buzz",
+      "listed_repository": "https://github.com/block/buzz",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/buzz.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": "buzz@block.xyz",
+    "contact_email_source_url": "https://github.com/block/buzz/blob/61c070d5915e11ef8f24b32d6f4f217132294320/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/block/buzz/blob/61c070d5915e11ef8f24b32d6f4f217132294320/README.md",
+      "https://github.com/block/buzz/blob/61c070d5915e11ef8f24b32d6f4f217132294320/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "roster",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[104], position 105; name, slug, listed repository and Atlas attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas attribution only",
+        "path": "content/systems/buzz.md",
+        "symbol": "Roster source at Atlas revision 19199a4fc249e89c0793be06f0b166b358089ba0",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/buzz.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official canonical repository and default branch",
+        "path": "repository",
+        "symbol": "block/buzz; official repository page shows main and current commit prefix c0932db",
+        "url": "https://github.com/block/buzz"
+      },
+      {
+        "id": "head-feed",
+        "label": "Official main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Current full head 61c070d5915e11ef8f24b32d6f4f217132294320; feed updated 2026-11-25T00:33:09Z",
+        "url": "https://github.com/block/buzz/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified reviewed head commit",
+        "path": "commit",
+        "symbol": "Full current main SHA 61c070d5915e11ef8f24b32d6f4f217132294320, matching page prefix and feed entry",
+        "url": "https://github.com/block/buzz/commit/61c070d5915e11ef8f24b32d6f4f217132294320"
+      },
+      {
+        "id": "readme",
+        "label": "Official project README",
+        "path": "README.md",
+        "symbol": "Project description, organization attribution, repository scope and product boundaries",
+        "url": "https://github.com/block/buzz/blob/61c070d5915e11ef8f24b32d6f4f217132294320/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy and published contact",
+        "path": "SECURITY.md",
+        "symbol": "Private vulnerability reporting guidance and fallback email buzz@block.xyz",
+        "url": "https://github.com/block/buzz/blob/61c070d5915e11ef8f24b32d6f4f217132294320/SECURITY.md"
+      },
+      {
+        "id": "nip-ae",
+        "label": "NIP-AE agent engram protocol",
+        "path": "docs/nips/NIP-AE.md",
+        "symbol": "Kind 30174 model, keying, bodies, read/write/head selection, listing, tombstones, metadata and limits",
+        "url": "https://github.com/block/buzz/blob/61c070d5915e11ef8f24b32d6f4f217132294320/docs/nips/NIP-AE.md"
+      },
+      {
+        "id": "engram",
+        "label": "Engram core primitives",
+        "path": "crates/buzz-core/src/engram.rs",
+        "symbol": "Slug validation, encryption, HMAC addressing, event validation and head selection",
+        "url": "https://github.com/block/buzz/blob/61c070d5915e11ef8f24b32d6f4f217132294320/crates/buzz-core/src/engram.rs"
+      },
+      {
+        "id": "mem-cli",
+        "label": "Agent memory CLI",
+        "path": "crates/buzz-cli/src/commands/mem.rs",
+        "symbol": "ls/get/hash/set/patch/rm, relay submission, patch hash guard and reader perspective",
+        "url": "https://github.com/block/buzz/blob/61c070d5915e11ef8f24b32d6f4f217132294320/crates/buzz-cli/src/commands/mem.rs"
+      },
+      {
+        "id": "acp-fetch",
+        "label": "ACP core-memory session injection",
+        "path": "crates/buzz-acp/src/engram_fetch.rs",
+        "symbol": "Bounded core fetch, decryption, confirmed absence versus error and prompt section",
+        "url": "https://github.com/block/buzz/blob/61c070d5915e11ef8f24b32d6f4f217132294320/crates/buzz-acp/src/engram_fetch.rs"
+      },
+      {
+        "id": "relay-request",
+        "label": "Relay read authorization",
+        "path": "crates/buzz-relay/src/handlers/req.rs",
+        "symbol": "REQ authorization gate for agent engram filters and explicit-ID exception",
+        "url": "https://github.com/block/buzz/blob/61c070d5915e11ef8f24b32d6f4f217132294320/crates/buzz-relay/src/handlers/req.rs"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Project-wide evaluation domains; not Buzz results",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project-wide status; does not contain Buzz measurements",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Benchmark fixture and protocol",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Evaluation protocol inputs, not measurements",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README identifies Buzz as built by Block, Inc. and describes this repository as the relay and mobile client, with the desktop app in a separate repository. This review focuses on its NIP-AE agent-memory feature.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "NIP-AE represents a core profile and named memory values as kind 30174 addressable events. A JSON body is encrypted with NIP-44 v2 under the symmetric agent-owner conversation key; the agent signs the event, while HMAC-derived d tags conceal the slug from passive observers.",
+        "sources": [
+          "nip-ae",
+          "engram"
+        ]
+      },
+      {
+        "text": "The core crate is an I/O-free implementation of slug validation, cryptographic addressing, encryption/decryption, event validation, and head selection. The CLI connects those primitives to configured relays; ACP separately fetches the core record when a new session is created.",
+        "sources": [
+          "engram",
+          "mem-cli",
+          "acp-fetch"
+        ]
+      },
+      {
+        "text": "Memory bodies contain one slug and a string or null value; the reserved core body contains a free-form profile. The core profile can use wiki links to refer to other slugs, while this protocol version leaves structured provenance and trust fields out of scope.",
+        "sources": [
+          "nip-ae"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The CLI exposes ls, get, hash, set, patch, and rm. Writes create encrypted and signed replacement events with increasing timestamps. Patch checks a SHA-256 preimage before applying a unified diff; a relay response that says a newer head already dominates the write is reported as a conflict.",
+        "sources": [
+          "mem-cli",
+          "nip-ae"
+        ]
+      },
+      {
+        "text": "Removal of a memory slug publishes a value:null tombstone; the CLI refuses removal of the core slug. Optional NIP-09 deletion requests may target old events, but whether relays honor them is relay policy, so tombstoning does not establish historical erasure.",
+        "sources": [
+          "mem-cli",
+          "nip-ae"
+        ]
+      },
+      {
+        "text": "Reads validate the event envelope, decrypt the body, and ensure the body slug derives to its public d tag. Listing groups valid results by slug and selects the head. Relay-side event limits can make listing incomplete because Nostr does not specify pagination.",
+        "sources": [
+          "mem-cli",
+          "engram",
+          "nip-ae"
+        ]
+      },
+      {
+        "text": "ACP performs a bounded core query at new-session creation. A valid core becomes prompt text; an empty result is treated as confirmed absence and yields an onboarding nudge, while transport, parse, or unreadable-event errors are logged and inject no section. The fetch does not block session creation.",
+        "sources": [
+          "acp-fetch"
+        ]
+      },
+      {
+        "text": "The relay checks authenticated identity for filters capable of matching agent engrams. Access is restricted to the agent author or addressed owner, with an explicit-ID filter exception documented in the handler. This is source evidence, not an isolation workload result.",
+        "sources": [
+          "relay-request"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Named reads, listing and ACP core injection are implemented; no answerability probes were run.",
+        "sources": [
+          "mem-cli",
+          "acp-fetch",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and staleness",
+        "status": "unmeasured",
+        "evidence": "Patch applies a diff under a SHA-256 compare-and-swap guard, but no correction/staleness adjudication was run.",
+        "sources": [
+          "mem-cli",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "In-band tombstones and optional relay deletion requests exist; no relay-history or post-delete probe was run.",
+        "sources": [
+          "nip-ae",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Agent-owner addressing and relay authorization are visible in protocol/code; no cross-owner isolation workload was run.",
+        "sources": [
+          "nip-ae",
+          "relay-request",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Signed authorship is visible, while optional source text is not verified attestation; no claim-support evaluation was run.",
+        "sources": [
+          "nip-ae",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Relay queries, decryption, head selection and best-effort post-write verification are source-visible; no timing was collected.",
+        "sources": [
+          "mem-cli",
+          "nip-ae",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "ACP injects the core profile at session creation; no token or provider-cost measurement was collected.",
+        "sources": [
+          "acp-fetch",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Replaceable encrypted relay events and optional tombstone/deletion semantics are documented; no storage measurement was collected.",
+        "sources": [
+          "nip-ae",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded review of NIP-AE and selected CLI, ACP, core, and relay paths at the pinned head. Buzz was not run, and no memory quality or performance result is available.",
+        "sources": [
+          "head",
+          "nip-ae",
+          "mem-cli",
+          "acp-fetch"
+        ]
+      },
+      {
+        "text": "Nostr listing can be incomplete when relays cap events. Writers can disagree across disjoint relay sets or partitions, and post-write verification is best effort rather than a global transaction.",
+        "sources": [
+          "nip-ae"
+        ]
+      },
+      {
+        "text": "Encryption does not hide the public agent-owner relationship, prove remembered content is true, or establish relay erasure. The rest of the large collaboration platform was not assessed.",
+        "sources": [
+          "nip-ae",
+          "readme"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is not_run. No Buzz system execution, benchmark workload, or tests were run; the project fixture and metric definitions are protocol artifacts rather than results.",
+        "sources": [
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

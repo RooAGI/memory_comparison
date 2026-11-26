@@ -1,0 +1,435 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 135,
+    "slug": "cognee-rs",
+    "name": "Cognee-RS",
+    "repository": "https://github.com/topoteretes/cognee-rs",
+    "listed_repository": "https://github.com/topoteretes/cognee-rs",
+    "branch": "main",
+    "revision": "a70bcab30059b674b98822a7bdff1570a69dfeb7",
+    "reviewed_at": "2026-11-25T08:32:09Z",
+    "review_timezone": "UTC (2026-11-25 00:32:09 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Cognee-RS is a Rust port of Cognee that ingests text, files, URLs and code into persistent knowledge graphs with vector indexes, then exposes remember, recall, improve and forget operations. It uses relational, graph and vector stores and supports multiple provider and SDK surfaces. This assessment reflects selected source and documentation at the verified main head; no runtime or benchmark was run.",
+    "atlas_locator": {
+      "ordinal": 135,
+      "name": "Cognee-RS",
+      "slug": "cognee-rs",
+      "listed_repository": "https://github.com/topoteretes/cognee-rs",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cognee-rs.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": "info@topoteretes.com",
+      "source_url": "https://github.com/topoteretes/cognee-rs/blob/a70bcab30059b674b98822a7bdff1570a69dfeb7/SECURITY.md",
+      "checked_urls": [
+        "https://github.com/topoteretes/cognee-rs/blob/a70bcab30059b674b98822a7bdff1570a69dfeb7/README.md",
+        "https://github.com/topoteretes/cognee-rs/blob/a70bcab30059b674b98822a7bdff1570a69dfeb7/SECURITY.md"
+      ],
+      "note": "The contact is published in the official pinned SECURITY.md; the official pinned README was also checked. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": "info@topoteretes.com",
+    "contact_email_source_url": "https://github.com/topoteretes/cognee-rs/blob/a70bcab30059b674b98822a7bdff1570a69dfeb7/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/topoteretes/cognee-rs/blob/a70bcab30059b674b98822a7bdff1570a69dfeb7/README.md",
+      "https://github.com/topoteretes/cognee-rs/blob/a70bcab30059b674b98822a7bdff1570a69dfeb7/SECURITY.md"
+    ],
+    "contact_email_note": "Published in official SECURITY.md as the private vulnerability-reporting email; official README also checked.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[134], ordinal 135: Cognee-RS, slug cognee-rs, explicit listed repository locator, pinned Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/cognee-rs.md",
+        "symbol": "Pinned attribution used only to resolve curated name, slug and listed locator; not used as assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cognee-rs.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Public topoteretes/cognee-rs repository page shows main as the default branch",
+        "url": "https://github.com/topoteretes/cognee-rs"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Full current main head a70bcab30059b674b98822a7bdff1570a69dfeb7; feed updated 2026-11-25T08:02:24Z",
+        "url": "https://github.com/topoteretes/cognee-rs/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream head",
+        "path": "commit",
+        "symbol": "a70bcab30059b674b98822a7bdff1570a69dfeb7",
+        "url": "https://github.com/topoteretes/cognee-rs/commit/a70bcab30059b674b98822a7bdff1570a69dfeb7"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Memory API, backends, interfaces, claimed performance and concurrency constraints; checked for published contact",
+        "url": "https://github.com/topoteretes/cognee-rs/blob/a70bcab30059b674b98822a7bdff1570a69dfeb7/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Pinned architecture guide",
+        "path": "docs/architecture.md",
+        "symbol": "Workspace and crate responsibilities, pipeline structure, persistence layer, storage adapters, deletion and telemetry",
+        "url": "https://github.com/topoteretes/cognee-rs/blob/a70bcab30059b674b98822a7bdff1570a69dfeb7/docs/architecture.md"
+      },
+      {
+        "id": "concepts",
+        "label": "Pinned core concepts guide",
+        "path": "docs/concepts.md",
+        "symbol": "Relational/vector/graph stores, DataPoint fields and provenance, dataset and session scopes, node sets and chunking",
+        "url": "https://github.com/topoteretes/cognee-rs/blob/a70bcab30059b674b98822a7bdff1570a69dfeb7/docs/concepts.md"
+      },
+      {
+        "id": "operations",
+        "label": "Pinned operation guide",
+        "path": "docs/operations.md",
+        "symbol": "Remember/recall/improve/forget, retrieval routing, update/delete behavior, ownership ledger, failure rollback and known operation limits",
+        "url": "https://github.com/topoteretes/cognee-rs/blob/a70bcab30059b674b98822a7bdff1570a69dfeb7/docs/operations.md"
+      },
+      {
+        "id": "datapoint",
+        "label": "DataPoint model",
+        "path": "crates/models/src/data_point.rs",
+        "symbol": "Shared typed record fields, timestamps, metadata, dataset membership and pipeline provenance",
+        "url": "https://github.com/topoteretes/cognee-rs/blob/a70bcab30059b674b98822a7bdff1570a69dfeb7/crates/models/src/data_point.rs"
+      },
+      {
+        "id": "persist",
+        "label": "Cognify persistence layer",
+        "path": "crates/cognify/src/persist.rs",
+        "symbol": "Document-group write order, run-level deduplication, graph/vector/ownership/evidence persistence",
+        "url": "https://github.com/topoteretes/cognee-rs/blob/a70bcab30059b674b98822a7bdff1570a69dfeb7/crates/cognify/src/persist.rs"
+      },
+      {
+        "id": "provenance",
+        "label": "Deterministic provenance ledger identifiers",
+        "path": "crates/database/src/provenance_ids.rs",
+        "symbol": "Per-item node and edge ownership row IDs and deterministic edge slugs",
+        "url": "https://github.com/topoteretes/cognee-rs/blob/a70bcab30059b674b98822a7bdff1570a69dfeb7/crates/database/src/provenance_ids.rs"
+      },
+      {
+        "id": "scope",
+        "label": "Recall scope implementation",
+        "path": "crates/search/src/recall_scope.rs",
+        "symbol": "Recall scope normalization, routing and session/cache source helpers",
+        "url": "https://github.com/topoteretes/cognee-rs/blob/a70bcab30059b674b98822a7bdff1570a69dfeb7/crates/search/src/recall_scope.rs"
+      },
+      {
+        "id": "delete",
+        "label": "Cascading delete and rollback implementation",
+        "path": "crates/delete/src/lib.rs",
+        "symbol": "Relational, graph, vector and file deletion; authorized delete wrapper and run sweeper",
+        "url": "https://github.com/topoteretes/cognee-rs/blob/a70bcab30059b674b98822a7bdff1570a69dfeb7/crates/delete/src/lib.rs"
+      },
+      {
+        "id": "telemetry",
+        "label": "Pinned OpenTelemetry guide",
+        "path": "docs/observability/opentelemetry.md",
+        "symbol": "Pipeline spans, activation controls, OTLP export and no-op behavior",
+        "url": "https://github.com/topoteretes/cognee-rs/blob/a70bcab30059b674b98822a7bdff1570a69dfeb7/docs/observability/opentelemetry.md"
+      },
+      {
+        "id": "security",
+        "label": "Pinned security policy and contact check",
+        "path": "SECURITY.md",
+        "symbol": "Private vulnerability reporting contact info@topoteretes.com",
+        "url": "https://github.com/topoteretes/cognee-rs/blob/a70bcab30059b674b98822a7bdff1570a69dfeb7/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Definitions for recall, correction, deletion, scope, evidence, efficiency and latency domains",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned workload specification only; no Cognee-RS run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "No benchmark result for this source review; status remains not_run",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The curated catalog lists ordinal 135 as Cognee-RS, slug cognee-rs, with the explicit locator https://github.com/topoteretes/cognee-rs. The pinned Atlas entry is retained only for roster identity and locator attribution, not as assessment evidence.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The official public repository page identifies main as its default branch. The official main commit feed reports full head a70bcab30059b674b98822a7bdff1570a69dfeb7, updated 2026-11-25T08:02:24Z; the reviewed documentation and source links pin that commit.",
+        "sources": [
+          "repo",
+          "feed",
+          "head"
+        ]
+      },
+      {
+        "text": "The project describes itself as a Rust port of the Python Cognee library. It is a library and CLI with language bindings; the HTTP server is referenced by the docs but is not part of this repository.",
+        "sources": [
+          "readme",
+          "architecture",
+          "operations"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The system composes add/ingest, cognify and search. Cognify classifies and chunks input, extracts graph entities and relationships with an LLM, summarizes and persists graph/vector artifacts; the high-level memory API wraps this as remember, recall, improve and forget.",
+        "sources": [
+          "readme",
+          "architecture",
+          "operations"
+        ]
+      },
+      {
+        "text": "Memory spans three backends: relational storage tracks documents, datasets, sessions and provenance; the graph stores entities and relationships; and the vector store indexes chunks, entities, summaries and edge facts. Defaults are SQLite, embedded Ladybug graph storage, and embedded LanceDB; alternate backends and providers are feature/configuration dependent.",
+        "sources": [
+          "concepts",
+          "architecture",
+          "readme"
+        ]
+      },
+      {
+        "text": "DataPoint is the common record model with a UUID, timestamps, version/type fields, metadata, dataset membership and pipeline provenance such as source pipeline, task, node set and content hash. The cognify persistence layer writes ownership rows before graph, vectors and edge evidence, deduplicating shared artifacts across document groups.",
+        "sources": [
+          "datapoint",
+          "concepts",
+          "persist",
+          "provenance"
+        ]
+      },
+      {
+        "text": "Recall orchestrates multiple retrieval strategies. The default hybrid route combines vector matches over chunks, summaries, entities and edge facts with one-hop graph expansion and an LLM completion; routing can choose lexical, temporal, coding-rules, graph and other strategies.",
+        "sources": [
+          "operations",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: remember adds input, runs cognify and by default an improve pass. Ingestion hashes/deduplicates and stores source material; cognify extracts and summarizes per document and persists resulting graph/vector items plus per-item ownership/provenance records. Code-repository memory has a separate deterministic graph path that does not require an LLM.",
+        "sources": [
+          "operations",
+          "architecture",
+          "persist"
+        ]
+      },
+      {
+        "text": "Update/correction: the documented update replaces one document while retaining its data ID, removes its prior derived memory, re-adds it and cognifies again. Improve can enrich or personalize graph/session context from feedback. These APIs do not by themselves establish correction accuracy or guarantee all stale derived content is absent.",
+        "sources": [
+          "operations"
+        ]
+      },
+      {
+        "text": "Delete: forget/delete supports all owned data, a dataset, or a data item and cascades through relational, graph, vector and file stores; dry-run previews are documented. Run-scoped sweeps remove artifacts produced by failed cognify runs, while shared artifacts remain when another owner still claims them.",
+        "sources": [
+          "readme",
+          "operations",
+          "delete",
+          "persist",
+          "provenance"
+        ]
+      },
+      {
+        "text": "Retrieval: recall auto-routes by query unless a search type is supplied, applies graph/session scopes and dataset filters, and can return context without an answer when completion is unavailable. Retrieval modes have different capabilities and constraints; for example, batch triplet search loads the whole graph and is documented as more expensive on large stores.",
+        "sources": [
+          "operations",
+          "scope"
+        ]
+      },
+      {
+        "text": "Scope: datasets are the principal organizational and ownership boundary, optionally tenant-scoped. Search supports dataset filters, while sessions are keyed by owner and may be shared through readable-dataset hooks in configured bindings. Node-set selection exists but is documented as type/name subgraph filtering rather than a complete general-purpose node-set query surface; authorization behavior depends on the caller/hosting layer.",
+        "sources": [
+          "concepts",
+          "operations",
+          "scope"
+        ]
+      },
+      {
+        "text": "Provenance/evidence: DataPoints include pipeline/task/node-set/source-content provenance. The relational ledger records per-dataset and per-data-item ownership of nodes and edges to support deletion and rollback; edge evidence is also persisted. This tracks lineage/ownership, not a guarantee that generated answers expose claim-level citations or that cited evidence supports every statement.",
+        "sources": [
+          "datapoint",
+          "architecture",
+          "persist",
+          "provenance"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: the pipeline uses streaming/bounded document work, single-writer ordering, incremental cognify markers and embedded local-default stores. OpenTelemetry spans can cover pipeline stages when telemetry is enabled and activated; structured logging is documented. README speed figures are upstream claims, not independently measured here.",
+        "sources": [
+          "architecture",
+          "operations",
+          "telemetry",
+          "readme"
+        ]
+      },
+      {
+        "text": "Known constraints include an in-process-only serialized writer model for file-backed graph storage (cross-process locking is out of scope), provider/model dependency for LLM-based extraction and completion, partial node-set semantics, and a recall mode whose batch triplet search can scan the full graph.",
+        "sources": [
+          "readme",
+          "concepts",
+          "operations"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "The source documents retrieval routes and context-only fallback, but no gold answerable/unanswerable cases were executed or adjudicated.",
+        "sources": [
+          "operations",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale retrieval",
+        "status": "unmeasured",
+        "evidence": "Update replaces and re-cognifies an item, but no correction probes or stale-value rate were measured.",
+        "sources": [
+          "operations",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Source describes cascading deletion and run sweeps; no post-delete probes examined residual content in stores, backups, logs, or copies.",
+        "sources": [
+          "delete",
+          "operations",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Dataset/session scoping is visible in source and docs; no cross-user, cross-dataset, or tenant isolation workload was run.",
+        "sources": [
+          "concepts",
+          "scope",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Pipeline provenance and edge evidence exist, but no generated answer was adjudicated for claim-level support or citation coverage.",
+        "sources": [
+          "datapoint",
+          "persist",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "The README gives speed figures as product claims; no timing distribution was collected in this review.",
+        "sources": [
+          "readme",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timed ingestion-to-correct-recall workload was run.",
+        "sources": [
+          "operations",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No token or provider-cost accounting was performed.",
+        "sources": [
+          "readme",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No corpus storage-size or per-item measurement was collected.",
+        "sources": [
+          "concepts",
+          "metrics"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a source-only review of selected current README, architecture/concepts/operations documentation, data model, persistence, scope, deletion and provenance code. It does not establish behavior across every backend, binding, feature combination, provider, or error path.",
+        "sources": [
+          "readme",
+          "architecture",
+          "concepts",
+          "operations",
+          "datapoint",
+          "persist",
+          "scope",
+          "delete"
+        ]
+      },
+      {
+        "text": "No Cognee-RS runtime, tests, or benchmarks were run. Retrieval quality, abstention, correction, complete erasure, isolation, latency, write-to-recall delay, token/cost use and storage efficiency remain unmeasured.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "text": "The documentation says cross-process coordination for file-backed graph storage is outside the current Rust design, and describes node sets as a partial tagging/scoping primitive. Deployments needing multi-process writes or strong tenant boundaries require host-level design and verification.",
+        "sources": [
+          "readme",
+          "concepts",
+          "operations"
+        ]
+      },
+      {
+        "text": "Whether a recalled answer is factually supported depends on the selected retriever, model and consumer behavior; stored lineage and edge evidence alone do not prove user-facing citation quality.",
+        "sources": [
+          "datapoint",
+          "persist",
+          "operations",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Cognee-RS runtime, tests or benchmark execution was performed. Source observations and README performance claims are not project benchmark results."
+    }
+  }
+}

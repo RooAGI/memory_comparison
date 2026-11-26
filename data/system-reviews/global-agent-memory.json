@@ -1,0 +1,301 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 260,
+    "slug": "global-agent-memory",
+    "name": "Global Agent Memory",
+    "repository": "https://github.com/ozankasikci/global-agent-memory",
+    "listed_repository": "https://github.com/ozankasikci/global-agent-memory",
+    "branch": "main",
+    "revision": "53480fd2906b41c9921326f1c61e4c42fe8d5134",
+    "reviewed_at": "2026-11-25T21:05:34Z",
+    "review_timezone": "UTC (checked local time: 2026-11-25 13:05:34 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Global Agent Memory is a local-first memory MCP service and companion CLI/dashboard. It stores canonical notes as Markdown in an Obsidian-compatible Vault, with a rebuildable SQLite index for keyword and optional semantic retrieval. It supports project-aware context, reviewable candidate memories, and owner-controlled visibility and access. These are source and documentation observations, not quality or isolation measurements.",
+    "atlas_locator": {
+      "ordinal": 260,
+      "name": "Global Agent Memory",
+      "slug": "global-agent-memory",
+      "listed_repository": "https://github.com/ozankasikci/global-agent-memory",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/global-agent-memory.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": null,
+      "checked_urls": [
+        "https://github.com/ozankasikci/global-agent-memory/blob/53480fd2906b41c9921326f1c61e4c42fe8d5134/README.md",
+        "https://github.com/ozankasikci/global-agent-memory/blob/53480fd2906b41c9921326f1c61e4c42fe8d5134/SECURITY.md"
+      ],
+      "note": "No contact email was published in the official pinned README or SECURITY.md. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/ozankasikci/global-agent-memory/blob/53480fd2906b41c9921326f1c61e4c42fe8d5134/README.md",
+      "https://github.com/ozankasikci/global-agent-memory/blob/53480fd2906b41c9921326f1c61e4c42fe8d5134/SECURITY.md"
+    ],
+    "contact_email_note": "No contact email was published in the official pinned README or SECURITY.md. No commit/profile metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated roster entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[259], ordinal 260; name, slug, explicit repository locator and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/global-agent-memory.md",
+        "symbol": "Curated identity and locator attribution only; not used as assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/global-agent-memory.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "Canonical ozankasikci/global-agent-memory; page identifies main as default branch",
+        "url": "https://github.com/ozankasikci/global-agent-memory"
+      },
+      {
+        "id": "head",
+        "label": "Official current main commit feed",
+        "path": "main.atom",
+        "symbol": "Official feed identifies full current head 53480fd2906b41c9921326f1c61e4c42fe8d5134 and update time 2026-09-01T10:21:02Z",
+        "url": "https://github.com/ozankasikci/global-agent-memory/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product, architecture, operations, scoping, security, performance suite and runtime descriptions",
+        "url": "https://github.com/ozankasikci/global-agent-memory/blob/53480fd2906b41c9921326f1c61e4c42fe8d5134/README.md"
+      },
+      {
+        "id": "vault",
+        "label": "Pinned Markdown Vault repository",
+        "path": "src/global_memory/vault/repository.py",
+        "symbol": "Managed-note scan, immutable ID lookup, candidate creation, atomic writes, audit records, hard delete and tombstones",
+        "url": "https://github.com/ozankasikci/global-agent-memory/blob/53480fd2906b41c9921326f1c61e4c42fe8d5134/src/global_memory/vault/repository.py"
+      },
+      {
+        "id": "search",
+        "label": "Pinned retrieval service",
+        "path": "src/global_memory/retrieval/search.py",
+        "symbol": "Search request modes, project/status/access filters, candidate collection, ranking, pagination and supporting passage results",
+        "url": "https://github.com/ozankasikci/global-agent-memory/blob/53480fd2906b41c9921326f1c61e4c42fe8d5134/src/global_memory/retrieval/search.py"
+      },
+      {
+        "id": "access",
+        "label": "Pinned access service",
+        "path": "src/global_memory/access/service.py",
+        "symbol": "Protected memory requests, grants, permission and duration levels, owner approval and access audit events",
+        "url": "https://github.com/ozankasikci/global-agent-memory/blob/53480fd2906b41c9921326f1c61e4c42fe8d5134/src/global_memory/access/service.py"
+      },
+      {
+        "id": "security",
+        "label": "Pinned official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Supported local-only boundary, untrusted Markdown handling, and prompt-injection and credential limitations",
+        "url": "https://github.com/ozankasikci/global-agent-memory/blob/53480fd2906b41c9921326f1c61e4c42fe8d5134/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation domains and metric definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned evaluation fixture definition",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Initial benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project-level execution status; not a Global Agent Memory measurement",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Global Agent Memory as shared durable memory for Claude Code, Codex, and other MCP-compatible agents, with an MCP interface, CLI, optional local dashboard, and Obsidian-compatible Markdown Vault. This review does not infer individual maintainer roles.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README describes a hybrid runtime: an optional local daemon can provide the shared service, while clients fall back to the same MCP application services in-process. Its dependency direction places transport and client adapters above application services and domain logic, with the Vault, SQLite/index, vectors, embeddings, Git and file watching at adapter boundaries.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "Markdown notes in the Vault are canonical; SQLite, FTS, vectors, queues and caches are generated state documented as rebuildable. Managed notes use stable IDs and structured metadata including type, scope, project, lifecycle status, visibility, confidence, importance, tags, source references, links and supersession. The Vault repository scans managed Markdown and refuses ambiguous duplicate IDs.",
+        "sources": [
+          "readme",
+          "vault"
+        ]
+      },
+      {
+        "text": "The README distinguishes canonical notes from database-only operational or history data that requires its own backup. The source review did not inspect every generated-state rebuild path or all database-only content.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "**Write.** The documented agent flow uses memory_remember to propose explicitly supplied content as a candidate; a candidate is not active until approved. The Vault repository exposes candidate creation and appends content-free audit events for mutations. Every write caller was not traced through the full MCP/application stack.",
+        "sources": [
+          "readme",
+          "vault"
+        ]
+      },
+      {
+        "text": "**Update and lifecycle.** The README documents optimistic concurrency for updates and approval, rejection, supersession and archive operations. The Vault repository writes atomically and appends audit records with event ID, type, memory ID, path, timestamp and safe metadata.",
+        "sources": [
+          "readme",
+          "vault"
+        ]
+      },
+      {
+        "text": "**Delete.** The Vault repository implements explicit hard deletion by first recording a tombstone with memory ID, path, timestamp, reason and content hash, then unlinking the Markdown note and appending a hard-delete audit event. This does not establish physical erasure from backups or copies outside the inspected Vault path.",
+        "sources": [
+          "vault"
+        ]
+      },
+      {
+        "text": "**Retrieval.** The README documents SQLite FTS5 keyword search and optional Ollama embeddings with sqlite-vec for semantic retrieval; keyword retrieval and lifecycle operations remain available without Ollama. The inspected request supports hybrid, keyword, semantic and metadata modes, project and scope filters, explicit cross-project access, status controls, access grants and pagination. Results include excerpts and supporting-passage/rank metadata.",
+        "sources": [
+          "readme",
+          "search"
+        ]
+      },
+      {
+        "text": "Search and returned supporting passages describe retrieval evidence and rank features; they do not establish answer accuracy, abstention behavior or citation support precision.",
+        "sources": [
+          "search",
+          "metrics"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Search modes and candidate ranking were inspected; no query or abstention workload was scored.",
+        "sources": [
+          "search",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Optimistic update and lifecycle operations are documented; no correction workload was run.",
+        "sources": [
+          "readme",
+          "vault",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Explicit hard-delete and tombstone behavior were inspected; no post-delete probes were run.",
+        "sources": [
+          "vault",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Project filters and protected-access grants were inspected; no adversarial cross-scope workload was run.",
+        "sources": [
+          "search",
+          "access",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Notes retain source references and retrieval returns supporting passages; generated claims were not adjudicated.",
+        "sources": [
+          "readme",
+          "search",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Search and indexing paths were inspected; no timings were collected.",
+        "sources": [
+          "readme",
+          "search",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost and storage",
+        "status": "unmeasured",
+        "evidence": "Local and optional embedding paths are documented; no resource measurements were collected.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a pinned source and documentation review, not a runtime, security or quality assessment. The stated supported deployment boundary is a single-user local service; this review does not establish safety for remote or multi-user operation.",
+        "sources": [
+          "readme",
+          "security"
+        ]
+      },
+      {
+        "text": "Candidate approval and owner grants are documented controls, but no adversarial test of prompt injection, access policy or project isolation was run. The documented rebuild path for generated state does not establish erasure of all history, backups or external copies when a note is deleted.",
+        "sources": [
+          "readme",
+          "security",
+          "vault"
+        ]
+      },
+      {
+        "text": "The inspected search code and upstream performance documentation do not establish actual recall quality, latency, resource use or benchmark performance.",
+        "sources": [
+          "readme",
+          "search",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Global Agent Memory runtime, tests or benchmark workload were executed for this review. Source observations and upstream performance documentation are not results collected here."
+    }
+  }
+}

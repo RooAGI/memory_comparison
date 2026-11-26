@@ -1,0 +1,416 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "cairn",
+    "name": "Cairn",
+    "repository": "https://github.com/oritera/Cairn",
+    "branch": "main",
+    "revision": "8e7e0ea67552383851dfcabfba0c4e9c8d007878",
+    "reviewed_at": "2026-11-25T00:42:06Z",
+    "review_timezone": "UTC (checked 2026-11-24 16:42:06 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/oritera/Cairn/blob/8e7e0ea67552383851dfcabfba0c4e9c8d007878/README.md","checked_urls":["https://github.com/oritera/Cairn/blob/8e7e0ea67552383851dfcabfba0c4e9c8d007878/README.md","https://github.com/oritera/Cairn/blob/8e7e0ea67552383851dfcabfba0c4e9c8d007878/SECURITY.md","https://github.com/oritera/Cairn/blob/8e7e0ea67552383851dfcabfba0c4e9c8d007878/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "Cairn is a server and dispatcher for goal-directed exploration. It stores project knowledge as a graph of facts and intents, with hints as separate project annotations, then gives worker agents the project state to explore. This review reports source observations only; no Cairn workload or benchmark was run.",
+    "atlas_locator": {
+      "ordinal": 109,
+      "name": "Cairn",
+      "slug": "cairn",
+      "listed_repository": "https://github.com/oritera/Cairn",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cairn.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/oritera/Cairn/blob/8e7e0ea67552383851dfcabfba0c4e9c8d007878/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/oritera/Cairn/blob/8e7e0ea67552383851dfcabfba0c4e9c8d007878/README.md",
+      "https://github.com/oritera/Cairn/blob/8e7e0ea67552383851dfcabfba0c4e9c8d007878/SECURITY.md",
+      "https://github.com/oritera/Cairn/blob/8e7e0ea67552383851dfcabfba0c4e9c8d007878/SUPPORT.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical public repository",
+        "path": "repository",
+        "symbol": "oritera/Cairn; main is remote HEAD",
+        "url": "https://github.com/oritera/Cairn"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed current main head",
+        "path": "commit",
+        "symbol": "8e7e0ea67552383851dfcabfba0c4e9c8d007878",
+        "url": "https://github.com/oritera/Cairn/commit/8e7e0ea67552383851dfcabfba0c4e9c8d007878"
+      },
+      {
+        "id": "readme",
+        "label": "Official project README",
+        "path": "README.md",
+        "url": "https://github.com/oritera/Cairn/blob/8e7e0ea67552383851dfcabfba0c4e9c8d007878/README.md"
+      },
+      {
+        "id": "models",
+        "label": "Project, fact, intent and hint models",
+        "path": "cairn/src/cairn/server/models.py",
+        "url": "https://github.com/oritera/Cairn/blob/8e7e0ea67552383851dfcabfba0c4e9c8d007878/cairn/src/cairn/server/models.py"
+      },
+      {
+        "id": "db",
+        "label": "SQLite schema and connection configuration",
+        "path": "cairn/src/cairn/server/db.py",
+        "url": "https://github.com/oritera/Cairn/blob/8e7e0ea67552383851dfcabfba0c4e9c8d007878/cairn/src/cairn/server/db.py"
+      },
+      {
+        "id": "projects",
+        "label": "Project creation, reads, status, completion and deletion routes",
+        "path": "cairn/src/cairn/server/routers/projects.py",
+        "url": "https://github.com/oritera/Cairn/blob/8e7e0ea67552383851dfcabfba0c4e9c8d007878/cairn/src/cairn/server/routers/projects.py"
+      },
+      {
+        "id": "intents",
+        "label": "Intent creation, claiming, heartbeat and conclusion routes",
+        "path": "cairn/src/cairn/server/routers/intents.py",
+        "url": "https://github.com/oritera/Cairn/blob/8e7e0ea67552383851dfcabfba0c4e9c8d007878/cairn/src/cairn/server/routers/intents.py"
+      },
+      {
+        "id": "hints",
+        "label": "Hint creation route",
+        "path": "cairn/src/cairn/server/routers/hints.py",
+        "url": "https://github.com/oritera/Cairn/blob/8e7e0ea67552383851dfcabfba0c4e9c8d007878/cairn/src/cairn/server/routers/hints.py"
+      },
+      {
+        "id": "services",
+        "label": "Project, intent and lease validation helpers",
+        "path": "cairn/src/cairn/server/services.py",
+        "url": "https://github.com/oritera/Cairn/blob/8e7e0ea67552383851dfcabfba0c4e9c8d007878/cairn/src/cairn/server/services.py"
+      },
+      {
+        "id": "export",
+        "label": "Project YAML and timeline export",
+        "path": "cairn/src/cairn/server/routers/export.py",
+        "url": "https://github.com/oritera/Cairn/blob/8e7e0ea67552383851dfcabfba0c4e9c8d007878/cairn/src/cairn/server/routers/export.py"
+      },
+      {
+        "id": "app",
+        "label": "FastAPI application and router registration",
+        "path": "cairn/src/cairn/server/app.py",
+        "url": "https://github.com/oritera/Cairn/blob/8e7e0ea67552383851dfcabfba0c4e9c8d007878/cairn/src/cairn/server/app.py"
+      },
+      {
+        "id": "explore",
+        "label": "Explore worker graph snapshot and conclude path",
+        "path": "cairn/src/cairn/dispatcher/tasks/explore.py",
+        "url": "https://github.com/oritera/Cairn/blob/8e7e0ea67552383851dfcabfba0c4e9c8d007878/cairn/src/cairn/dispatcher/tasks/explore.py"
+      },
+      {
+        "id": "reason",
+        "label": "Reason worker context and decision path",
+        "path": "cairn/src/cairn/dispatcher/tasks/reason.py",
+        "url": "https://github.com/oritera/Cairn/blob/8e7e0ea67552383851dfcabfba0c4e9c8d007878/cairn/src/cairn/dispatcher/tasks/reason.py"
+      },
+      {
+        "id": "common",
+        "label": "Worker snapshot, timing and log helpers",
+        "path": "cairn/src/cairn/dispatcher/tasks/common.py",
+        "url": "https://github.com/oritera/Cairn/blob/8e7e0ea67552383851dfcabfba0c4e9c8d007878/cairn/src/cairn/dispatcher/tasks/common.py"
+      },
+      {
+        "id": "config",
+        "label": "Dispatcher limits, timeouts and concurrency config",
+        "path": "cairn/src/cairn/dispatcher/config.py",
+        "url": "https://github.com/oritera/Cairn/blob/8e7e0ea67552383851dfcabfba0c4e9c8d007878/cairn/src/cairn/dispatcher/config.py"
+      },
+      {
+        "id": "scheduler",
+        "label": "Dispatcher scheduling and worker selection",
+        "path": "cairn/src/cairn/dispatcher/scheduler/loop.py",
+        "url": "https://github.com/oritera/Cairn/blob/8e7e0ea67552383851dfcabfba0c4e9c8d007878/cairn/src/cairn/dispatcher/scheduler/loop.py"
+      },
+      {
+        "id": "protocol",
+        "label": "Official server protocol design",
+        "path": "docs/specs/server-protocol.md",
+        "url": "https://github.com/oritera/Cairn/blob/8e7e0ea67552383851dfcabfba0c4e9c8d007878/docs/specs/server-protocol.md"
+      },
+      {
+        "id": "design",
+        "label": "Official dispatcher design",
+        "path": "docs/specs/dispatcher-design.md",
+        "url": "https://github.com/oritera/Cairn/blob/8e7e0ea67552383851dfcabfba0c4e9c8d007878/docs/specs/dispatcher-design.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog identity and attribution record",
+        "path": "data/memory-systems.json",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas discovery attribution only",
+        "path": "content/systems/cairn.md",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cairn.md"
+      },
+      {
+        "id": "contact_readme",
+        "label": "Official README checked for published contact email",
+        "path": "README.md",
+        "url": "https://github.com/oritera/Cairn/blob/8e7e0ea67552383851dfcabfba0c4e9c8d007878/README.md"
+      },
+      {
+        "id": "contact_security",
+        "label": "Official SECURITY.md location checked; file absent at reviewed revision",
+        "path": "SECURITY.md",
+        "url": "https://github.com/oritera/Cairn/blob/8e7e0ea67552383851dfcabfba0c4e9c8d007878/SECURITY.md"
+      },
+      {
+        "id": "contact_support",
+        "label": "Official SUPPORT.md location checked; file absent at reviewed revision",
+        "path": "SUPPORT.md",
+        "url": "https://github.com/oritera/Cairn/blob/8e7e0ea67552383851dfcabfba0c4e9c8d007878/SUPPORT.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository describes Cairn as a general-purpose problem-solving engine, with autonomous penetration testing as its initial validated domain. The repository is owned by the oritera GitHub account; the inspected README does not identify a separate maintainer. Cairn is an application comprising a FastAPI server and a dispatcher for Claude Code, Codex, Pi, or mock workers, not just a memory library.",
+        "sources": [
+          "readme",
+          "repo",
+          "app",
+          "config"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The server is the protocol authority. Its SQLite database stores projects, facts, intents, intent-source edges, hints, settings and ID counters. Facts are scoped by project and have only an ID and description; intents record source fact IDs, destination fact, description, creator, worker and timestamps; hints contain content, creator and creation time. SQLite connections enable WAL mode and foreign keys.",
+        "sources": [
+          "db",
+          "models"
+        ]
+      },
+      {
+        "text": "The graph represents exploration as intents connecting one or more existing facts to a resulting fact. Hints are project-level guidance outside that causal graph. The dispatcher reads structured project state and a full YAML export, selects bootstrap, reason or explore work, starts configured worker processes, parses their structured JSON, and writes accepted results through the server API.",
+        "sources": [
+          "readme",
+          "protocol",
+          "design",
+          "scheduler",
+          "reason",
+          "explore",
+          "projects",
+          "intents"
+        ]
+      },
+      {
+        "text": "By default, workers run in a container per project; the documented local mode instead uses per-project working directories on the dispatcher host and reuses installed CLI programs. The local mode's README says workers run with the host user's permissions and without a sandbox. These are execution boundaries; the inspected server API does not authenticate a caller as a project principal.",
+        "sources": [
+          "readme",
+          "config",
+          "design",
+          "app",
+          "projects"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write — creating a project stores its origin and goal as the special facts and may add initial hints. Other hints are appended through the hint route. An intent can be proposed from one or more existing fact IDs, then claimed or heartbeated by a worker; conclusion creates a new fact and connects it to the intent. A reason pass may instead propose new intents or mark the project complete.",
+        "sources": [
+          "projects",
+          "hints",
+          "intents",
+          "reason",
+          "services"
+        ]
+      },
+      {
+        "text": "Update and correction — project title and active/stopped status can be updated. The inspected API has no general fact edit route and no intent or hint edit route. Completion has a special reopen operation: it deletes the completion intent, appends an external-feedback fact, and creates a replacement intent using the completion's source facts. This is a narrow reopen flow rather than general correction or version history.",
+        "sources": [
+          "projects",
+          "intents"
+        ]
+      },
+      {
+        "text": "Delete — deleting a project removes its database row and dependent rows through foreign-key cascades. No individual fact or hint deletion route was found in the inspected routers. Reopen is the only inspected path that deletes an intent. This does not establish cleanup of exported YAML snapshots, worker files, backups, or other copies.",
+        "sources": [
+          "projects",
+          "db",
+          "export",
+          "common"
+        ]
+      },
+      {
+        "text": "Retrieval — GET project and YAML/timeline export return the project data selected by project ID; the inspected API exposes no ranked or semantic fact-search endpoint. Dispatcher reason work receives the complete graph export plus fact IDs and open intents; explore receives the complete export plus its assigned intent. The prompts tell workers to read the whole graph snapshot. This is source-visible context delivery, not measured answer recall.",
+        "sources": [
+          "projects",
+          "export",
+          "reason",
+          "explore",
+          "common"
+        ]
+      },
+      {
+        "text": "Scope isolation — project IDs are part of the composite keys and the inspected reads, writes, and exports filter on project ID. That separates project records in the data model. The app registers routes without an authentication dependency or principal-level authorization in the inspected code, so project-ID filtering alone does not establish protection between untrusted callers. Local execution also runs with host permissions.",
+        "sources": [
+          "db",
+          "projects",
+          "intents",
+          "hints",
+          "export",
+          "app",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Project export and whole-graph prompt delivery are visible, but no adjudicated answerable or unanswerable probes were run.",
+        "sources": [
+          "export",
+          "reason",
+          "explore",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Facts are not generally editable; completion can be reopened by adding feedback. No correction or stale-value probes were adjudicated.",
+        "sources": [
+          "projects",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Project deletion cascades database rows, while individual fact/hint deletion is not exposed in inspected routes. No post-delete probe or copy-cleanup measurement was run.",
+        "sources": [
+          "projects",
+          "db",
+          "common",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Project-key filters are source-visible, but there is no inspected caller-principal authorization and no forbidden cross-project workload was run.",
+        "sources": [
+          "db",
+          "projects",
+          "export",
+          "app",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Intent edges preserve contributing fact IDs and worker/creator labels; fact records do not require source citations. No evidence-support or citation-coverage adjudication was performed.",
+        "sources": [
+          "models",
+          "db",
+          "intents",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The dispatcher logs selected phase and total durations, but no latency samples or write-to-recall timing were collected.",
+        "sources": [
+          "common",
+          "explore",
+          "reason",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "SQLite persistence and prompt snapshots are source-visible; no token usage, price, or storage measurements were collected.",
+        "sources": [
+          "db",
+          "common",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded source review at the verified main head. The server, dispatcher, worker adapters and any benchmark were not executed; source presence does not establish runtime correctness or effective retrieval.",
+        "sources": [
+          "repo",
+          "head",
+          "readme",
+          "projects",
+          "reason",
+          "explore"
+        ]
+      },
+      {
+        "text": "The model has no required evidence URL or citation field on facts. Project-ID scoping does not by itself prove tenant isolation because caller authentication is not present in the inspected route setup. Individual fact/hint erasure and cleanup of copies outside SQLite remain unestablished.",
+        "sources": [
+          "models",
+          "app",
+          "projects",
+          "db",
+          "common"
+        ]
+      },
+      {
+        "text": "The README reports the project's participation and results in a Tencent Cloud hackathon, including a 54/54 problems-solved figure. This is an upstream README claim, not a result reproduced or adjudicated by this review; project benchmark status remains not_run.",
+        "sources": [
+          "readme",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is not_run. Project metric definitions, the synthetic fixture and execution-status record describe the separate evaluation protocol; they are not Cairn measurements. No system, benchmark, or tests were run for this review.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ]
+  }
+}

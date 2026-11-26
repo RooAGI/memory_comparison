@@ -1,0 +1,360 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 218,
+    "slug": "empirica",
+    "name": "Empirica",
+    "repository": "https://github.com/EmpiricaAI/empirica",
+    "listed_repository": "https://github.com/EmpiricaAI/empirica",
+    "branch": "main",
+    "revision": "227ca60336fef77cafe1fe9f706cfe9c83378133",
+    "reviewed_at": "2026-11-25T19:15:03Z",
+    "review_timezone": "UTC (2026-11-25 11:15:03 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Empirica is a local-first Python CLI and library for recording and evaluating an agent’s work beliefs, evidence, and outcomes. It uses SQLite for project records, Git notes for versioned history, and optional Qdrant for semantic retrieval. The three stores have different roles and can diverge; no runtime quality or performance was measured.",
+    "atlas_locator": {
+      "ordinal": 218,
+      "name": "Empirica",
+      "slug": "empirica",
+      "listed_repository": "https://github.com/EmpiricaAI/empirica",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/empirica.md",
+      "revision": "763859dc034771a8219afe08b198f23100372d89"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/EmpiricaAI/empirica/blob/227ca60336fef77cafe1fe9f706cfe9c83378133/README.md",
+      "checked_urls": [
+        "https://github.com/EmpiricaAI/empirica/blob/227ca60336fef77cafe1fe9f706cfe9c83378133/README.md"
+      ],
+      "note": "Checked the official pinned README for a published contact email; none was found. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/EmpiricaAI/empirica/blob/227ca60336fef77cafe1fe9f706cfe9c83378133/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/EmpiricaAI/empirica/blob/227ca60336fef77cafe1fe9f706cfe9c83378133/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the official pinned README.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated memory systems roster",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[217], ordinal 218; name, slug, explicit listed repository, pinned Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/empirica.md",
+        "symbol": "Pinned roster attribution used only for catalog identity/locator context; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/empirica.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository metadata",
+        "path": "repository metadata",
+        "symbol": "Canonical repository EmpiricaAI/empirica; default branch main",
+        "url": "https://api.github.com/repos/EmpiricaAI/empirica"
+      },
+      {
+        "id": "head",
+        "label": "Official current main head",
+        "path": "commit API",
+        "symbol": "Commits endpoint for main returned full head SHA 227ca60336fef77cafe1fe9f706cfe9c83378133",
+        "url": "https://github.com/EmpiricaAI/empirica/commit/227ca60336fef77cafe1fe9f706cfe9c83378133"
+      },
+      {
+        "id": "readme",
+        "label": "Official pinned README",
+        "path": "README.md",
+        "symbol": "Project purpose, operating model, support channels, license, contact email check",
+        "url": "https://github.com/EmpiricaAI/empirica/blob/227ca60336fef77cafe1fe9f706cfe9c83378133/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Pinned architecture overview",
+        "path": "ARCHITECTURE.md",
+        "symbol": "Three stores, work lifecycle, retrieval roles, consistency risks, calibration and observability claims",
+        "url": "https://github.com/EmpiricaAI/empirica/blob/227ca60336fef77cafe1fe9f706cfe9c83378133/ARCHITECTURE.md"
+      },
+      {
+        "id": "storage",
+        "label": "Canonical storage architecture guide",
+        "path": "docs/architecture/CANONICAL_STORAGE.md",
+        "symbol": "SQLite/Git notes/Qdrant storage roles, per-project collections, search modes, lifecycle references",
+        "url": "https://github.com/EmpiricaAI/empirica/blob/227ca60336fef77cafe1fe9f706cfe9c83378133/docs/architecture/CANONICAL_STORAGE.md"
+      },
+      {
+        "id": "lifecycle",
+        "label": "Artifact lifecycle and outcome feedback guide",
+        "path": "docs/architecture/ARTIFACT_LIFECYCLE_AND_OUTCOME_FEEDBACK.md",
+        "symbol": "Artifact state transitions, source outcome events, archive/resolution gaps and fail-open notes",
+        "url": "https://github.com/EmpiricaAI/empirica/blob/227ca60336fef77cafe1fe9f706cfe9c83378133/docs/architecture/ARTIFACT_LIFECYCLE_AND_OUTCOME_FEEDBACK.md"
+      },
+      {
+        "id": "breadcrumbs",
+        "label": "SQLite artifact repository",
+        "path": "empirica/data/repositories/breadcrumbs.py",
+        "symbol": "Project-scoped artifact creation and finding/unknown retrieval predicates",
+        "url": "https://github.com/EmpiricaAI/empirica/blob/227ca60336fef77cafe1fe9f706cfe9c83378133/empirica/data/repositories/breadcrumbs.py"
+      },
+      {
+        "id": "resolution",
+        "label": "Artifact resolution helpers",
+        "path": "empirica/data/resolution_kind.py",
+        "symbol": "Closed resolution vocabulary and unambiguous artifact ID resolution for supersession",
+        "url": "https://github.com/EmpiricaAI/empirica/blob/227ca60336fef77cafe1fe9f706cfe9c83378133/empirica/data/resolution_kind.py"
+      },
+      {
+        "id": "notes",
+        "label": "Git note storage",
+        "path": "empirica/core/canonical/git_notes_storage.py",
+        "symbol": "Commit-associated checkpoints, session-filtered note lookup, and note refs",
+        "url": "https://github.com/EmpiricaAI/empirica/blob/227ca60336fef77cafe1fe9f706cfe9c83378133/empirica/core/canonical/git_notes_storage.py"
+      },
+      {
+        "id": "note_lifecycle",
+        "label": "Git note archive and resolution lifecycle",
+        "path": "empirica/core/canonical/empirica_git/note_lifecycle.py",
+        "symbol": "Archive copies a note to archive ref then removes active ref; failures preserve/report state",
+        "url": "https://github.com/EmpiricaAI/empirica/blob/227ca60336fef77cafe1fe9f706cfe9c83378133/empirica/core/canonical/empirica_git/note_lifecycle.py"
+      },
+      {
+        "id": "collections",
+        "label": "Qdrant project collections",
+        "path": "empirica/core/qdrant/collections.py",
+        "symbol": "Per-project collection names; lazy creation and graceful missing-collection reads",
+        "url": "https://github.com/EmpiricaAI/empirica/blob/227ca60336fef77cafe1fe9f706cfe9c83378133/empirica/core/qdrant/collections.py"
+      },
+      {
+        "id": "qdrant_search",
+        "label": "Qdrant memory retrieval",
+        "path": "empirica/core/qdrant/memory.py",
+        "symbol": "Collection search modes, resolved-item filtering, project-specific client and fallback paths",
+        "url": "https://github.com/EmpiricaAI/empirica/blob/227ca60336fef77cafe1fe9f706cfe9c83378133/empirica/core/qdrant/memory.py"
+      },
+      {
+        "id": "resolution_sync",
+        "label": "Qdrant resolution synchronization",
+        "path": "empirica/core/qdrant/resolution_sync.py",
+        "symbol": "Best-effort payload update; SQLite remains authoritative when Qdrant is unavailable",
+        "url": "https://github.com/EmpiricaAI/empirica/blob/227ca60336fef77cafe1fe9f706cfe9c83378133/empirica/core/qdrant/resolution_sync.py"
+      },
+      {
+        "id": "bootstrap",
+        "label": "Project situation bootstrap",
+        "path": "empirica/core/bootstrap/situation.py",
+        "symbol": "Project-scoped active goal lookup and context composition",
+        "url": "https://github.com/EmpiricaAI/empirica/blob/227ca60336fef77cafe1fe9f706cfe9c83378133/empirica/core/bootstrap/situation.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Shared benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Empirica as epistemic infrastructure for measuring agent beliefs, gating actions, and retaining learning across sessions. The repository is an open source Python CLI/library with harness integration; the README states an MIT license.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The architecture separates a queryable SQLite working record, commit-associated Git notes for durable history/transport, and optional Qdrant vectors for semantic retrieval. The project notes that these stores are written at different times and can disagree.",
+        "sources": [
+          "architecture",
+          "storage",
+          "notes"
+        ]
+      },
+      {
+        "text": "Typed artifacts include findings, unknowns, assumptions, decisions, mistakes, dead ends, goals, lessons, and sources. SQLite rows carry project and session relationships plus optional evidence/source references; separate Git note stores use per-type refs.",
+        "sources": [
+          "breadcrumbs",
+          "storage",
+          "lifecycle"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "CLI artifact-log commands and repository methods create typed SQLite records with project/session and optional source/evidence links. Matching per-type Git note stores preserve commit-associated artifact history; Qdrant stores derived vectors when semantic features are enabled.",
+        "sources": [
+          "breadcrumbs",
+          "storage",
+          "collections"
+        ]
+      },
+      {
+        "text": "The lifecycle model resolves findings as stale, superseded, retracted, or mistyped; unknowns can be answered, assumptions verified/falsified/expired, goals completed, and decisions assessed. Supersession points to a named artifact, and ID helpers reject ambiguous prefixes. These are retained lifecycle states rather than an in-place factual edit API.",
+        "sources": [
+          "lifecycle",
+          "resolution"
+        ]
+      },
+      {
+        "text": "The canonical-storage guide describes note archival on delete and resolution stamping on active notes. Archival moves the Git note into an archive ref and removes it from the active ref after a successful archive write, preserving the archived note. The review found no cross-store erasure guarantee; bulk dead-end and mistake invalidations are documented as SQLite-only and can reappear after a from-notes rebuild.",
+        "sources": [
+          "storage",
+          "note_lifecycle",
+          "lifecycle"
+        ]
+      },
+      {
+        "text": "Default Qdrant focused search covers docs, memory, eidetic facts, and episodic entries; intelligence search adds assumptions, decisions, and goals. Search is project-keyed and excludes resolved memory by default. Qdrant-unavailable searches return empty results; architecture documentation describes a keyword-search degradation path. Bootstrap also loads active project goals from SQLite.",
+        "sources": [
+          "qdrant_search",
+          "collections",
+          "bootstrap",
+          "storage"
+        ]
+      },
+      {
+        "text": "SQLite reads and Qdrant collections are keyed by project_id, giving the inspected code paths project partitioning. The review did not find evidence that these IDs alone enforce authorization; filesystem, database, and remote Qdrant access control were not evaluated.",
+        "sources": [
+          "breadcrumbs",
+          "collections",
+          "bootstrap"
+        ]
+      },
+      {
+        "text": "Artifact evidence references, source identifiers, lifecycle outcome events, and commit-associated notes provide traceability. Outcome bookkeeping is fail-open, and the inspected model does not make a source reference mandatory or prove claim truth.",
+        "sources": [
+          "breadcrumbs",
+          "lifecycle",
+          "notes"
+        ]
+      },
+      {
+        "text": "Optional Qdrant collections are created lazily and can be absent without disabling SQLite-backed core functions. Architecture describes lower-capability keyword retrieval when semantic search is unavailable. README and architecture describe grading self-reported beliefs against external signals such as tests and commit activity; no performance or quality measurement was collected in this review.",
+        "sources": [
+          "collections",
+          "qdrant_search",
+          "architecture",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Search code and fallback descriptions were inspected; no answerability or abstention workload was run.",
+        "sources": [
+          "qdrant_search",
+          "storage",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Typed resolution and supersession paths were inspected; no correction workload or stale-value scoring was run.",
+        "sources": [
+          "lifecycle",
+          "resolution",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Git note archival and Qdrant resolution synchronization were inspected; no deletion or residual-storage probe was run.",
+        "sources": [
+          "note_lifecycle",
+          "resolution_sync",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Project predicates and per-project Qdrant collections were inspected; no cross-project authorization workload was run.",
+        "sources": [
+          "breadcrumbs",
+          "collections",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Evidence/source references and source-outcome bookkeeping were inspected; no output claim scoring was run.",
+        "sources": [
+          "breadcrumbs",
+          "lifecycle",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No runtime timing samples were collected.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No token, cost, or storage measurements were collected.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected official documentation and source at the verified main head. Empirica, its tests, and benchmarks were not run.",
+        "sources": [
+          "repo",
+          "head",
+          "readme"
+        ]
+      },
+      {
+        "text": "Retrieval quality, effective deployment authorization, cross-store consistency under failure, physical erasure across copies/backups, latency, and cost remain unknown from this source review.",
+        "sources": [
+          "architecture",
+          "storage",
+          "note_lifecycle",
+          "resolution_sync",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Empirica runtime, tests, or benchmarks were run. Project metrics and the planned fixture are not Empirica results."
+    }
+  }
+}

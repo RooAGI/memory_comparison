@@ -1,0 +1,388 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 132,
+    "slug": "codemem",
+    "name": "codemem",
+    "repository": "https://github.com/kunickiaj/codemem",
+    "listed_repository": "https://github.com/kunickiaj/codemem",
+    "branch": "main",
+    "revision": "a76ce405b5014e8ed0d2d3e956a2c770d75305cb",
+    "reviewed_at": "2026-11-25T08:24:16Z",
+    "review_timezone": "UTC (2026-11-25 00:24:16 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "codemem is a local-first coding-agent memory system backed by SQLite, with FTS5 and sqlite-vec retrieval. Host plugins and hooks capture activity for an observer pipeline, while MCP and native tools support explicit memory operations; prompt-time packs combine and filter candidates. Projects, visibility and device identity govern scope and optional sharing. This review describes inspected source and documentation; no runtime or benchmark was run.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/codemem.md"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/kunickiaj/codemem/blob/a76ce405b5014e8ed0d2d3e956a2c770d75305cb/README.md",
+      "note": "The official pinned README and SECURITY.md were checked; neither publishes a contact email."
+    },
+    "contact_email": null,
+    "contact_checked_sources": [
+      "https://github.com/kunickiaj/codemem/blob/a76ce405b5014e8ed0d2d3e956a2c770d75305cb/README.md",
+      "https://github.com/kunickiaj/codemem/blob/a76ce405b5014e8ed0d2d3e956a2c770d75305cb/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[131], ordinal 132: roster name, slug, listed repository locator and pinned Atlas attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/codemem.md",
+        "symbol": "Pinned curated roster attribution; used only to resolve catalog identity and locator, not as assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/codemem.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "",
+        "symbol": "Public kunickiaj/codemem repository page identifies main as default branch",
+        "url": "https://github.com/kunickiaj/codemem"
+      },
+      {
+        "id": "head",
+        "label": "Official main commits feed",
+        "path": "",
+        "symbol": "Current main head a76ce405b5014e8ed0d2d3e956a2c770d75305cb; feed updated 2026-11-25T08:03:39Z",
+        "url": "https://github.com/kunickiaj/codemem/commits/main.atom"
+      },
+      {
+        "id": "revision",
+        "label": "Reviewed upstream head",
+        "path": "",
+        "symbol": "Full current main commit a76ce405b5014e8ed0d2d3e956a2c770d75305cb",
+        "url": "https://github.com/kunickiaj/codemem/commit/a76ce405b5014e8ed0d2d3e956a2c770d75305cb"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product architecture, supported integrations, capture/retrieval behavior, storage, sharing, costs and operational/security limits; checked for contact email",
+        "url": "https://github.com/kunickiaj/codemem/blob/a76ce405b5014e8ed0d2d3e956a2c770d75305cb/README.md"
+      },
+      {
+        "id": "store",
+        "label": "Core MemoryStore",
+        "path": "packages/core/src/store.ts",
+        "symbol": "Main SQLite-backed CRUD, capture-adjacent, search, pack, identity, scope, vector, and store lifecycle surface",
+        "url": "https://github.com/kunickiaj/codemem/blob/a76ce405b5014e8ed0d2d3e956a2c770d75305cb/packages/core/src/store.ts"
+      },
+      {
+        "id": "db",
+        "label": "Database connection primitives",
+        "path": "packages/core/src/db.ts",
+        "symbol": "better-sqlite3 connection, schema readiness and compatibility, local database setup and JSON helpers",
+        "url": "https://github.com/kunickiaj/codemem/blob/a76ce405b5014e8ed0d2d3e956a2c770d75305cb/packages/core/src/db.ts"
+      },
+      {
+        "id": "kinds",
+        "label": "Memory kind catalog",
+        "path": "packages/core/src/memory-kinds.ts",
+        "symbol": "Seven explicit remember kinds plus observer-written session_summary; shared validation catalog",
+        "url": "https://github.com/kunickiaj/codemem/blob/a76ce405b5014e8ed0d2d3e956a2c770d75305cb/packages/core/src/memory-kinds.ts"
+      },
+      {
+        "id": "search",
+        "label": "Search and scope filtering",
+        "path": "packages/core/src/search.ts",
+        "symbol": "FTS5/BM25 retrieval, query sanitization, recency/kind/trust scoring, ownership context and visible-scope enforcement",
+        "url": "https://github.com/kunickiaj/codemem/blob/a76ce405b5014e8ed0d2d3e956a2c770d75305cb/packages/core/src/search.ts"
+      },
+      {
+        "id": "pack",
+        "label": "Memory pack builder",
+        "path": "packages/core/src/pack.ts",
+        "symbol": "Search-result combination, optional semantic candidates, token-budgeted pack rendering, bounded scans and trace generation",
+        "url": "https://github.com/kunickiaj/codemem/blob/a76ce405b5014e8ed0d2d3e956a2c770d75305cb/packages/core/src/pack.ts"
+      },
+      {
+        "id": "provenance",
+        "label": "Memory creation provenance",
+        "path": "packages/core/src/memory-creation-provenance.ts",
+        "symbol": "Immutable local-creation snapshots bound to source identity, scope and content; records inbound foreign revisions as negative evidence",
+        "url": "https://github.com/kunickiaj/codemem/blob/a76ce405b5014e8ed0d2d3e956a2c770d75305cb/packages/core/src/memory-creation-provenance.ts"
+      },
+      {
+        "id": "ledger",
+        "label": "Retrieval ledger",
+        "path": "packages/core/src/retrieval-ledger.ts",
+        "symbol": "Attempt/exposure records, selected/dropped dispositions, filters and scores, latency/token metadata, retention and privacy purge",
+        "url": "https://github.com/kunickiaj/codemem/blob/a76ce405b5014e8ed0d2d3e956a2c770d75305cb/packages/core/src/retrieval-ledger.ts"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Published vulnerability-reporting guidance; checked for contact email",
+        "url": "https://github.com/kunickiaj/codemem/blob/a76ce405b5014e8ed0d2d3e956a2c770d75305cb/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Definitions for project measurement domains only; not codemem results",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned workload and operation definitions only; not run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Initial benchmark status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project-wide execution status only; not codemem results",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The curated roster places codemem at ordinal 132, slug codemem, and lists https://github.com/kunickiaj/codemem with explicit locator status. Its pinned Atlas URL is retained only for roster attribution. GitHub identifies main as the default branch; the official main feed reports full head a76ce405b5014e8ed0d2d3e956a2c770d75305cb, updated 2026-11-25T08:03:39Z. Review time: 2026-11-25T08:24:16Z (UTC; 2026-11-25 00:24:16 PST, America/Los_Angeles).",
+        "sources": [
+          "catalog",
+          "atlas",
+          "repo",
+          "head",
+          "revision"
+        ]
+      },
+      {
+        "text": "The system captures coding-agent sessions and tool activity through host plugins/hooks, transforms events into typed memories with an observer model, and surfaces contextual memories through prompt injection, MCP, CLI, or Pi-native tools. Its README warns that local SQLite storage does not mean local-only processing: observer context is sent to the configured model/provider and can incur cost or consume plan usage.",
+        "sources": [
+          "readme",
+          "store",
+          "kinds"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The primary store is a local better-sqlite3 database with a versioned schema. Memory rows carry structured fields including kind, title/subtitle, body, confidence, tags, visibility, workspace kind, origin source, trust state, narrative/facts/concepts, file references, prompt/session identifiers, project, active/deleted state and metadata. The README documents SQLite FTS5 BM25 plus sqlite-vec semantic retrieval; vector indexing is a derived retrieval path rather than the only memory representation.",
+        "sources": [
+          "readme",
+          "db",
+          "store",
+          "provenance"
+        ]
+      },
+      {
+        "text": "The canonical explicit memory-kind catalog accepts discovery, change, feature, bugfix, refactor, decision and exploration; observer-written session_summary is also allowed by the store. Integrations include OpenCode, Claude Code, Codex and Pi, plus MCP and a local Viewer. The README describes multiple host adapters feeding a common observer/capture path.",
+        "sources": [
+          "kinds",
+          "readme",
+          "store"
+        ]
+      },
+      {
+        "text": "Projects identify repository/workspace context; visibility and workspace kind distinguish personal/private and shareable memory, while device and scope identity support project sharing and synchronization. Optional team/device coordination and peer sync extend the local store across devices; they are additional services, not a claim that every deployment uses a remote coordinator.",
+        "sources": [
+          "readme",
+          "search"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Automatic writes begin with host events and captured conversation/tool activity. A queue-first Viewer path durably accepts raw event envelopes before SQLite ingestion; hooks can spool exact envelopes locally when the Viewer is unavailable. Observer processing turns captured context into typed memories. Explicit interfaces also support remembering supported memory kinds. Store creation/provenance code records immutable local-creation snapshots in the write transaction, including source identity, scope and a content snapshot; inbound foreign revisions are separately recorded.",
+        "sources": [
+          "readme",
+          "store",
+          "kinds",
+          "provenance"
+        ]
+      },
+      {
+        "text": "The inspected store exposes CRUD and mutation surfaces and the row model carries active/deleted state, but the inspected source subset did not establish one general user-facing update or hard-delete contract across all integrations. The README documents sharing removal as stopping future delivery while already copied memories may remain; access revocation is therefore not remote erasure. Physical deletion, retention, backup erasure and correction behavior need path-specific review before making stronger claims.",
+        "sources": [
+          "store",
+          "readme",
+          "provenance"
+        ]
+      },
+      {
+        "text": "Retrieval uses FTS5/BM25 search and optional vector candidates; pack construction fuses candidate lanes, deduplicates, ranks, renders memory sections and applies an approximate token budget. Search scoring considers kind, recency, role and trust state. File and concept references can add candidates beyond ordinary text matching. The README describes automatic prompt context injection and explicit search/pack/get/timeline/explain-style tools.",
+        "sources": [
+          "readme",
+          "search",
+          "pack",
+          "store"
+        ]
+      },
+      {
+        "text": "Search constructs an ownership context from actor/device identity, claimed peer devices and visible scope IDs, and sets scope visibility enforcement on the read path. Caller project/scope filters narrow results within that context. This establishes intended application-level filtering in inspected source, not measured resistance to every cross-scope attack or proof of an authenticated multi-tenant boundary.",
+        "sources": [
+          "search",
+          "store",
+          "readme"
+        ]
+      },
+      {
+        "text": "The retrieval ledger records attempt and exposure metadata: surface/trigger/status, candidate and selected counts, latency, token estimates or output tokens, query hash/length, filters, bounded working-set paths, scores, reason codes, delivery and candidate disposition. The README says it avoids storing prompt text, pack text, memory content or absolute paths in the ledger; retention and privacy-purge operations exist. Local ledger data is diagnostic evidence, not adjudicated answer correctness.",
+        "sources": [
+          "ledger",
+          "readme",
+          "pack"
+        ]
+      },
+      {
+        "text": "Memory creation snapshots and source bindings preserve some provenance: source device identity, scope and immutable content at creation; later inbound foreign revisions are recorded separately. Session, project, origin, prompt and file metadata can support context lineage. These fields do not guarantee that every memory has a source citation, quote-level evidence, trusted author, or verified factual support.",
+        "sources": [
+          "provenance",
+          "store",
+          "readme"
+        ]
+      },
+      {
+        "text": "Efficiency mechanisms visible in source and docs include indexed FTS5, vector search, bounded candidate scans, batched pack assembly, approximate output-token budgeting, cached/replayed prompt context, background event ingestion, and bounded ledger payloads. Operators can inspect status, diagnostics, capture backlog, retrieval traces/ledger, store statistics and Viewer health. Optional semantic search/observer providers and synchronization add setup, resource, privacy and network dependencies.",
+        "sources": [
+          "pack",
+          "search",
+          "ledger",
+          "readme",
+          "db"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "Search and automatic context packing are implemented, but no answerability or abstention workload was run.",
+        "sources": [
+          "search",
+          "pack",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "The database has active/deleted and trust-state fields, but no controlled correction sequence or post-correction probes were run.",
+        "sources": [
+          "store",
+          "provenance",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No forget/delete residue, backup, or recipient-copy probe was run; documentation says already-synchronized copies may remain after access removal.",
+        "sources": [
+          "readme",
+          "store",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Search applies actor/device and visible-scope filters, but no adversarial cross-project, cross-device, or cross-principal workload was run.",
+        "sources": [
+          "search",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source and retrieval provenance fields exist; no retrieved claims were adjudicated against evidence or citations.",
+        "sources": [
+          "provenance",
+          "ledger",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The retrieval ledger supports per-attempt latency metadata, but this review collected no runtime timing observations.",
+        "sources": [
+          "ledger",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Source provides estimates/usage instrumentation and documents provider costs, but this review collected no token, charge, or corpus-attributed storage measurements.",
+        "sources": [
+          "ledger",
+          "pack",
+          "readme",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a source and documentation review at the verified current main head. No codemem runtime, tests, benchmarks, or benchmark fixture operations were run. Source presence does not establish capture coverage, recall correctness, confidence calibration, correction/deletion completeness, scope safety, reliability, latency, cost, or storage efficiency.",
+        "sources": [
+          "repo",
+          "head",
+          "revision",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "The README documents that captured context is sent to the configured observer model, potentially incurring charges, and that remote MCP exposure is an advanced configuration; it cautions against exposing the localhost Viewer publicly. Project sharing stops future delivery when access is removed, but already copied memories can remain on another device.",
+        "sources": [
+          "readme",
+          "security"
+        ]
+      },
+      {
+        "text": "Review coverage was selective: README, core store/database/search/pack, memory kinds, creation provenance, and retrieval ledger. The broader observer implementation, all host adapters, every mutation route, synchronization/coordinator protocol, all schema migrations and deployment configurations were not exhaustively audited. Exact correction, permanent deletion and cross-principal authorization semantics remain unknown from this inspection.",
+        "sources": [
+          "readme",
+          "store",
+          "db",
+          "search",
+          "pack",
+          "provenance",
+          "ledger"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No codemem command, system runtime, tests, or fixture operation was executed during this review.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Project metrics and fixture define intended measurement cases; they are not codemem outcomes. All seven metric domains remain unmeasured.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ]
+  }
+}

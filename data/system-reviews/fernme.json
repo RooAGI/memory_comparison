@@ -1,0 +1,433 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 237,
+    "slug": "fernme",
+    "name": "FERNme",
+    "repository": "https://github.com/mirkofr/FERNme",
+    "branch": "main",
+    "revision": "e1763d50cd3700bdb3db46f0903b8c28662edc8b",
+    "reviewed_at": "2026-11-25T20:20:43Z",
+    "review_timezone": "UTC (2026-11-25 12:20:43 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": null,
+      "source_url": "https://www.fernme.dev/",
+      "note": "Checked the official pinned README and official project website; neither publishes a contact email. No email was inferred from account or commit metadata or third-party directories."
+    },
+    "summary": "FERNme is a user-personalization memory library with a deterministic weighted graph and event log, SQLite or Postgres stores, REST and MCP interfaces, and optional semantic search and proposal enrichment. The review records source observations only; no local benchmark or runtime result was produced.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/fernme.md"
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository page",
+        "path": "repository metadata",
+        "symbol": "canonical repository mirkofr/FERNme; default branch main",
+        "url": "https://github.com/mirkofr/FERNme"
+      },
+      {
+        "id": "head",
+        "label": "Official main commit API",
+        "path": "commits/main",
+        "symbol": "current full head e1763d50cd3700bdb3db46f0903b8c28662edc8b",
+        "url": "https://api.github.com/repos/mirkofr/FERNme/commits/main"
+      },
+      {
+        "id": "tree",
+        "label": "Reviewed repository tree",
+        "path": "repository",
+        "symbol": "commit e1763d50cd3700bdb3db46f0903b8c28662edc8b",
+        "url": "https://github.com/mirkofr/FERNme/tree/e1763d50cd3700bdb3db46f0903b8c28662edc8b"
+      },
+      {
+        "id": "readme",
+        "label": "Official project README",
+        "path": "README.md",
+        "symbol": "architecture, interfaces, metric claims, evaluation scope",
+        "url": "https://github.com/mirkofr/FERNme/blob/e1763d50cd3700bdb3db46f0903b8c28662edc8b/README.md"
+      },
+      {
+        "id": "graph",
+        "label": "Core graph types",
+        "path": "fernme/core/graph.py",
+        "symbol": "Edge, UserGraph, AssocGraph, Event",
+        "url": "https://github.com/mirkofr/FERNme/blob/e1763d50cd3700bdb3db46f0903b8c28662edc8b/fernme/core/graph.py"
+      },
+      {
+        "id": "mapping",
+        "label": "Event mapping",
+        "path": "fernme/write/mapping.py",
+        "symbol": "deterministic structured event and tag mapping",
+        "url": "https://github.com/mirkofr/FERNme/blob/e1763d50cd3700bdb3db46f0903b8c28662edc8b/fernme/write/mapping.py"
+      },
+      {
+        "id": "hebbian",
+        "label": "Hebbian write and decay",
+        "path": "fernme/write/hebbian.py",
+        "symbol": "saturating deterministic graph updates and ACT-R decay",
+        "url": "https://github.com/mirkofr/FERNme/blob/e1763d50cd3700bdb3db46f0903b8c28662edc8b/fernme/write/hebbian.py"
+      },
+      {
+        "id": "card",
+        "label": "Prompt card compiler",
+        "path": "fernme/retrieve/card.py",
+        "symbol": "activation ranking, decay, bounded wire card, token estimate",
+        "url": "https://github.com/mirkofr/FERNme/blob/e1763d50cd3700bdb3db46f0903b8c28662edc8b/fernme/retrieve/card.py"
+      },
+      {
+        "id": "activation",
+        "label": "Spreading activation",
+        "path": "fernme/retrieve/activation.py",
+        "symbol": "graph-based context retrieval",
+        "url": "https://github.com/mirkofr/FERNme/blob/e1763d50cd3700bdb3db46f0903b8c28662edc8b/fernme/retrieve/activation.py"
+      },
+      {
+        "id": "sqlite",
+        "label": "SQLite store schema and operations",
+        "path": "fernme/store/sqlite_store.py",
+        "symbol": "profile-scoped rows, event storage and retrieval, deletion",
+        "url": "https://github.com/mirkofr/FERNme/blob/e1763d50cd3700bdb3db46f0903b8c28662edc8b/fernme/store/sqlite_store.py"
+      },
+      {
+        "id": "postgres",
+        "label": "Postgres store",
+        "path": "fernme/store/postgres_store.py",
+        "symbol": "parallel store implementation, migrations, transactions",
+        "url": "https://github.com/mirkofr/FERNme/blob/e1763d50cd3700bdb3db46f0903b8c28662edc8b/fernme/store/postgres_store.py"
+      },
+      {
+        "id": "service",
+        "label": "Service API",
+        "path": "fernme/service.py",
+        "symbol": "consent, observe, card, recall, edit, export, deletion and auditing",
+        "url": "https://github.com/mirkofr/FERNme/blob/e1763d50cd3700bdb3db46f0903b8c28662edc8b/fernme/service.py"
+      },
+      {
+        "id": "remote",
+        "label": "Remote MCP authentication",
+        "path": "fernme/api/remote.py",
+        "symbol": "bearer token verification and per-token site/user lock",
+        "url": "https://github.com/mirkofr/FERNme/blob/e1763d50cd3700bdb3db46f0903b8c28662edc8b/fernme/api/remote.py"
+      },
+      {
+        "id": "audit",
+        "label": "Audit chain",
+        "path": "fernme/audit.py",
+        "symbol": "HMAC-linked audit entry hashing and verification",
+        "url": "https://github.com/mirkofr/FERNme/blob/e1763d50cd3700bdb3db46f0903b8c28662edc8b/fernme/audit.py"
+      },
+      {
+        "id": "safety",
+        "label": "Untrusted input sanitation",
+        "path": "fernme/safety.py",
+        "symbol": "tag and gloss filters, injection-like text handling",
+        "url": "https://github.com/mirkofr/FERNme/blob/e1763d50cd3700bdb3db46f0903b8c28662edc8b/fernme/safety.py"
+      },
+      {
+        "id": "semantic",
+        "label": "Optional semantic search documentation",
+        "path": "docs/semantic.md",
+        "symbol": "local optional embedding search and keyword hybrid behavior",
+        "url": "https://github.com/mirkofr/FERNme/blob/e1763d50cd3700bdb3db46f0903b8c28662edc8b/docs/semantic.md"
+      },
+      {
+        "id": "embedding",
+        "label": "Embedding guide",
+        "path": "docs/embedding.md",
+        "symbol": "store setup, scope identity, transactions and hosting guidance",
+        "url": "https://github.com/mirkofr/FERNme/blob/e1763d50cd3700bdb3db46f0903b8c28662edc8b/docs/embedding.md"
+      },
+      {
+        "id": "security",
+        "label": "Security and limitations",
+        "path": "SECURITY.md",
+        "symbol": "threat model, deployment limits, privacy boundaries",
+        "url": "https://github.com/mirkofr/FERNme/blob/e1763d50cd3700bdb3db46f0903b8c28662edc8b/SECURITY.md"
+      },
+      {
+        "id": "website",
+        "label": "Official project website",
+        "path": "website",
+        "symbol": "contact email checked; none published",
+        "url": "https://www.fernme.dev/"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Catalog identity and Atlas locator attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 237 FERNme entry; Atlas attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas locator attribution",
+        "path": "content/systems/fernme.md",
+        "symbol": "locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/fernme.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes FERNme as the Fuzzy-Edged Recall Network, a user-personalization memory layer with a Python service, MCP and REST interfaces, and a graph UI. Its copyright notice names Acquilab Inc.; no maintainer identity is inferred from account or commit metadata. The project catalog supplies the explicit repository locator and Atlas attribution; the Atlas page is used only for roster context.",
+        "sources": [
+          "readme",
+          "repo",
+          "roster",
+          "atlas"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The core model separates a sparse per-user preference graph, a site-level association graph, and event records called the Cabinet. User edges store weight, confidence, source state, reinforcement timing/count, fast weight, salience, and stated/inferred provenance; optional typed entities and relations extend the model.",
+        "sources": [
+          "graph",
+          "sqlite"
+        ]
+      },
+      {
+        "text": "SQLite is the zero-setup store and Postgres implements the same store interface. Tables include per-(site,user) graph edges, histories, events, settings and consent, alongside optional entity, document, asset and audit tables; site-level association edges and population-prior state are separate.",
+        "sources": [
+          "sqlite",
+          "postgres"
+        ]
+      },
+      {
+        "text": "Event mapping turns event type, item catalog tags and supplied tags into attributes deterministically. Hebbian updates adjust user and co-occurrence weights; retrieval compiles a bounded card by spreading activation rather than full transcript injection.",
+        "sources": [
+          "mapping",
+          "hebbian",
+          "activation",
+          "card",
+          "readme"
+        ]
+      },
+      {
+        "text": "The official README lists REST, MCP, and a local graph UI, with optional document/photo integrations and opt-in local semantic search. These are documented interfaces, not end-to-end deployments checked in this review.",
+        "sources": [
+          "readme",
+          "semantic",
+          "service"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: observe requires consent, sanitizes tags/glosses, maps payload fields to graph attributes, updates graph state, saves it, appends a Cabinet event, and writes an audit entry. The deterministic hot path has no LLM call; separate proposal enrichment does not alter memory truth before acceptance.",
+        "sources": [
+          "service",
+          "mapping",
+          "hebbian"
+        ]
+      },
+      {
+        "text": "Update/correction: repeated observations reinforce edges; edit creates a stated override edge that does not decay. Optional configured curation can demote conflicting older values and append supersede events; the source does not establish correction accuracy outside a measured probe.",
+        "sources": [
+          "service",
+          "card",
+          "hebbian"
+        ]
+      },
+      {
+        "text": "Delete: delete and forget_everywhere remove profile data and recompute the site prior; forget_everywhere also records a content-free audit event. Optional managed files and photo data have corresponding purge paths. The inspected source cannot establish removal from backups, snapshots, or operator copies.",
+        "sources": [
+          "service",
+          "sqlite",
+          "security"
+        ]
+      },
+      {
+        "text": "Retrieval: card applies activation over user state and an association view filtered by contributor threshold, ranks bounded attributes, and includes settings; recall queries Cabinet events by site/user and optional type/text. Optional local semantic search can blend embedding and keyword scores when installed.",
+        "sources": [
+          "service",
+          "card",
+          "activation",
+          "sqlite",
+          "semantic"
+        ]
+      },
+      {
+        "text": "Scope: core stores filter user-scoped data by both site and user and the service checks consent; remote bearer tokens bind to one profile. The project says REST/MCP identifiers alone are not a hosted multi-user auth layer, so embedding applications should supply authenticated identities server-side.",
+        "sources": [
+          "sqlite",
+          "postgres",
+          "service",
+          "remote",
+          "embedding",
+          "security"
+        ]
+      },
+      {
+        "text": "Provenance and evidence: graph edges retain stated/inferred provenance and source state; Cabinet events keep the payload and mapped attributes; audit entries are HMAC-linked and may use keyed memory references. These record application evidence but do not prove factual truth or source authenticity.",
+        "sources": [
+          "graph",
+          "sqlite",
+          "audit",
+          "service",
+          "readme",
+          "safety"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Spreading activation and bounded card selection are visible in source; no answerable probe or calibrated abstention workload was run.",
+        "sources": [
+          "activation",
+          "card",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Reinforcement, decay, overrides and optional conflict curation exist in source; post-correction recall was not evaluated.",
+        "sources": [
+          "hebbian",
+          "service",
+          "card",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Profile data, events, optional managed files, and prior contributions have delete paths; backup and replica propagation were not checked.",
+        "sources": [
+          "service",
+          "sqlite",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Per-site/user filters, consent checks and token profile binding are source-visible; no adversarial cross-scope probe was performed.",
+        "sources": [
+          "sqlite",
+          "remote",
+          "security",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citations",
+        "status": "unmeasured",
+        "evidence": "Provenance, Cabinet evidence, explanations and audit records exist; factual support precision was not measured.",
+        "sources": [
+          "graph",
+          "service",
+          "audit",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No latency distribution or scheduled write-to-recall measurement was produced for this system review.",
+        "sources": [
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "The source bounds the card and provides a token estimate, but this review ran no measured token/cost workload.",
+        "sources": [
+          "card",
+          "readme",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Sparse graph and prior structures are source-visible; persistent bytes per accepted item were not measured.",
+        "sources": [
+          "graph",
+          "sqlite",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Observability",
+        "status": "unmeasured",
+        "evidence": "Audit verification and graph/history/health interface are documented; live telemetry was not collected.",
+        "sources": [
+          "audit",
+          "readme",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "Source inspection cannot establish runtime quality, real-user usefulness, authorization supplied by an integrating host, or deletion propagation across backups and filesystem snapshots.",
+        "sources": [
+          "security",
+          "embedding",
+          "record"
+        ]
+      },
+      {
+        "text": "The official README labels its published benchmark inputs synthetic or LLM-authored, says FERNme does not win every recall benchmark, and describes a real-human pilot as pending. No such claims are treated as this review's independent measurement.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "FERNme's security guide says its database is not encrypted at rest by the project and rate limiting is not implemented; production deployments need host controls.",
+        "sources": [
+          "security"
+        ]
+      },
+      {
+        "text": "No system runtime, tests, or benchmarks were run; this review is pinned to source SHA e1763d50cd3700bdb3db46f0903b8c28662edc8b.",
+        "sources": [
+          "head",
+          "tree"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "metrics_url": "../METRICS.md",
+      "record_url": "../results/initial-baselines-status.json",
+      "fixture_url": "../fixtures/memory-benchmark-v1.json",
+      "note": "No FERNme runtime, tests, or benchmarks were run for this source review. Project definitions and fixtures are not FERNme measured results."
+    }
+  }
+}

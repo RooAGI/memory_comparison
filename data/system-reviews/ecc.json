@@ -1,0 +1,376 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "ecc",
+    "name": "ECC",
+    "ordinal": 206,
+    "repository": "https://github.com/affaan-m/ECC",
+    "listed_repository": "https://github.com/affaan-m/ECC",
+    "repository_status": "explicit",
+    "branch": "main",
+    "revision": "4adeee6732a12d1540f49a4d50a38ce8c97f9a53",
+    "reviewed_at": "2026-11-25T11:58:45Z",
+    "review_timezone": "UTC (2026-11-25 03:58:45 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "ECC is a multi-harness agent engineering toolkit. Its Unified Memory Vault stores scoped Markdown records and offers create-only writes, lexical search, ID reads, and diagnostics through a CLI and optional local MCP server. This assessment covers that explicit cross-harness memory facility; it does not treat ECC's separate continuous-learning workflows as the same store.",
+    "atlas_locator": {
+      "ordinal": 206,
+      "name": "ECC",
+      "slug": "ecc",
+      "listed_repository": "https://github.com/affaan-m/ECC",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/ecc.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": "affaan@ecc.tools",
+      "source_url": "https://github.com/affaan-m/ECC/blob/4adeee6732a12d1540f49a4d50a38ce8c97f9a53/SECURITY.md",
+      "checked_urls": [
+        "https://github.com/affaan-m/ECC/blob/4adeee6732a12d1540f49a4d50a38ce8c97f9a53/README.md",
+        "https://github.com/affaan-m/ECC/blob/4adeee6732a12d1540f49a4d50a38ce8c97f9a53/SECURITY.md"
+      ],
+      "note": "The official pinned SECURITY.md publishes affaan@ecc.tools for vulnerability reports and says security@ecc.tools is an unmonitored alias. The pinned README was also checked and publishes no email. No profile or commit metadata or third-party directory was used."
+    },
+    "contact_email": "affaan@ecc.tools",
+    "contact_email_source_url": "https://github.com/affaan-m/ECC/blob/4adeee6732a12d1540f49a4d50a38ce8c97f9a53/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/affaan-m/ECC/blob/4adeee6732a12d1540f49a4d50a38ce8c97f9a53/README.md",
+      "https://github.com/affaan-m/ECC/blob/4adeee6732a12d1540f49a4d50a38ce8c97f9a53/SECURITY.md"
+    ],
+    "contact_email_note": "The official pinned SECURITY.md publishes affaan@ecc.tools for vulnerability reports and identifies security@ecc.tools as an unmonitored alias. The pinned README was also checked and publishes no email. These exact URLs were checked; no profile or commit metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated memory-system roster",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 206 identity, slug, listed repository, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster entry (identity/locator attribution only)",
+        "path": "content/systems/ecc.md",
+        "symbol": "Curated roster attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/ecc.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "Repository page",
+        "symbol": "Public affaan-m/ECC repository; default branch main",
+        "url": "https://github.com/affaan-m/ECC"
+      },
+      {
+        "id": "feed",
+        "label": "Official main commit feed",
+        "path": "main Atom feed",
+        "symbol": "Current main head SHA and feed updated timestamp 2026-11-20T01:13:45Z",
+        "url": "https://github.com/affaan-m/ECC/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Official head commit",
+        "path": "Commit page",
+        "symbol": "Full current main head 4adeee6732a12d1540f49a4d50a38ce8c97f9a53",
+        "url": "https://github.com/affaan-m/ECC/commit/4adeee6732a12d1540f49a4d50a38ce8c97f9a53"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "ECC overview, cross-harness memory and trust model, install/support description",
+        "url": "https://github.com/affaan-m/ECC/blob/4adeee6732a12d1540f49a4d50a38ce8c97f9a53/README.md"
+      },
+      {
+        "id": "cli",
+        "label": "Memory CLI",
+        "path": "scripts/memory.js",
+        "symbol": "CLI commands and save/search/read/doctor interface; no update/delete command",
+        "url": "https://github.com/affaan-m/ECC/blob/4adeee6732a12d1540f49a4d50a38ce8c97f9a53/scripts/memory.js"
+      },
+      {
+        "id": "vault",
+        "label": "Memory vault implementation",
+        "path": "scripts/lib/memory-vault.js",
+        "symbol": "Scope roots, create-only save, bounded file scan, lexical scoring, read and doctor behavior",
+        "url": "https://github.com/affaan-m/ECC/blob/4adeee6732a12d1540f49a4d50a38ce8c97f9a53/scripts/lib/memory-vault.js"
+      },
+      {
+        "id": "format",
+        "label": "Memory vault format",
+        "path": "scripts/lib/memory-vault-format.js",
+        "symbol": "Record fields, enums, bounds, validation and secret detection",
+        "url": "https://github.com/affaan-m/ECC/blob/4adeee6732a12d1540f49a4d50a38ce8c97f9a53/scripts/lib/memory-vault-format.js"
+      },
+      {
+        "id": "mcp",
+        "label": "Memory MCP server",
+        "path": "scripts/memory-mcp.mjs",
+        "symbol": "memory_save/search/read/doctor tools, host-bound harness filtering, user-scope authorization",
+        "url": "https://github.com/affaan-m/ECC/blob/4adeee6732a12d1540f49a4d50a38ce8c97f9a53/scripts/memory-mcp.mjs"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Private vulnerability reporting email affaan@ecc.tools; security@ecc.tools alias is not monitored",
+        "url": "https://github.com/affaan-m/ECC/blob/4adeee6732a12d1540f49a4d50a38ce8c97f9a53/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project benchmark metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Project benchmark metric definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project-wide execution status is not_run; no ECC-specific system row",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Benchmark probe definitions; not measurements",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes ECC as an open-source, multi-harness engineering toolkit combining agents, skills, rules, hooks, memory and security scanning. It distributes harness-specific adapters and calls its Memory Vault a local, inspectable Markdown format shared across supported harnesses; it is not a hosted memory service.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The catalog resolves ordinal 206 to ECC, slug ecc, listed repository https://github.com/affaan-m/ECC, with explicit repository attribution. The pinned Atlas entry is retained for curated identity and locator context only; it is not assessment evidence.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The official public repository page identifies main as the default branch. The official main Atom feed reports full current head 4adeee6732a12d1540f49a4d50a38ce8c97f9a53, updated 2026-11-20T01:13:45Z; the official commit page identifies that commit on main. Review timestamp: 2026-11-25T11:58:45Z UTC (2026-11-25 03:58:45 PST; America/Los_Angeles).",
+        "sources": [
+          "repo",
+          "feed",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "ECC is a broader toolkit with platform adapters; the reviewed persistent memory subsystem is a local file vault with CLI and optional stdio MCP entry points. The README distinguishes this vault from the separate continuous-learning path that proposes reusable skill changes.",
+        "sources": [
+          "readme",
+          "cli",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Memory documents are Markdown files with validated frontmatter. Their schema includes a stable ID, title, kind, scope, trust, status, source harness, target harnesses, tags, linked memory IDs, timestamps and body. Kinds include context, decision, fact, handoff, lesson, note, preference and runbook.",
+        "sources": [
+          "format"
+        ]
+      },
+      {
+        "text": "Project and team records live under the project vault's separate scope directories, normally rooted at .ecc/memory; user records live under ~/.ecc/memory. Environment variables can override these roots. Project memory creates a restrictive .gitignore; path and symlink checks enforce trusted-root boundaries.",
+        "sources": [
+          "readme",
+          "vault"
+        ]
+      },
+      {
+        "text": "The implementation sets directory permissions to 0700 and creates records with a create-only filesystem operation. The source also bounds body/document sizes and checks for suspected secrets before accepting or loading records.",
+        "sources": [
+          "vault",
+          "format"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: the CLI exposes init, save and handoff, while the optional MCP surface exposes memory_save. New records default to project scope, kind note, source harness unknown, all target harnesses, trust unreviewed and status active. Writes are create-only; a duplicate ID fails rather than replacing the existing document.",
+        "sources": [
+          "cli",
+          "vault",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Update and delete: the reviewed CLI and MCP tool lists expose no update, supersede, reject or delete operation. The schema has active, rejected and superseded statuses, but the save path assigns active and unreviewed automatically. The reviewed interfaces therefore do not demonstrate a supported mutation or erasure workflow.",
+        "sources": [
+          "cli",
+          "vault",
+          "format",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Retrieval: search scans Markdown documents, keeps active records, applies optional scope, kind, trust and target-harness filters, and ranks matches using deterministic lexical scoring across title, tags, metadata and body. It returns metadata and a short excerpt; ID read returns the selected full record and active linked backlinks.",
+        "sources": [
+          "vault",
+          "mcp"
+        ]
+      },
+      {
+        "text": "MCP scope: the server derives a harness identity from its host configuration and applies it as a target-harness filter to search, read and doctor. Project/team are the default recall scopes; user scope requires explicit server enablement. The server describes itself as host-bound and does not provide OAuth or delegated credential authentication.",
+        "sources": [
+          "mcp",
+          "vault",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Lexical search and ID read are source-visible, but no answerable or unanswerable cases were run and no accuracy or abstention result was collected.",
+        "sources": [
+          "vault",
+          "mcp",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "The reviewed save interfaces are create-only and expose no supported correction operation; no correction sequence or stale-value probe was run.",
+        "sources": [
+          "cli",
+          "vault",
+          "mcp",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion and forget compliance",
+        "status": "unmeasured",
+        "evidence": "No deletion tool is exposed in the inspected CLI or MCP interface. No deletion or post-deletion leak probe was run.",
+        "sources": [
+          "cli",
+          "mcp",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Separate local roots and MCP target-harness filtering are visible in source. No cross-scope or adversarial isolation probes were run.",
+        "sources": [
+          "vault",
+          "mcp",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Records carry source-harness attribution and linked memory IDs, but no citation-support precision or claim-level citation coverage was evaluated.",
+        "sources": [
+          "format",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "Source contains scan bounds but no measured latency distribution was collected.",
+        "sources": [
+          "vault",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timed acknowledged-write-to-correct-recall workload was executed.",
+        "sources": [
+          "vault",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "The reviewed local memory operations do not report a measured token or provider-cost result; none was collected.",
+        "sources": [
+          "readme",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The implementation sets per-record and scan bounds, but no corpus-attributed disk-byte measurement was made.",
+        "sources": [
+          "vault",
+          "format",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The inspected retrieval implementation is lexical and file-scanning; source inspection does not establish recall quality, ranking usefulness or production performance.",
+        "sources": [
+          "vault"
+        ]
+      },
+      {
+        "text": "MCP harness filtering is a host integration boundary. The local CLI permits explicit scopes and optional target-harness filtering, and the MCP server does not supply OAuth or delegated credentials; deployment authorization still depends on the host environment.",
+        "sources": [
+          "cli",
+          "mcp"
+        ]
+      },
+      {
+        "text": "The record schema includes a sourceHarness and internal links but no required source URL or claim-level evidence field. The fixed trust vocabulary contains only unreviewed, so stored content is explicitly context rather than verified policy.",
+        "sources": [
+          "format",
+          "readme"
+        ]
+      },
+      {
+        "text": "The review inspected the README and selected memory CLI, vault format, vault implementation, MCP server and security policy at one pinned commit. It did not inspect every harness adapter, hook, installer, learning workflow, deployment or host permission path.",
+        "sources": [
+          "readme",
+          "cli",
+          "vault",
+          "format",
+          "mcp",
+          "security"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No ECC runtime, tests or benchmark workloads were run for this review. Project status is not_run and contains no ECC-specific system row; the fixture is a probe definition, not a measurement."
+    }
+  }
+}

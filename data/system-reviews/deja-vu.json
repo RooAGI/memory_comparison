@@ -1,0 +1,366 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "deja-vu",
+    "name": "deja-vu",
+    "ordinal": 185,
+    "repository": "https://github.com/vshulcz/deja-vu",
+    "listed_repository": "https://github.com/vshulcz/deja-vu",
+    "branch": "main",
+    "revision": "76aaac6b5e4c74d51916d604bbccaf34d50eb3de",
+    "reviewed_at": "2026-11-25T10:47:26Z",
+    "review_timezone": "UTC (2026-11-25 02:47:26 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "deja-vu is a local Go application that indexes existing coding-agent transcripts into a rebuildable inverted index and exposes search, context recall, handoff, and recovery through CLI/TUI, MCP, and hooks. It also supports explicit local notes and curated repository notes. This is a pinned source review; no runtime, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 185,
+      "name": "deja-vu",
+      "slug": "deja-vu",
+      "listed_repository": "https://github.com/vshulcz/deja-vu",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/deja-vu.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/vshulcz/deja-vu/blob/76aaac6b5e4c74d51916d604bbccaf34d50eb3de/README.md",
+      "checked_urls": [
+        "https://github.com/vshulcz/deja-vu/blob/76aaac6b5e4c74d51916d604bbccaf34d50eb3de/README.md",
+        "https://github.com/vshulcz/deja-vu/blob/76aaac6b5e4c74d51916d604bbccaf34d50eb3de/SECURITY.md"
+      ],
+      "note": "Checked only official pinned README and SECURITY.md for a published contact email; neither publishes an email."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/vshulcz/deja-vu/blob/76aaac6b5e4c74d51916d604bbccaf34d50eb3de/README.md",
+      "https://github.com/vshulcz/deja-vu/blob/76aaac6b5e4c74d51916d604bbccaf34d50eb3de/SECURITY.md"
+    ],
+    "contact_email_note": "No contact email was published in the official pinned README or SECURITY.md. The security policy directs vulnerability reports to GitHub's private reporting path. No commit/profile metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Catalog identity and roster attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 185, deja-vu, slug deja-vu, explicit listed repository; pinned Atlas source retained for roster attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster entry, attribution only",
+        "path": "content/systems/deja-vu.md",
+        "symbol": "Curated identity and repository locator context; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/deja-vu.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "Public repository; GitHub identifies main as the default branch",
+        "url": "https://github.com/vshulcz/deja-vu"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch Atom feed",
+        "path": "commits/main.atom",
+        "symbol": "Latest main commit 76aaac6b5e4c74d51916d604bbccaf34d50eb3de; updated 2026-11-25T09:32:59Z",
+        "url": "https://github.com/vshulcz/deja-vu/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified official full-SHA head commit",
+        "path": "commit/76aaac6b5e4c74d51916d604bbccaf34d50eb3de",
+        "symbol": "Current main head 76aaac6b5e4c74d51916d604bbccaf34d50eb3de",
+        "url": "https://github.com/vshulcz/deja-vu/commit/76aaac6b5e4c74d51916d604bbccaf34d50eb3de"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product overview, supported interfaces, local indexing, privacy, memory curation, and claimed benchmark figures",
+        "url": "https://github.com/vshulcz/deja-vu/blob/76aaac6b5e4c74d51916d604bbccaf34d50eb3de/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Pinned architecture documentation",
+        "path": "docs/ARCHITECTURE.md",
+        "symbol": "Source parser registry, index format, roles, notes, redaction, ranking, and hooks",
+        "url": "https://github.com/vshulcz/deja-vu/blob/76aaac6b5e4c74d51916d604bbccaf34d50eb3de/docs/ARCHITECTURE.md"
+      },
+      {
+        "id": "security",
+        "label": "Pinned security policy",
+        "path": "SECURITY.md",
+        "symbol": "Security reporting path and product network/data scope",
+        "url": "https://github.com/vshulcz/deja-vu/blob/76aaac6b5e4c74d51916d604bbccaf34d50eb3de/SECURITY.md"
+      },
+      {
+        "id": "search",
+        "label": "Pinned search implementation",
+        "path": "internal/search/search.go",
+        "symbol": "Search hit/result shape and ranking behavior",
+        "url": "https://github.com/vshulcz/deja-vu/blob/76aaac6b5e4c74d51916d604bbccaf34d50eb3de/internal/search/search.go"
+      },
+      {
+        "id": "index",
+        "label": "Pinned index implementation",
+        "path": "internal/index/index.go",
+        "symbol": "Index format versioning, records, postings, cache/rebuild behavior",
+        "url": "https://github.com/vshulcz/deja-vu/blob/76aaac6b5e4c74d51916d604bbccaf34d50eb3de/internal/index/index.go"
+      },
+      {
+        "id": "remember",
+        "label": "Pinned remember command",
+        "path": "cmd/deja/remember.go",
+        "symbol": "Explicit note write, policy check, redaction, and index refresh",
+        "url": "https://github.com/vshulcz/deja-vu/blob/76aaac6b5e4c74d51916d604bbccaf34d50eb3de/cmd/deja/remember.go"
+      },
+      {
+        "id": "forget",
+        "label": "Pinned forget command",
+        "path": "cmd/deja/forget.go",
+        "symbol": "Session/project/date selection, ambiguity checks, and forget/unforget flow",
+        "url": "https://github.com/vshulcz/deja-vu/blob/76aaac6b5e4c74d51916d604bbccaf34d50eb3de/cmd/deja/forget.go"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Comparison domains and measurement protocol",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Specified workload only; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project execution status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Existing benchmark status; no deja-vu result asserted",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents deja-vu as a local memory/search tool for coding-agent transcripts, with a Go binary, CLI/TUI, MCP server, plugins and lifecycle hooks. Its copyright line names Vladislav Shulcz; that attribution alone does not establish operational ownership or support commitments.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The official repository page identifies main as default. Its main Atom feed and full-SHA commit page identify 76aaac6b5e4c74d51916d604bbccaf34d50eb3de as the current head. Reviewed 2026-11-25T10:47:26Z (UTC; 2026-11-25 02:47:26 PST; America/Los_Angeles).",
+        "sources": [
+          "repo",
+          "feed",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Source-specific parsers read supported harness transcript stores into a shared session/message model; file parsing can use a worker pool while index writes remain deterministically ordered. Inputs include JSONL, JSON and local SQLite stores, and indexing can work retroactively from transcripts already on disk.",
+        "sources": [
+          "architecture",
+          "readme"
+        ]
+      },
+      {
+        "text": "The default derived index is under ~/.cache/deja/index.db and is organized as length-prefixed records, token posting buckets/overlays, session offsets and a manifest. Rebuilds track changed or replaced source sessions; dead records/postings are compacted or zeroed, making the index a derived cache rather than the canonical transcript store.",
+        "sources": [
+          "architecture",
+          "index"
+        ]
+      },
+      {
+        "text": "The indexed message model preserves roles including user, assistant, tool output, files, commands, edits and summaries. The architecture guide says non-speech roles can be filtered and are not ordinarily presented as user speech; explicit notes live in JSONL stores, while repository notes are stored separately in .deja/memory.jsonl.",
+        "sources": [
+          "architecture",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Harnesses write their own transcripts; deja-vu parses and indexes them. The explicit `remember` command appends a tagged note locally or, with --repo, to curated repository memory. Its code checks write policy, masks detected secrets in notes, handles duplicate-note errors and refreshes the index unless manual indexing is configured.",
+        "sources": [
+          "remember",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Transcript rewrites are reflected in the derived index during indexing. The inspected `remember` path is append-oriented and does not establish an in-place edit/correction API for an existing local note. Repository notes are described as curated additions with content-derived IDs and union merge behavior.",
+        "sources": [
+          "index",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The `forget` command accepts session, project or date selectors and offers dry-run/list and unforget paths. The inspected flow checks ambiguous session matches before destructive work; exclusions are applied during indexing, and README says forgotten transcripts stay excluded across rebuilds. This does not demonstrate erasure of source harness transcripts, backups or every derived copy.",
+        "sources": [
+          "forget",
+          "readme"
+        ]
+      },
+      {
+        "text": "Search intersects token postings and ranks hits using lexical BM25 with bounded signals including decision/outcome state, reuse and freshness. Result objects carry snippets, match counts, scores, tiers and lifecycle/withheld/cap metadata; the README documents project, harness, date and role filters plus optional embedding-based reranking.",
+        "sources": [
+          "search",
+          "architecture",
+          "readme"
+        ]
+      },
+      {
+        "text": "Automatic hook recall can default to the working project, but MCP recall ranks that project and can include the rest of the machine; CLI search spans the store unless narrowed. Repository notes have checkout scope, while machine transcript history and local notes can be broader. These are defaults and filters rather than a tenant boundary.",
+        "sources": [
+          "architecture",
+          "readme"
+        ]
+      },
+      {
+        "text": "Session identity, source paths, timestamps, role labels and message content preserve transcript provenance; commands, file touches and edit spans support blame/origin workflows. Promoted decisions can carry lifecycle labels and changed-workspace warnings. These features do not require claim-level citations or prove that a recorded decision is correct.",
+        "sources": [
+          "architecture",
+          "readme"
+        ]
+      },
+      {
+        "text": "The architecture describes secret-pattern redaction before records are written into the derived index and warns that disabling it is unsafe. Repository notes are redacted on write and framed as untrusted when injected. Pattern-based detection does not establish complete secret detection.",
+        "sources": [
+          "architecture",
+          "readme"
+        ]
+      },
+      {
+        "text": "Append-oriented records, token buckets/overlays, offsets, compression, incremental indexing, bounded result reads and warm-index hooks are source-visible efficiency measures. CLI/search/hooks and optional usage data expose operational information; README speed and index-footprint figures remain upstream claims, not measurements from this review.",
+        "sources": [
+          "architecture",
+          "index",
+          "search",
+          "readme"
+        ]
+      },
+      {
+        "text": "The official pinned README and SECURITY.md were checked for a published contact email; neither publishes one. The security policy directs vulnerability reports through GitHub private reporting.",
+        "sources": [
+          "readme",
+          "security"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention — unmeasured. Search paths were inspected; no answerability or abstention cases were scored.",
+        "sources": [
+          "search",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured. Index replacement and lifecycle labels are present; no correction or stale-value probes were run.",
+        "sources": [
+          "index",
+          "architecture",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Deletion leakage — unmeasured. Forget exclusion behavior was inspected; no post-delete probes or erasure audit was run.",
+        "sources": [
+          "forget",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Scope isolation — unmeasured. Project-first defaults and filters were inspected; no forbidden-scope probes were run.",
+        "sources": [
+          "architecture",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Evidence support and citation coverage — unmeasured. Transcript and file/command lineage are source-visible; no claim-level adjudication was performed.",
+        "sources": [
+          "architecture",
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Retrieval latency and write-to-recall delay — unmeasured. No timed retrieval or write-to-recall schedule was run.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Tokens and cost — unmeasured. No model/API usage or cost was measured.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Storage efficiency — unmeasured. Index format was inspected; no attributable storage size was collected.",
+        "sources": [
+          "architecture",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded review inspected official README, architecture and security documents, index/search implementations, and note/forget command paths. It did not inspect every parser, plugin, policy option, embedding adapter, sync protocol or deployment; parser correctness across every supported harness is not established.",
+        "sources": [
+          "readme",
+          "architecture",
+          "index",
+          "search",
+          "remember",
+          "forget"
+        ]
+      },
+      {
+        "text": "Local project defaults and filters do not establish tenant isolation, and forgetting from deja-vu does not prove removal from the source transcript, backups or all derived artifacts.",
+        "sources": [
+          "architecture",
+          "readme",
+          "forget"
+        ]
+      },
+      {
+        "text": "No runtime, tests or benchmark fixture were executed. This review cannot establish retrieval quality, indexing correctness under concurrent mutation, deletion completeness, deployed isolation, latency, cost or storage efficiency.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No deja-vu runtime, tests or project benchmark workload was executed. Source inspection and upstream README claims are not project measurements.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

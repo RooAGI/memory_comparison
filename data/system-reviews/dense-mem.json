@@ -1,0 +1,337 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 187,
+    "slug": "dense-mem",
+    "name": "Dense-Mem",
+    "repository": "https://github.com/markhuangai/dense-mem",
+    "listed_repository": "https://github.com/markhuangai/dense-mem",
+    "branch": "main",
+    "revision": "d60ff2b9bf2c9a259f57dbc69d2a055a7903e06a",
+    "reviewed_at": "2026-11-25T10:57:27Z",
+    "review_timezone": "UTC (2026-11-25 02:57:27 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Dense-Mem is a self-hosted HTTP MCP memory server. It keeps exact, source-linked Evidence as canonical knowledge in PostgreSQL, exposes governed Remember, Recall, Trace, and retraction workflows, and uses pgvector and full-text projections for retrieval. This review describes selected source at the verified main head; no runtime, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 187,
+      "name": "Dense-Mem",
+      "slug": "dense-mem",
+      "listed_repository": "https://github.com/markhuangai/dense-mem",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dense-mem.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/markhuangai/dense-mem/blob/d60ff2b9bf2c9a259f57dbc69d2a055a7903e06a/README.md",
+      "checked_urls": [
+        "https://github.com/markhuangai/dense-mem/blob/d60ff2b9bf2c9a259f57dbc69d2a055a7903e06a/README.md"
+      ],
+      "note": "The official pinned README was checked for contact details; it provides no contact email. No commit or profile metadata or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/markhuangai/dense-mem/blob/d60ff2b9bf2c9a259f57dbc69d2a055a7903e06a/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/markhuangai/dense-mem/blob/d60ff2b9bf2c9a259f57dbc69d2a055a7903e06a/README.md"
+    ],
+    "contact_email_note": "The official pinned README was checked and publishes no contact email."
+  },
+  "contact_email": null,
+  "contact_email_source_url": "https://github.com/markhuangai/dense-mem/blob/d60ff2b9bf2c9a259f57dbc69d2a055a7903e06a/README.md",
+  "contact_email_checked_sources": [
+    "https://github.com/markhuangai/dense-mem/blob/d60ff2b9bf2c9a259f57dbc69d2a055a7903e06a/README.md"
+  ],
+  "contact_email_note": "Checked the official pinned README; it publishes no email. No profile, commit metadata, or third-party directory was used.",
+  "sources": [
+    {
+      "id": "catalog",
+      "label": "Catalog identity and ordinal",
+      "path": "data/memory-systems.json",
+      "symbol": "systems[186], ordinal 187: Dense-Mem, slug dense-mem, explicit repository locator",
+      "url": "../data/memory-systems.json"
+    },
+    {
+      "id": "atlas",
+      "label": "Atlas attribution only",
+      "path": "content/systems/dense-mem.md",
+      "symbol": "Curated identity and locator attribution only; not assessment evidence",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dense-mem.md"
+    },
+    {
+      "id": "repo",
+      "label": "Official upstream repository",
+      "path": "GitHub repository page and API",
+      "symbol": "Public canonical non-fork repository; API identifies main as default branch",
+      "url": "https://github.com/markhuangai/dense-mem"
+    },
+    {
+      "id": "head",
+      "label": "Official current main head",
+      "path": "commit/d60ff2b9bf2c9a259f57dbc69d2a055a7903e06a",
+      "symbol": "Official main Atom feed and commit page identify full current head d60ff2b9bf2c9a259f57dbc69d2a055a7903e06a; feed updated 2026-11-25T02:38:18Z",
+      "url": "https://github.com/markhuangai/dense-mem/commit/d60ff2b9bf2c9a259f57dbc69d2a055a7903e06a"
+    },
+    {
+      "id": "readme",
+      "label": "Official README",
+      "path": "README.md",
+      "symbol": "System purpose, deployment, PostgreSQL/pgvector, Redis coordination, MCP workflow, external provider boundary, and no published email",
+      "url": "https://github.com/markhuangai/dense-mem/blob/d60ff2b9bf2c9a259f57dbc69d2a055a7903e06a/README.md"
+    },
+    {
+      "id": "domain",
+      "label": "Evidence domain contract",
+      "path": "internal/domain/contract.go",
+      "symbol": "Supported Evidence-only API contract version and search projection states",
+      "url": "https://github.com/markhuangai/dense-mem/blob/d60ff2b9bf2c9a259f57dbc69d2a055a7903e06a/internal/domain/contract.go"
+    },
+    {
+      "id": "evidence",
+      "label": "Evidence trust/source types",
+      "path": "internal/domain/evidence.go",
+      "symbol": "Authority tiers: authoritative, primary, secondary, inferred, unknown",
+      "url": "https://github.com/markhuangai/dense-mem/blob/d60ff2b9bf2c9a259f57dbc69d2a055a7903e06a/internal/domain/evidence.go"
+    },
+    {
+      "id": "ledger",
+      "label": "Evidence write and ledger contracts",
+      "path": "internal/knowledge/contract/ledger.go",
+      "symbol": "Evidence content/hash/source/revision/provenance inputs and ingest results",
+      "url": "https://github.com/markhuangai/dense-mem/blob/d60ff2b9bf2c9a259f57dbc69d2a055a7903e06a/internal/knowledge/contract/ledger.go"
+    },
+    {
+      "id": "write",
+      "label": "Remember persistence contract",
+      "path": "internal/knowledge/contract/write.go",
+      "symbol": "Request-owned Remember persistence port, duplicate resolution, embedding plan, atomic commit and retract lifecycle",
+      "url": "https://github.com/markhuangai/dense-mem/blob/d60ff2b9bf2c9a259f57dbc69d2a055a7903e06a/internal/knowledge/contract/write.go"
+    },
+    {
+      "id": "source_revision",
+      "label": "Source revision implementation",
+      "path": "internal/knowledge/postgres/source_revision_repository.go",
+      "symbol": "Source kind/authority defaults, space binding, optimistic revision tokens and superseding revision handling",
+      "url": "https://github.com/markhuangai/dense-mem/blob/d60ff2b9bf2c9a259f57dbc69d2a055a7903e06a/internal/knowledge/postgres/source_revision_repository.go"
+    },
+    {
+      "id": "remember",
+      "label": "Remember assessment path",
+      "path": "internal/remember/service/submission_assessment_synchronous.go",
+      "symbol": "Synchronous assessment and commit stages for model-proposed Evidence",
+      "url": "https://github.com/markhuangai/dense-mem/blob/d60ff2b9bf2c9a259f57dbc69d2a055a7903e06a/internal/remember/service/submission_assessment_synchronous.go"
+    },
+    {
+      "id": "schema",
+      "label": "Evidence ledger schema",
+      "path": "migrations/postgres/v2_4/2026071703_v2_ledger.sql",
+      "symbol": "Canonical Evidence, source revisions, lifecycle, foreign keys and database constraints",
+      "url": "https://github.com/markhuangai/dense-mem/blob/d60ff2b9bf2c9a259f57dbc69d2a055a7903e06a/migrations/postgres/v2_4/2026071703_v2_ledger.sql"
+    },
+    {
+      "id": "occurrences",
+      "label": "Evidence occurrence schema",
+      "path": "migrations/postgres/v2_6/20260903010001_evidence_occurrence_duplicates.sql",
+      "symbol": "Append-only occurrence identities and exact duplicate aliases",
+      "url": "https://github.com/markhuangai/dense-mem/blob/d60ff2b9bf2c9a259f57dbc69d2a055a7903e06a/migrations/postgres/v2_6/20260903010001_evidence_occurrence_duplicates.sql"
+    },
+    {
+      "id": "lifecycle_contract",
+      "label": "Evidence lifecycle contract",
+      "path": "internal/knowledge/contract/lifecycle.go",
+      "symbol": "Owner-scoped retraction request reason, idempotency key and result",
+      "url": "https://github.com/markhuangai/dense-mem/blob/d60ff2b9bf2c9a259f57dbc69d2a055a7903e06a/internal/knowledge/contract/lifecycle.go"
+    },
+    {
+      "id": "lifecycle",
+      "label": "Evidence retraction implementation",
+      "path": "internal/knowledge/postgres/evidence_lifecycle_repository.go",
+      "symbol": "Owner authorization, idempotency, lifecycle event and transactional retraction effects",
+      "url": "https://github.com/markhuangai/dense-mem/blob/d60ff2b9bf2c9a259f57dbc69d2a055a7903e06a/internal/knowledge/postgres/evidence_lifecycle_repository.go"
+    },
+    {
+      "id": "spaces",
+      "label": "Memory space access model",
+      "path": "internal/domain/memory_space.go",
+      "symbol": "Private and team-shared spaces with read/write permissions",
+      "url": "https://github.com/markhuangai/dense-mem/blob/d60ff2b9bf2c9a259f57dbc69d2a055a7903e06a/internal/domain/memory_space.go"
+    },
+    {
+      "id": "recall",
+      "label": "Recall pipeline",
+      "path": "internal/recall/retrieval.go",
+      "symbol": "Candidate fusion, bounded overfetch, hydration, selection and conflict loading",
+      "url": "https://github.com/markhuangai/dense-mem/blob/d60ff2b9bf2c9a259f57dbc69d2a055a7903e06a/internal/recall/retrieval.go"
+    },
+    {
+      "id": "recall_sql",
+      "label": "PostgreSQL recall implementation",
+      "path": "internal/recall/postgres/recall_repository.go",
+      "symbol": "Full-text/vector candidate reads, temporal constraints, visibility and active space generation checks",
+      "url": "https://github.com/markhuangai/dense-mem/blob/d60ff2b9bf2c9a259f57dbc69d2a055a7903e06a/internal/recall/postgres/recall_repository.go"
+    },
+    {
+      "id": "recall_spaces",
+      "label": "Cross-space recall",
+      "path": "internal/recall/recall_spaces.go",
+      "symbol": "Recall over actor-authorized spaces and rank-fusion across branches",
+      "url": "https://github.com/markhuangai/dense-mem/blob/d60ff2b9bf2c9a259f57dbc69d2a055a7903e06a/internal/recall/recall_spaces.go"
+    },
+    {
+      "id": "mcp",
+      "label": "MCP server",
+      "path": "internal/mcp/server.go",
+      "symbol": "HTTP MCP server integration",
+      "url": "https://github.com/markhuangai/dense-mem/blob/d60ff2b9bf2c9a259f57dbc69d2a055a7903e06a/internal/mcp/server.go"
+    },
+    {
+      "id": "observability",
+      "label": "Prometheus metrics",
+      "path": "internal/observability/prometheus_metrics.go",
+      "symbol": "HTTP, recall, result count, feedback, Remember acknowledgement, token and estimated cost instruments",
+      "url": "https://github.com/markhuangai/dense-mem/blob/d60ff2b9bf2c9a259f57dbc69d2a055a7903e06a/internal/observability/prometheus_metrics.go"
+    },
+    {
+      "id": "metric_domains",
+      "label": "Project metric definitions",
+      "path": "METRICS.md",
+      "symbol": "Project benchmark metric domains; no Dense-Mem result created by this source review",
+      "url": "../METRICS.md"
+    },
+    {
+      "id": "fixture",
+      "label": "Project benchmark fixture",
+      "path": "fixtures/memory-benchmark-v1.json",
+      "symbol": "Planned cases; not run for this review",
+      "url": "../fixtures/memory-benchmark-v1.json"
+    },
+    {
+      "id": "result",
+      "label": "Project baseline status",
+      "path": "results/initial-baselines-status.json",
+      "symbol": "Existing result status, not a result from this review",
+      "url": "../results/initial-baselines-status.json"
+    }
+  ],
+  "who_what": "The catalog places Dense-Mem at ordinal 187 with slug dense-mem, an explicit repository locator, and a pinned Atlas attribution. Atlas is retained only for roster identity and locator context. The upstream README describes a self-hosted HTTP MCP memory server; it does not identify a confirmed maintainer in the reviewed material.",
+  "architecture": [
+    {
+      "text": "Dense-Mem is a standalone, self-hosted HTTP MCP server using Streamable HTTP. External clients use the /mcp endpoint; the README describes Remember, Recall, and Trace as its user-facing memory workflow.",
+      "sources": ["readme", "mcp"]
+    },
+    {
+      "text": "PostgreSQL with pgvector is the durable authority for Evidence and lifecycle. Redis coordinates multi-instance deployments; README says a single node can use process memory for coordination. Full-text and vector search are projections of canonical Evidence and expose projection states such as pending, current, and failed.",
+      "sources": ["readme", "domain", "schema", "recall_sql"]
+    },
+    {
+      "text": "The current contract is Evidence-only: exact submitted fragments and occurrences retain content and hashes, source identity/revisions, authority, owner, memory space, and lifecycle. Topics and search documents help organization and retrieval; they are derived rather than separate canonical factual claims.",
+      "sources": ["domain", "evidence", "ledger", "schema", "occurrences", "readme"]
+    }
+  ],
+  "behavior": [
+    {
+      "text": "Write: an AI client proposes Evidence through Remember. The application assesses the submission, applies deterministic policy and security checks, resolves duplicates, plans embeddings, then commits Evidence and search projections through a request-owned persistence boundary. Provider calls and embedding execution are separated from the database commit contract; replay and idempotency are explicit.",
+      "sources": ["readme", "remember", "write", "ledger"]
+    },
+    {
+      "text": "Source updates carry source keys, revision tokens, content hashes, and expected previous revision tokens. The PostgreSQL implementation binds a source to its memory space and rejects stale revision expectations; superseded source revisions remain represented in the revision history. This review did not run update scenarios.",
+      "sources": ["ledger", "source_revision", "schema"]
+    },
+    {
+      "text": "Delete/retract: the runtime lifecycle contract exposes owner-scoped Evidence retraction with a reason and idempotency key. The PostgreSQL operation authorizes the actor, locks/replays idempotent requests, records a lifecycle operation/event, then applies effects transactionally. Retraction removes an item from eligible active recall while preserving lifecycle/provenance history; it is distinct from queued private-space erasure and retention purge workflows.",
+      "sources": ["write", "lifecycle", "schema", "readme"]
+    },
+    {
+      "text": "Recall reads full-text and vector candidate branches, fuses ranked candidates, hydrates selected Evidence, and attaches conflict context. It supports optional valid-time and known-time inputs, known Evidence IDs, and topic filters. Candidate overfetch is bounded and provider/organization failures can be surfaced as explicit degradation; no recall workload was run here.",
+      "sources": ["recall", "recall_sql"]
+    }
+  ],
+  "scope_isolation": [
+    {
+      "text": "Access is separated by authenticated team, owner profile, and memory space. The domain models private and team-shared spaces with explicit read/write permissions; the actor's allowed spaces drive cross-space recall. Queries bind to a space ID and active generation, and team-shared reads use a team-specific shared space.",
+      "sources": ["spaces", "recall_spaces", "recall_sql", "schema"]
+    },
+    {
+      "text": "The README says team-shared visibility does not grant permission to change another owner's Evidence. The reviewed code therefore distinguishes visibility from owner mutation authority. This review did not execute cross-team or cross-space isolation probes, so operational isolation leakage is unmeasured.",
+      "sources": ["readme", "spaces", "lifecycle", "metric_domains", "fixture"]
+    }
+  ],
+  "provenance": [
+    {
+      "text": "Evidence records preserve exact content and hashes, source type, authority tier, source reference/key, source revision identity/token, occurrence identity, owner, and ingest identity. Authority values range from authoritative and primary to secondary, inferred, and unknown.",
+      "sources": ["evidence", "ledger", "schema", "occurrences"]
+    },
+    {
+      "text": "Remember assessment and source revision metadata are tied to writes; retractions carry a reason and idempotency key and create lifecycle history. README presents Trace as a way to explain Evidence provenance. These structures support lineage but do not prove that a source is truthful or guarantee citations in every downstream answer.",
+      "sources": ["readme", "remember", "source_revision", "lifecycle", "schema"]
+    }
+  ],
+  "efficiency_observability": [
+    {
+      "text": "The README identifies PostgreSQL/pgvector as durable storage and notes an external model provider can receive Evidence and queries; self-hosted providers are suggested when those payloads must remain within operator infrastructure. The product also requires configured embedding and verifier models for its semantic assessment/retrieval paths.",
+      "sources": ["readme", "remember"]
+    },
+    {
+      "text": "Recall separates candidate search, fusion, hydration, selection, and conflict loading, with bounded overfetch and result limits. The Prometheus implementation defines HTTP and Recall duration/result metrics, Recall feedback, Remember acknowledgement counts/duration, and token and estimated-cost telemetry. These instruments describe observability surfaces, not measured outcomes in this review.",
+      "sources": ["recall", "observability"]
+    },
+    {
+      "text": "The project benchmark domains include answerable retrieval, correction/staleness, deletion, scope isolation, evidence support/citation coverage, latency, tokens, cost, and storage. All remain unmeasured for this system in this review.",
+      "sources": ["metric_domains", "fixture"]
+    }
+  ],
+  "limitations": [
+    {
+      "text": "The service depends on configured model providers for embedding and Evidence assessment; provider outages, incompatible responses, or configuration errors can impair those paths. The README notes configured hosted providers may receive Evidence and queries.",
+      "sources": ["readme", "domain", "remember"]
+    },
+    {
+      "text": "The current contract treats exact Evidence as canonical and the source review does not establish that semantic assessment is factually correct. Trust tiers and provenance describe origin or authority classification, not independent verification of truth.",
+      "sources": ["evidence", "remember", "readme"]
+    },
+    {
+      "text": "The reviewed deletion API retracts Evidence and maintains lineage; private-space erasure and retention purge are separate background workflows. This source review did not establish physical deletion from all backups, external provider logs, or user-held exports.",
+      "sources": ["lifecycle", "schema", "readme"]
+    }
+  ],
+  "unknowns": [
+    {
+      "text": "No runtime, test suite, or benchmark was run. Accuracy, abstention, correction/staleness, deletion leakage, scope isolation, evidence support, citation coverage, latency, write-to-recall delay, token/cost usage, and storage efficiency remain unmeasured.",
+      "sources": ["metric_domains", "fixture", "result"]
+    },
+    {
+      "text": "This was a selected review of the README and key domain, write, lifecycle, search, space, MCP, and metrics paths. Behavior in uninspected adapters, deployment configurations, failure paths, and real provider/model combinations remains unknown.",
+      "sources": ["readme", "remember", "recall", "lifecycle"]
+    }
+  ],
+  "metric_domains": [
+    {
+      "text": "Answerable retrieval, abstention, and write-to-recall delay — unmeasured; no query corpus or timed workload was run.",
+      "sources": ["metric_domains", "fixture"]
+    },
+    {
+      "text": "Correction accuracy and stale-value rate — unmeasured; no correction probes were executed.",
+      "sources": ["metric_domains", "fixture"]
+    },
+    {
+      "text": "Deletion leakage — unmeasured; no post-retraction retrieval probes were run.",
+      "sources": ["metric_domains", "fixture"]
+    },
+    {
+      "text": "Scope isolation leakage — unmeasured; no cross-team or cross-space workload was run.",
+      "sources": ["metric_domains", "fixture"]
+    },
+    {
+      "text": "Evidence support precision and citation coverage — unmeasured; no generated answers were adjudicated.",
+      "sources": ["metric_domains", "fixture"]
+    },
+    {
+      "text": "Retrieval latency, tokens, cost, and storage efficiency — unmeasured; no accounting or resource workload was collected.",
+      "sources": ["metric_domains", "fixture"]
+    }
+  ],
+  "project_benchmark_results": {
+    "status": "not_measured",
+    "note": "This task produced a source-based review only. No Dense-Mem runtime, tests, or benchmarks were run; upstream feature descriptions are not project benchmark results."
+  }
+}

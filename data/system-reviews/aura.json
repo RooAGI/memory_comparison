@@ -1,0 +1,389 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 76,
+    "slug": "aura",
+    "name": "Aura",
+    "repository": "https://github.com/youngbryan97/aura",
+    "listed_repository": "https://github.com/youngbryan97/aura",
+    "branch": "main",
+    "revision": "b391aed058f6f133e0308fbb63a99339f752cc8c",
+    "reviewed_at": "2026-11-24T21:52:17Z",
+    "review_timezone": "UTC (2026-11-24 13:52:17 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Aura is a local desktop assistant whose memory subsystem combines working context, SQLite episodic records, semantic/vector stores, entity and knowledge graphs, procedural memory, and retention/consolidation paths. This review describes selected current source at a pinned commit; it does not measure runtime quality.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/aura.md"
+    },
+    "contact": {
+      "email": "bry.young124@gmail.com",
+      "source_url": "https://github.com/youngbryan97/aura/blob/b391aed058f6f133e0308fbb63a99339f752cc8c/LICENSE",
+      "note": "The official LICENSE publishes this address for commercial licensing inquiries. README and SECURITY.md were also checked."
+    },
+    "contact_email": "bry.young124@gmail.com",
+    "contact_checked_sources": [
+      "https://github.com/youngbryan97/aura/blob/b391aed058f6f133e0308fbb63a99339f752cc8c/README.md",
+      "https://github.com/youngbryan97/aura/blob/b391aed058f6f133e0308fbb63a99339f752cc8c/SECURITY.md",
+      "https://github.com/youngbryan97/aura/blob/b391aed058f6f133e0308fbb63a99339f752cc8c/LICENSE"
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated roster entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[75], ordinal 76; name, slug, listed locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/aura.md",
+        "symbol": "Name, slug, listed repository locator and source attribution only",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/aura.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official repository",
+        "path": "",
+        "symbol": "Canonical public repository and default branch main",
+        "url": "https://github.com/youngbryan97/aura"
+      },
+      {
+        "id": "head-feed",
+        "label": "Official main branch refs",
+        "path": "",
+        "symbol": "git ls-remote --symref identifies main as HEAD at b391aed058f6f133e0308fbb63a99339f752cc8c",
+        "url": "https://github.com/youngbryan97/aura/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream head",
+        "path": "",
+        "symbol": "Full reviewed commit SHA",
+        "url": "https://github.com/youngbryan97/aura/commit/b391aed058f6f133e0308fbb63a99339f752cc8c"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "System overview, memory architecture entry points, operating model and evidence boundaries",
+        "url": "https://github.com/youngbryan97/aura/blob/b391aed058f6f133e0308fbb63a99339f752cc8c/README.md"
+      },
+      {
+        "id": "memory-doc",
+        "label": "Memory architecture guide",
+        "path": "docs/MEMORY_ARCHITECTURE.md",
+        "symbol": "Memory tiers, vector storage, graph, governance, retention and embedding design",
+        "url": "https://github.com/youngbryan97/aura/blob/b391aed058f6f133e0308fbb63a99339f752cc8c/docs/MEMORY_ARCHITECTURE.md"
+      },
+      {
+        "id": "episode",
+        "label": "Episodic memory implementation",
+        "path": "core/memory/episodic_memory.py",
+        "symbol": "Episode schema, SQLite persistence, write approval, revisions and hard deletion",
+        "url": "https://github.com/youngbryan97/aura/blob/b391aed058f6f133e0308fbb63a99339f752cc8c/core/memory/episodic_memory.py"
+      },
+      {
+        "id": "episodic-recall",
+        "label": "Episodic recall implementation",
+        "path": "core/memory/episodic_recall.py",
+        "symbol": "Vector, keyword and hippocampal retrieval, ranking, stage timers and slow-recall logging",
+        "url": "https://github.com/youngbryan97/aura/blob/b391aed058f6f133e0308fbb63a99339f752cc8c/core/memory/episodic_recall.py"
+      },
+      {
+        "id": "vector",
+        "label": "Vector memory implementation",
+        "path": "core/memory/vector_memory.py",
+        "symbol": "Embedding fallback, asynchronous upsert queue, vector search and metadata",
+        "url": "https://github.com/youngbryan97/aura/blob/b391aed058f6f133e0308fbb63a99339f752cc8c/core/memory/vector_memory.py"
+      },
+      {
+        "id": "sqlite-vector",
+        "label": "SQLite vector store",
+        "path": "core/memory/sqlite_vector_store.py",
+        "symbol": "Cosine similarity query and transactional vector mutations",
+        "url": "https://github.com/youngbryan97/aura/blob/b391aed058f6f133e0308fbb63a99339f752cc8c/core/memory/sqlite_vector_store.py"
+      },
+      {
+        "id": "gateway",
+        "label": "Canonical memory write gateway",
+        "path": "core/memory/memory_write_gateway.py",
+        "symbol": "Governance authorization, atomic write, write receipt and compensating rollback",
+        "url": "https://github.com/youngbryan97/aura/blob/b391aed058f6f133e0308fbb63a99339f752cc8c/core/memory/memory_write_gateway.py"
+      },
+      {
+        "id": "provenance",
+        "label": "Memory provenance envelope",
+        "path": "core/memory/provenance.py",
+        "symbol": "Stamped-memory provenance fields and wrap/unwrap boundary",
+        "url": "https://github.com/youngbryan97/aura/blob/b391aed058f6f133e0308fbb63a99339f752cc8c/core/memory/provenance.py"
+      },
+      {
+        "id": "facade",
+        "label": "Memory facade",
+        "path": "core/memory/memory_facade.py",
+        "symbol": "Multi-store retrieval and principal visibility filtering",
+        "url": "https://github.com/youngbryan97/aura/blob/b391aed058f6f133e0308fbb63a99339f752cc8c/core/memory/memory_facade.py"
+      },
+      {
+        "id": "semantic",
+        "label": "Semantic memory mutation interface",
+        "path": "core/brain/semantic_memory.py",
+        "symbol": "Semantic memory edit and delete operations",
+        "url": "https://github.com/youngbryan97/aura/blob/b391aed058f6f133e0308fbb63a99339f752cc8c/core/brain/semantic_memory.py"
+      },
+      {
+        "id": "profile",
+        "label": "User profile store",
+        "path": "core/memory/user_profile.py",
+        "symbol": "Per-user profile persistence and recall API",
+        "url": "https://github.com/youngbryan97/aura/blob/b391aed058f6f133e0308fbb63a99339f752cc8c/core/memory/user_profile.py"
+      },
+      {
+        "id": "security",
+        "label": "Security policy",
+        "path": "SECURITY.md",
+        "symbol": "Data locality statement, threat boundary and data-removal documentation pointers",
+        "url": "https://github.com/youngbryan97/aura/blob/b391aed058f6f133e0308fbb63a99339f752cc8c/SECURITY.md"
+      },
+      {
+        "id": "license",
+        "label": "License and contact",
+        "path": "LICENSE",
+        "symbol": "Published commercial licensing contact email",
+        "url": "https://github.com/youngbryan97/aura/blob/b391aed058f6f133e0308fbb63a99339f752cc8c/LICENSE"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Proposed recall, correction, deletion, scope, evidence, latency, token, cost and storage metrics",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned synthetic workload cases, not system results",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Current status not_run; no Aura measurements from this review",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The public repository is maintained under the GitHub account youngbryan97. Its README presents Aura as an experimental, local desktop assistant and cognitive architecture for Apple Silicon, not a hosted multi-tenant memory service.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The documented memory design is tiered: working context, episodic conversation and event records, semantic facts, and strategic/procedural memory, with cold storage and snapshots also described. Separate components provide vector search, associative/knowledge graphs, user profiles, and retention/consolidation. This is a broad subsystem; this review inspected only selected paths.",
+        "sources": [
+          "memory-doc",
+          "readme"
+        ]
+      },
+      {
+        "text": "Episodic records use an SQLite episodes table with context, action, outcome, success, importance, emotional fields, lessons/tags, access and decay fields, and source/session/exchange revision metadata. Vector records are a derived retrieval path and include embedding and metadata; SQLite vector fallback stores embeddings as binary blobs.",
+        "sources": [
+          "episode",
+          "vector",
+          "sqlite-vector"
+        ]
+      },
+      {
+        "text": "The canonical write gateway selects a family and record ID, requests governance authorization, atomically writes a schema-versioned JSON payload, and emits a MemoryWriteReceipt. If receipt emission fails, it attempts to restore the prior payload and raises an error; rollback failure is reported as critical degradation.",
+        "sources": [
+          "gateway"
+        ]
+      },
+      {
+        "text": "The provenance module defines a stamped-memory envelope with record ID, creation time, source, confidence, contested flag, identity relevance, reviewed time, and recalled action IDs. These are declared fields and helper behavior; their consistent use across every memory family was not established by this bounded inspection.",
+        "sources": [
+          "provenance",
+          "memory-doc"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Episodic recording accepts context, action, outcome, success, importance, source, metadata and an optional idempotency key. It calls the constitutional write gate; if that gate errors while the constitutional runtime is live, the write is deferred, but when the runtime is not live the inspected fallback can allow the write. Episodes go to SQLite, with source/session/exchange revision and supersession fields for some conversation-history revisions.",
+        "sources": [
+          "episode"
+        ]
+      },
+      {
+        "text": "Episodic recall can combine vector candidates, keyword fallback when the vector result is insufficient or exact wording is requested, and hippocampal cue pattern completion. Candidate traces are competitively ranked and the returned subset is registered as recalled.",
+        "sources": [
+          "episodic-recall",
+          "vector"
+        ]
+      },
+      {
+        "text": "The semantic memory API exposes edit and delete operations; delete marks a semantic entry deleted. Episodic deletion removes episode and cue rows and asks vector memory to remove matching episode records. Other retention/consolidation paths also prune or compact data, so these operations do not establish complete erasure across all stores, backups, exports, and derived copies.",
+        "sources": [
+          "semantic",
+          "episode",
+          "memory-doc"
+        ]
+      },
+      {
+        "text": "The memory facade searches vector, graph, gateway, and episodic sources, then applies a principal visibility check to normalized results when principal context is supplied. The direct episodic recall path itself requests candidates by memory type; the principal filter is applied in the facade after retrieval. This is a code-visible boundary, not an isolation test.",
+        "sources": [
+          "facade",
+          "episodic-recall",
+          "vector"
+        ]
+      },
+      {
+        "text": "The README describes Aura as local and single-owner oriented. User profiles require a user ID, but the inspected episodic table is not keyed by tenant/user and the vector recall call filters by type. The selected sources therefore do not establish uniform tenant isolation across every memory path.",
+        "sources": [
+          "readme",
+          "episode",
+          "profile",
+          "episodic-recall"
+        ]
+      },
+      {
+        "text": "The internal memory control routes require internal authorization and route edit/delete through a governed control helper. The security policy says data stays on the local machine and points to a retention/deletion policy; it does not demonstrate that every store has identical encryption or deletion semantics.",
+        "sources": [
+          "security",
+          "semantic",
+          "facade"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "The inspected episodic path combines vector, keyword and cue-based retrieval with ranking. No answerability or abstention cases were adjudicated in this review.",
+        "sources": [
+          "episodic-recall",
+          "vector"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Semantic editing and episodic source revisions/supersession are visible in source. No correction or stale-value probes were run.",
+        "sources": [
+          "semantic",
+          "episode"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Selected semantic and episodic deletion paths exist, but cross-store, backup and derived-copy completeness was not tested.",
+        "sources": [
+          "semantic",
+          "episode",
+          "security"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "The facade has principal visibility logic while selected episodic/vector retrieval is performed before that filter. No cross-principal isolation probes were run.",
+        "sources": [
+          "facade",
+          "episodic-recall",
+          "episode"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Memory records can carry source and provenance metadata and episodes retain source references. No generated-answer citation support or precision was evaluated.",
+        "sources": [
+          "provenance",
+          "episode",
+          "facade"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Episodic recall times vector, keyword, association and ranking stages and logs slow calls at a source-defined threshold. No timings were collected for this review.",
+        "sources": [
+          "episodic-recall"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "Embedding and model-backed paths are visible, but no token use or cost was measured.",
+        "sources": [
+          "memory-doc",
+          "vector"
+        ]
+      },
+      {
+        "domain": "Persistent storage efficiency",
+        "status": "unmeasured",
+        "evidence": "SQLite and vector persistence are visible, but no corpus-attributed storage or growth measurement was collected.",
+        "sources": [
+          "sqlite-vector",
+          "memory-doc"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "Aura is a large, changing repository. This review covers selected memory documentation and code paths at one commit; it does not audit every store, writer, reader, background job, API, or integration.",
+        "sources": [
+          "repo",
+          "memory-doc",
+          "head"
+        ]
+      },
+      {
+        "text": "Source structure does not establish retrieval accuracy, calibrated confidence, reliable correction, complete erasure, isolation between users, or safe behavior under concurrent and failure conditions. These require scoped, versioned runtime evaluation.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status",
+          "facade"
+        ]
+      },
+      {
+        "text": "The project documentation describes a local Apple Silicon deployment and a rich multi-store design. It does not by itself establish that every component runs in a given installation or that the documented safeguards are wired into every memory path.",
+        "sources": [
+          "readme",
+          "memory-doc",
+          "gateway"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No Aura runtime, benchmark workload, build, or tests were run for this review. Findings are source observations only.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "The project metric definitions and synthetic fixture specify candidate measurements; they are not results for Aura. No upstream source-reported memory benchmark was adopted as a result of this review.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ]
+  }
+}

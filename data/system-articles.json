@@ -1,0 +1,1327 @@
+{
+  "schema_version": "1.0.0",
+  "articles": [
+    {
+      "slug": "7layermem",
+      "name": "7layermem",
+      "repository": "https://github.com/Prateek816/7layermem",
+      "branch": "main",
+      "revision": "d3500bfd74b380585e8220f6c6f235c825bc803e",
+      "reviewed_at": "2026-11-23T23:18:22Z",
+      "review_timezone": "UTC (checked 2026-11-23 15:18:22 PST)",
+      "source_status": "reviewed_from_code",
+      "benchmark_status": "not_run",
+      "summary": "A Python memory framework with a small remember/recall facade over separate conversation, tool-log, and vector backed stores. Source review describes interfaces and storage choices; it supplies no measured retrieval or quality results.",
+      "atlas_locator": {
+        "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+        "url": "https://github.com/Prateek816/7layermem"
+      },
+      "sources": [
+        {
+          "id": "repo",
+          "label": "7layermem current upstream repository (main)",
+          "path": "repository",
+          "url": "https://github.com/Prateek816/7layermem"
+        },
+        {
+          "id": "readme",
+          "label": "7layermem README",
+          "path": "README.md",
+          "url": "https://github.com/Prateek816/7layermem/blob/d3500bfd74b380585e8220f6c6f235c825bc803e/README.md"
+        },
+        {
+          "id": "agent",
+          "label": "AgentMemory facade",
+          "path": "src/memory/agent_memory.py",
+          "symbol": "AgentMemory.from_config; remember; recall; clear_thread; MemoryResult",
+          "url": "https://github.com/Prateek816/7layermem/blob/d3500bfd74b380585e8220f6c6f235c825bc803e/src/memory/agent_memory.py"
+        },
+        {
+          "id": "manager",
+          "label": "MemoryManager",
+          "path": "src/memory/memory_manager.py",
+          "symbol": "write/read/delete methods for layer stores",
+          "url": "https://github.com/Prateek816/7layermem/blob/d3500bfd74b380585e8220f6c6f235c825bc803e/src/memory/memory_manager.py"
+        },
+        {
+          "id": "stores",
+          "label": "StoreManager",
+          "path": "src/memory/store_manager.py",
+          "symbol": "SQLite and vector store setup",
+          "url": "https://github.com/Prateek816/7layermem/blob/d3500bfd74b380585e8220f6c6f235c825bc803e/src/memory/store_manager.py"
+        },
+        {
+          "id": "metrics",
+          "label": "Project metric definitions",
+          "path": "METRICS.md",
+          "url": "./METRICS.md"
+        },
+        {
+          "id": "record",
+          "label": "Project benchmark execution status record",
+          "path": "results/initial-baselines-status.json",
+          "url": "./results/initial-baselines-status.json"
+        },
+        {
+          "id": "fixture",
+          "label": "Project benchmark fixture",
+          "path": "fixtures/memory-benchmark-v1.json",
+          "url": "./fixtures/memory-benchmark-v1.json"
+        }
+      ],
+      "who_what": [
+        {
+          "text": "The public repository identifies the project as a Python seven-layer memory framework and exposes AgentMemory as its simple facade. The inspected repository page identifies Prateek816 as its owner; no broader organization or service offering is assumed.",
+          "sources": [
+            "repo",
+            "readme",
+            "agent"
+          ]
+        }
+      ],
+      "architecture": [
+        {
+          "text": "The README describes conversational and tool-log history backed by SQLite, with knowledge, entity, workflow, toolbox, and summary layers backed by ChromaDB; entity storage can use Neo4j when configured. `AgentMemory.from_config` initializes the local SQLite connections and vector-store manager and conditionally creates the graph-memory adapter. These are documented/configured stores, not measurements of their runtime behavior.",
+          "sources": [
+            "readme",
+            "agent",
+            "stores"
+          ]
+        },
+        {
+          "text": "`MemoryResult` carries content, source, a score, and metadata. The README’s routing table and `AgentMemory._detect_type` document role/type-based routing and text heuristics for entity, workflow, or knowledge storage.",
+          "sources": [
+            "readme",
+            "agent"
+          ]
+        }
+      ],
+      "behavior": [
+        {
+          "text": "Write: `AgentMemory.remember` routes role=user/assistant to conversations and role=tool to tool logs; explicit types select layers, and otherwise text heuristics choose entity/workflow/knowledge. The README documents layer-specific write methods on `MemoryManager`.",
+          "sources": [
+            "readme",
+            "agent",
+            "manager"
+          ]
+        },
+        {
+          "text": "Update: the reviewed facade exposes remember and layer write methods; no general update or correction-history contract is documented in the inspected sources. Rewriting a value should not be treated as a verified temporal correction behavior.",
+          "sources": [
+            "agent",
+            "manager",
+            "readme"
+          ]
+        },
+        {
+          "text": "Delete: `clear_thread` delegates to conversation deletion for one thread. The README also shows a vector key/value adapter with `mdelete`, but the inspected material does not establish end-to-end deletion across all stores, embeddings, backups, or downstream copies.",
+          "sources": [
+            "agent",
+            "readme",
+            "manager"
+          ]
+        },
+        {
+          "text": "Retrieval: `recall` searches configured layers, converts documents into `MemoryResult` records, sorts by heuristic score, deduplicates on a normalized first-100-character key, and returns at most k results. The README describes optional layer filtering and a separate hybrid BM25/vector document retriever.",
+          "sources": [
+            "agent",
+            "readme"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "domain": "Answerable recall and abstention",
+          "status": "unmeasured",
+          "evidence": "Source APIs and documentation do not yield eligible gold-case correctness or calibrated abstention rates.",
+          "sources": [
+            "agent",
+            "metrics",
+            "record"
+          ]
+        },
+        {
+          "domain": "Correction accuracy and stale values",
+          "status": "unmeasured",
+          "evidence": "No correction-history guarantee is established by the inspected interface; post-correction probes and adjudication are required.",
+          "sources": [
+            "agent",
+            "metrics",
+            "fixture",
+            "record"
+          ]
+        },
+        {
+          "domain": "Deletion leakage",
+          "status": "unmeasured",
+          "evidence": "A conversation-thread deletion path is documented, but no eligible post-delete probes were run and broad deletion completeness is unknown.",
+          "sources": [
+            "agent",
+            "manager",
+            "metrics",
+            "record"
+          ]
+        },
+        {
+          "domain": "Scope isolation",
+          "status": "unmeasured",
+          "evidence": "The inspected facade has thread identifiers; this inspection does not establish tenant authorization or cross-scope isolation.",
+          "sources": [
+            "agent",
+            "metrics",
+            "record"
+          ]
+        },
+        {
+          "domain": "Evidence support and citation coverage",
+          "status": "unmeasured",
+          "evidence": "Result metadata can carry source metadata, but claim-level evidence support and resolvable citations require captured and adjudicated answers.",
+          "sources": [
+            "agent",
+            "metrics",
+            "record"
+          ]
+        },
+        {
+          "domain": "Latency, write-to-recall delay, tokens, cost, and storage",
+          "status": "unmeasured",
+          "evidence": "No workload observations, system operations, or benchmark measurements were made for these domains.",
+          "sources": [
+            "metrics",
+            "record"
+          ]
+        }
+      ],
+      "limits": [
+        {
+          "text": "This is a bounded read-only inspection of the repository at the pinned revision. It does not establish correctness, reliability, data isolation, deletion completeness, performance, or suitability for a particular deployment.",
+          "sources": [
+            "repo",
+            "agent",
+            "manager",
+            "metrics"
+          ]
+        },
+        {
+          "text": "The roster gave this target’s repository locator. Atlas was used only for that attributed locator; its descriptions, feature marks, and assessments are not treated as project evidence.",
+          "sources": [
+            "repo"
+          ]
+        }
+      ],
+      "benchmark": [
+        {
+          "text": "Project status: Benchmark not run. `results/initial-baselines-status.json` is an execution-status record with zero completed operations for the existing baseline run; its planned fixture counts are not measured denominators. No metric value is inferred from source inspection.",
+          "sources": [
+            "record",
+            "fixture",
+            "metrics"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "acontext",
+      "name": "Acontext",
+      "repository": "https://github.com/memodb-io/Acontext",
+      "branch": "main",
+      "revision": "1ddfd903fd1004672ca9f9a70d92041153ba43d5",
+      "reviewed_at": "2026-11-23T23:26:39Z",
+      "review_timezone": "UTC (checked 2026-11-23 15:26:39 PST)",
+      "source_status": "reviewed_from_code",
+      "benchmark_status": "not_run",
+      "summary": "Acontext is an open-source skill memory layer: completed or failed agent tasks can be distilled into editable skill files, which agents retrieve through explicit tool calls. The inspected README says the repository is no longer maintained. This is a source review, not a quality or performance measurement.",
+      "atlas_locator": {
+        "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+        "url": "https://github.com/memodb-io/Acontext"
+      },
+      "sources": [
+        {
+          "id": "repo",
+          "label": "Acontext upstream README",
+          "path": "README.md",
+          "symbol": "What is Acontext; recall and store flow",
+          "url": "https://github.com/memodb-io/Acontext/blob/1ddfd903fd1004672ca9f9a70d92041153ba43d5/README.md"
+        },
+        {
+          "id": "models",
+          "label": "AgentSkill, Disk, Artifact, LearningSpace schemas",
+          "path": "src/server/core/acontext_core/schema/orm/agent_skill.py; disk.py; artifact.py; learning_space.py",
+          "symbol": "AgentSkill; Disk; Artifact; LearningSpace",
+          "url": "https://github.com/memodb-io/Acontext/blob/1ddfd903fd1004672ca9f9a70d92041153ba43d5/src/server/core/acontext_core/schema/orm/agent_skill.py"
+        },
+        {
+          "id": "distill",
+          "label": "Learning pipeline consumers",
+          "path": "src/server/core/acontext_core/service/skill_learner.py",
+          "symbol": "process_skill_distillation; process_skill_agent",
+          "url": "https://github.com/memodb-io/Acontext/blob/1ddfd903fd1004672ca9f9a70d92041153ba43d5/src/server/core/acontext_core/service/skill_learner.py"
+        },
+        {
+          "id": "controller",
+          "label": "Distillation and skill agent controller",
+          "path": "src/server/core/acontext_core/service/controller/skill_learner.py",
+          "symbol": "process_context_distillation; run_skill_agent",
+          "url": "https://github.com/memodb-io/Acontext/blob/1ddfd903fd1004672ca9f9a70d92041153ba43d5/src/server/core/acontext_core/service/controller/skill_learner.py"
+        },
+        {
+          "id": "learnerdata",
+          "label": "Learning-space and skill lookup data access",
+          "path": "src/server/core/acontext_core/service/data/learning_space.py",
+          "symbol": "get_learning_space_skill_ids; get_skills_info; get_learning_space",
+          "url": "https://github.com/memodb-io/Acontext/blob/1ddfd903fd1004672ca9f9a70d92041153ba43d5/src/server/core/acontext_core/service/data/learning_space.py"
+        },
+        {
+          "id": "artifact",
+          "label": "Artifact content and metadata storage",
+          "path": "src/server/core/acontext_core/service/data/artifact.py",
+          "symbol": "upload_and_build_artifact_meta; encode_content; upsert_artifact; delete_artifact_by_path",
+          "url": "https://github.com/memodb-io/Acontext/blob/1ddfd903fd1004672ca9f9a70d92041153ba43d5/src/server/core/acontext_core/service/data/artifact.py"
+        },
+        {
+          "id": "skilldata",
+          "label": "Skill metadata access",
+          "path": "src/server/core/acontext_core/service/data/agent_skill.py",
+          "symbol": "create_skill; get_agent_skill; touch_skill_updated_at",
+          "url": "https://github.com/memodb-io/Acontext/blob/1ddfd903fd1004672ca9f9a70d92041153ba43d5/src/server/core/acontext_core/service/data/agent_skill.py"
+        },
+        {
+          "id": "edits",
+          "label": "Skill-file editing and deletion tools",
+          "path": "src/server/core/acontext_core/llm/tool/skill_learner_lib/str_replace_skill_file.py; create_skill_file.py; delete_skill_file.py",
+          "symbol": "str_replace_skill_file_handler; create_skill_file_handler; delete_skill_file_handler",
+          "url": "https://github.com/memodb-io/Acontext/blob/1ddfd903fd1004672ca9f9a70d92041153ba43d5/src/server/core/acontext_core/llm/tool/skill_learner_lib/str_replace_skill_file.py"
+        },
+        {
+          "id": "retrieve",
+          "label": "Skill file retrieval tool",
+          "path": "src/server/core/acontext_core/llm/tool/skill_learner_lib/get_skill_file.py",
+          "symbol": "get_skill_file_handler",
+          "url": "https://github.com/memodb-io/Acontext/blob/1ddfd903fd1004672ca9f9a70d92041153ba43d5/src/server/core/acontext_core/llm/tool/skill_learner_lib/get_skill_file.py"
+        },
+        {
+          "id": "delete",
+          "label": "Agent skill delete endpoint and service",
+          "path": "src/server/api/go/internal/modules/handler/agent_skills.go; service/agent_skills.go",
+          "symbol": "DeleteAgentSkill; agentSkillsService.Delete",
+          "url": "https://github.com/memodb-io/Acontext/blob/1ddfd903fd1004672ca9f9a70d92041153ba43d5/src/server/api/go/internal/modules/service/agent_skills.go"
+        },
+        {
+          "id": "scope",
+          "label": "Project scope and route authentication",
+          "path": "src/server/api/go/internal/router/router.go; src/server/core/acontext_core/service/data/agent_skill.py; disk.py; learning_space.py",
+          "symbol": "ProjectAuth; project_id predicates; internal learning-space lookups",
+          "url": "https://github.com/memodb-io/Acontext/blob/1ddfd903fd1004672ca9f9a70d92041153ba43d5/src/server/api/go/internal/router/router.go"
+        },
+        {
+          "id": "trace",
+          "label": "OpenTelemetry and logging instrumentation",
+          "path": "src/server/core/acontext_core/telemetry/otel.py; log.py; src/server/api/go/internal/router/router.go",
+          "symbol": "setup_otel_tracing; inject_otel_trace_context; tracing middleware",
+          "url": "https://github.com/memodb-io/Acontext/blob/1ddfd903fd1004672ca9f9a70d92041153ba43d5/src/server/core/acontext_core/telemetry/otel.py"
+        },
+        {
+          "id": "metrics",
+          "label": "Project metric definitions",
+          "path": "METRICS.md",
+          "url": "./METRICS.md"
+        },
+        {
+          "id": "record",
+          "label": "Project benchmark execution status record",
+          "path": "results/initial-baselines-status.json",
+          "url": "./results/initial-baselines-status.json"
+        },
+        {
+          "id": "fixture",
+          "label": "Project benchmark fixture (planned cases only)",
+          "path": "fixtures/memory-benchmark-v1.json",
+          "url": "./fixtures/memory-benchmark-v1.json"
+        }
+      ],
+      "who_what": [
+        {
+          "text": "The README describes Acontext as an open-source skill-memory layer that captures learnings from agent runs into agent skill files, intended to be readable, editable, and reusable. It also states that the repository is no longer maintained and points readers to alook.ai; the README does not establish current support commitments beyond that statement.",
+          "sources": [
+            "repo"
+          ]
+        }
+      ],
+      "architecture": [
+        {
+          "text": "The memory object is a skill: an AgentSkill metadata row (project, optional user, name, description, disk) connected to a Disk and one or more Artifact file records. Artifact rows hold path/name and asset metadata; content is uploaded to S3 and also represented in asset metadata used by read/edit tools. The Python server models these with AgentSkill, Disk, Artifact, and LearningSpace.",
+          "sources": [
+            "models",
+            "artifact"
+          ]
+        },
+        {
+          "text": "Learning is asynchronous: process_skill_distillation reacts to completed or failed tasks linked to a learning-space session, loads task messages and existing skill summaries, calls an LLM distillation step, and publishes a distilled payload. process_skill_agent then runs a skill-writing agent under a project/learning-space Redis lock; status transitions and pending work are recorded in the service flow.",
+          "sources": [
+            "distill",
+            "controller"
+          ]
+        },
+        {
+          "text": "The published recall design is progressive disclosure. Agents list skills and request a named skill or file through tools such as get_skill/get_skill_file; the README explicitly describes retrieval as agent-in-the-loop tool use rather than semantic top-k search. Source inspection found no semantic embedding index for skill recall in these paths.",
+          "sources": [
+            "repo",
+            "retrieve",
+            "learnerdata"
+          ]
+        }
+      ],
+      "behavior": [
+        {
+          "text": "Write: create_skill parses SKILL.md front matter, creates a disk, stores SKILL.md as an artifact, and adds an AgentSkill row. The task pipeline reads task outcomes and message content, distills useful material, and the skill agent can create new skill files or apply targeted edits.",
+          "sources": [
+            "skilldata",
+            "artifact",
+            "distill",
+            "controller",
+            "edits"
+          ]
+        },
+        {
+          "text": "Update: str_replace_skill_file requires the old string to occur exactly once, writes the modified artifact, touches updated_at, and validates SKILL.md front matter and its immutable sanitized name. This is an editing mechanism; the inspected interface does not define temporal correction history, conflict resolution, or a guarantee that stale claims are removed from every copy.",
+          "sources": [
+            "edits",
+            "skilldata",
+            "artifact"
+          ]
+        },
+        {
+          "text": "Delete: delete_skill_file removes an individual artifact but refuses to delete required SKILL.md. The public Go AgentSkills delete handler scopes lookup by the authenticated project and the service deletes the skill record before deleting its disk. The inspected code does not establish physical erasure from object-store versions, backups, exported ZIPs, or prior agent context.",
+          "sources": [
+            "edits",
+            "artifact",
+            "delete"
+          ]
+        },
+        {
+          "text": "Retrieval: skill metadata and file paths are assembled from a learning space; the agent-facing tools fetch named skill files on demand. This is explicit lookup and reasoning over files, not an automatic ranked memory search; no recall-quality or abstention behavior is established by those paths.",
+          "sources": [
+            "repo",
+            "learnerdata",
+            "retrieve"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "domain": "Answerable recall and abstention",
+          "status": "unmeasured",
+          "evidence": "Code observation: recall is explicit skill/file lookup under agent control; this review supplies no judged answer set, accuracy, or abstention observations.",
+          "sources": [
+            "repo",
+            "retrieve",
+            "metrics",
+            "record"
+          ]
+        },
+        {
+          "domain": "Correction accuracy and stale values",
+          "status": "unmeasured",
+          "evidence": "Code observation: unique-string replacement updates an artifact; no temporal correction contract or stale-value probe was evaluated.",
+          "sources": [
+            "edits",
+            "metrics",
+            "record"
+          ]
+        },
+        {
+          "domain": "Deletion leakage",
+          "status": "unmeasured",
+          "evidence": "Code observation: file and whole-skill delete paths exist. No post-delete retrieval probes or object-store/backup erasure checks were run.",
+          "sources": [
+            "edits",
+            "delete",
+            "metrics",
+            "record"
+          ]
+        },
+        {
+          "domain": "Scope isolation",
+          "status": "unmeasured",
+          "evidence": "Code observation: project-authenticated routes and project_id predicates scope several skill/disk operations. Some internal learning-space helpers select by IDs without an explicit project_id predicate, so this source review does not establish end-to-end isolation across every caller.",
+          "sources": [
+            "scope",
+            "learnerdata",
+            "models",
+            "metrics",
+            "record"
+          ]
+        },
+        {
+          "domain": "Evidence support and citation coverage",
+          "status": "unmeasured",
+          "evidence": "Code observation: the distiller consumes task messages and execution context and stores resulting skill files. The inspected flow does not establish claim-level source citations or evaluated evidence support.",
+          "sources": [
+            "distill",
+            "controller",
+            "metrics",
+            "record"
+          ]
+        },
+        {
+          "domain": "Retrieval latency and write-to-recall delay",
+          "status": "unmeasured",
+          "evidence": "The queue and status flow show asynchronous learning steps, but no workload timing or user-visible write-to-recall delay was measured.",
+          "sources": [
+            "distill",
+            "metrics",
+            "record"
+          ]
+        },
+        {
+          "domain": "Tokens, cost, and storage",
+          "status": "unmeasured",
+          "evidence": "Source identifies LLM calls, Postgres metadata, and S3 artifacts; it provides no benchmark token/cost/storage totals for a common workload.",
+          "sources": [
+            "controller",
+            "artifact",
+            "models",
+            "metrics",
+            "record"
+          ]
+        },
+        {
+          "domain": "Latency observability",
+          "status": "instrumented, not measured",
+          "evidence": "Source includes optional OpenTelemetry tracing, OTLP export, FastAPI instrumentation, trace IDs in logs, and request trace middleware in the Go API. Instrumentation configuration is not a measured latency distribution.",
+          "sources": [
+            "trace",
+            "metrics",
+            "record"
+          ]
+        }
+      ],
+      "limits": [
+        {
+          "text": "This is a bounded read-only inspection of the repository at the pinned revision. It does not establish behavior of hosted deployments, current maintenance beyond the README notice, or correctness under live workloads.",
+          "sources": [
+            "repo",
+            "models",
+            "distill",
+            "retrieve"
+          ]
+        },
+        {
+          "text": "Project-scoped checks are present in the API and several data functions, while some internal helpers rely on IDs from the learning pipeline and omit an explicit project predicate. The review cannot prove every call path enforces tenant boundaries.",
+          "sources": [
+            "scope",
+            "learnerdata"
+          ]
+        },
+        {
+          "text": "Agent-authored or LLM-distilled skill content can be edited as files, but the reviewed paths do not provide a versioned audit trail or evaluate the accuracy of extracted claims.",
+          "sources": [
+            "controller",
+            "edits",
+            "models"
+          ]
+        }
+      ],
+      "benchmark": [
+        {
+          "text": "Project status: Benchmark not run. The project execution-status record marks all metrics not_run and reports zero observations for latency, write-to-recall delay, and tokens/cost/storage. Fixture counts describe planned probes only; no system or benchmark workload was run for this review.",
+          "sources": [
+            "metrics",
+            "record",
+            "fixture"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "a-mem",
+      "name": "A-MEM",
+      "repository": "https://github.com/agiresearch/A-mem",
+      "branch": "main",
+      "revision": "ceffb860f0712bbae97b184d440df62bc910ca8d",
+      "reviewed_at": "2026-11-25T22:21:20Z",
+      "review_timezone": "UTC (reviewed 2026-11-25 22:21:20 UTC; America/Los_Angeles, PST UTC-08:00)",
+      "source_status": "reviewed_from_code",
+      "benchmark_status": "not_run",
+      "summary": "A-MEM is a Python agent-memory library that represents memories as structured notes and documents LLM-assisted metadata generation, vector retrieval, linking, and note evolution. The reviewed source and documentation describe mechanisms; no quality, privacy, or performance result was measured.",
+      "atlas_locator": {
+        "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+        "url": "https://github.com/agiresearch/A-mem"
+      },
+      "sources": [
+        {
+          "id": "repo",
+          "label": "A-MEM repository at reviewed head",
+          "path": "repository",
+          "symbol": "main branch head ceffb860f0712bbae97b184d440df62bc910ca8d",
+          "url": "https://github.com/agiresearch/A-mem/tree/ceffb860f0712bbae97b184d440df62bc910ca8d"
+        },
+        {
+          "id": "readme",
+          "label": "README at reviewed commit",
+          "path": "README.md",
+          "symbol": "Project description, documented features, API example, and paper reproduction pointer",
+          "url": "https://github.com/agiresearch/A-mem/blob/ceffb860f0712bbae97b184d440df62bc910ca8d/README.md"
+        },
+        {
+          "id": "memory-system",
+          "label": "AgenticMemorySystem implementation",
+          "path": "agentic_memory/memory_system.py",
+          "symbol": "MemoryNote and AgenticMemorySystem",
+          "url": "https://github.com/agiresearch/A-mem/blob/ceffb860f0712bbae97b184d440df62bc910ca8d/agentic_memory/memory_system.py"
+        },
+        {
+          "id": "retriever",
+          "label": "ChromaDB retriever implementation",
+          "path": "agentic_memory/retrievers.py",
+          "symbol": "ChromaRetriever add, delete, and search methods",
+          "url": "https://github.com/agiresearch/A-mem/blob/ceffb860f0712bbae97b184d440df62bc910ca8d/agentic_memory/retrievers.py"
+        },
+        {
+          "id": "llm",
+          "label": "LLM controller implementation",
+          "path": "agentic_memory/llm_controller.py",
+          "symbol": "LLM controller and backend calls",
+          "url": "https://github.com/agiresearch/A-mem/blob/ceffb860f0712bbae97b184d440df62bc910ca8d/agentic_memory/llm_controller.py"
+        },
+        {
+          "id": "metrics",
+          "label": "Project metric definitions",
+          "path": "METRICS.md",
+          "url": "./METRICS.md"
+        },
+        {
+          "id": "record",
+          "label": "Project benchmark execution status",
+          "path": "results/initial-baselines-status.json",
+          "url": "./results/initial-baselines-status.json"
+        },
+        {
+          "id": "fixture",
+          "label": "Project benchmark fixture",
+          "path": "fixtures/memory-benchmark-v1.json",
+          "url": "./fixtures/memory-benchmark-v1.json"
+        },
+        {
+          "id": "atlas",
+          "label": "Catalog roster locator attribution",
+          "path": "data/memory-systems.json",
+          "symbol": "A-MEM locator and catalog revision 19199a4fc249e89c0793be06f0b166b358089ba0",
+          "url": "./data/memory-systems.json"
+        }
+      ],
+      "who_what": [
+        {
+          "text": "The catalog names the system A-MEM and lists https://github.com/agiresearch/A-mem as its repository locator. On 2026-11-25 the locator opened at agiresearch/A-mem itself; no redirect to Cipher208/a-memory was observed. The article follows the listed repository and does not treat the roster as assessment evidence.",
+          "sources": [
+            "repo",
+            "atlas"
+          ]
+        }
+      ],
+      "architecture": [
+        {
+          "text": "The README describes A-MEM as an agentic memory system organized around structured notes, with LLM-generated context and tags, ChromaDB indexing, similarity links, and memory evolution. These are project descriptions, not measured behavior.",
+          "sources": [
+            "readme"
+          ]
+        },
+        {
+          "text": "Code observation: MemoryNote holds content, identifiers, keywords, links, timestamps, context, category, tags, retrieval count, and evolution history. AgenticMemorySystem constructs a ChromaRetriever and an LLMController; the retriever builds a ChromaDB client, SentenceTransformer embedding function, and collection.",
+          "sources": [
+            "memory-system",
+            "retriever"
+          ]
+        }
+      ],
+      "behavior": [
+        {
+          "text": "The README documents add, read, search, update, and delete calls on AgenticMemorySystem, and says new notes can trigger metadata generation and memory evolution. This review records the documented interface and does not establish its runtime quality or correctness.",
+          "sources": [
+            "readme",
+            "memory-system"
+          ]
+        },
+        {
+          "text": "ChromaRetriever exposes methods to add documents, delete by ID, and search a collection. Its code uses chromadb.Client and get_or_create_collection; this source observation does not establish durable storage or complete deletion across all state.",
+          "sources": [
+            "retriever"
+          ]
+        },
+        {
+          "text": "The README separates this repository from reproduction of the paper's reported results and points to WujiangXu/AgenticMemory for that purpose. Those published claims are not treated as this project's benchmark measurements.",
+          "sources": [
+            "readme"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "domain": "Answerable recall and abstention",
+          "status": "unmeasured",
+          "evidence": "No A-MEM project probes or workload measurements were collected for this domain.",
+          "sources": [
+            "metrics",
+            "fixture",
+            "record"
+          ]
+        },
+        {
+          "domain": "Correction accuracy and stale values",
+          "status": "unmeasured",
+          "evidence": "No A-MEM project probes or workload measurements were collected for this domain.",
+          "sources": [
+            "metrics",
+            "fixture",
+            "record"
+          ]
+        },
+        {
+          "domain": "Deletion leakage",
+          "status": "unmeasured",
+          "evidence": "No A-MEM project probes or workload measurements were collected for this domain.",
+          "sources": [
+            "metrics",
+            "fixture",
+            "record"
+          ]
+        },
+        {
+          "domain": "Scope isolation",
+          "status": "unmeasured",
+          "evidence": "No A-MEM project probes or workload measurements were collected for this domain.",
+          "sources": [
+            "metrics",
+            "fixture",
+            "record"
+          ]
+        },
+        {
+          "domain": "Evidence support and citation coverage",
+          "status": "unmeasured",
+          "evidence": "No A-MEM project probes or workload measurements were collected for this domain.",
+          "sources": [
+            "metrics",
+            "fixture",
+            "record"
+          ]
+        },
+        {
+          "domain": "Latency, tokens, cost, and storage",
+          "status": "unmeasured",
+          "evidence": "No A-MEM project probes or workload measurements were collected for this domain.",
+          "sources": [
+            "metrics",
+            "fixture",
+            "record"
+          ]
+        }
+      ],
+      "limits": [
+        {
+          "text": "This is a bounded read-only source review at the recorded upstream revision. No system, benchmark workload, or test suite was run. Runtime correctness, quality, privacy, and performance remain unmeasured.",
+          "sources": [
+            "repo",
+            "readme",
+            "memory-system",
+            "retriever",
+            "metrics",
+            "record"
+          ]
+        },
+        {
+          "text": "Atlas is recorded only as the source of the roster name and repository locator. Its assessment text, capability marks, ordering, and presentation are not evidence in this review.",
+          "sources": [
+            "atlas"
+          ]
+        }
+      ],
+      "benchmark": [
+        {
+          "text": "Benchmark status is not_run for A-MEM. The project status record contains no A-MEM execution result; planned fixture cases are not measurements.",
+          "sources": [
+            "metrics",
+            "fixture",
+            "record"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "active-memory-index",
+      "name": "ActiveMemoryIndex",
+      "repository": "https://github.com/linxuhao/ActiveMemoryIndex",
+      "branch": "main",
+      "revision": "22f8287ce0ac02ed493fbbb0f6f8cc7e9556aa3d",
+      "reviewed_at": "2026-11-23T23:36:07Z",
+      "review_timezone": "UTC (checked 2026-11-23 15:36:07 PST)",
+      "source_status": "reviewed_from_code",
+      "benchmark_status": "not_run",
+      "summary": "A self-hosted Add/Search memory service that stores timestamped conversation turns alongside extracted facts and returns relevant stored evidence. This review describes source behavior and does not establish runtime quality or performance.",
+      "atlas_locator": {
+        "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+        "url": "https://github.com/linxuhao/ActiveMemoryIndex"
+      },
+      "sources": [
+        {
+          "id": "repo",
+          "label": "Upstream repository",
+          "path": "repository",
+          "url": "https://github.com/linxuhao/ActiveMemoryIndex/tree/22f8287ce0ac02ed493fbbb0f6f8cc7e9556aa3d"
+        },
+        {
+          "id": "readme",
+          "label": "README",
+          "path": "README.md",
+          "symbol": "API contract; Method; Explicit updates; Repository layout",
+          "url": "https://github.com/linxuhao/ActiveMemoryIndex/blob/22f8287ce0ac02ed493fbbb0f6f8cc7e9556aa3d/README.md"
+        },
+        {
+          "id": "service",
+          "label": "FastAPI service",
+          "path": "app/main.py",
+          "symbol": "AddRequest; SearchRequest; build_items; rank; add; _search; health",
+          "url": "https://github.com/linxuhao/ActiveMemoryIndex/blob/22f8287ce0ac02ed493fbbb0f6f8cc7e9556aa3d/app/main.py"
+        },
+        {
+          "id": "store",
+          "label": "SQLite store and user index",
+          "path": "app/store.py",
+          "symbol": "SCHEMA; Item; UserIndex; add; _load; stats",
+          "url": "https://github.com/linxuhao/ActiveMemoryIndex/blob/22f8287ce0ac02ed493fbbb0f6f8cc7e9556aa3d/app/store.py"
+        },
+        {
+          "id": "llm",
+          "label": "Extraction and recall prompts",
+          "path": "app/llm.py",
+          "symbol": "EXTRACT_SYSTEM; RECALL_SYSTEM; extract_facts; recall_question",
+          "url": "https://github.com/linxuhao/ActiveMemoryIndex/blob/22f8287ce0ac02ed493fbbb0f6f8cc7e9556aa3d/app/llm.py"
+        },
+        {
+          "id": "updates",
+          "label": "Explicit update handling",
+          "path": "app/updates.py",
+          "symbol": "detect; candidates; resolve; withheld",
+          "url": "https://github.com/linxuhao/ActiveMemoryIndex/blob/22f8287ce0ac02ed493fbbb0f6f8cc7e9556aa3d/app/updates.py"
+        },
+        {
+          "id": "asof",
+          "label": "As-of selection",
+          "path": "app/asof.py",
+          "symbol": "classify; times; withhold; select_withheld",
+          "url": "https://github.com/linxuhao/ActiveMemoryIndex/blob/22f8287ce0ac02ed493fbbb0f6f8cc7e9556aa3d/app/asof.py"
+        },
+        {
+          "id": "tokens",
+          "label": "Token return budget",
+          "path": "app/tokens.py",
+          "symbol": "count; item_cost; memory_budget; fit",
+          "url": "https://github.com/linxuhao/ActiveMemoryIndex/blob/22f8287ce0ac02ed493fbbb0f6f8cc7e9556aa3d/app/tokens.py"
+        },
+        {
+          "id": "deadline",
+          "label": "Request deadlines",
+          "path": "app/deadline.py",
+          "symbol": "start; remaining; clip; call",
+          "url": "https://github.com/linxuhao/ActiveMemoryIndex/blob/22f8287ce0ac02ed493fbbb0f6f8cc7e9556aa3d/app/deadline.py"
+        },
+        {
+          "id": "metrics",
+          "label": "Project metric definitions",
+          "path": "METRICS.md",
+          "url": "./METRICS.md"
+        },
+        {
+          "id": "record",
+          "label": "Project benchmark execution status record",
+          "path": "results/initial-baselines-status.json",
+          "url": "./results/initial-baselines-status.json"
+        },
+        {
+          "id": "fixture",
+          "label": "Project benchmark fixture",
+          "path": "fixtures/memory-benchmark-v1.json",
+          "url": "./fixtures/memory-benchmark-v1.json"
+        }
+      ],
+      "who_what": [
+        {
+          "text": "The README describes a self-hosted memory API for the Agent Memory Challenge textual-memory track and names Lin Xuhao as the independent researcher behind the submission. This source review does not establish a hosted service or support offering.",
+          "sources": [
+            "repo",
+            "readme"
+          ]
+        }
+      ],
+      "architecture": [
+        {
+          "text": "POST /add stores each message as a verbatim timestamped raw item and can add atomic facts extracted from the chunk by the configured language model. The README's academic profile uses gpt-4o-mini for extraction and recall-question generation and text-embedding-v4 for embeddings; a local BGE backend remains for research.",
+          "sources": [
+            "readme",
+            "service",
+            "llm"
+          ]
+        },
+        {
+          "text": "SQLite item rows contain user_id, session_id, request_id, kind, content, creation time, sequence, vector bytes, and optional event date/fact key. Vectors are also loaded into a per-user in-process UserIndex; item-count-based cache eviction reloads from SQLite. Items and explicit-update records are committed before Add returns.",
+          "sources": [
+            "store",
+            "service"
+          ]
+        },
+        {
+          "text": "POST /search embeds the original query and, when enabled, a generated first-person recall question. rank() combines cosine similarities with a configured weight, then selection applies top_k, return and token budgets, and optional update/as-of withholding. The response contains stored content, item id and score; generated model output is used to select evidence rather than returned as an answer.",
+          "sources": [
+            "service",
+            "llm",
+            "tokens",
+            "readme"
+          ]
+        }
+      ],
+      "behavior": [
+        {
+          "text": "Write is synchronous. Add requires request_id, user_id, session_id and messages. A duplicate request_id for the same user returns success without writing again; the README says committed memories are searchable when Add returns.",
+          "sources": [
+            "service",
+            "store",
+            "readme"
+          ]
+        },
+        {
+          "text": "Correction/update is opt-in. Update prompts identify explicit replacements and extract structured values; with AMI_UPDATE_WITHHOLD enabled, Search verifies candidate older memories and can omit those judged replaced. Verdicts are stored by update/item pair. Optional AMI_UPDATE_RENDER stores a current-value sentence at Add time. These paths do not establish measured correction accuracy.",
+          "sources": [
+            "updates",
+            "store",
+            "readme"
+          ]
+        },
+        {
+          "text": "Deletion: no delete endpoint appears in the inspected app/main.py API declarations, and inspected app/store.py operations include add, load, lookup and stats but no item-delete method. Behavior beyond this endpoint/store scope is unknown; no deletion-completeness guarantee is established.",
+          "sources": [
+            "service",
+            "store",
+            "readme"
+          ]
+        },
+        {
+          "text": "Scope: Add and Search accept caller-supplied user_id; item/update rows are keyed by user_id and store._load selects rows with user_id = ?. session_id is persisted but the reviewed Search lookup does not filter on it. This source observation is not a runtime isolation or authorization test.",
+          "sources": [
+            "service",
+            "store",
+            "readme"
+          ]
+        },
+        {
+          "text": "Provenance/evidence: raw turns are retained beside fact paraphrases, and results include stored content, id and score. The inspected response does not attach external citations or an explicit source-turn pointer to each fact. Update quotes and optional event dates are internal selection metadata, not a general citation guarantee.",
+          "sources": [
+            "service",
+            "store",
+            "updates",
+            "asof"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "domain": "Answerable recall and abstention",
+          "status": "unmeasured",
+          "evidence": "Vector retrieval and bounded selection are present in code, but no ActiveMemoryIndex outputs were captured or scored against project gold cases.",
+          "sources": [
+            "service",
+            "metrics",
+            "record",
+            "fixture"
+          ]
+        },
+        {
+          "domain": "Correction accuracy and staleness",
+          "status": "unmeasured",
+          "evidence": "Opt-in update withholding is implemented; no project correction probes were run for this system.",
+          "sources": [
+            "updates",
+            "metrics",
+            "record",
+            "fixture"
+          ]
+        },
+        {
+          "domain": "Deletion leakage",
+          "status": "unmeasured",
+          "evidence": "No delete path was located in the inspected endpoint/store scope, and no deletion or post-delete probe was run.",
+          "sources": [
+            "service",
+            "store",
+            "metrics",
+            "record"
+          ]
+        },
+        {
+          "domain": "Scope isolation",
+          "status": "unmeasured",
+          "evidence": "Source queries select by user_id, but no ActiveMemoryIndex cross-user probes were captured or scored.",
+          "sources": [
+            "store",
+            "service",
+            "metrics",
+            "record",
+            "fixture"
+          ]
+        },
+        {
+          "domain": "Evidence support and citation coverage",
+          "status": "unmeasured",
+          "evidence": "The response returns memory text and ids; no project outputs were captured and adjudicated for evidence support or citation coverage.",
+          "sources": [
+            "service",
+            "metrics",
+            "record",
+            "fixture"
+          ]
+        },
+        {
+          "domain": "Retrieval latency and write-to-recall delay",
+          "status": "unmeasured",
+          "evidence": "Optional request logging records elapsed milliseconds, and source includes provider deadlines and admission counters. No project workload timings exist for this system.",
+          "sources": [
+            "service",
+            "deadline",
+            "metrics",
+            "record"
+          ]
+        },
+        {
+          "domain": "Tokens and cost",
+          "status": "unmeasured",
+          "evidence": "The README identifies model and embedding calls; the project has no ActiveMemoryIndex token or cost observations.",
+          "sources": [
+            "readme",
+            "metrics",
+            "record"
+          ]
+        },
+        {
+          "domain": "Persistent storage",
+          "status": "unmeasured",
+          "evidence": "SQLite schema and vector storage are visible in source, but no project storage measurement or bytes-per-item observation was made.",
+          "sources": [
+            "store",
+            "metrics",
+            "record"
+          ]
+        }
+      ],
+      "limits": [
+        {
+          "text": "This is source inspection at the recorded revision. It did not exercise the service, provider calls, failure paths or concurrency. Configuration flags mean documented mechanisms may be disabled in a deployment; the README profile is not an observed live configuration.",
+          "sources": [
+            "readme",
+            "service"
+          ]
+        },
+        {
+          "text": "No deletion behavior was located in the inspected endpoint and store code. Broader repository behavior and deployed authorization/isolation guarantees remain unknown.",
+          "sources": [
+            "service",
+            "store"
+          ]
+        }
+      ],
+      "benchmark": [
+        {
+          "text": "Benchmark not run for ActiveMemoryIndex. The project execution-status record is explicitly not_run; its four baseline systems have 20 operations each marked not_run and null metric observations. These are planned fixture counts, not results. See METRICS.md for definitions and the fixture for planned cases.",
+          "sources": [
+            "metrics",
+            "record",
+            "fixture"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "eliot-memory-os",
+      "name": "ELIOT Memory OS",
+      "repository": "https://github.com/UnknownAlienHuman/eliot-memory-os",
+      "branch": "main",
+      "revision": "1c19f33dbd8ca5278cea283ccecfaa073b9f8ac9",
+      "reviewed_at": "2026-11-26T00:28:41Z",
+      "review_timezone": "UTC (checked 2026-11-25 16:28:41 PST; America/Los_Angeles)",
+      "source_status": "reviewed_from_code",
+      "benchmark_status": "not_run",
+      "summary": "ELIOT Memory OS publishes a V3 design for a local-first memory daemon, provenance-aware revisions, scoped retrieval, and controlled erasure. Upstream explicitly says V3 is not a released runtime and its Store candidate is not a working Store; this review reports design contracts, not verified behavior or benchmark results.",
+      "atlas_locator": {
+        "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/eliot-memory-os.md"
+      },
+      "sources": [
+        {
+          "id": "repo",
+          "label": "Official GitHub repository/API",
+          "path": "repository and GitHub repository API",
+          "url": "https://api.github.com/repos/UnknownAlienHuman/eliot-memory-os"
+        },
+        {
+          "id": "head",
+          "label": "Official current main head",
+          "path": "main branch API and commit page",
+          "symbol": "Full main head 1c19f33dbd8ca5278cea283ccecfaa073b9f8ac9; default branch main",
+          "url": "https://api.github.com/repos/UnknownAlienHuman/eliot-memory-os/branches/main"
+        },
+        {
+          "id": "readme",
+          "label": "Pinned official README",
+          "path": "README.md",
+          "symbol": "V3 documentation-baseline status, V1/V2 donor distinction, purpose and product boundaries",
+          "url": "https://github.com/UnknownAlienHuman/eliot-memory-os/blob/1c19f33dbd8ca5278cea283ccecfaa073b9f8ac9/README.md"
+        },
+        {
+          "id": "architecture",
+          "label": "Pinned V3 architecture",
+          "path": "docs/v3/ARCHITECTURE.md",
+          "symbol": "Ownership, memory invariants, Store target, retrieval, privacy and runtime evidence limits",
+          "url": "https://github.com/UnknownAlienHuman/eliot-memory-os/blob/1c19f33dbd8ca5278cea283ccecfaa073b9f8ac9/docs/v3/ARCHITECTURE.md"
+        },
+        {
+          "id": "cognition",
+          "label": "Pinned V3 cognition contract",
+          "path": "docs/v3/COGNITION.md",
+          "symbol": "Work addressing, grounds, corrections, retrieval, context, coverage, and erasure contracts",
+          "url": "https://github.com/UnknownAlienHuman/eliot-memory-os/blob/1c19f33dbd8ca5278cea283ccecfaa073b9f8ac9/docs/v3/COGNITION.md"
+        },
+        {
+          "id": "implementation",
+          "label": "Pinned V3 implementation contract",
+          "path": "docs/v3/IMPLEMENTATION.md",
+          "symbol": "Capture, replay, exact open, revision writes, erasure and implementation order",
+          "url": "https://github.com/UnknownAlienHuman/eliot-memory-os/blob/1c19f33dbd8ca5278cea283ccecfaa073b9f8ac9/docs/v3/IMPLEMENTATION.md"
+        },
+        {
+          "id": "registry",
+          "label": "Pinned V3 analysis registry",
+          "path": "docs/v3/ANALYSIS-REGISTRY.md",
+          "symbol": "Open implementation/source handoffs and evidence limits",
+          "url": "https://github.com/UnknownAlienHuman/eliot-memory-os/blob/1c19f33dbd8ca5278cea283ccecfaa073b9f8ac9/docs/v3/ANALYSIS-REGISTRY.md"
+        },
+        {
+          "id": "store",
+          "label": "Pinned V3 Store ownership/status",
+          "path": "docs/v3/store/README.md",
+          "symbol": "Store candidate is unmerged and not a working Store; implementation and readback gaps",
+          "url": "https://github.com/UnknownAlienHuman/eliot-memory-os/blob/1c19f33dbd8ca5278cea283ccecfaa073b9f8ac9/docs/v3/store/README.md"
+        },
+        {
+          "id": "catalog",
+          "label": "Curated catalog entry",
+          "path": "data/memory-systems.json",
+          "symbol": "Ordinal 213 identity and listed repository locator",
+          "url": "./data/memory-systems.json"
+        },
+        {
+          "id": "metrics",
+          "label": "Project metric definitions",
+          "path": "METRICS.md",
+          "url": "./METRICS.md"
+        },
+        {
+          "id": "fixture",
+          "label": "Project benchmark fixture",
+          "path": "fixtures/memory-benchmark-v1.json",
+          "url": "./fixtures/memory-benchmark-v1.json"
+        },
+        {
+          "id": "status",
+          "label": "Project benchmark execution status",
+          "path": "results/initial-baselines-status.json",
+          "url": "./results/initial-baselines-status.json"
+        }
+      ],
+      "who_what": [
+        {
+          "text": "The official README describes ELIOT as a local-first system intended to preserve observations, reconstruct current work, supply context, and learn from outcomes. It explicitly labels V3 as a documentation baseline, not a released runtime.",
+          "sources": [
+            "readme",
+            "architecture"
+          ]
+        }
+      ],
+      "architecture": [
+        {
+          "text": "V3 assigns observations, revisions, retrieval, context, outcomes, and finite jobs to a Memory daemon; a narrow relay handles host events and context emission. A private SurrealDB Store is the selected persistence target, but its schema and immutable-blob design are not evidence of a running or qualified Store.",
+          "sources": [
+            "architecture",
+            "implementation",
+            "store"
+          ]
+        },
+        {
+          "text": "The design separates accepted observations, interpreted claims, and versioned memories. It specifies exact source bytes or blob references, work binding, revision hashes, grounds, and exact opens that do not fall forward. These are documented contracts rather than observed runtime behavior.",
+          "sources": [
+            "architecture",
+            "cognition",
+            "implementation"
+          ]
+        }
+      ],
+      "behavior": [
+        {
+          "text": "Capture is designed around a bounded command staged before Store send, then a transaction recording the observation and relations. Native event identity supports deduplication; retries without it preserve command identity and read back the result. The connected path is not qualified.",
+          "sources": [
+            "implementation",
+            "registry"
+          ]
+        },
+        {
+          "text": "Corrections use an expected current revision, preserve history, and publish the new revision with source, grounds, replacement, and cause. Exact retries return the original result and stale revisions conflict; this is a contract, not a runtime result.",
+          "sources": [
+            "cognition",
+            "implementation"
+          ]
+        },
+        {
+          "text": "The design separates withdrawal from erasure. Durable notices are intended to prevent replay or restore reactivation; erasure denies reads and requires cleanup verification for controlled copies. Delivered host transcripts and provider copies remain outside that guarantee, and cleanup is still open.",
+          "sources": [
+            "architecture",
+            "implementation",
+            "registry"
+          ]
+        },
+        {
+          "text": "Retrieval addresses current work before similarity search, unions bounded candidate arms, and applies scope before arm limits. Results are intended to report examined scope, partial or unavailable arms, gaps, and exact source handles; an empty top-K is not proof of global absence.",
+          "sources": [
+            "architecture",
+            "cognition"
+          ]
+        },
+        {
+          "text": "Scope is designed around project/workspace plus an actual task, or an actor/session pair when no task is supplied. The docs reject widening a failed task lookup. This does not establish authorization or runtime isolation; upstream disclaims a hostile same-user sandbox.",
+          "sources": [
+            "architecture",
+            "cognition"
+          ]
+        },
+        {
+          "text": "Grounds and exact source handles are intended to preserve provenance; similarity alone does not establish truth or applicability. Bounded candidates and byte caps are proposed controls, while exact token limits require a counter. No runtime token, cost, latency, storage, or throughput measurements were collected.",
+          "sources": [
+            "architecture",
+            "cognition",
+            "implementation"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "domain": "Answerable retrieval and abstention",
+          "status": "unmeasured",
+          "evidence": "V3 specifies bounded retrieval, source handles, and explicit gaps, but no responses were produced or scored.",
+          "sources": [
+            "cognition",
+            "metrics",
+            "fixture",
+            "status"
+          ]
+        },
+        {
+          "domain": "Correction accuracy and stale values",
+          "status": "unmeasured",
+          "evidence": "Expected-revision correction and history are specified; no correction sequence or stale-value probes were run.",
+          "sources": [
+            "cognition",
+            "implementation",
+            "metrics",
+            "fixture"
+          ]
+        },
+        {
+          "domain": "Deletion leakage",
+          "status": "unmeasured",
+          "evidence": "Notice and controlled-copy cleanup contracts were inspected, but no erase operation or post-erase probe was run.",
+          "sources": [
+            "implementation",
+            "registry",
+            "metrics",
+            "fixture"
+          ]
+        },
+        {
+          "domain": "Scope isolation",
+          "status": "unmeasured",
+          "evidence": "Project/work scoping is specified, but no cross-scope workload or authorization audit was run.",
+          "sources": [
+            "cognition",
+            "architecture",
+            "metrics",
+            "fixture"
+          ]
+        },
+        {
+          "domain": "Evidence support and citation coverage",
+          "status": "unmeasured",
+          "evidence": "Grounds and exact source handles are design contracts; no outputs were adjudicated for evidence support or citation coverage.",
+          "sources": [
+            "cognition",
+            "implementation",
+            "metrics",
+            "fixture"
+          ]
+        },
+        {
+          "domain": "Retrieval latency and write-to-recall delay",
+          "status": "unmeasured",
+          "evidence": "No runtime timing samples were collected.",
+          "sources": [
+            "implementation",
+            "metrics",
+            "status"
+          ]
+        },
+        {
+          "domain": "Tokens, cost, and storage",
+          "status": "unmeasured",
+          "evidence": "The docs specify bounds but no usage, charge, or storage measurements were collected.",
+          "sources": [
+            "cognition",
+            "implementation",
+            "metrics",
+            "status"
+          ]
+        }
+      ],
+      "limits": [
+        {
+          "text": "This bounded review covers official V3 documentation at the verified main head. The README says V3 is not a released runtime, V1/V2 are donors, and the Store guide calls its source candidate unmerged and not a working Store. No donor implementation is treated as current V3 evidence.",
+          "sources": [
+            "readme",
+            "architecture",
+            "store"
+          ]
+        },
+        {
+          "text": "The registry leaves Store connection/readback, source implementation, runtime qualification, and several cleanup/scenario paths open. The Memory inference extension is unavailable. These gaps prevent claims of operating correctness or measured performance.",
+          "sources": [
+            "registry",
+            "architecture",
+            "store"
+          ]
+        },
+        {
+          "text": "The design does not claim a hostile same-user sandbox, portable encrypted backup, physical media sanitization, deletion from delivered host/provider copies, or demonstrated deployed isolation. Retrieval quality, complete erasure, and performance remain unknown.",
+          "sources": [
+            "architecture",
+            "implementation",
+            "registry"
+          ]
+        }
+      ],
+      "benchmark": [
+        {
+          "text": "Benchmark not run. The project execution-status record is not_run with null metric observations; fixture counts are planned cases, not results. No ELIOT runtime, tests, or benchmarks were run.",
+          "sources": [
+            "metrics",
+            "fixture",
+            "status"
+          ]
+        }
+      ]
+    }
+  ]
+}

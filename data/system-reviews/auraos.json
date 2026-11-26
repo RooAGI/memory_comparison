@@ -1,0 +1,253 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "auraos",
+    "name": "AuraOS",
+    "repository": "https://github.com/AdultSwimmer/AuraOS",
+    "branch": "main",
+    "revision": "8c96c48b5785b52ef4292110e41f0c254ec22a7d",
+    "reviewed_at": "2026-11-24T22:00:20Z",
+    "review_timezone": "UTC (checked 2026-11-24 14:00:20 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/AdultSwimmer/AuraOS/blob/8c96c48b5785b52ef4292110e41f0c254ec22a7d/README.md","checked_urls":["https://github.com/AdultSwimmer/AuraOS/blob/8c96c48b5785b52ef4292110e41f0c254ec22a7d/README.md","https://github.com/AdultSwimmer/AuraOS/blob/8c96c48b5785b52ef4292110e41f0c254ec22a7d/SECURITY.md","https://github.com/AdultSwimmer/AuraOS/blob/8c96c48b5785b52ef4292110e41f0c254ec22a7d/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "AuraOS is a small Flask chat application that combines local identity text and a per-user transcript into prompts sent to Ollama. The inspected route reads the entire transcript and appends each successful exchange; no workload results were measured.",
+    "atlas_locator": {
+      "ordinal": 78,
+      "name": "AuraOS",
+      "slug": "auraos",
+      "listed_repository": "https://github.com/AdultSwimmer/AuraOS",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/auraos.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/auraos.md"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/AdultSwimmer/AuraOS/blob/8c96c48b5785b52ef4292110e41f0c254ec22a7d/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/AdultSwimmer/AuraOS/blob/8c96c48b5785b52ef4292110e41f0c254ec22a7d/README.md",
+      "https://github.com/AdultSwimmer/AuraOS/blob/8c96c48b5785b52ef4292110e41f0c254ec22a7d/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official AuraOS repository and default branch",
+        "path": "repository root; GitHub page identifies main",
+        "url": "https://github.com/AdultSwimmer/AuraOS"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom; current head entry",
+        "url": "https://github.com/AdultSwimmer/AuraOS/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified current full head commit",
+        "path": "commit",
+        "symbol": "8c96c48b5785b52ef4292110e41f0c254ec22a7d",
+        "url": "https://github.com/AdultSwimmer/AuraOS/commit/8c96c48b5785b52ef4292110e41f0c254ec22a7d"
+      },
+      {
+        "id": "readme",
+        "label": "Official project README",
+        "path": "README.md",
+        "url": "https://github.com/AdultSwimmer/AuraOS/blob/8c96c48b5785b52ef4292110e41f0c254ec22a7d/README.md"
+      },
+      {
+        "id": "server",
+        "label": "Flask chat, history, prompt, and health implementation",
+        "path": "server/main.py",
+        "symbol": "load_core; load_history; append_history; /chat; /health",
+        "url": "https://github.com/AdultSwimmer/AuraOS/blob/8c96c48b5785b52ef4292110e41f0c254ec22a7d/server/main.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated system locator and attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 78",
+        "url": "data/memory-systems.json"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy contact check (not found)",
+        "path": "SECURITY.md",
+        "url": "https://github.com/AdultSwimmer/AuraOS/blob/8c96c48b5785b52ef4292110e41f0c254ec22a7d/SECURITY.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The repository is published under the AdultSwimmer GitHub account. Its README describes AuraOS as an early prototype and local-first personal AI continuity system; the inspected implementation is a Flask web app that serves a static frontend and calls Ollama. The reviewed sources do not confirm the maintainer’s personal identity.",
+        "sources": [
+          "repo",
+          "readme",
+          "server"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "At startup, the Flask server creates a project-local histories directory and reads all nonempty .txt and .md files in core/ in sorted filename order. It joins their complete contents into CORE_MEMORY, which is reused for subsequent chat prompts.",
+        "sources": [
+          "server"
+        ]
+      },
+      {
+        "text": "Each history is plain text at histories/{user_id}.txt. Appended turns contain an ISO-formatted UTC timestamp, an uppercased role, and the text. The route reads the file as a whole; no database, record index, or search structure is used in this path.",
+        "sources": [
+          "server"
+        ]
+      },
+      {
+        "text": "The README describes portable user-held HISTORY.txt files and says the host does not store that history. The reviewed server implementation instead creates and reads histories beneath its project directory. Whether another frontend or deployment path realizes the README model was not established.",
+        "sources": [
+          "readme",
+          "server"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "POST /chat takes message and user_id from JSON, defaults user_id to default, and rejects empty messages. It loads the entire history, combines it with core identity and the current message, then calls the configured Ollama endpoint with streaming disabled and a 120-second timeout. After success it appends the user and assistant turns; a model error returns before writing either turn.",
+        "sources": [
+          "server"
+        ]
+      },
+      {
+        "text": "The route builds the history path directly from request-supplied user_id and shows no authentication, ownership check, or path validation. Separate filenames therefore do not by themselves establish caller isolation. This is a source-level observation, not a tested exploit.",
+        "sources": [
+          "server"
+        ]
+      },
+      {
+        "text": "No history edit, correction, or delete endpoint appears in the inspected server module. The route appends turns; the sources reviewed do not establish a managed correction or deletion contract or cleanup across backups and derived copies.",
+        "sources": [
+          "server",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "The inspected route inserts the whole transcript into the prompt and shows no answerable/unanswerable evaluation or abstention mechanism.",
+        "sources": [
+          "server",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "The reviewed API appends turns and exposes no correction or supersession route; no correction workload was run.",
+        "sources": [
+          "server",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No history deletion API or cleanup of copies is visible in the inspected route; deletion completeness was not tested.",
+        "sources": [
+          "server",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "A caller-supplied user_id selects the path, but the inspected route has no caller authorization check. No isolation workload was run.",
+        "sources": [
+          "server",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citations",
+        "status": "unmeasured",
+        "evidence": "Transcript turns retain timestamp and role, but the route does not attach fact-level source evidence or validate citations.",
+        "sources": [
+          "server",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The source sets a 120-second HTTP timeout for the model call. No latency or write-to-recall timing measurement was made.",
+        "sources": [
+          "server",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "Full identity and transcript text are composed into each prompt. Token, cost, and storage use were not measured.",
+        "sources": [
+          "server",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded review inspected the current README and server/main.py. It did not inspect every frontend, launcher, or experimental module, and it did not run AuraOS, tests, or benchmarks.",
+        "sources": [
+          "readme",
+          "server"
+        ]
+      },
+      {
+        "text": "Source inspection cannot establish actual recall quality, deployed multi-user isolation, cross-copy deletion completeness, response latency, token use, or operating cost. The README’s user-owned portability description and the inspected server’s project-local histories path should be checked against any deployment/client path before making system-wide claims.",
+        "sources": [
+          "readme",
+          "server"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. The comparison fixture, metric definitions, and execution status record are protocol artifacts rather than AuraOS measurements. No system execution, benchmark workload, or tests were run.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

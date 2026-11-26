@@ -1,0 +1,351 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "areev",
+    "name": "Areev",
+    "repository": "https://github.com/AreevAI/areev",
+    "branch": "main",
+    "revision": "1911fb48a6ce05d9b4bb3c493ed3c9a42e585f2f",
+    "reviewed_at": "2026-11-24T21:29:19Z",
+    "review_timezone": "UTC (2026-11-24 13:29:19 PDT; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Areev is an embedded Rust memory engine and Open Memory Spec implementation. It stores typed, immutable, content-addressed memory grains in per-memory database files, queries them through CAL, and can assemble budgeted context. Areev Loop adds optional review-gated improvement workflows. This review reports selected source and documentation observations, not runtime measurements.",
+    "atlas_locator": {
+      "ordinal": 68,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/areev.md",
+      "listed_repository": "https://github.com/AreevAI/areev"
+    },
+    "contact": {
+      "email": "security@areev.ai",
+      "source_url": "https://github.com/AreevAI/areev/blob/1911fb48a6ce05d9b4bb3c493ed3c9a42e585f2f/SECURITY.md",
+      "checked_urls": [
+        "https://github.com/AreevAI/areev/blob/1911fb48a6ce05d9b4bb3c493ed3c9a42e585f2f/README.md",
+        "https://github.com/AreevAI/areev/blob/1911fb48a6ce05d9b4bb3c493ed3c9a42e585f2f/SECURITY.md",
+        "https://github.com/AreevAI/areev/blob/1911fb48a6ce05d9b4bb3c493ed3c9a42e585f2f/SUPPORT.md"
+      ],
+      "note": "The pinned SECURITY.md publishes this address for private vulnerability reports; README.md and SUPPORT.md were also checked."
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical public GitHub repository",
+        "path": "repository",
+        "symbol": "AreevAI/areev repository page identifies main as the default branch",
+        "url": "https://github.com/AreevAI/areev"
+      },
+      {
+        "id": "head",
+        "label": "Verified current main head",
+        "path": "commit",
+        "symbol": "full current main head 1911fb48a6ce05d9b4bb3c493ed3c9a42e585f2f",
+        "url": "https://github.com/AreevAI/areev/commit/1911fb48a6ce05d9b4bb3c493ed3c9a42e585f2f"
+      },
+      {
+        "id": "head-feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "latest feed entry identifies the full main head and its update time",
+        "url": "https://github.com/AreevAI/areev/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "project type, integrations, storage options, published upstream experiment claims, and statement about telemetry",
+        "url": "https://github.com/AreevAI/areev/blob/1911fb48a6ce05d9b4bb3c493ed3c9a42e585f2f/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Architecture guide",
+        "path": "ARCHITECTURE.md",
+        "symbol": "grain format, indexes, write/update/delete, recall, CAL, scope, telemetry, efficiency design, and limitations",
+        "url": "https://github.com/AreevAI/areev/blob/1911fb48a6ce05d9b4bb3c493ed3c9a42e585f2f/ARCHITECTURE.md"
+      },
+      {
+        "id": "grains",
+        "label": "Grain type guide",
+        "path": "docs/grains.md",
+        "symbol": "types, write surfaces, fact/event distinction, updates and temporal semantics",
+        "url": "https://github.com/AreevAI/areev/blob/1911fb48a6ce05d9b4bb3c493ed3c9a42e585f2f/docs/grains.md"
+      },
+      {
+        "id": "erasure",
+        "label": "Erasure guide",
+        "path": "docs/erasure.md",
+        "symbol": "single-grain and bulk erasure behavior, exact scopes, replication, audit, and physical-remnant caveats",
+        "url": "https://github.com/AreevAI/areev/blob/1911fb48a6ce05d9b4bb3c493ed3c9a42e585f2f/docs/erasure.md"
+      },
+      {
+        "id": "store",
+        "label": "Store implementation",
+        "path": "crates/areev-store/src/lib.rs",
+        "symbol": "embedded store seam, namespace guards, op-log and temporal API",
+        "url": "https://github.com/AreevAI/areev/blob/1911fb48a6ce05d9b4bb3c493ed3c9a42e585f2f/crates/areev-store/src/lib.rs"
+      },
+      {
+        "id": "memory-tool",
+        "label": "Memory tool adapter",
+        "path": "crates/areev-store/src/memory_tool.rs",
+        "symbol": "content-addressed memory-file writes, body indexing, and superseding prior heads",
+        "url": "https://github.com/AreevAI/areev/blob/1911fb48a6ce05d9b4bb3c493ed3c9a42e585f2f/crates/areev-store/src/memory_tool.rs"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "published contact address and explicit security limitations",
+        "url": "https://github.com/AreevAI/areev/blob/1911fb48a6ce05d9b4bb3c493ed3c9a42e585f2f/SECURITY.md"
+      },
+      {
+        "id": "support",
+        "label": "Official support policy checked for contact",
+        "path": "SUPPORT.md",
+        "symbol": "checked for a published contact email",
+        "url": "https://github.com/AreevAI/areev/blob/1911fb48a6ce05d9b4bb3c493ed3c9a42e585f2f/SUPPORT.md"
+      },
+      {
+        "id": "contact-readme",
+        "label": "Official README checked for contact",
+        "path": "README.md",
+        "symbol": "checked for published contact email",
+        "url": "https://github.com/AreevAI/areev/blob/1911fb48a6ce05d9b4bb3c493ed3c9a42e585f2f/README.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "benchmark metric domains and protocol; not a measurement",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "shared benchmark status record; no Areev result asserted",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned workload definition only; no Areev workload was run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated system roster",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 68 identity, listed repository locator, and Atlas attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas-entry",
+        "label": "Roster-provided Atlas attribution",
+        "path": "content/systems/areev.md",
+        "symbol": "identity and attribution only; Atlas descriptions, marks, and layout excluded from assessment",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/areev.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents Areev Core as an open-source engine for focused AI products, with Rust, Python, Node.js, CLI, and MCP surfaces. It says the project is built and backed by MindGryd Software Private Limited. The repository describes an embedded local engine rather than a hosted memory service.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The architecture defines a grain as one typed, immutable memory record whose canonical serialized blob is addressed by SHA-256. A common envelope carries namespace, timestamps, provenance, supersession links, and optional content or embedding references; type-specific fields distinguish facts, events, state, tools, observations, and other records.",
+        "sources": [
+          "architecture",
+          "grains"
+        ]
+      },
+      {
+        "text": "Each memory is stored as a database file. Source documentation describes dictionary-encoded triple indexes, current entity heads, full-text and vector indexes, thread indexes, an op-log with hybrid logical clocks and tombstones, and a content-addressed blob sidecar. The store source exposes an embedded backend and a separately gated PostgreSQL backend; these are implementation observations, not storage measurements.",
+        "sources": [
+          "architecture",
+          "store"
+        ]
+      },
+      {
+        "text": "The memory-tool adapter builds content-addressed Fact records for memory files, adds the current namespace, indexes the body for BM25/vector recall, and supersedes the previous head when rewriting an existing path. This is one adapter surface; the broader API also supports other grain types and direct CAL/binding operations.",
+        "sources": [
+          "memory-tool",
+          "grains"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: documentation lists CAL ADD, CLI, MCP, and language-binding surfaces. Writes create typed grains after validation and canonical serialization. The memory tool adapter also writes a path-keyed Fact whose content digest changes when its body changes. Tool grains are records; actual tool execution remains the host’s responsibility.",
+        "sources": [
+          "grains",
+          "architecture",
+          "memory-tool"
+        ]
+      },
+      {
+        "text": "Update: grains are immutable; corrections are new grains linked by supersession, retaining earlier versions. World-time and knowledge-time queries use separate validity and supersession semantics. Concurrent supersessions can produce multiple heads, which the architecture says are surfaced as forks and resolved through explicit merge writes.",
+        "sources": [
+          "architecture",
+          "grains",
+          "store"
+        ]
+      },
+      {
+        "text": "Delete: single-grain FORGET writes a tombstone. Documentation also describes exact-namespace subject and age erasure, with ordinary tombstones for replication and host-side audit records. File deletion or key destruction is a separate memory-level action. The embedded backend can retain physical database-page or WAL remnants until compaction, so docs identify crypto-erasure as the stronger whole-memory destruction path.",
+        "sources": [
+          "architecture",
+          "erasure",
+          "security"
+        ]
+      },
+      {
+        "text": "Retrieval: CAL combines structured predicates, BM25, vector search and reciprocal-rank fusion; bounded graph and temporal queries are also described. ASSEMBLE combines sources with priorities and per-source token budgets, then renders model-ready context. These API and architecture descriptions do not provide answer-quality results for this review.",
+        "sources": [
+          "architecture",
+          "readme"
+        ]
+      },
+      {
+        "text": "Scope: each memory is a separate file and records carry namespaces. CAL/store guards enforce exact and writable namespaces in the inspected source. The APIs support deliberate multi-source mounts, so host configuration and caller permissions remain relevant; no isolation workload or deployment was tested.",
+        "sources": [
+          "architecture",
+          "store",
+          "erasure"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "The source exposes structural, BM25, vector, and fused retrieval. No answerable or unsupported fixture probes were run.",
+        "sources": [
+          "architecture",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Immutable supersession and world/knowledge time reads are documented. No correction sequence was executed or adjudicated.",
+        "sources": [
+          "architecture",
+          "grains",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Tombstone and bulk erasure paths are documented, but no accepted delete followed by leakage probes was run.",
+        "sources": [
+          "erasure",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Per-file and namespace guards are source-visible. No paired allowed/forbidden-scope probes or host authorization checks were performed.",
+        "sources": [
+          "architecture",
+          "store",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Grains carry provenance and reference fields, but no generated answers were checked against source evidence.",
+        "sources": [
+          "architecture",
+          "security",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "In-process recall and indexes are design choices in the documentation. No latency or write-to-recall timings were collected.",
+        "sources": [
+          "readme",
+          "architecture",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "Context budgets and local file/blob storage are documented. No token, provider-cost, or persistent-byte accounting was performed.",
+        "sources": [
+          "architecture",
+          "readme",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded review of selected source and docs at one verified commit. Runtime behavior, answer quality, abstention, scaling, and repair under failure remain unverified.",
+        "sources": [
+          "architecture",
+          "readme"
+        ]
+      },
+      {
+        "text": "The security policy says the blob sidecar is plaintext even when the database is encrypted, the encryption feature is experimental, and imported grain authenticity is not verified. Content addressing provides an integrity address, not proof of origin or factual truth.",
+        "sources": [
+          "security",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The erasure guide states that embedded database pages and WAL can retain remnants until compaction and calls out operational caveats around concurrent writers and replicas. No deletion or replica behavior was exercised during this review.",
+        "sources": [
+          "erasure",
+          "security"
+        ]
+      },
+      {
+        "text": "Namespaced access checks are code-visible controls, not a proof that a deployment has correctly partitioned files, mounted only authorized sources, or configured host identity and grants.",
+        "sources": [
+          "architecture",
+          "store",
+          "security"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is not_run. This review did not run Areev, tests, or the benchmark workload. METRICS.md defines the comparison protocol; the shared execution-status record is not an Areev result, and the fixture is only a planned workload.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "text": "The upstream README and architecture contain claims about separate synthetic and retrieval experiments. Those are cited as upstream-reported results only; they were not reproduced and do not populate this project's benchmark record.",
+        "sources": [
+          "readme",
+          "architecture",
+          "record"
+        ]
+      }
+    ]
+  }
+}

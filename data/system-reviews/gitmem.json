@@ -1,0 +1,346 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 259,
+    "slug": "gitmem",
+    "name": "GitMem",
+    "repository": "https://github.com/gitmem-dev/gitmem",
+    "listed_repository": "https://github.com/gitmem-dev/gitmem",
+    "branch": "main",
+    "revision": "caef0358195dc1211891288c928c0462120d3bf0",
+    "reviewed_at": "2026-11-25T21:06:47Z",
+    "review_timezone": "UTC (checked local time: 2026-11-25 13:06:47 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "GitMem is an MCP server for retaining coding-agent lessons such as scars, wins, patterns, decisions, and threads across sessions. The free path stores JSON locally and searches lexically; the opt-in Pro/dev path uses Supabase and supports vector recall. This is a source review, not a measured quality or security result.",
+    "atlas_locator": [
+      "ordinal",
+      "name",
+      "slug",
+      "listed_repository",
+      "repository_status",
+      "source_url",
+      "revision"
+    ],
+    "contact": [
+      "email",
+      "source_url",
+      "checked_urls",
+      "note"
+    ],
+    "contact_email": "security@gitmem.ai",
+    "contact_email_source_url": "https://github.com/gitmem-dev/gitmem/blob/caef0358195dc1211891288c928c0462120d3bf0/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/gitmem-dev/gitmem/blob/caef0358195dc1211891288c928c0462120d3bf0/SECURITY.md"
+    ],
+    "contact_email_note": "Published in the official pinned SECURITY.md for vulnerability reports; no commit/profile metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated roster entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[258], ordinal 259; roster name, slug, listed locator and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/gitmem.md",
+        "symbol": "Catalog attribution for curated identity and locator context only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/gitmem.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "Canonical gitmem-dev/gitmem; repository page identifies main as default branch",
+        "url": "https://github.com/gitmem-dev/gitmem"
+      },
+      {
+        "id": "head",
+        "label": "Official main branch commit feed",
+        "path": "main.atom",
+        "symbol": "Current main head caef0358195dc1211891288c928c0462120d3bf0, updated 2026-11-23T03:45:36Z",
+        "url": "https://github.com/gitmem-dev/gitmem/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product description, memory lifecycle, data types, tiers, integrations and privacy statements",
+        "url": "https://github.com/gitmem-dev/gitmem/blob/caef0358195dc1211891288c928c0462120d3bf0/README.md"
+      },
+      {
+        "id": "create",
+        "label": "Pinned learning write implementation",
+        "path": "src/tools/create-learning.ts",
+        "symbol": "Scar validation, learning record fields, project assignment, write path and result/metrics handling",
+        "url": "https://github.com/gitmem-dev/gitmem/blob/caef0358195dc1211891288c928c0462120d3bf0/src/tools/create-learning.ts"
+      },
+      {
+        "id": "archive",
+        "label": "Pinned archive implementation",
+        "path": "src/tools/archive-learning.ts",
+        "symbol": "Archive sets is_active false and archived_at, resolves IDs, flushes local search cache",
+        "url": "https://github.com/gitmem-dev/gitmem/blob/caef0358195dc1211891288c928c0462120d3bf0/src/tools/archive-learning.ts"
+      },
+      {
+        "id": "recall",
+        "label": "Pinned recall implementation",
+        "path": "src/tools/recall.ts",
+        "symbol": "Recall API, local vector search/Supabase fallback, search instrumentation, surfaced session scars and diagnostics",
+        "url": "https://github.com/gitmem-dev/gitmem/blob/caef0358195dc1211891288c928c0462120d3bf0/src/tools/recall.ts"
+      },
+      {
+        "id": "localstore",
+        "label": "Pinned local JSON storage implementation",
+        "path": "src/services/local-file-storage.ts",
+        "symbol": "Collections stored as JSON under the GitMem directory, BM25 search, filtering and size limit behavior",
+        "url": "https://github.com/gitmem-dev/gitmem/blob/caef0358195dc1211891288c928c0462120d3bf0/src/services/local-file-storage.ts"
+      },
+      {
+        "id": "storage",
+        "label": "Pinned storage abstraction",
+        "path": "src/services/storage.ts",
+        "symbol": "Routes free-tier operations to local files and Pro/dev operations to Supabase",
+        "url": "https://github.com/gitmem-dev/gitmem/blob/caef0358195dc1211891288c928c0462120d3bf0/src/services/storage.ts"
+      },
+      {
+        "id": "security",
+        "label": "Pinned official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Published contact security@gitmem.ai and storage/security design statements",
+        "url": "https://github.com/gitmem-dev/gitmem/blob/caef0358195dc1211891288c928c0462120d3bf0/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Definitions for retrieval, correction, deletion, scope, evidence, efficiency and delay metrics",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned workload definition; not a GitMem result",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Initial benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project execution status; not a GitMem measurement",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes GitMem as an MCP server that adds persistent learning memory to coding agents. It documents Claude Code, Cursor, VS Code/Copilot, Windsurf and generic MCP clients, with a setup wizard and lifecycle hooks where supported.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The project separates free local storage from an opt-in Pro tier using a user-supplied Supabase project. The current source routes storage according to tier; this review covers the memory subsystem rather than independently verifying the hosted service or client integrations.",
+        "sources": [
+          "readme",
+          "storage"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The model separates learnings (scars, wins and patterns) from decisions, threads, sessions and transcripts. Learning records include an ID, type, title, description, project, keywords/domain, timestamps, active state and optional fields such as severity, counter-arguments, source issue and action/self-check guidance. The README presents recall-work-learn-close as the lifecycle.",
+        "sources": [
+          "readme",
+          "create"
+        ]
+      },
+      {
+        "text": "The storage abstraction selects local JSON files under the GitMem directory for the free tier or Supabase tables for Pro/dev. Local collections are read and rewritten as JSON; the local backend uses BM25 text search. Pro recall uses local vector search when ready and has a Supabase search fallback.",
+        "sources": [
+          "storage",
+          "localstore",
+          "recall"
+        ]
+      },
+      {
+        "text": "MCP tools expose operations including create, recall, archive, decision/thread management, session start/close, transcript handling and document search/indexing. The inspected files show separate tool handlers over shared storage and service modules.",
+        "sources": [
+          "readme",
+          "create",
+          "recall",
+          "archive"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "**Writes.** create_learning generates a UUID and writes a learning record. Scar writes are rejected unless severity is supplied and at least two counter-arguments are present. The project field comes from the explicit parameter, current project, or `default`. In the local path, the record is upserted without embedding; the Pro path includes embedding/index work. A saved Pro record can be reported as not yet visible to recall if index refresh fails.",
+        "sources": [
+          "create",
+          "storage"
+        ]
+      },
+      {
+        "text": "**Update and correction.** The inspected create path inserts a newly identified learning rather than replacing an existing fact. The available lifecycle supports archiving an older learning and writing another, but this review did not find a general fact-revision or temporal supersession protocol. Correction accuracy and stale-value behavior remain unmeasured.",
+        "sources": [
+          "create",
+          "archive",
+          "metrics"
+        ]
+      },
+      {
+        "text": "**Delete/archive.** archive_learning resolves a full UUID or a 4–32 character hexadecimal prefix and marks a record inactive with an archived timestamp; it also tries to flush the local vector cache. This is a soft archive that preserves the record. The reviewed code does not establish physical erasure from backups, caches beyond the flush path, or remote retention systems.",
+        "sources": [
+          "archive",
+          "localstore"
+        ]
+      },
+      {
+        "text": "**Retrieval.** The README describes recall before acting, and the handler accepts a plan/query, optional project, result count and session identifiers. The Pro path uses local vector search when available and falls back to Supabase search; the free local backend searches JSON learnings with BM25. Recall records surfaced scars in session state and returns timing and search-path/cache diagnostics. The repository documents a latency target in source comments, not a measured result.",
+        "sources": [
+          "readme",
+          "recall",
+          "localstore"
+        ]
+      },
+      {
+        "text": "**Scope isolation.** Writes carry a project field, and recall accepts project context while using the current session/project state. The README describes local data as suitable for solo projects and Pro cloud persistence as team-shareable. This establishes project metadata and intended deployment boundaries, but this inspection did not verify every query predicate or test isolation between projects, users, or Supabase tenants.",
+        "sources": [
+          "create",
+          "recall",
+          "readme",
+          "storage"
+        ]
+      },
+      {
+        "text": "**Provenance and evidence.** Learning records can carry a source issue, source date and persona identity, and scars may include counter-arguments plus action and self-check fields. Recall surfaces learning IDs and scores/diagnostics. These are provenance and reasoning-support fields; the inspected path does not require a retained source passage or provide adjudicated claim-level citations.",
+        "sources": [
+          "create",
+          "recall"
+        ]
+      },
+      {
+        "text": "**Efficiency and observability.** Recall instruments elapsed time, returned count, similarity scores, context size, cache state, search mode, network-call count and whether work was fully local; metric write failures are non-fatal. Local file storage warns above 1 MB and, when a collection exceeds 10 MB, evicts the oldest fifth of entries. No latency, throughput, token, cost or storage benchmark was run.",
+        "sources": [
+          "recall",
+          "localstore",
+          "metrics"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "evidence": "BM25 and vector/Supabase recall paths are present; no answerable or unanswerable workload was scored.",
+        "status": "unmeasured",
+        "sources": [
+          "recall",
+          "localstore",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "evidence": "The inspected operations provide create and archive; no correction workload or stale-value probe was run.",
+        "status": "unmeasured",
+        "sources": [
+          "create",
+          "archive",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "evidence": "Archive marks records inactive and preserves them; no post-archive leakage probe was run.",
+        "status": "unmeasured",
+        "sources": [
+          "archive",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "evidence": "Project metadata and recall project context are present; no cross-project or cross-tenant isolation workload was run.",
+        "status": "unmeasured",
+        "sources": [
+          "create",
+          "recall",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "evidence": "Optional source metadata and recall IDs are available; no returned claim/source pair was adjudicated.",
+        "status": "unmeasured",
+        "sources": [
+          "create",
+          "recall",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "evidence": "The code records timing and supports index refresh, but this review collected no timings or recall-delay observations.",
+        "status": "unmeasured",
+        "sources": [
+          "create",
+          "recall",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "evidence": "No model usage, price, or persistent-byte measurements were collected for a fixed corpus.",
+        "status": "unmeasured",
+        "sources": [
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This assessment is pinned to the GitHub main head shown in the official branch commit feed and is based on README and source inspection. It does not establish runtime retrieval quality, reliability, performance, authorization security, or client-specific behavior.",
+        "sources": [
+          "repo",
+          "head",
+          "readme",
+          "recall"
+        ]
+      },
+      {
+        "text": "Local persistence rewrites JSON collections and applies an entry eviction policy when a file grows beyond 10 MB. Soft archive is not proof of complete erasure. The behavior and scope of every derived index, backup and remote copy were not independently traced.",
+        "sources": [
+          "localstore",
+          "archive",
+          "storage"
+        ]
+      },
+      {
+        "text": "The review did not inspect every tool, schema, Supabase policy, or full docs site. Exact cross-project filtering, tenant isolation, conflict resolution and end-to-end provenance guarantees remain unknown from the inspected paths.",
+        "sources": [
+          "storage",
+          "recall"
+        ]
+      },
+      {
+        "text": "No GitMem runtime, tests or benchmark workload was run. Project metric definitions and fixture/status records define a protocol but are not GitMem measurements.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No GitMem runtime, tests, or benchmark workload was executed for this review. Project metric definitions, fixture, and status files are not GitMem measurements.",
+      "metric_definitions": "../METRICS.md",
+      "fixture": "../fixtures/memory-benchmark-v1.json",
+      "result_record": "../results/initial-baselines-status.json"
+    }
+  }
+}

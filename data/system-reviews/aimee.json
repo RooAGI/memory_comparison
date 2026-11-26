@@ -1,0 +1,424 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "aimee",
+    "name": "aimee",
+    "repository": "https://github.com/RakuenSoftware/aimee",
+    "branch": "testing",
+    "revision": "56d9b0fa7880b7398aa7ca48f2b65b845192a6bf",
+    "reviewed_at": "2026-11-24T19:59:19Z",
+    "review_timezone": "UTC (2026-11-24 11:59:19 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":"jbailes@gmail.com","source_url":"https://github.com/RakuenSoftware/aimee/blob/56d9b0fa7880b7398aa7ca48f2b65b845192a6bf/README.md","note":"Published in the official README for other terms."},
+    "summary": "Aimee is a self-hosted runtime with personal memory on Server and optional shared memory on KB. At the reviewed public revision, memory storage and retrieval are supplied by a private implementation bundle; this review documents the public generic SDK, module boundary, and host controls, not the private datastore or ranking policy.",
+    "atlas_locator": {
+      "ordinal": 44,
+      "name": "aimee",
+      "slug": "aimee",
+      "listed_repository": "https://github.com/RakuenSoftware/aimee",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/aimee.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": "jbailes@gmail.com",
+    "contact_email_source_url": "https://github.com/RakuenSoftware/aimee/blob/56d9b0fa7880b7398aa7ca48f2b65b845192a6bf/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/RakuenSoftware/aimee/blob/56d9b0fa7880b7398aa7ca48f2b65b845192a6bf/README.md",
+      "https://github.com/RakuenSoftware/aimee/blob/56d9b0fa7880b7398aa7ca48f2b65b845192a6bf/SECURITY.md",
+      "https://github.com/RakuenSoftware/aimee/blob/56d9b0fa7880b7398aa7ca48f2b65b845192a6bf/SUPPORT.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository and listed locator",
+        "path": "repository",
+        "symbol": "canonical RakuenSoftware/aimee",
+        "url": "https://github.com/RakuenSoftware/aimee"
+      },
+      {
+        "id": "head",
+        "label": "Official remote HEAD and reviewed commit",
+        "path": "refs/heads/testing",
+        "symbol": "git ls-remote --symref identified testing as HEAD; full current SHA 56d9b0fa7880b7398aa7ca48f2b65b845192a6bf; checkout matched",
+        "url": "https://github.com/RakuenSoftware/aimee/commit/56d9b0fa7880b7398aa7ca48f2b65b845192a6bf"
+      },
+      {
+        "id": "readme",
+        "label": "Official repository README",
+        "path": "README.md",
+        "symbol": "runtime and role overview; memory boundary; published contact jbailes@gmail.com",
+        "url": "https://github.com/RakuenSoftware/aimee/blob/56d9b0fa7880b7398aa7ca48f2b65b845192a6bf/README.md"
+      },
+      {
+        "id": "module-doc",
+        "label": "Memory module contract and operations",
+        "path": "docs/modules/memory.md",
+        "symbol": "private bundle boundary; public SDK; scope, retention, readiness and diagnostics",
+        "url": "https://github.com/RakuenSoftware/aimee/blob/56d9b0fa7880b7398aa7ca48f2b65b845192a6bf/docs/modules/memory.md"
+      },
+      {
+        "id": "memory-doc",
+        "label": "Memory implementation boundary",
+        "path": "docs/MEMORY.md",
+        "symbol": "private implementation and public host/SDK responsibilities",
+        "url": "https://github.com/RakuenSoftware/aimee/blob/56d9b0fa7880b7398aa7ca48f2b65b845192a6bf/docs/MEMORY.md"
+      },
+      {
+        "id": "knowledge",
+        "label": "Knowledge and memory behavior",
+        "path": "docs/KNOWLEDGE.md",
+        "symbol": "personal/shared placement, correction and recall descriptions",
+        "url": "https://github.com/RakuenSoftware/aimee/blob/56d9b0fa7880b7398aa7ca48f2b65b845192a6bf/docs/KNOWLEDGE.md"
+      },
+      {
+        "id": "store",
+        "label": "Generic record and Store contract",
+        "path": "server-go/memory/store.go",
+        "symbol": "Record fields, scoped CRUD, bounded candidates, derived-store contracts and limits",
+        "url": "https://github.com/RakuenSoftware/aimee/blob/56d9b0fa7880b7398aa7ca48f2b65b845192a6bf/server-go/memory/store.go"
+      },
+      {
+        "id": "types",
+        "label": "Memory transport and embedding result types",
+        "path": "server-go/memory/types.go",
+        "symbol": "wire limits and embedding availability/error distinctions",
+        "url": "https://github.com/RakuenSoftware/aimee/blob/56d9b0fa7880b7398aa7ca48f2b65b845192a6bf/server-go/memory/types.go"
+      },
+      {
+        "id": "scope",
+        "label": "Scope contract",
+        "path": "server-go/memory/scope.go",
+        "symbol": "user/global/workspace/project canonicalization without authorization or default selection",
+        "url": "https://github.com/RakuenSoftware/aimee/blob/56d9b0fa7880b7398aa7ca48f2b65b845192a6bf/server-go/memory/scope.go"
+      },
+      {
+        "id": "version",
+        "label": "Record-version contract",
+        "path": "server-go/memory/version.go",
+        "symbol": "owner/record/revision tuple used as mutation precondition",
+        "url": "https://github.com/RakuenSoftware/aimee/blob/56d9b0fa7880b7398aa7ca48f2b65b845192a6bf/server-go/memory/version.go"
+      },
+      {
+        "id": "client",
+        "label": "Generic module client",
+        "path": "server-go/memory/client.go",
+        "symbol": "borrowed admitted caller, deadline and bounded framing; no identity or policy fallback",
+        "url": "https://github.com/RakuenSoftware/aimee/blob/56d9b0fa7880b7398aa7ca48f2b65b845192a6bf/server-go/memory/client.go"
+      },
+      {
+        "id": "unavailable",
+        "label": "Unavailable memory adapter",
+        "path": "server-go/modules/memory/adapter/unavailable.go",
+        "symbol": "no built-in owner or serving readiness without installed implementation",
+        "url": "https://github.com/RakuenSoftware/aimee/blob/56d9b0fa7880b7398aa7ca48f2b65b845192a6bf/server-go/modules/memory/adapter/unavailable.go"
+      },
+      {
+        "id": "descriptor",
+        "label": "Memory module descriptor",
+        "path": "src/modules/memory/module.yaml",
+        "symbol": "public descriptor and unavailable Go source",
+        "url": "https://github.com/RakuenSoftware/aimee/blob/56d9b0fa7880b7398aa7ca48f2b65b845192a6bf/src/modules/memory/module.yaml"
+      },
+      {
+        "id": "ingress",
+        "label": "Provider request context ingress",
+        "path": "src/server/ingress_preinject.c",
+        "symbol": "host path for context injection and source handling",
+        "url": "https://github.com/RakuenSoftware/aimee/blob/56d9b0fa7880b7398aa7ca48f2b65b845192a6bf/src/server/ingress_preinject.c"
+      },
+      {
+        "id": "fence",
+        "label": "Provider dispatch fence",
+        "path": "src/wire_fence.c",
+        "symbol": "source revalidation and request budget before provider dispatch",
+        "url": "https://github.com/RakuenSoftware/aimee/blob/56d9b0fa7880b7398aa7ca48f2b65b845192a6bf/src/wire_fence.c"
+      },
+      {
+        "id": "security",
+        "label": "Official security model",
+        "path": "docs/SECURITY.md",
+        "symbol": "host principals and trust boundaries",
+        "url": "https://github.com/RakuenSoftware/aimee/blob/56d9b0fa7880b7398aa7ca48f2b65b845192a6bf/docs/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": null,
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": null,
+        "url": "../../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": null,
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog identity and attribution only",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 44",
+        "url": "../../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Roster attribution source (identity only)",
+        "path": "content/systems/aimee.md",
+        "symbol": null,
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/aimee.md"
+      },
+      {
+        "id": "contact",
+        "label": "Published official project contact",
+        "path": "README.md",
+        "symbol": "README says other terms can be discussed at jbailes@gmail.com",
+        "url": "https://github.com/RakuenSoftware/aimee/blob/56d9b0fa7880b7398aa7ca48f2b65b845192a6bf/README.md"
+      },
+      {
+        "id": "contact-security",
+        "label": "Official SECURITY.md path checked",
+        "path": "SECURITY.md",
+        "symbol": "root SECURITY.md absent at reviewed revision",
+        "url": "https://github.com/RakuenSoftware/aimee/blob/56d9b0fa7880b7398aa7ca48f2b65b845192a6bf/SECURITY.md"
+      },
+      {
+        "id": "contact-support",
+        "label": "Official SUPPORT.md path checked",
+        "path": "SUPPORT.md",
+        "symbol": "root SUPPORT.md absent at reviewed revision",
+        "url": "https://github.com/RakuenSoftware/aimee/blob/56d9b0fa7880b7398aa7ca48f2b65b845192a6bf/SUPPORT.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "Aimee is a self-hosted agent runtime with personal memory on Server and optional shared memory on KB. The public repository owns the generic memory SDK, host integration, packaging and provisioning; storage, retrieval policy, ontology and maintenance are in a separately maintained private bundle.",
+        "sources": [
+          "readme",
+          "module-doc",
+          "memory-doc"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The public path is a generic Go memory client over the module bus, with Server and KB hosts dispatching to an implementation selected at deployment. Without a provisioned implementation, the public adapter does not attach or provide a local datastore; readiness reports missing memory and calls fail unavailable.",
+        "sources": [
+          "module-doc",
+          "memory-doc",
+          "unavailable",
+          "descriptor"
+        ]
+      },
+      {
+        "text": "The public Record includes ID, scope, tier, kind, key, content, confidence, optional metadata, validity bounds, sensitivity, authorship, utility horizon and version. MemoryRecordVersion binds schema version, owner ID, record ID and record revision; it is a mutation precondition, not a serving-eligibility proof.",
+        "sources": [
+          "store",
+          "version"
+        ]
+      },
+      {
+        "text": "The public Store exposes scoped Get, Search, Put and Delete. Optional CandidateStore selects bounded candidates but does not guarantee semantic-search completeness. Private persistence schema and ranking policy are not visible in the reviewed public tree.",
+        "sources": [
+          "store",
+          "module-doc",
+          "memory-doc"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "**Write.** Put is an upsert by kind/key and IDs are assigned by the canonical source. The client borrows an already admitted bus caller and does not set principal identity or apply local policy. Actual admission and persisted write semantics belong to the installed implementation.",
+        "sources": [
+          "store",
+          "client",
+          "module-doc"
+        ]
+      },
+      {
+        "text": "**Update and correction.** Basic upsert is separate from conditional mutation in an extended API. The version tuple provides an owner/record/revision precondition. Documentation describes retained revisions, but implementation conflict handling is not visible here.",
+        "sources": [
+          "store",
+          "version",
+          "knowledge",
+          "module-doc"
+        ]
+      },
+      {
+        "text": "**Delete and retirement.** The Store has scoped Delete. Documentation says legacy memory.delete means retained retirement: invalidation makes a record unavailable for current use but does not physically delete its payload or earlier revisions. Erasure from backups and exports is not established.",
+        "sources": [
+          "store",
+          "module-doc"
+        ]
+      },
+      {
+        "text": "**Retrieval.** Scoped Get and Search are available; an empty query lists eligible records in scope. Candidate selection is bounded and not a completeness guarantee for semantic retrieval. Selected canonical revisions must be revalidated. The private implementation determines ranking, eligibility, and retrieval quality.",
+        "sources": [
+          "store",
+          "fence",
+          "module-doc"
+        ]
+      },
+      {
+        "text": "**Scope isolation.** The SDK canonicalizes user, global, workspace, and project values but does not authorize access or choose defaults. Placement and admitted caller remain host decisions. Docs separate personal Server memory from explicitly selected shared KB memory; failed private lookups do not switch stores.",
+        "sources": [
+          "scope",
+          "knowledge",
+          "module-doc",
+          "security"
+        ]
+      },
+      {
+        "text": "**Provenance and evidence.** Record versions bind owner, row, and revision; records expose authorship and metadata. The client uses an admitted caller rather than accepting identity as a record argument. Host context release and source revalidation constrain provider dispatch, but private provenance completeness and answer support cannot be established.",
+        "sources": [
+          "store",
+          "version",
+          "client",
+          "ingress",
+          "fence",
+          "security"
+        ]
+      },
+      {
+        "text": "**Source-visible efficiency and observability.** The client defaults to a five-second module-call deadline, bounds wire requests, and distinguishes unavailable, unauthorized, and attempted-error embedding outcomes. Candidate limits and derived-store cleanup contracts are explicit. Operational docs describe missing-module readiness, logs, and a bus probe. These are not performance measurements.",
+        "sources": [
+          "client",
+          "types",
+          "store",
+          "module-doc"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Scoped retrieval and bounded candidate contracts are visible; private ranking policy and recall/abstention outcomes were not measured.",
+        "sources": [
+          "store",
+          "module-doc",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Record revisions and mutation preconditions are exposed; correction accuracy and stale-value rates were not measured.",
+        "sources": [
+          "version",
+          "store",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Delete is documented as retained retirement, not physical erasure; no leakage workload was run.",
+        "sources": [
+          "module-doc",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Scope canonicalization and host admission boundaries are defined; no cross-scope workload was run.",
+        "sources": [
+          "scope",
+          "security",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Owner/record revisions and source revalidation are present; claim-support precision and citation coverage were not adjudicated.",
+        "sources": [
+          "version",
+          "fence",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "SDK deadlines and bounded candidates are visible; no end-to-end latency distribution or write-to-recall delay was measured.",
+        "sources": [
+          "client",
+          "store",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No token, dollar-cost, or storage-efficiency results were collected for this system.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code and documentation",
+        "evidence": "Call deadlines, framing limits, candidate bounds, readiness diagnostics, and a bus probe are source-visible; none establishes runtime throughput or resource use.",
+        "sources": [
+          "client",
+          "types",
+          "store",
+          "module-doc"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The current memory engine is delivered as a private bundle. Public code exposes contracts and host integration rather than storage internals, ranking policy, ontology, or maintenance; the review cannot establish those hidden details.",
+        "sources": [
+          "readme",
+          "module-doc",
+          "memory-doc"
+        ]
+      },
+      {
+        "text": "The review inspected current public docs, generic Go SDK types and contracts, unavailable adapter, and host provider-dispatch source. It did not execute Aimee, tests, or benchmarks. Unknown means not verified by this bounded public review.",
+        "sources": [
+          "readme",
+          "module-doc",
+          "store",
+          "client",
+          "fence"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No Aimee runtime, benchmark workload, or test suite was run. Project metrics, fixture, and baseline status are protocol references, not Aimee measurements.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

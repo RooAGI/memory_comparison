@@ -1,0 +1,316 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 133,
+    "slug": "codewiki-plus",
+    "name": "CodeWiki-Plus",
+    "repository": "https://github.com/mambo-wang/CodeWiki-Plus",
+    "listed_repository": "https://github.com/mambo-wang/CodeWiki-Plus",
+    "repository_status": "explicit",
+    "branch": "develop",
+    "revision": "7cd5740673c9166184372095e7286f5fd115e5c8",
+    "reviewed_at": "2026-11-25T08:29:39Z",
+    "review_timezone": "UTC (2026-11-25 00:29:39 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": null,
+      "source_url": null,
+      "note": "The pinned official README contains no email; the pinned SECURITY.md URL returned File not found."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/mambo-wang/CodeWiki-Plus/blob/7cd5740673c9166184372095e7286f5fd115e5c8/README.md",
+      "https://github.com/mambo-wang/CodeWiki-Plus/blob/7cd5740673c9166184372095e7286f5fd115e5c8/SECURITY.md"
+    ],
+    "contact_email_note": "Checked only official project documentation: the pinned README publishes no email and the pinned SECURITY.md path returned File not found. No email was inferred from commit/profile metadata or third-party directories.",
+    "summary": "CodeWiki-Plus is an AI IDE driven repository knowledge engine and memory toolkit. It combines a structured repository wiki, lifecycle managed notes, per-task memory files, MCP tools, IDE hooks, and team usage telemetry. The IDE's own agent performs reasoning while CodeWiki-Plus exposes tools for reading, writing, retrieval, and maintenance. This is a source-based assessment, not a runtime or benchmark evaluation.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/codewiki-plus.md"
+    },
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[132], position 133: CodeWiki-Plus, slug, explicit listed repository locator, and Atlas attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster attribution only",
+        "path": "content/systems/codewiki-plus.md",
+        "symbol": "Roster identity and locator attribution; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/codewiki-plus.md"
+      },
+      {
+        "id": "repository",
+        "label": "Official GitHub repository",
+        "path": "",
+        "symbol": "Official repository page selects develop and displays latest abbreviated commit 7cd5740",
+        "url": "https://github.com/mambo-wang/CodeWiki-Plus"
+      },
+      {
+        "id": "head",
+        "label": "Official develop commits feed",
+        "path": "",
+        "symbol": "Full current develop head 7cd5740673c9166184372095e7286f5fd115e5c8; feed updated 2026-11-24T01:40:25Z",
+        "url": "https://github.com/mambo-wang/CodeWiki-Plus/commits/develop.atom"
+      },
+      {
+        "id": "revision",
+        "label": "Reviewed upstream commit",
+        "path": "",
+        "symbol": "Pinned commit 7cd5740673c9166184372095e7286f5fd115e5c8; official commit page matches the feed head",
+        "url": "https://github.com/mambo-wang/CodeWiki-Plus/commit/7cd5740673c9166184372095e7286f5fd115e5c8"
+      },
+      {
+        "id": "readme",
+        "label": "Official pinned README",
+        "path": "README.md",
+        "symbol": "Product architecture, MCP tools, memory workflows, lifecycle, retrieval, evidence, telemetry, and resource caveats",
+        "url": "https://github.com/mambo-wang/CodeWiki-Plus/blob/7cd5740673c9166184372095e7286f5fd115e5c8/README.md"
+      },
+      {
+        "id": "note_ingest",
+        "label": "Note ingestion implementation",
+        "path": "codewiki/mcp/tools/note_ingest.py",
+        "symbol": "Note file writes, frontmatter, status, and index refresh paths",
+        "url": "https://github.com/mambo-wang/CodeWiki-Plus/blob/7cd5740673c9166184372095e7286f5fd115e5c8/codewiki/mcp/tools/note_ingest.py"
+      },
+      {
+        "id": "note_writer",
+        "label": "Note writer and lifecycle implementation",
+        "path": "codewiki/mcp/tools/note_writer.py",
+        "symbol": "Source reference extraction, status rewrite, verification entries, lock and atomic write, index refresh",
+        "url": "https://github.com/mambo-wang/CodeWiki-Plus/blob/7cd5740673c9166184372095e7286f5fd115e5c8/codewiki/mcp/tools/note_writer.py"
+      },
+      {
+        "id": "note_query",
+        "label": "Note query implementation",
+        "path": "codewiki/mcp/tools/note_query.py",
+        "symbol": "Progressive query modes, BM25 call path, lifecycle filtering, and check-mode limits",
+        "url": "https://github.com/mambo-wang/CodeWiki-Plus/blob/7cd5740673c9166184372095e7286f5fd115e5c8/codewiki/mcp/tools/note_query.py"
+      },
+      {
+        "id": "task_manager",
+        "label": "Task memory manager",
+        "path": "codewiki/mcp/tools/task_manager.py",
+        "symbol": "Per-task/per-user files, layering, append and compaction behavior, search, and delete_task contract",
+        "url": "https://github.com/mambo-wang/CodeWiki-Plus/blob/7cd5740673c9166184372095e7286f5fd115e5c8/codewiki/mcp/tools/task_manager.py"
+      },
+      {
+        "id": "telemetry",
+        "label": "Team telemetry implementation",
+        "path": "codewiki/mcp/tools/telemetry.py",
+        "symbol": "Per-user JSONL hit/adoption/outcome event streams and aggregation semantics",
+        "url": "https://github.com/mambo-wang/CodeWiki-Plus/blob/7cd5740673c9166184372095e7286f5fd115e5c8/codewiki/mcp/tools/telemetry.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Shared metric definitions only; not CodeWiki-Plus measurements",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned evaluation cases only; not execution results",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Initial benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project-level execution status only; not CodeWiki-Plus result evidence",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "security",
+        "label": "Official pinned SECURITY.md contact check",
+        "path": "SECURITY.md",
+        "symbol": "Checked official path; GitHub returned File not found; no email inferred",
+        "url": "https://github.com/mambo-wang/CodeWiki-Plus/blob/7cd5740673c9166184372095e7286f5fd115e5c8/SECURITY.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes CodeWiki-Plus as an independently evolved open-source project built on the CodeWiki toolchain. It is distributed as a Python package and provides an MCP server, CLI, hooks, and workflow prompts; this review does not infer maintainer identity from GitHub profile or commit metadata.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The default knowledge workspace is a repository-local repowiki tree. It stores wiki pages, structured notes, imported raw sources, conversation transcripts, task records, and metadata. A SQLite analysis/search cache and BM25 index support repository analysis and wiki retrieval; the README also describes a wikilink graph and progressive overview, directory, and detail reading.",
+        "sources": [
+          "readme",
+          "note_query"
+        ]
+      },
+      {
+        "text": "Notes are Markdown files with YAML frontmatter. The lifecycle uses draft, stable, and deprecated statuses, with a separate strong/weak/shadow confidence value. The note writer normalizes legacy status names, extracts an optional source_ref, derives a trust tier from verification entries, and performs status rewrites under a cross-process lock before atomically writing the file.",
+        "sources": [
+          "readme",
+          "note_writer"
+        ]
+      },
+      {
+        "text": "Task memory is separate from wiki notes: each task has per-user append-oriented memory files and per-user compaction archives. The current user's file is loaded in full; other users' files are exposed as a summary plus a small recent portion. The task manager documents file-level isolation for concurrent users and compaction confined to the caller's own file.",
+        "sources": [
+          "task_manager",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "ingest_note stores structured notes in the wiki; the README documents draft as the default and direct stable ingestion as requiring a reason. The writer refreshes the wiki index and BM25 search entry after a write on a best-effort basis. Conversation capture stores transcripts separately, while distillation can create notes and task memories. add_task_memory writes directly to the selected task's current user's memory file.",
+        "sources": [
+          "readme",
+          "note_ingest",
+          "note_writer",
+          "task_manager"
+        ]
+      },
+      {
+        "text": "confirm_note promotes a note to stable and records a verification entry; evidence references can raise confidence. reject_note marks the note deprecated and shadow, and default note retrieval filters deprecated records while retaining them on disk. Task-memory corrections can supersede entries, and compaction archives older material while keeping a recent hot layer. These lifecycle actions preserve useful history but are not themselves benchmark evidence of correction accuracy.",
+        "sources": [
+          "readme",
+          "note_writer",
+          "note_query",
+          "task_manager"
+        ]
+      },
+      {
+        "text": "The task manager documents delete_task as removing the task directory, task index entry, and session bindings pointing to the task. The reviewed note lifecycle exposes rejection/deprecation, not a general secure-erasure guarantee; the inspected documentation does not establish erasure from backups, Git history, or other copies. Deleting a task can leave notes that carry a task_id reference.",
+        "sources": [
+          "task_manager",
+          "note_query",
+          "readme"
+        ]
+      },
+      {
+        "text": "Wiki search uses BM25 and supports progressive reading, confidence/status annotations, and optional shadow inclusion. The query implementation has overview, directory, detail, check, and by-file paths; check is a capped top-three precheck that omits graph expansion and retrieval statistics. Task-memory search runs an in-memory BM25 pass over the chosen task corpus, with archive search available by default.",
+        "sources": [
+          "readme",
+          "note_query",
+          "task_manager"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "BM25 search, graph expansion, progressive reads, and a check mode are present; no labeled answerability probes were run.",
+        "sources": [
+          "readme",
+          "note_query"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Note status transitions and task-memory supersession exist; no correction sequence was adjudicated.",
+        "sources": [
+          "readme",
+          "note_writer",
+          "task_manager"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Task deletion removes its directory and bindings; no post-delete or residual-copy audit was run.",
+        "sources": [
+          "task_manager",
+          "note_query"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Repository workspaces, task IDs, and per-user files are source-visible; no cross-user or cross-workspace isolation workload was run.",
+        "sources": [
+          "readme",
+          "task_manager"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source references, verification records, and wiki evidence features exist; no claim-evidence adjudication was performed.",
+        "sources": [
+          "readme",
+          "note_writer"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Search and indexing paths are visible; no timings were collected.",
+        "sources": [
+          "note_query",
+          "note_writer"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "The project exposes output token estimates; no token totals or provider charges were measured.",
+        "sources": [
+          "readme",
+          "note_query"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Workspace files, SQLite cache, and JSONL telemetry are documented; no corpus-attributable storage measurement was collected.",
+        "sources": [
+          "readme",
+          "telemetry"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The system delegates much knowledge extraction and use to an IDE agent, so source structure and workflow prompts cannot establish that a model creates accurate notes or follows retrieval and verification instructions. Status and confidence metadata are part of the workflow, but the reviewed code does not make them independent adjudication of truth. Optional task_id filters are caller-selected, and deletion behavior is not evidence of secure erasure.",
+        "sources": [
+          "readme",
+          "note_writer",
+          "note_query",
+          "task_manager"
+        ]
+      },
+      {
+        "text": "This review inspected the official README, note ingestion and lifecycle code, note query code, task-memory code, and telemetry code at the pinned head. It did not execute CodeWiki-Plus, its tests, hooks, or benchmark workloads, and did not inspect every integration, hook, persistence, or security path. Runtime quality, authorization behavior, and resource consumption remain unknown.",
+        "sources": [
+          "revision",
+          "readme",
+          "note_ingest",
+          "note_writer",
+          "note_query",
+          "task_manager",
+          "telemetry"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No CodeWiki-Plus runtime, tests, or benchmark workload was executed. METRICS.md, the fixture, and initial execution status provide evaluation definitions/status only, not CodeWiki-Plus results.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ]
+  }
+}

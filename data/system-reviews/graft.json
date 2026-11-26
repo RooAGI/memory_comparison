@@ -1,0 +1,378 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 269,
+    "slug": "graft",
+    "name": "Graft",
+    "repository": "https://github.com/AEndrix03/Graft",
+    "listed_repository": "https://github.com/AEndrix03/Graft",
+    "branch": "master",
+    "revision": "f9913b045ef927f5b9afad37f3e6544111f05736",
+    "reviewed_at": "2026-11-25T21:25:50Z",
+    "review_timezone": "UTC (checked 2026-11-25 13:25:50 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Graft is a local-first coding-agent memory system built around a CLI and a long-lived daemon. It stores titled memory nodes, vectors, full-text indexes, graph edges, and source provenance in a per-profile SQLite database. Retrieval offers a gated single-answer query, hybrid ranked recall, and graph exploration; no Graft workload was run for this review.",
+    "atlas_locator": {
+      "ordinal": 269,
+      "name": "Graft",
+      "slug": "graft",
+      "listed_repository": "https://github.com/AEndrix03/Graft",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/graft.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/AEndrix03/Graft/blob/f9913b045ef927f5b9afad37f3e6544111f05736/README.md",
+      "checked_urls": [
+        "https://github.com/AEndrix03/Graft/blob/f9913b045ef927f5b9afad37f3e6544111f05736/README.md",
+        "https://github.com/AEndrix03/Graft/blob/f9913b045ef927f5b9afad37f3e6544111f05736/SECURITY.md"
+      ],
+      "note": "Checked the official pinned README, which publishes no contact email; the official pinned SECURITY.md URL returned GitHub's File not found page. No email was inferred from commit/profile metadata or third-party directories."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/AEndrix03/Graft/blob/f9913b045ef927f5b9afad37f3e6544111f05736/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/AEndrix03/Graft/blob/f9913b045ef927f5b9afad37f3e6544111f05736/README.md",
+      "https://github.com/AEndrix03/Graft/blob/f9913b045ef927f5b9afad37f3e6544111f05736/SECURITY.md"
+    ],
+    "contact_email_note": "No contact email was published in the checked official README. The official SECURITY.md URL was checked and returned File not found. No commit/profile metadata or third-party directories were used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[268], ordinal 269; Graft identity, explicit listed repository locator and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/graft.md",
+        "symbol": "Pinned roster attribution, used only for identity and locator context",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/graft.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "Canonical AEndrix03/Graft repository and default branch master",
+        "url": "https://github.com/AEndrix03/Graft"
+      },
+      {
+        "id": "head",
+        "label": "Official current master head",
+        "path": "GitHub commits Atom feed",
+        "symbol": "Current master head f9913b045ef927f5b9afad37f3e6544111f05736; feed update timestamp 2026-11-14T00:51:59Z",
+        "url": "https://github.com/AEndrix03/Graft/commits/master.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project description, integrations, deployment shape and upstream-published claims clearly distinguished from this review",
+        "url": "https://github.com/AEndrix03/Graft/blob/f9913b045ef927f5b9afad37f3e6544111f05736/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Architecture documentation",
+        "path": "docs/architecture/README.md",
+        "symbol": "CLI/daemon split, request lifecycle, concurrency and module boundaries",
+        "url": "https://github.com/AEndrix03/Graft/blob/f9913b045ef927f5b9afad37f3e6544111f05736/docs/architecture/README.md"
+      },
+      {
+        "id": "storage",
+        "label": "Storage documentation",
+        "path": "docs/storage/README.md",
+        "symbol": "SQLite schema, lifecycle states, indexes, idempotency, supersession and deletion limitations",
+        "url": "https://github.com/AEndrix03/Graft/blob/f9913b045ef927f5b9afad37f3e6544111f05736/docs/storage/README.md"
+      },
+      {
+        "id": "insert",
+        "label": "Insert documentation",
+        "path": "docs/insert/README.md",
+        "symbol": "Write pipeline, content hash, edges, source locators and source fingerprints",
+        "url": "https://github.com/AEndrix03/Graft/blob/f9913b045ef927f5b9afad37f3e6544111f05736/docs/insert/README.md"
+      },
+      {
+        "id": "insert-code",
+        "label": "Insert implementation",
+        "path": "src/insert/insert.c",
+        "symbol": "Current insert argument parsing, content hash, duplicate handling and source-aware write path",
+        "url": "https://github.com/AEndrix03/Graft/blob/f9913b045ef927f5b9afad37f3e6544111f05736/src/insert/insert.c"
+      },
+      {
+        "id": "retrieval",
+        "label": "Retrieval documentation",
+        "path": "docs/retrieval/README.md",
+        "symbol": "Query confidence gates, WEAK/MISS output behavior, hybrid RRF recall and graph exploration limits",
+        "url": "https://github.com/AEndrix03/Graft/blob/f9913b045ef927f5b9afad37f3e6544111f05736/docs/retrieval/README.md"
+      },
+      {
+        "id": "retrieve-code",
+        "label": "Retrieve implementation",
+        "path": "src/retrieve/retrieve.c",
+        "symbol": "Current embedding request, per-list candidate retrieval, RRF ranking and result assembly",
+        "url": "https://github.com/AEndrix03/Graft/blob/f9913b045ef927f5b9afad37f3e6544111f05736/src/retrieve/retrieve.c"
+      },
+      {
+        "id": "profiles",
+        "label": "Profile and isolation documentation",
+        "path": "docs/profiles/README.md",
+        "symbol": "Per-profile databases, daemons, sockets, imports, merges and manual SQLite-file sync",
+        "url": "https://github.com/AEndrix03/Graft/blob/f9913b045ef927f5b9afad37f3e6544111f05736/docs/profiles/README.md"
+      },
+      {
+        "id": "maintenance",
+        "label": "Maintenance and observability documentation",
+        "path": "docs/maintenance/README.md",
+        "symbol": "Lifecycle transitions, source-change candidates, reversible resolutions, audit log, stats and usage analytics",
+        "url": "https://github.com/AEndrix03/Graft/blob/f9913b045ef927f5b9afad37f3e6544111f05736/docs/maintenance/README.md"
+      },
+      {
+        "id": "schema-code",
+        "label": "Storage schema implementation",
+        "path": "src/storage/schema.c",
+        "symbol": "Current SQLite pragmas and node, FTS5, provenance and maintenance schema",
+        "url": "https://github.com/AEndrix03/Graft/blob/f9913b045ef927f5b9afad37f3e6544111f05736/src/storage/schema.c"
+      },
+      {
+        "id": "contact-readme",
+        "label": "Official README contact check",
+        "path": "README.md",
+        "symbol": "Pinned README checked for a published contact email; none found",
+        "url": "https://github.com/AEndrix03/Graft/blob/f9913b045ef927f5b9afad37f3e6544111f05736/README.md"
+      },
+      {
+        "id": "contact-security",
+        "label": "Official SECURITY.md contact check",
+        "path": "SECURITY.md",
+        "symbol": "Checked official path; GitHub returned File not found",
+        "url": "https://github.com/AEndrix03/Graft/blob/f9913b045ef927f5b9afad37f3e6544111f05736/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Project evaluation domains",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned project evaluation fixture",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project run status; not a Graft result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository presents Graft as a local-first persistent memory layer for coding agents, with Claude Code and Codex plugins, OpenCode skills, MCP integrations, and a command-line interface for other callers. It ships a CLI plus a resident daemon rather than a language-specific SDK; the daemon owns the database and embedding model. This review does not infer an individual maintainer identity.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The CLI is a thin client: it encodes a MessagePack operation, sends it over a per-profile Unix-domain socket, and prints JSON. The daemon loads configuration, BGE-M3 embeddings and verifier state, owns SQLite, and dispatches operations. The optional HTTP API and browser viewer use the same dispatcher. The documented implementation shares one SQLite connection across daemon worker threads and serializes storage calls with a mutex.",
+        "sources": [
+          "architecture"
+        ]
+      },
+      {
+        "text": "A memory node stores a title, body, author, timestamps, expiry, access counters and lifecycle state. SQLite stores node rows, BGE-M3 title embeddings through sqlite-vec, FTS5 title/body indexing, keywords and graph edges; WAL mode is enabled. Semantic and keyword edges connect related nodes, while SUPERSEDES and CONTRADICTS edges represent lifecycle or disagreement relations.",
+        "sources": [
+          "storage",
+          "schema-code",
+          "insert"
+        ]
+      },
+      {
+        "text": "An insert embeds the title, upserts keywords, constructs similarity edges, and commits the node and related rows in one transaction. Its BLAKE3 content hash covers title, body and sorted keywords, so exact repeats are idempotent; the hash excludes author and timestamps. Similarity-based duplicates are not automatically collapsed.",
+        "sources": [
+          "insert",
+          "insert-code",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Profiles are physical partitions: each profile has its own SQLite file, daemon process and socket. The CLI selects profile paths before connecting. Cross-profile sharing is an explicit export/import/merge or manual sync of SQLite files; profiles are not request-level tenant IDs within one database.",
+        "sources": [
+          "profiles",
+          "architecture"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: `graft insert` accepts a title, body, keywords, optional author/expiry and repeatable source locators. File sources are resolved against the caller's project root and fingerprinted; a missing file causes the insert to fail. Duplicate content returns the existing node and can attach refreshed source links. The embedding and edge construction are based on the title; the implementation does not ask an LLM to generate or normalize node content.",
+        "sources": [
+          "insert",
+          "insert-code"
+        ]
+      },
+      {
+        "text": "Update and correction: insert can atomically supersede an old node by marking it superseded and adding a SUPERSEDES edge in the same transaction as the successor. The old node remains addressable by ID but is excluded from normal query/retrieve/explore. Maintenance offers stale, retire, restore, supersede, merge, refresh and keep/contradiction actions; semantic decisions are delegated to the agent after a candidate scan.",
+        "sources": [
+          "insert",
+          "storage",
+          "maintenance"
+        ]
+      },
+      {
+        "text": "Delete: `graft delete` is documented as a hard delete with cascading removal of dependent records. `retire` is a recoverable soft-delete state, excluded from retrieval until restore or physical purge after the configured retention window. Apply-safe purges expired retired nodes. The documentation explicitly lists soft deletion as missing for direct delete; database/file backups and previously exported copies are outside that lifecycle.",
+        "sources": [
+          "architecture",
+          "storage",
+          "maintenance"
+        ]
+      },
+      {
+        "text": "Retrieval has three different contracts. `query` embeds the question, checks a bounded vector candidate set against lexical and vector thresholds, and returns at most one STRONG node with its body, a WEAK title with no body, or MISS plus a fallback list. A stale node can remain searchable and even receive STRONG; it must be checked against current sources. `retrieve` separately fuses title-vector, title-BM25 and body-BM25 ranked lists with reciprocal-rank fusion. `explore` walks keyword/semantic graph edges with bounded beam search and may miss a globally relevant node not reachable from its seeds.",
+        "sources": [
+          "retrieval",
+          "retrieve-code",
+          "storage"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "The gated query, WEAK-without-body and MISS behaviors are source observations; no answer set was evaluated here.",
+        "sources": [
+          "retrieval",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Supersession, stale marking and maintenance candidates were inspected; no correction workload or stale-value score was run.",
+        "sources": [
+          "maintenance",
+          "insert",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Hard delete, retirement and delayed purge are documented; no post-delete or backup-retention probes were performed.",
+        "sources": [
+          "storage",
+          "maintenance",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Per-profile files, daemons and sockets are an architectural boundary; no cross-profile adversarial workload was run.",
+        "sources": [
+          "profiles",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source locators and per-node fingerprints are stored, but they are lineage/freshness metadata rather than proof of truth; no answer evidence was adjudicated.",
+        "sources": [
+          "insert",
+          "storage",
+          "maintenance",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The README and docs make latency claims and describe warm paths, but this review collected no runtime timings or write-to-recall measurements.",
+        "sources": [
+          "readme",
+          "retrieval",
+          "architecture",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "Integrations and embedding/model setup were inspected; no token or cost workload was run.",
+        "sources": [
+          "readme",
+          "architecture",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The SQLite schema and local embedding/index storage were inspected; no corpus-size or storage-growth measurement was collected.",
+        "sources": [
+          "storage",
+          "schema-code",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a source review pinned to the current official master head, not an operational, security, or quality audit. Graft's repository labels the project Alpha and warns the CLI JSON may change before 1.0.",
+        "sources": [
+          "head",
+          "readme"
+        ]
+      },
+      {
+        "text": "A STRONG gate is a similarity/lexical confidence rule, not proof that the stored note is true or still current. WEAK deliberately withholds the body, but stale nodes remain searchable. Retrieval docs say unsettled CONTRADICTS edges are not surfaced alongside normal query/retrieve/explore results.",
+        "sources": [
+          "retrieval",
+          "maintenance"
+        ]
+      },
+      {
+        "text": "Profile separation is documented as physical isolation within a local installation; this review did not inspect an adversarial threat model for operating several profiles or the optional HTTP/OAuth gateway. Remote sync is documented for a shared SQLite file, not an HTTP service.",
+        "sources": [
+          "profiles",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The insert source fingerprint helps identify changed files, but source content is not retained in the provenance tables. A reviewer or agent must reopen current files to adjudicate a stale-memory candidate. No benchmark, tests, system runtime, or local checkout was run in this review.",
+        "sources": [
+          "insert",
+          "storage",
+          "maintenance",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Graft runtime, tests, or benchmark workload was run for this review. Upstream README benchmark statements were treated as publisher claims and not as measurements reproduced here."
+    }
+  }
+}

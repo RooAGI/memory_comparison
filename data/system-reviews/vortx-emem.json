@@ -1,0 +1,250 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 217,
+    "slug": "vortx-emem",
+    "name": "emem (Vortx AI)",
+    "repository": "https://github.com/Vortx-AI/emem",
+    "listed_repository": "https://github.com/Vortx-AI/emem",
+    "branch": "main",
+    "revision": "85753c24ec0d96394492e6fc5dd3c8dbeef5444f",
+    "reviewed_at": "2026-11-25T19:05:53Z",
+    "review_timezone": "UTC (checked 2026-11-25 11:05:53 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact_email": "avijeet@vortx.ai",
+    "contact_email_source_url": "https://github.com/Vortx-AI/emem/blob/85753c24ec0d96394492e6fc5dd3c8dbeef5444f/SUPPORT.md",
+    "contact_email_checked_sources": [
+      "https://github.com/Vortx-AI/emem/blob/85753c24ec0d96394492e6fc5dd3c8dbeef5444f/SUPPORT.md"
+    ],
+    "contact": {
+      "email": "avijeet@vortx.ai",
+      "source_url": "https://github.com/Vortx-AI/emem/blob/85753c24ec0d96394492e6fc5dd3c8dbeef5444f/SUPPORT.md",
+      "note": "Official repository support documentation publishes this address for correspondence and support."
+    },
+    "summary": "emem is a Rust protocol and service for addressable signed facts and shared agent notes. It uses content identifiers, receipts, and a transparency log; notes are public and deletion unpublishes rather than erases their retained bytes. No system behavior or performance was measured for this review.",
+    "atlas_locator": {
+      "ordinal": 217,
+      "name": "emem (Vortx AI)",
+      "slug": "vortx-emem",
+      "listed_repository": "https://github.com/Vortx-AI/emem",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/vortx-emem.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "use": "Curated roster attribution and locator context only; not assessment evidence."
+    },
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated project catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[216], ordinal 217; name, slug, listed repository locator, roster attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Agent Memory Atlas roster attribution only",
+        "path": "content/systems/vortx-emem.md",
+        "symbol": "Pinned roster attribution and locator context; not used for assessment",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/vortx-emem.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository metadata",
+        "path": "repository metadata",
+        "symbol": "Canonical full_name Vortx-AI/emem and default branch main",
+        "url": "https://api.github.com/repos/Vortx-AI/emem"
+      },
+      {
+        "id": "head",
+        "label": "Official current main commit metadata",
+        "path": "main commit endpoint",
+        "symbol": "Full current main head SHA 85753c24ec0d96394492e6fc5dd3c8dbeef5444f",
+        "url": "https://api.github.com/repos/Vortx-AI/emem/commits/main"
+      },
+      {
+        "id": "tree",
+        "label": "Reviewed upstream tree",
+        "path": "repository tree",
+        "symbol": "Reviewed commit 85753c24ec0d96394492e6fc5dd3c8dbeef5444f",
+        "url": "https://github.com/Vortx-AI/emem/tree/85753c24ec0d96394492e6fc5dd3c8dbeef5444f"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Fact and note model, interfaces, guarantees, limitations, contact-adjacent product detail",
+        "url": "https://github.com/Vortx-AI/emem/blob/85753c24ec0d96394492e6fc5dd3c8dbeef5444f/README.md"
+      },
+      {
+        "id": "in-depth",
+        "label": "Pinned official in-depth documentation",
+        "path": "docs/emem-in-depth.md",
+        "symbol": "Record model, read/write semantics, trust model, limitations, privacy and reported performance",
+        "url": "https://github.com/Vortx-AI/emem/blob/85753c24ec0d96394492e6fc5dd3c8dbeef5444f/docs/emem-in-depth.md"
+      },
+      {
+        "id": "acl",
+        "label": "Pinned note ACL implementation",
+        "path": "crates/emem-primitives/src/memory_acl.rs",
+        "symbol": "Attestation preimages, replay mitigation, namespace ownership, reserved path behavior",
+        "url": "https://github.com/Vortx-AI/emem/blob/85753c24ec0d96394492e6fc5dd3c8dbeef5444f/crates/emem-primitives/src/memory_acl.rs"
+      },
+      {
+        "id": "storage",
+        "label": "Pinned storage implementation",
+        "path": "crates/emem-storage/src/lib.rs",
+        "symbol": "Lazy materializer and Sled trees for fact proofs, memory paths, blobs, history, tombstones, indexes and bundles",
+        "url": "https://github.com/Vortx-AI/emem/blob/85753c24ec0d96394492e6fc5dd3c8dbeef5444f/crates/emem-storage/src/lib.rs"
+      },
+      {
+        "id": "support",
+        "label": "Pinned official support documentation",
+        "path": "SUPPORT.md",
+        "symbol": "Published support email, health endpoint and Prometheus metrics endpoint",
+        "url": "https://github.com/Vortx-AI/emem/blob/85753c24ec0d96394492e6fc5dd3c8dbeef5444f/SUPPORT.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation domains and measurement definitions; no emem results",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Benchmark protocol only; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project status record; not emem measurements",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes emem as a Rust protocol and service for shared, addressable, verifiable memory, with facts and agent notes exposed through REST and MCP. These are upstream descriptions, not runtime findings from this review.",
+        "sources": ["readme", "repo"]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Facts are addressed by cell, band, and time slot, identified by BLAKE3 over canonical CBOR, and accompanied by Ed25519 receipts. Agent notes are content-addressed files indexed by path, with stored history and tombstones. The storage crate describes a cache-first materializer that fetches registered upstream sources and writes attested results to cache and log.",
+        "sources": ["readme", "storage", "in-depth"]
+      },
+      {
+        "text": "The service exposes REST and MCP interfaces for question answering, recall, token resolution, note search, and memory writes. The README also describes signed absences, source/method context, and tokens for sharing verified values between agents.",
+        "sources": ["readme", "in-depth"]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "For fact recall, the documented flow reads source-backed values on demand and returns dated values, source/method context, and a token that resolves to signed record bytes. A new-place lookup may require a source fetch and computation; documented warm and cold timing descriptions are not measurements from this review.",
+        "sources": ["readme", "in-depth", "storage"]
+      },
+      {
+        "text": "Agent note writes are signed over the verb, path, body hash, and, in the newer preimage, the current base file CID. This binding is intended to stop replaying an old signature over a path version that has since changed.",
+        "sources": ["acl"]
+      },
+      {
+        "text": "The note store maintains file-CID blobs, path indexes and per-path history. Delete unpublishes a note and records a tombstone while retaining content-addressed bytes and earlier versions for receipt verification; it is not full erasure.",
+        "sources": ["storage", "readme", "in-depth"]
+      },
+      {
+        "text": "A note search result is documented to identify its attester and file CID. Fact and note tokens let agents resolve the referenced bytes again; independent verification checks the signed record rather than a model paraphrase.",
+        "sources": ["readme", "in-depth"]
+      },
+      {
+        "text": "The project describes a transparency log with independent witnesses that co-sign log heads. The docs distinguish witness-based split-view detection from consensus and cross-node fact retrieval, which are not provided by the described federation phase.",
+        "sources": ["readme", "in-depth"]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "No recall answers or signed absence cases were executed and adjudicated.",
+        "sources": ["metrics", "fixture", "status"]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Immutable fact and note update contracts were source-inspected, but no correction sequence was exercised.",
+        "sources": ["readme", "in-depth", "metrics"]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Documentation says note deletion unpublishes but does not erase retained bytes; no deletion probes were performed.",
+        "sources": ["readme", "in-depth", "metrics"]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Note write namespaces are source-visible; reads are documented as public. No authorization or cross-namespace tests were run.",
+        "sources": ["acl", "readme", "metrics"]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Receipts and source links are documented, but no generated claim set was collected or adjudicated for source support.",
+        "sources": ["readme", "in-depth", "metrics"]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "The README and in-depth guide report timing examples, but this review collected no latency distribution.",
+        "sources": ["readme", "in-depth", "metrics"]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No post-write recall probes were executed.",
+        "sources": ["metrics", "fixture", "status"]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "The README gives MCP context-size descriptions, but no token consumption or service charges were measured.",
+        "sources": ["readme", "metrics"]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Content-addressed deduplication structures are visible in source, but no benchmark-attributable storage bytes were collected.",
+        "sources": ["storage", "metrics"]
+      },
+      {
+        "domain": "Source-visible observability",
+        "status": "available in docs",
+        "evidence": "The official support guide lists health and Prometheus metrics endpoints; no endpoint or runtime telemetry was checked.",
+        "sources": ["support"]
+      }
+    ],
+    "limits": [
+      {
+        "text": "Signatures prove who signed, not whether a fact is true or an upstream source is correct. A token points to fixed bytes but does not ensure somebody retains or serves them. A place name resolves to one cell; first reads can be slow.",
+        "sources": ["readme", "in-depth"]
+      },
+      {
+        "text": "Agent notes are public by default. Vault entries remain readable by the operator. Deletion unpublishes but retains bytes and previous versions, and external agents may already have copies.",
+        "sources": ["readme", "in-depth", "storage"]
+      },
+      {
+        "text": "The described federation witnesses log heads but does not provide network consensus or cross-node fact retrieval. This review did not run the service, test suite, or benchmark workload, so operational behavior, isolation outcomes, and performance remain unknown.",
+        "sources": ["readme", "in-depth", "tree"]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Status: Benchmark not run. No emem runtime, benchmark workload, or test suite was run. Metric definitions and the fixture describe the project protocol, not emem results.",
+        "sources": ["metrics", "fixture", "status"]
+      }
+    ]
+  }
+}

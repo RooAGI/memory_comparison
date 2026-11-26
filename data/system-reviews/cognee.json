@@ -1,0 +1,507 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 134,
+    "slug": "cognee",
+    "name": "Cognee",
+    "repository": "https://github.com/topoteretes/cognee",
+    "branch": "main",
+    "revision": "1961133d0c68b450fe8e71941a756371e94f7c04",
+    "reviewed_at": "2026-11-25T08:29:35Z",
+    "review_timezone": "UTC (2026-11-25 00:29:35 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": "security@cognee.ai",
+      "source_url": "https://github.com/topoteretes/cognee/blob/1961133d0c68b450fe8e71941a756371e94f7c04/SECURITY.md",
+      "checked_urls": [
+        "https://github.com/topoteretes/cognee/blob/1961133d0c68b450fe8e71941a756371e94f7c04/SECURITY.md"
+      ],
+      "note": "Published as the official vulnerability-reporting email in the pinned security policy."
+    },
+    "contact_email": "security@cognee.ai",
+    "contact_email_source_url": "https://github.com/topoteretes/cognee/blob/1961133d0c68b450fe8e71941a756371e94f7c04/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/topoteretes/cognee/blob/1961133d0c68b450fe8e71941a756371e94f7c04/SECURITY.md"
+    ],
+    "contact_email_note": "Official SECURITY.md publishes security@cognee.ai as a vulnerability-reporting contact.",
+    "summary": "Cognee is an open-source memory platform that stages source documents, transforms them into chunk, graph, and vector representations, and retrieves context through selectable search strategies. Its source includes session memory, dataset permissions, optional provenance tracking, and OpenTelemetry hooks. This assessment is source-based; no runtime or benchmark results were collected.",
+    "atlas_locator": {
+      "ordinal": 134,
+      "name": "Cognee",
+      "slug": "cognee",
+      "listed_repository": "https://github.com/topoteretes/cognee",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cognee.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated roster",
+        "path": "data/memory-systems.json",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/cognee.md",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cognee.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository",
+        "symbol": "public repository; default branch main",
+        "url": "https://github.com/topoteretes/cognee"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed full commit",
+        "path": "commit",
+        "symbol": "1961133d0c68b450fe8e71941a756371e94f7c04",
+        "url": "https://github.com/topoteretes/cognee/commit/1961133d0c68b450fe8e71941a756371e94f7c04"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "url": "https://github.com/topoteretes/cognee/blob/1961133d0c68b450fe8e71941a756371e94f7c04/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "url": "https://github.com/topoteretes/cognee/blob/1961133d0c68b450fe8e71941a756371e94f7c04/SECURITY.md"
+      },
+      {
+        "id": "datapoint",
+        "label": "DataPoint model",
+        "path": "cognee/infrastructure/engine/models/DataPoint.py",
+        "url": "https://github.com/topoteretes/cognee/blob/1961133d0c68b450fe8e71941a756371e94f7c04/cognee/infrastructure/engine/models/DataPoint.py"
+      },
+      {
+        "id": "entity",
+        "label": "Entity graph model",
+        "path": "cognee/modules/engine/models/Entity.py",
+        "url": "https://github.com/topoteretes/cognee/blob/1961133d0c68b450fe8e71941a756371e94f7c04/cognee/modules/engine/models/Entity.py"
+      },
+      {
+        "id": "chunk",
+        "label": "DocumentChunk model",
+        "path": "cognee/modules/chunking/models/DocumentChunk.py",
+        "url": "https://github.com/topoteretes/cognee/blob/1961133d0c68b450fe8e71941a756371e94f7c04/cognee/modules/chunking/models/DocumentChunk.py"
+      },
+      {
+        "id": "add",
+        "label": "Ingestion API",
+        "path": "cognee/api/v1/add/add.py",
+        "url": "https://github.com/topoteretes/cognee/blob/1961133d0c68b450fe8e71941a756371e94f7c04/cognee/api/v1/add/add.py"
+      },
+      {
+        "id": "cognify",
+        "label": "Cognify pipeline",
+        "path": "cognee/api/v1/cognify/cognify.py",
+        "url": "https://github.com/topoteretes/cognee/blob/1961133d0c68b450fe8e71941a756371e94f7c04/cognee/api/v1/cognify/cognify.py"
+      },
+      {
+        "id": "remember",
+        "label": "Unified remember API",
+        "path": "cognee/api/v1/remember/remember.py",
+        "url": "https://github.com/topoteretes/cognee/blob/1961133d0c68b450fe8e71941a756371e94f7c04/cognee/api/v1/remember/remember.py"
+      },
+      {
+        "id": "update",
+        "label": "Document update API",
+        "path": "cognee/api/v1/update/update.py",
+        "url": "https://github.com/topoteretes/cognee/blob/1961133d0c68b450fe8e71941a756371e94f7c04/cognee/api/v1/update/update.py"
+      },
+      {
+        "id": "recall",
+        "label": "Recall API",
+        "path": "cognee/api/v1/recall/recall.py",
+        "url": "https://github.com/topoteretes/cognee/blob/1961133d0c68b450fe8e71941a756371e94f7c04/cognee/api/v1/recall/recall.py"
+      },
+      {
+        "id": "search",
+        "label": "Search API and retriever dispatch",
+        "path": "cognee/api/v1/search/search.py",
+        "url": "https://github.com/topoteretes/cognee/blob/1961133d0c68b450fe8e71941a756371e94f7c04/cognee/api/v1/search/search.py"
+      },
+      {
+        "id": "authorized_search",
+        "label": "Authorized dataset search",
+        "path": "cognee/modules/search/methods/search.py",
+        "url": "https://github.com/topoteretes/cognee/blob/1961133d0c68b450fe8e71941a756371e94f7c04/cognee/modules/search/methods/search.py"
+      },
+      {
+        "id": "scope",
+        "label": "Dataset access-control context",
+        "path": "cognee/context_global_variables.py",
+        "url": "https://github.com/topoteretes/cognee/blob/1961133d0c68b450fe8e71941a756371e94f7c04/cognee/context_global_variables.py"
+      },
+      {
+        "id": "forget",
+        "label": "Forget and deletion API",
+        "path": "cognee/api/v1/forget/forget.py",
+        "url": "https://github.com/topoteretes/cognee/blob/1961133d0c68b450fe8e71941a756371e94f7c04/cognee/api/v1/forget/forget.py"
+      },
+      {
+        "id": "provenance_switch",
+        "label": "Provenance tracking switch",
+        "path": "cognee/modules/provenance/tracking.py",
+        "url": "https://github.com/topoteretes/cognee/blob/1961133d0c68b450fe8e71941a756371e94f7c04/cognee/modules/provenance/tracking.py"
+      },
+      {
+        "id": "provenance_writer",
+        "label": "Provenance storage hook",
+        "path": "cognee/tasks/provenance/record_provenance.py",
+        "url": "https://github.com/topoteretes/cognee/blob/1961133d0c68b450fe8e71941a756371e94f7c04/cognee/tasks/provenance/record_provenance.py"
+      },
+      {
+        "id": "provenance_manager",
+        "label": "Provenance ledger manager",
+        "path": "cognee/modules/provenance/manager.py",
+        "url": "https://github.com/topoteretes/cognee/blob/1961133d0c68b450fe8e71941a756371e94f7c04/cognee/modules/provenance/manager.py"
+      },
+      {
+        "id": "provenance_storage",
+        "label": "Provenance ledger transactions",
+        "path": "cognee/modules/provenance/storage.py",
+        "url": "https://github.com/topoteretes/cognee/blob/1961133d0c68b450fe8e71941a756371e94f7c04/cognee/modules/provenance/storage.py"
+      },
+      {
+        "id": "provenance_model",
+        "label": "Provenance entry schema",
+        "path": "cognee/modules/provenance/models/ProvenanceEntry.py",
+        "url": "https://github.com/topoteretes/cognee/blob/1961133d0c68b450fe8e71941a756371e94f7c04/cognee/modules/provenance/models/ProvenanceEntry.py"
+      },
+      {
+        "id": "evidence",
+        "label": "Retrieval evidence reference schema",
+        "path": "cognee/modules/search/models/EvidenceReference.py",
+        "url": "https://github.com/topoteretes/cognee/blob/1961133d0c68b450fe8e71941a756371e94f7c04/cognee/modules/search/models/EvidenceReference.py"
+      },
+      {
+        "id": "metrics_code",
+        "label": "OpenTelemetry metrics",
+        "path": "cognee/modules/observability/metrics.py",
+        "url": "https://github.com/topoteretes/cognee/blob/1961133d0c68b450fe8e71941a756371e94f7c04/cognee/modules/observability/metrics.py"
+      },
+      {
+        "id": "observability",
+        "label": "Observability exports and spans",
+        "path": "cognee/modules/observability/__init__.py",
+        "url": "https://github.com/topoteretes/cognee/blob/1961133d0c68b450fe8e71941a756371e94f7c04/cognee/modules/observability/__init__.py"
+      },
+      {
+        "id": "telemetry",
+        "label": "Cloud telemetry contract",
+        "path": "docs/cloud-telemetry-contract.md",
+        "url": "https://github.com/topoteretes/cognee/blob/1961133d0c68b450fe8e71941a756371e94f7c04/docs/cloud-telemetry-contract.md"
+      },
+      {
+        "id": "metric_defs",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "result",
+        "label": "Shared benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Cognee as an open-source AI memory platform for persistent agent memory. The Python package exposes add/cognify and remember/recall/forget operations, with CLI, REST, MCP, and agent integration routes also documented.",
+        "sources": [
+          "readme",
+          "add",
+          "cognify",
+          "remember",
+          "recall",
+          "forget"
+        ]
+      },
+      {
+        "text": "The README identifies the Cognee project and links its documentation and integrations; this review does not infer individual maintainer identity.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The reviewed catalog position is 134, with Cognee as the system name, cognee as the slug, and the explicit listed repository locator shown in the curated roster. Atlas is recorded only as roster attribution.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The official repository and pinned commit identify the public topoteretes/cognee upstream reviewed on its main default branch.",
+        "sources": [
+          "repo",
+          "head"
+        ]
+      },
+      {
+        "text": "The official security policy publishes security@cognee.ai for vulnerability reports.",
+        "sources": [
+          "security"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The ingestion path stages source files and text as dataset-scoped data records, then cognify chunks documents, extracts entities and relations, and writes graph and vector indexes. The public DataPoint abstraction supports structured graph objects; DocumentChunk stores text, chunk position, content hash, document identity, and metadata, and Entity specializes DataPoint.",
+        "sources": [
+          "readme",
+          "add",
+          "cognify",
+          "datapoint",
+          "entity",
+          "chunk"
+        ]
+      },
+      {
+        "text": "The unified remember operation wraps ingestion, graph construction, and optional improvement/session distillation. The data is represented across relational metadata, original/processed documents, graph nodes and edges, and vector indexes; configured database adapters determine the concrete stores.",
+        "sources": [
+          "remember",
+          "add",
+          "cognify",
+          "readme"
+        ]
+      },
+      {
+        "text": "Recall can read session entries or route queries to graph, vector, chunk, summary, temporal, or code retrieval. It can return retrieved context or generate a completion, and optional evidence references identify source segments or graph artifacts.",
+        "sources": [
+          "recall",
+          "search",
+          "evidence"
+        ]
+      },
+      {
+        "text": "The API and pipeline emit spans and counters for operation duration, stored/retrieved/deleted items, result counts, bytes, vector searches, graph changes, and errors. Metrics are no-ops until an OpenTelemetry meter is configured; the cloud telemetry contract describes a separate filtered product-telemetry profile.",
+        "sources": [
+          "observability",
+          "metrics_code",
+          "telemetry"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: add() stages source data and records it in a dataset; cognify() builds searchable chunks and graph structures. remember() combines ingestion and cognify, with optional improve/session bridging. Duplicate content is matched by hash within a dataset; changed existing documents use update(), which retains the data ID and attempts chunk-level diffing before full rebuild fallback.",
+        "sources": [
+          "add",
+          "cognify",
+          "remember",
+          "update"
+        ]
+      },
+      {
+        "text": "Update: the inspected update implementation replaces one document by stable data_id. It may replace only changed chunks when prerequisites hold, otherwise drops and rebuilds the document's memory. The code documents possible failed rebuilds and retry behavior; no update sequence was executed.",
+        "sources": [
+          "update"
+        ]
+      },
+      {
+        "text": "Delete: forget() supports one data item, a dataset, all deletable datasets, memory-only removal, and optional history cleanup. Memory-only mode intentionally keeps raw files and data records for later re-cognification. The source warns that engine fragments or graph files can retain deleted bytes; no byte-level erasure guarantee is established.",
+        "sources": [
+          "forget"
+        ]
+      },
+      {
+        "text": "Retrieval: recall() supports explicit or auto-routed search types, top-k bounds, dataset filters, graph node scopes, and session cache lookup; include_references can attach source locators for supported completion results. Search strategies vary in whether they return passages, graph context, summaries, or generated answers.",
+        "sources": [
+          "recall",
+          "search",
+          "evidence"
+        ]
+      },
+      {
+        "text": "Scope isolation: datasets are the permission and processing unit. With backend access control enabled (on by default in the inspected context code), search resolves readable datasets before retrieval and binds database context per dataset. The environment variable can disable this access-control path, and graph/vector backend support is required; source inspection does not prove deployment configuration or tenant isolation in a running installation.",
+        "sources": [
+          "scope",
+          "authorized_search",
+          "add"
+        ]
+      },
+      {
+        "text": "Provenance: when PROVENANCE_TRACKING is enabled, a storage hook records data-item content hash, dataset-qualified identity, source reference, actor, and pipeline activity in a relational append-only hash chain. The feature is off by default. Retrieval evidence references are optional locators for contributing artifacts; neither mechanism proves that extracted facts are correct.",
+        "sources": [
+          "provenance_switch",
+          "provenance_writer",
+          "provenance_manager",
+          "provenance_storage",
+          "provenance_model",
+          "evidence"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: source code includes batched chunk processing, incremental ingestion/update paths, optional query routing, graph/vector retrieval, and batched provenance-chain writes. OpenTelemetry metrics and spans can expose operation timing and counts when configured; the repository does not provide measurements for this review.",
+        "sources": [
+          "add",
+          "cognify",
+          "update",
+          "authorized_search",
+          "provenance_storage",
+          "metrics_code",
+          "observability"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "Recall and search routing are implemented, but no answerability, retrieval-quality, or abstention workload was run.",
+        "sources": [
+          "recall",
+          "search",
+          "metric_defs",
+          "result",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Stable-ID document update and incremental/full-rebuild paths are source-visible; no conflicting correction or stale-value sequence was run.",
+        "sources": [
+          "update",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "forget() has item, dataset, memory-only, and history modes; its documentation identifies residual storage-engine bytes as a limitation. No post-delete retrieval or residual-copy check was run.",
+        "sources": [
+          "forget",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Dataset authorization is applied before search when backend access control is active; no cross-dataset or cross-tenant isolation workload was run.",
+        "sources": [
+          "scope",
+          "authorized_search",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Optional evidence references and opt-in provenance records are implemented; no claim-to-source adjudication workload was run.",
+        "sources": [
+          "evidence",
+          "provenance_model",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "OpenTelemetry duration instruments are available, but no configured collection or latency workload was measured.",
+        "sources": [
+          "metrics_code",
+          "observability",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Staging, cognify, and recall are separate or composable operations; no time-to-searchable-memory workload was measured.",
+        "sources": [
+          "add",
+          "cognify",
+          "remember",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "The README describes local and provider-backed model configurations; no token usage, provider cost, or cost-per-retrieval measurement was collected.",
+        "sources": [
+          "readme",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Documents, chunks, graph and vector representations, and optional provenance ledger are visible in source; no storage-footprint comparison was measured.",
+        "sources": [
+          "add",
+          "chunk",
+          "provenance_writer",
+          "metric_defs",
+          "result"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "Source inspection cannot establish actual retrieval quality, abstention correctness, online write-to-recall delay, configured observability coverage, latency, token use, cost, or storage efficiency.",
+        "sources": [
+          "recall",
+          "metrics_code",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "text": "Deletion removes named records from Cognee's logical stores, but the documented storage engines may retain bytes until their own compaction or vacuum. Memory-only deletion retains raw records by design.",
+        "sources": [
+          "forget"
+        ]
+      },
+      {
+        "text": "Access control depends on runtime configuration and supported graph/vector adapters. The source proves code paths, not the deployment's configuration or security boundary.",
+        "sources": [
+          "scope",
+          "authorized_search"
+        ]
+      },
+      {
+        "text": "The provenance ledger is opt-in and records data-item lineage, not a complete factual truth or immutable audit of every mutation. Optional evidence references identify context artifacts but do not adjudicate their correctness.",
+        "sources": [
+          "provenance_switch",
+          "provenance_writer",
+          "evidence"
+        ]
+      },
+      {
+        "text": "The review selected current README, API, model, retrieval, access-control, deletion, provenance, and observability sources; it did not audit every adapter, loader, integration, or deployment configuration.",
+        "sources": [
+          "repo",
+          "head",
+          "readme"
+        ]
+      }
+    ],
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "No Cognee runtime, tests, or benchmark workloads were executed for this source review."
+    }
+  }
+}

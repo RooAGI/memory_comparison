@@ -1,0 +1,344 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 246,
+    "slug": "forgetful",
+    "name": "Forgetful",
+    "repository": "https://github.com/scottrbk/forgetful",
+    "listed_repository": "https://github.com/scottrbk/forgetful",
+    "branch": "main",
+    "revision": "3b816f97f4ff20d26fd47f559b9a7567ba427c00",
+    "reviewed_at": "2026-11-25T23:42:52Z",
+    "review_timezone": "UTC (checked local time: 2026-11-25 15:42:52 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Forgetful is a self-hostable MCP memory and knowledge service with SQLite or PostgreSQL storage, semantic search, optional reranking and keyword fusion, and an agent-facing CLI and HTTP API.",
+    "atlas_locator": {
+      "ordinal": 246,
+      "name": "Forgetful",
+      "slug": "forgetful",
+      "listed_repository": "https://github.com/scottrbk/forgetful",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/forgetful.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "catalog_revision": "35764a88514f2c70b53d91a85d1cd5760e001d0f",
+      "note": "Used only for curated identity and locator attribution, not assessment evidence."
+    },
+    "contact": {
+      "email": null,
+      "source_url": null,
+      "checked_urls": [
+        "https://github.com/scottrbk/forgetful/blob/3b816f97f4ff20d26fd47f559b9a7567ba427c00/README.md",
+        "https://github.com/scottrbk/forgetful/blob/3b816f97f4ff20d26fd47f559b9a7567ba427c00/SECURITY.md"
+      ],
+      "note": "The official pinned README and SECURITY.md were checked. Neither publishes a contact email; SECURITY.md directs vulnerability reports through GitHub private vulnerability reporting."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/scottrbk/forgetful/blob/3b816f97f4ff20d26fd47f559b9a7567ba427c00/README.md",
+      "https://github.com/scottrbk/forgetful/blob/3b816f97f4ff20d26fd47f559b9a7567ba427c00/SECURITY.md"
+    ],
+    "contact_email_note": "The official README and SECURITY.md at the reviewed SHA contain no published email. SECURITY.md directs vulnerability reports through GitHub private vulnerability reporting. No address was inferred or taken from commit/profile metadata or third-party directories.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated roster record",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[245], ordinal 246; Forgetful, slug forgetful, explicit listed locator and pinned Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/forgetful.md",
+        "symbol": "Used only for curated identity and locator attribution, not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/forgetful.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository page",
+        "path": "repository metadata",
+        "symbol": "Canonical ScottRBK/forgetful; default branch main",
+        "url": "https://github.com/scottrbk/forgetful"
+      },
+      {
+        "id": "head",
+        "label": "Official main commit feed and commit",
+        "path": "commits/main.atom",
+        "symbol": "Current main head 3b816f97f4ff20d26fd47f559b9a7567ba427c00, feed updated 2026-11-24T17:35:09Z",
+        "url": "https://github.com/scottrbk/forgetful/commit/3b816f97f4ff20d26fd47f559b9a7567ba427c00"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product role, MCP/CLI interfaces, data model concepts, storage choices and provider features",
+        "url": "https://github.com/scottrbk/forgetful/blob/3b816f97f4ff20d26fd47f559b9a7567ba427c00/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Pinned architecture overview",
+        "path": "architecture.md",
+        "symbol": "Current component boundaries, persistence, search, identity, event, and lifecycle wiring",
+        "url": "https://github.com/scottrbk/forgetful/blob/3b816f97f4ff20d26fd47f559b9a7567ba427c00/architecture.md"
+      },
+      {
+        "id": "models",
+        "label": "Memory request and result models",
+        "path": "app/models/memory_models.py",
+        "symbol": "Atomic memory fields, constraints, project/artifact/document associations, and optional provenance fields",
+        "url": "https://github.com/scottrbk/forgetful/blob/3b816f97f4ff20d26fd47f559b9a7567ba427c00/app/models/memory_models.py"
+      },
+      {
+        "id": "service",
+        "label": "Memory service implementation",
+        "path": "app/services/memory_service.py",
+        "symbol": "Primary and linked retrieval, token budgeting, create/update/lifecycle orchestration, activity events",
+        "url": "https://github.com/scottrbk/forgetful/blob/3b816f97f4ff20d26fd47f559b9a7567ba427c00/app/services/memory_service.py"
+      },
+      {
+        "id": "sqlite",
+        "label": "SQLite memory repository",
+        "path": "app/repositories/sqlite/memory_repository.py",
+        "symbol": "sqlite-vec vector search, optional FTS5 hybrid path, user/project filters, memory persistence",
+        "url": "https://github.com/scottrbk/forgetful/blob/3b816f97f4ff20d26fd47f559b9a7567ba427c00/app/repositories/sqlite/memory_repository.py"
+      },
+      {
+        "id": "postgres",
+        "label": "PostgreSQL memory repository",
+        "path": "app/repositories/postgres/memory_repository.py",
+        "symbol": "pgvector and PostgreSQL search/persistence backend with ownership and optional hybrid retrieval",
+        "url": "https://github.com/scottrbk/forgetful/blob/3b816f97f4ff20d26fd47f559b9a7567ba427c00/app/repositories/postgres/memory_repository.py"
+      },
+      {
+        "id": "search",
+        "label": "Search guide",
+        "path": "docs/search.md",
+        "symbol": "Dense default, optional keyword/RRF hybrid path, reranking, backends, and upstream synthetic retrieval figures",
+        "url": "https://github.com/scottrbk/forgetful/blob/3b816f97f4ff20d26fd47f559b9a7567ba427c00/docs/search.md"
+      },
+      {
+        "id": "concepts",
+        "label": "Official concepts guide",
+        "path": "docs/concepts.md",
+        "symbol": "Memory categories, provenance fields, and operator defaults",
+        "url": "https://github.com/scottrbk/forgetful/blob/3b816f97f4ff20d26fd47f559b9a7567ba427c00/docs/concepts.md"
+      },
+      {
+        "id": "security",
+        "label": "Pinned security policy",
+        "path": "SECURITY.md",
+        "symbol": "Safe local transport guidance, HTTP auth warning, private vulnerability reporting; no published email",
+        "url": "https://github.com/scottrbk/forgetful/blob/3b816f97f4ff20d26fd47f559b9a7567ba427c00/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation domains and metric definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned evaluation fixture definition, not Forgetful results",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Initial benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project-level benchmark execution record, not a Forgetful measurement",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Forgetful as an open-source MCP storage and retrieval tool for agents, with HTTP and CLI interfaces to a shared knowledge base. No individual maintainer identity is asserted.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The application separates routes, service logic, repository protocols, and SQLite/PostgreSQL adapters. Bootstrap composes the database, embedding/reranking providers, services, optional activity events, and MCP registry.",
+        "sources": [
+          "architecture"
+        ]
+      },
+      {
+        "text": "Memory records hold atomic title/content/context concepts with keywords, tags, importance, project associations, and optional links to documents, code artifacts, files, and skills. SQLite stores vectors through sqlite-vec; PostgreSQL uses pgvector.",
+        "sources": [
+          "models",
+          "sqlite",
+          "postgres"
+        ]
+      },
+      {
+        "text": "Retrieval is dense by default. Optional hybrid mode adds FTS5 or PostgreSQL full-text ranking and combines rankings with reciprocal-rank fusion; optional cross-encoder reranking and one-hop link expansion add later stages.",
+        "sources": [
+          "search",
+          "sqlite",
+          "postgres",
+          "service"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "**Write.** Clients explicitly submit atomic memories with descriptive fields and optional project/resource links. The service applies configured provenance defaults, persists the memory, then can search and create similarity links in separate repository operations.",
+        "sources": [
+          "models",
+          "service",
+          "architecture"
+        ]
+      },
+      {
+        "text": "**Update and delete.** Partial field updates are supported. The documented obsolete lifecycle is a soft state with a reason and optional replacement; obsolete entries remain directly readable but are excluded from active retrieval. Physical erasure from backups or all stored copies is not established by this review.",
+        "sources": [
+          "service",
+          "models",
+          "readme"
+        ]
+      },
+      {
+        "text": "**Retrieval.** User-scoped vector search returns primary records; optional reranking, one-hop links, project filtering, importance filtering, and token/count budgets shape the result. Hybrid keyword/vector fusion is opt-in. Project filters also constrain linked memories only when strict filtering is enabled.",
+        "sources": [
+          "service",
+          "sqlite",
+          "postgres",
+          "search"
+        ]
+      },
+      {
+        "text": "**Scope isolation.** Repository methods receive authenticated user IDs and apply ownership filters. Project IDs further narrow organization/search, but no adversarial access test was run and no deployment authorization guarantee is claimed here.",
+        "sources": [
+          "architecture",
+          "sqlite",
+          "postgres"
+        ]
+      },
+      {
+        "text": "**Provenance.** Optional source and encoding metadata can be stored and operator defaults can be applied. These values are assertions carried with records, not proof of truth or an adjudicated source trail.",
+        "sources": [
+          "models",
+          "architecture",
+          "concepts"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "evidence": "Dense and optional hybrid retrieval are visible in code and docs; no answerability or abstention workload was evaluated.",
+        "status": "unmeasured",
+        "sources": [
+          "search",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "evidence": "Patch updates and an obsolete lifecycle are documented; no correction or staleness probes were run.",
+        "status": "unmeasured",
+        "sources": [
+          "service",
+          "models",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "evidence": "Obsolete records leave active search, while physical erasure across backups/copies was not established; no leakage probes were run.",
+        "status": "unmeasured",
+        "sources": [
+          "service",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "evidence": "User-ID filters and optional project filters are visible in repositories; no adversarial cross-user workload was run.",
+        "status": "unmeasured",
+        "sources": [
+          "architecture",
+          "sqlite",
+          "postgres",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "evidence": "Provenance fields record asserted source metadata; no returned claim was adjudicated against evidence.",
+        "status": "unmeasured",
+        "sources": [
+          "models",
+          "concepts",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "evidence": "Search and indexing paths are source-visible; no timings were collected.",
+        "status": "unmeasured",
+        "sources": [
+          "search",
+          "service",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "evidence": "Result budgets, provider choices, relational storage and vector indexes are visible; no token, cost or bytes-per-memory measurement was made.",
+        "status": "unmeasured",
+        "sources": [
+          "readme",
+          "sqlite",
+          "postgres",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Operational observability",
+        "evidence": "Logging, optional activity events and access counters are source-visible; no live reliability or telemetry interval was collected.",
+        "status": "unmeasured",
+        "sources": [
+          "architecture",
+          "service",
+          "metrics"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected current source and documentation at the verified SHA; it did not run Forgetful, tests, or benchmarks, and establishes no retrieval quality, correction quality, calibrated abstention, deletion leakage, adversarial isolation, backend parity, provider behavior, or production reliability.",
+        "sources": [
+          "architecture",
+          "metrics"
+        ]
+      },
+      {
+        "text": "The security policy warns that HTTP listens on all network interfaces and runs without authentication unless configured. Deployment exposure therefore depends on operator binding, authentication, and TLS setup; this review did not exercise a deployment.",
+        "sources": [
+          "security"
+        ]
+      },
+      {
+        "text": "The search guide reports synthetic retrieval comparisons on an upstream corpus. Those figures are upstream-reported, were not reproduced here, and are not Forgetful benchmark results.",
+        "sources": [
+          "search"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json",
+      "note": "No Forgetful runtime, tests, or benchmark workload was executed for this review."
+    }
+  }
+}

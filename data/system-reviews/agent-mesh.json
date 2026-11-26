@@ -1,0 +1,333 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "agent-mesh",
+    "name": "Agent Mesh",
+    "repository": "https://github.com/cbalgeman/agent-mesh",
+    "branch": "main",
+    "revision": "5eac85ba6ab4bde08f0f8ac96ccb5d86bb1813fd",
+    "reviewed_at": "2026-11-24T18:27:33Z",
+    "review_timezone": "UTC (2026-11-24 10:27:33 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/cbalgeman/agent-mesh/blob/5eac85ba6ab4bde08f0f8ac96ccb5d86bb1813fd/README.md","checked_urls":["https://github.com/cbalgeman/agent-mesh/blob/5eac85ba6ab4bde08f0f8ac96ccb5d86bb1813fd/README.md","https://github.com/cbalgeman/agent-mesh/blob/5eac85ba6ab4bde08f0f8ac96ccb5d86bb1813fd/SECURITY.md","https://github.com/cbalgeman/agent-mesh/blob/5eac85ba6ab4bde08f0f8ac96ccb5d86bb1813fd/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "Agent Mesh is a project-local coordination event store with derived SQLite views and bounded, verified context retrieval. Its source describes append-only correction; deletion and several privacy lifecycle features are explicitly not implemented. No project benchmark was run.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/cbalgeman/agent-mesh"
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Current upstream repository at reviewed main head",
+        "path": "repository",
+        "symbol": "GitHub repository API metadata identifies cbalgeman as owner and main as default branch; commits/main returned the reviewed SHA.",
+        "url": "https://github.com/cbalgeman/agent-mesh/tree/5eac85ba6ab4bde08f0f8ac96ccb5d86bb1813fd"
+      },
+      {
+        "id": "readme",
+        "label": "Project README",
+        "path": "README.md",
+        "symbol": "Purpose, project-local canonical event log, derived views, interfaces, and scope statements.",
+        "url": "https://github.com/cbalgeman/agent-mesh/blob/5eac85ba6ab4bde08f0f8ac96ccb5d86bb1813fd/README.md"
+      },
+      {
+        "id": "events",
+        "label": "Event append protocol",
+        "path": "src/agent_mesh/core/events.py",
+        "symbol": "Event envelope and durable append validation.",
+        "url": "https://github.com/cbalgeman/agent-mesh/blob/5eac85ba6ab4bde08f0f8ac96ccb5d86bb1813fd/src/agent_mesh/core/events.py"
+      },
+      {
+        "id": "hashing",
+        "label": "Canonical event hashing",
+        "path": "src/agent_mesh/core/hashing.py",
+        "symbol": "canonical_json; hash_event_line",
+        "url": "https://github.com/cbalgeman/agent-mesh/blob/5eac85ba6ab4bde08f0f8ac96ccb5d86bb1813fd/src/agent_mesh/core/hashing.py"
+      },
+      {
+        "id": "rebuild",
+        "label": "Deterministic projection rebuild",
+        "path": "src/agent_mesh/store/rebuild.py",
+        "symbol": "Deterministic projection from events.jsonl into SQLite.",
+        "url": "https://github.com/cbalgeman/agent-mesh/blob/5eac85ba6ab4bde08f0f8ac96ccb5d86bb1813fd/src/agent_mesh/store/rebuild.py"
+      },
+      {
+        "id": "sqlite",
+        "label": "SQLite projection store",
+        "path": "src/agent_mesh/store/sqlite.py",
+        "symbol": "Projection schema and SQLite connection configuration.",
+        "url": "https://github.com/cbalgeman/agent-mesh/blob/5eac85ba6ab4bde08f0f8ac96ccb5d86bb1813fd/src/agent_mesh/store/sqlite.py"
+      },
+      {
+        "id": "provenance",
+        "label": "Source provenance validation",
+        "path": "src/agent_mesh/core/provenance.py",
+        "symbol": "Source context references, body authority/fidelity, and source selection metadata.",
+        "url": "https://github.com/cbalgeman/agent-mesh/blob/5eac85ba6ab4bde08f0f8ac96ccb5d86bb1813fd/src/agent_mesh/core/provenance.py"
+      },
+      {
+        "id": "instances",
+        "label": "Durable agent instance identities",
+        "path": "src/agent_mesh/core/agent_instances.py",
+        "symbol": "Project-local instance IDs and attribution fields.",
+        "url": "https://github.com/cbalgeman/agent-mesh/blob/5eac85ba6ab4bde08f0f8ac96ccb5d86bb1813fd/src/agent_mesh/core/agent_instances.py"
+      },
+      {
+        "id": "context_impl",
+        "label": "Context delivery implementation",
+        "path": "src/agent_mesh/core/context_delivery.py",
+        "symbol": "Bootstrap schema, resource limits, and freshness cursor.",
+        "url": "https://github.com/cbalgeman/agent-mesh/blob/5eac85ba6ab4bde08f0f8ac96ccb5d86bb1813fd/src/agent_mesh/core/context_delivery.py"
+      },
+      {
+        "id": "read_model",
+        "label": "Verified read-model implementation",
+        "path": "src/agent_mesh/store/read_model.py",
+        "symbol": "Verified canonical snapshot and bounded process-local cache.",
+        "url": "https://github.com/cbalgeman/agent-mesh/blob/5eac85ba6ab4bde08f0f8ac96ccb5d86bb1813fd/src/agent_mesh/store/read_model.py"
+      },
+      {
+        "id": "context_contract",
+        "label": "Canonical context delivery contract",
+        "path": "docs/context-delivery-contract.md",
+        "symbol": "agent-q context bootstrap, freshness, and delivery self-report boundaries.",
+        "url": "https://github.com/cbalgeman/agent-mesh/blob/5eac85ba6ab4bde08f0f8ac96ccb5d86bb1813fd/docs/context-delivery-contract.md"
+      },
+      {
+        "id": "privacy",
+        "label": "Current privacy and Git-sharing documentation",
+        "path": "docs/privacy.md",
+        "symbol": "Current correction and non-implementation statements; local-only and git-shared modes.",
+        "url": "https://github.com/cbalgeman/agent-mesh/blob/5eac85ba6ab4bde08f0f8ac96ccb5d86bb1813fd/docs/privacy.md"
+      },
+      {
+        "id": "privacy_lifecycle",
+        "label": "Privacy lifecycle design contract",
+        "path": "docs/privacy-lifecycle.md",
+        "symbol": "Future contract explicitly distinguishes current behavior from proposed deletion/redaction/export.",
+        "url": "https://github.com/cbalgeman/agent-mesh/blob/5eac85ba6ab4bde08f0f8ac96ccb5d86bb1813fd/docs/privacy-lifecycle.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": null,
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": null,
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "record",
+        "label": "Project baseline execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": null,
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "roster",
+        "label": "Catalog identity and locator attribution only",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 12 identity/slug/locator; Atlas descriptive fields and marks excluded from assessment.",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas_entry",
+        "label": "Catalog source attribution locator",
+        "path": "content/systems/agent-mesh.md",
+        "symbol": "Identity/locator attribution only; not assessment evidence.",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agent-mesh.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The project is a pre-1.0, local-first coordination tool for durable project requests, decisions, backlog items, handoffs, and results. The public GitHub repository owner is cbalgeman. It is not a general-purpose memory service and does not automatically copy ordinary conversations.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Code observation: the canonical source is an append-only .agent-mesh/events.jsonl log. Event envelopes carry identifiers, sequence numbers, the previous event hash, and optional actor-instance attribution. Canonical JSON and exact newline-terminated event bytes are hashed with SHA-256. README documentation describes longer bodies as content-hash-addressed files and SQLite/optional Markdown views as rebuildable projections.",
+        "sources": [
+          "readme",
+          "events",
+          "hashing",
+          "rebuild"
+        ]
+      },
+      {
+        "text": "The inspected SQLite projection schema includes messages, decisions, backlog, dispatch, assurance, and agent-instance tables. Its connection setup uses WAL mode, busy timeout, foreign keys, and NORMAL synchronous mode. The chain is described as tamper-evident, not encryption or cryptographic identity proof.",
+        "sources": [
+          "sqlite",
+          "readme"
+        ]
+      },
+      {
+        "text": "The repository describes Agent Mesh as a pre-1.0 local-first project coordination tool, not a service for automatically copying every conversation into memory. The README attributes the package to GitHub account cbalgeman; no wider maintainer identity was established.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: supported durable record families include requests/responses, human feedback, backlog work, decisions, and dispatch/review evidence. The event protocol represents durable state as validated appended events; ordinary chat is promoted deliberately rather than copied automatically.",
+        "sources": [
+          "readme",
+          "events"
+        ]
+      },
+      {
+        "text": "Retrieval: agent-q context bootstrap is documented as bounded, mutation-free retrieval over a verified canonical snapshot plus fixed-target contract files and freshness metadata. Decision meaning is read through decisions preflight and references through refs resolve. Retrieval completeness is distinct from proof that an installed harness invoked a lifecycle event.",
+        "sources": [
+          "context_contract",
+          "context_impl"
+        ]
+      },
+      {
+        "text": "Correction: current privacy documentation describes domain-native append-only corrections that preserve earlier canonical bytes. The privacy-lifecycle document is a future design contract and does not add commands.",
+        "sources": [
+          "privacy",
+          "privacy_lifecycle"
+        ]
+      },
+      {
+        "text": "Deletion: current docs say there is no emergency history-rewrite command, retrieval tombstone, automatic retention, or privacy-reviewed export command. Removal from a view or correction of a record therefore does not establish byte deletion or universal erasure.",
+        "sources": [
+          "privacy",
+          "privacy_lifecycle"
+        ]
+      },
+      {
+        "text": "Scope: the README describes project-scoped state and explicitly says there is no multi-tenant access control inside one project store. Local project registration and project paths do not establish authorization or cross-project isolation at runtime.",
+        "sources": [
+          "readme",
+          "instances"
+        ]
+      },
+      {
+        "text": "Provenance: supported event payloads can carry structured source-context references with a channel and locator, body-authority and fidelity metadata, and source-selection mode/confidence/selector/review fields. These structures provide traceable source metadata but do not establish claim-level support for generated answers.",
+        "sources": [
+          "provenance"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "No answerable or unanswerable retrieval probes or adjudicated responses were run.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Source docs describe append-only corrections; no post-correction probes were run.",
+        "sources": [
+          "privacy",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Deletion and erasure behavior was not benchmarked; current docs say deletion lifecycle commands are not implemented.",
+        "sources": [
+          "privacy",
+          "privacy_lifecycle",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope-isolation leakage",
+        "status": "unmeasured",
+        "evidence": "No cross-project or cross-tenant isolation probes were run; project-scoped organization is not a measured security boundary.",
+        "sources": [
+          "readme",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source provenance fields were inspected, but no generated claims and citations were adjudicated.",
+        "sources": [
+          "provenance",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Code defines bounded bootstrap budgets and a verified read-model cache; no timings or write-to-recall results were collected.",
+        "sources": [
+          "context_impl",
+          "read_model",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No workload token, charge, or storage measurements were collected.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "code observations only",
+        "evidence": "Context retrieval caps are 64 MiB, 50,000 events, a 256 KiB envelope, and a 10-second deadline. The read-model cache is process-local and bounded by entry and serialized-byte limits; cold open verifies the full event log before replay. No performance or telemetry measurements are reported.",
+        "sources": [
+          "context_impl",
+          "read_model"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded source review of selected code and documentation at the pinned main head. It does not establish runtime correctness, answer quality, abstention, authorization enforcement, deletion completeness, successful harness lifecycle delivery, or production reliability.",
+        "sources": [
+          "repo",
+          "readme",
+          "context_contract",
+          "privacy"
+        ]
+      },
+      {
+        "text": "The privacy-lifecycle document describes future design and explicitly distinguishes proposed behavior from implemented commands. Unknown or unmeasured means not verified in this review; source structure and documentation are not measurements.",
+        "sources": [
+          "privacy",
+          "privacy_lifecycle",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Agent Mesh system or benchmark workload was executed. Source observations and protocol limits are not benchmark results.",
+      "metrics_url": "../METRICS.md",
+      "fixture_url": "../fixtures/memory-benchmark-v1.json",
+      "execution_status_url": "../results/initial-baselines-status.json"
+    }
+  }
+}

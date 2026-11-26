@@ -1,0 +1,278 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 263,
+    "slug": "gobii",
+    "name": "Gobii",
+    "repository": "https://github.com/gobii-ai/gobii-platform",
+    "listed_repository": "https://github.com/gobii-ai/gobii-platform",
+    "branch": "main",
+    "revision": "c9929bf8ea59b4695b99dcab59aa6c97a09c5bdb",
+    "reviewed_at": "2026-11-25T21:12:02Z",
+    "review_timezone": "UTC (checked 2026-11-25 13:12:02 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Gobii is an always-on agent platform whose memory behavior combines agent-authored tables in per-agent SQLite databases with summarized communications and execution history. This review is pinned to current upstream source; it does not measure runtime quality or performance.",
+    "atlas_locator": {
+      "ordinal": 263,
+      "name": "Gobii",
+      "slug": "gobii",
+      "listed_repository": "https://github.com/gobii-ai/gobii-platform",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/gobii.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/gobii-ai/gobii-platform/blob/c9929bf8ea59b4695b99dcab59aa6c97a09c5bdb/README.md",
+      "checked_urls": [
+        "https://github.com/gobii-ai/gobii-platform/blob/c9929bf8ea59b4695b99dcab59aa6c97a09c5bdb/README.md"
+      ],
+      "note": "Checked the official pinned README for a published contact email; none was present. No commit/profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/gobii-ai/gobii-platform/blob/c9929bf8ea59b4695b99dcab59aa6c97a09c5bdb/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/gobii-ai/gobii-platform/blob/c9929bf8ea59b4695b99dcab59aa6c97a09c5bdb/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the checked official pinned README. No commit/profile metadata, third-party directory, or inferred address was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[262], ordinal 263; identity, explicit repository locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/gobii.md",
+        "symbol": "Pinned attribution source for curated locator only; not used for assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/gobii.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "",
+        "symbol": "Public repository identity and default branch main from official GitHub repository API",
+        "url": "https://github.com/gobii-ai/gobii-platform"
+      },
+      {
+        "id": "head",
+        "label": "Official current head commit",
+        "path": "",
+        "symbol": "Official GitHub commits/main API supplies full current SHA and committer timestamp; fresh shallow checkout resolves to same SHA",
+        "url": "https://github.com/gobii-ai/gobii-platform/commit/c9929bf8ea59b4695b99dcab59aa6c97a09c5bdb"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project identity and platform scope; SQLite-native operational state; checked for published contact email",
+        "url": "https://github.com/gobii-ai/gobii-platform/blob/c9929bf8ea59b4695b99dcab59aa6c97a09c5bdb/README.md"
+      },
+      {
+        "id": "models",
+        "label": "Pinned Django snapshot models",
+        "path": "api/models.py",
+        "symbol": "PersistentAgentCommsSnapshot and PersistentAgentStepSnapshot schema, agent FK, previous snapshot, inclusive cutoff, uniqueness and indexes",
+        "url": "https://github.com/gobii-ai/gobii-platform/blob/c9929bf8ea59b4695b99dcab59aa6c97a09c5bdb/api/models.py"
+      },
+      {
+        "id": "sqlite-state",
+        "label": "Pinned agent SQLite state",
+        "path": "api/agent/tools/sqlite_state.py",
+        "symbol": "Per-agent storage keys, restore/persist lifecycle, ephemeral tables, schema prompt bounds, compression and size fallback",
+        "url": "https://github.com/gobii-ai/gobii-platform/blob/c9929bf8ea59b4695b99dcab59aa6c97a09c5bdb/api/agent/tools/sqlite_state.py"
+      },
+      {
+        "id": "sqlite-batch",
+        "label": "Pinned SQLite batch tool",
+        "path": "api/agent/tools/sqlite_batch.py",
+        "symbol": "Agent SQL transaction, write/read handling, rollback, query execution, limits and result reporting",
+        "url": "https://github.com/gobii-ai/gobii-platform/blob/c9929bf8ea59b4695b99dcab59aa6c97a09c5bdb/api/agent/tools/sqlite_batch.py"
+      },
+      {
+        "id": "sqlite-guardrails",
+        "label": "Pinned SQLite connection guardrails",
+        "path": "api/agent/tools/sqlite_guardrails.py",
+        "symbol": "SQLite authorizer, ATTACH/DETACH and function/PRAGMA restrictions, progress timeout",
+        "url": "https://github.com/gobii-ai/gobii-platform/blob/c9929bf8ea59b4695b99dcab59aa6c97a09c5bdb/api/agent/tools/sqlite_guardrails.py"
+      },
+      {
+        "id": "sqlite-autocorrect",
+        "label": "Pinned SQLite SQL correction helper",
+        "path": "api/agent/tools/sqlite_autocorrect.py",
+        "symbol": "Selected SQL rewrite and dialect correction candidates used after query errors",
+        "url": "https://github.com/gobii-ai/gobii-platform/blob/c9929bf8ea59b4695b99dcab59aa6c97a09c5bdb/api/agent/tools/sqlite_autocorrect.py"
+      },
+      {
+        "id": "sqlite-query-quality",
+        "label": "Pinned SQLite query quality advisory",
+        "path": "api/agent/tools/sqlite_query_quality.py",
+        "symbol": "SQL/tool-result pattern analysis and provenance advice for result_id/source_url",
+        "url": "https://github.com/gobii-ai/gobii-platform/blob/c9929bf8ea59b4695b99dcab59aa6c97a09c5bdb/api/agent/tools/sqlite_query_quality.py"
+      },
+      {
+        "id": "history-compaction",
+        "label": "Pinned history compaction scheduling and scope",
+        "path": "api/agent/core/history_compaction.py",
+        "symbol": "Per-agent snapshot cutoff reads and configured raw-history threshold checks",
+        "url": "https://github.com/gobii-ai/gobii-platform/blob/c9929bf8ea59b4695b99dcab59aa6c97a09c5bdb/api/agent/core/history_compaction.py"
+      },
+      {
+        "id": "compaction",
+        "label": "Pinned communications compaction",
+        "path": "api/agent/core/compaction.py",
+        "symbol": "Message summary generation, incremental snapshots, attribution and source-channel instructions, tracing",
+        "url": "https://github.com/gobii-ai/gobii-platform/blob/c9929bf8ea59b4695b99dcab59aa6c97a09c5bdb/api/agent/core/compaction.py"
+      },
+      {
+        "id": "step-compaction",
+        "label": "Pinned step history compaction",
+        "path": "api/agent/core/step_compaction.py",
+        "symbol": "Typed step history summarization, bounded tool-result retention and completion usage logging",
+        "url": "https://github.com/gobii-ai/gobii-platform/blob/c9929bf8ea59b4695b99dcab59aa6c97a09c5bdb/api/agent/core/step_compaction.py"
+      },
+      {
+        "id": "prompt-context",
+        "label": "Pinned unified history prompt builder",
+        "path": "api/agent/core/prompt_context.py",
+        "symbol": "Latest per-agent snapshots and detailed event tails inserted into prompt",
+        "url": "https://github.com/gobii-ai/gobii-platform/blob/c9929bf8ea59b4695b99dcab59aa6c97a09c5bdb/api/agent/core/prompt_context.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Project assessment domains and definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Shared benchmark fixture, not a Gobii result",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status, not a Gobii result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes this repository as the open-source Gobii Platform for self-hosting and development, with the hosted product at gobii.ai. It presents Gobii as a durable agent platform rather than a standalone memory library.",
+        "sources": ["readme"]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README calls Gobii's memory substrate SQLite-native operational state. The SQLite helper stores a compressed SQLite archive under a hierarchical object-storage key derived from an agent UUID, restores it into a temporary directory for a run, validates it, removes built-in ephemeral tables, and persists the durable database after access.",
+        "sources": ["readme", "sqlite-state"]
+      },
+      {
+        "text": "Durable SQLite tables are agent-authored: the platform injects a schema description but does not impose one memory-row schema. The prompt description can include definitions, row counts, and compact samples, bounded to 30,000 bytes and at most 25 tables.",
+        "sources": ["sqlite-state"]
+      },
+      {
+        "text": "The separate communications and step snapshot models store summary text, agent ownership, an optional previous snapshot, and an inclusive timestamp cutoff, with a unique per-agent cutoff and a recent-snapshot index.",
+        "sources": ["models"]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The agent uses sqlite_batch to issue SQL over its database. Batch execution is transactional; failures roll back the batch. Selected SQL dialect and schema errors can produce automatic correction attempts, which are reported rather than treated as invisible success.",
+        "sources": ["sqlite-batch", "sqlite-autocorrect"]
+      },
+      {
+        "text": "Ordinary SQL supports model-authored insert, update, and delete behavior for durable user tables; the inspected code does not expose a semantic memory deletion endpoint or a general row-level tombstone/audit model.",
+        "sources": ["sqlite-batch"]
+      },
+      {
+        "text": "The built-in __tool_results and other operational tables are cycle-scoped and dropped before the database is persisted. Query-quality advisories recommend set-wise imports from recent tool results and retaining result_id or source_url provenance, but the user-authored schema need not follow that recommendation.",
+        "sources": ["sqlite-state", "sqlite-query-quality"]
+      },
+      {
+        "text": "History compaction creates incremental message and step summaries per agent when raw history exceeds configured limits. The prompt builder reads the latest snapshots and then includes newer raw events after their cutoffs; compaction checks captured ranges before creating a snapshot.",
+        "sources": ["history-compaction", "compaction", "step-compaction", "prompt-context"]
+      },
+      {
+        "text": "The communications summarizer is instructed to preserve speakers, source channels, exact identifiers, decisions, evidence links, and current directives while replacing superseded values. This is a prompt design observation; fidelity was not measured.",
+        "sources": ["compaction"]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Agent-authored SQL retrieval is available; no answer or abstention was scored.",
+        "sources": ["sqlite-batch", "metrics", "fixture", "status"]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "SQL writes and updates are available; no correction sequence was assessed.",
+        "sources": ["sqlite-batch", "metrics", "fixture"]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "SQL delete operations are available; no deletion probe or backup/restore audit was run.",
+        "sources": ["sqlite-batch", "sqlite-state", "metrics", "fixture"]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Per-agent database keys and agent-filtered snapshots exist in source; no isolation workload was run.",
+        "sources": ["sqlite-state", "models", "history-compaction", "metrics", "fixture"]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Provenance fields can be agent-authored and are recommended by SQL quality advisories; no answers were checked against evidence.",
+        "sources": ["sqlite-query-quality", "metrics", "fixture"]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No runtime query or recall timings were collected.",
+        "sources": ["metrics", "status"]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "The source includes prompt bounds, compression, and telemetry hooks; no token, billing, storage, or cost measurements were collected.",
+        "sources": ["sqlite-state", "step-compaction", "metrics", "status"]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded inspection of the official README and selected current implementation sources. Gobii, its tests, and benchmark workloads were not run; code presence does not establish what agents choose to retain or whether SQL retrieval supports an answer.",
+        "sources": ["readme", "sqlite-state", "sqlite-batch"]
+      },
+      {
+        "text": "The review did not test cross-agent isolation, deployment storage backends, backup/restore, or account-level authorization. The reported per-agent schema and query boundaries are source observations, not a measured security guarantee.",
+        "sources": ["sqlite-state", "models", "sqlite-guardrails"]
+      },
+      {
+        "text": "The persistence helper deletes an existing database archive rather than saving when the validated database exceeds 100 MB. The operational consequences and recovery behavior for valuable state were not exercised.",
+        "sources": ["sqlite-state"]
+      },
+      {
+        "text": "Long-term retention of raw communications, deletion propagation through backups, and compaction summary fidelity remain unassessed. The communications compaction code explicitly leaves raw message pruning out of scope.",
+        "sources": ["compaction", "history-compaction"]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Gobii runtime, tests, or benchmarks were run. Source observations are not benchmark results."
+    }
+  }
+}

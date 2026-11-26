@@ -1,0 +1,418 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "dsh-mnemon",
+    "name": "dsh-mnemon",
+    "ordinal": 202,
+    "repository": "https://github.com/omdsh-dev/dsh-mnemon",
+    "listed_repository": "https://github.com/omdsh-dev/dsh-mnemon",
+    "repository_status": "explicit",
+    "branch": "main",
+    "revision": "ee53e0dc5004adecd09a7a23208e163901fc5699",
+    "reviewed_at": "2026-11-25T11:40:55Z",
+    "review_timezone": "UTC (2026-11-25 03:40:55 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "dsh-mnemon is a composable DeepSeek Harness plugin that builds a pinned per-turn View from runtime memory, project documents, and provider-backed memory spaces. It combines bounded prompt projection with on-demand search and recall; this is a source review, and no runtime, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 202,
+      "name": "dsh-mnemon",
+      "slug": "dsh-mnemon",
+      "listed_repository": "https://github.com/omdsh-dev/dsh-mnemon",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dsh-mnemon.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": "grivn.wang@gmail.com",
+      "source_url": "https://github.com/omdsh-dev/dsh-mnemon/blob/ee53e0dc5004adecd09a7a23208e163901fc5699/SECURITY.md",
+      "checked_urls": [
+        "https://github.com/omdsh-dev/dsh-mnemon/blob/ee53e0dc5004adecd09a7a23208e163901fc5699/README.md",
+        "https://github.com/omdsh-dev/dsh-mnemon/blob/ee53e0dc5004adecd09a7a23208e163901fc5699/SECURITY.md"
+      ],
+      "note": "The official pinned SECURITY.md publishes grivn.wang@gmail.com for private security reports. The README and SECURITY.md were checked; no profile or commit metadata or third-party directory was used."
+    },
+    "contact_email": "grivn.wang@gmail.com",
+    "contact_email_source_url": "https://github.com/omdsh-dev/dsh-mnemon/blob/ee53e0dc5004adecd09a7a23208e163901fc5699/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/omdsh-dev/dsh-mnemon/blob/ee53e0dc5004adecd09a7a23208e163901fc5699/README.md",
+      "https://github.com/omdsh-dev/dsh-mnemon/blob/ee53e0dc5004adecd09a7a23208e163901fc5699/SECURITY.md"
+    ],
+    "contact_email_note": "Published in official SECURITY.md as the maintainer email for private vulnerability reports. The pinned README and SECURITY.md were checked; no profile or commit metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated memory-system roster",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 202 identity, slug, explicit listed repository and Atlas locator attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster entry (identity/locator attribution only)",
+        "path": "content/systems/dsh-mnemon.md",
+        "symbol": "Curated roster attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dsh-mnemon.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "Repository page",
+        "symbol": "Public omdsh-dev/dsh-mnemon repository identifies main as the default branch",
+        "url": "https://github.com/omdsh-dev/dsh-mnemon"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Current full main head ee53e0dc5004adecd09a7a23208e163901fc5699; feed updated 2026-11-24T18:15:57Z",
+        "url": "https://github.com/omdsh-dev/dsh-mnemon/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified reviewed upstream head",
+        "path": "commit/ee53e0dc5004adecd09a7a23208e163901fc5699",
+        "symbol": "Full current main head ee53e0dc5004adecd09a7a23208e163901fc5699",
+        "url": "https://github.com/omdsh-dev/dsh-mnemon/commit/ee53e0dc5004adecd09a7a23208e163901fc5699"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project description, three memory tiers, strategies, providers, UI, deployment and data handling",
+        "url": "https://github.com/omdsh-dev/dsh-mnemon/blob/ee53e0dc5004adecd09a7a23208e163901fc5699/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Pinned official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Security contact and explicit limits on secret detection, extension sandboxing, and provider data handling",
+        "url": "https://github.com/omdsh-dev/dsh-mnemon/blob/ee53e0dc5004adecd09a7a23208e163901fc5699/SECURITY.md"
+      },
+      {
+        "id": "storage_doc",
+        "label": "Pinned storage and memory model documentation",
+        "path": "docs/en/reference/storage-model.md",
+        "symbol": "Runtime model and projections, workspace participation, document lifecycle/scope, memory-space operations/provider variability and data authority",
+        "url": "https://github.com/omdsh-dev/dsh-mnemon/blob/ee53e0dc5004adecd09a7a23208e163901fc5699/docs/en/reference/storage-model.md"
+      },
+      {
+        "id": "runtime_source",
+        "label": "Pinned Runtime Memory Source",
+        "path": "plugins/dsh-mnemon-source-runtime/src/source.ts",
+        "symbol": "Runtime Source route/action contract, bounded search, snapshot grants and mutation receipt",
+        "url": "https://github.com/omdsh-dev/dsh-mnemon/blob/ee53e0dc5004adecd09a7a23208e163901fc5699/plugins/dsh-mnemon-source-runtime/src/source.ts"
+      },
+      {
+        "id": "runtime_controller",
+        "label": "Pinned Runtime Memory controller",
+        "path": "plugins/dsh-mnemon-source-runtime/src/controller.ts",
+        "symbol": "Runtime add/replace/remove handling, persistence, projection repair, lock and capacity behavior",
+        "url": "https://github.com/omdsh-dev/dsh-mnemon/blob/ee53e0dc5004adecd09a7a23208e163901fc5699/plugins/dsh-mnemon-source-runtime/src/controller.ts"
+      },
+      {
+        "id": "spaces_source",
+        "label": "Pinned Memory Spaces Source",
+        "path": "plugins/dsh-mnemon-source-memory-spaces/src/source.ts",
+        "symbol": "Memory Space read grants and View-scoped remember, forget, link, management, and mutation receipts",
+        "url": "https://github.com/omdsh-dev/dsh-mnemon/blob/ee53e0dc5004adecd09a7a23208e163901fc5699/plugins/dsh-mnemon-source-memory-spaces/src/source.ts"
+      },
+      {
+        "id": "spaces_readme",
+        "label": "Pinned Memory Spaces Source documentation",
+        "path": "plugins/dsh-mnemon-source-memory-spaces/README.md",
+        "symbol": "Memory Space Source operations, provider contracts and capabilities",
+        "url": "https://github.com/omdsh-dev/dsh-mnemon/blob/ee53e0dc5004adecd09a7a23208e163901fc5699/plugins/dsh-mnemon-source-memory-spaces/README.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Definitions of the benchmark metric domains",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Benchmark workload specification; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project measurement status; no dsh-mnemon result was produced by this task",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes dsh-mnemon as a composable memory and context plugin for DeepSeek Harness. It packages Sources, Strategies, and optional Enhancements, with a UI and a public plugin SDK; it is a host plugin, not a standalone hosted memory service.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The catalog resolves ordinal 202 to dsh-mnemon, slug dsh-mnemon, listed repository https://github.com/omdsh-dev/dsh-mnemon, with explicit locator attribution. The pinned Atlas entry is retained only for curated identity/locator attribution, not assessment evidence.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The official repository page identifies main as the default branch. The official main feed reports current full head ee53e0dc5004adecd09a7a23208e163901fc5699, updated 2026-11-24T18:15:57Z. Review timestamp: 2026-11-25T11:40:55Z (UTC; 2026-11-25 03:40:55 PST; America/Los_Angeles).",
+        "sources": [
+          "repo",
+          "feed",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The default product composition has three independent Sources: Runtime Memory for compact facts resident in prompt context, Project Documents for larger structured notes searched and read as needed, and Memory Spaces for durable facts and relationships recalled on demand. A Strategy decides which Sources are resident, searchable, writable, and budgeted; Core validates the composition into an immutable View that the Host pins to a turn.",
+        "sources": [
+          "readme",
+          "storage_doc"
+        ]
+      },
+      {
+        "text": "Runtime Memory uses runtime/memories.json as its source of truth and derives USER.md and MEMORY.md projections. Records include content, target (user or memory), creation/update times, importance, optional git branches, and optional pin state. Branch filtering affects the per-turn projection; non-git workspaces and detached HEAD show all entries.",
+        "sources": [
+          "storage_doc",
+          "runtime_controller"
+        ]
+      },
+      {
+        "text": "Project Documents use documents/index.json plus managed Markdown. The index records IDs, titles, status, filenames, source paths, sessions, timestamps, revisions, hashes, sizes, and Memory Space references. Active documents are the default search set; archived documents can retain a cold reference while the original moves to an archive tier.",
+        "sources": [
+          "storage_doc"
+        ]
+      },
+      {
+        "text": "A Memory Space is a named Provider-backed scope with a description and active state. Mnemon Native uses local Mnemon stores; registered third-party Providers can use external services or local processes. Native memory can include graph relationships; the available graph, deletion, browsing, and enumeration operations vary by Provider.",
+        "sources": [
+          "readme",
+          "storage_doc",
+          "spaces_readme"
+        ]
+      },
+      {
+        "text": "The Runtime Source advertises exact-snapshot consistency and bounded prompt projection. Its search route is capped at four calls, 50 results, and 16,000 characters per route contract; results carry revision and entry metadata. This describes source-visible limits, not measured performance.",
+        "sources": [
+          "runtime_source"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: Runtime mutations support add, replace, and remove against the user or memory target. Exact normalized duplicates are collapsed or rejected; replacement/removal use oldText matching, rejecting no-match or ambiguous matches. Persistence writes the JSON source and Markdown projections using temporary files and rename, with a lock and revision tracking.",
+        "sources": [
+          "runtime_source",
+          "runtime_controller",
+          "storage_doc"
+        ]
+      },
+      {
+        "text": "Runtime capacity defaults are 4 KiB for USER.md and 10 KiB for MEMORY.md. With the Layered strategy, an overflowing authorized write may trigger maintenance: exact source entries are routed to eligible Memory Spaces or a local archive before the retained projection is committed under a revision fence. Provider writes cannot participate in the same local filesystem transaction, so an external archive may leave duplicates if a later revision conflict occurs.",
+        "sources": [
+          "storage_doc",
+          "runtime_controller"
+        ]
+      },
+      {
+        "text": "Documents are created and revised as managed Markdown with index metadata. Source paths are references only, constrained to the active session workspace on new writes, are not modified by the plugin, and are not required to continue existing. Search defaults to active documents and updates access metadata. The reviewed docs do not describe a universal hard-erasure guarantee across indexes, cold references, backups, and copies.",
+        "sources": [
+          "storage_doc"
+        ]
+      },
+      {
+        "text": "Memory Spaces support explicit remember into an allowed space, forget by exact item ID, link, and space management. When the View has zero or multiple active destination spaces, remember requires the caller to name a destination; writes outside the View's writable set are rejected. Native forget is a soft delete; other Providers follow their declared deletion semantics.",
+        "sources": [
+          "spaces_source",
+          "storage_doc",
+          "spaces_readme"
+        ]
+      },
+      {
+        "text": "Retrieval follows the composed Strategy. The default Layered strategy injects Runtime Memory, searches then reads Documents when relevant, and recalls from active Memory Spaces on demand. Runtime search reads the exact snapshot associated with the View; Memory Space operations are constrained by the granted View and admitted evidence. The General strategy offers available sources within a shared budget and lets the model choose among them.",
+        "sources": [
+          "readme",
+          "storage_doc",
+          "runtime_source",
+          "spaces_source"
+        ]
+      },
+      {
+        "text": "Correction behavior differs by tier: Runtime replace targets an exact entry, Documents use revisions, and Memory Spaces use each Provider's mutation model. The inspected sources do not establish a single cross-tier fact identity or revision ledger that consistently links every replacement to the earlier value.",
+        "sources": [
+          "runtime_source",
+          "runtime_controller",
+          "storage_doc",
+          "spaces_source"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Layered and General retrieval strategies and View-scoped evidence are source-visible; no answerability or abstention cases were run.",
+        "sources": [
+          "readme",
+          "runtime_source",
+          "spaces_source",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Runtime exact replacement, Document revisions, and Provider-specific memory mutation exist; no correction sequence was evaluated.",
+        "sources": [
+          "runtime_controller",
+          "storage_doc",
+          "spaces_source",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Runtime remove, document archive/delete paths, and Provider-dependent forgetting are described; no residual-data or post-delete retrieval probe was run.",
+        "sources": [
+          "runtime_controller",
+          "storage_doc",
+          "spaces_source",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Views, storage scopes, source grants, and workspace participation rules are documented and code-visible; no cross-workspace or cross-provider isolation workload was run.",
+        "sources": [
+          "storage_doc",
+          "runtime_source",
+          "spaces_source",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Read grants and evidence items bind returned data to a View; no generated claims were adjudicated for factual support or citation coverage.",
+        "sources": [
+          "runtime_source",
+          "spaces_source",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "Bounded Runtime route calls and source/provider retrieval paths were inspected; no latency samples were collected.",
+        "sources": [
+          "runtime_source",
+          "spaces_source",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Writes and recalls use separate source/strategy paths with exact or provider-defined completion; no timed write-to-recall probe was run.",
+        "sources": [
+          "runtime_controller",
+          "spaces_source",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "The README describes prompt budgets and optional provider/model paths, but no token usage or provider charges were collected.",
+        "sources": [
+          "readme",
+          "storage_doc",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Local JSON/Markdown, Document indexes, Mnemon databases, and third-party storage boundaries were inspected; no corpus-attributed byte measurement was made.",
+        "sources": [
+          "storage_doc",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "Storage scope and conversation participation are separate controls. A global or custom storage root can make Documents or Memory Spaces visible across workspaces; the current workspace only constrains newly written Document sourcePaths. Runtime, Documents, and Memory Spaces do not automatically become shared across agents, but agents using the same native storage root and Store can share durable facts.",
+        "sources": [
+          "storage_doc"
+        ]
+      },
+      {
+        "text": "A pinned turn View and its evidence grants provide an authority boundary within the Host protocol, but the security policy states that Sources, Providers, and Strategies are ordinary in-process JavaScript rather than a security sandbox. Third-party Providers can expose data according to their configured endpoints and credentials.",
+        "sources": [
+          "readme",
+          "security",
+          "spaces_source"
+        ]
+      },
+      {
+        "text": "The security policy says deterministic credential or secret detection is not currently provided. It advises users not to store keys, tokens, or private keys in Runtime Memory, Documents, or Memory Spaces.",
+        "sources": [
+          "security"
+        ]
+      },
+      {
+        "text": "The reviewed evidence and receipts show what a View read or wrote; they do not prove that a stored memory is true, complete, current, or fully erased. Native Memory Space forget is soft deletion, and Provider capabilities differ.",
+        "sources": [
+          "storage_doc",
+          "spaces_source",
+          "spaces_readme"
+        ]
+      },
+      {
+        "text": "This is a selected review of the official README, storage-model documentation, Runtime Source and controller, Memory Spaces Source, and security policy at the verified head. It did not inspect every Provider implementation, every Strategy, document implementation, host permission path, migration, or all UI behavior.",
+        "sources": [
+          "readme",
+          "storage_doc",
+          "runtime_source",
+          "runtime_controller",
+          "spaces_source",
+          "security"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No dsh-mnemon runtime, tests, or benchmarks were run. Source observations are not benchmark results."
+    }
+  }
+}

@@ -1,0 +1,398 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "agentrt",
+    "name": "AgentRT",
+    "repository": "https://github.com/openairymax/agentrt",
+    "branch": "main",
+    "revision": "2719f88253f59369cea7fad460515b6cc8ac5547",
+    "reviewed_at": "2026-11-24T19:14:19Z",
+    "review_timezone": "UTC (2026-11-24 11:14:19 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "AgentRT is a C11 agent runtime whose mem_d daemon stores bounded memory records in JSONL, searches by TF-IDF plus substring scoring with optional embeddings, and exposes write, retrieval, deletion, knowledge-base, cache and context-ledger APIs. This is a source review, not a runtime or performance assessment.",
+    "atlas_locator": {
+      "ordinal": 28,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agentrt.md",
+      "listed_repository": "https://github.com/openairymax/agentrt"
+    },
+    "contact": {
+      "email": "support@spharx.cn",
+      "source_url": "https://github.com/openairymax/agentrt/blob/2719f88253f59369cea7fad460515b6cc8ac5547/SUPPORT.md",
+      "note": "Published as the technical-support email in the official repository's SUPPORT.md; no address was inferred."
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical AgentRT repository",
+        "path": "repository",
+        "symbol": "openairymax/agentrt; public GitHub repository",
+        "url": "https://github.com/openairymax/agentrt"
+      },
+      {
+        "id": "head",
+        "label": "Verified current head",
+        "path": "commit",
+        "symbol": "main head 2719f88253f59369cea7fad460515b6cc8ac5547",
+        "url": "https://github.com/openairymax/agentrt/commit/2719f88253f59369cea7fad460515b6cc8ac5547"
+      },
+      {
+        "id": "readme",
+        "label": "Official AgentRT README",
+        "path": "README.md",
+        "symbol": "runtime architecture, tiers, memory feature and repository layout",
+        "url": "https://github.com/openairymax/agentrt/blob/2719f88253f59369cea7fad460515b6cc8ac5547/README.md"
+      },
+      {
+        "id": "support",
+        "label": "Official support contact",
+        "path": "SUPPORT.md",
+        "symbol": "technical support email published by project",
+        "url": "https://github.com/openairymax/agentrt/blob/2719f88253f59369cea7fad460515b6cc8ac5547/SUPPORT.md"
+      },
+      {
+        "id": "daemon-index",
+        "label": "Official daemon overview",
+        "path": "daemons/README.md",
+        "symbol": "mem_d responsibility and daemon interfaces",
+        "url": "https://github.com/openairymax/daemons/blob/bfa20573b7e1fcb9046e83b487f7d8d08ffbd907/README.md"
+      },
+      {
+        "id": "mem-docs",
+        "label": "mem_d documentation",
+        "path": "daemons/mem_d/README.md",
+        "symbol": "architecture, RPC contract, configuration and capacity",
+        "url": "https://github.com/openairymax/daemons/blob/bfa20573b7e1fcb9046e83b487f7d8d08ffbd907/mem_d/README.md"
+      },
+      {
+        "id": "service",
+        "label": "Memory service implementation",
+        "path": "daemons/mem_d/src/core/service.c",
+        "symbol": "record lifecycle, capacity eviction, write/get/delete and ranking inputs",
+        "url": "https://github.com/openairymax/daemons/blob/bfa20573b7e1fcb9046e83b487f7d8d08ffbd907/mem_d/src/core/service.c"
+      },
+      {
+        "id": "schema",
+        "label": "Memory service data types and API",
+        "path": "daemons/mem_d/src/core/mem_service.h",
+        "symbol": "record fields and optional query scopes",
+        "url": "https://github.com/openairymax/daemons/blob/bfa20573b7e1fcb9046e83b487f7d8d08ffbd907/mem_d/src/core/mem_service.h"
+      },
+      {
+        "id": "scope",
+        "label": "Scoped retrieval implementation",
+        "path": "daemons/mem_d/src/core/scope.c",
+        "symbol": "tenant/conversation/KB filtering, ranking and recent ordering",
+        "url": "https://github.com/openairymax/daemons/blob/bfa20573b7e1fcb9046e83b487f7d8d08ffbd907/mem_d/src/core/scope.c"
+      },
+      {
+        "id": "handlers",
+        "label": "Memory JSON-RPC handlers",
+        "path": "daemons/mem_d/src/handlers/mem_handlers.c",
+        "symbol": "write/search/get/delete/recent/evolve/health/stats behavior",
+        "url": "https://github.com/openairymax/daemons/blob/bfa20573b7e1fcb9046e83b487f7d8d08ffbd907/mem_d/src/handlers/mem_handlers.c"
+      },
+      {
+        "id": "persistence",
+        "label": "JSONL persistence implementation",
+        "path": "daemons/mem_d/src/engine/mem_persist.c",
+        "symbol": "record encoding, append, atomic rewrite and startup load",
+        "url": "https://github.com/openairymax/daemons/blob/bfa20573b7e1fcb9046e83b487f7d8d08ffbd907/mem_d/src/engine/mem_persist.c"
+      },
+      {
+        "id": "knowledge-base",
+        "label": "Knowledge-base implementation",
+        "path": "daemons/mem_d/src/engine/kb.c",
+        "symbol": "chunk metadata, scoped search, whole-KB delete",
+        "url": "https://github.com/openairymax/daemons/blob/bfa20573b7e1fcb9046e83b487f7d8d08ffbd907/mem_d/src/engine/kb.c"
+      },
+      {
+        "id": "vector",
+        "label": "TF-IDF retrieval interface",
+        "path": "daemons/mem_d/src/engine/vector.h",
+        "symbol": "tokenization, cached term vectors and document-frequency cosine scoring",
+        "url": "https://github.com/openairymax/daemons/blob/bfa20573b7e1fcb9046e83b487f7d8d08ffbd907/mem_d/src/engine/vector.h"
+      },
+      {
+        "id": "embedding",
+        "label": "Embedding client",
+        "path": "daemons/mem_d/src/engine/emb_client.c",
+        "symbol": "optional embedding provider, timeout/cooldown and fallback",
+        "url": "https://github.com/openairymax/daemons/blob/bfa20573b7e1fcb9046e83b487f7d8d08ffbd907/mem_d/src/engine/emb_client.c"
+      },
+      {
+        "id": "cache",
+        "label": "Semantic cache API",
+        "path": "daemons/mem_d/src/engine/cache.h",
+        "symbol": "exact/semantic cache, admission and cache statistics",
+        "url": "https://github.com/openairymax/daemons/blob/bfa20573b7e1fcb9046e83b487f7d8d08ffbd907/mem_d/src/engine/cache.h"
+      },
+      {
+        "id": "heapstore-doc",
+        "label": "heapstore documentation",
+        "path": "heapstore/README.md",
+        "symbol": "distinguishes memory-pool accounting from mem_d agent memory",
+        "url": "https://github.com/openairymax/heapstore/blob/fb79d0683a4f8d6bbb23756b782fbec34aab1d5a/README.md"
+      },
+      {
+        "id": "heapstore-api",
+        "label": "heapstore memory API",
+        "path": "heapstore/include/heapstore_memory.h",
+        "symbol": "pool and allocation accounting entry points",
+        "url": "https://github.com/openairymax/heapstore/blob/fb79d0683a4f8d6bbb23756b782fbec34aab1d5a/include/heapstore_memory.h"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "review metric domains",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "shared status record; no AgentRT measurement",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned workload only; not run for this review",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated system roster attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 28 identity, listed locator and Atlas attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas-entry",
+        "label": "Roster-provided Atlas attribution",
+        "path": "content/systems/agentrt.md",
+        "symbol": "attributed for roster locator only; not used as assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agentrt.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "AgentRT (AirymaxAgentRT) is an OS-style C11 runtime project. Its README describes a release aggregate that pins component repositories as Git submodules. This review makes no individual-maintainer claim.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The release README describes a layered runtime with kernel, storage, gateway, protocol, daemon, and SDK layers. The persistent `mem_d` daemon owns memory records and exposes the `mem.*` JSON-RPC namespace; its code separates RPC handlers, service orchestration, scoped search, persistence, knowledge-base, embedding, cache, ledger, and compression modules.",
+        "sources": [
+          "readme",
+          "daemon-index",
+          "mem-docs"
+        ]
+      },
+      {
+        "text": "A record has a generated ID, content bytes and length, optional JSON metadata, and a creation timestamp; in memory it also carries cached term-frequency vectors and optionally an embedding. The record index supports ID lookup while the service keeps records in a bounded array. The root `heapstore_memory` APIs separately account for runtime allocation pools and are not the AgentRT long-term memory API.",
+        "sources": [
+          "schema",
+          "service",
+          "heapstore-doc",
+          "heapstore-api"
+        ]
+      },
+      {
+        "text": "The daemon persists records as JSONL under the AgentRT data directory. Writes append and sync the record; delete and capacity eviction rewrite the active file through a temporary file, sync, and rename. Term vectors are rebuilt from stored text during startup load, while the external embedding service is optional.",
+        "sources": [
+          "mem-docs",
+          "persistence",
+          "vector",
+          "embedding"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write generates a 32-character hexadecimal record ID, stores content and caller-supplied metadata, builds a TF-IDF vector, then appends the record to JSONL. When the configured record cap is reached, the oldest record is evicted. There is no general in-place update API in the inspected RPC contract; callers can write a replacement and delete the earlier ID.",
+        "sources": [
+          "mem-docs",
+          "service",
+          "handlers"
+        ]
+      },
+      {
+        "text": "Read retrieves by record ID. Delete removes the record from the active array and index, updates document frequencies, and rewrites JSONL; knowledge-base deletion removes records with the matching `kb_id`. These are hard removals from the active store, not a versioned correction or tombstone history.",
+        "sources": [
+          "mem-docs",
+          "service",
+          "knowledge-base"
+        ]
+      },
+      {
+        "text": "Search tokenizes and scores the query against the records using TF-IDF cosine similarity fused with substring-match density (default TF-IDF weight 0.6). An optional embedding endpoint can supply vector scores; failed requests cool down and fall back to TF-IDF. The source iterates candidate records, scores them, sorts hits, and retains the requested limit. `recent` walks insertion order newest-first. `evolve` merges matching text or copies a selected record into a new record with source metadata, leaving source records in place.",
+        "sources": [
+          "mem-docs",
+          "service",
+          "scope",
+          "vector",
+          "embedding",
+          "handlers"
+        ]
+      },
+      {
+        "text": "Knowledge-base ingestion splits documents at UTF-8-safe byte boundaries (512 bytes by default) and writes chunks carrying `kb_id`, optional `doc_id`, and chunk index metadata. KB search filters before ranking, and KB delete removes that KB's records.",
+        "sources": [
+          "mem-docs",
+          "knowledge-base"
+        ]
+      },
+      {
+        "text": "The daemon separately includes a semantic cache and a context ledger/compressor. Cache calls can report exact/semantic hits, hit rate, evictions and bytes; the append-only ledger records context composition and token counts. These are adjacent runtime facilities and should not be conflated with the persisted memory-record search result.",
+        "sources": [
+          "mem-docs",
+          "cache",
+          "handlers"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "The source provides ranked hits and configured retrieval mechanisms, but this review ran no adjudicated answerable or unsupported probes.",
+        "sources": [
+          "service",
+          "scope",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "No in-place correction-history contract or post-correction adjudication was established; new writes and deletes do not demonstrate stale-value performance.",
+        "sources": [
+          "mem-docs",
+          "service",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The inspected deletion paths remove active records and rewrite JSONL, but no delete probes or external embedding/provider cleanup checks were run.",
+        "sources": [
+          "service",
+          "persistence",
+          "knowledge-base",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Search and recent accept optional conversation and tenant filters and KB search requires a KB ID. These are caller-selectable filters, not proof of authorization or isolation when omitted.",
+        "sources": [
+          "schema",
+          "scope",
+          "handlers",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Arbitrary metadata and evolve source IDs can carry provenance-like context, but no enforced evidence validation or answer citation adjudication was identified.",
+        "sources": [
+          "schema",
+          "handlers",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The source shows linear candidate scans, full hit sorting and optional embedding network calls, but no workload timings were collected.",
+        "sources": [
+          "scope",
+          "embedding",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "The ledger counts tokens and cache reports bytes, but no workload-based token, provider cost, or persistent storage measurements were taken.",
+        "sources": [
+          "mem-docs",
+          "cache",
+          "handlers",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded inspection of selected documentation and source at a pinned aggregate repository revision. The aggregate pins component source as submodules; no runtime, benchmark, or tests were executed, so behavior in production and any result quality remain unverified.",
+        "sources": [
+          "head",
+          "readme",
+          "mem-docs",
+          "record"
+        ]
+      },
+      {
+        "text": "Default memory capacity is 1,024 records (configurable); the store is a bounded in-memory record table backed by JSONL, with vectors rebuilt on startup. Search scans the active records and sorts positive hits; the review does not establish practical scale or cost.",
+        "sources": [
+          "mem-docs",
+          "service",
+          "scope",
+          "persistence"
+        ]
+      },
+      {
+        "text": "Conversation, tenant, and KB restrictions apply on the search/recent paths when supplied. The inspected direct get/delete methods use record IDs without scope arguments, and missing search filters leave the query broad. No authorization boundary or cross-scope leak test was assessed.",
+        "sources": [
+          "schema",
+          "scope",
+          "handlers"
+        ]
+      },
+      {
+        "text": "Metadata is caller-supplied JSON and is not a validated provenance ledger. Evolve records identify sources, but this review did not find an enforced source-trust policy for normal records; citation correctness, correction precedence, and multi-user safety remain unknown.",
+        "sources": [
+          "schema",
+          "handlers",
+          "mem-docs"
+        ]
+      },
+      {
+        "text": "The roster entry supplied the ordinal, listed repository locator and Atlas attribution only. Atlas descriptions, marks, and layout were not used as assessment evidence.",
+        "sources": [
+          "roster",
+          "atlas-entry"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status: not run for AgentRT in this task. The project [metric definitions](../METRICS.md), [execution-status record](../results/initial-baselines-status.json), and [planned fixture](../fixtures/memory-benchmark-v1.json) are separate from the source findings above. No system execution, benchmark, or tests were run.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

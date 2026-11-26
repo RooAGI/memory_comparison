@@ -1,0 +1,382 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 280,
+    "slug": "halofy",
+    "name": "Halofy",
+    "repository": "https://github.com/halofyai/halofy",
+    "listed_repository": "https://github.com/halofyai/halofy",
+    "branch": "main",
+    "revision": "3763e64f521df8dc58d00d4632e732e702dd76ef",
+    "reviewed_at": "2026-11-25T22:24:45Z",
+    "review_timezone": "UTC (checked 2026-11-25 14:24:45 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Halofy is a self-hostable TypeScript kernel for governed organizational memory. It owns identity, policy, writes, audit, and erasure while delegating retrieval ranking to replaceable drivers. Postgres/pgvector is authoritative, with embedded PGlite as a local default; performance and answer quality were not measured.",
+    "atlas_locator": {
+      "ordinal": 280,
+      "name": "Halofy",
+      "slug": "halofy",
+      "listed_repository": "https://github.com/halofyai/halofy",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/halofy.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": "conduct@halofy.ai",
+      "source_url": "https://github.com/halofyai/halofy/blob/3763e64f521df8dc58d00d4632e732e702dd76ef/SUPPORT.md",
+      "checked_urls": [
+        "https://github.com/halofyai/halofy/blob/3763e64f521df8dc58d00d4632e732e702dd76ef/SUPPORT.md"
+      ],
+      "note": "Official pinned SUPPORT.md publishes conduct@halofy.ai for conduct matters. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": "conduct@halofy.ai",
+    "contact_email_source_url": "https://github.com/halofyai/halofy/blob/3763e64f521df8dc58d00d4632e732e702dd76ef/SUPPORT.md",
+    "contact_email_checked_sources": [
+      "https://github.com/halofyai/halofy/blob/3763e64f521df8dc58d00d4632e732e702dd76ef/SUPPORT.md"
+    ],
+    "contact_email_note": "Official pinned SUPPORT.md publishes conduct@halofy.ai for conduct matters. No commit/profile metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[279], ordinal 280; identity, listed repository locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/halofy.md",
+        "symbol": "Curated identity and repository locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/halofy.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "",
+        "symbol": "Official GitHub repository metadata: canonical halofyai/halofy and default branch main",
+        "url": "https://github.com/halofyai/halofy"
+      },
+      {
+        "id": "head",
+        "label": "Official current head commit",
+        "path": "",
+        "symbol": "Official GitHub commits/main API returned the current full head SHA",
+        "url": "https://api.github.com/repos/halofyai/halofy/commits/main"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project scope, surfaces, memory lifecycle, architecture/security summary, and documented operations",
+        "url": "https://github.com/halofyai/halofy/blob/3763e64f521df8dc58d00d4632e732e702dd76ef/README.md"
+      },
+      {
+        "id": "docs-index",
+        "label": "Pinned documentation index",
+        "path": "docs/README.md",
+        "symbol": "Guide contents, architecture map, development and integration boundaries",
+        "url": "https://github.com/halofyai/halofy/blob/3763e64f521df8dc58d00d4632e732e702dd76ef/docs/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Pinned architecture guide",
+        "path": "docs/architecture.md",
+        "symbol": "Authority model, syscalls, tiers, read/write paths, validity, namespace ACL, audit, erasure, brownout and source map",
+        "url": "https://github.com/halofyai/halofy/blob/3763e64f521df8dc58d00d4632e732e702dd76ef/docs/architecture.md"
+      },
+      {
+        "id": "driver-kit",
+        "label": "Pinned retrieval driver guide",
+        "path": "docs/driver-kit.md",
+        "symbol": "RetrieverDriver and ScopedView contract, conformance, mounting and fallback behavior",
+        "url": "https://github.com/halofyai/halofy/blob/3763e64f521df8dc58d00d4632e732e702dd76ef/docs/driver-kit.md"
+      },
+      {
+        "id": "types",
+        "label": "Pinned shared type contracts",
+        "path": "kernel/src/types.ts",
+        "symbol": "Memory object fields, namespace, scope, provenance, classification, source access and cross-module contracts",
+        "url": "https://github.com/halofyai/halofy/blob/3763e64f521df8dc58d00d4632e732e702dd76ef/kernel/src/types.ts"
+      },
+      {
+        "id": "index",
+        "label": "Pinned memory index implementation",
+        "path": "kernel/src/index/index.ts",
+        "symbol": "Namespace ancestor and read-scope predicates, candidate/vector reads, guarded validity close, access/fault telemetry",
+        "url": "https://github.com/halofyai/halofy/blob/3763e64f521df8dc58d00d4632e732e702dd76ef/kernel/src/index/index.ts"
+      },
+      {
+        "id": "write",
+        "label": "Pinned write path implementation",
+        "path": "kernel/src/write/index.ts",
+        "symbol": "Extraction/verification/classification/dedupe/insert pipeline, transactional dependencies and current conflict comment",
+        "url": "https://github.com/halofyai/halofy/blob/3763e64f521df8dc58d00d4632e732e702dd76ef/kernel/src/write/index.ts"
+      },
+      {
+        "id": "view",
+        "label": "Pinned scoped retriever view",
+        "path": "kernel/src/driver/view.ts",
+        "symbol": "Driver access boundary, scoped candidates/vector/embed/entity reads and provenance limitation for cold concepts",
+        "url": "https://github.com/halofyai/halofy/blob/3763e64f521df8dc58d00d4632e732e702dd76ef/kernel/src/driver/view.ts"
+      },
+      {
+        "id": "erasure",
+        "label": "Pinned erasure implementation",
+        "path": "kernel/src/erasure/index.ts",
+        "symbol": "Subtree-limited deletion, tombstones, signed certificate, append-only audit and queued warm-store purge",
+        "url": "https://github.com/halofyai/halofy/blob/3763e64f521df8dc58d00d4632e732e702dd76ef/kernel/src/erasure/index.ts"
+      },
+      {
+        "id": "support",
+        "label": "Pinned official support contact",
+        "path": "SUPPORT.md",
+        "symbol": "Published conduct contact email and official support channels",
+        "url": "https://github.com/halofyai/halofy/blob/3763e64f521df8dc58d00d4632e732e702dd76ef/SUPPORT.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Definitions of project assessment domains",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Fixture definition, not a Halofy result",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status, not a Halofy result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The repository presents Halofy as an open access and governance kernel for organizational agent context, exposed through HTTP, MCP, a CLI, and a control room. It is not itself an agent or retrieval model.",
+        "sources": [
+          "readme",
+          "docs-index"
+        ]
+      },
+      {
+        "text": "The project is published under the halofyai GitHub organization. The official SUPPORT.md publishes conduct@halofy.ai for conduct matters; the exact checked URL is recorded in contact metadata.",
+        "sources": [
+          "repo",
+          "support"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The design separates server-resolved identity and policy gates, a governed write path, a database authority, working-set and fault readers, and a pluggable retrieval boundary. Postgres stores memory, vector embeddings, policy, provenance, tombstones, and audit; PGlite uses the same model for local development. Warm mirrors and retrieval sidecars are rebuildable.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Warm memory objects carry IDs, namespace, content, type/status, inline embedding, time validity, provenance, classification, source access, and access/fault telemetry. Cold L3 concepts are Markdown knowledge documents indexed separately; private bodies use envelope encryption.",
+        "sources": [
+          "types",
+          "architecture"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Writes follow extraction or verbatim fallback, verification, entity resolution, classification, exact dedupe, and insertion. Imported connector data uses the same write path. Write outcomes are explicit, and the kernel provides transactional hooks so a memory mutation and audit event can commit together.",
+        "sources": [
+          "architecture",
+          "write"
+        ]
+      },
+      {
+        "text": "Corrections close a prior row's validity interval and insert a linked replacement; ordinary history is retained. Exact duplicates are deduplicated. The architecture guide describes out-of-band semantic conflict scans and a provenance trust ordering, but the current write module comment says confirmed conflicts go to human resolution. The full deployed resolution path was not inspected, so this mismatch remains unresolved.",
+        "sources": [
+          "architecture",
+          "write",
+          "types"
+        ]
+      },
+      {
+        "text": "mem.forget is a governed hard-delete path scoped to the caller's subtree. It removes memory objects and inline embeddings, inserts per-ID tombstones, signs a deletion certificate, and preserves append-only audit. When configured, warm-store purge work is queued in the same transaction; an ephemeral signing key cannot verify certificates after process restart.",
+        "sources": [
+          "architecture",
+          "erasure"
+        ]
+      },
+      {
+        "text": "mem.read fetches by ID, mem.search uses the selected driver over warm memory, mem.assemble packs ranked context under a token budget, and mem.fault checks L2 before L3 when its absolute score threshold is not met. The baseline lane combines vector similarity and BM25 with rank fusion; drivers see a read-only ScopedView and cannot write to storage.",
+        "sources": [
+          "architecture",
+          "driver-kit",
+          "view"
+        ]
+      }
+    ],
+    "scope": [
+      {
+        "text": "The base ACL resolves identity from credentials and allows a namespace to read itself and slash-delimited ancestors, while hiding siblings and descendants. Source-level grants can further restrict reads. Driver views rely on scoped index and cold-store methods; source-filtered cold reads fail closed because L3 concepts do not retain per-source provenance. Erasure has a separate caller-subtree bound.",
+        "sources": [
+          "readme",
+          "architecture",
+          "index",
+          "view",
+          "erasure"
+        ]
+      }
+    ],
+    "provenance": [
+      {
+        "text": "Memory types include provenance entries, source access, classification, and temporal relationships. Audit logs are append-only and cover outcomes including denials, misses, degradation, and errors. A signed erasure certificate records the erased identifiers while audit history survives. These features support traceability; no mechanism inspected establishes the truth of a stored claim or answer-level citation support.",
+        "sources": [
+          "types",
+          "architecture",
+          "write",
+          "erasure"
+        ]
+      }
+    ],
+    "efficiency": [
+      {
+        "text": "Candidate and context-token limits bound retrieval and assembly; the baseline combines vector and lexical retrieval. PGlite enables local use without a separate database, while durable deployments use Postgres. The docs describe fallback paths for unavailable models, embedders, retrieval drivers, mirrors, or policy data.",
+        "sources": [
+          "architecture",
+          "driver-kit",
+          "readme"
+        ]
+      },
+      {
+        "text": "The project documents operation timing, audit labels, fault latency, and stats such as working-set size and fault-hit rate. No runtime timings, resource use, token counts, or costs were collected in this review.",
+        "sources": [
+          "architecture",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Search and fault paths exist; no answers were scored.",
+        "sources": [
+          "architecture",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Validity intervals and supersedence are implemented; no correction sequence was evaluated.",
+        "sources": [
+          "architecture",
+          "write",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Signed erasure and tombstones are implemented; no deletion probes were run.",
+        "sources": [
+          "erasure",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Namespace and source-access filters are present; no isolation workload was run.",
+        "sources": [
+          "index",
+          "view",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Provenance and audit fields exist; no answer evidence was adjudicated.",
+        "sources": [
+          "types",
+          "architecture",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Instrumentation is documented; no runtime timings were collected.",
+        "sources": [
+          "architecture",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "Bounds and backends are documented; no workload or resource measurements were collected.",
+        "sources": [
+          "architecture",
+          "readme",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected the pinned README, architecture and driver docs, shared types, write and index implementations, scoped driver view, erasure implementation, and contact documentation. It did not inspect every syscall, policy path, connector, conflict worker, migration, or deployment mode.",
+        "sources": [
+          "readme",
+          "architecture",
+          "driver-kit",
+          "write",
+          "index",
+          "view",
+          "erasure"
+        ]
+      },
+      {
+        "text": "The architecture guide and write-module comment differ on conflict handling; end-to-end behavior was not run. Source presence cannot prove retrieval quality, adversarial isolation, backup/restore behavior, or external erasure propagation.",
+        "sources": [
+          "architecture",
+          "write",
+          "index",
+          "erasure"
+        ]
+      },
+      {
+        "text": "Upstream README test and conformance counts are project-reported claims, not independently verified here. No tests, runtime, or benchmarks were run; all project benchmark domains remain unmeasured for Halofy.",
+        "sources": [
+          "readme",
+          "driver-kit",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Halofy runtime, tests, or benchmarks were run. Source and documentation observations are not Halofy measurements."
+    }
+  }
+}

@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 306,
+    "slug": "holomem",
+    "name": "holomem",
+    "repository": "https://github.com/polmanas1998-star/holomem",
+    "listed_repository": "https://github.com/polmanas1998-star/holomem",
+    "branch": "main",
+    "revision": "b09cb1b05a96bd4d271d3a2aad27ec93006cb596",
+    "reviewed_at": "2026-11-25T23:23:41Z",
+    "review_timezone": "UTC (checked 2026-11-25 15:23:41 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "HoloMem is a NumPy library that stores relational facts in memory and builds weighted FHRR traces for current, inverse, gated, and month-specific retrieval. It has no persistence or built-in scope boundary; this source review does not reproduce upstream benchmark claims.",
+    "atlas_locator": {
+      "ordinal": 306,
+      "name": "holomem",
+      "slug": "holomem",
+      "listed_repository": "https://github.com/polmanas1998-star/holomem",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/holomem.md",
+      "revision": "b09cb1b05a96bd4d271d3a2aad27ec93006cb596"
+    },
+    "contact": {
+      "email": "hello@dermiozai.com",
+      "source_url": "https://dermiozai.com/",
+      "checked_urls": [
+        "https://github.com/polmanas1998-star/holomem/blob/b09cb1b05a96bd4d271d3a2aad27ec93006cb596/README.md",
+        "https://dermiozai.com/"
+      ],
+      "note": "Checked the official pinned README and the official Dermioz website for published contact. The README points to Dermioz; the website publishes hello@dermiozai.com. No profile, commit metadata, or third-party directory was used."
+    },
+    "contact_email": "hello@dermiozai.com",
+    "contact_email_source_url": "https://dermiozai.com/",
+    "contact_email_checked_sources": [
+      "https://github.com/polmanas1998-star/holomem/blob/b09cb1b05a96bd4d271d3a2aad27ec93006cb596/README.md",
+      "https://dermiozai.com/"
+    ],
+    "contact_email_note": "The official pinned README links Dermioz and its official website publishes hello@dermiozai.com. No profile, commit metadata, or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[305], ordinal 306; identity, explicit locator, Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/holomem.md",
+        "symbol": "Pinned attribution for curated identity and locator only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/holomem.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "",
+        "symbol": "GitHub repository page confirms public polmanas1998-star/holomem and default branch main",
+        "url": "https://github.com/polmanas1998-star/holomem"
+      },
+      {
+        "id": "head",
+        "label": "Official main commit feed and verified Git head",
+        "path": "",
+        "symbol": "main.atom full head; git ls-remote and shallow checkout agree",
+        "url": "https://github.com/polmanas1998-star/holomem/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project description and upstream benchmark statements, treated as upstream-reported not independently measured",
+        "url": "https://github.com/polmanas1998-star/holomem/blob/b09cb1b05a96bd4d271d3a2aad27ec93006cb596/README.md"
+      },
+      {
+        "id": "core",
+        "label": "Pinned HoloMem implementation",
+        "path": "holomem.py",
+        "symbol": "Fact, symbol, HolographicMemory learn/contradict/forget, traces, candidate cleanup and query methods",
+        "url": "https://github.com/polmanas1998-star/holomem/blob/b09cb1b05a96bd4d271d3a2aad27ec93006cb596/holomem.py"
+      },
+      {
+        "id": "packaging",
+        "label": "Pinned Python packaging metadata",
+        "path": "pyproject.toml",
+        "symbol": "Single-module distribution, Python and NumPy dependency declarations",
+        "url": "https://github.com/polmanas1998-star/holomem/blob/b09cb1b05a96bd4d271d3a2aad27ec93006cb596/pyproject.toml"
+      },
+      {
+        "id": "contact",
+        "label": "Official Dermioz website",
+        "path": "",
+        "symbol": "Official site publishes hello@dermiozai.com; checked 2026-11-25",
+        "url": "https://dermiozai.com/"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation domains and metric definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned fixture, not executed in this task",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared project status, not a HoloMem result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents HoloMem as a memory component for the Dermioz assistant. The repository packages a single-module Python library depending on NumPy, not a hosted storage service or server.",
+        "sources": [
+          "readme",
+          "packaging",
+          "core"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "A Fact stores subject, relation, object, weight, creation time, and last-confirmed time. HolographicMemory retains these facts in a Python list; normalized names map deterministically to complex unit-phasor symbols derived from a BLAKE2 hash.",
+        "sources": [
+          "core"
+        ]
+      },
+      {
+        "text": "The instance lazily computes a current weighted trace and an epochal trace that additionally binds each fact's creation month. Writes and mutations invalidate both, and the next read rebuilds them from the fact list.",
+        "sources": [
+          "core"
+        ]
+      },
+      {
+        "text": "Retrieval unbinds a trace by a subject/relation or relation/object pair, scores the approximate vector against all known candidates, then cleans up to the best symbol. query_gated adds abstention using a z gate for three or more candidates and a cosine floor for smaller candidate pools.",
+        "sources": [
+          "core"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "learn scans for an exact normalized triple. Existing facts are reinforced by 0.25 up to 1.5 and stamped with the current time; otherwise it appends a fact using the supplied creation timestamp or current time. It invalidates cached traces and has no persistent write.",
+        "sources": [
+          "core"
+        ]
+      },
+      {
+        "text": "contradict damps other objects for a subject/relation by a factor of 0.35; it does not replace or delete them. forget_faded physically removes facts below the 0.18 effective-weight floor only when explicitly called; no direct delete-by-key method, tombstone, or mutation audit is present.",
+        "sources": [
+          "core"
+        ]
+      },
+      {
+        "text": "query returns the best candidate even at low confidence, while query_gated may abstain. query_subject performs inverse retrieval from the same trace; query_at uses the month-bound trace to ask for an object associated with a past month.",
+        "sources": [
+          "core"
+        ]
+      },
+      {
+        "text": "The API carries no tenant, project, namespace, or authorization fields. Separate instances can be arranged by a caller, but scope isolation is not implemented or measured by this source review.",
+        "sources": [
+          "core"
+        ]
+      },
+      {
+        "text": "Fact provenance is limited to timestamps and a mutable weight. The schema has no source identifiers, supporting evidence, author, or audit trail; the month trace uses creation month, not a complete bitemporal history.",
+        "sources": [
+          "core"
+        ]
+      },
+      {
+        "text": "Trace dimensionality is fixed, but fact storage and candidate pools grow with N. learn scans existing facts, rebuild visits each fact and computes vector terms, and retrieval scores and sorts candidates. A process-global 4096-entry symbol cache is cleared wholesale when full.",
+        "sources": [
+          "core"
+        ]
+      },
+      {
+        "text": "The inspected implementation exposes no telemetry or timing instrumentation. The README contains capacity and cost tables and reproduction commands; those remain upstream-reported and were not independently reproduced.",
+        "sources": [
+          "readme",
+          "core"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention: forward, inverse, temporal, and gated paths are implemented; accuracy, abstention quality, and coverage are unmeasured here.",
+        "sources": [
+          "core"
+        ]
+      },
+      {
+        "text": "Correction and staleness: contradiction applies a weight reduction while preserving the older fact; correction accuracy and stale-value rate are unmeasured.",
+        "sources": [
+          "core"
+        ]
+      },
+      {
+        "text": "Deletion: explicit faded-fact cleanup exists; deletion leakage, caller persistence behavior, and erasure are unmeasured.",
+        "sources": [
+          "core"
+        ]
+      },
+      {
+        "text": "Scope isolation: no scope or authorization keys appear in the reviewed API; no isolation probes were run.",
+        "sources": [
+          "core"
+        ]
+      },
+      {
+        "text": "Evidence: fact records contain no source citation or evidence payload; evidence support precision and citation coverage are unmeasured.",
+        "sources": [
+          "core"
+        ]
+      },
+      {
+        "text": "Efficiency: algorithm structure exposes linear scans/rebuild and candidate scoring, but no timings, tokens, cost, or storage measurements were collected. README figures are upstream claims, not this project's results.",
+        "sources": [
+          "core",
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded review of the current README, package metadata, and holomem.py at the verified repository head. HoloMem, tests, and benchmark scripts were not run; README measurements were not reproduced.",
+        "sources": [
+          "readme",
+          "core",
+          "packaging"
+        ]
+      },
+      {
+        "text": "Persistence, multi-process behavior, tenant authorization, external workload quality, production latency, cost, and application evidence capture are not established by this source inspection.",
+        "sources": [
+          "core",
+          "packaging"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No HoloMem runtime, tests, or benchmark workload was executed. Upstream README figures and results are not treated as this project's benchmark results.",
+      "metric_definitions": "../METRICS.md",
+      "fixture": "../fixtures/memory-benchmark-v1.json",
+      "execution_status": "../results/initial-baselines-status.json"
+    }
+  }
+}

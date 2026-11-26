@@ -1,0 +1,445 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 167,
+    "slug": "counterparts",
+    "name": "Counterparts",
+    "repository": "https://github.com/mlapeter/counterparts",
+    "listed_repository": "https://github.com/mlapeter/counterparts",
+    "branch": "master",
+    "revision": "d5a7168485a216f194c389f4f3dbba2a12e79764",
+    "reviewed_at": "2026-11-25T09:54:33Z",
+    "review_timezone": "UTC (2026-11-25 01:54:33 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Counterparts is a local-first Claude Code and Claude Desktop memory system. It stores canonical memory and lifecycle state in SQLite, builds a separate full-text/vector cache, and combines model-authored notes, hook-driven recall, folder scope settings, and nightly maintenance. This is a selected source review at the verified master head; the system, tests and benchmarks were not run.",
+    "atlas_locator": {
+      "ordinal": 167,
+      "name": "Counterparts",
+      "slug": "counterparts",
+      "listed_repository": "https://github.com/mlapeter/counterparts",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/counterparts.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": "mike@resonantventures.com",
+      "source_url": "https://github.com/mlapeter/counterparts/blob/d5a7168485a216f194c389f4f3dbba2a12e79764/README.md",
+      "checked_urls": [
+        "https://github.com/mlapeter/counterparts/blob/d5a7168485a216f194c389f4f3dbba2a12e79764/README.md"
+      ],
+      "note": "The official pinned README lists mike@resonantventures.com for anything else and hello@counterparts.ai for commercial licensing. The general contact address is recorded."
+    },
+    "contact_email": "mike@resonantventures.com",
+    "contact_email_source_url": "https://github.com/mlapeter/counterparts/blob/d5a7168485a216f194c389f4f3dbba2a12e79764/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/mlapeter/counterparts/blob/d5a7168485a216f194c389f4f3dbba2a12e79764/README.md"
+    ],
+    "contact_email_note": "The official pinned README publishes mike@resonantventures.com as a general contact; hello@counterparts.ai is listed for commercial licensing. No profile, commit metadata, or third-party directory was used."
+  },
+  "contact_email": "mike@resonantventures.com",
+  "contact_email_source_url": "https://github.com/mlapeter/counterparts/blob/d5a7168485a216f194c389f4f3dbba2a12e79764/README.md",
+  "contact_email_checked_sources": [
+    "https://github.com/mlapeter/counterparts/blob/d5a7168485a216f194c389f4f3dbba2a12e79764/README.md"
+  ],
+  "contact_email_note": "The official pinned README publishes mike@resonantventures.com as a general contact; hello@counterparts.ai is listed for commercial licensing. No profile, commit metadata, or third-party directory was used.",
+  "sources": [
+    {
+      "id": "catalog",
+      "label": "Catalog identity and ordinal",
+      "path": "data/memory-systems.json",
+      "symbol": "systems[166], ordinal 167: Counterparts, slug counterparts, explicit listed repository locator",
+      "url": "../data/memory-systems.json"
+    },
+    {
+      "id": "atlas",
+      "label": "Atlas attribution only",
+      "path": "content/systems/counterparts.md",
+      "symbol": "Curated identity and locator attribution only; not assessment evidence",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/counterparts.md"
+    },
+    {
+      "id": "repo",
+      "label": "Official upstream repository",
+      "path": "repository page and GitHub API",
+      "symbol": "Public canonical repository; API identifies master as default branch",
+      "url": "https://github.com/mlapeter/counterparts"
+    },
+    {
+      "id": "head",
+      "label": "Official reviewed head",
+      "path": "commit/d5a7168485a216f194c389f4f3dbba2a12e79764",
+      "symbol": "Verified full current master head d5a7168485a216f194c389f4f3dbba2a12e79764; commit timestamp 2026-11-20T19:45:03-07:00",
+      "url": "https://github.com/mlapeter/counterparts/commit/d5a7168485a216f194c389f4f3dbba2a12e79764"
+    },
+    {
+      "id": "readme",
+      "label": "Official README",
+      "path": "README.md",
+      "symbol": "Purpose, persistence, interfaces, scope behavior, limitations, status and contact",
+      "url": "https://github.com/mlapeter/counterparts/blob/d5a7168485a216f194c389f4f3dbba2a12e79764/README.md"
+    },
+    {
+      "id": "store_contract",
+      "label": "Store contract",
+      "path": "src/core/store/CONTRACT.md",
+      "symbol": "Canonical store and cache, transaction, versioning, removal, telemetry",
+      "url": "https://github.com/mlapeter/counterparts/blob/d5a7168485a216f194c389f4f3dbba2a12e79764/src/core/store/CONTRACT.md"
+    },
+    {
+      "id": "store_impl",
+      "label": "Store implementation",
+      "path": "src/core/store/index.ts",
+      "symbol": "Memory writes, revision, supersession, archival and indexing",
+      "url": "https://github.com/mlapeter/counterparts/blob/d5a7168485a216f194c389f4f3dbba2a12e79764/src/core/store/index.ts"
+    },
+    {
+      "id": "store_shapes",
+      "label": "Store data shapes",
+      "path": "src/core/store/shapes.ts",
+      "symbol": "Memory input, source/origin provenance and state shape",
+      "url": "https://github.com/mlapeter/counterparts/blob/d5a7168485a216f194c389f4f3dbba2a12e79764/src/core/store/shapes.ts"
+    },
+    {
+      "id": "remember",
+      "label": "Remember contract",
+      "path": "src/core/remember/CONTRACT.md",
+      "symbol": "Session memory capture and write path",
+      "url": "https://github.com/mlapeter/counterparts/blob/d5a7168485a216f194c389f4f3dbba2a12e79764/src/core/remember/CONTRACT.md"
+    },
+    {
+      "id": "updates",
+      "label": "Update implementation",
+      "path": "src/core/remember/updates.ts",
+      "symbol": "Memory update and correction flow",
+      "url": "https://github.com/mlapeter/counterparts/blob/d5a7168485a216f194c389f4f3dbba2a12e79764/src/core/remember/updates.ts"
+    },
+    {
+      "id": "encode",
+      "label": "Encoding contract",
+      "path": "src/core/encode/CONTRACT.md",
+      "symbol": "Credential scanning and proposal write gates",
+      "url": "https://github.com/mlapeter/counterparts/blob/d5a7168485a216f194c389f4f3dbba2a12e79764/src/core/encode/CONTRACT.md"
+    },
+    {
+      "id": "recall",
+      "label": "Recall contract",
+      "path": "src/core/recall/CONTRACT.md",
+      "symbol": "Ambient cues, retrieval, recall and response behavior",
+      "url": "https://github.com/mlapeter/counterparts/blob/d5a7168485a216f194c389f4f3dbba2a12e79764/src/core/recall/CONTRACT.md"
+    },
+    {
+      "id": "activate",
+      "label": "Recall activation implementation",
+      "path": "src/core/recall/activate.ts",
+      "symbol": "Candidate activation and memory eligibility",
+      "url": "https://github.com/mlapeter/counterparts/blob/d5a7168485a216f194c389f4f3dbba2a12e79764/src/core/recall/activate.ts"
+    },
+    {
+      "id": "associate",
+      "label": "Association contract",
+      "path": "src/core/associate/CONTRACT.md",
+      "symbol": "Co-activation links and bounded spreading activation",
+      "url": "https://github.com/mlapeter/counterparts/blob/d5a7168485a216f194c389f4f3dbba2a12e79764/src/core/associate/CONTRACT.md"
+    },
+    {
+      "id": "schemas",
+      "label": "Schemas contract",
+      "path": "src/core/schemas/CONTRACT.md",
+      "symbol": "Entity/belief records and contradiction handling",
+      "url": "https://github.com/mlapeter/counterparts/blob/d5a7168485a216f194c389f4f3dbba2a12e79764/src/core/schemas/CONTRACT.md"
+    },
+    {
+      "id": "sleep",
+      "label": "Sleep contract",
+      "path": "src/core/sleep/CONTRACT.md",
+      "symbol": "Decay, consolidation, promotion, pruning and retention",
+      "url": "https://github.com/mlapeter/counterparts/blob/d5a7168485a216f194c389f4f3dbba2a12e79764/src/core/sleep/CONTRACT.md"
+    },
+    {
+      "id": "prune",
+      "label": "Pruning implementation",
+      "path": "src/core/sleep/prune.ts",
+      "symbol": "Lifecycle pruning behavior",
+      "url": "https://github.com/mlapeter/counterparts/blob/d5a7168485a216f194c389f4f3dbba2a12e79764/src/core/sleep/prune.ts"
+    },
+    {
+      "id": "scopes",
+      "label": "Scope registry implementation",
+      "path": "src/adapters/scopes.ts",
+      "symbol": "Scope modes, canonical path matching and prefix resolution",
+      "url": "https://github.com/mlapeter/counterparts/blob/d5a7168485a216f194c389f4f3dbba2a12e79764/src/adapters/scopes.ts"
+    },
+    {
+      "id": "removal",
+      "label": "Owner removal workflow",
+      "path": "src/adapters/cli/removal.ts",
+      "symbol": "Removal plan, confirmation, content chase and disclosed leftovers",
+      "url": "https://github.com/mlapeter/counterparts/blob/d5a7168485a216f194c389f4f3dbba2a12e79764/src/adapters/cli/removal.ts"
+    },
+    {
+      "id": "remove_seam",
+      "label": "Destructive store seam",
+      "path": "src/core/store/owner-op-seam.ts",
+      "symbol": "Denied-ID and transactional removal of text and dependent rows",
+      "url": "https://github.com/mlapeter/counterparts/blob/d5a7168485a216f194c389f4f3dbba2a12e79764/src/core/store/owner-op-seam.ts"
+    },
+    {
+      "id": "metrics",
+      "label": "Project metric definitions",
+      "path": "METRICS.md",
+      "symbol": "Defined benchmark metric domains",
+      "url": "../METRICS.md"
+    },
+    {
+      "id": "fixture",
+      "label": "Project benchmark fixture",
+      "path": "fixtures/memory-benchmark-v1.json",
+      "symbol": "Planned cases; not run for this review",
+      "url": "../fixtures/memory-benchmark-v1.json"
+    },
+    {
+      "id": "result",
+      "label": "Project baseline status",
+      "path": "results/initial-baselines-status.json",
+      "symbol": "Existing result status, not a result from this review",
+      "url": "../results/initial-baselines-status.json"
+    }
+  ],
+  "who_what": "The curated catalog places Counterparts at ordinal 167 with slug counterparts, an explicit repository locator, and a pinned Atlas attribution. Atlas is used only for roster identity and locator context, not assessment evidence.",
+  "architecture": [
+    {
+      "text": "Counterparts is a local-first TypeScript application for Claude Code and Claude Desktop with host hooks, an MCP server, CLI, dashboard and background worker. Its README describes the model writing selected memories and session chapters in its own words instead of keeping full transcripts as the primary memory.",
+      "sources": [
+        "readme",
+        "remember"
+      ]
+    },
+    {
+      "text": "SQLite counterparts.sqlite is canonical for memory text and structured state. Memory title, body, metadata and content hash are row columns. Markdown is a one-way export and journal files are derived copies. A separate cache holds full-text and vector indexes and can be rebuilt; daily snapshots cover the canonical database.",
+      "sources": [
+        "readme",
+        "store_contract",
+        "store_impl"
+      ]
+    },
+    {
+      "text": "Records include stable IDs, type/kind, body, metadata, provenance, happened/learned dates, lifecycle, salience and lived-day use/decay state. Related tables represent versions, entities/beliefs, contradictions, associations, reminders, per-session gates and operational events.",
+      "sources": [
+        "store_shapes",
+        "store_contract",
+        "schemas"
+      ]
+    },
+    {
+      "text": "Hooks provide session-start briefings and ambient recall; MCP and CLI paths support writes and queries; a worker performs nightly lifecycle and consolidation work.",
+      "sources": [
+        "readme",
+        "remember",
+        "recall",
+        "sleep"
+      ]
+    }
+  ],
+  "behavior": [
+    {
+      "text": "Write: the primary documented path asks the model to write selected memories during or at session end. A proposal gate and credential scan run before durable storage; store writes are transactional. Crash fallback and catch-up paths can process captured session material.",
+      "sources": [
+        "readme",
+        "remember",
+        "encode",
+        "store_impl"
+      ]
+    },
+    {
+      "text": "Update: revise archives the prior words, metadata and provenance dates in a version row in the same transaction as the edit. Supersession creates a successor ID, retains a forwarding relationship and removes the predecessor from live search. Beliefs and contradictions have separate change-state handling; these structures do not prove a correction true.",
+      "sources": [
+        "store_contract",
+        "store_impl",
+        "updates",
+        "schemas"
+      ]
+    },
+    {
+      "text": "Delete: nightly lifecycle rules fade, archive, prune and consolidate eligible memories. Archive is not erasure. Permanent removal is owner-facing and explicitly confirmed: it records the request, denies the ID, then chases known content and dependent rows. The transaction removes body text and versions, associations and related state while retaining a stripped lineage skeleton and content-free removal record. The CLI reports unchased or deliberately retained surfaces.",
+      "sources": [
+        "sleep",
+        "prune",
+        "removal",
+        "remove_seam",
+        "store_contract"
+      ]
+    },
+    {
+      "text": "Retrieval combines weighted cues from the current turn with lexical matches, local semantic vectors, context/time cues and bounded spreading activation over associations. Eligibility and lived-day physics influence activation. Memories may surface quietly or be retrieved through deliberate recall/ask tools; briefings and reminders are additional context paths.",
+      "sources": [
+        "readme",
+        "recall",
+        "activate",
+        "associate"
+      ]
+    },
+    {
+      "text": "Nightly sleep applies fading, pruning and consolidation/promotion. Association edges reinforce with use and fade over lived days. This review did not measure the performance of those processes.",
+      "sources": [
+        "sleep",
+        "associate"
+      ]
+    }
+  ],
+  "scope_isolation": [
+    {
+      "text": "The store is local to a user installation, not a separate database per project. The README says personal memories can reach every folder while project-work memories appear in their project. A separate scopes.json uses canonicalized paths, longest segment-aware prefix matching and on, observer, off or paused modes.",
+      "sources": [
+        "readme",
+        "scopes"
+      ]
+    },
+    {
+      "text": "This is host-level folder scoping, not tenant authorization inside a shared hosted database. The reviewed design relies on the local account, host configuration and correct folder/session selection.",
+      "sources": [
+        "readme",
+        "scopes",
+        "store_contract"
+      ]
+    }
+  ],
+  "provenance": [
+    {
+      "text": "Memory inputs can carry a source label and origin references such as session, scope, reference ID and span hash. Happened and learned dates are distinct; revisions preserve previous words and dates.",
+      "sources": [
+        "store_shapes",
+        "store_impl"
+      ]
+    },
+    {
+      "text": "Entity/belief records, contradiction state, supporting references and operational events preserve some lineage and change context. Operational telemetry is described as IDs, hashes, counts and kinds instead of body text. Removal records deliberately omit body text and content hashes.",
+      "sources": [
+        "schemas",
+        "store_contract",
+        "remove_seam"
+      ]
+    },
+    {
+      "text": "These mechanisms do not guarantee claim-level citations in every generated answer or factual correctness of model-authored memory.",
+      "sources": [
+        "remember",
+        "schemas"
+      ]
+    }
+  ],
+  "efficiency_observability": [
+    {
+      "text": "Canonical state uses local SQLite and search uses a separate rebuildable cache. The README describes semantic search using a small local model of about 30 MB; this review did not measure resource use.",
+      "sources": [
+        "readme",
+        "store_contract"
+      ]
+    },
+    {
+      "text": "Recall, association spreading and nightly work have explicit bounds or phases. Dashboard, doctor/status commands and event records expose operational state; events are content-by-reference.",
+      "sources": [
+        "readme",
+        "recall",
+        "associate",
+        "sleep",
+        "store_contract"
+      ]
+    },
+    {
+      "text": "No latency, token, cost, recall-quality, write-to-recall or storage measurement was collected.",
+      "sources": [
+        "metrics"
+      ]
+    }
+  ],
+  "limitations": [
+    {
+      "text": "The README calls the project early and says Node/Linux passed smoke and install checks but did not yet have a daily user at this revision. It says semantic search finds close paraphrases but can miss an indirect description that never names the subject.",
+      "sources": [
+        "readme"
+      ]
+    },
+    {
+      "text": "Credential scanning is shape-based; the README warns that not every secret has a recognizable form. Gating and redaction therefore do not establish that every incorrect claim or unusual secret will be rejected.",
+      "sources": [
+        "readme",
+        "encode"
+      ]
+    },
+    {
+      "text": "Archival, pruning and permanent removal are distinct. Removal reports known unchased or deliberately retained surfaces, so arbitrary external copies, backups, host transcripts and user-created exports are outside what this review verified.",
+      "sources": [
+        "sleep",
+        "removal",
+        "remove_seam"
+      ]
+    }
+  ],
+  "unknowns": [
+    {
+      "text": "No runtime, tests or benchmarks were run. Recall accuracy, correction/staleness, deletion leakage, folder isolation, evidence support, citation coverage, latency, write-to-recall delay, tokens, cost and storage efficiency remain unmeasured.",
+      "sources": [
+        "metrics",
+        "fixture",
+        "result"
+      ]
+    },
+    {
+      "text": "This selected review did not inspect every adapter, configuration or failure path; behavior across those unreviewed conditions remains unknown.",
+      "sources": [
+        "readme",
+        "scopes",
+        "removal"
+      ]
+    }
+  ],
+  "metric_domains": [
+    {
+      "text": "Answerable retrieval and write-to-recall delay — unmeasured; no timed query workload was executed.",
+      "sources": [
+        "metrics",
+        "fixture"
+      ]
+    },
+    {
+      "text": "Correction accuracy and stale-value rate — unmeasured; no correction probes were executed.",
+      "sources": [
+        "metrics",
+        "fixture"
+      ]
+    },
+    {
+      "text": "Deletion leakage — unmeasured; no post-removal probes were executed.",
+      "sources": [
+        "metrics",
+        "fixture"
+      ]
+    },
+    {
+      "text": "Scope isolation leakage — unmeasured; no cross-folder workload was executed.",
+      "sources": [
+        "metrics",
+        "fixture"
+      ]
+    },
+    {
+      "text": "Evidence support precision and citation coverage — unmeasured; no generated responses were adjudicated.",
+      "sources": [
+        "metrics",
+        "fixture"
+      ]
+    },
+    {
+      "text": "Retrieval latency, tokens, cost and storage efficiency — unmeasured; no resource or accounting workload was executed.",
+      "sources": [
+        "metrics",
+        "fixture"
+      ]
+    }
+  ],
+  "project_benchmark_results": {
+    "status": "not_measured",
+    "note": "This source review did not run the system, tests, or benchmarks. Design documentation and README statements are not benchmark results."
+  }
+}

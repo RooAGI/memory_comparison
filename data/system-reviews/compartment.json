@@ -1,0 +1,371 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 141,
+    "slug": "compartment",
+    "name": "Compartment",
+    "repository": "https://github.com/MaxFreedomPollard/Compartment",
+    "branch": "main",
+    "revision": "98d4917181c04e5efa41e82ba455b25084edc99f",
+    "reviewed_at": "2026-11-25T08:46:19Z",
+    "review_timezone": "UTC (2026-11-25 00:46:19 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": "maxpollard790@gmail.com",
+      "source_url": "https://github.com/MaxFreedomPollard/Compartment/blob/98d4917181c04e5efa41e82ba455b25084edc99f/support.md",
+      "checked_urls": [
+        "https://github.com/MaxFreedomPollard/Compartment/blob/98d4917181c04e5efa41e82ba455b25084edc99f/support.md",
+        "https://github.com/MaxFreedomPollard/Compartment/blob/98d4917181c04e5efa41e82ba455b25084edc99f/README.md"
+      ],
+      "note": "The official repository support page publishes maxpollard790@gmail.com. The pinned official README was also checked; it directs support questions to Discussions and publishes no email."
+    },
+    "contact_email": "maxpollard790@gmail.com",
+    "contact_email_source_url": "https://github.com/MaxFreedomPollard/Compartment/blob/98d4917181c04e5efa41e82ba455b25084edc99f/support.md",
+    "contact_email_checked_sources": [
+      "https://github.com/MaxFreedomPollard/Compartment/blob/98d4917181c04e5efa41e82ba455b25084edc99f/support.md",
+      "https://github.com/MaxFreedomPollard/Compartment/blob/98d4917181c04e5efa41e82ba455b25084edc99f/README.md"
+    ],
+    "summary": "Compartment is a local-first, encrypted memory vault for AI agents. It exposes an MCP server and CLI over a single-user vault, storing encrypted records and vectors with namespace ACLs, hybrid retrieval, provenance, and an audit chain. This is an upstream source review; no system or benchmark was run.",
+    "atlas_locator": {
+      "ordinal": 141,
+      "name": "Compartment",
+      "slug": "compartment",
+      "listed_repository": "https://github.com/MaxFreedomPollard/Compartment",
+      "roster_attribution": "repository_status=explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/compartment.md",
+      "atlas_revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official upstream repository; default branch shown as main",
+        "path": "repository root",
+        "url": "https://github.com/MaxFreedomPollard/Compartment"
+      },
+      {
+        "id": "head",
+        "label": "Verified current main head",
+        "path": "commit",
+        "symbol": "98d4917181c04e5efa41e82ba455b25084edc99f",
+        "url": "https://github.com/MaxFreedomPollard/Compartment/commit/98d4917181c04e5efa41e82ba455b25084edc99f"
+      },
+      {
+        "id": "feed",
+        "label": "Official main commit Atom feed",
+        "path": "main.atom",
+        "url": "https://github.com/MaxFreedomPollard/Compartment/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "url": "https://github.com/MaxFreedomPollard/Compartment/blob/98d4917181c04e5efa41e82ba455b25084edc99f/README.md"
+      },
+      {
+        "id": "memory",
+        "label": "Pinned memory architecture and ranking documentation",
+        "path": "docs/MEMORY.md",
+        "url": "https://github.com/MaxFreedomPollard/Compartment/blob/98d4917181c04e5efa41e82ba455b25084edc99f/docs/MEMORY.md"
+      },
+      {
+        "id": "vault",
+        "label": "Pinned vault orchestration and lifecycle source",
+        "path": "src/compartment/vault.py",
+        "url": "https://github.com/MaxFreedomPollard/Compartment/blob/98d4917181c04e5efa41e82ba455b25084edc99f/src/compartment/vault.py"
+      },
+      {
+        "id": "store",
+        "label": "Pinned record, relation, and audit store source",
+        "path": "src/compartment/store.py",
+        "url": "https://github.com/MaxFreedomPollard/Compartment/blob/98d4917181c04e5efa41e82ba455b25084edc99f/src/compartment/store.py"
+      },
+      {
+        "id": "server",
+        "label": "Pinned MCP server and caller-identity source",
+        "path": "src/compartment/server.py",
+        "url": "https://github.com/MaxFreedomPollard/Compartment/blob/98d4917181c04e5efa41e82ba455b25084edc99f/src/compartment/server.py"
+      },
+      {
+        "id": "acl",
+        "label": "Pinned per-caller namespace ACL source",
+        "path": "src/compartment/acl.py",
+        "url": "https://github.com/MaxFreedomPollard/Compartment/blob/98d4917181c04e5efa41e82ba455b25084edc99f/src/compartment/acl.py"
+      },
+      {
+        "id": "audit",
+        "label": "Pinned audit-chain verification source",
+        "path": "src/compartment/audit.py",
+        "url": "https://github.com/MaxFreedomPollard/Compartment/blob/98d4917181c04e5efa41e82ba455b25084edc99f/src/compartment/audit.py"
+      },
+      {
+        "id": "ranking",
+        "label": "Pinned ranking implementation and retrieval evaluation description",
+        "path": "src/compartment/ranking.py",
+        "url": "https://github.com/MaxFreedomPollard/Compartment/blob/98d4917181c04e5efa41e82ba455b25084edc99f/src/compartment/ranking.py"
+      },
+      {
+        "id": "support",
+        "label": "Pinned official support page and contact",
+        "path": "support.md",
+        "url": "https://github.com/MaxFreedomPollard/Compartment/blob/98d4917181c04e5efa41e82ba455b25084edc99f/support.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated roster identity and repository locator",
+        "path": "data/memory-systems.json",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/compartment.md",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/compartment.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The curated roster identifies ordinal 141 as Compartment, slug compartment, with an explicit locator at MaxFreedomPollard/Compartment. The pinned Atlas page is retained only for that roster attribution. The official repository identifies main as default branch, and its current main Atom feed resolves to the recorded full head SHA.",
+        "sources": [
+          "repo",
+          "head",
+          "feed",
+          "roster",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The official repository presents Compartment as an offline, local memory vault and MCP server/CLI that connects to multiple agent clients. The project account and support page identify the upstream as MaxFreedomPollard; the repository describes a desktop panel alongside command-line and MCP interfaces.",
+        "sources": [
+          "repo",
+          "readme",
+          "support"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Code observation: `Vault` coordinates cryptography, storage, embedding, indexing, ACL checks, and audit. Unlock decrypts the sealed vault payload into RAM, replays the journal, and rebuilds the vector index; writes append to a journal and are fsynced, while save/lock compacts and reseals the payload. The MCP server uses stdio and opens no listener.",
+        "sources": [
+          "vault",
+          "server",
+          "readme"
+        ]
+      },
+      {
+        "text": "Code observation: the SQLite store is in-memory and serialized inside the sealed `.vault` payload. Record rows carry encrypted text and a wrapped per-record key, encrypted vector bytes, namespace, tags, importance, quarantine flag, pack, host/agent/session provenance, created/accessed timestamps, source, discovery date, original tags, and optional expiry. Separate tables hold embedding windows, relations, full-text search rows, audit entries, and metadata.",
+        "sources": [
+          "store",
+          "memory"
+        ]
+      },
+      {
+        "text": "The memory guide describes one local 384-dimensional embedding per new memory using the bundled BGE-small int8 ONNX model. The vault uses exact SIMD vector search below 20,000 records and switches to HNSW above that threshold; SQLite FTS5 supplies keyword search. The model hash is pinned in the vault and checked on open. These are design claims, not measurements from this review.",
+        "sources": [
+          "memory",
+          "readme",
+          "vault"
+        ]
+      },
+      {
+        "text": "Relations store subject-predicate-object edges, optional source-memory IDs, validity bounds, namespace, and provenance. The storage/query code normalizes entity names for matching and supports namespace and as-of filters. The host model decides which relations to create; storage and matching are deterministic.",
+        "sources": [
+          "store",
+          "memory"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write — code and documentation observation. Authored stores pass a gate that enforces one claim and a default 200-character limit; capture/import paths preserve verbatim text and skip that authoring gate. New records are embedded locally, deduplicated, encrypted with per-record keys, journaled, and audited. `source` records how the fact was established; `discovered` separates when it became known from when it was written. No memory was written during this review.",
+        "sources": [
+          "readme",
+          "memory",
+          "vault",
+          "store"
+        ]
+      },
+      {
+        "text": "Update and correction — documentation/code observation. Facts normally accumulate unless near-duplicate; an explicit `supersedes` update points an old record to its replacement and retires it from retrieval while keeping it addressable by ID. Opinions use similarity bands: close repeats reaffirm, intermediate matches return the existing record for an explicit replace-or-keep-both decision. This review did not assess whether a correction is factually right.",
+        "sources": [
+          "readme",
+          "memory",
+          "vault"
+        ]
+      },
+      {
+        "text": "Delete and forgetting — documentation observation. The README exposes `memory_forget` and CLI `forget`; it documents ordinary removal and a `--shred` option. The store describes crypto-shredding by destroying the wrapped per-record key and removing FTS rows/freed pages with DELETE and VACUUM. No delete or post-delete probe was performed.",
+        "sources": [
+          "readme",
+          "store",
+          "memory"
+        ]
+      },
+      {
+        "text": "Retrieval — documentation and code observation. Search combines local vector similarity, FTS keyword evidence, and optional one-hop relation expansion. Ranking uses a soft-OR evidence score, with importance and recency priors intended only to reorder matching records; namespace, tag, date, and starter-fact filters apply to candidates. The README describes a relative relevance cutoff by default and an explicit `top_k` option. No retrieval workload was run.",
+        "sources": [
+          "memory",
+          "ranking",
+          "vault",
+          "readme"
+        ]
+      },
+      {
+        "text": "Scope isolation — code observation with an important boundary. Namespace grants (`rw`, `ro`, `none`) are configured per declarative caller name in a vault-adjacent JSON file; `packs/*` is read-only to every caller. The MCP server takes caller identity from `--caller`, and its own source says to run one server instance per host with its own ACL config for real isolation. Caller labels and namespace grants are not independently authenticated by this review; no cross-caller isolation test was run.",
+        "sources": [
+          "acl",
+          "server",
+          "readme"
+        ]
+      },
+      {
+        "text": "Provenance and evidence — code observation. Records carry host, agent, and session provenance, source text, a discovery date, and optional quarantine state. Reads add provenance metadata; quarantined memories receive a warning, and recalled text is framed as stored data rather than instructions. Audit records include timestamp, caller, operation, detail, previous hash, and current hash; an external anchor detects removal of the log tail. These mechanisms support tracing and tamper detection, but do not prove that generated answers cite or entail their source records.",
+        "sources": [
+          "store",
+          "vault",
+          "audit",
+          "server",
+          "memory"
+        ]
+      },
+      {
+        "text": "Efficiency and observability — documentation observation. The README and memory guide publish upstream figures such as roughly 12 ms for hybrid recall and about 40 ms for a store, along with storage/index design claims. They are project-reported figures, not measurements collected here. The project states that runtime telemetry/network calls are absent; status, recent-memory views, local dashboard, and audit/verify commands provide local inspection surfaces.",
+        "sources": [
+          "readme",
+          "memory",
+          "audit"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Hybrid vector/keyword/graph retrieval and a relevance cutoff are documented; no answerability, abstention, recall accuracy, or false-positive workload was run.",
+        "sources": [
+          "memory",
+          "ranking",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Supersession and opinion update/reaffirm workflows are documented; no correction cases or stale-value rate were adjudicated.",
+        "sources": [
+          "memory",
+          "vault",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The project documents ordinary removal and cryptographic shredding; no retrieval-after-delete or residual-copy check was performed.",
+        "sources": [
+          "readme",
+          "store",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Per-caller namespace grants and read-only pack namespaces are implemented; no multi-caller or adversarial isolation workload was run, and server documentation calls for separate server/config boundaries for real isolation.",
+        "sources": [
+          "acl",
+          "server",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support, citation coverage, and provenance",
+        "status": "unmeasured",
+        "evidence": "Records and audit retain provenance fields and quarantine warnings; no answer citation or evidence-support evaluation was run.",
+        "sources": [
+          "store",
+          "audit",
+          "memory",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Latency, write-to-recall delay, tokens, cost, storage, and observability",
+        "status": "unmeasured",
+        "evidence": "Upstream documentation reports selected latency and memory figures, but this review collected no independent runtime, delay, token, cost, or storage measurements.",
+        "sources": [
+          "readme",
+          "memory",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected the official README and memory guide, plus the vault, record store, MCP server, ACL, audit, and ranking source at the pinned head. It did not inspect every CLI operation, client integration, crypto primitive, migration, pack path, or all error and recovery paths.",
+        "sources": [
+          "readme",
+          "memory",
+          "vault",
+          "store",
+          "server",
+          "acl",
+          "audit",
+          "ranking"
+        ]
+      },
+      {
+        "text": "Source review cannot establish practical recall quality, answer abstention, correction correctness, complete erasure, operational caller isolation, machine-specific latency, provider cost, or storage efficiency. The repository's own reported measurements were not independently reproduced.",
+        "sources": [
+          "readme",
+          "memory",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "text": "The documented default store gate is heuristic and short-record oriented; import/capture routes can preserve longer verbatim material. HNSW is approximate above the exact-search threshold. The MCP server's caller name is declarative, so deployments that need a hard boundary must follow the separate-server/config guidance and validate their host setup.",
+        "sources": [
+          "memory",
+          "server",
+          "acl"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is `not_run`. Project metric definitions, execution status, and fixture describe the evaluation protocol, not Compartment results. No Compartment runtime, benchmark, or test was run for this review.",
+        "sources": [
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,291 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 156,
+    "slug": "cortana",
+    "name": "Cortana",
+    "repository": "https://github.com/adea-ai/cortana",
+    "listed_repository": "https://github.com/adea-ai/cortana",
+    "branch": "not verified",
+    "revision": "not verified",
+    "reviewed_at": "2026-11-25T09:24:13Z",
+    "review_timezone": "UTC (2026-11-25 01:24:13 PST; America/Los_Angeles)",
+    "source_status": "not_reviewed",
+    "benchmark_status": "not_run",
+    "summary": "The catalog identifies Cortana at ordinal 156 and lists adea-ai/cortana, but the official GitHub repository and catalog-pinned source paths currently return Page not found. The GitHub API is rate limited. No current branch or head could be verified and no source review is claimed; source-based assessment is blocked.",
+    "atlas_locator": {
+      "ordinal": 156,
+      "name": "Cortana",
+      "slug": "cortana",
+      "listed_repository": "https://github.com/adea-ai/cortana",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cortana.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "catalog_revision": "f26a1ac2b01bc903a86b0198d375c8e146ecbbde",
+      "note": "Atlas and catalog are retained only for curated identity and locator attribution. Their descriptions and assertions are not used as assessment evidence."
+    },
+    "contact": {
+      "email": null,
+      "source_url": null,
+      "checked_urls": [
+        "https://github.com/adea-ai/cortana",
+        "https://github.com/adea-ai/cortana/blob/f26a1ac2b01bc903a86b0198d375c8e146ecbbde/README.md",
+        "https://github.com/adea-ai/cortana/blob/f26a1ac2b01bc903a86b0198d375c8e146ecbbde/SECURITY.md"
+      ],
+      "note": "No project contact could be verified because the official repository and its catalog-pinned README and SECURITY.md pages returned Page not found. No contact was inferred."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/adea-ai/cortana/blob/f26a1ac2b01bc903a86b0198d375c8e146ecbbde/README.md",
+      "https://github.com/adea-ai/cortana/blob/f26a1ac2b01bc903a86b0198d375c8e146ecbbde/SECURITY.md"
+    ],
+    "contact_email_note": "Both official paths were checked at the catalog-listed revision; GitHub rendered Page not found, so no email could be verified.",
+    "blocker": {
+      "reason": "Official upstream could not be verified or checked out. The repository and catalog-pinned pages returned Page not found, while the GitHub API returned an explicit rate-limit response.",
+      "checked_at": "2026-11-25T09:24:13Z",
+      "evidence": [
+        "https://github.com/adea-ai/cortana",
+        "https://api.github.com/repos/adea-ai/cortana",
+        "https://github.com/adea-ai/cortana/commit/f26a1ac2b01bc903a86b0198d375c8e146ecbbde",
+        "https://github.com/adea-ai/cortana/blob/f26a1ac2b01bc903a86b0198d375c8e146ecbbde/README.md",
+        "https://github.com/adea-ai/cortana/blob/f26a1ac2b01bc903a86b0198d375c8e146ecbbde/SECURITY.md"
+      ],
+      "consequence": "Canonical current upstream, default branch, full current head, implementation, and official contact remain unverified. No implementation assessment is asserted."
+    },
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[155], ordinal 156: Cortana, slug cortana, explicit listed repository locator, catalog revision f26a1ac2b01bc903a86b0198d375c8e146ecbbde",
+        "url": "../memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/cortana.md",
+        "symbol": "Pinned Atlas attribution used only for curated identity and locator; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cortana.md"
+      },
+      {
+        "id": "repo",
+        "label": "Listed official GitHub repository page",
+        "path": "repository page",
+        "symbol": "Opened 2026-11-25; page title was Page not found · GitHub · GitHub",
+        "url": "https://github.com/adea-ai/cortana"
+      },
+      {
+        "id": "api",
+        "label": "Official GitHub repository API check",
+        "path": "GitHub REST repository endpoint",
+        "symbol": "Returned explicit API rate limit exceeded response; no repository metadata available",
+        "url": "https://api.github.com/repos/adea-ai/cortana"
+      },
+      {
+        "id": "catalog_head",
+        "label": "Catalog-pinned commit URL check",
+        "path": "commit f26a1ac2b01bc903a86b0198d375c8e146ecbbde",
+        "symbol": "Official GitHub page rendered Page not found; catalog pin is not verified as current head",
+        "url": "https://github.com/adea-ai/cortana/commit/f26a1ac2b01bc903a86b0198d375c8e146ecbbde"
+      },
+      {
+        "id": "readme",
+        "label": "Catalog-pinned official README contact/source check",
+        "path": "README.md",
+        "symbol": "Official GitHub page rendered Page not found; documentation and contact could not be inspected",
+        "url": "https://github.com/adea-ai/cortana/blob/f26a1ac2b01bc903a86b0198d375c8e146ecbbde/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Catalog-pinned official SECURITY.md contact check",
+        "path": "SECURITY.md",
+        "symbol": "Official GitHub page rendered Page not found; contact could not be inspected",
+        "url": "https://github.com/adea-ai/cortana/blob/f26a1ac2b01bc903a86b0198d375c8e146ecbbde/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Required benchmark domains; none evaluated",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Fixture not run",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "No Cortana result created or claimed",
+        "url": "../../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The catalog lists name Cortana, slug cortana, ordinal 156, explicit repository locator https://github.com/adea-ai/cortana, and catalog revision f26a1ac2b01bc903a86b0198d375c8e146ecbbde. This pin is roster metadata only and was not verified as the current upstream head.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "At review time the official repository and pinned commit pages rendered Page not found; the repository API returned a rate-limit response. The project form, owner, current default branch, and current full head SHA therefore remain unverified.",
+        "sources": [
+          "repo",
+          "api",
+          "catalog_head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Architecture and data model were not assessed: the official repository could not be accessed, and Atlas descriptions were excluded from assessment evidence.",
+        "sources": [
+          "repo",
+          "catalog_head"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write, update, delete, retrieval, scope isolation, provenance, efficiency, and observability behavior remain unknown because no current upstream source or documentation could be inspected.",
+        "sources": [
+          "repo",
+          "readme",
+          "catalog_head"
+        ]
+      },
+      {
+        "text": "The official README and SECURITY.md URLs at the catalog pin both rendered Page not found. No official contact email could be checked or confirmed.",
+        "sources": [
+          "readme",
+          "security"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "No source was accessible and no workload was run.",
+        "sources": [
+          "repo",
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale retrieval",
+        "status": "unmeasured",
+        "evidence": "No source was accessible and no workload was run.",
+        "sources": [
+          "repo",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No source was accessible and no workload was run.",
+        "sources": [
+          "repo",
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "No source was accessible and no workload was run.",
+        "sources": [
+          "repo",
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "No source was accessible and no workload was run.",
+        "sources": [
+          "repo",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No source was accessible and no timing workload was run.",
+        "sources": [
+          "repo",
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No source was accessible and no timing workload was run.",
+        "sources": [
+          "repo",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No source was accessible and no accounting workload was run.",
+        "sources": [
+          "repo",
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No source was accessible and no storage workload was run.",
+        "sources": [
+          "repo",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This task is blocked at source verification. The listed repository and catalog-pinned commit, README, and SECURITY.md URLs returned GitHub Page not found; the API endpoint returned an explicit rate-limit response. These observations do not establish whether the project was deleted, renamed, private, or temporarily unavailable.",
+        "sources": [
+          "repo",
+          "api",
+          "catalog_head",
+          "readme",
+          "security"
+        ]
+      },
+      {
+        "text": "No current branch or full head SHA, implementation behavior, or contact email can be responsibly stated. The catalog's older revision value is retained only as unverified roster metadata. A source review requires accessible official upstream evidence.",
+        "sources": [
+          "catalog",
+          "catalog_head",
+          "repo"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "metrics_document": "../../METRICS.md",
+      "result_record": "../../results/initial-baselines-status.json",
+      "fixture": "../../fixtures/memory-benchmark-v1.json",
+      "note": "No Cortana runtime, tests, or benchmarks were run. Source inspection was blocked by inaccessible upstream."
+    }
+  }
+}

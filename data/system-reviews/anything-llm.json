@@ -1,0 +1,295 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "anything-llm",
+    "name": "AnythingLLM",
+    "repository": "https://github.com/Mintplex-Labs/anything-llm",
+    "branch": "master",
+    "revision": "b01447009150507ae0cfd1304e3492fcaf2a92d8",
+    "reviewed_at": "2026-11-24T20:56:14Z",
+    "review_timezone": "UTC (2026-11-24 12:56:14 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "AnythingLLM is a self-hostable AI application with a first-party relational memory path. The reviewed implementation stores user-global and user-workspace facts and injects bounded memory text into chat prompts; source-level behavior is described separately from unmeasured outcomes.",
+    "atlas_locator": {
+      "ordinal": 59,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/anything-llm.md",
+      "listed_repository": "https://github.com/Mintplex-Labs/anything-llm"
+    },
+    "contact": {
+      "email": "Team@MintplexLabs.com",
+      "source_url": "https://docs.anythingllm.com/support",
+      "checked_urls": [
+        "https://github.com/Mintplex-Labs/anything-llm/blob/b01447009150507ae0cfd1304e3492fcaf2a92d8/README.md",
+        "https://github.com/Mintplex-Labs/anything-llm/blob/b01447009150507ae0cfd1304e3492fcaf2a92d8/SECURITY.md",
+        "https://docs.anythingllm.com/support"
+      ],
+      "note": "The official AnythingLLM support page publishes Team@MintplexLabs.com; the pinned repository README and SECURITY.md were also checked."
+    },
+    "contact_email": "Team@MintplexLabs.com",
+    "contact_email_source_url": "https://docs.anythingllm.com/support",
+    "contact_email_checked_sources": [
+      "https://github.com/Mintplex-Labs/anything-llm/blob/b01447009150507ae0cfd1304e3492fcaf2a92d8/README.md",
+      "https://github.com/Mintplex-Labs/anything-llm/blob/b01447009150507ae0cfd1304e3492fcaf2a92d8/SECURITY.md",
+      "https://docs.anythingllm.com/support"
+    ],
+    "sources": [
+      {
+        "id": "contact",
+        "label": "Official AnythingLLM support contact page",
+        "path": "Support",
+        "url": "https://docs.anythingllm.com/support"
+      },
+      {
+        "id": "repo",
+        "label": "Canonical public GitHub repository",
+        "path": "repository page",
+        "symbol": "Mintplex-Labs/anything-llm; default branch master",
+        "url": "https://github.com/Mintplex-Labs/anything-llm"
+      },
+      {
+        "id": "history",
+        "label": "Official master branch history",
+        "path": "commits/master.atom",
+        "symbol": "feed updated 2026-11-24T17:58:19Z and identifies current head",
+        "url": "https://github.com/Mintplex-Labs/anything-llm/commits/master.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified full-SHA head commit",
+        "path": "commit",
+        "symbol": "b01447009150507ae0cfd1304e3492fcaf2a92d8",
+        "url": "https://github.com/Mintplex-Labs/anything-llm/commit/b01447009150507ae0cfd1304e3492fcaf2a92d8"
+      },
+      {
+        "id": "readme",
+        "label": "Official project README",
+        "path": "README.md",
+        "symbol": "product, repository architecture, and published memory feature description",
+        "url": "https://github.com/Mintplex-Labs/anything-llm/blob/b01447009150507ae0cfd1304e3492fcaf2a92d8/README.md"
+      },
+      {
+        "id": "memory-model",
+        "label": "Memory model implementation",
+        "path": "server/models/memory.js",
+        "symbol": "memory fields, limits, scoped reads, creation, mutation paths, and row lookup",
+        "url": "https://github.com/Mintplex-Labs/anything-llm/blob/b01447009150507ae0cfd1304e3492fcaf2a92d8/server/models/memory.js"
+      },
+      {
+        "id": "injection",
+        "label": "Memory prompt integration",
+        "path": "server/utils/memories/index.js",
+        "symbol": "scope-filtered fetch, workspace reranking, formatting, and prompt append",
+        "url": "https://github.com/Mintplex-Labs/anything-llm/blob/b01447009150507ae0cfd1304e3492fcaf2a92d8/server/utils/memories/index.js"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog identity and attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 59, listed locator, and Atlas source attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned workload, not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "shared status is not_run; not a measured result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The public project is under the Mintplex-Labs GitHub organization. Its README presents AnythingLLM as an all-in-one AI application with document chat, agent features, multi-user support, and automatic and user-managed memories. This review focuses on the first-party relational memory path, not every memory-related feature in the application.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The repository describes a React frontend, a Node/Express server, and a separate document collector. The reviewed memory model uses Prisma and stores records with ID, nullable user/workspace IDs, workspace/global scope, content, last-used time, and created/updated timestamps. It sets caps of 20 workspace rows and five global rows.",
+        "sources": [
+          "readme",
+          "memory-model"
+        ]
+      },
+      {
+        "text": "The prompt helper checks whether memory is enabled, then concurrently queries global records for the user and workspace records for that user and workspace. It includes all global rows and at most five workspace rows; if more candidates exist, it reranks against the current prompt and up to three recent user turns, falling back to the newest five on reranker failure.",
+        "sources": [
+          "injection",
+          "memory-model"
+        ]
+      },
+      {
+        "text": "GitHub identifies Mintplex-Labs/anything-llm as the canonical public repository and master as the default branch. The official master Atom feed reports current head b01447009150507ae0cfd1304e3492fcaf2a92d8. Reviewed 2026-11-24 20:56:14 UTC (12:56:14 PST; America/Los_Angeles).",
+        "sources": [
+          "repo",
+          "history",
+          "head"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: the model validates IDs, scopes, and non-empty content, counts rows for the requested scope, enforces its five-global or 20-workspace cap, and creates the record through Prisma. These are code-visible limits, not measured throughput or concurrency behavior.",
+        "sources": [
+          "memory-model"
+        ]
+      },
+      {
+        "text": "Update: the inspected model contains a single-record content update path and a batch path that applies updates in a transaction. The batch path treats model-proposed IDs as untrusted and constrains writes to the current user and either current-workspace or user-global scope. Content is overwritten and updatedAt refreshed; no append-only or effective-time history was established.",
+        "sources": [
+          "memory-model"
+        ]
+      },
+      {
+        "text": "Delete: the bounded inspected source excerpts did not establish the exact delete implementation or cross-store erasure behavior. Hard-erasure semantics and post-delete recall are unknown; no deletion probe was run.",
+        "sources": [
+          "memory-model",
+          "record"
+        ]
+      },
+      {
+        "text": "Retrieval: database reads filter by user and workspace/global scope and are ordered newest first. The prompt helper reranks workspace candidates only when there are more than five; on error it uses the newest five. It formats selected text as a Markdown section appended to the system prompt. Failures are logged and yield no memory context.",
+        "sources": [
+          "memory-model",
+          "injection"
+        ]
+      },
+      {
+        "text": "The reviewed read predicates constrain user ID and, for workspace records, workspace ID and workspace scope. Batch updates similarly restrict the target to the current user and current workspace or user-global scope. These predicates are source evidence, not an independently tested isolation guarantee.",
+        "sources": [
+          "memory-model"
+        ]
+      },
+      {
+        "text": "The inspected memory row has content, ownership/scope, and timestamps, but no source-chat pointer, passage, confidence, or citation field. The prompt output contains memory text without a memory ID or source citation. Claim-level evidence support is therefore not established in this path.",
+        "sources": [
+          "memory-model",
+          "injection"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "The prompt helper selects and formats candidate memories, but no answerable or unanswerable query workload was run.",
+        "sources": [
+          "injection",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "The model supports mutable content updates, but no correction workload or stale-answer adjudication was performed.",
+        "sources": [
+          "memory-model",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The exact delete and erasure path was not verified in the bounded inspection, and no post-delete probe was run.",
+        "sources": [
+          "memory-model",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope-isolation leakage",
+        "status": "unmeasured",
+        "evidence": "User/workspace predicates are visible in inspected code, but no cross-scope probes were run.",
+        "sources": [
+          "memory-model",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "The reviewed memory row and prompt format expose no source citation fields; no generated claims were evaluated.",
+        "sources": [
+          "memory-model",
+          "injection",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No retrieval timings or scheduled post-write probes were collected.",
+        "sources": [
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The helper inserts selected memory text, but no token usage, provider cost, database size, or per-item storage measurement was collected.",
+        "sources": [
+          "injection",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review is bounded to the current canonical repository at the pinned SHA, principally the memory model and prompt helper. It does not cover all memory API routes, automatic extraction workers, deployment variants, or the separate agent RAG-memory tool.",
+        "sources": [
+          "readme",
+          "memory-model",
+          "injection"
+        ]
+      },
+      {
+        "text": "The exact delete implementation, physical erasure across copies, runtime isolation, retrieval quality, reliability, latency, token use, cost, and storage efficiency remain unknown because the system was not run or benchmarked.",
+        "sources": [
+          "memory-model",
+          "injection",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Source-visible caps, query predicates, and reranking describe implementation mechanisms only; they are not empirical performance or security results.",
+        "sources": [
+          "memory-model",
+          "injection",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No AnythingLLM instance, benchmark workload, or tests were run. Project metrics, fixture, and shared execution status are protocol/status references, not system results.",
+      "metric_definitions_url": "../METRICS.md",
+      "fixture_url": "../fixtures/memory-benchmark-v1.json",
+      "execution_status_url": "../results/initial-baselines-status.json"
+    }
+  }
+}

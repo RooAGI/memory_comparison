@@ -1,0 +1,297 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 232,
+    "slug": "evox-genesis",
+    "name": "EvoX Genesis",
+    "repository": "https://github.com/EMI-Group/genesis",
+    "listed_repository": "https://github.com/EMI-Group/genesis",
+    "branch": "main",
+    "revision": "56569e9f323dd50b3e05266a937c18cf43c95ef2",
+    "reviewed_at": "2026-11-25T20:08:57Z",
+    "review_timezone": "UTC (checked 2026-11-25 12:08:57 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "EvoX Genesis is an open-source software-development agent system that supplies project context from repository-local Markdown files scoped to an agent's repository path. Git versions project changes and SQLite stores runtime/task data; product behavior and performance were not measured.",
+    "atlas_locator": {
+      "ordinal": 232,
+      "name": "EvoX Genesis",
+      "slug": "evox-genesis",
+      "listed_repository": "https://github.com/EMI-Group/genesis",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/evox-genesis.md",
+      "revision": "1ab2e249b9c85111446b70785eb69360bb4de5ed"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/EMI-Group/genesis/blob/56569e9f323dd50b3e05266a937c18cf43c95ef2/README.md",
+      "checked_urls": [
+        "https://github.com/EMI-Group/genesis/blob/56569e9f323dd50b3e05266a937c18cf43c95ef2/README.md"
+      ],
+      "note": "Checked only the official pinned upstream README for a published contact email. It says to get in touch but publishes no email address. No commit/profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/EMI-Group/genesis/blob/56569e9f323dd50b3e05266a937c18cf43c95ef2/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/EMI-Group/genesis/blob/56569e9f323dd50b3e05266a937c18cf43c95ef2/README.md"
+    ],
+    "contact_email_note": "No email address was published in the checked official pinned README. No commit/profile metadata, third-party directory, or inferred address was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[231], ordinal 232; identity and explicit repository locator",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/evox-genesis.md",
+        "symbol": "Pinned Atlas attribution retained for roster context only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/evox-genesis.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "",
+        "symbol": "Canonical repository identity and default branch from official GitHub repository API/page",
+        "url": "https://github.com/EMI-Group/genesis"
+      },
+      {
+        "id": "head",
+        "label": "Official current main head",
+        "path": "",
+        "symbol": "GitHub official main commit endpoint returned the full reviewed SHA",
+        "url": "https://api.github.com/repos/EMI-Group/genesis/commits/main"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "System purpose, project context files, Git and SQLite roles, review workflow, and published contact check",
+        "url": "https://github.com/EMI-Group/genesis/blob/56569e9f323dd50b3e05266a937c18cf43c95ef2/README.md"
+      },
+      {
+        "id": "context_node",
+        "label": "Pinned context-tree model and renderer",
+        "path": "apps/evo_git/lib/evo_git/core/context_node.ex",
+        "symbol": "Path identity, hierarchy, global context stage, VCT lookup, byte caps, and truncation behavior",
+        "url": "https://github.com/EMI-Group/genesis/blob/56569e9f323dd50b3e05266a937c18cf43c95ef2/apps/evo_git/lib/evo_git/core/context_node.ex"
+      },
+      {
+        "id": "context_builder",
+        "label": "Pinned agent context builder",
+        "path": "apps/evo_git/lib/evo_git/agent/context_builder.ex",
+        "symbol": "Agent context build and fallback when context assembly returns an error",
+        "url": "https://github.com/EMI-Group/genesis/blob/56569e9f323dd50b3e05266a937c18cf43c95ef2/apps/evo_git/lib/evo_git/agent/context_builder.ex"
+      },
+      {
+        "id": "archive_schema",
+        "label": "Pinned per-agent task archive schema",
+        "path": "apps/evo_git/lib/evo_git/store/schemas/task_agent_archive_row.ex",
+        "symbol": "Persisted task/agent identity, repository path, objective/result, commit/ref, usage/settings, and timestamps",
+        "url": "https://github.com/EMI-Group/genesis/blob/56569e9f323dd50b3e05266a937c18cf43c95ef2/apps/evo_git/lib/evo_git/store/schemas/task_agent_archive_row.ex"
+      },
+      {
+        "id": "archive_ops",
+        "label": "Pinned task archive operations",
+        "path": "apps/evo_git/lib/evo_git/store/operations/archives.ex",
+        "symbol": "Per-agent archive upsert, paging, opt-in heavy fields, and explicit deletion",
+        "url": "https://github.com/EMI-Group/genesis/blob/56569e9f323dd50b3e05266a937c18cf43c95ef2/apps/evo_git/lib/evo_git/store/operations/archives.ex"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation domains and metric definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Evaluation fixture, not a Genesis result",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status, not a Genesis result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The README describes Genesis as developed by the EvoX Group at The Hong Kong Polytechnic University and as an open-source system for software development with AI agents.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "Genesis is a full development system with a desktop app, headless server, dashboard, and local MCP endpoint, not a standalone memory database.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Project context is organized by repository path. ContextNode represents a normalized relative path and repository identity; the agent context builder asks it to assemble text for the assigned node.",
+        "sources": [
+          "context_node",
+          "context_builder"
+        ]
+      },
+      {
+        "text": "The renderer builds stages from applicable repository-root-to-node CONTEXT.md files and the global VCT context stage when available. It provides text to the agent prompt instead of ranking individual memory records.",
+        "sources": [
+          "context_node"
+        ]
+      },
+      {
+        "text": "The README describes Git as recording software versions and SQLite as storing runtime/task data. The separate per-agent task archive schema stores task and agent IDs, parent/depth, context path, objective/result, base/final commits, branch/archive refs, repo identity, usage/settings, and timestamps.",
+        "sources": [
+          "readme",
+          "archive_schema"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write and update: project context is authored in repository-local CONTEXT.md files as ordinary project changes. The README describes candidate work in isolated Git worktrees and human review of diffs before accepted results carry forward. The inspected sources did not identify a separate memory-record write or patch API.",
+        "sources": [
+          "readme",
+          "context_node"
+        ]
+      },
+      {
+        "text": "Retrieval: the inspected core path assembles path-specific context from ancestor files and the global VCT stage when available. This is explicit and structural; the reviewed path does not show vector search, semantic ranking, or a memory answerability/abstention decision. A separate cross-history recall path was not established.",
+        "sources": [
+          "context_node",
+          "context_builder"
+        ]
+      },
+      {
+        "text": "Delete: the inspected documentation and code describe file context and Git project changes, but do not establish a memory-specific delete API, per-memory tombstone, or deletion propagation protocol. Deletion leakage was not tested. The separate task-archive API supports deleting task archive rows, not deleting project memory.",
+        "sources": [
+          "readme",
+          "context_node",
+          "archive_ops"
+        ]
+      },
+      {
+        "text": "Scope: the in-repository context chain follows root-to-node paths, excluding sibling paths from that assembled string. A global VCT context stage is also included; access-control guarantees for it were not established.",
+        "sources": [
+          "context_node"
+        ]
+      },
+      {
+        "text": "Provenance: Git versions project changes, and task archives record task/agent and commit/ref metadata. The inspected model does not attach citations, trust, or confidence to each CONTEXT.md statement; task provenance does not prove a memory claim.",
+        "sources": [
+          "readme",
+          "archive_schema"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "The inspected path assembles context from path-scoped files; no scoring or abstention policy was established.",
+        "sources": [
+          "context_node",
+          "context_builder",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Context files can be edited as repository changes; no correction accuracy or stale-value workload was evaluated.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No memory-specific deletion protocol was established from the inspected sources, and no deletion probes were run.",
+        "sources": [
+          "context_node",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Root-to-node context assembly excludes sibling paths in the rendered chain; global-context authorization and runtime isolation were not exercised.",
+        "sources": [
+          "context_node",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Task and commit provenance exists, but per-claim evidence links were not established.",
+        "sources": [
+          "archive_schema",
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No runtime timing or write-to-recall workload was run.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "A byte cap is configured for context stages; no token, cost, or storage workload was measured.",
+        "sources": [
+          "context_node",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected the public README and selected current upstream context-tree, context-builder, and task-archive sources, not a running Genesis instance or every retrieval tool. It cannot establish answer quality, freshness, product-level authorization, global-context permissions, deletion correctness, or actual performance.",
+        "sources": [
+          "readme",
+          "context_node",
+          "context_builder",
+          "archive_schema"
+        ]
+      },
+      {
+        "text": "The context builder falls back to a path-only string if context assembly errors. The review did not execute this path or determine the operational frequency of such errors.",
+        "sources": [
+          "context_builder"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Genesis runtime, tests, or benchmarks were run. Source observations and the benchmark fixture are not measured results."
+    }
+  }
+}

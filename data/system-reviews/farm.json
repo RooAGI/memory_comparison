@@ -1,0 +1,355 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 234,
+    "slug": "farm",
+    "name": "FARM",
+    "repository": "https://github.com/GoldenGait/FARM-Project",
+    "branch": "main",
+    "revision": "2fcaf8602e741341a70ca980133f7ff05cfc83a2",
+    "reviewed_at": "2026-11-25T20:13:41Z",
+    "review_timezone": "UTC (2026-11-25 12:13:41 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/GoldenGait/FARM-Project/blob/2fcaf8602e741341a70ca980133f7ff05cfc83a2/README.md",
+      "note": "No published contact email was displayed in the checked official README or project website; no address was inferred from commit or profile metadata."
+    },
+    "summary": "A robotics scene-memory framework that maps RGB-D streams into an object-level 3D memory and retrieves objects from natural-language descriptions and spatial relations. This review records source observations, not measured quality or performance.",
+    "atlas_locator": {
+      "ordinal": 234,
+      "name": "FARM",
+      "slug": "farm",
+      "listed_repository": "https://github.com/GoldenGait/FARM-Project",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/farm.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/GoldenGait/FARM-Project/blob/2fcaf8602e741341a70ca980133f7ff05cfc83a2/README.md",
+      "https://goldengait.github.io/farm/"
+    ],
+    "sources": [
+      {
+        "id": "roster",
+        "label": "Curated roster identity, listed repository locator, and Atlas attribution",
+        "path": "../data/memory-systems.json",
+        "symbol": "ordinal 234",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "repo",
+        "label": "Official FARM-Project repository and default branch",
+        "path": "repository",
+        "symbol": "public repository; default branch main",
+        "url": "https://github.com/GoldenGait/FARM-Project"
+      },
+      {
+        "id": "head",
+        "label": "Official GitHub main branch commit API",
+        "path": "commit",
+        "symbol": "full head SHA 2fcaf8602e741341a70ca980133f7ff05cfc83a2",
+        "url": "https://api.github.com/repos/GoldenGait/FARM-Project/commits/main"
+      },
+      {
+        "id": "readme",
+        "label": "Official FARM project README at reviewed SHA",
+        "path": "README.md",
+        "url": "https://github.com/GoldenGait/FARM-Project/blob/2fcaf8602e741341a70ca980133f7ff05cfc83a2/README.md"
+      },
+      {
+        "id": "site",
+        "label": "Official FARM project website; contact email check",
+        "path": "website",
+        "url": "https://goldengait.github.io/farm/"
+      },
+      {
+        "id": "steps",
+        "label": "Shared RGB-D mapping pipeline steps",
+        "path": "src/scene_graph/pipeline/steps.py",
+        "symbol": "update_state_and_enqueue_captions",
+        "url": "https://github.com/GoldenGait/FARM-Project/blob/2fcaf8602e741341a70ca980133f7ff05cfc83a2/src/scene_graph/pipeline/steps.py"
+      },
+      {
+        "id": "update",
+        "label": "Per-object map fusion, active state, voxels, and diagnostics",
+        "path": "src/scene_graph/map_update/object_update.py",
+        "symbol": "update_scene_graph_state",
+        "url": "https://github.com/GoldenGait/FARM-Project/blob/2fcaf8602e741341a70ca980133f7ff05cfc83a2/src/scene_graph/map_update/object_update.py"
+      },
+      {
+        "id": "pruning",
+        "label": "Soft-prune eligibility and active object filtering",
+        "path": "src/scene_graph/map_update/pruning.py",
+        "symbol": "compute_indices_to_prune",
+        "url": "https://github.com/GoldenGait/FARM-Project/blob/2fcaf8602e741341a70ca980133f7ff05cfc83a2/src/scene_graph/map_update/pruning.py"
+      },
+      {
+        "id": "retriever",
+        "label": "Multi-channel object retrieval, result scores, and debug output",
+        "path": "src/scene_graph/retrieval/scene_graph_retriever.py",
+        "url": "https://github.com/GoldenGait/FARM-Project/blob/2fcaf8602e741341a70ca980133f7ff05cfc83a2/src/scene_graph/retrieval/scene_graph_retriever.py"
+      },
+      {
+        "id": "spatial",
+        "label": "Spatial query predicate execution and candidate scoring",
+        "path": "src/scene_graph/retrieval/spatial_reasoning/executor.py",
+        "symbol": "execute_spatial_query",
+        "url": "https://github.com/GoldenGait/FARM-Project/blob/2fcaf8602e741341a70ca980133f7ff05cfc83a2/src/scene_graph/retrieval/spatial_reasoning/executor.py"
+      },
+      {
+        "id": "scene",
+        "label": "Scene graph loading, retrieval, covisibility, and viewpoint image selection",
+        "path": "src/scene_graph/scene_graph.py",
+        "symbol": "SceneGraphProcessing",
+        "url": "https://github.com/GoldenGait/FARM-Project/blob/2fcaf8602e741341a70ca980133f7ff05cfc83a2/src/scene_graph/scene_graph.py"
+      },
+      {
+        "id": "stateio",
+        "label": "Scene-state serialization and image source resolution",
+        "path": "src/scene_graph/scene_state_io.py",
+        "url": "https://github.com/GoldenGait/FARM-Project/blob/2fcaf8602e741341a70ca980133f7ff05cfc83a2/src/scene_graph/scene_state_io.py"
+      },
+      {
+        "id": "imagemodel",
+        "label": "ImageRecord camera, pose, storage, and source reference model",
+        "path": "src/scene_graph/storage/models.py",
+        "symbol": "ImageRecord",
+        "url": "https://github.com/GoldenGait/FARM-Project/blob/2fcaf8602e741341a70ca980133f7ff05cfc83a2/src/scene_graph/storage/models.py"
+      },
+      {
+        "id": "masks",
+        "label": "Packed detection-mask evidence and crop observation handling",
+        "path": "src/scene_graph/map_update/mask_observations.py",
+        "url": "https://github.com/GoldenGait/FARM-Project/blob/2fcaf8602e741341a70ca980133f7ff05cfc83a2/src/scene_graph/map_update/mask_observations.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project benchmark metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture protocol",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository presents FARM as a public robotics memory implementation with a ROS 2 mapping node, an offline mapping path, a Python retrieval API, and viewer and CLI tools. The reviewed default branch and full head SHA are verified through GitHub's official repository and commit endpoints. The official project website also presents the work as relational-spatial robot memory and hosts scene demonstrations. The repository owner is GoldenGait; no hosted product is inferred.",
+        "sources": [
+          "repo",
+          "readme",
+          "head",
+          "site"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Documentation observation: the README describes an object-centric scene state with 3D Gaussian geometry, captions, multi-modal embeddings, viewpoint evidence, and co-visibility. The state is stored as a PyTorch scene_state.pt snapshot; ImageRecord carries image ID, pose, camera ID, optional saved-image path, and source-frame reference. The README warns that scene-state files use pickle serialization and should be trusted before opening.",
+        "sources": [
+          "readme",
+          "stateio",
+          "imagemodel"
+        ]
+      },
+      {
+        "text": "Code observation: the offline and streaming paths share pure pipeline steps. RGB-D detections are transformed to world coordinates, matched with active map rows, then fused in place; updates preserve voxel and viewpoint references, refresh co-visibility state, and can queue new objects for asynchronous caption work.",
+        "sources": [
+          "steps",
+          "update"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: each RGB-D batch is segmented and transformed to world coordinates. The matching/update path uses appearance features and Gaussian geometry, resolves correspondences, fuses matched rows, and creates rows for unmatched detections when enabled.",
+        "sources": [
+          "readme",
+          "steps",
+          "update"
+        ]
+      },
+      {
+        "text": "Update: matched detections update geometry, features, and associated observations in place; captioning and derived embeddings can be produced asynchronously. These code paths establish how updates are represented, not identity or correction accuracy.",
+        "sources": [
+          "steps",
+          "update",
+          "readme"
+        ]
+      },
+      {
+        "text": "Delete and pruning: the inspected update and pruning code soft-deactivates merged or pruned objects by changing their active state. The inspected sources did not establish general permanent deletion or a correction-history model, and inactive rows remain in the scene state.",
+        "sources": [
+          "update",
+          "pruning",
+          "stateio"
+        ]
+      },
+      {
+        "text": "Retrieval: the README documents reciprocal-rank fusion across caption-text, raw query, SigLIP2, and Qwen3-VL channels. The spatial query executor scores target and relational predicates; the retriever can rerank clusters and return component scores, candidate counts, covering images, and debug output.",
+        "sources": [
+          "readme",
+          "retriever",
+          "spatial",
+          "scene"
+        ]
+      },
+      {
+        "text": "Scope isolation: the reviewed paths operate on a loaded scene graph or scene-state file. Spatial and region constraints narrow object retrieval, but the inspected public sources did not show user, tenant, or project authorization boundaries. No cross-scope probes were run.",
+        "sources": [
+          "readme",
+          "retriever",
+          "spatial"
+        ]
+      },
+      {
+        "text": "Provenance and evidence: object viewpoint image IDs connect to ImageRecord entries with camera, pose, saved path, and source-frame reference. Detection masks can be persisted as packed observations. These visual references support inspection but do not establish claim-level document citations or entailment.",
+        "sources": [
+          "scene",
+          "imagemodel",
+          "stateio",
+          "masks"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: source-visible mechanisms include per-object map state, candidate retrieval and rank fusion, spatial scoring, runtime logging, result score/candidate diagnostics, and optional persisted debug output. They are implementation observations; no system runtime or measurements were collected.",
+        "sources": [
+          "readme",
+          "update",
+          "retriever",
+          "spatial"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Retrieval code and documentation are present, but no adjudicated answerable-query accuracy or calibrated abstention workload was run.",
+        "sources": [
+          "retriever",
+          "spatial",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Map fusion and caption refresh are visible in source, but no post-correction current-object or stale-result probes were run.",
+        "sources": [
+          "update",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Merge and pruning deactivation are visible; no post-deletion workload or persistent-erasure audit was performed.",
+        "sources": [
+          "update",
+          "pruning",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "The inspected retrieval path accepts a scene state and spatial filters; no cross-scene, cross-user, or cross-tenant leakage probes were run.",
+        "sources": [
+          "retriever",
+          "spatial",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Image and mask observations preserve visual references, but no claim-level support or citation-coverage adjudication was performed.",
+        "sources": [
+          "scene",
+          "imagemodel",
+          "masks",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Code includes timing and retrieval diagnostics, but no latency distribution or scheduled write-to-recall measurement was collected.",
+        "sources": [
+          "retriever",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The README describes compact state and optional model backends, but no token, provider-cost, or benchmark-corpus storage totals were collected.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code/documentation",
+        "evidence": "Rank fusion, candidate controls, spatial scoring, timing logs, result diagnostics, and debug outputs are visible design mechanisms. They do not quantify runtime performance.",
+        "sources": [
+          "readme",
+          "retriever",
+          "spatial",
+          "update"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded read-only inspection of the public README and selected mapping, storage, lifecycle, and retrieval source at the verified repository SHA. FARM, tests, and benchmark workloads were not run; mapping accuracy, answer quality, deletion completeness, access isolation, and runtime performance remain unknown.",
+        "sources": [
+          "readme",
+          "steps",
+          "update",
+          "retriever",
+          "metrics"
+        ]
+      },
+      {
+        "text": "Atlas data was used only for ordinal, slug, listed repository locator, and source attribution. Atlas descriptions, feature marks, and assessment claims were excluded from review evidence.",
+        "sources": [
+          "roster",
+          "repo"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is not_run. No FARM execution, tests, or benchmark workload was run. Project metric definitions, fixture, and execution-status record are protocol and status artifacts, not FARM measurements.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,263 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "agent-memory-distillation",
+    "name": "Agent Memory Distillation",
+    "repository": "https://github.com/taeilkim2465/agentic_memory_distillation",
+    "branch": "main",
+    "revision": "2895d10c07105432325b088f4803dc94a10003c9",
+    "reviewed_at": "2026-11-23T23:45:47Z",
+    "review_timezone": "UTC (checked 2026-11-23 15:45:47 PST)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "A research code repository that distills teacher-agent trajectories into reusable memories and injects them into student agents across AppWorld, BFCL, and ToolSandbox. The inspected BFCL implementation uses workflow, subtask, and function-call memory stores; this is source evidence, not a measured result.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/taeilkim2465/agentic_memory_distillation"
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Current upstream repository and default branch",
+        "path": "repository",
+        "symbol": "main; head 2895d10c07105432325b088f4803dc94a10003c9",
+        "url": "https://github.com/taeilkim2465/agentic_memory_distillation"
+      },
+      {
+        "id": "readme",
+        "label": "README at reviewed commit",
+        "path": "README.md",
+        "symbol": "benchmark/method layout; setup and experiment entrypoints",
+        "url": "https://github.com/taeilkim2465/agentic_memory_distillation/blob/2895d10c07105432325b088f4803dc94a10003c9/README.md"
+      },
+      {
+        "id": "model",
+        "label": "BFCL memory data model",
+        "path": "bfcl/common/memory/data_model.py",
+        "symbol": "WorkflowMemDoc; SubtaskSegment; FunctionStepRecord; sanitize_memory_text",
+        "url": "https://github.com/taeilkim2465/agentic_memory_distillation/blob/2895d10c07105432325b088f4803dc94a10003c9/bfcl/common/memory/data_model.py"
+      },
+      {
+        "id": "builder",
+        "label": "BFCL offline memory builder",
+        "path": "bfcl/common/memory/builder.py",
+        "symbol": "BFCLMemoryBuilder; _save_workflow; _save_subtask; _save_function",
+        "url": "https://github.com/taeilkim2465/agentic_memory_distillation/blob/2895d10c07105432325b088f4803dc94a10003c9/bfcl/common/memory/builder.py"
+      },
+      {
+        "id": "store",
+        "label": "BFCL retrieval stores",
+        "path": "bfcl/common/memory/store.py",
+        "symbol": "WorkflowMemoryStore.retrieve; SubtaskSegmentStore.retrieve_for_subtasks; FunctionMemoryStore.retrieve",
+        "url": "https://github.com/taeilkim2465/agentic_memory_distillation/blob/2895d10c07105432325b088f4803dc94a10003c9/bfcl/common/memory/store.py"
+      },
+      {
+        "id": "injection",
+        "label": "BFCL runtime memory injection",
+        "path": "bfcl/common/memory/injection.py",
+        "symbol": "_get_stores; _decompose_task; augment_with_function_hints",
+        "url": "https://github.com/taeilkim2465/agentic_memory_distillation/blob/2895d10c07105432325b088f4803dc94a10003c9/bfcl/common/memory/injection.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "./METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status record",
+        "path": "results/initial-baselines-status.json",
+        "url": "./results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "./fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The repository describes itself as official code for agentic memory distillation research. It is organized as experiment code for AppWorld, BFCL, and ToolSandbox, with MEMP, ReasoningBank (RB), and SASM variants; it is not presented as a standalone hosted memory service. The source details below focus on the shared BFCL memory package.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README organizes each benchmark around method-specific implementations and shared components. For BFCL, the data model defines workflow insights, subtask segments, and per-step function-call records. Records retain fields such as task/category IDs, source labels, generated time, metadata, and trajectory-derived content; `sanitize_memory_text` masks selected emails, phone numbers, monetary amounts, and long numbers.",
+        "sources": [
+          "readme",
+          "model"
+        ]
+      },
+      {
+        "text": "The BFCL stores read JSON/JSONL documents alongside NumPy embedding arrays. Workflow documents are embedded from their query; subtask segments from label plus description; function records are matched by tool name and can be ranked by an embedding of the turn query. This is the inspected BFCL design, not proof that all benchmark overlays use identical storage.",
+        "sources": [
+          "store",
+          "model",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write/build: the BFCL builder converts teacher result files into workflow, subtask, and function records, then writes JSON or JSONL data and rebuilds corresponding embedding arrays. Its workflow and subtask save paths avoid adding records whose task ID (or task ID and label) already exists; the function-record save path appends records. The inspected runtime stores expose retrieval, not a general online memory-write API.",
+        "sources": [
+          "builder",
+          "model",
+          "readme"
+        ]
+      },
+      {
+        "text": "Corrections and deletion: no runtime correction-history, value-replacement, or per-memory deletion contract was located in the inspected BFCL model/store/injection files. The offline builder’s file regeneration and duplicate filtering are build behavior, not evidence of user-requested correction or deletion semantics. Behavior outside this inspected scope is unknown.",
+        "sources": [
+          "model",
+          "builder",
+          "store",
+          "injection"
+        ]
+      },
+      {
+        "text": "Retrieval: workflow retrieval optionally filters by category, then ranks matching document embeddings by cosine similarity and returns top-k; without a usable embedding array it falls back to the first matching documents. Subtask retrieval embeds each task subtask, chooses its best segment above a similarity threshold, and deduplicates labels. Function retrieval first filters exact tool names, optionally ranks matches by query embedding, and returns a bounded number of examples.",
+        "sources": [
+          "store"
+        ]
+      },
+      {
+        "text": "Injection: the BFCL integration caches loaded stores by memory-directory path. It prepares workflow/subtask context for task inference and can append a retrieved function-call hint and schema description to an execution error. The code also calls an LLM to decompose a task for subtask retrieval, with a 30-second timeout and an empty-list fallback on failure. These are source-level paths, not observed latency or successful recall.",
+        "sources": [
+          "injection",
+          "store"
+        ]
+      },
+      {
+        "text": "Scope and provenance: category equality is an optional retrieval filter, and records carry task/category/source metadata; function examples are associated with tool names and task records. The inspected paths do not establish caller-bound tenant authorization or isolation. Prompt formatting can include a task ID, while no claim-level source citation contract was identified.",
+        "sources": [
+          "model",
+          "store",
+          "injection"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: the workflow store uses NumPy matrix operations for cosine ranking, while subtask retrieval compares each query against candidate embeddings. Query embedding calls use the configured embedding provider in the inspected store. A per-directory cache avoids reloading stores; the inspected modules do not expose retrieval-duration metrics, and the injection path prints function-error/hint counts rather than benchmark timings.",
+        "sources": [
+          "store",
+          "injection"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "The source has ranking and fallback paths, but no Agent Memory Distillation outputs were captured and adjudicated against project gold answers or abstention cases.",
+        "sources": [
+          "store",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "No online correction-history contract was located in the inspected BFCL files; no correction probes ran, so accuracy and stale-value rate are unknown.",
+        "sources": [
+          "model",
+          "store",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No runtime deletion path was located in the inspected BFCL memory package, and no deletion was acknowledged or probed. This bounded inspection does not establish behavior elsewhere.",
+        "sources": [
+          "store",
+          "injection",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Category filters and task metadata are visible in source, but caller authorization and cross-scope isolation were not established or measured.",
+        "sources": [
+          "model",
+          "store",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Records retain task/source metadata, but no benchmark responses were captured to adjudicate support or resolvable citations; task IDs in prompts are not by themselves claim citations.",
+        "sources": [
+          "model",
+          "store",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Source shows embedding and ranking calls and a store cache, but there are no workload timings or write-to-recall observations for this system.",
+        "sources": [
+          "store",
+          "injection",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and persistent storage",
+        "status": "unmeasured",
+        "evidence": "Model/API calls and file-backed records are visible in code; no project token, cost, or storage measurements exist for this system.",
+        "sources": [
+          "builder",
+          "store",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review is pinned to one repository revision and focuses on the README plus the BFCL shared memory model, builder, stores, and injection path. Other benchmark-specific and method-specific implementations were not individually inspected, and source code does not establish runtime correctness, reliability, security, or scalability.",
+        "sources": [
+          "repo",
+          "readme",
+          "model",
+          "builder",
+          "store",
+          "injection"
+        ]
+      },
+      {
+        "text": "The retrieved data can include teacher-trajectory content and selected task metadata. This review did not inspect deployment data handling, authorization configuration, retention controls, or privacy protections beyond the sanitizer visible in the BFCL data model.",
+        "sources": [
+          "model",
+          "builder",
+          "injection"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run for Agent Memory Distillation. The project status record is `not_run`, with null metric numerators/denominators and zero runtime observations; its records cover Graphiti, Mem0, Letta, and Memori, not this system. Planned fixture counts are not measurements, and no system or benchmark workload was executed for this review.",
+        "sources": [
+          "record",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

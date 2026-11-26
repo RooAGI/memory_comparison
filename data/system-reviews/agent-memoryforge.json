@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "agent-memoryforge",
+    "name": "Agent-MemoryForge",
+    "repository": "https://github.com/hellangleZ/Agent-MemoryForge",
+    "branch": "main",
+    "revision": "a582a70394138acc4a19e642ed8c070faf1bfb2e",
+    "reviewed_at": "2026-11-24T18:35:00Z",
+    "review_timezone": "UTC (2026-11-24 10:35:00 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Agent-MemoryForge is a Python memory service and integration SDK for agent applications. Its current documented service uses Markdown files as canonical memory and SQLite full-text search as a derived index; a Gateway provides tenant/workspace authentication and routes customer operations.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/hellangleZ/Agent-MemoryForge"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/hellangleZ/Agent-MemoryForge/blob/a582a70394138acc4a19e642ed8c070faf1bfb2e/README.md",
+      "note": "No published contact email found in the checked official repository README."
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Current canonical GitHub repository",
+        "path": "repository page",
+        "symbol": "hellangleZ/Agent-MemoryForge; selected branch main",
+        "url": "https://github.com/hellangleZ/Agent-MemoryForge"
+      },
+      {
+        "id": "history",
+        "label": "Current main branch history",
+        "path": "commits/main",
+        "symbol": "head commit a582a70",
+        "url": "https://github.com/hellangleZ/Agent-MemoryForge/commits/main"
+      },
+      {
+        "id": "head",
+        "label": "Current main head patch",
+        "path": "commit patch",
+        "symbol": "full SHA a582a70394138acc4a19e642ed8c070faf1bfb2e",
+        "url": "https://github.com/hellangleZ/Agent-MemoryForge/commit/a582a70394138acc4a19e642ed8c070faf1bfb2e.patch"
+      },
+      {
+        "id": "tree",
+        "label": "Reviewed source tree",
+        "path": "repository tree",
+        "symbol": "commit a582a70394138acc4a19e642ed8c070faf1bfb2e",
+        "url": "https://github.com/hellangleZ/Agent-MemoryForge/tree/a582a70394138acc4a19e642ed8c070faf1bfb2e"
+      },
+      {
+        "id": "readme",
+        "label": "Official project README",
+        "path": "README.md",
+        "symbol": "product model, tiers, persistence, and integration overview",
+        "url": "https://github.com/hellangleZ/Agent-MemoryForge/blob/a582a70394138acc4a19e642ed8c070faf1bfb2e/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Architecture documentation",
+        "path": "docs/ARCHITECTURE.md",
+        "symbol": "components, data flow, scope model, backend",
+        "url": "https://github.com/hellangleZ/Agent-MemoryForge/blob/a582a70394138acc4a19e642ed8c070faf1bfb2e/docs/ARCHITECTURE.md"
+      },
+      {
+        "id": "api",
+        "label": "API reference",
+        "path": "docs/API_REFERENCE.md",
+        "symbol": "write/search/read/get APIs, limits, citations, actor fields",
+        "url": "https://github.com/hellangleZ/Agent-MemoryForge/blob/a582a70394138acc4a19e642ed8c070faf1bfb2e/docs/API_REFERENCE.md"
+      },
+      {
+        "id": "backend",
+        "label": "File-First memory backend",
+        "path": "agent_memory_service/backends/file_first.py",
+        "symbol": "FileFirstBackend, write_memory, search_memory, read_memory, get_memory",
+        "url": "https://github.com/hellangleZ/Agent-MemoryForge/blob/a582a70394138acc4a19e642ed8c070faf1bfb2e/agent_memory_service/backends/file_first.py"
+      },
+      {
+        "id": "entries",
+        "label": "Markdown entry encoding",
+        "path": "agent_memory_service/file_first/entries.py",
+        "symbol": "format_entry, iter_entries, line-numbered chunks",
+        "url": "https://github.com/hellangleZ/Agent-MemoryForge/blob/a582a70394138acc4a19e642ed8c070faf1bfb2e/agent_memory_service/file_first/entries.py"
+      },
+      {
+        "id": "fts",
+        "label": "SQLite search index",
+        "path": "agent_memory_service/file_first/index_sqlite.py",
+        "symbol": "SqliteFtsIndex, chunk search, metadata and path citations",
+        "url": "https://github.com/hellangleZ/Agent-MemoryForge/blob/a582a70394138acc4a19e642ed8c070faf1bfb2e/agent_memory_service/file_first/index_sqlite.py"
+      },
+      {
+        "id": "app",
+        "label": "Memory service API models and routes",
+        "path": "agent_memory_service/app.py",
+        "symbol": "scope and actor request fields; service operations",
+        "url": "https://github.com/hellangleZ/Agent-MemoryForge/blob/a582a70394138acc4a19e642ed8c070faf1bfb2e/agent_memory_service/app.py"
+      },
+      {
+        "id": "gateway",
+        "label": "Product Gateway routes",
+        "path": "agent_runtime/product/gateway/core_routes.py",
+        "symbol": "authenticated write proxy, actor metadata, audit and tracing",
+        "url": "https://github.com/hellangleZ/Agent-MemoryForge/blob/a582a70394138acc4a19e642ed8c070faf1bfb2e/agent_runtime/product/gateway/core_routes.py"
+      },
+      {
+        "id": "distill",
+        "label": "Asynchronous distillation worker",
+        "path": "scripts/memory_distill_worker.py",
+        "symbol": "distilled memory writes and source metadata",
+        "url": "https://github.com/hellangleZ/Agent-MemoryForge/blob/a582a70394138acc4a19e642ed8c070faf1bfb2e/scripts/memory_distill_worker.py"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog entry and source attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 15 Agent-MemoryForge and catalog source revision",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The current public repository is owned by the GitHub account hellangleZ. The README presents Agent-MemoryForge as a memory service and official Python SDK/Gateway integration for customer-owned agents, with an optional reference framework and operator portal. This review covers the memory service and its interfaces at the verified revision.",
+        "sources": ["repo", "readme", "architecture"]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The documented product has five surfaces: Python SDK, reference agent framework, Memory Service, Product Gateway, and Portal UI. The service is the data plane. The current architecture document identifies Markdown files as canonical memory and SQLite FTS as the default derived search index; derived indexes can be rebuilt from the files. The product README also describes optional vector/graph indexing and Redis operational services, but these do not replace Markdown truth.",
+        "sources": ["architecture", "readme", "backend", "entries", "fts"]
+      },
+      {
+        "text": "The service partitions storage by tenant and workspace and stores tiered Markdown entries: actor-private short-term memory (stm), working memory (wm), and preferences, plus workspace-shared semantic facts and graph relations. Entry metadata includes identifiers, tier/scope, creation time, tenant/workspace, and caller metadata; the search API returns path and line citations into the canonical files.",
+        "sources": ["readme", "api", "backend", "entries"]
+      },
+      {
+        "text": "The current main head is a582a70394138acc4a19e642ed8c070faf1bfb2e on branch main. The repository page and branch history show this head; the commit patch resolves the full SHA. Reviewed at 2026-11-24 18:35:00 UTC (10:35:00 PST, America/Los_Angeles).",
+        "sources": ["repo", "history", "head"]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: POST /v1/memory/write accepts tenant/workspace, tier, scope, content, metadata, and target. The backend appends entries for append-style paths and atomically replaces files for overwrite-style state; it then best-effort updates the derived index. A failed index update is logged while the canonical file write remains successful. The Gateway API authenticates and routes writes, supplies the authenticated actor identity, and records write observability/audit data. The README describes conversation distillation as an asynchronous worker path outside the user-facing chat request.",
+        "sources": ["api", "backend", "gateway", "distill", "readme"]
+      },
+      {
+        "text": "Update/correction: the inspected API reference documents write/search/get/read and index rebuild operations but no general memory delete endpoint. Overwrite replaces a target file; preferences use normalized keys and an upsert path. A short-term state TTL can expire and remove working-memory state during read. The documentation also describes stewardship and temporal recall, including marking outdated items and querying historical state. These lifecycle paths do not establish complete erasure across all retained files and derived stores.",
+        "sources": ["api", "backend", "readme"]
+      },
+      {
+        "text": "Retrieval: POST /v1/memory/search searches the derived index, returns path/line citations, and limits top_k to 1–100. The service supports filters such as tier, memory kind, scope, and path prefix. It can merge lexical and vector results when vector search is configured. Direct read APIs cover state-like tiers; semantic facts are retrieved by search. Search indexing is best-effort after writes, and the docs describe a rebuild endpoint disabled by default.",
+        "sources": ["api", "backend", "fts", "architecture"]
+      },
+      {
+        "text": "Scope isolation: documentation assigns tenant and workspace checks to the Gateway and requires both IDs at the memory service. Private tiers are checked against actor identity on search hits and direct reads/writes; semantic and graph tiers are shared within the workspace. In the inspected service helper, a missing actor_role defaults to system, which is privileged. The Gateway is documented as forwarding authenticated identity; direct service callers therefore depend on the internal boundary and correctly supplied actor fields. Source review did not exercise these paths.",
+        "sources": ["architecture", "api", "backend", "app", "gateway"]
+      },
+      {
+        "text": "Provenance/evidence: canonical Markdown records can carry source metadata, and search returns path/line citations so an agent or user can inspect the stored text. The Gateway and worker attach metadata such as source, actor, and trace identifiers. Stewardship documentation describes evidence/confidence and verification workflows, but the reviewed search citations locate a record; they do not by themselves prove a generated claim is supported by that record.",
+        "sources": ["readme", "api", "entries", "backend", "gateway", "distill"]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "The source exposes keyword search, optional vector ranking, filters, and a bounded result count. No gold answer probes or abstention behavior were run.",
+        "sources": ["api", "backend", "fts", "metrics", "record"]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "The repository documents lifecycle, stewardship, and temporal recall features. No correction or stale-answer probes were run.",
+        "sources": ["readme", "architecture", "metrics", "fixture", "record"]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The inspected API reference has no general delete endpoint; TTL cleanup exists for working state. No post-delete or complete-erasure probes were run.",
+        "sources": ["api", "backend", "metrics", "record"]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "The reviewed service and Gateway source contain tenant/workspace and private actor checks. No cross-tenant, cross-workspace, or cross-actor probe was run.",
+        "sources": ["architecture", "api", "backend", "gateway", "metrics", "record"]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Path/line citations and source metadata are visible, but no retrieved answer claims were adjudicated for support or citation coverage.",
+        "sources": ["api", "entries", "backend", "metrics", "record"]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "The code exposes lexical search and optional vector merge; no latency distribution was measured.",
+        "sources": ["fts", "backend", "metrics", "record"]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No scheduled post-write probes were performed.",
+        "sources": ["metrics", "fixture", "record"]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "The product has usage accounting paths, but no benchmark workload token or cost totals were captured.",
+        "sources": ["readme", "architecture", "metrics", "record"]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Source code can report file counts/bytes and derived-index status, but no corpus-attributed storage measurement was collected.",
+        "sources": ["backend", "metrics", "fixture", "record"]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code",
+        "evidence": "SQLite FTS is the default lexical index; vector lookup may be configured. The backend has index-staleness checks/rebuild controls and logs index failures, while search observability records structured event fields. These are implementation observations, not latency or throughput measurements.",
+        "sources": ["backend", "fts", "gateway", "architecture"]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This was a bounded read-only review of the README, architecture/API documentation, and selected service/Gateway files at the verified SHA. The system, tests, and benchmarks were not run. Documentation and source shape do not prove runtime reliability, access-control correctness, answer quality, complete deletion, or performance.",
+        "sources": ["readme", "architecture", "api", "backend", "gateway"]
+      },
+      {
+        "text": "The current architecture document calls File-First the default and only supported backend, while the product README describes optional derived vector/graph indexes and Redis. Deployment configuration determines which optional components are active. This review did not inspect every configuration or trace each write/read path end to end.",
+        "sources": ["readme", "architecture", "backend"]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No Agent-MemoryForge execution, benchmark workload, or test suite was run. The project metric definitions, fixture, and baseline-status file are protocol/status references, not measurements for this system.",
+        "sources": ["metrics", "record", "fixture"]
+      }
+    ]
+  }
+}

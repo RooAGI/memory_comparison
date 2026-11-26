@@ -1,0 +1,322 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "agentic-graphrag-blueprint",
+    "name": "Agentic GraphRAG Blueprint",
+    "repository": "https://github.com/sebastianbrzustowicz/Agentic-GraphRAG-Blueprint",
+    "branch": "main",
+    "revision": "e33f5f690e3b22efbf4f89d5c273a575699dd6ec",
+    "reviewed_at": "2026-11-24T18:46:32Z",
+    "review_timezone": "UTC (checked 2026-11-24 10:46:32 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":"Se.Brzustowicz@gmail.com","source_url":"https://github.com/sebastianbrzustowicz/Agentic-GraphRAG-Blueprint/blob/e33f5f690e3b22efbf4f89d5c273a575699dd6ec/README.md","note":"Published in the official README."},
+    "summary": "A FastAPI and React reference implementation that ingests documents into a graph plus vector index and offers local graph-augmented and global community-report search. This source review reports implementation observations, not measured quality or performance.",
+    "atlas_locator": {
+      "ordinal": 19,
+      "name": "Agentic GraphRAG Blueprint",
+      "slug": "agentic-graphrag-blueprint",
+      "listed_repository": "https://github.com/sebastianbrzustowicz/Agentic-GraphRAG-Blueprint",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agentic-graphrag-blueprint.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": "Se.Brzustowicz@gmail.com",
+    "contact_email_source_url": "https://github.com/sebastianbrzustowicz/Agentic-GraphRAG-Blueprint/blob/e33f5f690e3b22efbf4f89d5c273a575699dd6ec/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/sebastianbrzustowicz/Agentic-GraphRAG-Blueprint/blob/e33f5f690e3b22efbf4f89d5c273a575699dd6ec/README.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Current canonical public GitHub repository",
+        "path": "repository",
+        "symbol": "public repository; default branch main",
+        "url": "https://github.com/sebastianbrzustowicz/Agentic-GraphRAG-Blueprint"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed current main head",
+        "path": "commit",
+        "symbol": "full SHA e33f5f690e3b22efbf4f89d5c273a575699dd6ec",
+        "url": "https://github.com/sebastianbrzustowicz/Agentic-GraphRAG-Blueprint/commit/e33f5f690e3b22efbf4f89d5c273a575699dd6ec"
+      },
+      {
+        "id": "readme",
+        "label": "Official project README",
+        "path": "README.md",
+        "url": "https://github.com/sebastianbrzustowicz/Agentic-GraphRAG-Blueprint/blob/e33f5f690e3b22efbf4f89d5c273a575699dd6ec/README.md"
+      },
+      {
+        "id": "contributing",
+        "label": "Official contributor guide",
+        "path": "CONTRIBUTING.md",
+        "url": "https://github.com/sebastianbrzustowicz/Agentic-GraphRAG-Blueprint/blob/e33f5f690e3b22efbf4f89d5c273a575699dd6ec/CONTRIBUTING.md"
+      },
+      {
+        "id": "app",
+        "label": "FastAPI API and process wiring",
+        "path": "backend/app.py",
+        "symbol": "upload, ingest, progress, stats, query",
+        "url": "https://github.com/sebastianbrzustowicz/Agentic-GraphRAG-Blueprint/blob/e33f5f690e3b22efbf4f89d5c273a575699dd6ec/backend/app.py"
+      },
+      {
+        "id": "config",
+        "label": "Runtime configuration",
+        "path": "backend/src/config.py",
+        "symbol": "Config",
+        "url": "https://github.com/sebastianbrzustowicz/Agentic-GraphRAG-Blueprint/blob/e33f5f690e3b22efbf4f89d5c273a575699dd6ec/backend/src/config.py"
+      },
+      {
+        "id": "ingestion",
+        "label": "Ingestion, extraction, incremental processing and reports",
+        "path": "backend/src/ingestion.py",
+        "symbol": "chunk_text, extract_graph, run_ingestion",
+        "url": "https://github.com/sebastianbrzustowicz/Agentic-GraphRAG-Blueprint/blob/e33f5f690e3b22efbf4f89d5c273a575699dd6ec/backend/src/ingestion.py"
+      },
+      {
+        "id": "progress",
+        "label": "Ingestion progress state",
+        "path": "backend/src/progress.py",
+        "symbol": "snapshot, result and error fields",
+        "url": "https://github.com/sebastianbrzustowicz/Agentic-GraphRAG-Blueprint/blob/e33f5f690e3b22efbf4f89d5c273a575699dd6ec/backend/src/progress.py"
+      },
+      {
+        "id": "search",
+        "label": "Local and global retrieval",
+        "path": "backend/src/search.py",
+        "symbol": "local_search, global_search",
+        "url": "https://github.com/sebastianbrzustowicz/Agentic-GraphRAG-Blueprint/blob/e33f5f690e3b22efbf4f89d5c273a575699dd6ec/backend/src/search.py"
+      },
+      {
+        "id": "base",
+        "label": "Abstract graph and vector store contracts",
+        "path": "backend/src/storage/base.py",
+        "url": "https://github.com/sebastianbrzustowicz/Agentic-GraphRAG-Blueprint/blob/e33f5f690e3b22efbf4f89d5c273a575699dd6ec/backend/src/storage/base.py"
+      },
+      {
+        "id": "graph",
+        "label": "NetworkX graph adapter",
+        "path": "backend/src/storage/graph_store.py",
+        "symbol": "NetworkXGraphStore",
+        "url": "https://github.com/sebastianbrzustowicz/Agentic-GraphRAG-Blueprint/blob/e33f5f690e3b22efbf4f89d5c273a575699dd6ec/backend/src/storage/graph_store.py"
+      },
+      {
+        "id": "vector",
+        "label": "Persistent Chroma vector adapter",
+        "path": "backend/src/storage/vector_store.py",
+        "symbol": "ChromaVectorStore",
+        "url": "https://github.com/sebastianbrzustowicz/Agentic-GraphRAG-Blueprint/blob/e33f5f690e3b22efbf4f89d5c273a575699dd6ec/backend/src/storage/vector_store.py"
+      },
+      {
+        "id": "prompts",
+        "label": "Default extraction and search prompts",
+        "path": "backend/prompts.json",
+        "url": "https://github.com/sebastianbrzustowicz/Agentic-GraphRAG-Blueprint/blob/e33f5f690e3b22efbf4f89d5c273a575699dd6ec/backend/prompts.json"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated locator and attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 19 and Atlas source revision",
+        "url": "../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository describes Agentic GraphRAG Blueprint as a Python + Terraform reference architecture for graph and vector retrieval, with a FastAPI backend and React frontend. Its README names Sebastian Brzustowicz as author and publishes a contact email.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The backend process creates one NetworkX directed multigraph and one persistent Chroma collection. Abstract graph and vector store interfaces permit alternate adapters; the current adapters persist graph snapshots as pickle and embeddings/documents in Chroma.",
+        "sources": [
+          "app",
+          "base",
+          "graph",
+          "vector"
+        ]
+      },
+      {
+        "text": "Ingestion chunks files, extracts entities and relations with an LLM, merges graph entities, computes Leiden communities, and creates community reports. Vector records are tagged as chunks, entities, or reports, while a JSON file-state record supports incremental processing.",
+        "sources": [
+          "ingestion",
+          "readme"
+        ]
+      },
+      {
+        "text": "Configuration exposes model endpoints and embedding model identity, file paths, chunk parameters, top-k limits, graph radius, batching, concurrency, and force reset.",
+        "sources": [
+          "config"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: the API stores uploaded files in the corpus directory and launches ingestion in a daemon thread. The ingestion code tracks file hashes and state, processes changed files, upserts generated vector records, and saves graph/state snapshots. Documentation describes incremental ingestion; this review did not measure its cost or correctness.",
+        "sources": [
+          "app",
+          "ingestion",
+          "readme"
+        ]
+      },
+      {
+        "text": "Update: changed documents are re-ingested through file/hash state, while report fingerprints determine which community reports are regenerated. A force-reset option exists. No general memory correction history or temporal validity API was found in inspected sources.",
+        "sources": [
+          "ingestion",
+          "config"
+        ]
+      },
+      {
+        "text": "Delete: the vector store supports ID deletion and ingestion removes stale community reports. No user-facing source-document delete API or complete removal workflow across graph, chunks, file state, and backups was established.",
+        "sources": [
+          "vector",
+          "ingestion",
+          "app"
+        ]
+      },
+      {
+        "text": "Retrieval: local mode combines vector entity and chunk matches with a graph neighborhood before LLM synthesis; global mode maps retrieved community reports and reduces summaries. Responses contain an answer and subgraph. Prompt instructions to abstain on insufficient context do not establish calibrated abstention.",
+        "sources": [
+          "search",
+          "prompts",
+          "app"
+        ]
+      },
+      {
+        "text": "Scope: the inspected process uses one global graph and vector collection, and query requests have no tenant or project scope field. The API module configures wildcard CORS and does not show backend authentication middleware; deployment-level isolation remains unverified.",
+        "sources": [
+          "app",
+          "search",
+          "readme"
+        ]
+      },
+      {
+        "text": "Evidence: local search includes source labels for retrieved chunks in the LLM prompt and returns a graph subgraph, but its response does not include claim-level source citations. Global report metadata retains an entity list; evidence support precision is unknown.",
+        "sources": [
+          "search",
+          "ingestion",
+          "app"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Source code and prompt text define retrieval paths and an instruction to report insufficient context; no adjudicated answerable or abstention cases were run.",
+        "sources": [
+          "search",
+          "prompts",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Incremental file updates are documented and visible in code, but no correction-specific contract or post-update probe results were established.",
+        "sources": [
+          "ingestion",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The vector adapter has ID deletion and ingestion removes stale reports, but there is no measured post-delete corpus probe or verified full source deletion path.",
+        "sources": [
+          "vector",
+          "ingestion",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "The reviewed API exposes one graph/vector store and no query scope identity; no cross-scope probes or deployment authorization review was run.",
+        "sources": [
+          "app",
+          "search",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source chunk labels enter local prompt context, but the response contract lacks claim-level citations and no claim adjudication was performed.",
+        "sources": [
+          "search",
+          "app",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency, write-to-recall delay, tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "Configuration and retry/concurrency code show source-visible controls, but no runtime operation, trace, token/cost accounting, or storage measurement was collected.",
+        "sources": [
+          "config",
+          "ingestion",
+          "vector",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review is a bounded read-only inspection at the pinned repository head. It does not establish production reliability, answer quality, entity-resolution quality, full deletion semantics, deployed isolation, or performance.",
+        "sources": [
+          "repo",
+          "app",
+          "ingestion",
+          "search"
+        ]
+      },
+      {
+        "text": "The curated Atlas entry was used for identity, listed repository locator, and attribution only. Atlas descriptions, marks, prose, and layout were excluded from assessment evidence.",
+        "sources": [
+          "roster",
+          "repo"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is not_run. The project metric definitions, fixture, and execution status record describe a separate protocol; no result is inferred from source structure or documentation.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

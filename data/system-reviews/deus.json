@@ -1,0 +1,362 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 188,
+    "slug": "deus",
+    "name": "Deus",
+    "repository": "https://github.com/sliamh11/Deus",
+    "listed_repository": "https://github.com/sliamh11/Deus",
+    "branch": "main",
+    "revision": "2f24c38a2ae42d3161492f0729975b286452f4b4",
+    "reviewed_at": "2026-11-25T10:56:34Z",
+    "review_timezone": "UTC (2026-11-25 02:56:34 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Deus is a self-hosted personal AI assistant with a layered memory stack: session and vault files, extracted facts indexed in SQLite, and a separate hierarchical memory-tree index used for semantic recall. Its source describes hybrid retrieval, graph-linked context, abstention, and container isolation. This is a source review at the verified main head; no Deus runtime, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 188,
+      "name": "Deus",
+      "slug": "deus",
+      "listed_repository": "https://github.com/sliamh11/Deus",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/deus.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/sliamh11/Deus/blob/2f24c38a2ae42d3161492f0729975b286452f4b4/README.md",
+      "checked_urls": [
+        "https://github.com/sliamh11/Deus/blob/2f24c38a2ae42d3161492f0729975b286452f4b4/README.md",
+        "https://github.com/sliamh11/Deus/blob/2f24c38a2ae42d3161492f0729975b286452f4b4/docs/SECURITY.md",
+        "https://github.com/sliamh11/Deus/blob/2f24c38a2ae42d3161492f0729975b286452f4b4/.github/SECURITY.md"
+      ],
+      "note": "The official pinned README and docs/SECURITY.md publish no contact email. The official .github/SECURITY.md path returned File not found. The security guidance directs reports through GitHub Security Advisories; no profile or commit metadata or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/sliamh11/Deus/blob/2f24c38a2ae42d3161492f0729975b286452f4b4/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/sliamh11/Deus/blob/2f24c38a2ae42d3161492f0729975b286452f4b4/README.md",
+      "https://github.com/sliamh11/Deus/blob/2f24c38a2ae42d3161492f0729975b286452f4b4/docs/SECURITY.md",
+      "https://github.com/sliamh11/Deus/blob/2f24c38a2ae42d3161492f0729975b286452f4b4/.github/SECURITY.md"
+    ],
+    "contact_email_note": "No contact email was found in the official pinned README or docs/SECURITY.md; the checked .github/SECURITY.md path is absent. Security reports are directed through GitHub Security Advisories. No profile/commit metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[187], ordinal 188: Deus, slug deus, explicit listed locator; pinned Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/deus.md",
+        "symbol": "Catalog attribution for name, slug and listed repository locator only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/deus.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Public sliamh11/Deus repository; page identifies main as default and shows current head prefix 2f24c38",
+        "url": "https://github.com/sliamh11/Deus"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Full current main head 2f24c38a2ae42d3161492f0729975b286452f4b4; feed updated 2026-09-05T10:05:30Z",
+        "url": "https://github.com/sliamh11/Deus/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Official reviewed head commit",
+        "path": "commit/2f24c38a2ae42d3161492f0729975b286452f4b4",
+        "symbol": "Official commit page for the full SHA verified as current main head",
+        "url": "https://github.com/sliamh11/Deus/commit/2f24c38a2ae42d3161492f0729975b286452f4b4"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Product purpose, integrations, high-level memory claims and published recall claim; checked for contact email",
+        "url": "https://github.com/sliamh11/Deus/blob/2f24c38a2ae42d3161492f0729975b286452f4b4/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Architecture documentation",
+        "path": "docs/ARCHITECTURE.md",
+        "symbol": "Host/container architecture, memory layers and flow, isolation, retrieval design, telemetry and stated benchmarks",
+        "url": "https://github.com/sliamh11/Deus/blob/2f24c38a2ae42d3161492f0729975b286452f4b4/docs/ARCHITECTURE.md"
+      },
+      {
+        "id": "atom_schema",
+        "label": "Solution atom schema",
+        "path": "docs/solution-atom-schema.md",
+        "symbol": "Markdown plus YAML atom schema, vault location, append-only solution semantics and discovery/injection paths",
+        "url": "https://github.com/sliamh11/Deus/blob/2f24c38a2ae42d3161492f0729975b286452f4b4/docs/solution-atom-schema.md"
+      },
+      {
+        "id": "tree_decision",
+        "label": "Memory-tree design decision",
+        "path": "docs/decisions/memory-tree.md",
+        "symbol": "Collapsed-flat retrieval, node/edge model, local embeddings, separate DB and soft-delete design",
+        "url": "https://github.com/sliamh11/Deus/blob/2f24c38a2ae42d3161492f0729975b286452f4b4/docs/decisions/memory-tree.md"
+      },
+      {
+        "id": "indexer",
+        "label": "Memory indexer implementation",
+        "path": "scripts/memory_indexer.py",
+        "symbol": "Vault resolution, indexing, atom extraction, query and maintenance command surface",
+        "url": "https://github.com/sliamh11/Deus/blob/2f24c38a2ae42d3161492f0729975b286452f4b4/scripts/memory_indexer.py"
+      },
+      {
+        "id": "tree_code",
+        "label": "Memory-tree implementation",
+        "path": "scripts/memory_tree.py",
+        "symbol": "SQLite vector/FTS retrieval configuration, thresholds, graph expansion, index maintenance and abstention",
+        "url": "https://github.com/sliamh11/Deus/blob/2f24c38a2ae42d3161492f0729975b286452f4b4/scripts/memory_tree.py"
+      },
+      {
+        "id": "query_code",
+        "label": "Reusable memory retrieval implementation",
+        "path": "scripts/memory_query.py",
+        "symbol": "Retrieval formatting, bounds, source path and score output, untrusted-memory wrapper, deduplication and JSONL logging",
+        "url": "https://github.com/sliamh11/Deus/blob/2f24c38a2ae42d3161492f0729975b286452f4b4/scripts/memory_query.py"
+      },
+      {
+        "id": "no_delete",
+        "label": "Database deletion policy",
+        "path": "docs/decisions/no-db-deletion.md",
+        "symbol": "Primary database rows are soft-deleted; rebuild/reindex marks stale rows, while derived indexes may be cleared",
+        "url": "https://github.com/sliamh11/Deus/blob/2f24c38a2ae42d3161492f0729975b286452f4b4/docs/decisions/no-db-deletion.md"
+      },
+      {
+        "id": "atom_pipeline",
+        "label": "Atom retrieval pipeline design",
+        "path": "docs/decisions/atom-retrieval-pipeline.md",
+        "symbol": "Approach-angle retrieval, vector candidate generation, cross-encoder reranking, BM25 rescue and upstream evaluation notes",
+        "url": "https://github.com/sliamh11/Deus/blob/2f24c38a2ae42d3161492f0729975b286452f4b4/docs/decisions/atom-retrieval-pipeline.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security documentation",
+        "path": "docs/SECURITY.md",
+        "symbol": "Describes container, mount, session and credential boundaries; private vulnerability-report route",
+        "url": "https://github.com/sliamh11/Deus/blob/2f24c38a2ae42d3161492f0729975b286452f4b4/docs/SECURITY.md"
+      },
+      {
+        "id": "security_absent",
+        "label": "Checked official security-policy path",
+        "path": ".github/SECURITY.md",
+        "symbol": "GitHub returned File not found at the reviewed SHA; checked only as an official project path for contact",
+        "url": "https://github.com/sliamh11/Deus/blob/2f24c38a2ae42d3161492f0729975b286452f4b4/.github/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Project definitions for retrieval, correction, deletion, isolation, evidence, latency, usage and storage measures",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned project workload; not run for this review",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Execution status distinguishes not-run from measured results",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents Deus as a local personal AI assistant that captures conversational facts, recalls them by meaning, carries context across sessions and integrates with chat channels and coding-agent CLIs. The README also reports 95% LongMemEval recall; this is an upstream claim, not a result reproduced in this review.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The official repository page identifies main as the default branch and showed head prefix 2f24c38. The official main Atom feed reports full head 2f24c38a2ae42d3161492f0729975b286452f4b4, updated 2026-09-05T10:05:30Z; the official commit page verifies that full revision. Review time: 2026-11-25 10:56:34 UTC (02:56:34 PST; America/Los_Angeles).",
+        "sources": [
+          "repo",
+          "feed",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Deus is documented as a single Node.js host process with channel MCP child processes and per-conversation-group agent containers. The host routes messages and controls mounts; containers receive provider API requests through a credential proxy rather than real credentials.",
+        "sources": [
+          "architecture",
+          "security"
+        ]
+      },
+      {
+        "text": "Memory has multiple surfaces rather than one store: vault/session Markdown, a SQLite memory index for extracted atoms and related search data, and a separate SQLite memory-tree database over vault nodes. The memory-tree design describes MEMORY_TREE.md as a compact navigation root; the tree is a human-readable map, while retrieval is flat over indexed nodes with one-hop see_also expansion.",
+        "sources": [
+          "architecture",
+          "indexer",
+          "tree_decision",
+          "tree_code"
+        ]
+      },
+      {
+        "text": "The documented atom model includes confidence, temporal/versioning and domain tagging; extracted entities and relations form a semantic graph. Solution notes are UTF-8 Markdown with YAML frontmatter and structured bodies, stored in the vault's solutions directory.",
+        "sources": [
+          "architecture",
+          "atom_schema"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Capture and writes are exposed through session/vault workflows and memory_indexer commands such as add, extract and add-dir. The indexer resolves the vault from DEUS_VAULT_PATH, instance-local .deus/config.json, then global config; memory extraction and indexing make Markdown files and SQLite search structures complementary representations.",
+        "sources": [
+          "readme",
+          "indexer",
+          "atom_schema"
+        ]
+      },
+      {
+        "text": "For solution notes, the documented schema includes a UUID, type, title, tags, problem type and optional module/severity/update fields. The solution schema says these files are append-only and exposes list/search/add; the general memory indexer can index a solution file when explicitly given its path, while the documentation says rebuild does not automatically walk the solutions directory.",
+        "sources": [
+          "atom_schema"
+        ]
+      },
+      {
+        "text": "The database policy says primary rows are not hard-deleted: rebuild and reindex mark rows orphaned or expired and retain them for audit. Rebuild backs up the database first. Derived tables such as vector and FTS indexes may be cleared or have per-row deletes; vault-file operations follow separate git-versioned rules. The inspected documentation does not establish a single correction or erasure contract across every memory type.",
+        "sources": [
+          "no_delete",
+          "atom_schema"
+        ]
+      },
+      {
+        "text": "The atom retrieval design describes vector candidate generation with approach-angle queries, a cross-encoder reranker, BM25 rescue, and graph-sibling/entity-overlap signals. Its reported results belong to upstream experiments. Separately, memory-tree retrieval uses FTS5 BM25 plus vector cosine fused with reciprocal-rank fusion, expands one graph hop, and applies calibrated low-score/gap abstention; memory_query formats retrieved node files and can impose a context character cap.",
+        "sources": [
+          "atom_pipeline",
+          "tree_decision",
+          "tree_code",
+          "query_code"
+        ]
+      },
+      {
+        "text": "The reusable retrieval wrapper labels recalled text as untrusted reference data, uses per-request sentinels, returns paths and scores, supports deduplication of already shown blocks, and appends retrieval details to a JSONL log. The memory-tree code also has query, graph, check, reindex and calibration surfaces; these are implementation/inspection paths, not evidence of operational monitoring in a deployment.",
+        "sources": [
+          "query_code",
+          "tree_code"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable recall and abstention — unmeasured here. Hybrid retrieval and abstention mechanisms are described; no workload or adjudication was run.",
+        "sources": [
+          "tree_code",
+          "atom_pipeline",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured. Expiry, conflict and reindex lifecycle behavior is source-visible, but no correction probes were run.",
+        "sources": [
+          "no_delete",
+          "indexer",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Deletion leakage — unmeasured. Database soft deletion is documented; no post-delete query, storage, WAL, backup or downstream-copy inspection was run.",
+        "sources": [
+          "no_delete",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Scope isolation — unmeasured. The host documents per-group containers and scoped mounts; no cross-group or cross-vault adversarial workload was run.",
+        "sources": [
+          "architecture",
+          "security",
+          "indexer",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Evidence support precision and citation coverage — unmeasured. Source paths, scores and atom metadata are available in parts of the system, but no generated claims were adjudicated against source evidence.",
+        "sources": [
+          "atom_schema",
+          "query_code",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Latency, write-to-recall delay, token use, cost and storage efficiency — unmeasured by this review. No timing, usage, charge, or storage observations were collected.",
+        "sources": [
+          "architecture",
+          "query_code",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected the official README, architecture and security documentation, the solution-atom schema, memory-tree decision/code, indexer and retrieval wrapper, database deletion policy, and atom retrieval design. It did not inspect every extractor, migration, hook, channel, memory type, storage adapter, deployment setting or failure path.",
+        "sources": [
+          "readme",
+          "architecture",
+          "atom_schema",
+          "tree_code",
+          "indexer",
+          "no_delete"
+        ]
+      },
+      {
+        "text": "The source shows several separate memory paths with different lifecycles. It does not establish that all entry points apply identical access checks, provenance fields, deletion behavior, or filtering. The deployment's actual vault paths, group/session propagation, enabled embedding provider and tree parameters remain unknown.",
+        "sources": [
+          "architecture",
+          "indexer",
+          "tree_code",
+          "security"
+        ]
+      },
+      {
+        "text": "Source and documentation do not establish measured retrieval quality, correction quality, complete erasure from files, database sidecars, backups or remote copies, deployed isolation, reliability, latency, cost or storage efficiency. The README and design documents contain upstream-reported evaluations; they were not reproduced here.",
+        "sources": [
+          "readme",
+          "architecture",
+          "no_delete",
+          "atom_pipeline",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Deus runtime, tests, or benchmark workload was run. Upstream-reported benchmark figures are not measurements from this review.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

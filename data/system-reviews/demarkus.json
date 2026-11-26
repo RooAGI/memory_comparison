@@ -1,0 +1,509 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 186,
+    "slug": "demarkus",
+    "name": "Demarkus",
+    "repository": "https://github.com/latebit-io/demarkus",
+    "listed_repository": "https://github.com/latebit-io/demarkus",
+    "branch": "main",
+    "revision": "4bb6352f32f89e79c1ed24703e11723ba4f79b4e",
+    "reviewed_at": "2026-11-25T10:55:54Z",
+    "review_timezone": "UTC (2026-11-25 02:55:54 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Demarkus is a versioned Markdown memory and shared-knowledge system built on the Mark Protocol. The reviewed source shows immutable document versions, a hash chain, metadata and section lookup, graph links, and optional hosted worlds. This is a source review only; no runtime, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 186,
+      "name": "Demarkus",
+      "slug": "demarkus",
+      "listed_repository": "https://github.com/latebit-io/demarkus",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/demarkus.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": null,
+      "checked_urls": [
+        "https://github.com/latebit-io/demarkus/blob/4bb6352f32f89e79c1ed24703e11723ba4f79b4e/README.md",
+        "https://www.demarkus.io/"
+      ],
+      "note": "No contact email was published in the official pinned README or official homepage checked. No commit/profile metadata or third-party directories were used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/latebit-io/demarkus/blob/4bb6352f32f89e79c1ed24703e11723ba4f79b4e/README.md",
+      "https://www.demarkus.io/"
+    ],
+    "contact_email_note": "No published contact email found in the official pinned README or homepage.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[185], ordinal 186: Demarkus, slug demarkus, explicit listed repository locator, pinned Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/demarkus.md",
+        "symbol": "Pinned catalog locator and identity attribution; not used as assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/demarkus.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Public canonical latebit-io/demarkus repository; GitHub identifies main as default branch",
+        "url": "https://github.com/latebit-io/demarkus"
+      },
+      {
+        "id": "feed",
+        "label": "Official main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Current main head 4bb6352f32f89e79c1ed24703e11723ba4f79b4e, feed updated 2026-11-24T20:30:48Z",
+        "url": "https://github.com/latebit-io/demarkus/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream head",
+        "path": "commit",
+        "symbol": "4bb6352f32f89e79c1ed24703e11723ba4f79b4e",
+        "url": "https://github.com/latebit-io/demarkus/commit/4bb6352f32f89e79c1ed24703e11723ba4f79b4e"
+      },
+      {
+        "id": "readme",
+        "label": "Official README at reviewed head",
+        "path": "README.md",
+        "symbol": "Purpose, beta/pre-1.0 status, Mark Protocol, memory/knowledge products, versioning and operating model",
+        "url": "https://github.com/latebit-io/demarkus/blob/4bb6352f32f89e79c1ed24703e11723ba4f79b4e/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Architecture documentation",
+        "path": "docs/site/architecture/index.md",
+        "symbol": "Protocol/server/client/knowledge/plugins modules and layering",
+        "url": "https://github.com/latebit-io/demarkus/blob/4bb6352f32f89e79c1ed24703e11723ba4f79b4e/docs/site/architecture/index.md"
+      },
+      {
+        "id": "memory",
+        "label": "Official memory documentation",
+        "path": "docs/site/memory/index.md",
+        "symbol": "Memory workflow, project identity, recall, gates, archive and export limits",
+        "url": "https://github.com/latebit-io/demarkus/blob/4bb6352f32f89e79c1ed24703e11723ba4f79b4e/docs/site/memory/index.md"
+      },
+      {
+        "id": "knowledge",
+        "label": "Official knowledge documentation",
+        "path": "docs/site/knowledge/index.md",
+        "symbol": "Promotion review gate, policy enforcement, worlds and hosted-memory model",
+        "url": "https://github.com/latebit-io/demarkus/blob/4bb6352f32f89e79c1ed24703e11723ba4f79b4e/docs/site/knowledge/index.md"
+      },
+      {
+        "id": "graph",
+        "label": "Official graph documentation",
+        "path": "docs/site/graph/index.md",
+        "symbol": "Markdown links, typed relations, lookup/explore/backlink graph tools",
+        "url": "https://github.com/latebit-io/demarkus/blob/4bb6352f32f89e79c1ed24703e11723ba4f79b4e/docs/site/graph/index.md"
+      },
+      {
+        "id": "model",
+        "label": "Document/version model",
+        "path": "protocol/storefmt/model.go",
+        "symbol": "Document, version, metadata, archive, ETag, prune and write request fields",
+        "url": "https://github.com/latebit-io/demarkus/blob/4bb6352f32f89e79c1ed24703e11723ba4f79b4e/protocol/storefmt/model.go"
+      },
+      {
+        "id": "metadata",
+        "label": "Metadata and identity rules",
+        "path": "protocol/storefmt/meta.go",
+        "symbol": "Reserved server fields, publisher metadata, append merge and destructive retention behavior",
+        "url": "https://github.com/latebit-io/demarkus/blob/4bb6352f32f89e79c1ed24703e11723ba4f79b4e/protocol/storefmt/meta.go"
+      },
+      {
+        "id": "write",
+        "label": "Filesystem versioned writes",
+        "path": "server/store/write.go",
+        "symbol": "Immutable version creation, current pointer, conflict checks and retention pruning",
+        "url": "https://github.com/latebit-io/demarkus/blob/4bb6352f32f89e79c1ed24703e11723ba4f79b4e/server/store/write.go"
+      },
+      {
+        "id": "read",
+        "label": "Filesystem reads and versions",
+        "path": "server/store/read.go",
+        "symbol": "Current or version-pinned reads and version history",
+        "url": "https://github.com/latebit-io/demarkus/blob/4bb6352f32f89e79c1ed24703e11723ba4f79b4e/server/store/read.go"
+      },
+      {
+        "id": "archive",
+        "label": "Archive lifecycle",
+        "path": "server/store/archive.go",
+        "symbol": "Archive state changes while retaining version history",
+        "url": "https://github.com/latebit-io/demarkus/blob/4bb6352f32f89e79c1ed24703e11723ba4f79b4e/server/store/archive.go"
+      },
+      {
+        "id": "filestore",
+        "label": "Filesystem store adapter",
+        "path": "server/internal/filestore/filestore.go",
+        "symbol": "Store/catalog coordination, locking, current-state views and change journal",
+        "url": "https://github.com/latebit-io/demarkus/blob/4bb6352f32f89e79c1ed24703e11723ba4f79b4e/server/internal/filestore/filestore.go"
+      },
+      {
+        "id": "catalog",
+        "label": "Lookup catalog and section index",
+        "path": "server/internal/catalog/catalog.go",
+        "symbol": "Derived metadata index, lookup modes, scope, result rows and bounded snippet size",
+        "url": "https://github.com/latebit-io/demarkus/blob/4bb6352f32f89e79c1ed24703e11723ba4f79b4e/server/internal/catalog/catalog.go"
+      },
+      {
+        "id": "body",
+        "label": "Body-mode lookup ranking",
+        "path": "server/internal/catalog/bodymatch.go",
+        "symbol": "BM25 section matching, importance prior and bounded results",
+        "url": "https://github.com/latebit-io/demarkus/blob/4bb6352f32f89e79c1ed24703e11723ba4f79b4e/server/internal/catalog/bodymatch.go"
+      },
+      {
+        "id": "handler",
+        "label": "Protocol write handling",
+        "path": "server/internal/handler/write.go",
+        "symbol": "PUBLISH/APPEND/ARCHIVE dispatch, authorization and write outcome audit fields",
+        "url": "https://github.com/latebit-io/demarkus/blob/4bb6352f32f89e79c1ed24703e11723ba4f79b4e/server/internal/handler/write.go"
+      },
+      {
+        "id": "identity",
+        "label": "Server-stamped user provenance",
+        "path": "server/internal/handler/meta.go",
+        "symbol": "Grant-derived user attribution and default document metadata",
+        "url": "https://github.com/latebit-io/demarkus/blob/4bb6352f32f89e79c1ed24703e11723ba4f79b4e/server/internal/handler/meta.go"
+      },
+      {
+        "id": "auth",
+        "label": "Capability authorization",
+        "path": "server/internal/auth/auth.go",
+        "symbol": "Hashed tokens, path/operation grants and implementation TODOs",
+        "url": "https://github.com/latebit-io/demarkus/blob/4bb6352f32f89e79c1ed24703e11723ba4f79b4e/server/internal/auth/auth.go"
+      },
+      {
+        "id": "provenance",
+        "label": "Based-on provenance pins",
+        "path": "protocol/provenance/provenance.go",
+        "symbol": "Parsing and resolving rel-based-on source references",
+        "url": "https://github.com/latebit-io/demarkus/blob/4bb6352f32f89e79c1ed24703e11723ba4f79b4e/protocol/provenance/provenance.go"
+      },
+      {
+        "id": "tenant",
+        "label": "Hosted memory tenant gate",
+        "path": "knowledge/internal/broker/gateway/mcp_tenant.go",
+        "symbol": "Verified identity to one tenant world and fail-closed checks for tool URLs",
+        "url": "https://github.com/latebit-io/demarkus/blob/4bb6352f32f89e79c1ed24703e11723ba4f79b4e/knowledge/internal/broker/gateway/mcp_tenant.go"
+      },
+      {
+        "id": "gateway",
+        "label": "MCP write tools",
+        "path": "knowledge/internal/broker/gateway/mcp_tools_write.go",
+        "symbol": "MCP publish/append/archive tools and write grant dispatch",
+        "url": "https://github.com/latebit-io/demarkus/blob/4bb6352f32f89e79c1ed24703e11723ba4f79b4e/knowledge/internal/broker/gateway/mcp_tools_write.go"
+      },
+      {
+        "id": "observability",
+        "label": "Official observability documentation",
+        "path": "docs/deployment/observability.md",
+        "symbol": "Structured audit logs, write duration, broker scope fields, and no embedded metrics/tracing client",
+        "url": "https://github.com/latebit-io/demarkus/blob/4bb6352f32f89e79c1ed24703e11723ba4f79b4e/docs/deployment/observability.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned workload definition only; no Demarkus run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "No measured Demarkus result is claimed by this source review",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "website",
+        "label": "Official Demarkus website checked for contact",
+        "path": "https://www.demarkus.io/",
+        "symbol": "Official homepage checked for a published contact email; none shown",
+        "url": "https://www.demarkus.io/"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The catalog lists the explicit locator https://github.com/latebit-io/demarkus at ordinal 186. The pinned Atlas record is retained only for roster identity and locator attribution, not as assessment evidence. The upstream README describes Demarkus as persistent memory for AI agents and shared team knowledge; it does not establish an individual maintainer identity for this review.",
+        "sources": [
+          "catalog",
+          "atlas",
+          "readme"
+        ]
+      },
+      {
+        "text": "GitHub identifies the listed public repository as canonical and main as its default branch; the official main feed and commit page identify the reviewed full head SHA.",
+        "sources": [
+          "repo",
+          "feed",
+          "head"
+        ]
+      },
+      {
+        "text": "The current README marks the project beta and pre-1.0, with components and features in active flux. It presents personal memory, shared knowledge, and a graph over Markdown documents, implemented across protocol, server, client, knowledge, tools, plugins, and deployment modules.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The Mark Protocol carries Markdown documents over QUIC. The architecture separates protocol parsing, transport, storage, and clients. The repository also contains a knowledge service with OIDC/MCP gateways and per-world stores, plus agent plugins and supporting tools.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      },
+      {
+        "text": "A stored Document exposes Markdown body, modification time, version number, archived state, publisher metadata, ETag, and optional pruning outcome. The filesystem store writes immutable per-document version files and moves a current pointer; publisher metadata and version/hash-chain fields are serialized with the stored document.",
+        "sources": [
+          "model",
+          "write",
+          "metadata"
+        ]
+      },
+      {
+        "text": "Lookup maintains a derived in-memory catalog of path, tags, title, importance, and modification time plus an index of Markdown sections. The graph is represented by Markdown links and typed rel-* metadata; the graph itself is available to the clients and knowledge service.",
+        "sources": [
+          "catalog",
+          "body",
+          "graph"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: PUBLISH validates and creates a new immutable version; APPEND joins text to the current body and carries metadata forward with the new request values taking precedence. The handler applies authorization and write policy before committing. A content-identical write can be a no-op; expected-version checks support optimistic concurrency.",
+        "sources": [
+          "write",
+          "metadata",
+          "handler",
+          "gateway",
+          "model"
+        ]
+      },
+      {
+        "text": "Update/correction: the protocol does not overwrite old versions; a corrected publication becomes a new version. VERSIONS and version-pinned FETCH expose retained history and the store can verify the previous-hash chain. The writer can also receive a committed-but-not-synced result, so a reported durability error does not always mean the write failed to become current.",
+        "sources": [
+          "write",
+          "read",
+          "model"
+        ]
+      },
+      {
+        "text": "Delete/archive: ARCHIVE marks a document unavailable to ordinary current reads while keeping its history. A later publish can restore it. Separately, a write carrying positive retention metadata physically prunes older version files beyond the retained suffix; that destructive metadata can be set by a writer with publish access and the server logs prune outcomes. Archive is therefore reversible hiding; retention is the destructive history-removal path inspected here.",
+        "sources": [
+          "archive",
+          "metadata",
+          "write",
+          "observability"
+        ]
+      },
+      {
+        "text": "Retrieval: mark_fetch returns documents and can target sections; mark_lookup supports metadata/tag and title lookup, body-section matching, or near-duplicate comparison. Body mode uses BM25-style section scoring scaled by importance and returns bounded snippets. A budget can add related documents, while explore/backlinks/graph tools follow document edges.",
+        "sources": [
+          "memory",
+          "catalog",
+          "body",
+          "graph"
+        ]
+      },
+      {
+        "text": "Scope isolation: local agent integrations share a machine-level ~/.demarkus store, while project resolution maps repository/worktree context to project subpaths. Protocol capability tokens grant operations on path globs; paths not covered by any read token are readable without a token. The hosted memory broker instead resolves a verified identity to one world and denies tool URLs naming a different world; these mechanisms have distinct boundaries.",
+        "sources": [
+          "memory",
+          "auth",
+          "tenant",
+          "readme"
+        ]
+      },
+      {
+        "text": "Provenance/evidence: each immutable version is linked to its predecessor by a content hash, and `mark_versions` can expose chain validity. Documents can carry `rel-based-on` references; the server stamps the verified user for identity-bearing grants, and writes retain agent/user metadata and an audit record. A traceable stored source does not prove that each generated answer claim is supported by it.",
+        "sources": [
+          "readme",
+          "metadata",
+          "identity",
+          "provenance",
+          "observability"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: lookup uses derived indexes rather than rereading all bodies at query time; section retrieval and snippets are bounded. Server logs include request events, write/archive audit events, size and duration, conflicts, and chain failures. The deployment guide says no embedded metrics endpoint or tracing client is included; operators derive metrics from logs. No performance or cost results were collected.",
+        "sources": [
+          "catalog",
+          "body",
+          "filestore",
+          "observability"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "Catalog, body, and near-duplicate retrieval paths were inspected, but no adjudicated answerability or abstention workload was run.",
+        "sources": [
+          "catalog",
+          "body",
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Immutable versioning and expected-version conflict checks are visible; no correction or stale-value probes were run.",
+        "sources": [
+          "write",
+          "read",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Archive hiding and retention pruning were inspected, but no deletion probes were run against history, indexes, backups, or hosted copies.",
+        "sources": [
+          "archive",
+          "write",
+          "metadata",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Scope isolation leak rate",
+        "status": "unmeasured",
+        "evidence": "Path-capability authorization and hosted identity-to-world gates were inspected; no cross-path or cross-tenant workload was run.",
+        "sources": [
+          "auth",
+          "tenant",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Hash-chain, author metadata, and based-on references provide provenance hooks; generated answers were not scored for evidence support or citation correctness.",
+        "sources": [
+          "identity",
+          "provenance",
+          "readme",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "The source and log schema expose retrieval/write operations, but no latency distribution was collected.",
+        "sources": [
+          "catalog",
+          "observability",
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timed write-then-recall workload was run.",
+        "sources": [
+          "write",
+          "fixture",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No model usage or monetary cost accounting was performed.",
+        "sources": [
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The filesystem and hosted store layouts were inspected, but no corpus-size or per-item storage measurements were taken.",
+        "sources": [
+          "write",
+          "filestore",
+          "knowledge",
+          "metrics"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The source review covered the official README, architecture and memory/knowledge/graph documentation, version model and filesystem read/write/archive paths, metadata lookup, capability authorization, hosted tenant checks, and log schema. It did not trace every plugin, protocol verb, deployment backend, or broker path end to end.",
+        "sources": [
+          "readme",
+          "architecture",
+          "memory",
+          "knowledge",
+          "graph",
+          "write",
+          "auth",
+          "tenant",
+          "observability"
+        ]
+      },
+      {
+        "text": "The README's beta/pre-1.0 warning means interfaces and components may change. Local deployments without read-auth rules expose uncovered paths; hosted memory documentation says there is no self-service export yet. The inspected auth code also lists replay-window validation, per-document ACLs, and public-server rate limiting as TODOs; these comments do not alone establish the full security posture.",
+        "sources": [
+          "readme",
+          "auth",
+          "memory",
+          "knowledge"
+        ]
+      },
+      {
+        "text": "Source structure and project documentation cannot establish retrieval quality, correction quality, complete erasure across backups or copies, hostile-caller isolation, reliability, latency, token use, or storage efficiency. No Demarkus runtime, tests, or benchmarks were run; all project metric domains are unmeasured here.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "text": "The official pinned README and official homepage were checked for a contact email; neither publishes one.",
+        "sources": [
+          "readme",
+          "website"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Demarkus runtime, tests, or benchmarks were run. Source observations and upstream documentation are not benchmark results."
+    },
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "No measurements were produced for this source review; documentation and code observations are not benchmark results."
+    }
+  }
+}

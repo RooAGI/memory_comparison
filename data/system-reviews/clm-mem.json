@@ -1,0 +1,314 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 130,
+    "slug": "clm-mem",
+    "name": "clm-mem",
+    "repository": "https://github.com/GentianLine/clm-mem",
+    "branch": "main",
+    "revision": "ef9c21917137208441857eecfebc59eb6b70a17c",
+    "reviewed_at": "2026-11-25T08:20:31Z",
+    "review_timezone": "UTC (2026-11-25 00:20:31 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/GentianLine/clm-mem/blob/ef9c21917137208441857eecfebc59eb6b70a17c/README.md",
+      "checked_urls": [
+        "https://github.com/GentianLine/clm-mem/blob/ef9c21917137208441857eecfebc59eb6b70a17c/README.md"
+      ],
+      "note": "No contact email was found in the official pinned README. No commit/profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/GentianLine/clm-mem/blob/ef9c21917137208441857eecfebc59eb6b70a17c/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/GentianLine/clm-mem/blob/ef9c21917137208441857eecfebc59eb6b70a17c/README.md"
+    ],
+    "contact_email_note": "No contact email was found in the official pinned README. No commit/profile metadata, third-party directory, or inferred address was used.",
+    "summary": "clm-mem is a Python memory harness and optional server for OpenAI-compatible chat backends. It classifies conversation blocks as long-term, short-term, or transient and applies deterministic token-budget eviction, archiving long-term overflow for later recall. This is a source review only; no runtime or benchmark results were collected.",
+    "atlas_locator": {
+      "ordinal": 130,
+      "name": "clm-mem",
+      "slug": "clm-mem",
+      "listed_repository": "https://github.com/GentianLine/clm-mem",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/clm-mem.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official GitHub repository page",
+        "path": "repository",
+        "symbol": "public repository and default branch main",
+        "url": "https://github.com/GentianLine/clm-mem"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "full current head ef9c21917137208441857eecfebc59eb6b70a17c; updated 2026-11-24T22:22:16Z",
+        "url": "https://github.com/GentianLine/clm-mem/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed full commit",
+        "path": "commit",
+        "symbol": "ef9c21917137208441857eecfebc59eb6b70a17c",
+        "url": "https://github.com/GentianLine/clm-mem/commit/ef9c21917137208441857eecfebc59eb6b70a17c"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "architecture, lifecycle, APIs, security defaults, limitations, and current roadmap/status",
+        "url": "https://github.com/GentianLine/clm-mem/blob/ef9c21917137208441857eecfebc59eb6b70a17c/README.md"
+      },
+      {
+        "id": "blocks",
+        "label": "Memory Block model",
+        "path": "shatterling/engine/blocks.py",
+        "symbol": "Block fields and memory tags",
+        "url": "https://github.com/GentianLine/clm-mem/blob/ef9c21917137208441857eecfebc59eb6b70a17c/shatterling/engine/blocks.py"
+      },
+      {
+        "id": "harness",
+        "label": "Memory harness implementation",
+        "path": "shatterling/engine/harness.py",
+        "symbol": "turn lifecycle, live block operations, eviction, archive, recall, mirror, and events",
+        "url": "https://github.com/GentianLine/clm-mem/blob/ef9c21917137208441857eecfebc59eb6b70a17c/shatterling/engine/harness.py"
+      },
+      {
+        "id": "tagging",
+        "label": "Memory tagging implementation",
+        "path": "shatterling/engine/tagging.py",
+        "symbol": "inline memory markers and classifier prompts",
+        "url": "https://github.com/GentianLine/clm-mem/blob/ef9c21917137208441857eecfebc59eb6b70a17c/shatterling/engine/tagging.py"
+      },
+      {
+        "id": "server",
+        "label": "Serve/session implementation",
+        "path": "shatterling/purslane/server.py",
+        "symbol": "workspace and session isolation, REST endpoints and deletion",
+        "url": "https://github.com/GentianLine/clm-mem/blob/ef9c21917137208441857eecfebc59eb6b70a17c/shatterling/purslane/server.py"
+      },
+      {
+        "id": "metrics_source",
+        "label": "Timing recorder module",
+        "path": "shatterling/purslane/metrics.py",
+        "symbol": "timing and session metrics module; README states this milestone is a stub and not wired",
+        "url": "https://github.com/GentianLine/clm-mem/blob/ef9c21917137208441857eecfebc59eb6b70a17c/shatterling/purslane/metrics.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "comparison metric domains; no clm-mem run",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Shared benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "project execution record; no clm-mem run",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned workload only; not run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution",
+        "path": "content/systems/clm-mem.md",
+        "symbol": "ordinal 130 identity, slug, and listed repository locator attribution only",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/clm-mem.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes clm-mem as a zero-training memory harness for open chat models, usable as a Python library or through a proxy/server, CLI, web studio, REST, and MCP interfaces. The repository says the Python package was renamed to shatterling while clm-mem remains a deprecated CLI alias in the reviewed README.",
+        "sources": [
+          "readme",
+          "server"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The memory unit is an in-process Block containing an integer ID, role, content, tag (longterm, shortterm, or transient), turn, chat slot, pinned flag, importance, and access/freshness counters. The README says the live context is mirrored to human-readable context.md and machine-readable context.jsonl, while evicted long-term blocks are appended to archive.jsonl.",
+        "sources": [
+          "blocks",
+          "harness",
+          "readme"
+        ]
+      },
+      {
+        "text": "The engine wraps a chat backend. The README describes inline <longterm>/<shortterm> markers, split into separately tagged blocks and removed from visible text, followed by an optional/default post-turn classifier call to label untagged blocks as longterm, shortterm, or transient. The harness source describes appending input, evicting before generation, generating, classifying, evicting again, and mirroring the resulting window.",
+        "sources": [
+          "readme",
+          "tagging",
+          "harness"
+        ]
+      },
+      {
+        "text": "The serve implementation treats a session as a branch with its own harness and sandbox; workspace names use a ws:<name> form. The README documents per-workspace context and archive files. Chats within a workspace are transcript slots that share that workspace's memory, so chat-slot partitioning is not separate memory isolation.",
+        "sources": [
+          "server",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Writes occur when a user or model message is added to the live window; the model can classify content while generating, and a second model decision call can classify remaining untagged blocks. A direct remember operation seeds a long-term block and mirrors files. The classifier's judgment is model-dependent, not a verified fact extraction process.",
+        "sources": [
+          "harness",
+          "tagging",
+          "readme"
+        ]
+      },
+      {
+        "text": "When the context exceeds its token budget, the README describes three phases: delete transient blocks except recent-turn/pinned blocks; FIFO-evict older short-term blocks in rounds; then offload oldest long-term blocks to archive.jsonl while leaving a pointer stub. Archive recall is documented as case-insensitive substring search, and reinject copies an archived block back into live context as short-term.",
+        "sources": [
+          "readme",
+          "harness"
+        ]
+      },
+      {
+        "text": "The README documents explicit session open and turn routes, workspace create/delete endpoints, archive search and reinjection, and session reset/delete operations. It describes long-term overflow as archived rather than destroyed, but short-term/transient eviction is deletion from the live window. I did not inspect every filesystem cleanup path or verify residual copies.",
+        "sources": [
+          "readme",
+          "server",
+          "harness"
+        ]
+      },
+      {
+        "text": "Workspace branches own separate harnesses and files, while chats inside one workspace share the memory window. The server code defines validation patterns for session and workspace IDs and exposes per-workspace REST operations. This code-level partitioning does not establish an independently tested authorization boundary or tenant isolation.",
+        "sources": [
+          "server",
+          "readme"
+        ]
+      },
+      {
+        "text": "The Block fields inspected contain classification and access metadata, but no source-document citation or claim-origin field. The harness emits sequenced event records for classifier and eviction activity; these aid operational visibility but do not establish evidence provenance for remembered assertions.",
+        "sources": [
+          "blocks",
+          "harness"
+        ]
+      },
+      {
+        "text": "The README exposes token counts, block counts, eviction events, snapshots, and a /metrics-compatible backend route. It also says the timing recorder/session metrics module is a stub not wired to the server. The README lists true incremental streaming as not started; the /turns SSE response is described as replay after generation. No performance or resource measurements were made.",
+        "sources": [
+          "readme",
+          "server",
+          "metrics_source"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "Archive lookup and reinjection mechanisms are visible/documented; no answerability or abstention benchmark was run.",
+        "sources": [
+          "readme",
+          "harness"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and staleness",
+        "status": "unmeasured",
+        "evidence": "The README lists optional supersession and decay controls, but no correction/staleness probes or current-value adjudication were run.",
+        "sources": [
+          "readme",
+          "harness"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Session/workspace deletion and eviction behavior are documented. No post-deletion retrieval or residual-copy audit was run.",
+        "sources": [
+          "readme",
+          "server"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Workspace branch partitioning and session ID validation appear in source. No cross-workspace isolation or authorization probes were run.",
+        "sources": [
+          "server",
+          "readme"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "The inspected Block model has no claim-source citation field. No evidence-support or citation-coverage adjudication was run.",
+        "sources": [
+          "blocks",
+          "harness"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timing measurements were collected; the README states timing instrumentation is not wired and streaming is post-hoc replay.",
+        "sources": [
+          "metrics_source",
+          "readme"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "Token-budget accounting is part of the harness design, but token consumption and provider charges were not measured.",
+        "sources": [
+          "readme",
+          "harness"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The README names context and archive files; no corpus-attributable storage measurement was collected.",
+        "sources": [
+          "readme",
+          "harness"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The README identifies tag quality as dependent on the base model's zero-shot judgment; smaller models may omit inline markers, with a post-turn router pass described as a backstop. Long-term overflow leaves pointer stubs in the live context, so the README notes a need for token-budget headroom in pathological cases.",
+        "sources": [
+          "readme",
+          "tagging"
+        ]
+      },
+      {
+        "text": "This review is tied to the pinned GitHub main head and selected source/documentation. It did not run the software, tests, or benchmarks; inspect all mutation/security paths; establish live deployment behavior; or measure retrieval quality, isolation, latency, token use, cost, or storage. The README's embedded status line references an older short SHA than the current head verified from the official main commit feed.",
+        "sources": [
+          "readme",
+          "feed",
+          "head"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No clm-mem runtime, tests, or benchmark workload was executed. Project metric definitions are in METRICS.md and the shared execution record is initial-baselines-status.json; the fixture is a planned workload, not a result.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

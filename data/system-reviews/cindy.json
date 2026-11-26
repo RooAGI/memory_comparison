@@ -1,0 +1,426 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 118,
+    "slug": "cindy",
+    "name": "Cindy",
+    "repository": "https://github.com/makecindy/cindy",
+    "listed_repository": "https://github.com/makecindy/cindy",
+    "branch": "main",
+    "revision": "6180b5d1f65b1e9f74329ddc9433f80304882f50",
+    "reviewed_at": "2026-11-25T07:56:04Z",
+    "review_timezone": "UTC (2026-11-24 23:56:04 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Cindy is an open-source AI-agent client whose Maker Memory feature gives supported agents shared long-term notes scoped to a working directory. The inspected implementation stores Markdown shards and a derived SQLite FTS index locally, exposes MCP tools for retrieval and maintenance, and keeps buddy memory in separate scopes. This is a pinned source review, not a runtime or benchmark evaluation.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cindy.md"
+    },
+    "contact": {
+      "email": "feedback@cindy.app",
+      "source_url": "https://github.com/makecindy/cindy/blob/6180b5d1f65b1e9f74329ddc9433f80304882f50/SECURITY.en.md",
+      "note": "Published in the official pinned SECURITY.en.md under vulnerability reporting; this is the repository’s published security contact, not inferred from commit or profile metadata."
+    },
+    "contact_email": "feedback@cindy.app",
+    "contact_checked_sources": [
+      "https://github.com/makecindy/cindy/blob/6180b5d1f65b1e9f74329ddc9433f80304882f50/SECURITY.en.md"
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated roster identity and attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[117]: ordinal 118 identity, listed repository and explicit roster attribution; not assessment evidence",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/cindy.md",
+        "symbol": "Pinned catalog source URL; identity/locator attribution only",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cindy.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository page",
+        "path": "",
+        "symbol": "Canonical public repository and default branch main",
+        "url": "https://github.com/makecindy/cindy"
+      },
+      {
+        "id": "main_feed",
+        "label": "Official main branch commit feed",
+        "path": "",
+        "symbol": "Full current head 6180b5d1f65b1e9f74329ddc9433f80304882f50 and feed update time",
+        "url": "https://github.com/makecindy/cindy/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream head",
+        "path": "",
+        "symbol": "Official commit page for reviewed full SHA",
+        "url": "https://github.com/makecindy/cindy/commit/6180b5d1f65b1e9f74329ddc9433f80304882f50"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product and repository scope; native/shared memory overview",
+        "url": "https://github.com/makecindy/cindy/blob/6180b5d1f65b1e9f74329ddc9433f80304882f50/README.md"
+      },
+      {
+        "id": "help",
+        "label": "Pinned official memory guide",
+        "path": "apps/desktop/help-knowledge/memory.md",
+        "symbol": "User-facing memory scopes, settings, local storage and reset behavior",
+        "url": "https://github.com/makecindy/cindy/blob/6180b5d1f65b1e9f74329ddc9433f80304882f50/apps/desktop/help-knowledge/memory.md"
+      },
+      {
+        "id": "types",
+        "label": "Memory types and records",
+        "path": "packages/maker-core/src/memory/types.ts",
+        "symbol": "Types, record fields, write modes, size limits and search result shape",
+        "url": "https://github.com/makecindy/cindy/blob/6180b5d1f65b1e9f74329ddc9433f80304882f50/packages/maker-core/src/memory/types.ts"
+      },
+      {
+        "id": "storage",
+        "label": "Markdown storage",
+        "path": "packages/maker-core/src/memory/storage.ts",
+        "symbol": "Shard CRUD, frontmatter, derived index, scope key and local layout",
+        "url": "https://github.com/makecindy/cindy/blob/6180b5d1f65b1e9f74329ddc9433f80304882f50/packages/maker-core/src/memory/storage.ts"
+      },
+      {
+        "id": "store",
+        "label": "Store facade",
+        "path": "packages/maker-core/src/memory/store.ts",
+        "symbol": "CRUD/FTS synchronization, native edits, search and consolidation behavior",
+        "url": "https://github.com/makecindy/cindy/blob/6180b5d1f65b1e9f74329ddc9433f80304882f50/packages/maker-core/src/memory/store.ts"
+      },
+      {
+        "id": "fts",
+        "label": "SQLite FTS implementation",
+        "path": "packages/maker-core/src/memory/fts.ts",
+        "symbol": "FTS5 indexing, MATCH/LIKE fallbacks, limits and snippets",
+        "url": "https://github.com/makecindy/cindy/blob/6180b5d1f65b1e9f74329ddc9433f80304882f50/packages/maker-core/src/memory/fts.ts"
+      },
+      {
+        "id": "manager",
+        "label": "Memory manager and scope lifecycle",
+        "path": "packages/maker-core/src/memory/manager.ts",
+        "symbol": "Per-scope stores, root resolution, owner guards and logs",
+        "url": "https://github.com/makecindy/cindy/blob/6180b5d1f65b1e9f74329ddc9433f80304882f50/packages/maker-core/src/memory/manager.ts"
+      },
+      {
+        "id": "context",
+        "label": "Prompt context integration",
+        "path": "packages/maker-core/src/memory/context.ts",
+        "symbol": "Session memory rules and project-local Markdown mode",
+        "url": "https://github.com/makecindy/cindy/blob/6180b5d1f65b1e9f74329ddc9433f80304882f50/packages/maker-core/src/memory/context.ts"
+      },
+      {
+        "id": "tools",
+        "label": "MCP memory tool server",
+        "path": "packages/lizi-mcps/src/cindy_memoryMcpServer.ts",
+        "symbol": "Tool registration and request/session-bound scope behavior",
+        "url": "https://github.com/makecindy/cindy/blob/6180b5d1f65b1e9f74329ddc9433f80304882f50/packages/lizi-mcps/src/cindy_memoryMcpServer.ts"
+      },
+      {
+        "id": "write",
+        "label": "Memory write tool",
+        "path": "packages/lizi-mcps/src/memory/write.ts",
+        "symbol": "Create/update/append operations and write receipts",
+        "url": "https://github.com/makecindy/cindy/blob/6180b5d1f65b1e9f74329ddc9433f80304882f50/packages/lizi-mcps/src/memory/write.ts"
+      },
+      {
+        "id": "delete",
+        "label": "Memory delete tool",
+        "path": "packages/lizi-mcps/src/memory/delete.ts",
+        "symbol": "Delete operation and derived-index update",
+        "url": "https://github.com/makecindy/cindy/blob/6180b5d1f65b1e9f74329ddc9433f80304882f50/packages/lizi-mcps/src/memory/delete.ts"
+      },
+      {
+        "id": "search",
+        "label": "Memory search tool",
+        "path": "packages/lizi-mcps/src/memory/search.ts",
+        "symbol": "Keyword search behavior, bounds and returned snippets",
+        "url": "https://github.com/makecindy/cindy/blob/6180b5d1f65b1e9f74329ddc9433f80304882f50/packages/lizi-mcps/src/memory/search.ts"
+      },
+      {
+        "id": "consolidate",
+        "label": "Memory consolidation tool",
+        "path": "packages/lizi-mcps/src/memory/consolidate.ts",
+        "symbol": "Write-new/delete-sources maintenance semantics",
+        "url": "https://github.com/makecindy/cindy/blob/6180b5d1f65b1e9f74329ddc9433f80304882f50/packages/lizi-mcps/src/memory/consolidate.ts"
+      },
+      {
+        "id": "review",
+        "label": "Memory review tool",
+        "path": "packages/lizi-mcps/src/memory/review.ts",
+        "symbol": "LLM suggestions without automatic mutations",
+        "url": "https://github.com/makecindy/cindy/blob/6180b5d1f65b1e9f74329ddc9433f80304882f50/packages/lizi-mcps/src/memory/review.ts"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation definitions, not Cindy results",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project-wide execution state only, not Cindy results",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "security",
+        "label": "Pinned official security policy",
+        "path": "SECURITY.en.md",
+        "symbol": "Official published security contact email",
+        "url": "https://github.com/makecindy/cindy/blob/6180b5d1f65b1e9f74329ddc9433f80304882f50/SECURITY.en.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The curated roster places Cindy at ordinal 118 with slug cindy, lists https://github.com/makecindy/cindy, and marks the repository locator as explicit. The catalog’s Atlas source is retained only as attribution for identity and locator; no Atlas descriptions, feature marks, or conclusions are used as assessment evidence.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The official repository describes Cindy as an open-source AI-agent client with desktop and mobile applications and shared packages; this review assesses its Maker Memory subsystem rather than the whole agent product. The user guide distinguishes shared Maker Memory from Claude Code/Codex native memory and from each buddy’s separate memory. It says Maker Memory is stored locally and does not move to another computer.",
+        "sources": [
+          "readme",
+          "help"
+        ]
+      },
+      {
+        "text": "The inspected code supports several agent harness integrations and a host-provided MCP server. The repository identifies XD Inc. as the copyright entity, but the reviewed sources do not establish an individual maintainer role.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The repository is a pnpm monorepo. Maker Memory core code lives in packages/maker-core; its default persistent unit is a directory under the current owner’s user-data root, with one subdirectory per working-directory scope. Records are human-readable Markdown shards with YAML frontmatter (title, description, type, updatedAt); MEMORY.md is a derived compact index, while meta.json records the absolute path and creation/use timestamps.",
+        "sources": [
+          "readme",
+          "storage",
+          "manager",
+          "types"
+        ]
+      },
+      {
+        "text": "The core keeps source files authoritative and maintains a derived SQLite FTS5 table in fts.db for search. FTS indexes filename, type, title, description, and body; the optional per-workdir configuration described by code does not add embeddings or vector retrieval. Ordinary project memory is workdir-scoped, remote sessions include a host-qualified scope key, linked worktrees are normalized by the scope resolver, and Cindy Bot memory uses a distinct stable bot key and Bot Home storage.",
+        "sources": [
+          "storage",
+          "store",
+          "fts",
+          "manager"
+        ]
+      },
+      {
+        "text": "The cindy_memory MCP server exposes list_tools and call_tool as entry points, then registers memory list/read/search/write/delete/consolidate/review operations. Supported agents receive memory rules and an index snapshot when a session starts; during an alternative project-local mode, context points the agent to ordinary Markdown files instead of injecting a growing index. The UI guide says the shared-memory setting is on by default and disables native Claude Code/Codex memory while active; Pi’s digest integration has a separate switch.",
+        "sources": [
+          "tools",
+          "context",
+          "help",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Writing is explicit through memory_write or ordinary file editing. Curated entries have type user, feedback, project, or reference; the tool accepts a slug/name, title, one-line description and Markdown body, with create, update, or append modes. Defaults define a 2 KiB soft body warning, 8 KiB hard body limit, 4 KiB index warning, and title/description limits; a warning does not itself reject a write.",
+        "sources": [
+          "types",
+          "write",
+          "storage"
+        ]
+      },
+      {
+        "text": "The storage layer serializes in-process mutations by directory, validates filenames and frontmatter, writes a shard, and rebuilds MEMORY.md. Updates can use an expected updatedAt value for conflict detection in the storage API. Consolidation writes or updates a target shard, deletes the named source shards, then rebuilds the derived index and search table. Memory review asks a configured auxiliary model for suggestions; it does not perform deletion or consolidation automatically.",
+        "sources": [
+          "storage",
+          "store",
+          "consolidate",
+          "review"
+        ]
+      },
+      {
+        "text": "memory_delete unlinks a shard and rebuilds the index; the FTS row is deleted as a derived-index update. Reset controls clear a project’s or all Cindy memories; the user guide says resets are irreversible. The inspected implementation documents file deletion, but does not establish secure erasure from backups, filesystem snapshots, external copies, or previously exported content.",
+        "sources": [
+          "delete",
+          "store",
+          "help"
+        ]
+      },
+      {
+        "text": "memory_search uses SQLite FTS5 phrase matching with BM25 ranking, then LIKE fallback (including substring matching for CJK text), and a tokenized fallback when the phrase search has no hits. It returns filename, type, title, snippet and score, defaults to 10 results and caps at 50; the tool directs agents to read a selected shard for its full content. Search providers may be merged when configured, with their rankings kept separate.",
+        "sources": [
+          "fts",
+          "search",
+          "store"
+        ]
+      },
+      {
+        "text": "Ordinary workdir scopes are separated by storage path; host code also resolves the active data owner, rejects unavailable owner scope rather than falling back to ephemeral storage, closes stores when owner scope changes, and checks scope around async operations. These are source-visible isolation controls, not a measured or formal guarantee. Bot memories use a separate Bot scope and are excluded from the global workdir projection/reset path.",
+        "sources": [
+          "storage",
+          "manager",
+          "tools"
+        ]
+      },
+      {
+        "text": "Frontmatter records type, title, description and updatedAt, and the body is arbitrary Markdown. These fields provide organization and update metadata, but the inspected schema does not require source-document IDs, evidence excerpts, author identity, trust state, or citation validation. A write receipt records a filename/title/action for the calling session; the reviewed source does not establish a durable, tamper-evident mutation audit trail.",
+        "sources": [
+          "types",
+          "storage",
+          "write"
+        ]
+      },
+      {
+        "text": "The search implementation is local and bounded: query length is capped at 200 characters, terms at eight, result count at 50, and the LIKE candidate pool at 500; the source comments describe expected per-workdir corpus sizes as tens to a few hundred items, not measurements. Logging includes manager initialization, store opens, owner-scope changes, and failure warnings. Writes rebuild the short Markdown index synchronously, while FTS synchronization failures are logged and treated as recoverable because the files remain canonical.",
+        "sources": [
+          "fts",
+          "store",
+          "manager",
+          "storage"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "Search behavior is visible in code, but no Cindy prompts or returned records were adjudicated for correct recall or abstention.",
+        "sources": [
+          "fts",
+          "search",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Create/update/append and conflict checks exist; no correction sequence or stale-value probe was scored.",
+        "sources": [
+          "types",
+          "storage",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The source path unlinks a shard and updates derived indexes; no post-delete probes, recovery inspection, backup inspection, or residual-data test was performed.",
+        "sources": [
+          "delete",
+          "storage",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Directory-per-workdir and owner-scope guards are implemented, but no paired permitted/forbidden cross-scope workload was run.",
+        "sources": [
+          "manager",
+          "storage",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Memory shards accept freeform Markdown without required evidence identifiers or citation checks; no claim-support adjudication or citation workload was run.",
+        "sources": [
+          "types",
+          "write",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Write and search paths are source-visible and mostly local, but no operation timings or scheduled write-to-recall probes were collected.",
+        "sources": [
+          "store",
+          "fts",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The system stores Markdown plus a derived FTS database and index; no attributable byte, token, model-call cost, or per-item storage measurements were collected.",
+        "sources": [
+          "storage",
+          "fts",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected the pinned README, user memory guide, core memory storage/manager/search implementation, and MCP tool registrations. It did not inspect every agent adapter, desktop UI path, cloud-service implementation, or deployment configuration; runtime behavior and product-wide security properties are not established.",
+        "sources": [
+          "readme",
+          "help",
+          "manager",
+          "tools"
+        ]
+      },
+      {
+        "text": "The documented default memory is local to a computer, while the product README also describes separately hosted/cloud companion synchronization. The inspected documentation does not establish that Maker Memory shards synchronize through that cloud path. The independent backend service is explicitly outside this repository.",
+        "sources": [
+          "help",
+          "readme"
+        ]
+      },
+      {
+        "text": "Search is keyword/full-text based; the reviewed core has no embedding index. FTS/LIKE fallback behavior, CJK tokenization, external file edits, cross-process mutation behavior, deletion remnants beyond the inspected file paths, and large-scale performance have not been measured here.",
+        "sources": [
+          "fts",
+          "store",
+          "storage"
+        ]
+      },
+      {
+        "text": "No Cindy operation, benchmark, or test was run. The project metric definitions and initial execution-status record describe evaluation protocol and project-wide status only; they are not Cindy results.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. I did not execute Cindy, its tests, or a benchmark workload. No quality, latency, delay, token, cost, storage, correction, deletion, scope-isolation, or evidence-support result is claimed.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "contact_notes": [
+      {
+        "text": "The official pinned SECURITY.en.md publishes feedback@cindy.app as the fallback email for vulnerability reporting when the private GitHub reporting form is unavailable. The JSON records that email and this exact official source URL; no commit metadata, personal profile, third-party directory, or inference was used.",
+        "sources": [
+          "security"
+        ]
+      }
+    ]
+  }
+}

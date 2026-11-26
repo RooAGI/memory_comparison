@@ -1,0 +1,393 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "bolt-pchie",
+    "name": "Bolt PCHIE",
+    "repository": "https://github.com/wetwaferworks/bolt-pch-ie",
+    "branch": "main",
+    "revision": "7227c059cb62c204b72475ff73316a136efc2161",
+    "reviewed_at": "2026-11-24T23:48:33Z",
+    "review_timezone": "UTC (2026-11-24 15:48:33 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Bolt PCHIE is a deterministic robotics research harness whose Little Nemo agent can record episodic maze runs and optionally use prior outcomes to adjust search. The reviewed memory paths are small bounded ledgers with integrity checks; they are not general-purpose conversational memory.",
+    "atlas_locator": {
+      "ordinal": 96,
+      "name": "Bolt PCHIE",
+      "slug": "bolt-pchie",
+      "listed_repository": "https://github.com/wetwaferworks/bolt-pch-ie",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/bolt-pchie.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/wetwaferworks/bolt-pch-ie/blob/7227c059cb62c204b72475ff73316a136efc2161/README.md",
+      "note": "No published contact email was found in the checked official README or SECURITY.md. SECURITY.md asks reporters to contact the maintainer privately before public disclosure but gives no address."
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository and default branch",
+        "path": "repository page",
+        "symbol": "Canonical wetwaferworks/bolt-pch-ie; public; main shown as default branch",
+        "url": "https://github.com/wetwaferworks/bolt-pch-ie"
+      },
+      {
+        "id": "history",
+        "label": "Official main branch Atom feed",
+        "path": "commits/main.atom",
+        "symbol": "Current main head and feed update timestamp",
+        "url": "https://github.com/wetwaferworks/bolt-pch-ie/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Current full head commit",
+        "path": "commit",
+        "symbol": "7227c059cb62c204b72475ff73316a136efc2161",
+        "url": "https://github.com/wetwaferworks/bolt-pch-ie/commit/7227c059cb62c204b72475ff73316a136efc2161"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Product framing, model, memory mention, repository map, maintainer credit; no email contact",
+        "url": "https://github.com/wetwaferworks/bolt-pch-ie/blob/7227c059cb62c204b72475ff73316a136efc2161/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security notes",
+        "path": "SECURITY.md",
+        "symbol": "Threat model and contact reporting instruction; no email address",
+        "url": "https://github.com/wetwaferworks/bolt-pch-ie/blob/7227c059cb62c204b72475ff73316a136efc2161/SECURITY.md"
+      },
+      {
+        "id": "guide",
+        "label": "Reasoning layers guide",
+        "path": "docs/guide/reasoning-layers.md",
+        "symbol": "Opt-in flags, query-before-plan proposal semantics, current integration boundaries",
+        "url": "https://github.com/wetwaferworks/bolt-pch-ie/blob/7227c059cb62c204b72475ff73316a136efc2161/docs/guide/reasoning-layers.md"
+      },
+      {
+        "id": "limitations",
+        "label": "Limitations and threat model",
+        "path": "docs/guide/limitations-and-threat-model.md",
+        "symbol": "Integrity claims and limits",
+        "url": "https://github.com/wetwaferworks/bolt-pch-ie/blob/7227c059cb62c204b72475ff73316a136efc2161/docs/guide/limitations-and-threat-model.md"
+      },
+      {
+        "id": "neml-ledger",
+        "label": "NEML episodic ledger format and digest",
+        "path": "include/pchie/neml/NemlLedger.h",
+        "symbol": "Receipt schema, fixed ring, event retention, priors and token-bounded digest",
+        "url": "https://github.com/wetwaferworks/bolt-pch-ie/blob/7227c059cb62c204b72475ff73316a136efc2161/include/pchie/neml/NemlLedger.h"
+      },
+      {
+        "id": "neml-query",
+        "label": "NEML snapshot queries and memory prior",
+        "path": "include/pchie/neml/NemlQuery.h",
+        "symbol": "Snapshot validation, maze-key filtering, event lookup and prior adjustment",
+        "url": "https://github.com/wetwaferworks/bolt-pch-ie/blob/7227c059cb62c204b72475ff73316a136efc2161/include/pchie/neml/NemlQuery.h"
+      },
+      {
+        "id": "neml-store",
+        "label": "NEML store and chat interface",
+        "path": "include/pchie/neml/NemlStore.h",
+        "symbol": "Paths/configuration, teardown write, chat note write-back, block construction and caps",
+        "url": "https://github.com/wetwaferworks/bolt-pch-ie/blob/7227c059cb62c204b72475ff73316a136efc2161/include/pchie/neml/NemlStore.h"
+      },
+      {
+        "id": "neml-journal",
+        "label": "NEML journal and save lock",
+        "path": "include/pchie/neml/NemlJournal.h",
+        "symbol": "Append-only hash-chained journal, checked replay, atomic saves, repair and failure behavior",
+        "url": "https://github.com/wetwaferworks/bolt-pch-ie/blob/7227c059cb62c204b72475ff73316a136efc2161/include/pchie/neml/NemlJournal.h"
+      },
+      {
+        "id": "plan-memory",
+        "label": "Query-before-plan store",
+        "path": "include/pchie/rl/PlanMemory.h",
+        "symbol": "Situation key, row schema, trust gate, append-only JSONL store and counters",
+        "url": "https://github.com/wetwaferworks/bolt-pch-ie/blob/7227c059cb62c204b72475ff73316a136efc2161/include/pchie/rl/PlanMemory.h"
+      },
+      {
+        "id": "rl-flags",
+        "label": "Reasoning-layer flags",
+        "path": "include/pchie/rl/RlFlags.h",
+        "symbol": "Opt-in QBP and minimum truth defaults",
+        "url": "https://github.com/wetwaferworks/bolt-pch-ie/blob/7227c059cb62c204b72475ff73316a136efc2161/include/pchie/rl/RlFlags.h"
+      },
+      {
+        "id": "maze-rl",
+        "label": "Maze reasoning integration",
+        "path": "include/pchie/rl/MazeL1.h",
+        "symbol": "QBP lookup, legality/gate checks, memory prior, logs and unwired capabilities",
+        "url": "https://github.com/wetwaferworks/bolt-pch-ie/blob/7227c059cb62c204b72475ff73316a136efc2161/include/pchie/rl/MazeL1.h"
+      },
+      {
+        "id": "results",
+        "label": "Upstream reported results",
+        "path": "docs/guide/results.md",
+        "symbol": "Repository-reported historical planner and query-before-plan comparisons; provisional, not this review's measurements",
+        "url": "https://github.com/wetwaferworks/bolt-pch-ie/blob/7227c059cb62c204b72475ff73316a136efc2161/docs/guide/results.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Benchmark protocol and metric definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Shared benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project run state, not a system measurement",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned workload, not an executed result",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated roster entry",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 96 identity, listed repository locator and attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas-attribution",
+        "label": "Catalog source attribution",
+        "path": "Atlas report at pinned catalog revision",
+        "symbol": "Identity/source attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/bolt-pchie.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The README calls Bolt PCHIE (Personal Control Harness Inference Engine) an open-source robotics test bed for on-device inference, using Little Nemo in deterministic simulated LithoKraft mazes. It credits Jaydee Wetwork / Wet Wafer Works with architecture and direction. The assessed memory component is embedded C++ code in the harness, not a separately described hosted memory service.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "NEML stores a 32-byte header plus sixteen 256-byte run receipts in a fixed 4,128-byte ring. A receipt holds run counts, maze identity/seed/dimensions, path kind, and at most six key events. The ring retains the newest sixteen runs and overwrites the oldest slot on append; a derived priors text file is regenerated after receipt saves.",
+        "sources": [
+          "neml-ledger",
+          "neml-store"
+        ]
+      },
+      {
+        "text": "The separate query-before-plan (QBP) store is JSONL plan fragments keyed by a hash of task id, observation tokens, belief digest, model weights hash and domain version. A row includes a run-provenance hash, truth label and hash-chain link. QBP flags default off; the minimum truth defaults to Sim, and the reasoning guide says QBP hits remain proposals subject to legal-move and PCH gate checks.",
+        "sources": [
+          "plan-memory",
+          "rl-flags",
+          "guide",
+          "maze-rl"
+        ]
+      },
+      {
+        "text": "Storage defaults to the user data directory or a caller-selected NEML directory, outside the repository. The episodic ledger query filters maze receipts by an eight-byte key derived from canonical starting-maze bytes; seed filtering is optional. This is environment/task keying, not principal or tenant authorization.",
+        "sources": [
+          "neml-store",
+          "neml-query"
+        ]
+      },
+      {
+        "text": "The chat memory block combines recent receipts, deterministic summary priors and optional chat notes. It is capped at a caller-supplied tokenizer budget (default 384 tokens); notes are held in their own sixteen-slot ring. Chat write-back is explicitly off by default and marked not approved in the source.",
+        "sources": [
+          "neml-store",
+          "neml-ledger"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "At run teardown, the recorder builds a receipt and appends it to the ring. It captures all fired events in-run but retains only the first five non-exit events plus ExitFound, or six events when no exit occurred. Counters are derived from recorded triggers. This bounds each receipt but can omit later events from a run.",
+        "sources": [
+          "neml-ledger",
+          "neml-store"
+        ]
+      },
+      {
+        "text": "The ring save is journaled: each append record includes the payload, prior-line hash, resulting file-state hash and record hash. Loads replay and validate the chain and require the ring bytes to match; torn tails, broken chains, out-of-band changes and unreadable states are refused rather than treated as empty. Saves flush and atomically replace the ring file. The journal is unkeyed, so an actor able to rewrite both files can reconstruct it; a separately pinned sequence/hash is needed to detect that case.",
+        "sources": [
+          "neml-journal"
+        ]
+      },
+      {
+        "text": "The episodic query takes a validated run-start snapshot and hashes its bytes. Queries filter receipts/events by maze key, optional seed, event type and cell. A memory prior reduces the prior weight of directions previously recorded as dead ends, then deterministically renormalizes integer Q20 weights. A run that reads memory can bind the snapshot hash into its provenance, making the read input identifiable.",
+        "sources": [
+          "neml-query",
+          "neml-ledger",
+          "neml-store"
+        ]
+      },
+      {
+        "text": "QBP hashes the current situation and looks up the first matching row. Only chain-valid SimVerified or HumanVerified rows pass the default Sim floor; Unverified and Refuted rows miss. A passing plan's first action is proposed only if still legal and accepted by PCHGate; then a configured share of root prior mass moves to that edge. The code documents hit/miss/rejection counters and JSONL logs. The reviewed MazeL1 header says between-run QBP writing is not wired into this pass.",
+        "sources": [
+          "plan-memory",
+          "rl-flags",
+          "maze-rl",
+          "guide"
+        ]
+      },
+      {
+        "text": "The inspected APIs expose no general update or delete operation for either store. Ring retention is overwrite-by-capacity, not targeted erasure. Plan memory exposes append between runs and has no row correction/removal API. Chat notes likewise use a sixteen-entry ring; its journal remains append-only.",
+        "sources": [
+          "neml-ledger",
+          "neml-store",
+          "plan-memory",
+          "neml-journal",
+          "maze-rl"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "The code has exact-key receipt and plan lookups, but no answerability/abstention workload was run for this review.",
+        "sources": [
+          "neml-query",
+          "plan-memory",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "No update/correction operation is exposed in the inspected stores; correction and stale-value rates were not measured.",
+        "sources": [
+          "plan-memory",
+          "neml-store",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Storage uses bounded overwrite for ring slots and append-only journals; no deletion-leakage probes were run.",
+        "sources": [
+          "neml-ledger",
+          "neml-journal",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Maze-key and situation-hash filters are code-visible, but no cross-maze, cross-user or adversarial isolation test was executed in this review.",
+        "sources": [
+          "neml-query",
+          "plan-memory",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Plan rows carry a provenance run hash and integrity chain; this is not semantic evidence adjudication. Evidence precision and citation coverage were not measured.",
+        "sources": [
+          "plan-memory",
+          "neml-query",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The ring scan is bounded by sixteen receipts; the JSONL plan store is loaded/scanned in memory with no source-level row-count cap. No latency or write-to-recall timing was collected.",
+        "sources": [
+          "neml-ledger",
+          "neml-query",
+          "plan-memory",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The chat digest uses a tokenizer cap and ring storage has a fixed footprint, but no token, cost or storage benchmark was conducted for this review.",
+        "sources": [
+          "neml-ledger",
+          "neml-store",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code; runtime unmeasured",
+        "evidence": "Source shows bounded ring scans, a token-budgeted digest, SHA-256 replay checks, plan hit/miss counters, QBP JSONL logs and storage refusal messages. These do not establish observed speed, reliability or full diagnostic coverage.",
+        "sources": [
+          "neml-ledger",
+          "neml-query",
+          "neml-journal",
+          "plan-memory",
+          "maze-rl"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a source review at the verified repository head, focused on NEML and QBP memory code plus their documented integration. No system execution, tests or benchmark workload was run.",
+        "sources": [
+          "head",
+          "neml-ledger",
+          "neml-query",
+          "plan-memory",
+          "maze-rl"
+        ]
+      },
+      {
+        "text": "NEML's maze hash is an environment scope, not an authenticated user boundary. Configurable user-data paths and local file locks do not establish multi-user isolation. QBP's situation hash includes task/model/context fields but no explicit principal identifier in the inspected schema.",
+        "sources": [
+          "neml-store",
+          "neml-query",
+          "plan-memory",
+          "security"
+        ]
+      },
+      {
+        "text": "Hash chaining detects accidental or partial modification relative to the saved chain, but the journal has no key and can be rebuilt by a writer with folder access. The trust label gates proposals; it does not prove the plan is correct. Append-only/overwrite retention is not secure erasure.",
+        "sources": [
+          "neml-journal",
+          "plan-memory",
+          "limitations"
+        ]
+      },
+      {
+        "text": "The plan lookup returns on the first matching situation row; a later Refuted duplicate does not supersede an earlier row in the inspected implementation. Source and docs also identify the between-run writer as not wired. These are code/documentation findings, not runtime failure claims.",
+        "sources": [
+          "plan-memory",
+          "maze-rl",
+          "guide"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. This review did not execute Bolt PCHIE, its benchmark workloads, or tests, and produced no measurements. The repository's Results guide separately reports a historical 13 November QBP comparison (25/25 seeded hits with an unchanged walk and source-reported model-forward counts); those are upstream-reported, provisional results, not measurements made here. Project metrics, fixture and shared status record define protocol/state only.",
+        "sources": [
+          "results",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      }
+    ]
+  }
+}

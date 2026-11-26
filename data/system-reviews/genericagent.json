@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 254,
+    "slug": "genericagent",
+    "name": "GenericAgent",
+    "repository": "https://github.com/lsdefine/GenericAgent",
+    "branch": "main",
+    "revision": "84bd38964ce0de8b301a71498d2adddf6107612f",
+    "reviewed_at": "2026-11-25T21:05:16Z",
+    "review_timezone": "UTC (2026-11-25 13:05:16 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/lsdefine/GenericAgent/blob/84bd38964ce0de8b301a71498d2adddf6107612f/README.md",
+      "note": "The official pinned README was checked and did not publish a contact email. No email was inferred from commit or profile metadata."
+    },
+    "summary": "GenericAgent is a local autonomous-agent framework whose memory is a prompt-guided hierarchy of text files: an index, global facts, reusable task skills, and archived session records. This source review does not measure recall, isolation, cost, or runtime performance.",
+    "atlas_locator": {
+      "ordinal": 254,
+      "name": "GenericAgent",
+      "slug": "genericagent",
+      "listed_repository": "https://github.com/lsdefine/GenericAgent",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/genericagent.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/lsdefine/GenericAgent/blob/84bd38964ce0de8b301a71498d2adddf6107612f/README.md"
+    ],
+    "sources": [
+      {
+        "id": "roster",
+        "label": "Curated roster identity, listed locator, and Atlas attribution",
+        "path": "../data/memory-systems.json",
+        "symbol": "systems[253], ordinal 254",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "repo",
+        "label": "Official GenericAgent repository and default branch",
+        "path": "repository page",
+        "symbol": "lsdefine/GenericAgent; default branch main",
+        "url": "https://github.com/lsdefine/GenericAgent"
+      },
+      {
+        "id": "head",
+        "label": "Official GitHub main branch commit API",
+        "path": "commit",
+        "symbol": "full head SHA 84bd38964ce0de8b301a71498d2adddf6107612f",
+        "url": "https://api.github.com/repos/lsdefine/GenericAgent/commits/main"
+      },
+      {
+        "id": "readme",
+        "label": "Official GenericAgent README at reviewed SHA",
+        "path": "README.md",
+        "url": "https://github.com/lsdefine/GenericAgent/blob/84bd38964ce0de8b301a71498d2adddf6107612f/README.md"
+      },
+      {
+        "id": "memory_sop",
+        "label": "Memory management policy and layer definitions at reviewed SHA",
+        "path": "memory/memory_management_sop.md",
+        "url": "https://github.com/lsdefine/GenericAgent/blob/84bd38964ce0de8b301a71498d2adddf6107612f/memory/memory_management_sop.md"
+      },
+      {
+        "id": "ga",
+        "label": "Agent handler, memory tool, and global-memory loading implementation",
+        "path": "ga.py",
+        "symbol": "load_L1, get_global_memory, memory tool handlers",
+        "url": "https://github.com/lsdefine/GenericAgent/blob/84bd38964ce0de8b301a71498d2adddf6107612f/ga.py"
+      },
+      {
+        "id": "agent_loop",
+        "label": "Core agent execution and tool dispatch loop",
+        "path": "agent_loop.py",
+        "symbol": "agent_runner_loop, BaseHandler.dispatch",
+        "url": "https://github.com/lsdefine/GenericAgent/blob/84bd38964ce0de8b301a71498d2adddf6107612f/agent_loop.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "../METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "../fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status record",
+        "path": "../results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository describes GenericAgent as a minimal local autonomous-agent framework. Its README presents layered memory alongside a minimal toolset and execution loop, and names working-checkpoint and long-term-update tools. The repository owner is lsdefine; no separate hosted memory service is inferred.",
+        "sources": [
+          "repo",
+          "head",
+          "readme",
+          "ga"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Documentation observation: the README describes five memory layers. L0 is meta rules; L1 is a compact insight index; L2 stores global facts; L3 holds reusable task skills and SOPs; L4 stores archived sessions for longer-horizon recall. The memory-management SOP names the core files as global_mem_insight.txt (L1), global_mem.txt (L2), files under memory/ (L3), and memory/L4_raw_sessions/ (L4).",
+        "sources": [
+          "readme",
+          "memory_sop"
+        ]
+      },
+      {
+        "text": "Code observation: ga.py reads L1 from memory/global_mem_insight.txt and assembles global memory with a fixed structure and that index. The agent loop dispatches named tools through a handler; the README identifies update_working_checkpoint as short-term working memory and start_long_term_update as long-term distillation. This is a text-file and prompt organization rather than a separately indexed vector or relational store in the inspected paths.",
+        "sources": [
+          "ga",
+          "agent_loop",
+          "readme"
+        ]
+      },
+      {
+        "text": "The SOP sets explicit size and placement conventions: L1 is at most 30 lines and expected below 1,000 tokens; L2 is below 30 KB; L3 SOPs are usually below 50 lines/3 KB with hard limits; L4 is the raw-session archive. These are documented constraints and do not establish that existing user files comply.",
+        "sources": [
+          "memory_sop"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: the README describes task experience being distilled into reusable skills and lists start_long_term_update for this purpose. The SOP's 'Action-Verified Only' rule says new L1/L2/L3 information must come from successful tool results, and advises writing only durable, reusable information. These are stated operating rules; the inspected sources do not demonstrate a deterministic provenance gate on every write.",
+        "sources": [
+          "readme",
+          "memory_sop",
+          "ga"
+        ]
+      },
+      {
+        "text": "Working updates: the README lists update_working_checkpoint as a short-term notepad. The inspected handler logic keeps key information in the current working context; global-memory loading reads the L1 file and adds a fixed structure. No structured event log or versioned fact record was established by these inspected paths.",
+        "sources": [
+          "readme",
+          "ga"
+        ]
+      },
+      {
+        "text": "Correction and deletion: the SOP says to patch carefully, migrate or condense layers, replace stale values, and delete erroneous, outdated, redundant, or low-value information. The README exposes generic file_write and file_patch tools. The reviewed sources establish policy and available file operations, but do not establish transactional correction, a tombstone model, permanent erasure across backups, or mutation audit.",
+        "sources": [
+          "memory_sop",
+          "readme",
+          "ga"
+        ]
+      },
+      {
+        "text": "Retrieval: the README describes L1 as a fast routing index pointing to more detailed L2/L3 files. Its toolset includes file_read, and ga.py loads L1 and constructs the global-memory prompt. The design is keyword/pointer and prompt based in these inspected sources; a semantic search index or calibrated abstention mechanism was not found in the reviewed memory paths.",
+        "sources": [
+          "readme",
+          "memory_sop",
+          "ga"
+        ]
+      },
+      {
+        "text": "Scope isolation: the SOP describes one global L1/L2 memory tree and says project-specific facts belong in the project directory instead of global L3. This expresses a placement convention, not an authorization boundary. The inspected sources do not establish tenant, user, or project ACL enforcement for files or memory reads.",
+        "sources": [
+          "memory_sop",
+          "ga",
+          "readme"
+        ]
+      },
+      {
+        "text": "Provenance and evidence: the SOP requires successful tool execution as a precondition for writing, but it also states that verification is not retained as a record. Plain text files can preserve content and pointers, but the inspected memory path does not show claim-level source IDs, attached evidence, or a mutation audit trail.",
+        "sources": [
+          "memory_sop",
+          "ga"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: the compact L1 index and strict layer-size guidance are intended to reduce prompt load; the README describes direct tool-based operation and the SOP favors short pointers over duplicated detail. These are source-visible design choices. No recall, token, cost, latency, or storage measurements were collected for this review.",
+        "sources": [
+          "readme",
+          "memory_sop",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "The index and file-read paths are documented, but no adjudicated query workload or abstention calibration was run.",
+        "sources": [
+          "ga",
+          "memory_sop",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "The SOP describes patching and replacement of stale values; no correction or stale-retrieval workload was run.",
+        "sources": [
+          "memory_sop",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The SOP calls for deletion of stale or low-value memory, but no post-delete retrieval or persistent-erasure probe was run.",
+        "sources": [
+          "memory_sop",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Placement conventions separate some project-specific information, but no cross-project or cross-user leakage probe was run.",
+        "sources": [
+          "memory_sop",
+          "ga",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "The write policy requires verified tool results but the reviewed SOP says verification is not retained; no evidence-support adjudication was performed.",
+        "sources": [
+          "memory_sop",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No latency distribution or timed write-to-recall workload was collected.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The project describes compact context and size targets, but this review collected no token, cost, or memory-footprint measurements.",
+        "sources": [
+          "readme",
+          "memory_sop",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available_in_documentation_and_code",
+        "evidence": "Layered pointers, bounded file-size guidance, working checkpoints, and file-based recall are documented or visible in code. These do not quantify runtime efficiency or reliability.",
+        "sources": [
+          "readme",
+          "memory_sop",
+          "ga"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review is a bounded inspection of the official README, memory-management SOP, agent handler, and execution loop at the verified main head. GenericAgent, its tests, and benchmark workloads were not run. The review does not establish memory quality, compliance with size rules, access isolation, complete deletion, provenance enforcement, latency, or cost.",
+        "sources": [
+          "readme",
+          "memory_sop",
+          "ga",
+          "agent_loop",
+          "metrics"
+        ]
+      },
+      {
+        "text": "The README contains upstream descriptions of evaluation dimensions, token efficiency, and self-evolution. They are not reproduced measurements here and are excluded as evidence for benchmark outcomes.",
+        "sources": [
+          "readme",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Atlas is recorded only as the roster attribution for ordinal, name, slug, and listed repository locator. Atlas descriptions and assessment claims are not used as evidence about GenericAgent behavior.",
+        "sources": [
+          "roster",
+          "repo"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is not_run. No GenericAgent runtime, tests, or benchmark workloads were run. Project metrics, fixture, and status records describe evaluation protocols and project-wide execution state; they are not GenericAgent measurements.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      }
+    ]
+  }
+}

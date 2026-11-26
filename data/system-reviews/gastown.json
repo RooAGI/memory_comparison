@@ -1,0 +1,325 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "gastown",
+    "name": "Gas Town",
+    "ordinal": 251,
+    "repository": "https://github.com/gastownhall/gastown",
+    "listed_repository": "https://github.com/gastownhall/gastown",
+    "branch": "main",
+    "revision": "94cc82289d2ead275a62e1db4ef1d4ada4a1f98e",
+    "reviewed_at": "2026-11-25T20:49:38Z",
+    "review_timezone": "UTC (2026-11-25 12:49:38 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Gas Town is a multi-agent workspace manager. Its memory feature stores typed text values through the Beads key-value interface and injects them into agent context at prime time; retrieval is a full listing rather than relevance-ranked recall.",
+    "atlas_locator": {
+      "ordinal": 251,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/gastown.md",
+      "listed_repository": "https://github.com/gastownhall/gastown"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/gastownhall/gastown/blob/94cc82289d2ead275a62e1db4ef1d4ada4a1f98e/README.md",
+      "note": "Checked the official README and SECURITY.md at the reviewed revision; neither publishes a contact email. No address was inferred from commit or profile metadata."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/gastownhall/gastown/blob/94cc82289d2ead275a62e1db4ef1d4ada4a1f98e/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/gastownhall/gastown/blob/94cc82289d2ead275a62e1db4ef1d4ada4a1f98e/README.md",
+      "https://github.com/gastownhall/gastown/blob/94cc82289d2ead275a62e1db4ef1d4ada4a1f98e/SECURITY.md"
+    ],
+    "contact_email_note": "No contact email is published in the official README or SECURITY.md at the reviewed revision.",
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official Gas Town repository",
+        "path": "repository page",
+        "symbol": "Public gastownhall/gastown; main is default branch",
+        "url": "https://github.com/gastownhall/gastown"
+      },
+      {
+        "id": "head",
+        "label": "Official main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Current main head 94cc82289d2ead275a62e1db4ef1d4ada4a1f98e, updated 2026-11-12T21:49:05Z",
+        "url": "https://github.com/gastownhall/gastown/commits/main.atom"
+      },
+      {
+        "id": "commit",
+        "label": "Verified current main head commit",
+        "path": "commit",
+        "symbol": "Full main SHA 94cc82289d2ead275a62e1db4ef1d4ada4a1f98e",
+        "url": "https://github.com/gastownhall/gastown/commit/94cc82289d2ead275a62e1db4ef1d4ada4a1f98e"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Product description, work state, Beads integration, roles and observability",
+        "url": "https://github.com/gastownhall/gastown/blob/94cc82289d2ead275a62e1db4ef1d4ada4a1f98e/README.md"
+      },
+      {
+        "id": "remember",
+        "label": "Memory write implementation",
+        "path": "internal/cmd/remember.go",
+        "symbol": "Typed keys, generated/explicit keys, overwrite behavior, Beads KV calls",
+        "url": "https://github.com/gastownhall/gastown/blob/94cc82289d2ead275a62e1db4ef1d4ada4a1f98e/internal/cmd/remember.go"
+      },
+      {
+        "id": "forget",
+        "label": "Memory deletion implementation",
+        "path": "internal/cmd/forget.go",
+        "symbol": "Typed/legacy key resolution and bd kv clear deletion",
+        "url": "https://github.com/gastownhall/gastown/blob/94cc82289d2ead275a62e1db4ef1d4ada4a1f98e/internal/cmd/forget.go"
+      },
+      {
+        "id": "memories",
+        "label": "Memory list/search implementation",
+        "path": "internal/cmd/memories.go",
+        "symbol": "Full KV listing and case-insensitive substring filtering",
+        "url": "https://github.com/gastownhall/gastown/blob/94cc82289d2ead275a62e1db4ef1d4ada4a1f98e/internal/cmd/memories.go"
+      },
+      {
+        "id": "prime",
+        "label": "Prime memory injection implementation",
+        "path": "internal/cmd/prime.go",
+        "symbol": "Work-directory scoped bd invocation, full-list load, type/key ordering, failure behavior",
+        "url": "https://github.com/gastownhall/gastown/blob/94cc82289d2ead275a62e1db4ef1d4ada4a1f98e/internal/cmd/prime.go"
+      },
+      {
+        "id": "mayor",
+        "label": "Official role memory guidance",
+        "path": "internal/templates/roles/mayor.md.tmpl",
+        "symbol": "Memory categories, use policy and town-sharing description",
+        "url": "https://github.com/gastownhall/gastown/blob/94cc82289d2ead275a62e1db4ef1d4ada4a1f98e/internal/templates/roles/mayor.md.tmpl"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Experimental status, shared worker filesystem, Beads data in .beads/",
+        "url": "https://github.com/gastownhall/gastown/blob/94cc82289d2ead275a62e1db4ef1d4ada4a1f98e/SECURITY.md"
+      },
+      {
+        "id": "catalog",
+        "label": "Curated roster entry",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 251, name, slug, listed locator and pinned Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster attribution",
+        "path": "content/systems/gastown.md",
+        "symbol": "Identity/locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/gastown.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Workload definition only; not run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "No Gas Town measured result recorded",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Gas Town as a multi-agent workspace manager for coordinating coding agents, with persistent work tracking backed by Beads. This review covers its separate typed-memory commands and prime-time injection, not every work-tracking feature.",
+        "sources": [
+          "readme",
+          "remember"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Gas Town's memory interface consists of `gt remember`, `gt memories`, `gt forget`, and the memory-injection path in `gt prime`. The write command stores a plain string through `bd kv set`; listing and injection call `bd kv list --json`; deletion calls `bd kv clear`. The implementation delegates persistence to Beads rather than defining a separate memory database or record schema.",
+        "sources": [
+          "remember",
+          "memories",
+          "forget",
+          "prime"
+        ]
+      },
+      {
+        "text": "Keys use `memory.<type>.<slug>` for feedback, project, user, reference, and general entries. The value itself is unstructured text; the inspected memory path does not attach a source, author, timestamp, confidence, or lifecycle status to each value. Legacy untyped `memory.<key>` entries are read as general memories.",
+        "sources": [
+          "remember",
+          "memories"
+        ]
+      },
+      {
+        "text": "Gas Town's official documentation describes its Beads work state as persistent and identifies Dolt as its data plane. Memory records use Beads' key-value surface; this repository review did not inspect Beads' own storage implementation or prove the exact physical storage layout of a deployed instance.",
+        "sources": [
+          "readme",
+          "security"
+        ]
+      },
+      {
+        "text": "GitHub identifies main as the default branch. The official commits feed lists 94cc82289d2ead275a62e1db4ef1d4ada4a1f98e as the current main head, and the official Git remote and shallow checkout resolved to the same full SHA. Review recorded 2026-11-25 20:49:38 UTC (12:49:38 PST; America/Los_Angeles).",
+        "sources": [
+          "repo",
+          "head",
+          "commit"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "`gt remember` accepts one nonempty string, an optional type, and an optional key. Without a supplied key it derives a slug from up to the first five words; a hash is used only when those words yield no alphanumeric content. The command checks an existing key and then writes with `bd kv set`, so writing the same type/key replaces its previous value. The derived key can collide for different text sharing the same first five words.",
+        "sources": [
+          "remember"
+        ]
+      },
+      {
+        "text": "`gt memories` obtains the Beads key-value listing, then optionally filters by type or case-insensitive substring in the key, value, or type. It sorts by type priority and key. This is browsing/search by substring, not semantic or relevance-ranked retrieval.",
+        "sources": [
+          "memories",
+          "remember"
+        ]
+      },
+      {
+        "text": "During `gt prime`, Gas Town runs `bd kv list --json` in the requested work directory, keeps keys prefixed `memory.`, groups by type, sorts keys, and prints every resulting value. Feedback and user entries precede project, reference, and general entries. The inspected injection path has no relevance selection or explicit memory-count/token limit.",
+        "sources": [
+          "prime",
+          "remember"
+        ]
+      },
+      {
+        "text": "`gt forget` resolves a typed key or searches known types and calls `bd kv clear`; legacy keys are also supported. This is a key removal path; the inspected Gas Town code does not add a tombstone, preserve a prior value, or expose a memory-specific audit/history API.",
+        "sources": [
+          "forget"
+        ]
+      },
+      {
+        "text": "The memory guide tells agents to save user feedback, project context, user preferences and reference pointers, and to avoid facts recoverable from code or documentation. Stored strings have no enforced provenance or evidence format, so following that guidance does not itself establish the source or correctness of a remembered claim.",
+        "sources": [
+          "mayor",
+          "remember"
+        ]
+      },
+      {
+        "text": "Prime invokes Beads with a resolved Beads directory for the supplied work directory. The memory key format itself has no tenant, project, agent, or user scope field; effective isolation therefore depends on Beads directory/database routing and the workspace setup. The inspected code does not independently enforce caller identity or demonstrate isolation across concurrent rigs.",
+        "sources": [
+          "prime",
+          "security"
+        ]
+      },
+      {
+        "text": "Gas Town documents structured OTLP logs and metrics for agent operations, including Beads calls and durations. The inspected memory commands and injection code do not expose a distinct memory-specific telemetry contract; prime silently returns if listing memories fails, so absence of injected memory may not be surfaced by this function.",
+        "sources": [
+          "readme",
+          "prime"
+        ]
+      },
+      {
+        "text": "Source-visible full-list retrieval, sorting, bounded key syntax, and Beads delegation describe implementation only. No runtime behavior, load, latency, injection size, token use, cost, or storage consumption was measured for this review.",
+        "sources": [
+          "remember",
+          "memories",
+          "prime",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention — unmeasured. `gt prime` injects all listed memories, while `gt memories` offers substring filtering; no answerability or abstention probe was run.",
+        "sources": [
+          "prime",
+          "memories",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured. Reusing a type/key overwrites the value, but no correction workload or stale-value evaluation was run.",
+        "sources": [
+          "remember",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Deletion leakage — unmeasured. `gt forget` calls `bd kv clear`; no runtime deletion or residual-data check was performed.",
+        "sources": [
+          "forget",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Scope isolation — unmeasured. Prime routes Beads commands using a work directory, but no cross-project or cross-agent isolation test was run.",
+        "sources": [
+          "prime",
+          "security",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Evidence support and citation coverage — unmeasured. Memory values are plain strings without an enforced provenance schema; no claim-support or citation evaluation was run.",
+        "sources": [
+          "remember",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Retrieval latency and write-to-recall delay — unmeasured. The code lists values at prime time; no timing probe was run.",
+        "sources": [
+          "prime",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Token use and cost — unmeasured. Prime injects all retrieved entries and this review collected no context-size or model-cost measurements.",
+        "sources": [
+          "prime",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Storage efficiency — unmeasured. Values are persisted through Beads KV; no memory-attributed storage measurement was collected.",
+        "sources": [
+          "remember",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      "This review inspected Gas Town source and official documentation at one verified main SHA, focusing on its typed memory commands and prime-time path; it did not inspect the Beads implementation.",
+      "Storage details beyond the Beads key-value boundary, including physical tables, transaction semantics, backups, and retention, are not established by the inspected Gas Town sources.",
+      "Scope depends on how the Beads directory/database is resolved for each workspace; the review did not run multiple workspaces or verify access-control boundaries.",
+      "The full-list prime injection has no bound visible in the inspected path. Practical context growth and failure behavior were not measured.",
+      "Memory text has no intrinsic provenance, evidence, or trust-state fields. The role prompt gives authoring advice but does not enforce truthfulness or source citation.",
+      "No Gas Town runtime, benchmark, or tests were run. All project benchmark domains remain unmeasured."
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Gas Town runtime, benchmark workload, or tests were run. Source observations are not measurements.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

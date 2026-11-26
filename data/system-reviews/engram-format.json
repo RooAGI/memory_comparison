@@ -1,0 +1,410 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 225,
+    "slug": "engram-format",
+    "name": "Engram Format",
+    "repository": "https://github.com/El-AI-Intelligence/engram-format",
+    "listed_repository": "https://github.com/El-AI-Intelligence/engram-format",
+    "branch": "main",
+    "revision": "f1e92dadff542c12d37613279619adbadd412303",
+    "reviewed_at": "2026-11-25T19:27:09Z",
+    "review_timezone": "UTC (checked 2026-11-25 11:27:09 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Engram Format is the open Rust crate and specification for an encrypted SQLite vault and encrypted sync wire format used by the closed-source Engram product. The inspected crate includes capture and retrieval helpers, embeddings, a write-through associative cache, and sync data types; this review does not measure product behavior or performance.",
+    "atlas_locator": {
+      "ordinal": 225,
+      "name": "Engram Format",
+      "slug": "engram-format",
+      "listed_repository": "https://github.com/El-AI-Intelligence/engram-format",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/engram-format.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/El-AI-Intelligence/engram-format/blob/f1e92dadff542c12d37613279619adbadd412303/README.md",
+      "checked_urls": [
+        "https://github.com/El-AI-Intelligence/engram-format/blob/f1e92dadff542c12d37613279619adbadd412303/README.md"
+      ],
+      "note": "Checked the official pinned README for a published contact email; none was present. No commit/profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/El-AI-Intelligence/engram-format/blob/f1e92dadff542c12d37613279619adbadd412303/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/El-AI-Intelligence/engram-format/blob/f1e92dadff542c12d37613279619adbadd412303/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the checked official pinned README. No commit/profile metadata, third-party directory, or inferred address was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[224], ordinal 225; identity, explicit repository locator, Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/engram-format.md",
+        "symbol": "Pinned attribution source for curated locator only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/engram-format.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "",
+        "symbol": "Repository identity and main branch from official repository page; current SHA independently checked through official Git remote",
+        "url": "https://github.com/El-AI-Intelligence/engram-format"
+      },
+      {
+        "id": "head",
+        "label": "Official head commit",
+        "path": "",
+        "symbol": "GitHub commit page for verified full current main head",
+        "url": "https://github.com/El-AI-Intelligence/engram-format/commit/f1e92dadff542c12d37613279619adbadd412303"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Open crate scope, storage promise, product boundary, crate use, embedding feature; checked for published contact email",
+        "url": "https://github.com/El-AI-Intelligence/engram-format/blob/f1e92dadff542c12d37613279619adbadd412303/README.md"
+      },
+      {
+        "id": "format",
+        "label": "Pinned normative format specification",
+        "path": "FORMAT.md",
+        "symbol": "Vault schema, encryption model, retrieval indexes, capture deduplication, sync envelope and conflict model",
+        "url": "https://github.com/El-AI-Intelligence/engram-format/blob/f1e92dadff542c12d37613279619adbadd412303/FORMAT.md"
+      },
+      {
+        "id": "lib",
+        "label": "Pinned crate architecture",
+        "path": "src/lib.rs",
+        "symbol": "Crate modules, feature boundaries, QEM/EngramStore/ContextAssembler architecture",
+        "url": "https://github.com/El-AI-Intelligence/engram-format/blob/f1e92dadff542c12d37613279619adbadd412303/src/lib.rs"
+      },
+      {
+        "id": "wasm",
+        "label": "Pinned browser/WASM API",
+        "path": "src/wasm.rs",
+        "symbol": "WASM API for entry parsing, sync blob parsing, and capture noise checks",
+        "url": "https://github.com/El-AI-Intelligence/engram-format/blob/f1e92dadff542c12d37613279619adbadd412303/src/wasm.rs"
+      },
+      {
+        "id": "entry",
+        "label": "Pinned shared memory entry types",
+        "path": "src/entry.rs",
+        "symbol": "MemoryEntry fields and conversion behavior, including evidence handling",
+        "url": "https://github.com/El-AI-Intelligence/engram-format/blob/f1e92dadff542c12d37613279619adbadd412303/src/entry.rs"
+      },
+      {
+        "id": "schema",
+        "label": "Pinned SQLite schema and migrations",
+        "path": "src/schema.rs",
+        "symbol": "Engrams, evidence, annotations, FTS, tombstones, access_events, migration version",
+        "url": "https://github.com/El-AI-Intelligence/engram-format/blob/f1e92dadff542c12d37613279619adbadd412303/src/schema.rs"
+      },
+      {
+        "id": "store",
+        "label": "Pinned vault store implementation",
+        "path": "src/store.rs",
+        "symbol": "Capture gates, writes, FTS retrieval, direct get, deletion, tombstones, metrics and hybrid queries",
+        "url": "https://github.com/El-AI-Intelligence/engram-format/blob/f1e92dadff542c12d37613279619adbadd412303/src/store.rs"
+      },
+      {
+        "id": "trait",
+        "label": "Pinned backend query contract",
+        "path": "src/trait.rs",
+        "symbol": "Query fields and MemoryBackend interface",
+        "url": "https://github.com/El-AI-Intelligence/engram-format/blob/f1e92dadff542c12d37613279619adbadd412303/src/trait.rs"
+      },
+      {
+        "id": "adapter",
+        "label": "Pinned backend adapter",
+        "path": "src/adapter.rs",
+        "symbol": "Search dispatch, supported query fields, get/retrieve mapping and decay/consolidation delegation",
+        "url": "https://github.com/El-AI-Intelligence/engram-format/blob/f1e92dadff542c12d37613279619adbadd412303/src/adapter.rs"
+      },
+      {
+        "id": "engram",
+        "label": "Pinned core memory model",
+        "path": "src/engram.rs",
+        "symbol": "Memory layers, source, privacy, imagined/grounded state, constructors",
+        "url": "https://github.com/El-AI-Intelligence/engram-format/blob/f1e92dadff542c12d37613279619adbadd412303/src/engram.rs"
+      },
+      {
+        "id": "embed",
+        "label": "Pinned embedding implementation",
+        "path": "src/embed.rs",
+        "symbol": "No-op and local Candle embedder; graceful FTS-only fallback",
+        "url": "https://github.com/El-AI-Intelligence/engram-format/blob/f1e92dadff542c12d37613279619adbadd412303/src/embed.rs"
+      },
+      {
+        "id": "noise",
+        "label": "Pinned capture filtering and deduplication",
+        "path": "src/noise.rs",
+        "symbol": "Noise filtering, normalized content hash, tag normalization",
+        "url": "https://github.com/El-AI-Intelligence/engram-format/blob/f1e92dadff542c12d37613279619adbadd412303/src/noise.rs"
+      },
+      {
+        "id": "qem",
+        "label": "Pinned QEM cache implementation",
+        "path": "src/qem.rs",
+        "symbol": "32-bit XOR cache, write-through, warm behavior, counters and capacity",
+        "url": "https://github.com/El-AI-Intelligence/engram-format/blob/f1e92dadff542c12d37613279619adbadd412303/src/qem.rs"
+      },
+      {
+        "id": "sync",
+        "label": "Pinned sync wire types",
+        "path": "src/sync.rs",
+        "symbol": "Encrypted blob envelope and push/pull request and response types",
+        "url": "https://github.com/El-AI-Intelligence/engram-format/blob/f1e92dadff542c12d37613279619adbadd412303/src/sync.rs"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation domains and definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Evaluation fixture, not an Engram Format result",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status, not an Engram Format result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The repository identifies EL AI Intelligence, LLC in the README copyright and describes this repository as the open format and Rust crate behind a separate closed-source Engram product (daemon, relay, browser vault, and MCP servers). No individual maintainer identity is inferred.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The crate exposes a native SQLCipher storage feature and a pure format/browser WASM feature; it is a library and reference implementation, not the complete Engram service.",
+        "sources": [
+          "readme",
+          "lib"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The code documents three layers: `QemCache` as an L1 associative cache, `EngramStore` as an encrypted SQLite/FTS5/vector store, and `ContextAssembler` as a token-budgeted retrieval layer. The README separately says the daemon and product interfaces are closed source, so this repository cannot establish their end-to-end behavior.",
+        "sources": [
+          "lib",
+          "readme"
+        ]
+      },
+      {
+        "text": "The reference vault stores engrams with content, capture context, layer/source, strength, valence, retrieval count, imagined/grounded flags, project, tags, scope, timestamps, privacy level, and optional agent identity. Related tables hold embeddings, links, evidence pairs, annotations, app metrics, tombstones, access events, and FTS5 search text.",
+        "sources": [
+          "schema",
+          "format",
+          "engram"
+        ]
+      },
+      {
+        "text": "The README and format specification describe SQLCipher encryption at rest and local key derivation. The specification distinguishes machine-ID-derived keys, which it says protect against offline disk cloning but not a local user, from passphrase vaults using Argon2id. These are design statements; this review did not independently cryptographically audit the implementation.",
+        "sources": [
+          "readme",
+          "format",
+          "store"
+        ]
+      },
+      {
+        "text": "The README states crate version 0.1.4 in its usage example while the inspected Cargo manifest is 0.1.6; the FORMAT introduction says schema version 9 while its schema section and implementation identify version 10. The local implementation and documentation therefore have version drift.",
+        "sources": [
+          "readme",
+          "format",
+          "schema"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "`EngramStore::write` runs capture gates for episodic entries: noise filtering, normalized-content hash deduplication, and optional near-duplicate checks when an embedding is supplied. Duplicate captures strengthen an existing row; successful writes upsert the engram, synchronize FTS text, optionally store embeddings, and add carried or inferred links. `write_curated` bypasses the capture gates for reviewed changes.",
+        "sources": [
+          "store",
+          "noise"
+        ]
+      },
+      {
+        "text": "The visible crate exposes upsert-style writes and curated rewrites; it does not expose a general-purpose patch API in the inspected public backend contract. `get` returns a memory by ID and touches retrieval counters/timestamps. FTS5 content search has a LIKE fallback for queries the FTS parser cannot handle; vector search is a separate path.",
+        "sources": [
+          "store",
+          "trait",
+          "adapter"
+        ]
+      },
+      {
+        "text": "`delete` removes the engram and related indexed data and records a tombstone transactionally; `delete_without_tombstone` is a distinct lower-level option. The format describes tombstones as the mechanism preventing a deleted row from reappearing after sync, but this review did not exercise relay acknowledgment or deletion across devices.",
+        "sources": [
+          "store",
+          "schema",
+          "format"
+        ]
+      },
+      {
+        "text": "The store includes daily strength/decay hygiene, weekly promotion/pruning, explicit relation lookup, FTS retrieval, vector similarity, and `surface_relevant` scoring. QEM uses 32-bit XOR codes for associative lookup and writes through to the persistent backend before caching; its code describes collisions as acceptable for a cache. No retrieval answers were evaluated.",
+        "sources": [
+          "store",
+          "format",
+          "qem"
+        ]
+      },
+      {
+        "text": "The format records `project`, `scope`, privacy level, and agent identity, but the generic `Query` includes project and scope fields that the `EngramStoreAdapter::search` implementation does not apply: it dispatches only on layer, text, tags, or list. The adapter calls unfiltered store methods, whose default quarantine filter is `All`. Thus those fields do not provide enforced isolation through this generic search path.",
+        "sources": [
+          "trait",
+          "adapter",
+          "store",
+          "schema"
+        ]
+      },
+      {
+        "text": "The store schema has `memory_evidence` and `annotations` tables, and access events record a memory ID, operation, client, content hash, and time without storing memory text. However, `MemoryEntry::from(Engram)` initializes evidence to an empty vector, and the inspected generic contract does not load those evidence pairs into returned entries. Stored relations/provenance therefore should not be mistaken for citations attached to retrieved claims.",
+        "sources": [
+          "schema",
+          "entry",
+          "adapter"
+        ]
+      },
+      {
+        "text": "The QEM implementation keeps hit/miss counters and the store tracks capture-skip counters and access events. These are code-level instrumentation points; the inspected crate does not establish a surfaced monitoring dashboard, retention policy, or operational alerting behavior.",
+        "sources": [
+          "qem",
+          "store",
+          "schema"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "FTS, vector, and context-surface paths are present; no answers or abstentions were scored.",
+        "sources": [
+          "store",
+          "adapter",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Upsert and curated-write paths exist; no correction sequence or stale-value rate was measured.",
+        "sources": [
+          "store",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Local tombstone code is present; no post-delete recall probes or replica cleanup audit were performed.",
+        "sources": [
+          "store",
+          "sync",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Project/scope fields are represented, but the generic adapter omits those filters; no isolation workload was run.",
+        "sources": [
+          "trait",
+          "adapter",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Evidence relationships can be stored, but the adapter conversion drops them from MemoryEntry; no claim-evidence adjudication was done.",
+        "sources": [
+          "schema",
+          "entry",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No runtime timing data was collected.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "No workload, token, cost, or storage measurements were collected.",
+        "sources": [
+          "readme",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected the public Rust crate and its format documentation, not the closed-source daemon, relay, MCP servers, or browser vault. It cannot establish how the product wires these components or enforces product-level controls.",
+        "sources": [
+          "readme",
+          "lib"
+        ]
+      },
+      {
+        "text": "The generic adapter's omitted project/scope filters and unfiltered default quarantine behavior are source observations for that path; callers may use other APIs. No application-level security or tenant-isolation conclusion is made beyond the inspected code.",
+        "sources": [
+          "trait",
+          "adapter",
+          "store"
+        ]
+      },
+      {
+        "text": "Evidence tables and sync structures describe storage formats, not factual validity, source citation quality, encryption resistance to attacks, or correctness under crashes and multi-device conflict. Those properties were not experimentally verified.",
+        "sources": [
+          "schema",
+          "entry",
+          "format",
+          "sync"
+        ]
+      },
+      {
+        "text": "The current repository head was verified, but GitHub REST API metadata requests returned HTTP 403 during review. The Git remote's advertised HEAD and shallow checkout agreed on branch `main` and full SHA; no API response was used as corroboration.",
+        "sources": [
+          "repo",
+          "head"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Engram Format system, tests, or benchmarks were run. Source inspection and format claims are not measured results."
+    }
+  }
+}

@@ -1,0 +1,368 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "agents-memory",
+    "name": "agents-memory",
+    "repository": "https://github.com/Lolaplex/agents-memory",
+    "branch": "main",
+    "revision": "7973f746e768e2e931839054391899467410f709",
+    "reviewed_at": "2026-11-24T19:22:30Z",
+    "review_timezone": "UTC (2026-11-24 11:22:30 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "agents-memory is a local, Markdown-first memory vault with a Python MCP server and CLI. It separates global user memory from per-repository notes, builds a disposable SQLite FTS5 index for retrieval, and uses staging and explicit distillation to move selected material into typed files. This review is based on selected source and documentation at a verified repository revision; no runtime results were collected.",
+    "atlas_locator": {
+      "ordinal": 30,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agents-memory.md",
+      "listed_repository": "https://github.com/Lolaplex/agents-memory"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/Lolaplex/agents-memory/security/policy",
+      "checked_urls": [
+        "https://github.com/Lolaplex/agents-memory/blob/7973f746e768e2e931839054391899467410f709/README.md",
+        "https://github.com/Lolaplex/agents-memory/security/policy"
+      ],
+      "note": "No published contact email was found in the official README or the official repository security-policy page. The README's ADMIN_EMAIL example is an installation placeholder, not a project contact."
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical public GitHub repository",
+        "path": "repository",
+        "symbol": "Lolaplex/agents-memory; repository page identifies main as the default branch",
+        "url": "https://github.com/Lolaplex/agents-memory"
+      },
+      {
+        "id": "head",
+        "label": "Verified current main head",
+        "path": "commit",
+        "symbol": "full current head 7973f746e768e2e931839054391899467410f709",
+        "url": "https://github.com/Lolaplex/agents-memory/commit/7973f746e768e2e931839054391899467410f709"
+      },
+      {
+        "id": "head-feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "feed identifies 7973f746e768e2e931839054391899467410f709 as latest main commit",
+        "url": "https://github.com/Lolaplex/agents-memory/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "vault overview, integrations, CLI, MCP surface and supported ingestion boundaries",
+        "url": "https://github.com/Lolaplex/agents-memory/blob/7973f746e768e2e931839054391899467410f709/README.md"
+      },
+      {
+        "id": "mcp-contract",
+        "label": "MCP tool contract",
+        "path": "abi/MCP.md",
+        "symbol": "tool arguments and semantics for search, mutation, scope, rules and relations",
+        "url": "https://github.com/Lolaplex/agents-memory/blob/7973f746e768e2e931839054391899467410f709/abi/MCP.md"
+      },
+      {
+        "id": "layout",
+        "label": "Memory layout contract",
+        "path": "abi/LAYOUT.md",
+        "symbol": "global and per-repository typed Markdown directories and mutability guidance",
+        "url": "https://github.com/Lolaplex/agents-memory/blob/7973f746e768e2e931839054391899467410f709/abi/LAYOUT.md"
+      },
+      {
+        "id": "hygiene",
+        "label": "Memory hygiene contract",
+        "path": "abi/HYGIENE.md",
+        "symbol": "evidence/inbox/memory lifetimes, extraction filters, provenance fields and index-as-cache law",
+        "url": "https://github.com/Lolaplex/agents-memory/blob/7973f746e768e2e931839054391899467410f709/abi/HYGIENE.md"
+      },
+      {
+        "id": "store",
+        "label": "Memory store implementation",
+        "path": "src/agents_memory/store.py",
+        "symbol": "store roots, path layout, atomic file writer and storage operations",
+        "url": "https://github.com/Lolaplex/agents-memory/blob/7973f746e768e2e931839054391899467410f709/src/agents_memory/store.py"
+      },
+      {
+        "id": "index",
+        "label": "Search index implementation",
+        "path": "src/agents_memory/index.py",
+        "symbol": "SQLite FTS5 cache schema, tokenizer, rebuildable index and relation lookup",
+        "url": "https://github.com/Lolaplex/agents-memory/blob/7973f746e768e2e931839054391899467410f709/src/agents_memory/index.py"
+      },
+      {
+        "id": "mcp-server",
+        "label": "MCP server implementation",
+        "path": "src/agents_memory/mcp_server.py",
+        "symbol": "MCP tool handlers, sync behavior, startup index rebuild and optional agents-traces integration",
+        "url": "https://github.com/Lolaplex/agents-memory/blob/7973f746e768e2e931839054391899467410f709/src/agents_memory/mcp_server.py"
+      },
+      {
+        "id": "ingest",
+        "label": "Official ingest contract",
+        "path": "abi/INGEST.md",
+        "symbol": "catalog and extraction boundaries, staging, source support and retained chat-body locations",
+        "url": "https://github.com/Lolaplex/agents-memory/blob/7973f746e768e2e931839054391899467410f709/abi/INGEST.md"
+      },
+      {
+        "id": "contact-readme",
+        "label": "Official README checked for a contact email",
+        "path": "README.md",
+        "symbol": "checked for a published project contact; no address found",
+        "url": "https://github.com/Lolaplex/agents-memory/blob/7973f746e768e2e931839054391899467410f709/README.md"
+      },
+      {
+        "id": "contact-security",
+        "label": "Official GitHub security policy page checked for a contact email",
+        "path": "repository security policy",
+        "symbol": "GitHub reports that this repository has not set up a SECURITY.md file; no email published",
+        "url": "https://github.com/Lolaplex/agents-memory/security/policy"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "metric domains for the separate project benchmark protocol",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "shared execution status; not a result for agents-memory",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned workload only; no agents-memory workload was run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated system roster",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 30 identity, listed repository locator and Atlas source attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas-entry",
+        "label": "Roster-provided Atlas attribution",
+        "path": "content/systems/agents-memory.md",
+        "symbol": "used to retain catalog attribution only; descriptions, marks and layout were not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agents-memory.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes agents-memory as a local Markdown memory layer for coding agents, served through a Python MCP server and a CLI. It presents the MCP process as an interface to the on-disk vault rather than a separate source of truth. No individual maintainer identity is asserted.",
+        "sources": [
+          "readme",
+          "mcp-server"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The layout separates a global user store under ~/.agents/memory from each repository's .agents/memory tree. The user side holds cross-cutting concepts, entities, workflows, project links and personal notes; repository stores hold staging, research, ordered plans/tasks/waves/roadmaps, decisions and lifecycle notes. Markdown files are the durable store, and the directory path encodes the note's type.",
+        "sources": [
+          "readme",
+          "layout",
+          "store"
+        ]
+      },
+      {
+        "text": "The Python package provides the reference FastMCP server, CLI operations, ingestion, synchronization, rules rendering and project inventory. Its SQLite FTS5 index is a disposable cache under the user store's .index directory; the implementation defines a document table and FTS5 table, and configures SQLite WAL with NORMAL synchronization. The server attempts to rebuild the index on startup. These are code observations, not durability or performance measurements.",
+        "sources": [
+          "readme",
+          "index",
+          "mcp-server"
+        ]
+      },
+      {
+        "text": "Memory files can carry a closed set of YAML frontmatter fields for identity, relations, project association, provenance, verification date and correction/addition/deletion pin type. Explicit relations include refs, supersedes and same_as. The index parses Markdown headings and frontmatter to support lookup and related-memory features.",
+        "sources": [
+          "hygiene",
+          "index",
+          "mcp-contract"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: add_memory files text into a typed location and auto-syncs the generated host context. It requires kind and name for user-taxonomy entries, or a project scope for in-tree notes. Existing revise-in-place categories such as research, decisions, ADRs and implemented notes must be rewritten with write_memory_file instead of appended again. That raw write API can overwrite memory files, while the MCP contract refuses direct writes to hard-rule files.",
+        "sources": [
+          "mcp-contract",
+          "layout",
+          "mcp-server"
+        ]
+      },
+      {
+        "text": "Update and delete: write_memory_file replaces a file's text. delete_memory accepts an ID returned by search and removes a bullet line; the ID includes a content hash so the target can be re-found if preceding lines shift. The contract also accepts older ID forms. This review did not establish a tombstone or cross-device deletion guarantee for the decoupled sync package.",
+        "sources": [
+          "mcp-contract",
+          "store"
+        ]
+      },
+      {
+        "text": "Retrieval: search_memory searches local Markdown, defaulting to the user store. The documented path tries exact substring matches first, returns at most two exact hits per file using stable hash-anchored IDs, and then fills from ranked SQLite FTS5 results. get_related follows explicit frontmatter relations and can also return related documents from content overlap; it is not semantic vector retrieval. The README says chat bodies are not searched as memory.",
+        "sources": [
+          "mcp-contract",
+          "readme",
+          "index"
+        ]
+      },
+      {
+        "text": "Scope selectors: an omitted project selects the user store; a slug adds that repository's in-tree memory to the user store; project=* (or all) includes every registered clone. The tool contract explicitly cautions against leaking all clones on an unqualified search. These are caller-selected search scopes, not an authenticated authorization boundary.",
+        "sources": [
+          "mcp-contract",
+          "store"
+        ]
+      },
+      {
+        "text": "Ingestion keeps original chat bodies in their product folders. Catalog ingestion records titles and paths; extraction filters user-authored durable lines into a staging inbox. The hygiene contract says to drop assistant/model turns, tool material, system prompts, large code dumps, PII patterns, how-to prompts and duplicates. A person or agent must explicitly distill staging into a typed destination; ingestion itself does not make durable facts.",
+        "sources": [
+          "readme",
+          "ingest",
+          "hygiene"
+        ]
+      },
+      {
+        "text": "Hard rules have a separate proposal path: propose_rule stages a one-line proposal and the user applies it with the CLI. The renderer injects bounded rule text into host instruction surfaces. The contract forbids generic memory writes from directly modifying those rule files.",
+        "sources": [
+          "mcp-contract",
+          "readme",
+          "mcp-server"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "The source documents substring and ranked FTS5 retrieval, but this review ran no answerable or unsupported query probes.",
+        "sources": [
+          "mcp-contract",
+          "index",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "The layout defines revision-in-place guidance and relations such as supersedes, but no correction or stale-value adjudication was performed.",
+        "sources": [
+          "layout",
+          "hygiene",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The API documents line deletion by a content-hash ID; no deletion probes or checks of external copies and synchronization were run.",
+        "sources": [
+          "mcp-contract",
+          "store",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Search exposes user, per-project and all-project selectors. No isolation probes or deployment authorization checks were performed.",
+        "sources": [
+          "mcp-contract",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Frontmatter can record provenance and verification dates and files can reference sources, but this review did not assess whether a stored claim is supported or cited answers are complete.",
+        "sources": [
+          "hygiene",
+          "index",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The source exposes an exact-match leg, a SQLite FTS5 ranking leg and a startup rebuild path. No timings or write-to-search delay measurements were collected.",
+        "sources": [
+          "mcp-contract",
+          "index",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost and storage",
+        "status": "unmeasured",
+        "evidence": "The design stores Markdown locally and builds an SQLite search cache, but no token, provider-cost or storage measurements were collected.",
+        "sources": [
+          "layout",
+          "index",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded inspection of selected official documentation and source at the verified main revision. It does not establish end-to-end runtime correctness, retrieval quality, performance, concurrent-write behavior, synchronization completeness or recovery guarantees.",
+        "sources": [
+          "head",
+          "readme",
+          "mcp-server",
+          "record"
+        ]
+      },
+      {
+        "text": "Project scope is supplied as a search argument. The documented default is the user store, and the all-project mode broadens the search. The inspected contract describes selection semantics, not caller identity enforcement; isolation across agents or users remains unknown.",
+        "sources": [
+          "mcp-contract",
+          "store"
+        ]
+      },
+      {
+        "text": "The provenance fields identify a declared source or verification date, but the review found no citation-support adjudication contract. A relation or provenance label does not by itself prove that a memory remains accurate.",
+        "sources": [
+          "hygiene",
+          "index"
+        ]
+      },
+      {
+        "text": "The contact check covered only the official repository README and its official GitHub security-policy page. The README's ADMIN_EMAIL placeholder was not treated as a contact address. No email was published on those checked sources.",
+        "sources": [
+          "contact-readme",
+          "contact-security"
+        ]
+      },
+      {
+        "text": "The curated roster entry supplied ordinal, listed locator and Atlas attribution only. Atlas descriptions, marks and layout were excluded from assessment evidence.",
+        "sources": [
+          "roster",
+          "atlas-entry"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status: not run for agents-memory in this task. The project [metric definitions](../METRICS.md), [execution-status record](../results/initial-baselines-status.json) and [planned fixture](../fixtures/memory-benchmark-v1.json) describe the separate project protocol, not measured agents-memory results. No system execution, benchmark, or tests were run.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

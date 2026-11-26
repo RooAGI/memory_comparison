@@ -1,0 +1,387 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 243,
+    "slug": "flowix",
+    "name": "Flowix",
+    "repository": "https://github.com/text2future/flowix",
+    "branch": "main",
+    "revision": "2318ff8cf02ac21650d2501e8ae1ff167d1c1aac",
+    "reviewed_at": "2026-11-25T23:41:08Z",
+    "review_timezone": "UTC (2026-11-25 15:41:08 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Flowix is an agent-workspace application whose local MCP/CLI interface lets agents search and manage Markdown notes and structured collections inside configured notebooks. Markdown files are canonical note content, with a rebuildable SQLite projection for indexed access.",
+    "atlas_locator": {
+      "ordinal": 243,
+      "name": "Flowix",
+      "slug": "flowix",
+      "listed_repository": "https://github.com/text2future/flowix",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/flowix.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/text2future/flowix/blob/2318ff8cf02ac21650d2501e8ae1ff167d1c1aac/README.en.md",
+      "https://flowix.cc/"
+    ],
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/text2future/flowix/blob/2318ff8cf02ac21650d2501e8ae1ff167d1c1aac/README.en.md",
+      "note": "The official README at the reviewed commit and official project website were checked for a published contact email; neither listed one. No address was inferred from commit or profile metadata or third-party directories."
+    },
+    "who_what": [
+      {
+        "text": "The public project is maintained under the Text2Future GitHub organization. It is an open-source desktop/workspace application with a local CLI and an MCP bundle. The bundle starts flowix-cli over stdio and reads the configured local notebook data; its documentation describes memo search/read/create/edit and collection access, not a remote Flowix memory service.",
+        "sources": [
+          "repo",
+          "head",
+          "readme",
+          "website",
+          "mcp-doc"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Notebook registry metadata is stored in a device-local SQLite database at the Flowix config directory's db/local.db. Each notebook is a separately configured directory. Markdown files are canonical note content; the per-notebook SQLite note index is a rebuildable projection and does not supply note bytes. The projection stores note path and metadata including title, preview, timestamps, tags, todos, and agent labels.",
+        "sources": [
+          "registry",
+          "index"
+        ]
+      },
+      {
+        "text": "The MCP bundle exposes a structured memo tool with note discovery, list/tags/show/search, create/edit/write/delete, collection list/describe/query/read and mutation, and artifact actions. Collections expose typed fields and records across note, media, and work-document domains. This workspace data model does not impose a fact ontology or claim-level evidence schema.",
+        "sources": [
+          "mcp-doc",
+          "schema",
+          "collections"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: note creation writes Markdown in a selected notebook and optional folder, defaulting the title to Untitled. Addresses can be notebook-relative or explicitly notebook-qualified. The resolver rejects empty, absolute, dot, and parent-traversal paths and checks that the notebook directory is available. Collection actions separately support typed collection creation and record or note additions.",
+        "sources": [
+          "path-store",
+          "schema",
+          "collections"
+        ]
+      },
+      {
+        "text": "Update and correction: edit replaces exact nonempty text only when it occurs exactly once. Full-note write checks an optional SHA-256 body version and saves against the current body; a concurrent change returns a conflict rather than silently overwriting it. MCP requires expectedVersion for write and delete. The inspected note interface does not establish a fact-level correction history or current-value adjudication.",
+        "sources": [
+          "path-store",
+          "mcp",
+          "schema"
+        ]
+      },
+      {
+        "text": "Delete: the addressed note is version-checked and passed to the core checked-delete operation. This is file deletion; the inspected path does not establish erasure from backups, external copies, or synchronized replicas. Collection deletion behavior was outside this note-operation inspection.",
+        "sources": [
+          "path-store"
+        ]
+      },
+      {
+        "text": "Retrieval: search accepts query text and optional notebook and tag filters. Without a notebook filter it selects all available configured notebooks, reconciles each note index, and returns matching titles, snippets, paths, and notebook-qualified addresses; show returns the Markdown body. List/search paging uses offsets and a snapshot token to detect changed results. Source inspection does not measure retrieval quality.",
+        "sources": [
+          "path-store",
+          "index",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Scope: notebooks organize note directories and explicit addresses bind operations to a notebook. Search can be narrowed to one notebook, but the default search spans all available notebooks. The MCP source states that MCP access is not a filesystem sandbox and hosts must restrict other entry points separately. No user/project authorization guarantee or cross-scope leakage result was established.",
+        "sources": [
+          "path-store",
+          "mcp",
+          "registry"
+        ]
+      },
+      {
+        "text": "Provenance and evidence: the note projection exposes timestamps, tags, todos, and agent labels, while Markdown remains the content source. The inspected note schema and MCP operations do not require claim-level citations, source passages, confidence, review state, or correction history. User-authored notes may contain those details, but retrieved assertions are not guaranteed to carry supporting evidence.",
+        "sources": [
+          "index",
+          "schema"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: canonical Markdown plus a rebuildable per-notebook SQLite projection supports indexed access; searches reconcile the projection first. The MCP surface provides bounded results, snapshot-aware paging, and process-local request-ID deduplication for collection additions. These are implementation observations only; the inspected paths do not establish latency, storage overhead, token/cost accounting, or memory-quality telemetry.",
+        "sources": [
+          "index",
+          "path-store",
+          "mcp",
+          "schema"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy",
+        "status": "unmeasured",
+        "evidence": "No answerable retrieval workload or adjudication was run.",
+        "sources": [
+          "path-store",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Abstention on unanswerable questions",
+        "status": "unmeasured",
+        "evidence": "No unanswerable-query workload or abstention calibration was measured.",
+        "sources": [
+          "path-store",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Version-checked note edits are visible in source, but no post-correction current-value or stale-result probes were run.",
+        "sources": [
+          "path-store",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The note delete path was inspected, but no post-delete leakage probes or replica/backup audit were run.",
+        "sources": [
+          "path-store",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation leakage",
+        "status": "unmeasured",
+        "evidence": "Notebook filters exist; no forbidden cross-notebook, cross-user, or cross-project probes were run.",
+        "sources": [
+          "path-store",
+          "mcp",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "The inspected interface does not require claim-level evidence; no response-claim adjudication workload was run.",
+        "sources": [
+          "schema",
+          "index",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No operation latency distribution was collected.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No acknowledged-write to first-correct-recall timing was collected.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Input/output tokens",
+        "status": "unmeasured",
+        "evidence": "No token usage was measured.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Provider cost",
+        "status": "unmeasured",
+        "evidence": "No provider charges or price schedule were measured.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Persistent storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Markdown and SQLite storage boundaries were inspected, but no corpus-attributable storage size was measured.",
+        "sources": [
+          "index",
+          "registry",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code/documentation",
+        "evidence": "Markdown-backed notes, rebuildable SQLite indexing, reconciliation, snapshot paging, and process-local collection deduplication are implementation observations, not quantified results.",
+        "sources": [
+          "index",
+          "path-store",
+          "mcp",
+          "schema"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded, read-only inspection of official documentation, the memory bundle and schema, path-based note operations, notebook registry, and note index at the verified repository head. Flowix, its tests, and benchmarks were not run.",
+        "sources": [
+          "readme",
+          "mcp-doc",
+          "path-store",
+          "metrics"
+        ]
+      },
+      {
+        "text": "The review cannot establish end-to-end retrieval correctness, calibrated abstention, correction accuracy, physical erasure across copies, authorization isolation, latency, cost, storage efficiency, or production behavior. Atlas descriptions and assessment are not used as evidence.",
+        "sources": [
+          "roster",
+          "path-store",
+          "mcp",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is not_run. No Flowix runtime, tests, or benchmark workload was run. Project metric definitions, fixture, and execution-status record are protocol/status references, not Flowix results.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "roster",
+        "label": "Curated catalog identity, locator, and Atlas attribution",
+        "path": "../data/memory-systems.json",
+        "symbol": "systems[242], ordinal 243",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "repo",
+        "label": "Official Flowix GitHub repository",
+        "path": "repository",
+        "symbol": "text2future/flowix",
+        "url": "https://github.com/text2future/flowix"
+      },
+      {
+        "id": "head",
+        "label": "Official main commit feed and current head",
+        "path": "refs/heads/main",
+        "symbol": "main at full SHA 2318ff8cf02ac21650d2501e8ae1ff167d1c1aac",
+        "url": "https://github.com/text2future/flowix/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Official README at reviewed commit",
+        "path": "README.en.md",
+        "symbol": "workspace product description",
+        "url": "https://github.com/text2future/flowix/blob/2318ff8cf02ac21650d2501e8ae1ff167d1c1aac/README.en.md"
+      },
+      {
+        "id": "website",
+        "label": "Official Flowix website",
+        "path": "website",
+        "symbol": "product overview and contact footer checked",
+        "url": "https://flowix.cc/"
+      },
+      {
+        "id": "mcp-doc",
+        "label": "Official Flowix MCP memory bundle documentation",
+        "path": "dsh-flowix-memory/README.md",
+        "symbol": "local stdio bridge, memo actions, notebook configuration",
+        "url": "https://github.com/text2future/flowix/blob/2318ff8cf02ac21650d2501e8ae1ff167d1c1aac/dsh-flowix-memory/README.md"
+      },
+      {
+        "id": "schema",
+        "label": "MCP memo tool schema",
+        "path": "dsh-flowix-memory/memo-tool-schema.json",
+        "symbol": "action schema and process-local requestId description",
+        "url": "https://github.com/text2future/flowix/blob/2318ff8cf02ac21650d2501e8ae1ff167d1c1aac/dsh-flowix-memory/memo-tool-schema.json"
+      },
+      {
+        "id": "path-store",
+        "label": "Path-addressed CLI/MCP note operations",
+        "path": "app/flowix-cli/src/path_store.rs",
+        "symbol": "address, create, edit, write, delete, search",
+        "url": "https://github.com/text2future/flowix/blob/2318ff8cf02ac21650d2501e8ae1ff167d1c1aac/app/flowix-cli/src/path_store.rs"
+      },
+      {
+        "id": "index",
+        "label": "Rebuildable Markdown-derived note index",
+        "path": "app/flowix-core/src/memo_file/note_index.rs",
+        "symbol": "note index projection and metadata",
+        "url": "https://github.com/text2future/flowix/blob/2318ff8cf02ac21650d2501e8ae1ff167d1c1aac/app/flowix-core/src/memo_file/note_index.rs"
+      },
+      {
+        "id": "registry",
+        "label": "Device-local notebook registry",
+        "path": "app/flowix-core/src/memo_file/notebook_registry.rs",
+        "symbol": "registry SQLite path and notebook configuration",
+        "url": "https://github.com/text2future/flowix/blob/2318ff8cf02ac21650d2501e8ae1ff167d1c1aac/app/flowix-core/src/memo_file/notebook_registry.rs"
+      },
+      {
+        "id": "mcp",
+        "label": "MCP access and operation policy",
+        "path": "app/flowix-cli/src/mcp.rs",
+        "symbol": "read/write/delete actions, expectedVersion, filesystem sandbox boundary",
+        "url": "https://github.com/text2future/flowix/blob/2318ff8cf02ac21650d2501e8ae1ff167d1c1aac/app/flowix-cli/src/mcp.rs"
+      },
+      {
+        "id": "collections",
+        "label": "Collection access and validation",
+        "path": "app/flowix-cli/src/collection_store.rs",
+        "symbol": "typed collection operations",
+        "url": "https://github.com/text2future/flowix/blob/2318ff8cf02ac21650d2501e8ae1ff167d1c1aac/app/flowix-cli/src/collection_store.rs"
+      },
+      {
+        "id": "metrics",
+        "label": "Project benchmark metric definitions",
+        "path": "../METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture protocol",
+        "path": "../fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "../results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ]
+  }
+}

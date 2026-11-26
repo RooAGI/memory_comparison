@@ -1,0 +1,7 @@
+{
+  "name":"memory-systems-comparison","private":true,"version":"1.0.0","type":"module",
+  "scripts":{"dev":"vite","build":"vite build && node scripts/copy-site-assets.mjs","preview":"vite preview"},
+  "dependencies":{"react":"^19.1.0","react-dom":"^19.1.0"},
+  "devDependencies":{"vite":"^7.0.0"},
+  "engines":{"node":"^20.19.0 || >=22.12.0"}
+}

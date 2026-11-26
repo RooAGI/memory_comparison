@@ -1,0 +1,328 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "agentictrading",
+    "name": "AgenticTrading",
+    "repository": "https://github.com/Open-Finance-Lab/AgenticTrading",
+    "branch": "main",
+    "revision": "9d8fce579dbd57b88a2b6c5f7a19740f62615cbe",
+    "reviewed_at": "2026-11-24T18:53:59Z",
+    "review_timezone": "UTC (2026-11-24 10:53:59 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/Open-Finance-Lab/AgenticTrading/blob/9d8fce579dbd57b88a2b6c5f7a19740f62615cbe/README.md","checked_urls":["https://github.com/Open-Finance-Lab/AgenticTrading/blob/9d8fce579dbd57b88a2b6c5f7a19740f62615cbe/README.md","https://github.com/Open-Finance-Lab/AgenticTrading/blob/9d8fce579dbd57b88a2b6c5f7a19740f62615cbe/SECURITY.md","https://github.com/Open-Finance-Lab/AgenticTrading/blob/9d8fce579dbd57b88a2b6c5f7a19740f62615cbe/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "A trading-agent research platform whose FinAgent Memory subsystem uses a Neo4j graph behind REST, MCP, and A2A interfaces. This review reports code and documentation observations; no benchmark results were collected.",
+    "atlas_locator": {
+      "ordinal": 20,
+      "name": "AgenticTrading",
+      "slug": "agentictrading",
+      "listed_repository": "https://github.com/Open-Finance-Lab/AgenticTrading",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agentictrading.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/Open-Finance-Lab/AgenticTrading/blob/9d8fce579dbd57b88a2b6c5f7a19740f62615cbe/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/Open-Finance-Lab/AgenticTrading/blob/9d8fce579dbd57b88a2b6c5f7a19740f62615cbe/README.md",
+      "https://github.com/Open-Finance-Lab/AgenticTrading/blob/9d8fce579dbd57b88a2b6c5f7a19740f62615cbe/orchestration/README.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical GitHub repository",
+        "path": "repository",
+        "url": "https://github.com/Open-Finance-Lab/AgenticTrading"
+      },
+      {
+        "id": "head",
+        "label": "Verified current main head commit",
+        "path": "commit",
+        "symbol": "9d8fce579dbd57b88a2b6c5f7a19740f62615cbe",
+        "url": "https://github.com/Open-Finance-Lab/AgenticTrading/commit/9d8fce579dbd57b88a2b6c5f7a19740f62615cbe"
+      },
+      {
+        "id": "readme",
+        "label": "Official project README",
+        "path": "README.md",
+        "url": "https://github.com/Open-Finance-Lab/AgenticTrading/blob/9d8fce579dbd57b88a2b6c5f7a19740f62615cbe/README.md"
+      },
+      {
+        "id": "orchestration",
+        "label": "FinAgent orchestration overview and contact section",
+        "path": "orchestration/README.md",
+        "url": "https://github.com/Open-Finance-Lab/AgenticTrading/blob/9d8fce579dbd57b88a2b6c5f7a19740f62615cbe/orchestration/README.md"
+      },
+      {
+        "id": "memory_readme",
+        "label": "FinAgent Memory documentation",
+        "path": "orchestration/FinAgents/memory/README.md",
+        "url": "https://github.com/Open-Finance-Lab/AgenticTrading/blob/9d8fce579dbd57b88a2b6c5f7a19740f62615cbe/orchestration/FinAgents/memory/README.md"
+      },
+      {
+        "id": "manager",
+        "label": "Unified Neo4j memory manager",
+        "path": "orchestration/FinAgents/memory/unified_database_manager.py",
+        "symbol": "store_memory, retrieve_memory, retrieve_memory_with_expansion, filter_memories, prune_memories, _semantic_search",
+        "url": "https://github.com/Open-Finance-Lab/AgenticTrading/blob/9d8fce579dbd57b88a2b6c5f7a19740f62615cbe/orchestration/FinAgents/memory/unified_database_manager.py"
+      },
+      {
+        "id": "indexer",
+        "label": "Memory indexing and semantic retrieval",
+        "path": "orchestration/FinAgents/memory/intelligent_memory_indexer.py",
+        "symbol": "IntelligentMemoryIndexer.index_memory, semantic_search",
+        "url": "https://github.com/Open-Finance-Lab/AgenticTrading/blob/9d8fce579dbd57b88a2b6c5f7a19740f62615cbe/orchestration/FinAgents/memory/intelligent_memory_indexer.py"
+      },
+      {
+        "id": "memory_server",
+        "label": "REST/MCP memory server tools",
+        "path": "orchestration/FinAgents/memory/memory_server.py",
+        "symbol": "store_graph_memory, retrieve_graph_memory, prune_graph_memories",
+        "url": "https://github.com/Open-Finance-Lab/AgenticTrading/blob/9d8fce579dbd57b88a2b6c5f7a19740f62615cbe/orchestration/FinAgents/memory/memory_server.py"
+      },
+      {
+        "id": "architecture",
+        "label": "Dashboard and storage architecture documentation",
+        "path": "docs/source/lab/architecture.rst",
+        "url": "https://github.com/Open-Finance-Lab/AgenticTrading/blob/9d8fce579dbd57b88a2b6c5f7a19740f62615cbe/docs/source/lab/architecture.rst"
+      },
+      {
+        "id": "traces",
+        "label": "Dashboard trace schema and repository operations",
+        "path": "dashboard/backend/domain/traces/repository.py",
+        "symbol": "agent_traces, agent_trace_events, create_trace, append_event, list_events",
+        "url": "https://github.com/Open-Finance-Lab/AgenticTrading/blob/9d8fce579dbd57b88a2b6c5f7a19740f62615cbe/dashboard/backend/domain/traces/repository.py"
+      },
+      {
+        "id": "trace_validation",
+        "label": "Shared trace payload validation",
+        "path": "dashboard/backend/domain/traces/common.py",
+        "symbol": "_json_text, _reject_sensitive, _prepare_batch_event",
+        "url": "https://github.com/Open-Finance-Lab/AgenticTrading/blob/9d8fce579dbd57b88a2b6c5f7a19740f62615cbe/dashboard/backend/domain/traces/common.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated identity, locator, and source attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 20 and Agent Memory Atlas source revision",
+        "url": "../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official project README identifies Open Finance Lab as the project group. The FinAgent Memory component is documented as a Neo4j-backed service exposed through REST, MCP, and A2A interfaces inside the broader research and trading-agent platform. The roster entry supplies only identity, listed repository locator, and source attribution; GitHub and the matching main ref were independently checked for the reviewed revision.",
+        "sources": [
+          "repo",
+          "head",
+          "roster",
+          "readme",
+          "orchestration",
+          "memory_readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The memory documentation describes a protocol-oriented server/interface/database-manager stack with Neo4j as its graph store. The service initializes unified components and retains a legacy fallback. Dashboard traces are persisted through a separate repository.",
+        "sources": [
+          "memory_readme",
+          "memory_server",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Memory nodes contain generated IDs, agent/type, serialized content, searchable text, summary, keywords, event/log type, timestamps, optional session/correlation IDs, and lookup counts. Keyword-overlap links connect memory nodes. The inspected write model has no source URI or claim-level evidence field.",
+        "sources": [
+          "manager"
+        ]
+      },
+      {
+        "text": "Dashboard trace rows separately retain run/agent/user/status fields and ordered actor/step/decision/artifact events. Shared validation rejects sensitive-key names and bounds JSON payload size; these traces provide execution history, not proof that a memory claim is supported.",
+        "sources": [
+          "traces",
+          "trace_validation"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The memory service exposes store and batch-store operations. The manager creates graph nodes and keyword-overlap relationships. It calls async index_memory without awaiting it and passes two positional arguments although the inspected definition requires four. This source path does not establish a completed index write; awaiting it as written would fail argument binding.",
+        "sources": [
+          "memory_server",
+          "manager",
+          "indexer"
+        ]
+      },
+      {
+        "text": "The inspected manager has no update-by-ID or direct delete-by-ID operation. Pruning removes old low-lookup graph nodes with DETACH DELETE; erasure across optional indexes, streams, backups, or derived data was not established.",
+        "sources": [
+          "manager",
+          "memory_server"
+        ]
+      },
+      {
+        "text": "Keyword retrieval searches content text, summary, and keywords, newest first with a limit. An optional semantic path and relationship-expanded retrieval are also present. Structured filters accept agent/session fields, but they are optional caller inputs.",
+        "sources": [
+          "manager"
+        ]
+      },
+      {
+        "text": "Ordinary keyword and semantic candidate queries do not filter by agent, and expanded retrieval follows graph relationships without an agent check. The inspected memory service has no authenticated tenant boundary that enforces these optional filters.",
+        "sources": [
+          "manager",
+          "memory_server"
+        ]
+      },
+      {
+        "text": "Memory records contain agent, event, time, and optional session/correlation metadata; graph relationships provide contextual links. These are provenance fields, not citations to source evidence. Separate dashboard traces carry decision/artifact references but are not shown integrated as evidence for memory results.",
+        "sources": [
+          "manager",
+          "traces"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency features include Neo4j connection pooling, indexes, result limits, optional SentenceTransformer or TF-IDF indexing, an operation counter, statistics, logs, and lookup counts. Semantic retrieval loads up to 1,000 candidate memories and then fetches selected details. The async index call is not awaited and supplies too few arguments for the inspected method definition.",
+        "sources": [
+          "manager",
+          "indexer"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Keyword and semantic retrieval interfaces exist; no answerable-recall or abstention workload was measured.",
+        "sources": [
+          "manager",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "No inspected update-by-ID path or correction probe established correction or stale-value behavior.",
+        "sources": [
+          "manager",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Age/lookup pruning exists; no deletion completeness or post-delete leakage workload was run.",
+        "sources": [
+          "manager",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Agent and session filters are optional; standard keyword/semantic and expansion paths are not agent-filtered. No cross-agent probes were run.",
+        "sources": [
+          "manager",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Stored agent/event/time metadata and separate trace references exist; no memory source citation support or coverage adjudication was measured.",
+        "sources": [
+          "manager",
+          "traces",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Indexes, limits, and operation counters are visible in source; no latency distribution or scheduled write-to-recall measurements were collected.",
+        "sources": [
+          "manager",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No workload-level token, provider cost, or attributable storage measurements were collected.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code and documentation",
+        "evidence": "Connection pool settings, query limits, indexes, counters, logs, statistics, lookup counts, and optional embeddings are present. These are source observations, not measured performance.",
+        "sources": [
+          "memory_readme",
+          "manager",
+          "indexer"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded review covered current project and memory documentation, the unified manager/indexer/server, dashboard architecture, and trace schema at the verified SHA. The repository includes both unified and legacy memory paths; deployment path selection and parity were not established.",
+        "sources": [
+          "memory_readme",
+          "memory_server",
+          "manager"
+        ]
+      },
+      {
+        "text": "The system, tests, and benchmarks were not run. Production authorization, database contents, retrieval quality, physical deletion through derived stores, and runtime performance remain unverified.",
+        "sources": [
+          "manager",
+          "memory_readme",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "The official root README and orchestration Contact & Support section publish documentation, issue, and discussion links but no contact email; no address was inferred.",
+        "sources": [
+          "readme",
+          "orchestration"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No AgenticTrading or FinAgent memory execution, tests, or benchmark workload was run. Project metrics, status, and fixture are protocol artifacts, not system results.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

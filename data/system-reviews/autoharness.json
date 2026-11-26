@@ -1,0 +1,408 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 83,
+    "slug": "autoharness",
+    "name": "autoharness",
+    "repository": "https://github.com/tigerless-labs/autoharness",
+    "listed_repository": "https://github.com/tigerless-labs/autoharness",
+    "branch": "main",
+    "revision": "6d85325ab5ef436d1d4d52ffa82e43ea0365d144",
+    "reviewed_at": "2026-11-24T23:12:22Z",
+    "review_timezone": "UTC (2026-11-24 15:12:22 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "autoharness is a Claude Code plugin that learns and maintains native skill folders from work in a session. It captures bounded, redacted session evidence, asks a reflector to propose changes, and uses a deterministic promoter to validate and write them. The project records use-related signals for recall and lifecycle management; this is a pinned source review, not a runtime or benchmark evaluation.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/autoharness.md"
+    },
+    "contact": {
+      "email": "info@tigerless.com",
+      "source_url": "https://tigerless.ai/",
+      "note": "Published in the official Tigerless website contact section; official pinned README and the pinned SECURITY.md path were also checked."
+    },
+    "contact_email": "info@tigerless.com",
+    "contact_checked_sources": [
+      "https://github.com/tigerless-labs/autoharness/blob/6d85325ab5ef436d1d4d52ffa82e43ea0365d144/README.md",
+      "https://github.com/tigerless-labs/autoharness/blob/6d85325ab5ef436d1d4d52ffa82e43ea0365d144/SECURITY.md",
+      "https://tigerless.ai/"
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[82], ordinal 83; name, slug, listed repository, and Atlas attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Curated Atlas source attribution only",
+        "path": "content/systems/autoharness.md",
+        "symbol": "Roster attribution at catalog revision 19199a4fc249e89c0793be06f0b166b358089ba0",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/autoharness.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "",
+        "symbol": "Canonical public repository and default branch main",
+        "url": "https://github.com/tigerless-labs/autoharness"
+      },
+      {
+        "id": "head-feed",
+        "label": "Official main branch commit feed",
+        "path": "",
+        "symbol": "Current main head at review time",
+        "url": "https://github.com/tigerless-labs/autoharness/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream head",
+        "path": "",
+        "symbol": "Full reviewed commit SHA",
+        "url": "https://github.com/tigerless-labs/autoharness/commit/6d85325ab5ef436d1d4d52ffa82e43ea0365d144"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned README",
+        "path": "README.md",
+        "symbol": "Product description, architecture, configuration, operations, lifecycle, limits, and source-reported claims",
+        "url": "https://github.com/tigerless-labs/autoharness/blob/6d85325ab5ef436d1d4d52ffa82e43ea0365d144/README.md"
+      },
+      {
+        "id": "capture",
+        "label": "Session capture",
+        "path": "src/autoharness/hook/capture.py",
+        "symbol": "Transcript byte watermark, bounded capture, record clipping, redaction, and digest",
+        "url": "https://github.com/tigerless-labs/autoharness/blob/6d85325ab5ef436d1d4d52ffa82e43ea0365d144/src/autoharness/hook/capture.py"
+      },
+      {
+        "id": "on-stop",
+        "label": "Reflection trigger",
+        "path": "src/autoharness/hook/on_stop.py",
+        "symbol": "Tool-call threshold, session reset, and child-session recursion guard",
+        "url": "https://github.com/tigerless-labs/autoharness/blob/6d85325ab5ef436d1d4d52ffa82e43ea0365d144/src/autoharness/hook/on_stop.py"
+      },
+      {
+        "id": "session-start",
+        "label": "Session-start recall and lifecycle",
+        "path": "src/autoharness/hook/on_session_start.py",
+        "symbol": "Managed skill index, byte cap, prior-run summary, and lifecycle/archive invocation",
+        "url": "https://github.com/tigerless-labs/autoharness/blob/6d85325ab5ef436d1d4d52ffa82e43ea0365d144/src/autoharness/hook/on_session_start.py"
+      },
+      {
+        "id": "stage-tool",
+        "label": "Stage skill MCP tool",
+        "path": "src/autoharness/stage_skill/server.py",
+        "symbol": "Intent schema and proposal-only stage handler",
+        "url": "https://github.com/tigerless-labs/autoharness/blob/6d85325ab5ef436d1d4d52ffa82e43ea0365d144/src/autoharness/stage_skill/server.py"
+      },
+      {
+        "id": "promoter",
+        "label": "Deterministic promoter",
+        "path": "src/autoharness/hook/promoter.py",
+        "symbol": "Intent shaping, validation-before-write, evidence materialization, atomic landing, ledger updates, and delete/archive",
+        "url": "https://github.com/tigerless-labs/autoharness/blob/6d85325ab5ef436d1d4d52ffa82e43ea0365d144/src/autoharness/hook/promoter.py"
+      },
+      {
+        "id": "skill-store",
+        "label": "Skill file store",
+        "path": "src/autoharness/lib/skill_store.py",
+        "symbol": "Skill read/write, two-layer ambiguity, deterministic patch, archive and restore",
+        "url": "https://github.com/tigerless-labs/autoharness/blob/6d85325ab5ef436d1d4d52ffa82e43ea0365d144/src/autoharness/lib/skill_store.py"
+      },
+      {
+        "id": "validate",
+        "label": "Skill validation",
+        "path": "src/autoharness/lib/validate.py",
+        "symbol": "Safety, structure, completeness, global-scope and self-produced checks",
+        "url": "https://github.com/tigerless-labs/autoharness/blob/6d85325ab5ef436d1d4d52ffa82e43ea0365d144/src/autoharness/lib/validate.py"
+      },
+      {
+        "id": "sidecar",
+        "label": "Managed skill sidecar",
+        "path": "src/autoharness/lib/sidecar.py",
+        "symbol": "Ownership marker, use/view/patch counters, anchor and verification fields",
+        "url": "https://github.com/tigerless-labs/autoharness/blob/6d85325ab5ef436d1d4d52ffa82e43ea0365d144/src/autoharness/lib/sidecar.py"
+      },
+      {
+        "id": "ledger",
+        "label": "Per-skill provenance ledger",
+        "path": "src/autoharness/lib/ledger.py",
+        "symbol": "Append-only JSONL action, reason, evidence reference, and archived ledger reads",
+        "url": "https://github.com/tigerless-labs/autoharness/blob/6d85325ab5ef436d1d4d52ffa82e43ea0365d144/src/autoharness/lib/ledger.py"
+      },
+      {
+        "id": "lifecycle",
+        "label": "Lifecycle decision",
+        "path": "src/autoharness/lib/lifecycle.py",
+        "symbol": "Call-rate probation, graduation review, and capacity-based archival decision",
+        "url": "https://github.com/tigerless-labs/autoharness/blob/6d85325ab5ef436d1d4d52ffa82e43ea0365d144/src/autoharness/lib/lifecycle.py"
+      },
+      {
+        "id": "counters",
+        "label": "Persistent request and session counters",
+        "path": "src/autoharness/lib/counters.py",
+        "symbol": "Disk-backed O(1) counter updates and session offsets",
+        "url": "https://github.com/tigerless-labs/autoharness/blob/6d85325ab5ef436d1d4d52ffa82e43ea0365d144/src/autoharness/lib/counters.py"
+      },
+      {
+        "id": "usage-hook",
+        "label": "Use and view instrumentation",
+        "path": "src/autoharness/hook/on_skill_call.py",
+        "symbol": "Skill invocation and read tracking, ownership checks, and child recursion guard",
+        "url": "https://github.com/tigerless-labs/autoharness/blob/6d85325ab5ef436d1d4d52ffa82e43ea0365d144/src/autoharness/hook/on_skill_call.py"
+      },
+      {
+        "id": "website",
+        "label": "Official Tigerless website",
+        "path": "",
+        "symbol": "Organization contact section publishes info@tigerless.com",
+        "url": "https://tigerless.ai/"
+      },
+      {
+        "id": "security-check",
+        "label": "Checked official SECURITY.md path",
+        "path": "SECURITY.md",
+        "symbol": "Pinned root path returns GitHub File not found; no repository SECURITY.md exists at the reviewed revision",
+        "url": "https://github.com/tigerless-labs/autoharness/blob/6d85325ab5ef436d1d4d52ffa82e43ea0365d144/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Proposed retrieval, correction, deletion, scope, evidence, latency, token, cost, and storage metrics",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned synthetic workload cases, not measurements",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project benchmark status is not_run; no system-specific result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The project README says it is built by Tigerless Labs and describes autoharness as a Claude Code plugin and self-learning skill layer, rather than a hosted memory service. Its outputs are native skill folders usable through the host's skill mechanism.",
+        "sources": [
+          "readme",
+          "website"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The durable memory unit is a directory containing a native SKILL.md and optional scripts, templates, assets, or references. A .sidecar.json stores operational ownership and counters; an append-only .ledger.jsonl stores change reasons and evidence references. The promoter materializes redacted session evidence as content-addressed Markdown under references/.",
+        "sources": [
+          "readme",
+          "sidecar",
+          "ledger",
+          "promoter"
+        ]
+      },
+      {
+        "text": "Global and project skill libraries are separate filesystem layers. A layer can be redirected through configuration; each skill has no embedded tenant or principal key. The sidecar marker created_by: agent identifies the managed pool so user-authored and installed skills are excluded from managed updates and lifecycle actions.",
+        "sources": [
+          "readme",
+          "sidecar",
+          "skill-store",
+          "validate"
+        ]
+      },
+      {
+        "text": "The hook pipeline captures session transcript bytes, then a reflector compares the episode with existing skills and submits a structured stage_skill intent. The deterministic promoter performs content and safety validation and is the only component that writes the managed skill tree.",
+        "sources": [
+          "readme",
+          "capture",
+          "stage-tool",
+          "promoter"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The default reflection cadence is 50 tool calls, configurable; Stop checks the accumulated call counter and uses a child-session guard to prevent recursive reflection. SessionEnd can flush a positive tail. A manual /learn entry point uses the same proposal and validation route.",
+        "sources": [
+          "readme",
+          "on-stop"
+        ]
+      },
+      {
+        "text": "Capture reads from a byte watermark, bounds individual records and the total window, redacts before handoff, and never writes to the host transcript. A digest may summarize earlier exchanges. The reflector's tool records proposed create, update, patch, remove_file, delete, or suggestion operations with a reason and evidence; it does not receive a generic file-writing path for the managed tree.",
+        "sources": [
+          "capture",
+          "stage-tool",
+          "readme"
+        ]
+      },
+      {
+        "text": "The promoter validates the shaped result before writing. It places referenced subfiles and redacted evidence first, writes SKILL.md last as the visible commit point, stamps new skills as agent-created, and appends an action/reason/evidence entry. Rejected intents do not land; queued intents are drained and cleared after promotion.",
+        "sources": [
+          "promoter",
+          "validate",
+          "ledger"
+        ]
+      },
+      {
+        "text": "Update replaces the full SKILL.md body; patch applies an old-string/new-string delta only when the old text matches exactly once. Subfiles can be added or removed through guarded paths. A whole-skill delete is archived out of recall, with its ledger and evidence carried along; the skill store provides restore, so archive is reversible rather than secure erasure.",
+        "sources": [
+          "stage-tool",
+          "promoter",
+          "skill-store",
+          "ledger"
+        ]
+      },
+      {
+        "text": "At session start, the plugin lists its managed skills grouped by category and layer, within a byte cap; the host already supplies full skill descriptions. The host's native recall remains in place. A maintenance pass reviews the use rate after probation and archives unused skills or the lowest-rate mature skills when a layer exceeds capacity.",
+        "sources": [
+          "readme",
+          "session-start",
+          "lifecycle",
+          "sidecar",
+          "usage-hook"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "The plugin adds an index of managed skills to the host's native recall surface and tracks later use, but this source review ran no answer-quality, recall, or abstention probes.",
+        "sources": [
+          "readme",
+          "session-start",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "A reflector can patch or replace a skill and records the change reason and evidence; the inspected representation does not define fact-level temporal validity or a stale-value scoring rule. No correction probes were run.",
+        "sources": [
+          "stage-tool",
+          "promoter",
+          "ledger",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Whole-skill retirement moves a directory to an archive outside recall and preserves its evidence and ledger; restoration is supported. No post-delete probes or residual-copy audit were performed.",
+        "sources": [
+          "skill-store",
+          "promoter",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Project and global directories separate storage layers, and managed writes require the ownership marker. No principal authorization predicate is encoded in skill records, and no cross-layer isolation probes were run.",
+        "sources": [
+          "readme",
+          "sidecar",
+          "validate",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Each accepted create/update has a reason and redacted session slice linked in a per-skill ledger. That provides change provenance, not claim-level citations for answers; no evidence adjudication was run.",
+        "sources": [
+          "promoter",
+          "ledger",
+          "capture",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Capture uses a byte offset and bounded reads; counters are disk-backed constant-size read-modify-write operations, and the recall index is byte-capped. No timings or write-to-recall probes were collected.",
+        "sources": [
+          "capture",
+          "counters",
+          "session-start",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and persistent storage",
+        "status": "unmeasured",
+        "evidence": "The README describes zero third-party Python dependencies and configurable child reflector/curator models. The design stores plain skill and evidence files plus sidecars, ledgers, queues, counters, and run records; no token, charge, or corpus-attributed storage measurements were collected.",
+        "sources": [
+          "readme",
+          "promoter",
+          "ledger",
+          "metrics"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review is limited to selected documentation and source at the verified main head. It does not establish learning quality, whether a skill will be recalled when useful, correctness of edits, safety under adversarial session content, or reliability under concurrent host activity.",
+        "sources": [
+          "readme",
+          "capture",
+          "promoter",
+          "status"
+        ]
+      },
+      {
+        "text": "Storage layers are filesystem directories rather than an authorization system. Scope behavior therefore depends on host and filesystem access, and archived skills remain on disk; secure deletion and cross-user isolation are not established by this review.",
+        "sources": [
+          "readme",
+          "skill-store",
+          "promoter"
+        ]
+      },
+      {
+        "text": "Lifecycle usage rate is a proxy based on host-observed skill loads and reads. It is not a direct correctness or usefulness score; the source distinguishes use and view counters, but reads can include browsing/curation.",
+        "sources": [
+          "sidecar",
+          "usage-hook",
+          "lifecycle",
+          "readme"
+        ]
+      },
+      {
+        "text": "The project documents Claude Code as the current host. Behavior on other runtimes, including whether their hooks and native skill discovery provide the same recall path, was not established.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No autoharness runtime, benchmark workload, tests, or builds were run for this review.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Project metric definitions and fixture describe portable proposed probes. Their case counts and protocol are not results for autoharness.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ]
+  }
+}

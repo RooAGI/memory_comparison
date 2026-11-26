@@ -1,0 +1,336 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "ai-workflow",
+    "name": "AI Workflow Workspace",
+    "repository": "https://github.com/Taki7980/Ai-workflow",
+    "branch": "main",
+    "revision": "ae3d3851cd89d7e6d521b79203a3cdbb99d74318",
+    "reviewed_at": "2026-11-24T19:47:35Z",
+    "review_timezone": "UTC (2026-11-24 11:47:35 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/Taki7980/Ai-workflow/blob/ae3d3851cd89d7e6d521b79203a3cdbb99d74318/README.md","checked_urls":["https://github.com/Taki7980/Ai-workflow/blob/ae3d3851cd89d7e6d521b79203a3cdbb99d74318/README.md","https://github.com/Taki7980/Ai-workflow/blob/ae3d3851cd89d7e6d521b79203a3cdbb99d74318/SECURITY.md","https://github.com/Taki7980/Ai-workflow/blob/ae3d3851cd89d7e6d521b79203a3cdbb99d74318/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "AI Workflow Workspace is a project-local, agent-agnostic coding workflow with scripts for routing, indexed lookup, task handoff, and persistent Markdown knowledge. This review records source behavior only; no runtime or benchmark results were collected.",
+    "atlas_locator": {
+      "ordinal": 39,
+      "name": "AI Workflow Workspace",
+      "slug": "ai-workflow",
+      "listed_repository": "https://github.com/Taki7980/Ai-workflow",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/ai-workflow.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/Taki7980/Ai-workflow/blob/ae3d3851cd89d7e6d521b79203a3cdbb99d74318/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/Taki7980/Ai-workflow/blob/ae3d3851cd89d7e6d521b79203a3cdbb99d74318/README.md",
+      "https://github.com/Taki7980/Ai-workflow/blob/ae3d3851cd89d7e6d521b79203a3cdbb99d74318/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository and default branch",
+        "path": "repository",
+        "symbol": "canonical Taki7980/Ai-workflow; default branch main",
+        "url": "https://github.com/Taki7980/Ai-workflow"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "head ae3d3851cd89d7e6d521b79203a3cdbb99d74318",
+        "url": "https://github.com/Taki7980/Ai-workflow/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream head commit",
+        "path": "commit",
+        "symbol": "full SHA ae3d3851cd89d7e6d521b79203a3cdbb99d74318",
+        "url": "https://github.com/Taki7980/Ai-workflow/commit/ae3d3851cd89d7e6d521b79203a3cdbb99d74318"
+      },
+      {
+        "id": "readme",
+        "label": "Official README: workflow structure and intended use",
+        "path": "README.md",
+        "url": "https://github.com/Taki7980/Ai-workflow/blob/ae3d3851cd89d7e6d521b79203a3cdbb99d74318/README.md"
+      },
+      {
+        "id": "workspace-readme",
+        "label": "AI Workspace architecture and file map",
+        "path": "ai-workspace/README.md",
+        "url": "https://github.com/Taki7980/Ai-workflow/blob/ae3d3851cd89d7e6d521b79203a3cdbb99d74318/ai-workspace/README.md"
+      },
+      {
+        "id": "brief",
+        "label": "Session routing and capsule generation",
+        "path": "ai-workspace/scripts/brief.ps1",
+        "symbol": "query routing; cache lookup; session capsule",
+        "url": "https://github.com/Taki7980/Ai-workflow/blob/ae3d3851cd89d7e6d521b79203a3cdbb99d74318/ai-workspace/scripts/brief.ps1"
+      },
+      {
+        "id": "traverse",
+        "label": "Zero-grep index traversal and freshness checks",
+        "path": "ai-workspace/scripts/traverse.ps1",
+        "symbol": "Select-FreshRows; Test-IndexedFileFresh",
+        "url": "https://github.com/Taki7980/Ai-workflow/blob/ae3d3851cd89d7e6d521b79203a3cdbb99d74318/ai-workspace/scripts/traverse.ps1"
+      },
+      {
+        "id": "capture",
+        "label": "Persistent brain capture schema and append path",
+        "path": "ai-workspace/scripts/brain-capture.ps1",
+        "symbol": "Type; Keywords; Problem; Solution; Evidence; optional metadata",
+        "url": "https://github.com/Taki7980/Ai-workflow/blob/ae3d3851cd89d7e6d521b79203a3cdbb99d74318/ai-workspace/scripts/brain-capture.ps1"
+      },
+      {
+        "id": "recall",
+        "label": "Brain retrieval and scoring",
+        "path": "ai-workspace/scripts/brain-recall.ps1",
+        "symbol": "BM25+; Ebbinghaus retention; matched entry extraction",
+        "url": "https://github.com/Taki7980/Ai-workflow/blob/ae3d3851cd89d7e6d521b79203a3cdbb99d74318/ai-workspace/scripts/brain-recall.ps1"
+      },
+      {
+        "id": "complete",
+        "label": "Task completion, incident resolution, and index refresh",
+        "path": "ai-workspace/scripts/complete-task.ps1",
+        "symbol": "ValidateOnly; brain capture; incident move/update; generate-index",
+        "url": "https://github.com/Taki7980/Ai-workflow/blob/ae3d3851cd89d7e6d521b79203a3cdbb99d74318/ai-workspace/scripts/complete-task.ps1"
+      },
+      {
+        "id": "incident-cache",
+        "label": "Incident-note to JSONL cache compiler",
+        "path": "ai-workspace/scripts/compile-incident-cache.ps1",
+        "symbol": "frontmatter fields; compact JSONL record",
+        "url": "https://github.com/Taki7980/Ai-workflow/blob/ae3d3851cd89d7e6d521b79203a3cdbb99d74318/ai-workspace/scripts/compile-incident-cache.ps1"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../../results/initial-baselines-status.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog identity and attribution only",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 39",
+        "url": "../../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The repository describes an agent-agnostic workflow template for AI-assisted coding, centered on a root AGENTS.md rulebook and local PowerShell scripts. It is a project workflow and knowledge workspace, not a hosted memory service.",
+        "sources": [
+          "repo",
+          "readme",
+          "workspace-readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The workspace separates operational scripts, agent configuration and references, a persistent brain, Obsidian notes, and generated caches. README documents scripts for session routing, index traversal, handoff validation, indexing, completion, and brain capture/recall; generated data is described as rebuildable machine output.",
+        "sources": [
+          "workspace-readme"
+        ]
+      },
+      {
+        "text": "Brain entries are Markdown records with an ID, date, type, and keyword row in brain-index.md. The full brain.md entry stores Problem, Solution, and required Evidence, with optional RootCause, FailedApproaches, FilesChanged, and Lesson fields. Capture appends to both files.",
+        "sources": [
+          "capture"
+        ]
+      },
+      {
+        "text": "Incident notes are Markdown files with YAML-like frontmatter. The compiler parses fields including id, kind, status, trust, title, module, related files/tests, error signature, and last verified commit into compact JSONL for lookup; missing trust defaults to draft and missing status to unknown.",
+        "sources": [
+          "incident-cache"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: brain-capture requires a type from a fixed set, keywords, problem, solution, and nonblank evidence. It creates a date-sequenced ID and appends an index row plus a full Markdown entry; optional metadata can record root cause, failed approaches, changed files, and lesson.",
+        "sources": [
+          "capture"
+        ]
+      },
+      {
+        "text": "Update and correction: the inspected capture path is append-only. The completion path can move an open incident note to Resolved, change status/trust/review date/verified commit, and rebuild its cache. The reviewed paths do not establish a general brain-record update API.",
+        "sources": [
+          "capture",
+          "complete"
+        ]
+      },
+      {
+        "text": "Delete: the inspected brain capture/recall/completion paths expose no brain-entry deletion operation. Markdown files are directly editable, but this review did not trace a supported deletion or cleanup workflow for brain entries.",
+        "sources": [
+          "capture",
+          "recall",
+          "complete"
+        ]
+      },
+      {
+        "text": "Retrieval: brain recall tokenizes query and entry type/keywords, computes corpus statistics and BM25+ scores, then multiplies relevance by a date-based retention factor when the helper is available. Without the math helper it falls back to term counts. It returns top matches and extracts matching full entries from brain.md.",
+        "sources": [
+          "recall"
+        ]
+      },
+      {
+        "text": "Session routing: brief.ps1 classifies queries and may consult hot/incident caches, indexes, the brain index, and routed modules. Traverse performs exact index lookup and validates candidate source files against recorded hashes; stale or unverifiable candidates are rejected rather than treated as current.",
+        "sources": [
+          "brief",
+          "traverse"
+        ]
+      },
+      {
+        "text": "Scope: brain and project notes resolve under the project workspace directory, so the visible boundary is a local project workspace. The inspected record schema has no user, tenant, or agent access-control key; this review did not verify filesystem permissions or multi-user behavior.",
+        "sources": [
+          "workspace-readme",
+          "capture",
+          "incident-cache"
+        ]
+      },
+      {
+        "text": "Provenance and evidence: brain capture requires an Evidence text field and permits changed-file and root-cause metadata, but the field is free text. Incident records carry a trust value and last_verified_commit, and completion stamps a resolved incident as verified. These fields do not establish claim-level citations or independent evidence adjudication.",
+        "sources": [
+          "capture",
+          "incident-cache",
+          "complete"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Source inspection found keyword/BM25+ retrieval and top-match output. No answerability, abstention, or retrieval-quality workload was run.",
+        "sources": [
+          "recall",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Capture appends entries and incident completion updates incident metadata; no correction or stale-value probes were run.",
+        "sources": [
+          "capture",
+          "complete",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No brain-entry deletion path was identified in the inspected scripts. No post-deletion retrieval probes were run.",
+        "sources": [
+          "capture",
+          "recall",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Project workspace paths indicate intended project-local storage, but no cross-project or cross-user isolation workload was run.",
+        "sources": [
+          "workspace-readme",
+          "incident-cache",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "A free-text Evidence field and incident trust metadata are source observations; no answer-level evidence adjudication was performed.",
+        "sources": [
+          "capture",
+          "incident-cache",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timing or end-to-end write-to-recall measurement was collected.",
+        "sources": [
+          "capture",
+          "recall",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "The inspected brain recall implementation is local script-based; no model-call, token, provider-cost, or cost workload was measured.",
+        "sources": [
+          "recall",
+          "brief",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The repository describes Markdown sources and generated indexes/caches, but no storage-size or efficiency measurement was collected.",
+        "sources": [
+          "workspace-readme",
+          "incident-cache",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected the public README, workspace map, session router, traversal, brain capture and recall, task completion, and incident cache compiler at the verified commit. It did not inspect every script, Obsidian template, generated index/cache, workflow lane, or host integration.",
+        "sources": [
+          "readme",
+          "workspace-readme",
+          "brief",
+          "traverse",
+          "capture",
+          "recall",
+          "complete",
+          "incident-cache"
+        ]
+      },
+      {
+        "text": "Source formulas and comments do not establish retrieval quality, cognitive validity, isolation, reliability, or efficiency. Query routing, recall, and cache behavior were not executed; platform behavior on Windows/PowerShell and interaction with real project data remain unknown.",
+        "sources": [
+          "brief",
+          "recall",
+          "traverse"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is not_run. Project metric definitions, fixture, and execution status are linked for evaluation context only; none is a measured result for this system.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      }
+    ]
+  }
+}

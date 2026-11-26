@@ -1,0 +1,255 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "agent-memory-techniques",
+    "name": "Agent Memory Techniques",
+    "repository": "https://github.com/NirDiamant/Agent_Memory_Techniques",
+    "branch": "main",
+    "revision": "f0b663472899e58568bf3e71b51ac4f2672dd669",
+    "reviewed_at": "2026-11-24T18:25:28Z",
+    "review_timezone": "UTC (2026-11-24 10:25:28 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/NirDiamant/Agent_Memory_Techniques/blob/f0b663472899e58568bf3e71b51ac4f2672dd669/README.md","checked_urls":["https://github.com/NirDiamant/Agent_Memory_Techniques/blob/f0b663472899e58568bf3e71b51ac4f2672dd669/README.md","https://github.com/NirDiamant/Agent_Memory_Techniques/blob/f0b663472899e58568bf3e71b51ac4f2672dd669/SECURITY.md","https://github.com/NirDiamant/Agent_Memory_Techniques/blob/f0b663472899e58568bf3e71b51ac4f2672dd669/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "An educational collection of memory-system notebooks. Technique 30 demonstrates local Python simulations of tiered memory and graph patterns; its source observations are not evidence of production deployment or measured quality.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/NirDiamant/Agent_Memory_Techniques"
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Current upstream repository at reviewed main head",
+        "path": "repository",
+        "symbol": "Repository identity at commit f0b663472899e58568bf3e71b51ac4f2672dd669",
+        "url": "https://github.com/NirDiamant/Agent_Memory_Techniques/tree/f0b663472899e58568bf3e71b51ac4f2672dd669"
+      },
+      {
+        "id": "repo_metadata",
+        "label": "GitHub repository metadata and current main head lookup",
+        "path": "repository metadata",
+        "symbol": "Checked 2026-11-24 18:20:09 UTC; default_branch=main; commits/main resolved to the reviewed SHA",
+        "url": "https://api.github.com/repos/NirDiamant/Agent_Memory_Techniques"
+      },
+      {
+        "id": "readme",
+        "label": "Repository README",
+        "path": "README.md",
+        "url": "https://github.com/NirDiamant/Agent_Memory_Techniques/blob/f0b663472899e58568bf3e71b51ac4f2672dd669/README.md"
+      },
+      {
+        "id": "technique_readme",
+        "label": "Technique 30 README — Production Memory Patterns",
+        "path": "all_techniques/30_production_memory_patterns/README.md",
+        "symbol": "Architecture summary, flow description, limitations, and notebook overview",
+        "url": "https://github.com/NirDiamant/Agent_Memory_Techniques/blob/f0b663472899e58568bf3e71b51ac4f2672dd669/all_techniques/30_production_memory_patterns/README.md"
+      },
+      {
+        "id": "notebook",
+        "label": "Technique 30 notebook — Production Memory Patterns",
+        "path": "all_techniques/30_production_memory_patterns/production_memory_patterns.ipynb",
+        "symbol": "MemoryTier, MemoryRecord, HotTierCache, WarmTierStore, ColdTierArchive, GraphEdge, GraphRelationshipStore",
+        "url": "https://github.com/NirDiamant/Agent_Memory_Techniques/blob/f0b663472899e58568bf3e71b51ac4f2672dd669/all_techniques/30_production_memory_patterns/production_memory_patterns.ipynb"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated roster name, ordinal, repository locator, and source attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "Position 11; catalog revision 19199a4fc249e89c0793be06f0b166b358089ba0; assessment prose and marks excluded",
+        "url": "../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The repository README identifies this as a collection of 30 separate Jupyter notebooks. Technique 30 presents a production-memory walkthrough built from illustrative local Python stores and describes Redis, Postgres/pgvector, and graph services as production replacements. This review treats it as educational material, not as a single production memory service.",
+        "sources": [
+          "repo",
+          "readme",
+          "technique_readme",
+          "notebook"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The notebook's MemoryRecord stores an ID, user ID, content, optional embedding, timestamps, access count, importance, tier, optional TTL, tags, a PII-redacted flag, token estimate, and optional compressed bytes. HotTierCache, WarmTierStore, and ColdTierArchive use in-process dictionaries and per-user indexes; cold content is compressed with zlib. These inspected classes simulate Redis-like and Postgres/pgvector-like behavior.",
+        "sources": [
+          "notebook",
+          "technique_readme"
+        ]
+      },
+      {
+        "text": "GraphEdge stores source, relation, target, user ID, timestamp, and an optional memory ID. GraphRelationshipStore keeps edges in a Python list and adjacency map, and offers relation lookup and breadth-first neighbor traversal. The README describes fact extraction, embeddings, PII handling, budgets, and cost/observability concerns as the wider technique design.",
+        "sources": [
+          "notebook",
+          "technique_readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: the inspected stores expose put in hot/warm tiers and archive in cold storage. Hot writes set a default TTL and, at per-user capacity, remove and demote the least recently accessed record. Warm writes store by record ID and add that ID to the user's index. No general correction-history or version-resolution contract was established in the inspected store sections.",
+        "sources": [
+          "notebook"
+        ]
+      },
+      {
+        "text": "Retrieval: WarmTierStore.search requires user_id, scans the user's indexed records, skips records without usable embeddings, computes cosine similarity, sorts descending, and returns at most k results. Hot get and cold retrieve use record IDs. The technique README describes hot-to-warm-to-cold search and promotion, but the end-to-end orchestration was not traced through the whole notebook.",
+        "sources": [
+          "notebook",
+          "technique_readme"
+        ]
+      },
+      {
+        "text": "Deletion: the inspected hot, warm, cold, and graph classes each define delete_user. They remove user records or graph edges from their local in-memory stores; graph deletion rebuilds the adjacency map. The README describes a broader right-to-forget flow with audit logging, but this review did not trace a complete orchestrated deletion path or external-store deletion.",
+        "sources": [
+          "notebook",
+          "technique_readme"
+        ]
+      },
+      {
+        "text": "Scope: per-user indexes constrain warm search and user-record listing. Graph query, hot get(record_id), and cold retrieve(record_id) do not accept a user ID, so those inspected lookup methods do not themselves enforce user isolation. No runtime isolation check was performed.",
+        "sources": [
+          "notebook"
+        ]
+      },
+      {
+        "text": "Provenance: the record model includes user ID and timestamps; GraphEdge can retain a source memory ID. The inspected record structure does not show trust state or source citation fields. Claim-level evidence and answer citations remain unverified.",
+        "sources": [
+          "notebook",
+          "technique_readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Source code observations do not establish gold-case retrieval correctness or calibrated abstention, and no system probes were run.",
+        "sources": [
+          "notebook",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "The inspected store sections do not establish correction history or stale-value resolution; no post-correction probes were run.",
+        "sources": [
+          "notebook",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Local delete_user methods are visible, but end-to-end deletion completeness and post-delete leakage were not verified or measured.",
+        "sources": [
+          "notebook",
+          "technique_readme",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Some methods use per-user indexes while ID/entity lookup methods inspected do not take a user ID; no cross-scope runtime probes were performed.",
+        "sources": [
+          "notebook",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "The source structures reviewed do not establish answer-claim citations or adjudicated evidence support.",
+        "sources": [
+          "notebook",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The README discusses latency goals and the cache code keeps counters, but no latency or write-to-recall observations were collected.",
+        "sources": [
+          "notebook",
+          "technique_readme",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The record has an approximate token field and cold storage counts compressed byte differences; these are source-visible structures, not measured workload token, cost, or storage outcomes.",
+        "sources": [
+          "notebook",
+          "technique_readme",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Source-visible observability",
+        "status": "code_observation",
+        "evidence": "HotTierCache defines hit, miss, eviction, and expiration counters plus a hit_rate property. ColdTierArchive tracks a compressed-byte difference. These do not provide measured latency distributions or establish monitoring coverage across all operations.",
+        "sources": [
+          "notebook",
+          "technique_readme"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded review inspected the repository README, technique 30 README, and notebook model/store sections through the graph store. Later notebook cells and full orchestration were not traced. The README describes horizontal sharding and distributed deployment as additional infrastructure beyond the single-node example.",
+        "sources": [
+          "readme",
+          "technique_readme",
+          "notebook"
+        ]
+      },
+      {
+        "text": "The reviewed notebook sections use in-memory dictionaries and lists; they do not demonstrate production Redis/Postgres persistence, concurrency, authorization, backup recovery, or reliability. Unknown means not established by this inspection, not impossible or absent from every notebook.",
+        "sources": [
+          "notebook",
+          "technique_readme"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status: not_run. No system code, notebook, benchmark workload, or tests were executed for this review. The project status record is not a result for this system and planned fixture counts are not measured denominators.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,315 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 284,
+    "slug": "one-agent-many-hats",
+    "name": "Hats",
+    "repository": "https://github.com/klairtech/one-agent-many-hats",
+    "listed_repository": "https://github.com/klairtech/one-agent-many-hats",
+    "branch": "main",
+    "revision": "a90396cff12b1e2fbb8a14f74eef6c6c89105b4f",
+    "reviewed_at": "2026-11-25T22:32:54Z",
+    "review_timezone": "UTC (2026-11-25 22:32:54 UTC; 2026-11-25 14:32:54 PST, America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Hats is a local agent runtime with workspace-scoped memory layers: user-authored context, a bounded inferred persona, short run takeaways, and operational lessons. Source review describes their file-backed lifecycle and retrieval behavior; it does not establish measured memory quality or isolation.",
+    "atlas_locator": {
+      "ordinal": 284,
+      "name": "Hats",
+      "slug": "one-agent-many-hats",
+      "listed_repository": "https://github.com/klairtech/one-agent-many-hats",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/one-agent-many-hats.md",
+      "revision": "a90396cff12b1e2fbb8a14f74eef6c6c89105b4f"
+    },
+    "contact": {
+      "email": "hello@klairtech.com",
+      "source_url": "https://github.com/klairtech/one-agent-many-hats/blob/a90396cff12b1e2fbb8a14f74eef6c6c89105b4f/README.md",
+      "checked_urls": [
+        "https://github.com/klairtech/one-agent-many-hats/blob/a90396cff12b1e2fbb8a14f74eef6c6c89105b4f/README.md"
+      ],
+      "note": "The official pinned README publishes hello@klairtech.com for ideas and commercial licensing. No profile, commit, package metadata, or third-party directory was used."
+    },
+    "contact_email": "hello@klairtech.com",
+    "contact_email_source_url": "https://github.com/klairtech/one-agent-many-hats/blob/a90396cff12b1e2fbb8a14f74eef6c6c89105b4f/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/klairtech/one-agent-many-hats/blob/a90396cff12b1e2fbb8a14f74eef6c6c89105b4f/README.md"
+    ],
+    "contact_email_note": "The official pinned README publishes hello@klairtech.com for ideas and commercial licensing; this is the exact checked URL.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[283], ordinal 284; identity, explicit locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/one-agent-many-hats.md",
+        "symbol": "Pinned attribution for curated identity and locator only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/one-agent-many-hats.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "",
+        "symbol": "Official repository page identifies public klairtech/one-agent-many-hats and default branch main",
+        "url": "https://github.com/klairtech/one-agent-many-hats"
+      },
+      {
+        "id": "head",
+        "label": "Official main commit feed",
+        "path": "",
+        "symbol": "main.atom identifies full current head SHA a90396cff12b1e2fbb8a14f74eef6c6c89105b4f and update timestamp",
+        "url": "https://github.com/klairtech/one-agent-many-hats/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project overview, memory design, workspace behavior, operational claims, limitations, and published contact email",
+        "url": "https://github.com/klairtech/one-agent-many-hats/blob/a90396cff12b1e2fbb8a14f74eef6c6c89105b4f/README.md"
+      },
+      {
+        "id": "memory",
+        "label": "Pinned memory composition and distillation",
+        "path": "src/memory/index.ts",
+        "symbol": "Workspace MemoryLayers construction, ordered composition, recall interface, and post-run distillation contract",
+        "url": "https://github.com/klairtech/one-agent-many-hats/blob/a90396cff12b1e2fbb8a14f74eef6c6c89105b4f/src/memory/index.ts"
+      },
+      {
+        "id": "types",
+        "label": "Pinned memory data types",
+        "path": "src/memory/types.ts",
+        "symbol": "Lesson, Takeaway, Persona, retrieval hit, feedback and provenance fields",
+        "url": "https://github.com/klairtech/one-agent-many-hats/blob/a90396cff12b1e2fbb8a14f74eef6c6c89105b4f/src/memory/types.ts"
+      },
+      {
+        "id": "takeaways",
+        "label": "Pinned takeaway storage and retrieval",
+        "path": "src/memory/takeaways.ts",
+        "symbol": "JSONL write, run-linked Q/A, feedback rewrite, rejection filter, correction rendering, BM25 and cosine scoring",
+        "url": "https://github.com/klairtech/one-agent-many-hats/blob/a90396cff12b1e2fbb8a14f74eef6c6c89105b4f/src/memory/takeaways.ts"
+      },
+      {
+        "id": "lessons",
+        "label": "Pinned operational lesson lifecycle",
+        "path": "src/memory/lessons.ts",
+        "symbol": "Workspace JSONL lessons, behavioral-only write gate, confidence, deterministic canary and lifecycle states",
+        "url": "https://github.com/klairtech/one-agent-many-hats/blob/a90396cff12b1e2fbb8a14f74eef6c6c89105b4f/src/memory/lessons.ts"
+      },
+      {
+        "id": "persona",
+        "label": "Pinned persona storage",
+        "path": "src/memory/persona.ts",
+        "symbol": "Size-bounded inferred user facts, environment-state exclusion, replacement and forget/clear operations",
+        "url": "https://github.com/klairtech/one-agent-many-hats/blob/a90396cff12b1e2fbb8a14f74eef6c6c89105b4f/src/memory/persona.ts"
+      },
+      {
+        "id": "orgcontext",
+        "label": "Pinned authored workspace context",
+        "path": "src/memory/orgcontext.ts",
+        "symbol": "User-authored context read path, template initialization, size cap and atomic write helper",
+        "url": "https://github.com/klairtech/one-agent-many-hats/blob/a90396cff12b1e2fbb8a14f74eef6c6c89105b4f/src/memory/orgcontext.ts"
+      },
+      {
+        "id": "rag",
+        "label": "Pinned workspace document index",
+        "path": "src/rag/index.ts",
+        "symbol": "Separate document retrieval index, incremental file hashes, optional embeddings, rank fusion and keyword-mode caveat",
+        "url": "https://github.com/klairtech/one-agent-many-hats/blob/a90396cff12b1e2fbb8a14f74eef6c6c89105b4f/src/rag/index.ts"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation domains and metric definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned benchmark fixture, not executed in this task",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project execution status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared benchmark execution status, not a Hats result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Hats as a local agent runtime whose skills, rules, tools, and memory are files under a user-selected workspace. This is an application/runtime rather than a standalone remote memory service.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "MemoryLayers creates separate stores under one workspace directory: lessons.jsonl, takeaways.jsonl, persona.json, and org-context.md. compose reads authored context, inferred persona, retrieved takeaways, and selected lessons in that authority order; authored context is presented as authoritative and inferred memory as potentially stale.",
+        "sources": [
+          "memory",
+          "orgcontext",
+          "persona",
+          "takeaways",
+          "lessons"
+        ]
+      },
+      {
+        "text": "Takeaways are compact question/answer records with runId, feedback state, tags, timestamp, and optional embedding. Lessons carry scope, status, confidence, source kind, injection history, match and feedback counters, and tags. Persona is a rolling list of inferred facts bounded by a configured character limit.",
+        "sources": [
+          "types",
+          "takeaways",
+          "lessons",
+          "persona"
+        ]
+      },
+      {
+        "text": "The separate workspace document index stores chunks and metadata in JSONL/JSON files. It hashes source files to reuse unchanged chunks, optionally stores embeddings, and provides a hybrid keyword/vector path; this index is distinct from the shorter experience-memory layers.",
+        "sources": [
+          "rag",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "After a run, the memory facade asks a configured light-tier model or fallback distillation path for a short takeaway, behavioral lessons, and at most one persona fact. Its input is the request, delivered answer and concrete run signals rather than a complete transcript; authored org context is read-only to the agent.",
+        "sources": [
+          "memory",
+          "orgcontext"
+        ]
+      },
+      {
+        "text": "Accepted takeaways append to workspace JSONL and retain a run ID plus bounded question and answer strings. Feedback updates records associated with a run: accepted answers receive a small BM25 boost, rejected answers are excluded from retrieval, and corrected answers render the user correction instead of the original. No dedicated physical delete operation appears in the inspected TakeawayStore API.",
+        "sources": [
+          "takeaways",
+          "types"
+        ]
+      },
+      {
+        "text": "Operational lessons are checked at write time to reject access-widening or instruction-override content. New failure-derived lessons begin as drafts; explicit correction lessons begin active with higher confidence. Draft/canary lessons are injected in a deterministic 50% run slice, then can promote after acceptance or disable after negative outcomes or repeated silence.",
+        "sources": [
+          "lessons",
+          "types"
+        ]
+      },
+      {
+        "text": "Persona additions reject detected environment-state claims, replace overlapping facts, and discard oldest facts until within the size budget. The API can forget one inferred fact or clear the persona. The user-authored org context can be edited by the user and is read from a bounded Markdown file.",
+        "sources": [
+          "persona",
+          "orgcontext"
+        ]
+      },
+      {
+        "text": "Experience recall is over takeaways, using BM25 when embeddings are unavailable and cosine when a query embedding and stored embeddings exist. The separate workspace document RAG index uses reciprocal rank fusion of keyword and vector rankings when embeddings are configured; without them it labels its keyword-only mode.",
+        "sources": [
+          "memory",
+          "takeaways",
+          "rag"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable recall and abstention: takeaway and document retrieval paths exist, but answer accuracy, calibrated abstention, and evidence-based response quality were not evaluated.",
+        "sources": [
+          "takeaways",
+          "rag",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Correction and staleness: feedback can replace retrieval output with a correction; persona facts can be forgotten and lessons can be disabled. Correction accuracy, stale-value rate, and reappearance after re-derivation were not measured.",
+        "sources": [
+          "takeaways",
+          "persona",
+          "lessons",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Deletion and scope isolation: selected persona/lesson controls and whole-workspace pruning are documented; no dedicated takeaway purge is implemented in the inspected store, and no deletion-leakage or cross-workspace isolation probe was run.",
+        "sources": [
+          "takeaways",
+          "persona",
+          "lessons",
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Evidence and provenance: takeaways link to a run ID and lessons record a source category, but the inspected schemas do not require evidence citations or preserve source snippets; support precision and citation coverage are unmeasured.",
+        "sources": [
+          "types",
+          "takeaways",
+          "lessons",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Efficiency: local JSON/JSONL stores, BM25, optional embeddings, incremental document indexing and small retrieved context are implemented. Retrieval latency, write-to-recall delay, tokens, cost and storage efficiency were not measured in this review.",
+        "sources": [
+          "takeaways",
+          "rag",
+          "memory",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The memory files are rooted in one workspace directory. Lesson records expose run/workspace/global scope values, but the inspected facade constructs stores by workspace and no tenant authorization or cross-workspace isolation was established by this source review.",
+        "sources": [
+          "memory",
+          "lessons",
+          "readme"
+        ]
+      },
+      {
+        "text": "The data model retains a run identifier and concise generated conclusions, not source citations or the evidence behind them. Feedback filters or rewrites retrieval but does not physically erase rejected takeaway rows; behavior after workspace deletion, backups, manual file copies or re-derived content was not tested.",
+        "sources": [
+          "types",
+          "takeaways",
+          "memory"
+        ]
+      },
+      {
+        "text": "This review is limited to the current README and selected memory/index source files pinned to the verified main head. The runtime, tests, and benchmark fixture were not run; source presence does not establish recall accuracy, isolation, data durability, or operational performance.",
+        "sources": [
+          "readme",
+          "memory",
+          "takeaways",
+          "rag",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Hats runtime, test suite, or benchmark workload was run. Source implementation and README statements are not project benchmark results.",
+      "metric_definitions": "../METRICS.md",
+      "fixture": "../fixtures/memory-benchmark-v1.json",
+      "execution_status": "../results/initial-baselines-status.json"
+    }
+  }
+}

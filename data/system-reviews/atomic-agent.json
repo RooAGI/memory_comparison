@@ -1,0 +1,406 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "atomic-agent",
+    "name": "Atomic Agent",
+    "repository": "https://github.com/AtomicBot-ai/atomic-agent",
+    "branch": "main",
+    "revision": "89d65615e36b763b35bc81c1e64304bd2d0e5c7c",
+    "reviewed_at": "2026-11-24T21:42:08Z",
+    "review_timezone": "UTC (2026-11-24 13:42:08 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":"support@atomicbot.ai","source_url":"https://github.com/AtomicBot-ai/atomic-agent/blob/89d65615e36b763b35bc81c1e64304bd2d0e5c7c/SECURITY.md","note":"Published in the official security policy."},
+    "summary": "Atomic Agent is a local-first agent whose durable memory lives outside the chat transcript in a versioned SQLite database. It combines profile facts, searchable notes, links, lessons, and procedures, then injects bounded selected context into prompts. This review describes pinned source and documentation; it does not report a runtime or benchmark result.",
+    "atlas_locator": {
+      "ordinal": 73,
+      "name": "Atomic Agent",
+      "slug": "atomic-agent",
+      "listed_repository": "https://github.com/AtomicBot-ai/atomic-agent",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/atomic-agent.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": "support@atomicbot.ai",
+    "contact_email_source_url": "https://github.com/AtomicBot-ai/atomic-agent/blob/89d65615e36b763b35bc81c1e64304bd2d0e5c7c/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/AtomicBot-ai/atomic-agent/blob/89d65615e36b763b35bc81c1e64304bd2d0e5c7c/README.md",
+      "https://github.com/AtomicBot-ai/atomic-agent/blob/89d65615e36b763b35bc81c1e64304bd2d0e5c7c/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "roster",
+        "label": "Curated roster identity, ordinal, listed repository and attribution",
+        "path": "../data/memory-systems.json",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Roster source attribution only; not used as assessment evidence",
+        "path": "content/systems/atomic-agent.md",
+        "symbol": "curated catalog source revision",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/atomic-agent.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official repository and default branch",
+        "path": "repository",
+        "symbol": "GitHub page identifies AtomicBot-ai/atomic-agent and main as default",
+        "url": "https://github.com/AtomicBot-ai/atomic-agent"
+      },
+      {
+        "id": "head",
+        "label": "Current main branch head",
+        "path": "commit",
+        "symbol": "full SHA 89d65615e36b763b35bc81c1e64304bd2d0e5c7c; verified against official main Atom feed",
+        "url": "https://github.com/AtomicBot-ai/atomic-agent/commit/89d65615e36b763b35bc81c1e64304bd2d0e5c7c"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "feed latest entry 89d65615e36b763b35bc81c1e64304bd2d0e5c7c",
+        "url": "https://github.com/AtomicBot-ai/atomic-agent/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Official project README",
+        "path": "README.md",
+        "url": "https://github.com/AtomicBot-ai/atomic-agent/blob/89d65615e36b763b35bc81c1e64304bd2d0e5c7c/README.md"
+      },
+      {
+        "id": "guide",
+        "label": "Current user guide to durable memory",
+        "path": "docs/user/memory.md",
+        "url": "https://github.com/AtomicBot-ai/atomic-agent/blob/89d65615e36b763b35bc81c1e64304bd2d0e5c7c/docs/user/memory.md"
+      },
+      {
+        "id": "memory_readme",
+        "label": "Memory subsystem ownership and entry points",
+        "path": "src/memory/README.md",
+        "url": "https://github.com/AtomicBot-ai/atomic-agent/blob/89d65615e36b763b35bc81c1e64304bd2d0e5c7c/src/memory/README.md"
+      },
+      {
+        "id": "schema",
+        "label": "SQLite memory schema and migrations",
+        "path": "src/memory/memory-schema.ts",
+        "symbol": "MEMORY_SCHEMA_VERSION; profile_facts; memories; FTS5; embeddings",
+        "url": "https://github.com/AtomicBot-ai/atomic-agent/blob/89d65615e36b763b35bc81c1e64304bd2d0e5c7c/src/memory/memory-schema.ts"
+      },
+      {
+        "id": "store",
+        "label": "Durable note store",
+        "path": "src/memory/memory-store.ts",
+        "symbol": "MemoryEntry; store and recall options; dedup, eviction, embedding and metrics interfaces",
+        "url": "https://github.com/AtomicBot-ai/atomic-agent/blob/89d65615e36b763b35bc81c1e64304bd2d0e5c7c/src/memory/memory-store.ts"
+      },
+      {
+        "id": "profile",
+        "label": "Profile facts and history store",
+        "path": "src/memory/profile-store.ts",
+        "symbol": "ProfileFact; set/remove; supersession, grounding, disable state",
+        "url": "https://github.com/AtomicBot-ai/atomic-agent/blob/89d65615e36b763b35bc81c1e64304bd2d0e5c7c/src/memory/profile-store.ts"
+      },
+      {
+        "id": "context",
+        "label": "Prompt memory retrieval and context assembly",
+        "path": "src/memory/memory-context-provider.ts",
+        "symbol": "createDefaultMemoryContextProvider; workingDir filtering; notes, lessons, procedures and link expansion",
+        "url": "https://github.com/AtomicBot-ai/atomic-agent/blob/89d65615e36b763b35bc81c1e64304bd2d0e5c7c/src/memory/memory-context-provider.ts"
+      },
+      {
+        "id": "retrieval",
+        "label": "Current retrieval design and configuration behavior",
+        "path": "src/memory/docs/retrieval.md",
+        "url": "https://github.com/AtomicBot-ai/atomic-agent/blob/89d65615e36b763b35bc81c1e64304bd2d0e5c7c/src/memory/docs/retrieval.md"
+      },
+      {
+        "id": "formation",
+        "label": "Current memory formation and lifecycle design",
+        "path": "src/memory/docs/formation.md",
+        "url": "https://github.com/AtomicBot-ai/atomic-agent/blob/89d65615e36b763b35bc81c1e64304bd2d0e5c7c/src/memory/docs/formation.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security reporting policy and published contact",
+        "path": "SECURITY.md",
+        "url": "https://github.com/AtomicBot-ai/atomic-agent/blob/89d65615e36b763b35bc81c1e64304bd2d0e5c7c/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "../METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status record",
+        "path": "../results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "../fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The curated roster lists Atomic Agent at the AtomicBot-ai repository locator. The official repository identifies the project as a local-first AI agent, rather than a standalone memory database. The inspected repository pages do not establish an individual maintainer role.",
+        "sources": [
+          "roster",
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Durable memory is held in a dedicated SQLite database separate from session storage. The schema has profile facts and freeform memory notes; notes carry content, timestamps, source, optional session and working-directory identifiers, tags, recall counters, and lifecycle fields. FTS5 mirrors note content for keyword retrieval, and schema migrations are versioned.",
+        "sources": [
+          "schema",
+          "store",
+          "memory_readme"
+        ]
+      },
+      {
+        "text": "Specialized stores and workers add profile history, links, lessons, procedures, votes, reflection, reconciliation, and consolidation. Profile facts have stable row IDs, valid-from timestamps, supersedes/superseded-by links, pinning and contextual keywords, disable state, vote score, and name-grounding state. Replaced facts remain as history rather than overwriting the previous version.",
+        "sources": [
+          "profile",
+          "formation",
+          "memory_readme"
+        ]
+      },
+      {
+        "text": "The context provider builds bounded prompt sections from recalled notes, a compact note index, and separately budgeted lessons and procedures. Optional graph-link expansion appends neighbors after ranked recall while deduplicating IDs; the provider filters already-recalled notes from the index. Memory remains outside the transcript and only selected previews/facts enter a turn.",
+        "sources": [
+          "context",
+          "retrieval",
+          "guide"
+        ]
+      },
+      {
+        "text": "The user guide says current defaults enable profile, notes, reflection, recall/index injection, and query rewriting; embeddings, typed-note extraction, and segmented reflection are optional and disabled by default. Configuration overrides and migrations can change installed behavior, so source defaults are not a claim about any particular installation.",
+        "sources": [
+          "guide",
+          "retrieval",
+          "formation"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Reflection can form bounded profile facts and notes from completed-turn observations. A deterministic grounding guard skips probe-only or one-off instruction turns and rejects unsupported user names, assistant identity claims, and instructions recast as enduring preferences. Name-like facts are kept in storage while unchecked, but the prompt renderer omits them until grounding checks find support in user messages.",
+        "sources": [
+          "formation",
+          "guide",
+          "profile"
+        ]
+      },
+      {
+        "text": "Notes can be added through the memory store and explicit memory tools, while profile facts use ProfileStore.set. Profile updates create a new row in the supersession chain, preserving earlier values for history. Optional reconciliation marks replaced notes as superseded and the context provider omits them from ordinary recall and the index; archive/consolidation can preserve a note by distilling it into a lesson.",
+        "sources": [
+          "store",
+          "profile",
+          "formation",
+          "context"
+        ]
+      },
+      {
+        "text": "Removal and turning an entry off are distinct lifecycle choices. The schema ties embeddings to note rows with a delete cascade, and ProfileStore keeps historical profile rows when an active fact is removed. The store also supports disabling notes and profile facts: disabled rows remain listed but are excluded from recall, search, prompt context, and consolidation. The user guide cautions that deleting a chat does not delete durable memory.",
+        "sources": [
+          "schema",
+          "store",
+          "profile",
+          "guide"
+        ]
+      },
+      {
+        "text": "Keyword recall uses FTS5/BM25. When embeddings are configured, hybrid recall blends normalized BM25 with cosine similarity; notes found only by meaning fill remaining slots above the configured similarity floor and pass the same working-directory and tag filters. Query rewriting is enabled by default and heuristic-gated. If vector recall errors, the notes tool falls back to keyword recall. TUI search and lesson/procedure recall remain keyword-only.",
+        "sources": [
+          "retrieval",
+          "store",
+          "context"
+        ]
+      },
+      {
+        "text": "The optional vector path scans up to a configured brute-force ceiling (documented default 2,000 vectors); above it, it checks the newest vectors plus vectors for keyword hits and records overflow. Background backfill embeds one note at a time in small batches. During backfill recall stays keyword-only to avoid ranking a partially indexed corpus as if it were complete.",
+        "sources": [
+          "retrieval",
+          "schema",
+          "store"
+        ]
+      },
+      {
+        "text": "Note rows preserve source (agent or user), timestamps, optional session ID, working directory, and tags; profile history links a replacement fact to the version it supersedes. These fields provide item-level lineage, but the inspected model does not establish claim-level citations to source passages. The store accepts an optional metrics sink for dedup decisions, eviction sweeps, and clock-skew detections; formation documentation describes per-session tracking of repeated sub-runner failures/timeouts and operator warnings. These are source-visible instrumentation paths, not observed telemetry.",
+        "sources": [
+          "schema",
+          "store",
+          "profile",
+          "formation"
+        ]
+      },
+      {
+        "text": "Project scope is represented by a nullable working_dir on notes. The context provider applies a project filter only when a working directory is supplied; without it, retrieval spans projects. The memory recall tool lets its caller/model select scope, and profile facts have no project-scope key. The reviewed source shows filtering behavior, not a principal-based authorization boundary or a tested isolation guarantee.",
+        "sources": [
+          "schema",
+          "context",
+          "retrieval",
+          "guide"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "metric": "Answerable retrieval and abstention",
+        "status": "not_measured",
+        "evidence": "Source defines ranked note retrieval and bounded context, but no answerable or unanswerable probes were run or adjudicated.",
+        "sources": [
+          "retrieval",
+          "context",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "metric": "Correction accuracy and stale-value rate",
+        "status": "not_measured",
+        "evidence": "Profile versions and note supersession provide source-visible correction mechanisms; their accuracy and stale-value behavior were not measured.",
+        "sources": [
+          "profile",
+          "formation",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "metric": "Deletion leakage",
+        "status": "not_measured",
+        "evidence": "Removal and disable paths exist, but no accepted-delete workflow was exercised and no post-deletion leakage probes were run.",
+        "sources": [
+          "schema",
+          "store",
+          "profile",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "metric": "Scope isolation",
+        "status": "not_measured",
+        "evidence": "Working-directory filtering is conditional on supplied scope and profile facts lack a scope key; no cross-project or principal isolation probes were run.",
+        "sources": [
+          "schema",
+          "context",
+          "retrieval",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "metric": "Evidence support and citation coverage",
+        "status": "not_measured",
+        "evidence": "Stored notes have source/session metadata, but this review found no measured claim-level support or citation coverage result.",
+        "sources": [
+          "schema",
+          "store",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "metric": "Retrieval latency",
+        "status": "not_measured",
+        "evidence": "The implementation exposes bounded retrieval paths and an embedding scan ceiling, but no retrieval latency distribution was collected.",
+        "sources": [
+          "retrieval",
+          "store",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "metric": "Write-to-recall delay",
+        "status": "not_measured",
+        "evidence": "No controlled write acknowledgment and scheduled recall probes were performed.",
+        "sources": [
+          "formation",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "metric": "Tokens and cost",
+        "status": "not_measured",
+        "evidence": "Prompt sections and bounded index/previews are source-visible, but token usage and cost were not measured in this review.",
+        "sources": [
+          "context",
+          "retrieval",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "metric": "Storage efficiency",
+        "status": "not_measured",
+        "evidence": "SQLite tables and embeddings are inspectable in source, but persistent bytes attributable to stored items were not measured.",
+        "sources": [
+          "schema",
+          "store",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded inspection of selected documentation and TypeScript source at the verified main head. It does not establish retrieval quality, answer correctness, safe erasure of database pages/backups, cross-principal isolation, runtime latency, storage efficiency, or current configuration on any installation.",
+        "sources": [
+          "guide",
+          "schema",
+          "context",
+          "retrieval"
+        ]
+      },
+      {
+        "text": "Working-directory filters are caller inputs and profile facts do not carry a working-directory key; the reviewed behavior should not be interpreted as an authorization guarantee. The embedding path may scan only a bounded subset when the corpus exceeds its ceiling, and this review did not measure recall impact.",
+        "sources": [
+          "schema",
+          "context",
+          "retrieval"
+        ]
+      },
+      {
+        "text": "Project documentation reports defaults, but local configuration and migrations can override them. No system, benchmark, or tests were run, and no source-visible metric field has been treated as a measured outcome.",
+        "sources": [
+          "guide",
+          "formation",
+          "retrieval",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "Benchmark status is not_run. No Atomic Agent runtime or benchmark workload was executed. Metric definitions and fixture counts describe a protocol and planned probes, not measured results.",
+      "metric_definitions_path": "../METRICS.md",
+      "execution_status_path": "../results/initial-baselines-status.json",
+      "fixture_path": "../fixtures/memory-benchmark-v1.json",
+      "sources": [
+        "metrics",
+        "status",
+        "fixture"
+      ]
+    }
+  }
+}

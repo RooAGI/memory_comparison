@@ -1,0 +1,393 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 152,
+    "slug": "continuous-claude",
+    "name": "Continuous Claude",
+    "repository": "https://github.com/parcadei/Continuous-Claude-v3",
+    "branch": "main",
+    "revision": "d07ff4b06b62f43771bc0c927d0211b734d6149e",
+    "reviewed_at": "2026-11-25T09:12:48Z",
+    "review_timezone": "UTC (2026-11-25 01:12:48 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/parcadei/Continuous-Claude-v3/blob/d07ff4b06b62f43771bc0c927d0211b734d6149e/README.md",
+      "checked_urls": [
+        "https://github.com/parcadei/Continuous-Claude-v3/blob/d07ff4b06b62f43771bc0c927d0211b734d6149e/README.md"
+      ],
+      "note": "The official pinned README was checked; it publishes no contact email."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/parcadei/Continuous-Claude-v3/blob/d07ff4b06b62f43771bc0c927d0211b734d6149e/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the official pinned README.",
+    "summary": "Continuous Claude combines Claude Code hooks, continuity artifacts, agent workflows, code analysis, and cross-session memory. Its PostgreSQL learning path stores typed, embedded archival records and recalls them through prompt-time context; source inspection found the factory's default SQLite implementation path absent at this revision and a standalone recall query without session/project filtering. This review ran no runtime, tests, or benchmarks.",
+    "atlas_locator": {
+      "ordinal": 152,
+      "name": "Continuous Claude",
+      "slug": "continuous-claude",
+      "listed_repository": "https://github.com/parcadei/Continuous-Claude-v3",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/continuous-claude.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "sources": [
+      {
+        "id": "roster",
+        "label": "Curated roster identity and repository locator",
+        "path": "data/memory-systems.json",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/continuous-claude.md",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/continuous-claude.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository; default branch main",
+        "path": "repository root",
+        "url": "https://github.com/parcadei/Continuous-Claude-v3"
+      },
+      {
+        "id": "head",
+        "label": "Verified current main head",
+        "path": "commit",
+        "symbol": "d07ff4b06b62f43771bc0c927d0211b734d6149e",
+        "url": "https://github.com/parcadei/Continuous-Claude-v3/commit/d07ff4b06b62f43771bc0c927d0211b734d6149e"
+      },
+      {
+        "id": "commits",
+        "label": "Official main commits feed showing current head",
+        "path": "main Atom feed",
+        "url": "https://github.com/parcadei/Continuous-Claude-v3/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README and contact check",
+        "path": "README.md",
+        "url": "https://github.com/parcadei/Continuous-Claude-v3/blob/d07ff4b06b62f43771bc0c927d0211b734d6149e/README.md"
+      },
+      {
+        "id": "factory",
+        "label": "Memory backend selection and service factory",
+        "path": "opc/scripts/core/db/memory_factory.py",
+        "url": "https://github.com/parcadei/Continuous-Claude-v3/blob/d07ff4b06b62f43771bc0c927d0211b734d6149e/opc/scripts/core/db/memory_factory.py"
+      },
+      {
+        "id": "sqlite_missing",
+        "label": "Checked pinned SQLite service path; absent at this revision",
+        "path": "opc/scripts/core/db/memory_service.py",
+        "url": "https://github.com/parcadei/Continuous-Claude-v3/blob/d07ff4b06b62f43771bc0c927d0211b734d6149e/opc/scripts/core/db/memory_service.py"
+      },
+      {
+        "id": "postgres",
+        "label": "PostgreSQL memory service",
+        "path": "opc/scripts/core/db/memory_service_pg.py",
+        "url": "https://github.com/parcadei/Continuous-Claude-v3/blob/d07ff4b06b62f43771bc0c927d0211b734d6149e/opc/scripts/core/db/memory_service_pg.py"
+      },
+      {
+        "id": "store",
+        "label": "Learning write, embedding, metadata, and deduplication",
+        "path": "opc/scripts/core/store_learning.py",
+        "url": "https://github.com/parcadei/Continuous-Claude-v3/blob/d07ff4b06b62f43771bc0c927d0211b734d6149e/opc/scripts/core/store_learning.py"
+      },
+      {
+        "id": "recall",
+        "label": "Learning recall queries",
+        "path": "opc/scripts/core/recall_learnings.py",
+        "url": "https://github.com/parcadei/Continuous-Claude-v3/blob/d07ff4b06b62f43771bc0c927d0211b734d6149e/opc/scripts/core/recall_learnings.py"
+      },
+      {
+        "id": "daemon",
+        "label": "Background memory extraction daemon",
+        "path": "opc/scripts/core/memory_daemon.py",
+        "url": "https://github.com/parcadei/Continuous-Claude-v3/blob/d07ff4b06b62f43771bc0c927d0211b734d6149e/opc/scripts/core/memory_daemon.py"
+      },
+      {
+        "id": "extractor",
+        "label": "Thinking-block extraction command",
+        "path": "opc/scripts/core/extract_thinking_blocks.py",
+        "url": "https://github.com/parcadei/Continuous-Claude-v3/blob/d07ff4b06b62f43771bc0c927d0211b734d6149e/opc/scripts/core/extract_thinking_blocks.py"
+      },
+      {
+        "id": "schema",
+        "label": "PostgreSQL memory and handoff schema",
+        "path": "docker/init-schema.sql",
+        "url": "https://github.com/parcadei/Continuous-Claude-v3/blob/d07ff4b06b62f43771bc0c927d0211b734d6149e/docker/init-schema.sql"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The curated roster identifies ordinal 152 as Continuous Claude, slug continuous-claude, with an explicit repository locator; Atlas is retained only as roster attribution.",
+        "sources": [
+          "roster",
+          "atlas"
+        ]
+      },
+      {
+        "text": "GitHub identifies main as the default branch; its repository page and main commits feed show current head d07ff4b06b62f43771bc0c927d0211b734d6149e.",
+        "sources": [
+          "repo",
+          "commits",
+          "head"
+        ]
+      },
+      {
+        "text": "The README describes a Claude Code environment with background learning extraction, prompt-time recall, continuity artifacts, hooks, skills, agents, and TLDR code analysis.",
+        "sources": [
+          "readme",
+          "daemon",
+          "store"
+        ]
+      },
+      {
+        "text": "The official pinned README was checked for contact; it publishes no contact email.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The overall environment combines Claude Code hooks, skills, agents, continuity ledgers/handoffs, code analysis, and a cross-session memory subsystem.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The PostgreSQL schema separates session coordination, archival learning records, and handoffs. Archival records include UUID, session and optional agent IDs, content, JSON metadata, a 1024-dimensional vector, and creation time; indexes cover session, agent, recency, and full-text content.",
+        "sources": [
+          "schema",
+          "readme"
+        ]
+      },
+      {
+        "text": "The learning writer supports typed records with optional context, tags, and confidence; it embeds content and skips a record when top vector similarity meets 0.85. The memory factory selects PostgreSQL or SQLite, but its SQLite import target is absent at the reviewed head.",
+        "sources": [
+          "store",
+          "factory",
+          "sqlite_missing"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: a daemon monitors stale sessions and invokes headless Claude to extract learnings from thinking blocks; a CLI also writes typed learnings directly. Daemon source documents 60-second polling, five-minute staleness, a two-process extraction cap, and local-file logging.",
+        "sources": [
+          "readme",
+          "daemon",
+          "store",
+          "extractor"
+        ]
+      },
+      {
+        "text": "Backend: the service factory defaults to SQLite and imports scripts.core.db.memory_service, but that path is absent at this revision. PostgreSQL is implemented in memory_service_pg.py and is selected by configuration or database URL.",
+        "sources": [
+          "factory",
+          "sqlite_missing",
+          "postgres",
+          "store"
+        ]
+      },
+      {
+        "text": "Correction/deletion: the inspected archival writer uses vector deduplication rather than a correction/supersession protocol. The reviewed learning recall and write entry points do not expose a forget operation or deletion audit; PostgreSQL core-memory set replaces a key but is a different data path.",
+        "sources": [
+          "store",
+          "recall",
+          "postgres"
+        ]
+      },
+      {
+        "text": "Retrieval: README describes hybrid text/vector recall and automatic prompt injection. The standalone PostgreSQL recall query filters to session-learning records but has no session or project predicate, so it can return records across those boundaries.",
+        "sources": [
+          "readme",
+          "recall",
+          "schema"
+        ]
+      },
+      {
+        "text": "Scope: archival rows record session and optional agent IDs, and PostgreSQL core-memory operations use session/agent predicates. The inspected standalone recall query does not apply those filters; record scope therefore does not guarantee isolation on every retrieval path.",
+        "sources": [
+          "schema",
+          "postgres",
+          "recall"
+        ]
+      },
+      {
+        "text": "Provenance: learning rows carry a session identifier and JSON metadata; handoffs separately have optional transcript path and span fields. The archival schema has no dedicated source transcript/evidence-span field, and confidence metadata is not an evidence-verification mechanism.",
+        "sources": [
+          "schema",
+          "store",
+          "recall"
+        ]
+      },
+      {
+        "text": "Efficiency/observability: extraction runs outside the active request path, PostgreSQL provides full-text and vector indexes, and the daemon bounds concurrent extraction and writes a local log. No performance or reliability results were measured.",
+        "sources": [
+          "readme",
+          "schema",
+          "daemon"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Search paths are present, but no answerability or abstention workload was run.",
+        "sources": [
+          "readme",
+          "recall",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "The reviewed learning writer has deduplication but no inspected correction workload or outcome.",
+        "sources": [
+          "store",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No forget workflow or post-delete retrieval check was run.",
+        "sources": [
+          "store",
+          "recall",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation leakage",
+        "status": "unmeasured",
+        "evidence": "The standalone recall query lacks session/project predicates; no cross-session isolation workload was run.",
+        "sources": [
+          "recall",
+          "schema",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Metadata and handoff trace fields exist, but no support or citation evaluation was run.",
+        "sources": [
+          "schema",
+          "store",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "Indexes and search code are present; no latency workload was collected.",
+        "sources": [
+          "schema",
+          "recall",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The daemon polls stale sessions; no indexing or recall delay was measured.",
+        "sources": [
+          "daemon",
+          "readme",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Token use and cost",
+        "status": "unmeasured",
+        "evidence": "The README makes token-efficiency claims for project components; no memory-specific token or cost results were collected.",
+        "sources": [
+          "readme",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The schema defines storage and embeddings; no storage footprint workload was run.",
+        "sources": [
+          "schema",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The configured default SQLite backend points to an absent source file at the reviewed head; the system was not executed to measure the resulting behavior.",
+        "sources": [
+          "factory",
+          "sqlite_missing"
+        ]
+      },
+      {
+        "text": "The inspected standalone recall query is not session/project scoped even though archival rows carry session identifiers.",
+        "sources": [
+          "schema",
+          "recall"
+        ]
+      },
+      {
+        "text": "The reviewed writer and recall entry points do not establish a complete correction, forget, deletion-audit, or evidence-validation lifecycle.",
+        "sources": [
+          "store",
+          "recall",
+          "schema"
+        ]
+      },
+      {
+        "text": "This review covers selected current source and README material, not every hook, configuration, migration, or deployment topology.",
+        "sources": [
+          "repo",
+          "head",
+          "readme"
+        ]
+      }
+    ],
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "No Continuous Claude runtime, tests, or benchmark workloads were executed for this source review."
+    }
+  }
+}

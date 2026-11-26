@@ -1,0 +1,323 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 121,
+    "slug": "claude-engram-mlapeter",
+    "name": "Claude Engram (mlapeter)",
+    "repository": "https://github.com/mlapeter/claude-engram",
+    "listed_repository": "https://github.com/mlapeter/claude-engram",
+    "branch": "main",
+    "revision": "d7366c6396f769d0267254ca648199978d5b63cb",
+    "reviewed_at": "2026-11-25T07:58:28Z",
+    "review_timezone": "UTC (2026-11-24 23:58:28 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Claude Engram is a local Claude Code memory application with a global and per-project world store, first-person episodes, identity documents, hook-driven capture, and MCP retrieval. This review describes pinned source and documentation; it does not run the system or measure quality.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/claude-engram-mlapeter.md"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/mlapeter/claude-engram/blob/d7366c6396f769d0267254ca648199978d5b63cb/README.md",
+      "checked_urls": [
+        "https://github.com/mlapeter/claude-engram/blob/d7366c6396f769d0267254ca648199978d5b63cb/README.md",
+        "https://github.com/mlapeter/claude-engram/blob/d7366c6396f769d0267254ca648199978d5b63cb/SECURITY.md",
+        "https://github.com/mlapeter/claude-engram/blob/d7366c6396f769d0267254ca648199978d5b63cb/SUPPORT.md"
+      ],
+      "note": "No published contact email was found in the official README; it names a maintainer for commercial licensing but gives no email. SECURITY.md was not found at the pinned path and SUPPORT.md is absent from the repository listing. No commit/profile metadata or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/mlapeter/claude-engram/blob/d7366c6396f769d0267254ca648199978d5b63cb/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/mlapeter/claude-engram/blob/d7366c6396f769d0267254ca648199978d5b63cb/README.md",
+      "https://github.com/mlapeter/claude-engram/blob/d7366c6396f769d0267254ca648199978d5b63cb/SECURITY.md",
+      "https://github.com/mlapeter/claude-engram/blob/d7366c6396f769d0267254ca648199978d5b63cb/SUPPORT.md"
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity, ordinal, and listed repository",
+        "path": "data/memory-systems.json",
+        "symbol": "Position 121 (systems[120]); explicit repository attribution; identity/locator only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/claude-engram-mlapeter.md",
+        "symbol": "Pinned locator attribution; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/claude-engram-mlapeter.md"
+      },
+      {
+        "id": "tree",
+        "label": "Reviewed official repository tree",
+        "path": "repository tree",
+        "symbol": "Official tree at the reviewed full SHA",
+        "url": "https://github.com/mlapeter/claude-engram/tree/d7366c6396f769d0267254ca648199978d5b63cb"
+      },
+      {
+        "id": "security",
+        "label": "Official SECURITY.md contact check",
+        "path": "SECURITY.md",
+        "symbol": "Checked for a published contact email; the pinned path was not found",
+        "url": "https://github.com/mlapeter/claude-engram/blob/d7366c6396f769d0267254ca648199978d5b63cb/SECURITY.md"
+      },
+      {
+        "id": "support",
+        "label": "Official SUPPORT.md contact check",
+        "path": "SUPPORT.md",
+        "symbol": "Checked for a published contact email; absent from the official repository listing",
+        "url": "https://github.com/mlapeter/claude-engram/blob/d7366c6396f769d0267254ca648199978d5b63cb/SUPPORT.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "Public mlapeter/claude-engram; main is the default branch",
+        "url": "https://github.com/mlapeter/claude-engram"
+      },
+      {
+        "id": "head",
+        "label": "Official GitHub commits Atom feed",
+        "path": "commits/main.atom",
+        "symbol": "Current main head d7366c6396f769d0267254ca648199978d5b63cb; feed updated 2026-11-06T12:35:01Z",
+        "url": "https://github.com/mlapeter/claude-engram/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Official README at reviewed commit",
+        "path": "README.md",
+        "symbol": "Architecture, lifecycle, tools, privacy, dashboard, limitations and contact check",
+        "url": "https://github.com/mlapeter/claude-engram/blob/d7366c6396f769d0267254ca648199978d5b63cb/README.md"
+      },
+      {
+        "id": "types",
+        "label": "Core data schemas and project partitioning",
+        "path": "src/core/types.ts",
+        "symbol": "MemorySchema, scope, provenance fields, projectHash, getDataDir",
+        "url": "https://github.com/mlapeter/claude-engram/blob/d7366c6396f769d0267254ca648199978d5b63cb/src/core/types.ts"
+      },
+      {
+        "id": "buffer",
+        "label": "Durable transcript buffer",
+        "path": "src/core/buffer.ts",
+        "symbol": "Append, atomic claim, chunking and restore behavior",
+        "url": "https://github.com/mlapeter/claude-engram/blob/d7366c6396f769d0267254ca648199978d5b63cb/src/core/buffer.ts"
+      },
+      {
+        "id": "store",
+        "label": "Memory store interface and implementation",
+        "path": "src/core/store.ts",
+        "symbol": "File-backed store, read/write/search/archive API and retrieval paths",
+        "url": "https://github.com/mlapeter/claude-engram/blob/d7366c6396f769d0267254ca648199978d5b63cb/src/core/store.ts"
+      },
+      {
+        "id": "consolidation",
+        "label": "Consolidation implementation",
+        "path": "src/core/consolidation.ts",
+        "symbol": "Model-assisted merge, prune-to-archive, semantic generalization and event reporting",
+        "url": "https://github.com/mlapeter/claude-engram/blob/d7366c6396f769d0267254ca648199978d5b63cb/src/core/consolidation.ts"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "Claude Engram is a Claude Code memory application with world facts, first-person episode files, and identity documents. Hooks capture and load context; MCP tools support recall and deliberate memory changes. claude.ai uses a manual paste/import bridge.",
+        "sources": [
+          "readme",
+          "repo",
+          "types"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The world-memory schema carries content, scope, episodic/semantic type, self/person/craft register, four salience values, tags, access timestamps/count, session provenance and update/archive lineage. Identity and episodes are described as files, with plain text or JSON as canonical local data and an optional derived embedding index.",
+        "sources": [
+          "types",
+          "readme"
+        ]
+      },
+      {
+        "text": "The default data directory is ~/.claude-engram and can be overridden. World memories use a global partition and a project partition keyed by a 12-character SHA-256 prefix of the working-directory path. README documents model API calls for extraction/consolidation and an optional Voyage API for semantic embeddings.",
+        "sources": [
+          "types",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: the Stop hook appends timestamped, session-tagged transcript spans into a per-project text buffer. Buffer claims use atomic rename, preserve undersized text for later, split at span boundaries, and restore failed claims/chunks by appending original text. README describes detached extraction at size/age thresholds and hook-driven flushes.",
+        "sources": [
+          "buffer",
+          "readme"
+        ]
+      },
+      {
+        "text": "Update and consolidation: store and reinforce tools support deliberate writes, strengthening, and optional content updates. Consolidation can merge, generalize, prune to archive, promote episodic memories to semantic gist, and link associated memories. Merge/prune originals retain archive lineage in code.",
+        "sources": [
+          "readme",
+          "consolidation",
+          "store"
+        ]
+      },
+      {
+        "text": "Delete: README exposes a forget tool and the store interface includes remove(id). The same README describes deep archive recall and reactivation. This review did not trace whether forget removes all copies from active data, archives, and backups; complete erasure semantics remain unknown.",
+        "sources": [
+          "readme",
+          "store"
+        ]
+      },
+      {
+        "text": "Retrieval: README documents text recall ranked by relevance and strength, tag lookup, one-hop associations and same-session siblings, and optional vector search. Access can strengthen memories; deep_recall searches archived memories and can reactivate them. Observer mode is documented to suppress strengthening. These behaviors were not measured.",
+        "sources": [
+          "readme",
+          "store"
+        ]
+      },
+      {
+        "text": "Scope: separate global and working-directory-hashed project stores support local project partitioning. This review did not establish authenticated tenant enforcement or test cross-project isolation.",
+        "sources": [
+          "types",
+          "readme"
+        ]
+      },
+      {
+        "text": "Provenance: records retain session origin, timestamps, update links, and merge/gist archive lineage; local Git snapshots are documented for consolidation. The reviewed memory schema has no evidence-quote or trust-state fields, so claim-level source support is not established.",
+        "sources": [
+          "types",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Source and documentation observations do not establish correctness or calibrated abstention; no probes were run.",
+        "sources": [
+          "readme",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction and stale-value handling",
+        "status": "unmeasured",
+        "evidence": "Reinforce/update and consolidation are documented, but no correction probes were run and stale-value behavior was not measured.",
+        "sources": [
+          "readme",
+          "store",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "A forget tool and archive APIs exist, but end-to-end erasure across active records, archives, and backups was not traced or tested.",
+        "sources": [
+          "readme",
+          "store",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Global and project partitions are visible in the schema/path model; no cross-project isolation probes were run.",
+        "sources": [
+          "types",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "The reviewed memory model does not establish claim-level citations or adjudicated evidence support.",
+        "sources": [
+          "types",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "README describes a short hook path and optional hook latency dashboard, but no timings were collected.",
+        "sources": [
+          "readme",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "README gives qualitative cost expectations and model/API dependencies; no workload token, cost, or storage measurements were collected.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Source-visible observability",
+        "status": "code_observation",
+        "evidence": "README describes a local dashboard with per-hook latency percentiles, failures, and log tail plus in-context failure notices. No operational telemetry was collected.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The README states the project is no longer developed and that code last changed July 17, 2026; the current main head is a README update. Model defaults may need maintenance as provider models retire. The hook-based workflow requires an Anthropic API key; optional embeddings require a Voyage API key. The claude.ai bridge is manual.",
+        "sources": [
+          "readme",
+          "head"
+        ]
+      },
+      {
+        "text": "The review did not run the system or verify API compatibility, deletion completeness, empirical scope isolation, retrieval quality, or operational resilience. Unknown means not established by this source review.",
+        "sources": [
+          "readme",
+          "types",
+          "store"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status: not_run. No system code, benchmark workload, or tests were executed. The project metric definitions, status record, and fixture are not results for Claude Engram.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

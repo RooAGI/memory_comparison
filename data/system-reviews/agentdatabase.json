@@ -1,0 +1,362 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "agentdatabase",
+    "name": "AgentDatabase",
+    "repository": "https://github.com/LinzeColin/AgentDatabase",
+    "branch": "main",
+    "revision": "e9acee95271d828167d90f0985aaad3c9cb9f7dd",
+    "reviewed_at": "2026-11-24T18:40:59Z",
+    "review_timezone": "UTC (2026-11-24 10:40:59 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/LinzeColin/AgentDatabase/blob/e9acee95271d828167d90f0985aaad3c9cb9f7dd/README.md","checked_urls":["https://github.com/LinzeColin/AgentDatabase/blob/e9acee95271d828167d90f0985aaad3c9cb9f7dd/README.md","https://github.com/LinzeColin/AgentDatabase/blob/e9acee95271d828167d90f0985aaad3c9cb9f7dd/SECURITY.md","https://github.com/LinzeColin/AgentDatabase/blob/e9acee95271d828167d90f0985aaad3c9cb9f7dd/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "AgentDatabase is a multi-project agent-data repository whose OpenAIDatabase subsystem stores structured personal memories as canonical, sharded JSONL with governed mutations and temporal retrieval. Selected source code was inspected at the verified main head; no system benchmark was run.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/LinzeColin/AgentDatabase"
+    },
+    "catalog_position": 16,
+    "listed_repository_locator": "https://github.com/LinzeColin/AgentDatabase",
+    "catalog_source_url": "https://github.com/LinzeColin/AgentDatabase/blob/e9acee95271d828167d90f0985aaad3c9cb9f7dd/README.md",
+    "contact_follow_up": {
+      "published_email": null,
+      "checked_source_url": "https://github.com/LinzeColin/AgentDatabase/blob/e9acee95271d828167d90f0985aaad3c9cb9f7dd/README.md",
+      "checked_documents": [
+        "https://github.com/LinzeColin/AgentDatabase/blob/e9acee95271d828167d90f0985aaad3c9cb9f7dd/README.md",
+        "https://github.com/LinzeColin/AgentDatabase/blob/e9acee95271d828167d90f0985aaad3c9cb9f7dd/OpenAIDatabase/README.md",
+        "https://github.com/LinzeColin/AgentDatabase/blob/e9acee95271d828167d90f0985aaad3c9cb9f7dd/OpenAIDatabase/docs/PERSONAL_CONTEXT_ARCHITECTURE.md"
+      ]
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Current upstream repository at reviewed main head",
+        "path": "repository",
+        "symbol": "git ls-remote --symref identified refs/heads/main as HEAD; HEAD and refs/heads/main both resolved to the reviewed full SHA.",
+        "url": "https://github.com/LinzeColin/AgentDatabase/tree/e9acee95271d828167d90f0985aaad3c9cb9f7dd"
+      },
+      {
+        "id": "root_readme",
+        "label": "Repository README",
+        "path": "README.md",
+        "symbol": "Repository areas, public/private data policy, and AgentDatabase scope.",
+        "url": "https://github.com/LinzeColin/AgentDatabase/blob/e9acee95271d828167d90f0985aaad3c9cb9f7dd/README.md"
+      },
+      {
+        "id": "oad_readme",
+        "label": "OpenAIDatabase README",
+        "path": "OpenAIDatabase/README.md",
+        "symbol": "Personal memory database purpose, governance, data model, and user-facing behavior.",
+        "url": "https://github.com/LinzeColin/AgentDatabase/blob/e9acee95271d828167d90f0985aaad3c9cb9f7dd/OpenAIDatabase/README.md"
+      },
+      {
+        "id": "architecture_doc",
+        "label": "Personal context architecture",
+        "path": "OpenAIDatabase/docs/PERSONAL_CONTEXT_ARCHITECTURE.md",
+        "symbol": "Canonical three-layer context and V2 record locations.",
+        "url": "https://github.com/LinzeColin/AgentDatabase/blob/e9acee95271d828167d90f0985aaad3c9cb9f7dd/OpenAIDatabase/docs/PERSONAL_CONTEXT_ARCHITECTURE.md"
+      },
+      {
+        "id": "memory_cli",
+        "label": "Memory CLI",
+        "path": "OpenAIDatabase/scripts/memory.py",
+        "symbol": "Canonical shard writer, query filters, active eligibility, and query traces.",
+        "url": "https://github.com/LinzeColin/AgentDatabase/blob/e9acee95271d828167d90f0985aaad3c9cb9f7dd/OpenAIDatabase/scripts/memory.py"
+      },
+      {
+        "id": "mutation_impl",
+        "label": "Mutation implementation",
+        "path": "OpenAIDatabase/scripts/memory_mutation.py",
+        "symbol": "Envelope validation, idempotency, add/update/retire/dispute operations, and transitions.",
+        "url": "https://github.com/LinzeColin/AgentDatabase/blob/e9acee95271d828167d90f0985aaad3c9cb9f7dd/OpenAIDatabase/scripts/memory_mutation.py"
+      },
+      {
+        "id": "lifecycle",
+        "label": "Memory lifecycle implementation",
+        "path": "OpenAIDatabase/scripts/memory_lifecycle.py",
+        "symbol": "Transition history and valid-time/recorded-time projection.",
+        "url": "https://github.com/LinzeColin/AgentDatabase/blob/e9acee95271d828167d90f0985aaad3c9cb9f7dd/OpenAIDatabase/scripts/memory_lifecycle.py"
+      },
+      {
+        "id": "retrieval_impl",
+        "label": "Memory retrieval implementation",
+        "path": "OpenAIDatabase/scripts/memory_retrieval.py",
+        "symbol": "Lexical routing, shard selection, request budgets, ETag cache, and retries.",
+        "url": "https://github.com/LinzeColin/AgentDatabase/blob/e9acee95271d828167d90f0985aaad3c9cb9f7dd/OpenAIDatabase/scripts/memory_retrieval.py"
+      },
+      {
+        "id": "forgetting",
+        "label": "Forgetting and answer eligibility",
+        "path": "OpenAIDatabase/scripts/memory_forgetting.py",
+        "symbol": "Active-only answer eligibility, retirement semantics, and UNKNOWN abstention reason codes.",
+        "url": "https://github.com/LinzeColin/AgentDatabase/blob/e9acee95271d828167d90f0985aaad3c9cb9f7dd/OpenAIDatabase/scripts/memory_forgetting.py"
+      },
+      {
+        "id": "memory_schema",
+        "label": "V2 memory schema",
+        "path": "OpenAIDatabase/config/memory.schema.json",
+        "symbol": "Record fields, scope/status enums, source evidence, temporal fields, verification, and hashes.",
+        "url": "https://github.com/LinzeColin/AgentDatabase/blob/e9acee95271d828167d90f0985aaad3c9cb9f7dd/OpenAIDatabase/config/memory.schema.json"
+      },
+      {
+        "id": "sharding_contract",
+        "label": "Canonical sharding contract",
+        "path": "OpenAIDatabase/config/memory.sharding.json",
+        "symbol": "Canonical manifest plus records-NNNN.jsonl shard contract.",
+        "url": "https://github.com/LinzeColin/AgentDatabase/blob/e9acee95271d828167d90f0985aaad3c9cb9f7dd/OpenAIDatabase/config/memory.sharding.json"
+      },
+      {
+        "id": "mutation_policy",
+        "label": "Mutation policy",
+        "path": "OpenAIDatabase/config/memory-mutation-policy.json",
+        "symbol": "Admitted source types, authorized scopes, operation set, branch boundary, and size limits.",
+        "url": "https://github.com/LinzeColin/AgentDatabase/blob/e9acee95271d828167d90f0985aaad3c9cb9f7dd/OpenAIDatabase/config/memory-mutation-policy.json"
+      },
+      {
+        "id": "retrieval_contract",
+        "label": "Retrieval performance contract",
+        "path": "OpenAIDatabase/config/evaluation/memory_retrieval_performance_v1.json",
+        "symbol": "Configured content-fetch, request, retry, response-size, and runtime measurement bounds; not observed measurements.",
+        "url": "https://github.com/LinzeColin/AgentDatabase/blob/e9acee95271d828167d90f0985aaad3c9cb9f7dd/OpenAIDatabase/config/evaluation/memory_retrieval_performance_v1.json"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": null,
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": null,
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "benchmark_status",
+        "label": "Project baseline execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": null,
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "roster",
+        "label": "Catalog identity and listed locator attribution only",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 16 name, slug, repository locator, and source attribution only; Atlas descriptions and marks excluded from assessment.",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas_attribution",
+        "label": "Catalog source attribution only",
+        "path": "content/systems/agentdatabase.md",
+        "symbol": "Pinned catalog attribution locator; contents not used as assessment evidence.",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agentdatabase.md"
+      },
+      {
+        "id": "contact_checked",
+        "label": "Official repository README checked for published contact email",
+        "path": "README.md",
+        "symbol": "Checked this official README plus the OpenAIDatabase README and personal-context architecture document; no published contact email was found.",
+        "url": "https://github.com/LinzeColin/AgentDatabase/blob/e9acee95271d828167d90f0985aaad3c9cb9f7dd/README.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The root repository contains multiple agent-data projects. Its README identifies OpenAIDatabase as the local-first conversation and memory runtime, alongside a retired MemoryAtlas app and a CodexSkills mirror. The reviewed memory functionality is the Python CLI and structured personal database under OpenAIDatabase.",
+        "sources": [
+          "root_readme",
+          "oad_readme",
+          "architecture_doc"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Code observation: canonical memory is a manifest and deterministically planned records-NNNN.jsonl shards under data/memory/records. The CLI validates the record set and its writer stages, fsyncs, installs, then reloads and validates the complete canonical dataset. Generated agent-memory views are built separately.",
+        "sources": [
+          "sharding_contract",
+          "memory_cli"
+        ]
+      },
+      {
+        "text": "The V2 record schema includes record identity and statement fields, status, typed scope, source reference and observed time, optional evidence hash, valid and recorded time, confidence and importance, verification state/references, tags and aliases, sensitivity, conflict/supersession, and content hash. The architecture document identifies candidate, active, disputed, and retired records in the canonical store.",
+        "sources": [
+          "memory_schema",
+          "architecture_doc"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: mutation envelopes carry operation, content-derived idempotency key, base commit, actor, source, authorization, target scope, payload, valid time, sensitivity, and reason. Supported operation types are add, update, retire, and dispute. Policy rejects raw_import and model_inference as canonical persistence sources.",
+        "sources": [
+          "mutation_impl",
+          "mutation_policy"
+        ]
+      },
+      {
+        "text": "Update: the implementation retires the active target, appends a transition, links the old record to a successor, and appends the successor record. Retirement and dispute also append recorded-time transitions. No physical delete operation is present in the inspected operation set.",
+        "sources": [
+          "mutation_impl",
+          "lifecycle"
+        ]
+      },
+      {
+        "text": "Deletion: forgetting policy defines retirement as retrieval exclusion rather than history deletion; the schema also forbids canonical business-record rewrite in task. This source review found no canonical physical-delete operation.",
+        "sources": [
+          "forgetting",
+          "memory_schema",
+          "mutation_policy"
+        ]
+      },
+      {
+        "text": "Retrieval: query accepts filters by ID, key, kind, scope, tags, keyword, valid-time as-of, recorded-time as-of, inactive inclusion, and bounded result limit. Current answer eligibility is active and effective only; inactive records can be shown for audit, while the decision layer can return UNKNOWN with a reason and missing conditions.",
+        "sources": [
+          "memory_cli",
+          "forgetting",
+          "lifecycle"
+        ]
+      },
+      {
+        "text": "Scope: schema scope types are global, project, task, and conversation. Query scope is optional, and the local CLI does not authenticate a caller; mutation policy restricts repository-evidence writes to project/task scopes. This establishes filtering and admission rules, not authenticated tenant isolation.",
+        "sources": [
+          "memory_schema",
+          "memory_cli",
+          "mutation_policy"
+        ]
+      },
+      {
+        "text": "Provenance: records include source type/reference/observed time and evidence hash, plus verification state, method, references, verified time, and rationale. Repository-evidence writes require a hash under policy. These structures do not by themselves establish that every stored claim is supported by its source.",
+        "sources": [
+          "memory_schema",
+          "mutation_impl",
+          "mutation_policy"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "No AgentDatabase answerable or unanswerable probes were run.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "benchmark_status",
+          "forgetting"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Source implements update as retirement plus successor and exposes temporal query axes; no post-correction probes were run.",
+        "sources": [
+          "mutation_impl",
+          "lifecycle",
+          "metrics",
+          "benchmark_status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No deletion probes were run; inspected canonical operations include retirement but no physical delete.",
+        "sources": [
+          "mutation_impl",
+          "forgetting",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope-isolation leakage",
+        "status": "unmeasured",
+        "evidence": "No cross-scope probes were run; optional query filters do not establish an authorization boundary.",
+        "sources": [
+          "memory_cli",
+          "mutation_policy",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "The schema contains source and verification references, but no generated claims and citations were adjudicated.",
+        "sources": [
+          "memory_schema",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The source contains configured request/cache budgets and a local benchmark command; this review collected no timings.",
+        "sources": [
+          "retrieval_contract",
+          "retrieval_impl",
+          "metrics",
+          "benchmark_status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No workload token, charge, or attributable storage measurements were collected.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "benchmark_status"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "code observations only",
+        "evidence": "Configured retrieval limits include at most two indexed-fact content fetches, zero recursive full-tree scans, three attempts, and a 120-second retry budget. The CLI exposes JSON result status and query scan/filter/exclusion counts. These are source-level contracts, not measured results.",
+        "sources": [
+          "retrieval_contract",
+          "retrieval_impl",
+          "memory_cli"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded review of selected README, architecture, schema, policy, and Python source files at the pinned main head. It does not establish runtime correctness, answer quality, actual latency/cost/storage, or production reliability.",
+        "sources": [
+          "repo",
+          "root_readme",
+          "oad_readme",
+          "memory_cli",
+          "retrieval_impl"
+        ]
+      },
+      {
+        "text": "Scope filters and mutation admission constraints are visible in source, but no authenticated cross-principal or cross-tenant isolation tests were run. Retirement excludes a record from current answers but does not erase canonical history.",
+        "sources": [
+          "memory_cli",
+          "mutation_policy",
+          "forgetting"
+        ]
+      },
+      {
+        "text": "The repository README says the MemoryAtlas application has been retired; this article assesses OpenAIDatabase memory code and does not treat the retained app code as an active memory service. The checked official documentation did not publish a contact email.",
+        "sources": [
+          "root_readme",
+          "contact_checked"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No AgentDatabase system or benchmark workload was executed. Source observations, configured budgets, metric definitions, and the synthetic fixture are not benchmark results.",
+      "metrics_url": "../METRICS.md",
+      "fixture_url": "../fixtures/memory-benchmark-v1.json",
+      "execution_status_url": "../results/initial-baselines-status.json"
+    }
+  }
+}

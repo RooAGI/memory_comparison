@@ -1,0 +1,344 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 213,
+    "slug": "eliot-memory-os",
+    "name": "ELIOT Memory OS",
+    "repository": "https://github.com/UnknownAlienHuman/eliot-memory-os",
+    "listed_repository": "https://github.com/UnknownAlienHuman/eliot-memory-os",
+    "branch": "main",
+    "revision": "1c19f33dbd8ca5278cea283ccecfaa073b9f8ac9",
+    "reviewed_at": "2026-11-26T00:28:41Z",
+    "review_timezone": "UTC (checked 2026-11-25 16:28:41 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "ELIOT Memory OS currently publishes a V3 design baseline for a local-first memory daemon, provenance-aware revisions, scoped retrieval, and controlled erasure. Upstream says V3 is not a released runtime and its Store candidate is unqualified; this review reports design contracts, not verified behavior or benchmark results.",
+    "atlas_locator": {
+      "ordinal": 213,
+      "name": "ELIOT Memory OS",
+      "slug": "eliot-memory-os",
+      "listed_repository": "https://github.com/UnknownAlienHuman/eliot-memory-os",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/eliot-memory-os.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/UnknownAlienHuman/eliot-memory-os/blob/1c19f33dbd8ca5278cea283ccecfaa073b9f8ac9/README.md",
+      "checked_urls": [
+        "https://github.com/UnknownAlienHuman/eliot-memory-os/blob/1c19f33dbd8ca5278cea283ccecfaa073b9f8ac9/README.md",
+        "https://github.com/UnknownAlienHuman/eliot-memory-os/blob/1c19f33dbd8ca5278cea283ccecfaa073b9f8ac9/docs/v3/ARCHITECTURE.md"
+      ],
+      "note": "Checked the official pinned README and current V3 architecture documentation for a published contact email. No email address was published. Commit/profile metadata and third-party directories were not used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/UnknownAlienHuman/eliot-memory-os/blob/1c19f33dbd8ca5278cea283ccecfaa073b9f8ac9/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/UnknownAlienHuman/eliot-memory-os/blob/1c19f33dbd8ca5278cea283ccecfaa073b9f8ac9/README.md",
+      "https://github.com/UnknownAlienHuman/eliot-memory-os/blob/1c19f33dbd8ca5278cea283ccecfaa073b9f8ac9/docs/v3/ARCHITECTURE.md"
+    ],
+    "contact_email_note": "No contact email was published in the checked official pinned README or V3 architecture documentation. No commit/profile metadata, third-party directory, or inferred address was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[212], ordinal 213; identity, explicit listed repository locator, pinned Atlas attribution",
+        "url": "../../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/eliot-memory-os.md",
+        "symbol": "Pinned roster record; identity and locator context only, not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/eliot-memory-os.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository/API",
+        "path": "repository and GitHub repository API",
+        "symbol": "Repository identity and default branch main",
+        "url": "https://api.github.com/repos/UnknownAlienHuman/eliot-memory-os"
+      },
+      {
+        "id": "head",
+        "label": "Official current head",
+        "path": "commit API and shallow checkout",
+        "symbol": "Full main head 1c19f33dbd8ca5278cea283ccecfaa073b9f8ac9; commit timestamp 2026-11-05T19:14:43Z, cross-checked by checkout",
+        "url": "https://github.com/UnknownAlienHuman/eliot-memory-os/commit/1c19f33dbd8ca5278cea283ccecfaa073b9f8ac9"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "V3 documentation-baseline status, V1/V2 donor distinction, product intent, and contact check",
+        "url": "https://github.com/UnknownAlienHuman/eliot-memory-os/blob/1c19f33dbd8ca5278cea283ccecfaa073b9f8ac9/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "V3 architecture contract",
+        "path": "docs/v3/ARCHITECTURE.md",
+        "symbol": "Design/runtime caveat, ownership, identity, memory invariants, retrieval, Store target, privacy and known limitations",
+        "url": "https://github.com/UnknownAlienHuman/eliot-memory-os/blob/1c19f33dbd8ca5278cea283ccecfaa073b9f8ac9/docs/v3/ARCHITECTURE.md"
+      },
+      {
+        "id": "cognition",
+        "label": "V3 cognition contract",
+        "path": "docs/v3/COGNITION.md",
+        "symbol": "Work addressing, source/evidence grounding, correction, retrieval candidate arms, packing, budgets and learning",
+        "url": "https://github.com/UnknownAlienHuman/eliot-memory-os/blob/1c19f33dbd8ca5278cea283ccecfaa073b9f8ac9/docs/v3/COGNITION.md"
+      },
+      {
+        "id": "implementation",
+        "label": "V3 implementation contract",
+        "path": "docs/v3/IMPLEMENTATION.md",
+        "symbol": "Capture/replay, exact open, revision writes, erasure notices, cleanup and observability design",
+        "url": "https://github.com/UnknownAlienHuman/eliot-memory-os/blob/1c19f33dbd8ca5278cea283ccecfaa073b9f8ac9/docs/v3/IMPLEMENTATION.md"
+      },
+      {
+        "id": "registry",
+        "label": "V3 analysis registry",
+        "path": "docs/v3/ANALYSIS-REGISTRY.md",
+        "symbol": "Open implementation/source handoffs, Store and scenario gaps, and limits of existing evidence",
+        "url": "https://github.com/UnknownAlienHuman/eliot-memory-os/blob/1c19f33dbd8ca5278cea283ccecfaa073b9f8ac9/docs/v3/ANALYSIS-REGISTRY.md"
+      },
+      {
+        "id": "legacy-code",
+        "label": "Retained legacy type and recall source",
+        "path": "crates/eliot-types/src/memory.rs; crates/eliot-store/src/canonical_store.rs",
+        "symbol": "Legacy epistemic/lifecycle types and L0 recall code; retained V1/V2 donor source, not V3 runtime evidence",
+        "url": "https://github.com/UnknownAlienHuman/eliot-memory-os/blob/1c19f33dbd8ca5278cea283ccecfaa073b9f8ac9/crates/eliot-types/src/memory.rs"
+      },
+      {
+        "id": "legacy-model",
+        "label": "Retained legacy claim-card model",
+        "path": "crates/eliot-store/src/canonical_observation_models.rs",
+        "symbol": "CanonicalClaimCard with project/task scope, epistemic/lifecycle state, visibility, taint, revision, sequence, and write identity; retained donor source",
+        "url": "https://github.com/UnknownAlienHuman/eliot-memory-os/blob/1c19f33dbd8ca5278cea283ccecfaa073b9f8ac9/crates/eliot-store/src/canonical_observation_models.rs"
+      },
+      {
+        "id": "legacy-recall",
+        "label": "Retained legacy recall implementation",
+        "path": "crates/eliot-store/src/canonical_store.rs",
+        "symbol": "recall_l0 and recall candidate projection; retained V1/V2 donor code, not V3 runtime evidence",
+        "url": "https://github.com/UnknownAlienHuman/eliot-memory-os/blob/1c19f33dbd8ca5278cea283ccecfaa073b9f8ac9/crates/eliot-store/src/canonical_store.rs"
+      },
+      {
+        "id": "store",
+        "label": "Store source ownership/status",
+        "path": "docs/v3/store/README.md",
+        "symbol": "Describes unmerged source candidate, non-working Store status, and required implementation/readback work",
+        "url": "https://github.com/UnknownAlienHuman/eliot-memory-os/blob/1c19f33dbd8ca5278cea283ccecfaa073b9f8ac9/docs/v3/store/README.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes ELIOT as a local-first memory system that preserves observations, reconstructs current work, supplies context, and learns from outcomes. It explicitly labels the V3 documentation baseline as not a released runtime, so this review treats current V3 behavior as design intent.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "V3 assigns observations, revisions, retrieval, context, outcomes, and finite jobs to a Memory daemon; a narrow relay handles host events and context emission, while a private SurrealDB Store is the selected persistence target. The six-table schema and immutable blobs are design selections, not a running or qualified Store.",
+        "sources": [
+          "architecture",
+          "implementation",
+          "store"
+        ]
+      },
+      {
+        "text": "The model distinguishes accepted observations, interpreted claims, and versioned memories. It specifies exact accepted source bytes/blob references, occurrence and work binding, capture limitations, source relations, revision hashes, and grounds; exact opens are intended to return the requested source or revision without falling forward.",
+        "sources": [
+          "architecture",
+          "cognition",
+          "implementation"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Capture is designed around an immutable bounded command staged before Store send, followed by one transaction that records the observation and relations. Stable native event identity supports deduplication; otherwise retries preserve the original command identity and read back its result. These operations are specified but not qualified in a connected runtime.",
+        "sources": [
+          "implementation",
+          "registry"
+        ]
+      },
+      {
+        "text": "Direct corrections use the expected current revision, preserve history, and publish the new revision, source, grounds, replacement, and attributed cause together. Exact retries resolve to the original result; stale revision requests conflict. This is a documented contract, not an observed runtime result.",
+        "sources": [
+          "cognition",
+          "implementation"
+        ]
+      },
+      {
+        "text": "The design separates withdrawal from erasure. Durable notices are intended to prevent reactivation through stale replay or backup restore; erasure denies reads and requires verified cleanup of controlled Store, blob, spool, and derived copies. A committed notice is not deletion proof. Delivered host transcripts and provider copies remain outside the guarantee, and cleanup implementation/qualification remain open.",
+        "sources": [
+          "architecture",
+          "implementation",
+          "registry"
+        ]
+      },
+      {
+        "text": "Retrieval first resolves addressed work and then unions bounded candidates from direct handles, exact cues, lexical search, optional vectors, grounds/relations, and methods. Scope is applied before candidate limits. Results are intended to expose examined scope, partial/unavailable arms, gaps, and exact source handles; a zero top-K result does not prove global absence.",
+        "sources": [
+          "architecture",
+          "cognition"
+        ]
+      },
+      {
+        "text": "Scope is designed around project and workspace plus an actual task, or an actual actor/session pair when no task is supplied. The docs reject widening a failed task lookup into a broader substitute. These are design rules, not an authorization or runtime isolation result; upstream disclaims a hostile same-user sandbox.",
+        "sources": [
+          "cognition",
+          "implementation",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Provenance rules keep source, representation, and claim identities separate and use exact observation/revision handles, hashes, typed relations, and grounds. Similarity does not establish truth or applicability; unknown support is intended to remain qualified or trigger abstention. No connected V3 provenance path was verified.",
+        "sources": [
+          "architecture",
+          "cognition",
+          "implementation"
+        ]
+      },
+      {
+        "text": "Bounded candidate arms, byte caps, deterministic selection, and a bounded lexical snapshot are proposed efficiency controls. Exact token limits require an actual counter; configured limits are not measured usage. Durable readback/status is specified for recovery and cleanup, but no latency, token, cost, storage, or throughput data was collected.",
+        "sources": [
+          "cognition",
+          "implementation"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "V3 specifies bounded retrieval, source handles, and explicit gaps, but no responses were produced or scored.",
+        "sources": [
+          "cognition",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Expected-revision correction and history are specified, but no correction sequence or stale-value probes were run.",
+        "sources": [
+          "cognition",
+          "implementation",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Notice and controlled-copy cleanup contracts were inspected, but no erase operation or post-erase probe was run.",
+        "sources": [
+          "implementation",
+          "registry",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Project/work scoping is specified but no cross-scope workload or authorization audit was run.",
+        "sources": [
+          "cognition",
+          "architecture",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Grounds and exact source handles are design contracts; no outputs were adjudicated for evidence support or citation coverage.",
+        "sources": [
+          "cognition",
+          "implementation",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No runtime timing samples were collected.",
+        "sources": [
+          "implementation",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "The docs specify bounds but no usage, charge, or storage measurements were collected.",
+        "sources": [
+          "cognition",
+          "implementation",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded review of official V3 documentation at the verified main head. The README says V3 is not a released runtime, V1/V2 are donors, and the Store guide calls its source candidate unmerged and not a working Store. No donor implementation was treated as current V3 evidence.",
+        "sources": [
+          "readme",
+          "architecture",
+          "store"
+        ]
+      },
+      {
+        "text": "The registry leaves Store connection/readback, source implementation, runtime qualification, and several cleanup/scenario paths open. The Memory inference extension is also unavailable. These gaps prevent claims of operating correctness or measured performance.",
+        "sources": [
+          "registry",
+          "architecture",
+          "store"
+        ]
+      },
+      {
+        "text": "The design does not claim a hostile same-user sandbox, portable encrypted backup, physical media sanitization, deletion from delivered host/provider copies, or demonstrated deployed isolation. Retrieval quality, complete erasure, and performance remain unknown.",
+        "sources": [
+          "architecture",
+          "implementation",
+          "registry"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No ELIOT Memory OS runtime, tests, or benchmarks were run. Design contracts and project metric definitions are not system measurements."
+    }
+  }
+}

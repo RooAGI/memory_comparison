@@ -1,0 +1,352 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 229,
+    "slug": "enquire-mcp",
+    "name": "enquire-mcp",
+    "repository": "https://github.com/oomkapwn/enquire-mcp",
+    "listed_repository": "https://github.com/oomkapwn/enquire-mcp",
+    "branch": "main",
+    "revision": "5b60b277ddb4006c737dfc87c8b86e05441305f3",
+    "reviewed_at": "2026-11-25T19:57:08Z",
+    "review_timezone": "UTC (checked 2026-11-25 11:57:08 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "enquire-mcp is a local-first MCP server and CLI that makes an Obsidian-format vault searchable by multiple agents. It combines lexical, TF-IDF, embedding, and optional reranking paths, and exposes note paths, excerpts, freshness metadata, and PDF page citations. This is a bounded source review; no system measurements were collected.",
+    "atlas_locator": {
+      "ordinal": 229,
+      "name": "enquire-mcp",
+      "slug": "enquire-mcp",
+      "listed_repository": "https://github.com/oomkapwn/enquire-mcp",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/enquire-mcp.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": "oomkapwn@gmail.com",
+      "source_url": "https://github.com/oomkapwn/enquire-mcp/blob/5b60b277ddb4006c737dfc87c8b86e05441305f3/README.md",
+      "checked_urls": [
+        "https://github.com/oomkapwn/enquire-mcp/blob/5b60b277ddb4006c737dfc87c8b86e05441305f3/README.md"
+      ],
+      "note": "The official pinned README publishes oomkapwn@gmail.com for vulnerability contact. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": "oomkapwn@gmail.com",
+    "contact_email_source_url": "https://github.com/oomkapwn/enquire-mcp/blob/5b60b277ddb4006c737dfc87c8b86e05441305f3/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/oomkapwn/enquire-mcp/blob/5b60b277ddb4006c737dfc87c8b86e05441305f3/README.md"
+    ],
+    "contact_email_note": "Published in the official pinned README as the vulnerability contact; no commit/profile metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[228], ordinal 229; identity, listed repository locator, Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/enquire-mcp.md",
+        "symbol": "Pinned attribution for curated identity and repository locator only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/enquire-mcp.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "",
+        "symbol": "Public repository page identifies canonical repository and main default branch",
+        "url": "https://github.com/oomkapwn/enquire-mcp"
+      },
+      {
+        "id": "head",
+        "label": "Official current main commit feed",
+        "path": "",
+        "symbol": "Official main Atom feed gives full current head SHA 5b60b277ddb4006c737dfc87c8b86e05441305f3 and update time 2026-10-22T08:46:47Z",
+        "url": "https://github.com/oomkapwn/enquire-mcp/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product scope, local-first architecture, retrieval design, write gate, privacy boundary, release channels, published vulnerability contact",
+        "url": "https://github.com/oomkapwn/enquire-mcp/blob/5b60b277ddb4006c737dfc87c8b86e05441305f3/README.md"
+      },
+      {
+        "id": "api",
+        "label": "Pinned official API reference",
+        "path": "docs/api.md",
+        "symbol": "Registered tool surface, read/write classifications, gating, integrations, MCP resources and prompts",
+        "url": "https://github.com/oomkapwn/enquire-mcp/blob/5b60b277ddb4006c737dfc87c8b86e05441305f3/docs/api.md"
+      },
+      {
+        "id": "search",
+        "label": "Pinned search implementation",
+        "path": "src/tools/search.ts",
+        "symbol": "Text search response and matching behavior; search results expose scan count, match snippet, score, line, and terms",
+        "url": "https://github.com/oomkapwn/enquire-mcp/blob/5b60b277ddb4006c737dfc87c8b86e05441305f3/src/tools/search.ts"
+      },
+      {
+        "id": "write",
+        "label": "Pinned write implementation",
+        "path": "src/tools/write.ts",
+        "symbol": "Create/append/rename/replace/archive operations, validation, and write admission comments and implementation",
+        "url": "https://github.com/oomkapwn/enquire-mcp/blob/5b60b277ddb4006c737dfc87c8b86e05441305f3/src/tools/write.ts"
+      },
+      {
+        "id": "vault",
+        "label": "Pinned vault implementation",
+        "path": "src/vault.ts",
+        "symbol": "Filesystem-backed vault operations, note parsing and path handling",
+        "url": "https://github.com/oomkapwn/enquire-mcp/blob/5b60b277ddb4006c737dfc87c8b86e05441305f3/src/vault.ts"
+      },
+      {
+        "id": "fts",
+        "label": "Pinned lexical index implementation",
+        "path": "src/fts5.ts",
+        "symbol": "Persistent FTS5 index and per-source index/quarantine metadata",
+        "url": "https://github.com/oomkapwn/enquire-mcp/blob/5b60b277ddb4006c737dfc87c8b86e05441305f3/src/fts5.ts"
+      },
+      {
+        "id": "embed",
+        "label": "Pinned embedding database implementation",
+        "path": "src/embed-db.ts",
+        "symbol": "Persistent embedding metadata and cached database inspection; README documents embeddings and HNSW path",
+        "url": "https://github.com/oomkapwn/enquire-mcp/blob/5b60b277ddb4006c737dfc87c8b86e05441305f3/src/embed-db.ts"
+      },
+      {
+        "id": "support",
+        "label": "Pinned official support page",
+        "path": "SUPPORT.md",
+        "symbol": "Official support channels; checked in conjunction with the pinned README contact line",
+        "url": "https://github.com/oomkapwn/enquire-mcp/blob/5b60b277ddb4006c737dfc87c8b86e05441305f3/SUPPORT.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Project benchmark domains and definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Project benchmark protocol fixture, not an enquire-mcp result",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project benchmark execution status; not an enquire-mcp result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The pinned README identifies Alex (@OomkaBear) as the builder. The repository presents enquire-mcp as an open-source TypeScript MCP server and CLI for using an Obsidian-format vault across agent clients; this does not establish a broader maintainer roster.",
+        "sources": [
+          "readme",
+          "api"
+        ]
+      },
+      {
+        "text": "The vault files remain the source of truth. The server builds searchable local indexes and exposes MCP tools over stdio or HTTP; it is not a hosted memory database.",
+        "sources": [
+          "readme",
+          "api"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README describes a local retrieval stack over Markdown, Canvas, Bases, and optional PDFs. Depending on setup, search can use in-memory TF-IDF, persistent FTS5/BM25, local multilingual embeddings, and an optional cross-encoder reranker; fused search uses reciprocal rank fusion, with optional HNSW for approximate vector retrieval.",
+        "sources": [
+          "readme",
+          "fts",
+          "embed"
+        ]
+      },
+      {
+        "text": "The API reference documents MCP tools, resources, and prompts over the vault. The tool surface includes note read/list, search, links and graph navigation, frontmatter and structured-format queries, and opt-in write tools. The repository also documents stdio and Streamable HTTP transports.",
+        "sources": [
+          "api",
+          "readme"
+        ]
+      },
+      {
+        "text": "The source search response includes a query, mode, number of scanned Markdown notes, and matching records with vault-relative path, excerpt, score, line, and matched terms. The score is occurrence-based within this text-search response, not a calibrated probability.",
+        "sources": [
+          "search"
+        ]
+      },
+      {
+        "text": "Persistent FTS5 indexing and an embedding database are optional setup tiers. README describes local model acquisition for embeddings and reranking; the Basic MCP bundle is a distinct constrained distribution with in-memory TF-IDF only.",
+        "sources": [
+          "readme",
+          "fts",
+          "embed"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "**Write.** The default server surface is read-only. Seven note write tools are registered only when started with `--enable-write`; the API lists create, append, rename, replace, archive, frontmatter-set, and chat-thread append. The write implementation validates destinations and supports explicit overwrite behavior for note creation.",
+        "sources": [
+          "readme",
+          "api",
+          "write"
+        ]
+      },
+      {
+        "text": "**Update and deletion.** Updates occur through specific file operations such as replace, rename, frontmatter changes, append, or archive; this is a vault editing interface rather than a separate extracted-fact lifecycle. Destructive operations may offer dry-run behavior as documented in the README. No multi-operation update sequence was executed.",
+        "sources": [
+          "readme",
+          "api",
+          "write"
+        ]
+      },
+      {
+        "text": "**Retrieval.** The umbrella search can fuse available lexical, TF-IDF, and embedding signals; optional BGE reranking rescales a candidate set. Dedicated tools provide exact text search, semantic search, full-text search, PDF reading, Canvas parsing, Dataview-style queries, and supported Bases filters. Search results can retain source paths, snippets, age/staleness, per-signal scores, and PDF page markers for citation.",
+        "sources": [
+          "readme",
+          "api",
+          "search"
+        ]
+      },
+      {
+        "text": "**Scope isolation.** The server is configured for a selected vault and applies filesystem path checks to reads and writes; the README says symlinks resolving outside the vault are rejected. Optional read-path and exclusion policies and tool allow/disable lists narrow access. These are filesystem and surface controls, not per-memory tenant authorization; deployed HTTP exposure and operator configuration were not tested.",
+        "sources": [
+          "readme",
+          "api",
+          "vault"
+        ]
+      },
+      {
+        "text": "**Provenance and evidence.** Retrieved notes retain their vault-relative source path; PDF results include page markers. The API guidance asks agents to cite note paths and treat retrieved vault content as untrusted data rather than instructions. This ties results to source documents, but the inspected interface does not establish claim-level validation or that a cited note entails a generated answer.",
+        "sources": [
+          "readme",
+          "api",
+          "search"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Hybrid retrieval paths and evaluation tooling are documented, but no answer or abstention was scored in this review.",
+        "sources": [
+          "readme",
+          "api",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Vault editing tools and freshness indicators are present; no correction sequence or stale-value probe was run.",
+        "sources": [
+          "api",
+          "write",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Archive and destructive write surfaces are documented; no post-delete retrieval or index cleanup probe was run.",
+        "sources": [
+          "api",
+          "write",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Vault path checks and access-surface controls are documented; no cross-vault or HTTP isolation workload was tested.",
+        "sources": [
+          "readme",
+          "vault",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Search returns source paths and PDF page citations; no answer claim was adjudicated against its cited source.",
+        "sources": [
+          "readme",
+          "api",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "README includes project-reported benchmark examples, but this review did not reproduce them or collect timings.",
+        "sources": [
+          "readme",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "No workload token counts, charges, or storage measurements were collected.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded source review of the official README, API reference, and selected search, write, vault, FTS5, and embedding database paths at the verified head. No system runtime, tests, or benchmarks were run.",
+        "sources": [
+          "readme",
+          "api",
+          "search",
+          "write",
+          "vault",
+          "fts",
+          "embed"
+        ]
+      },
+      {
+        "text": "README benchmark figures and release claims are project-published evidence, not measurements reproduced in this assessment. Runtime recall quality, abstention, latency, cost, privacy properties, and deletion behavior remain unverified here.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "The source and documentation describe an Obsidian-format vault and supported subsets of Canvas, Dataview, Bases, and PDF handling. The review did not test format edge cases, large-vault behavior, index repair, concurrent edits, client behavior, or real HTTP deployment.",
+        "sources": [
+          "readme",
+          "api",
+          "vault",
+          "fts",
+          "embed"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No enquire-mcp runtime, tests, or benchmarks were run. Documentation and source observations are not project measurements."
+    }
+  }
+}

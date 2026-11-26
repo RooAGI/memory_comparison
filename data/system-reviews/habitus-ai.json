@@ -1,0 +1,381 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 279,
+    "slug": "habitus-ai",
+    "name": "Habitus AI",
+    "repository": "https://github.com/munch2u-a11y/Habitus-AI",
+    "listed_repository": "https://github.com/munch2u-a11y/Habitus-AI",
+    "branch": "main",
+    "revision": "f93b770e4b3c1875151dc13eb90421598c3efa5f",
+    "reviewed_at": "2026-11-25T22:13:16Z",
+    "review_timezone": "UTC (checked 2026-11-25 14:13:16 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Habitus AI is a Python agent-memory library that stores immutable event records in SQLite and routes retrieval and outcome learning through directional concept graphs. Its code describes direct dense plus graph-vault retrieval, correction by supersession, and receipt-gated graph reinforcement; this review reports code behavior and does not measure quality or performance.",
+    "atlas_locator": {
+      "ordinal": 279,
+      "name": "Habitus AI",
+      "slug": "habitus-ai",
+      "listed_repository": "https://github.com/munch2u-a11y/Habitus-AI",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/habitus-ai.md",
+      "revision": "f93b770e4b3c1875151dc13eb90421598c3efa5f"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/munch2u-a11y/Habitus-AI/blob/f93b770e4b3c1875151dc13eb90421598c3efa5f/README.md",
+      "checked_urls": [
+        "https://github.com/munch2u-a11y/Habitus-AI/blob/f93b770e4b3c1875151dc13eb90421598c3efa5f/README.md",
+        "https://github.com/munch2u-a11y/Habitus-AI/blob/f93b770e4b3c1875151dc13eb90421598c3efa5f/.github/SECURITY.md"
+      ],
+      "note": "Checked only the official pinned README and security policy for a published email. Neither lists one; no address was inferred from commit/profile metadata or third-party directories."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/munch2u-a11y/Habitus-AI/blob/f93b770e4b3c1875151dc13eb90421598c3efa5f/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/munch2u-a11y/Habitus-AI/blob/f93b770e4b3c1875151dc13eb90421598c3efa5f/README.md",
+      "https://github.com/munch2u-a11y/Habitus-AI/blob/f93b770e4b3c1875151dc13eb90421598c3efa5f/.github/SECURITY.md"
+    ],
+    "contact_email_note": "No published contact email was found in the official pinned README or security policy. No address was inferred from commit/profile metadata or a third-party directory.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[278], ordinal 279; identity, listed repository locator and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/habitus-ai.md",
+        "symbol": "Pinned attribution for curated identity and locator only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/habitus-ai.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "",
+        "symbol": "Repository page identifies munch2u-a11y/Habitus-AI and default branch main",
+        "url": "https://github.com/munch2u-a11y/Habitus-AI"
+      },
+      {
+        "id": "head",
+        "label": "Official current head",
+        "path": "",
+        "symbol": "Official main Atom commit feed reports current full SHA and commit timestamp",
+        "url": "https://github.com/munch2u-a11y/Habitus-AI/commit/f93b770e4b3c1875151dc13eb90421598c3efa5f"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product description, interfaces, lifecycle, claims and contact email check",
+        "url": "https://github.com/munch2u-a11y/Habitus-AI/blob/f93b770e4b3c1875151dc13eb90421598c3efa5f/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Pinned architecture contract",
+        "path": "ARCHITECTURE.md",
+        "symbol": "Canonical record authority, dual graph, retrieval, learning gate, runtime flow, constraints and stated missing capabilities",
+        "url": "https://github.com/munch2u-a11y/Habitus-AI/blob/f93b770e4b3c1875151dc13eb90421598c3efa5f/ARCHITECTURE.md"
+      },
+      {
+        "id": "types",
+        "label": "Pinned data model",
+        "path": "src/habitus_ai/types.py",
+        "symbol": "EventEnvelope, MemoryRecord, ConceptNode, GraphEdge, experience, trace, retrieval and outcome dataclasses",
+        "url": "https://github.com/munch2u-a11y/Habitus-AI/blob/f93b770e4b3c1875151dc13eb90421598c3efa5f/src/habitus_ai/types.py"
+      },
+      {
+        "id": "store",
+        "label": "Pinned SQLite authority store",
+        "path": "src/habitus_ai/store.py",
+        "symbol": "SQLite schema, immutable-record triggers, graph/evidence/projection persistence and audit rows",
+        "url": "https://github.com/munch2u-a11y/Habitus-AI/blob/f93b770e4b3c1875151dc13eb90421598c3efa5f/src/habitus_ai/store.py"
+      },
+      {
+        "id": "retrieval",
+        "label": "Pinned retrieval engine",
+        "path": "src/habitus_ai/retrieval.py",
+        "symbol": "Direct dense rail, graph path and vault retrieval, BM25 rerank and bounded context packet",
+        "url": "https://github.com/munch2u-a11y/Habitus-AI/blob/f93b770e4b3c1875151dc13eb90421598c3efa5f/src/habitus_ai/retrieval.py"
+      },
+      {
+        "id": "pipeline",
+        "label": "Pinned memory pipeline",
+        "path": "src/habitus_ai/pipeline.py",
+        "symbol": "Default construction, ingestion and record supersession, context assembly, output classification and outcome verification gate",
+        "url": "https://github.com/munch2u-a11y/Habitus-AI/blob/f93b770e4b3c1875151dc13eb90421598c3efa5f/src/habitus_ai/pipeline.py"
+      },
+      {
+        "id": "graph",
+        "label": "Pinned graph runtime",
+        "path": "src/habitus_ai/graph.py",
+        "symbol": "Directional topology, traversal, conservation invariants, experience projection and verified reinforcement",
+        "url": "https://github.com/munch2u-a11y/Habitus-AI/blob/f93b770e4b3c1875151dc13eb90421598c3efa5f/src/habitus_ai/graph.py"
+      },
+      {
+        "id": "embeddings",
+        "label": "Pinned embedding interface",
+        "path": "src/habitus_ai/embeddings.py",
+        "symbol": "Embedder protocol and deterministic hash embedder used by the default pipeline",
+        "url": "https://github.com/munch2u-a11y/Habitus-AI/blob/f93b770e4b3c1875151dc13eb90421598c3efa5f/src/habitus_ai/embeddings.py"
+      },
+      {
+        "id": "tools",
+        "label": "Pinned tool registry",
+        "path": "src/habitus_ai/tools.py",
+        "symbol": "Optional tool-to-trunk bindings and ToolReceipt construction after handler calls",
+        "url": "https://github.com/munch2u-a11y/Habitus-AI/blob/f93b770e4b3c1875151dc13eb90421598c3efa5f/src/habitus_ai/tools.py"
+      },
+      {
+        "id": "security",
+        "label": "Pinned official security policy",
+        "path": ".github/SECURITY.md",
+        "symbol": "Published vulnerability reporting instructions; contact email check",
+        "url": "https://github.com/munch2u-a11y/Habitus-AI/blob/f93b770e4b3c1875151dc13eb90421598c3efa5f/.github/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation domains and project metric definitions",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned project benchmark fixture",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project baseline execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared status record; no Habitus AI result is asserted",
+        "url": "../../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents Habitus AI as a lightweight Python memory/RAG engine. The inspected core is a library and CLI/app package backed by a local SQLite file; embeddings and model calls have replaceable interfaces. This review does not treat the repository's promotional performance or quality statements as measured findings.",
+        "sources": [
+          "readme",
+          "architecture",
+          "pipeline"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The immutable `MemoryRecord` stores record/event IDs, type, source ID, timestamp, text, embedding, provenance and metadata, plus an optional `supersedes_id`. `MindStore` persists canonical records and graph state in SQLite; database triggers reject record updates and deletes. Concepts, directional edges, edge-to-record evidence links, vault membership, traces, outcomes, experience state, lower-layer projections and overlap clusters are separate rows.",
+        "sources": [
+          "types",
+          "store",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The graph has a single SELF origin, input trunks HEAR/SEE/NOTICE, output trunks SPEAK/LOOK/DO, and a shared semantic crown. Graph edges carry vertical distance, log-strength, conflict penalty and activity metadata. The architecture describes edge probabilities normalized globally and per outgoing frontier; lower vault projections retain record references and numeric experience data rather than duplicate natural-language text.",
+        "sources": [
+          "architecture",
+          "graph",
+          "store"
+        ]
+      },
+      {
+        "text": "The default pipeline creates a 1024-dimensional deterministic hash embedder and a local `habitus_memory.sqlite` database unless the caller supplies alternatives. The architecture describes this embedder as a reproducible offline/test adapter and says production callers should provide a semantic embedder. A persisted embedding space ID and dimension are checked on open.",
+        "sources": [
+          "pipeline",
+          "embeddings",
+          "store",
+          "architecture"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "**Write.** The pipeline accepts typed event envelopes and turns input into immutable canonical records with source, timestamp, provenance and metadata. The event ID is unique in the SQLite records schema. Record language and embedding remain the canonical evidence authority; graph paths and projections are derived routing/learning structures.",
+        "sources": [
+          "types",
+          "pipeline",
+          "store",
+          "architecture"
+        ]
+      },
+      {
+        "text": "**Update.** Canonical rows cannot be changed in place. The documented correction model writes a new record with `supersedes_id` pointing to the prior record, preserving history; retrieval and active-record listing can exclude superseded records. The inspected schema has an unconditional delete trigger. I did not find a normal record purge API in the reviewed docs/core files, so physical erasure and retention workflows remain unknown.",
+        "sources": [
+          "store",
+          "types",
+          "architecture",
+          "pipeline"
+        ]
+      },
+      {
+        "text": "**Delete.** The source-backed mechanism is supersession rather than deletion of canonical facts. Graph edges can be archived and graph state evolves, but deleting a canonical record is blocked at the SQLite layer. The source review did not assess backups, WAL retention, database-file disposal, or any external retention integration.",
+        "sources": [
+          "store",
+          "types",
+          "architecture",
+          "graph"
+        ]
+      },
+      {
+        "text": "**Retrieval.** Each recall combines two lanes: a direct dense scan of active canonical records selecting up to three above a configurable similarity floor, and graph retrieval that admits semantic endpoints, traverses weighted Y paths, expands visited concepts and queries their vault records. Vault candidates are ranked using dense similarity and BM25; the lanes are deduplicated by canonical record ID. The packet records paths, candidates, selected IDs, contradictions and a hash, then packs exact record text into a bounded context budget.",
+        "sources": [
+          "retrieval",
+          "architecture",
+          "types"
+        ]
+      },
+      {
+        "text": "**Scope.** The inspected `MemoryRecord` and SQLite records schema contain source/event identity but no tenant, user, project, or agent namespace field. A caller chooses a database path, which can separate deployments at the file level, but the reviewed core does not establish per-user authorization or cross-tenant isolation. No isolation workload was run.",
+        "sources": [
+          "types",
+          "store",
+          "pipeline",
+          "architecture"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Code implements direct dense and graph-vault retrieval with a direct similarity floor and bounded context; no answer-bearing recall or abstention workload was run.",
+        "sources": [
+          "retrieval",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Corrections use immutable superseding records and active-record retrieval; no correction sequence or stale-value probe was run.",
+        "sources": [
+          "store",
+          "pipeline",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The canonical record schema rejects deletes; supersession is the documented correction mechanism. No deletion, restore, or retention workload was run.",
+        "sources": [
+          "store",
+          "architecture",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "The reviewed record model has no tenant/user/project scope key. No deployment or cross-scope authorization probe was run.",
+        "sources": [
+          "types",
+          "store",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Records retain provenance and graph edges can cite supporting record IDs; no response was adjudicated against source evidence or citation requirements.",
+        "sources": [
+          "types",
+          "store",
+          "graph",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The implementation exposes a local pipeline and retrieval trace packet, but this review collected no timings.",
+        "sources": [
+          "retrieval",
+          "pipeline",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Context size is character-bounded and state is persisted locally. No token, cost, database-size, or storage workload was measured.",
+        "sources": [
+          "retrieval",
+          "store",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded source review of the official README, architecture contract, and selected current Python implementation at the verified main head. Habitus AI, its tests, and benchmarks were not run.",
+        "sources": [
+          "readme",
+          "architecture",
+          "types",
+          "store",
+          "retrieval",
+          "pipeline",
+          "graph"
+        ]
+      },
+      {
+        "text": "The core data model has no explicit tenant, user, or project key. A separate SQLite path can be selected by a caller, but source inspection does not establish authorization boundaries or safe shared-database operation.",
+        "sources": [
+          "types",
+          "store",
+          "pipeline"
+        ]
+      },
+      {
+        "text": "The default deterministic hash embedder is token, trigram, and adjacent-token hashing, which is lexical rather than a pretrained semantic representation. Semantic retrieval quality with an external embedder depends on the caller's adapter and was not evaluated.",
+        "sources": [
+          "embeddings",
+          "pipeline",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The architecture document lists production semantic embedding/indexing, destructive graph-branch merge, automatic skill/tool discovery, tool execution/authority policy, and broader model adapters among capabilities not provided by the base. The repository also has an optional ToolRegistry; its code sets `verified=True` when a registered handler returns successfully, which is a local handler-success flag rather than independent validation of an external side effect. The boundary and meaning of these receipts require integration-level review.",
+        "sources": [
+          "architecture",
+          "tools",
+          "readme"
+        ]
+      },
+      {
+        "text": "The README makes claims about zero eviction, drift, fast execution, and durable learning; this source review did not independently establish those behavior or performance claims. Runtime scaling, concurrent writers, multi-process access, backup/restore, complete erasure, and security behavior remain unknown.",
+        "sources": [
+          "readme",
+          "architecture",
+          "store",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Habitus AI runtime, tests, or benchmark workload was executed. The project metrics, fixture, and shared status record define the comparison protocol and do not contain a Habitus AI measurement.",
+      "metrics_url": "../../METRICS.md",
+      "fixture_url": "../../fixtures/memory-benchmark-v1.json",
+      "status_url": "../../results/initial-baselines-status.json"
+    }
+  }
+}

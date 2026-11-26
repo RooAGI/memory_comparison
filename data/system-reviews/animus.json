@@ -1,0 +1,349 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "animus",
+    "name": "Animus",
+    "repository": "https://github.com/railstracks/animus",
+    "branch": "main",
+    "revision": "13609b59ab2cd944fcd50aeb36df5c061dc29ba0",
+    "reviewed_at": "2026-11-24T20:48:26Z",
+    "review_timezone": "UTC (2026-11-24 12:48:26 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Animus is a self-hosted C++ agent framework whose memory spans per-agent episodic observations, semantic ontology, raw memory files, and a unified search/context path. The inspected source exposes mutations and retrieval structures; no runtime quality or performance was measured.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/railstracks/animus"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/railstracks/animus/blob/13609b59ab2cd944fcd50aeb36df5c061dc29ba0/README.md",
+      "checked_urls": [
+        "https://github.com/railstracks/animus/blob/13609b59ab2cd944fcd50aeb36df5c061dc29ba0/README.md",
+        "https://animus.steadyfort.com/"
+      ],
+      "note": "No published contact email was found in the official pinned repository README or official project website."
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official Animus repository and README",
+        "path": "repository",
+        "url": "https://github.com/railstracks/animus"
+      },
+      {
+        "id": "repo_metadata",
+        "label": "GitHub repository metadata",
+        "path": "repository metadata",
+        "symbol": "Default branch is main; checked 2026-11-24",
+        "url": "https://api.github.com/repos/railstracks/animus"
+      },
+      {
+        "id": "head",
+        "label": "Current main commit",
+        "path": "main head",
+        "symbol": "Full commit SHA 13609b59ab2cd944fcd50aeb36df5c061dc29ba0; current main commit resolved through the GitHub commits API and commit page",
+        "url": "https://github.com/railstracks/animus/commit/13609b59ab2cd944fcd50aeb36df5c061dc29ba0"
+      },
+      {
+        "id": "readme",
+        "label": "README at reviewed revision",
+        "path": "README.md",
+        "symbol": "Project description, memory components, data domains, search and context features",
+        "url": "https://github.com/railstracks/animus/blob/13609b59ab2cd944fcd50aeb36df5c061dc29ba0/README.md"
+      },
+      {
+        "id": "memory_header",
+        "label": "MemoryStore public header",
+        "path": "include/animus_kernel/MemoryStore.h",
+        "symbol": "MemoryState, MemoryLayer, Observation, LayerPerspective, MemoryMutation and MemoryStore APIs",
+        "url": "https://github.com/railstracks/animus/blob/13609b59ab2cd944fcd50aeb36df5c061dc29ba0/include/animus_kernel/MemoryStore.h"
+      },
+      {
+        "id": "memory_store",
+        "label": "MemoryStore implementation",
+        "path": "src/kernel/memory/MemoryStore.cpp",
+        "symbol": "Schema, per-agent observation APIs, revision and mutation snapshot implementation",
+        "url": "https://github.com/railstracks/animus/blob/13609b59ab2cd944fcd50aeb36df5c061dc29ba0/src/kernel/memory/MemoryStore.cpp"
+      },
+      {
+        "id": "memory_search",
+        "label": "Unified MemorySearch implementation",
+        "path": "src/kernel/memory/MemorySearch.cpp",
+        "symbol": "FTS schema, per-agent query filters, ranking and result limit",
+        "url": "https://github.com/railstracks/animus/blob/13609b59ab2cd944fcd50aeb36df5c061dc29ba0/src/kernel/memory/MemorySearch.cpp"
+      },
+      {
+        "id": "memory_files",
+        "label": "MemoryFileStore implementation",
+        "path": "src/kernel/memory/MemoryFileStore.cpp",
+        "symbol": "Memory file and chunk schema, source path, content mutability, agent association and embedding fields",
+        "url": "https://github.com/railstracks/animus/blob/13609b59ab2cd944fcd50aeb36df5c061dc29ba0/src/kernel/memory/MemoryFileStore.cpp"
+      },
+      {
+        "id": "site",
+        "label": "Official Animus project website",
+        "path": "official project website",
+        "symbol": "Product description and published contact check; no email shown",
+        "url": "https://animus.steadyfort.com/"
+      },
+      {
+        "id": "roster",
+        "label": "Curated system roster",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 57 identity, listed locator, and source attribution only; assessment prose and marks excluded",
+        "url": "../../data/memory-systems.json"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The README presents Animus as an open-source, self-hosted C++ agent framework with a persistent runtime, memory, tools, and communication adapters. GitHub identifies the repository owner as railstracks; the official website footer identifies GMR Ventures BV. This review treats it as a framework/runtime, not a separately hosted memory service.",
+        "sources": [
+          "repo",
+          "readme",
+          "site"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README describes several memory components: episodic observations organized into configurable temporal layers; a semantic ontology with per-agent worldviews and evidence-linked properties; raw MemoryFiles with chunking and embeddings; and unified search spanning observations, ontology, files, diary, and sessions. Active memory is assembled into agent context, while a consolidation pipeline handles intake, review, and perspectives.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The public data model represents a MemoryLayer with an owning agent, name, horizon hint, sort order, evaluation interval, cron schedule, prompts, token budget, and enabled state. An Observation carries its layer and agent IDs, text, weight, decay rate, tags, source, creation/update/review times, lifecycle state, and `superseded_by`; perspectives keep retrospective/current/future text and valence.",
+        "sources": [
+          "memory_header",
+          "memory_store"
+        ]
+      },
+      {
+        "text": "`MemoryMutation` is an append-only record with mutation and target type/ID, optional source and destination layers, prior state, motivation, time, and a full-row JSON snapshot. The serializer includes observation content and lifecycle/provenance fields so the mutation row can reconstruct the prior observation. MemoryFiles separately store path, type, content, mutability, agent association, superseded/status fields; file chunks store path, heading, line interval, content hash, content, and optional embedding.",
+        "sources": [
+          "memory_header",
+          "memory_store",
+          "memory_files"
+        ]
+      },
+      {
+        "text": "The README names the semantic ontology and active-context systems, but those implementations were not inspected in this bounded source review. Their detailed schemas and enforcement behavior are therefore documentation claims here, not code findings.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: `MemoryStore` creates and updates layers and supports observation creation, per-agent observation creation, state changes, review scheduling, perspectives, and mutation logging. The header exposes `ReviseObservation` as copy-on-write: the old row remains as history and a new observation ID is returned; a source override can mark the revision. Current README says retirement is durable and records full-row snapshots on destructive paths.",
+        "sources": [
+          "memory_header",
+          "memory_store",
+          "readme"
+        ]
+      },
+      {
+        "text": "Update/correction: the explicit revision API creates a version chain discoverable through `GetObservationHistory`; this is a source-level correction mechanism. I did not establish that every write path uses it or measure whether retrieval consistently prefers the corrected version. The implementation also documents a retired-wins-until-revised guard for identical re-derived observations.",
+        "sources": [
+          "memory_header",
+          "memory_store"
+        ]
+      },
+      {
+        "text": "Delete/retire: the README describes observation lifecycle states `new → current → deprecated`, durable retirement tombstones, and explicit revision as the revival path. The public API includes agent layer deletion and memory-state changes. The inspected material does not establish physical erasure across all derived indexes, logs, backups, federation peers, or exports; durable retirement and physical erasure are different claims.",
+        "sources": [
+          "readme",
+          "memory_header",
+          "memory_store"
+        ]
+      },
+      {
+        "text": "Retrieval: `MemorySearch` creates SQLite FTS5 indexes/triggers or PostgreSQL `tsvector` columns with a GIN index for observations, and also prepares search schemas for other domains. Its result merge normalizes backend scores, sorts descending, and truncates to the requested limit. The README documents a unified cross-domain API and SQLite/PostgreSQL full-text ranking; this inspection did not verify the active-context assembly end to end.",
+        "sources": [
+          "memory_search",
+          "readme"
+        ]
+      },
+      {
+        "text": "Scope: observations and layers carry `agent_id`, and per-agent APIs bind agent IDs into their queries; the unified search source filters domain queries by the requested agent key. The header still exposes legacy observation methods that do not take an agent ID, and the README's per-agent worldview claims do not by themselves prove authorization or tenant isolation. No cross-agent isolation probes were run.",
+        "sources": [
+          "memory_header",
+          "memory_store",
+          "memory_search",
+          "readme"
+        ]
+      },
+      {
+        "text": "Evidence/provenance: observations retain a source string and mutations capture a prior-row snapshot plus motivation. The README describes ontology properties linked to evidence and memory files retaining source paths and chunk line bounds/hashes. These fields provide provenance hooks; this review did not establish source truth, evidence validation quality, or complete citation propagation into generated answers.",
+        "sources": [
+          "memory_header",
+          "memory_store",
+          "memory_files",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Search implementation and product documentation do not supply adjudicated answerable or unanswerable fixture outcomes. No runtime probes were executed.",
+        "sources": [
+          "memory_search",
+          "readme",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Copy-on-write revision and retirement state are code observations; no post-correction probes assessed current-value recall or stale assertions.",
+        "sources": [
+          "memory_header",
+          "memory_store",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Retirement and mutation history are visible in source, but no deletion workload or post-delete probes were run; physical erasure across derived copies is not established.",
+        "sources": [
+          "memory_header",
+          "memory_store",
+          "readme",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Per-agent query predicates are visible in source. No forbidden cross-agent probes or authorization review were performed.",
+        "sources": [
+          "memory_header",
+          "memory_search",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source fields and documentation describe evidence/provenance links, but no generated claim/citation set was adjudicated.",
+        "sources": [
+          "memory_header",
+          "memory_files",
+          "readme",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Indexes and ranking code are structural observations, not runtime timings. No operations or timed probes were run.",
+        "sources": [
+          "memory_search",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No model calls or token/cost accounting were performed for this review.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No persistent storage size was measured; schema/index structure alone is not a storage measurement.",
+        "sources": [
+          "memory_store",
+          "memory_search",
+          "memory_files",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded read-only review of selected documentation and source files at one verified main-branch revision. It does not establish runtime correctness, reliability, security, deployment suitability, or performance.",
+        "sources": [
+          "repo",
+          "head",
+          "readme",
+          "memory_header",
+          "memory_store",
+          "memory_search",
+          "memory_files"
+        ]
+      },
+      {
+        "text": "Per-agent identifiers and query predicates are evidence of code-level partitioning, not proof against every cross-scope leak or authorization bypass. Legacy unscoped observation APIs remain visible in the public header.",
+        "sources": [
+          "memory_header",
+          "memory_store",
+          "memory_search"
+        ]
+      },
+      {
+        "text": "The selected MemoryFileStore excerpt and README identify chunks and embeddings but this review did not trace ingestion, every file mutation, embedding refresh, or all cleanup paths. Ontology and active-context implementation details were also not inspected.",
+        "sources": [
+          "memory_files",
+          "readme"
+        ]
+      },
+      {
+        "text": "The roster's ordinal, name, slug, listed repository locator, and Atlas source URL are used only for identity and source attribution. Atlas descriptions, feature marks, and layout are not assessment evidence.",
+        "sources": [
+          "roster"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. The project execution-status record says `not_run`; its planned fixture counts are not measured denominators. This review did not execute Animus, its tests, or benchmark workloads and reports no measured outcomes.",
+        "sources": [
+          "record",
+          "fixture",
+          "metrics"
+        ]
+      }
+    ]
+  }
+}

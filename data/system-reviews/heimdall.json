@@ -1,0 +1,311 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 286,
+    "slug": "heimdall",
+    "name": "Heimdall",
+    "repository": "https://github.com/ArihantDeva/heimdall",
+    "listed_repository": "https://github.com/ArihantDeva/heimdall",
+    "branch": "main",
+    "revision": "0bce85902ef75e37ad9a6c097bda432d3b958203",
+    "reviewed_at": "2026-11-25T22:38:20Z",
+    "review_timezone": "UTC (checked 2026-11-25 14:38:20 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Heimdall is a local agent-memory and code-knowledge system that indexes files into graph and semantic search layers and verifies returned paths against filesystem evidence. The review is pinned to current upstream source and does not measure runtime quality or performance.",
+    "atlas_locator": {
+      "ordinal": 286,
+      "name": "Heimdall",
+      "slug": "heimdall",
+      "listed_repository": "https://github.com/ArihantDeva/heimdall",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/heimdall.md",
+      "revision": "8c7fb78044418ee390b2de701722aee12ec44b7d"
+    },
+    "contact": {
+      "email": "arihantdeva@gmail.com",
+      "source_url": "https://github.com/ArihantDeva/heimdall/blob/0bce85902ef75e37ad9a6c097bda432d3b958203/CODE_OF_CONDUCT.md",
+      "checked_urls": [
+        "https://github.com/ArihantDeva/heimdall/blob/0bce85902ef75e37ad9a6c097bda432d3b958203/CODE_OF_CONDUCT.md"
+      ],
+      "note": "Checked the official pinned Code of Conduct, which publishes the address for conduct incident reports. No commit/profile metadata, inferred address, or third-party directory was used."
+    },
+    "contact_email": "arihantdeva@gmail.com",
+    "contact_email_source_url": "https://github.com/ArihantDeva/heimdall/blob/0bce85902ef75e37ad9a6c097bda432d3b958203/CODE_OF_CONDUCT.md",
+    "contact_email_checked_sources": [
+      "https://github.com/ArihantDeva/heimdall/blob/0bce85902ef75e37ad9a6c097bda432d3b958203/CODE_OF_CONDUCT.md"
+    ],
+    "contact_email_note": "Official pinned Code of Conduct publishes this contact for community conduct reports; no commit/profile metadata, inferred address, or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[285], ordinal 286; identity, explicit repository locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/heimdall.md",
+        "symbol": "Pinned attribution source for curated identity/locator only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/heimdall.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "",
+        "symbol": "Official repository page identifies ArihantDeva/heimdall and default branch main",
+        "url": "https://github.com/ArihantDeva/heimdall"
+      },
+      {
+        "id": "head",
+        "label": "Official current head commit",
+        "path": "",
+        "symbol": "GitHub official commits/main API gives full SHA and committer timestamp",
+        "url": "https://github.com/ArihantDeva/heimdall/commit/0bce85902ef75e37ad9a6c097bda432d3b958203"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product and architecture overview, capabilities, limitations, operations, and benchmark claims",
+        "url": "https://github.com/ArihantDeva/heimdall/blob/0bce85902ef75e37ad9a6c097bda432d3b958203/README.md"
+      },
+      {
+        "id": "journal",
+        "label": "Pinned SQLite journal implementation",
+        "path": "bin/lib/journal.mjs",
+        "symbol": "Authoritative schema, path ownership, graph projection records, queue, generation and fact history",
+        "url": "https://github.com/ArihantDeva/heimdall/blob/0bce85902ef75e37ad9a6c097bda432d3b958203/bin/lib/journal.mjs"
+      },
+      {
+        "id": "reconcile",
+        "label": "Pinned reconciliation implementation",
+        "path": "bin/lib/reconcile.mjs",
+        "symbol": "Level-triggered convergence, path admission, source retraction and drift detection",
+        "url": "https://github.com/ArihantDeva/heimdall/blob/0bce85902ef75e37ad9a6c097bda432d3b958203/bin/lib/reconcile.mjs"
+      },
+      {
+        "id": "extract",
+        "label": "Pinned extraction implementation",
+        "path": "bin/lib/extract.mjs",
+        "symbol": "Content hashing, desired node/edge state, depth-aware extraction",
+        "url": "https://github.com/ArihantDeva/heimdall/blob/0bce85902ef75e37ad9a6c097bda432d3b958203/bin/lib/extract.mjs"
+      },
+      {
+        "id": "search",
+        "label": "Pinned ranked search script",
+        "path": "bin/kb-search.sh",
+        "symbol": "Backend selection, per-repository and global semantic search, scope and kind options, result verification",
+        "url": "https://github.com/ArihantDeva/heimdall/blob/0bce85902ef75e37ad9a6c097bda432d3b958203/bin/kb-search.sh"
+      },
+      {
+        "id": "conduct",
+        "label": "Pinned official Code of Conduct",
+        "path": "CODE_OF_CONDUCT.md",
+        "symbol": "Community conduct incident reporting email and contact check",
+        "url": "https://github.com/ArihantDeva/heimdall/blob/0bce85902ef75e37ad9a6c097bda432d3b958203/CODE_OF_CONDUCT.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation domains and metric definitions",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned benchmark fixture",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project baseline execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status record; no Heimdall result is asserted here",
+        "url": "../../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Heimdall as a CLI and local daemon for persistent knowledge across repositories, with agent-harness integrations and an MCP entry point.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The SQLite journal is the authoritative index for paths, hashes, depth and presence state, plus path-owned nodes and edges, pending cross-file edges, a deduplicating queue, and a capped fact-history table. The graph store is a projection of journal state.",
+        "sources": [
+          "journal"
+        ]
+      },
+      {
+        "text": "Depth-aware extraction computes desired nodes and edges from file content; the depth ladder can represent paths/files, parsed symbols, and graph relationships. The extractor hashes content and uses the Python tree-sitter bridge for code structure.",
+        "sources": [
+          "extract",
+          "readme"
+        ]
+      },
+      {
+        "text": "A single-writer daemon drains path hints and reconciles current disk state into a configurable sink. The default is Graft; the README also documents Mnemosyne. Search combines repository-level code graphs with a global semantic index.",
+        "sources": [
+          "reconcile",
+          "journal",
+          "readme",
+          "search"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Filesystem watchers and harness hooks enqueue path hints. Reconciliation reads current content, derives the desired projection, writes the sink, then commits path ownership in the journal under generation checks. This level-triggered process is designed to converge idempotently rather than replay mutation events.",
+        "sources": [
+          "reconcile",
+          "journal"
+        ]
+      },
+      {
+        "text": "When a file disappears, reconciliation retracts the graph nodes and edges owned by that path and records absent state; moved anchors may be re-homed. Fact-kind rows can be retained in fact_history, capped at 50 rows per path; ordinary code-graph nodes are not archived as facts.",
+        "sources": [
+          "reconcile",
+          "journal",
+          "readme"
+        ]
+      },
+      {
+        "text": "The default search path queries per-repository Graft graphs and the global semantic layer, merges and deduplicates candidates, optionally explores graph neighbors, and applies an in-process verifier. Search supports scope, result count, knowledge kind, and optional recency settings.",
+        "sources": [
+          "search",
+          "readme"
+        ]
+      },
+      {
+        "text": "The README separately labels its extracted fact-card layer experimental: extraction is English-pattern based and contradiction resolution is absent. The source describes leads to verify rather than verified memory.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Ranked retrieval, semantic candidates, and per-hit trust verdicts are implemented, but answer-bearing recall and abstention were not scored.",
+        "sources": [
+          "search",
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Reconciliation updates path-owned graph projections and detects drift. Experimental fact extraction does not resolve contradictions. No correction sequence was tested.",
+        "sources": [
+          "reconcile",
+          "journal",
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The path lifecycle retracts owned graph nodes when files disappear, but no deletion, recovery, or residual-data probe was run.",
+        "sources": [
+          "reconcile",
+          "journal",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Configured roots and returned-path scope filters define code-indexing and retrieval boundaries; no authorization or cross-scope workload was run.",
+        "sources": [
+          "search",
+          "reconcile",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Search returns file paths and trust verdicts, but no answer was adjudicated against retrieved evidence.",
+        "sources": [
+          "search",
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timings were collected.",
+        "sources": [
+          "readme",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The upstream documentation describes local parsing and embeddings, but this review measured no token use, cost, or storage.",
+        "sources": [
+          "readme",
+          "journal",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded inspection of the official README and selected journal, reconciliation, extraction, and search implementation at the verified head. Heimdall, tests, and benchmarks were not run.",
+        "sources": [
+          "readme",
+          "journal",
+          "reconcile",
+          "extract",
+          "search"
+        ]
+      },
+      {
+        "text": "The file-path verification layer does not establish that a result answers a user question. Metadata agreement is not cryptographic proof and remains subject to timestamp resolution, privileged metadata changes, and time-of-check/time-of-use races.",
+        "sources": [
+          "readme",
+          "search"
+        ]
+      },
+      {
+        "text": "The review did not test authorization, alternative backend parity, backup/restore, or deletion from every persistent layer. The experimental fact layer has documented language and contradiction-resolution limits.",
+        "sources": [
+          "readme",
+          "search",
+          "journal"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Heimdall runtime, tests, or benchmark workload was executed. The project metric definitions, fixture, and shared execution status record describe protocol/status and are not Heimdall measurements.",
+      "sources": [
+        "metrics",
+        "fixture",
+        "status"
+      ]
+    }
+  }
+}

@@ -1,0 +1,449 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 175,
+    "slug": "ctx-open",
+    "name": "CTX Cognitive Version Control",
+    "repository": "https://github.com/diegoxtr/ctx-open",
+    "listed_repository": "https://github.com/diegoxtr/ctx-open",
+    "branch": "main",
+    "revision": "c31d84e07c830f2d126f780f65ad2b0228fe54eb",
+    "reviewed_at": "2026-11-25T10:19:51Z",
+    "review_timezone": "UTC (2026-11-25 02:19:51 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "CTX is a local-first .NET application that stores typed cognitive work artifacts in a project-local .ctx directory and versions durable state as immutable snapshots. It exposes a CLI, local viewer, and read-only-by-default stdio MCP adapter. The inspection found bounded, deterministic context packet assembly and token/cost counters, but no retrieval accuracy, isolation, or efficiency measurements were collected.",
+    "atlas_locator": {
+      "ordinal": 175,
+      "name": "CTX Cognitive Version Control",
+      "slug": "ctx-open",
+      "listed_repository": "https://github.com/diegoxtr/ctx-open",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/ctx-open.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": "diego.verrastro.ctx@gmail.com",
+      "source_url": "https://github.com/diegoxtr/ctx-open/blob/c31d84e07c830f2d126f780f65ad2b0228fe54eb/README.md",
+      "checked_urls": [
+        "https://github.com/diegoxtr/ctx-open/blob/c31d84e07c830f2d126f780f65ad2b0228fe54eb/README.md"
+      ],
+      "note": "The official pinned README identifies Diego Mariano Verrastro and publishes diego.verrastro.ctx@gmail.com."
+    },
+    "contact_email": "diego.verrastro.ctx@gmail.com",
+    "contact_email_source_url": "https://github.com/diegoxtr/ctx-open/blob/c31d84e07c830f2d126f780f65ad2b0228fe54eb/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/diegoxtr/ctx-open/blob/c31d84e07c830f2d126f780f65ad2b0228fe54eb/README.md"
+    ],
+    "contact_email_note": "Published in the official pinned README. No commit/profile metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Catalog ordinal and listed locator",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[174], ordinal 175; curated identity, explicit listed repository and Atlas locator",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/ctx-open.md",
+        "symbol": "Pinned report used only to attribute curated identity and locator, not as assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/ctx-open.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Public GitHub repository page identifies main as default branch and shows latest commit prefix c31d84e",
+        "url": "https://github.com/diegoxtr/ctx-open"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Current main head c31d84e07c830f2d126f780f65ad2b0228fe54eb; feed updated 2026-09-21T19:27:36Z",
+        "url": "https://github.com/diegoxtr/ctx-open/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Official reviewed head",
+        "path": "commit/c31d84e07c830f2d126f780f65ad2b0228fe54eb",
+        "symbol": "Commit page identifies the full reviewed head on main",
+        "url": "https://github.com/diegoxtr/ctx-open/commit/c31d84e07c830f2d126f780f65ad2b0228fe54eb"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "System role, interfaces and boundaries, product and release information, and published contact",
+        "url": "https://github.com/diegoxtr/ctx-open/blob/c31d84e07c830f2d126f780f65ad2b0228fe54eb/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Pinned technical architecture",
+        "path": "docs/TECHNICAL_ARCHITECTURE.md",
+        "symbol": "Layer responsibilities, persistence, adapters and documented limitations",
+        "url": "https://github.com/diegoxtr/ctx-open/blob/c31d84e07c830f2d126f780f65ad2b0228fe54eb/docs/TECHNICAL_ARCHITECTURE.md"
+      },
+      {
+        "id": "domain",
+        "label": "Pinned domain model",
+        "path": "docs/DOMAIN_MODEL.md",
+        "symbol": "Cognitive entities, lifecycle states, relationships, traceability and integrity rules",
+        "url": "https://github.com/diegoxtr/ctx-open/blob/c31d84e07c830f2d126f780f65ad2b0228fe54eb/docs/DOMAIN_MODEL.md"
+      },
+      {
+        "id": "structure",
+        "label": "Pinned .ctx storage structure",
+        "path": "docs/CTX_STRUCTURE.md",
+        "symbol": "On-disk JSON layout, working state, snapshots, packets, runs, metrics and portability",
+        "url": "https://github.com/diegoxtr/ctx-open/blob/c31d84e07c830f2d126f780f65ad2b0228fe54eb/docs/CTX_STRUCTURE.md"
+      },
+      {
+        "id": "builder",
+        "label": "Context packet builder source",
+        "path": "Ctx.Core/ContextBuilder.cs",
+        "symbol": "Selection bounds, fallback rules, evidence links, token estimates and packet fingerprint",
+        "url": "https://github.com/diegoxtr/ctx-open/blob/c31d84e07c830f2d126f780f65ad2b0228fe54eb/Ctx.Core/ContextBuilder.cs"
+      },
+      {
+        "id": "selection",
+        "label": "Runbook selection source",
+        "path": "Ctx.Core/OperationalRunbookSelection.cs",
+        "symbol": "Active runbook filtering, substring trigger matching, ranking and selected/overflow caps",
+        "url": "https://github.com/diegoxtr/ctx-open/blob/c31d84e07c830f2d126f780f65ad2b0228fe54eb/Ctx.Core/OperationalRunbookSelection.cs"
+      },
+      {
+        "id": "service",
+        "label": "Application service source",
+        "path": "Ctx.Core/CtxApplicationService.cs",
+        "symbol": "Application operations and write-lock coordination",
+        "url": "https://github.com/diegoxtr/ctx-open/blob/c31d84e07c830f2d126f780f65ad2b0228fe54eb/Ctx.Core/CtxApplicationService.cs"
+      },
+      {
+        "id": "write",
+        "label": "MCP write tools source",
+        "path": "Ctx.Mcp/Mcp/CtxWriteTools.cs",
+        "symbol": "Typed artifact mutation tools and explicit write-mode requirements",
+        "url": "https://github.com/diegoxtr/ctx-open/blob/c31d84e07c830f2d126f780f65ad2b0228fe54eb/Ctx.Mcp/Mcp/CtxWriteTools.cs"
+      },
+      {
+        "id": "guard",
+        "label": "MCP repository guard source",
+        "path": "Ctx.Mcp/Mcp/RepositoryGuard.cs",
+        "symbol": "Configured repository, optional allowed-root and write-mode checks",
+        "url": "https://github.com/diegoxtr/ctx-open/blob/c31d84e07c830f2d126f780f65ad2b0228fe54eb/Ctx.Mcp/Mcp/RepositoryGuard.cs"
+      },
+      {
+        "id": "parity",
+        "label": "MCP tool parity document",
+        "path": "docs/CTX_MCP_TOOL_PARITY.md",
+        "symbol": "Read/write tool surface and deferred MCP operations",
+        "url": "https://github.com/diegoxtr/ctx-open/blob/c31d84e07c830f2d126f780f65ad2b0228fe54eb/docs/CTX_MCP_TOOL_PARITY.md"
+      },
+      {
+        "id": "commit_engine",
+        "label": "Commit engine source",
+        "path": "Ctx.Core/CommitEngine.cs",
+        "symbol": "Snapshot construction, hash, parent, diff and trace metadata",
+        "url": "https://github.com/diegoxtr/ctx-open/blob/c31d84e07c830f2d126f780f65ad2b0228fe54eb/Ctx.Core/CommitEngine.cs"
+      },
+      {
+        "id": "working_repo",
+        "label": "Working-context persistence source",
+        "path": "Ctx.Persistence/WorkingContextRepository.cs",
+        "symbol": "Project-local .ctx paths and filesystem JSON initialization/load/save",
+        "url": "https://github.com/diegoxtr/ctx-open/blob/c31d84e07c830f2d126f780f65ad2b0228fe54eb/Ctx.Persistence/WorkingContextRepository.cs"
+      },
+      {
+        "id": "commit_repo",
+        "label": "Commit persistence source",
+        "path": "Ctx.Persistence/CommitRepository.cs",
+        "symbol": "JSON commit files and branch-filtered history loading",
+        "url": "https://github.com/diegoxtr/ctx-open/blob/c31d84e07c830f2d126f780f65ad2b0228fe54eb/Ctx.Persistence/CommitRepository.cs"
+      },
+      {
+        "id": "lock",
+        "label": "Repository write lock source",
+        "path": "Ctx.Persistence/RepositoryWriteLock.cs",
+        "symbol": "In-process semaphore and exclusive file lock for writes",
+        "url": "https://github.com/diegoxtr/ctx-open/blob/c31d84e07c830f2d126f780f65ad2b0228fe54eb/Ctx.Persistence/RepositoryWriteLock.cs"
+      },
+      {
+        "id": "run",
+        "label": "Run orchestration source",
+        "path": "Ctx.Core/RunOrchestrator.cs",
+        "symbol": "Packet persistence, provider call, run recording and usage counters",
+        "url": "https://github.com/diegoxtr/ctx-open/blob/c31d84e07c830f2d126f780f65ad2b0228fe54eb/Ctx.Core/RunOrchestrator.cs"
+      },
+      {
+        "id": "metrics",
+        "label": "Project benchmark metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Project-defined benchmark domains and measurement definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned benchmark input fixture; not executed in this review",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Project result/status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Existing project measurement status; source observations are not measured results",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents CTX as a local-first CLI and structured cognitive-state repository for agents, with local viewer and stdio MCP/ACP adapters. It names Diego Mariano Verrastro and publishes his contact email in the README. The inspected implementation is a .NET 8 modular application with filesystem JSON persistence.",
+        "sources": [
+          "readme",
+          "architecture",
+          "structure"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "CTX separates Domain, Application, Core, Persistence, Providers, Infrastructure, CLI, Viewer, and MCP projects. The CLI, viewer, and MCP adapter sit over the same application/service model; MCP uses local stdio, defaults to read-only, and requires an explicit write mode for mutation.",
+        "sources": [
+          "architecture",
+          "readme",
+          "parity",
+          "write"
+        ]
+      },
+      {
+        "text": "A project-local `.ctx/` directory stores configuration, project identity, HEAD and branch references, mutable `working/working-context.json`, immutable commit snapshots, a materialized graph, staged state, run and packet records, runbooks, triggers, and metric files. The inspected format is JSON on the local filesystem; the documented index directory is reserved rather than an active search index.",
+        "sources": [
+          "structure",
+          "working_repo",
+          "commit_repo"
+        ]
+      },
+      {
+        "text": "The domain models typed IDs and traceability on goals, tasks, hypotheses, evidence, decisions, conclusions, runs, and operational artifacts. Evidence has a source, kind, confidence, state, and typed supported-entity references. WorkingContext aggregates current mutable entities; commits snapshot it together with runbooks and triggers and carry parent, hash, diff, and trace metadata.",
+        "sources": [
+          "domain",
+          "commit_engine",
+          "commit_repo"
+        ]
+      },
+      {
+        "text": "`ContextBuilder` deterministically selects up to three goals and six tasks, then linked hypotheses, decisions, evidence, and conclusions with respective caps of six, six, eight, and four. If requested goal/task filters yield no matches it falls back to high-priority goals and related tasks. It assembles sections, references, a fingerprint, and estimated token count. Active runbooks are ranked by goal/task association and substring trigger match; task-attached entries are included before the two-entry fallback cap.",
+        "sources": [
+          "builder",
+          "selection"
+        ]
+      },
+      {
+        "text": "The write service can use a repository-scoped in-process semaphore and exclusive `write.lock` file. The filesystem repository serializes JSON files under `.ctx`; commit snapshots are immutable by contract and the commit repository reads JSON files to build branch-filtered history.",
+        "sources": [
+          "service",
+          "lock",
+          "working_repo",
+          "commit_repo",
+          "commit_engine"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "**Write.** CLI and MCP expose typed creation operations for goals, tasks, hypotheses, evidence, decisions, conclusions, runbooks, and triggers. MCP mutation tools call the application service through a write-mode repository guard. The inspected interface records caller-supplied creator/updater names and timestamps in traceability; evidence links to supported entity references.",
+        "sources": [
+          "write",
+          "guard",
+          "domain",
+          "service"
+        ]
+      },
+      {
+        "text": "**Update and correction.** Typed update methods accept entity fields and state changes; hypotheses also have relate, merge, and supersede operations. Commit history preserves prior repository snapshots and diffs. In the inspected MCP/write reference, there is no record deletion operation; lifecycle states include Archived and Superseded, which are state transitions rather than evidence of physical erasure.",
+        "sources": [
+          "write",
+          "parity",
+          "domain",
+          "commit_engine"
+        ]
+      },
+      {
+        "text": "**Delete.** No explicit delete tool was present in the inspected MCP write surface or parity document. This does not establish behavior for every CLI or internal operation, and does not establish physical erasure from prior commits, exports, or backups.",
+        "sources": [
+          "write",
+          "parity",
+          "structure"
+        ]
+      },
+      {
+        "text": "**Retrieval.** Agents can request a compact `ctx_plan` or context packet, inspect typed artifacts through list/show tools, and traverse graph, history, diff, or lineage views. Packet selection is bounded and relation-driven; inspected documentation does not describe general full-text memory search. The code does not apply a lifecycle-state filter to selected hypotheses, decisions, or evidence, so state labels can be included in the packet without being used as exclusion rules.",
+        "sources": [
+          "readme",
+          "parity",
+          "builder",
+          "domain"
+        ]
+      },
+      {
+        "text": "**Scope isolation.** Each `.ctx` repository is physically local to its project. MCP requests resolve to the configured repository by default; dynamic paths require an allowed root and must remain at or below it. This is a local path boundary, not a multi-tenant authorization service. No cross-project or hostile-caller isolation workload was run.",
+        "sources": [
+          "structure",
+          "guard",
+          "readme"
+        ]
+      },
+      {
+        "text": "**Provenance and evidence.** Core entities include creator/updater and UTC timestamps, tags, and related IDs. Evidence records source text/reference, kind, confidence, state, and which entities it supports; packets retain typed entity references and are fingerprinted. This provides structural lineage, but the inspected code does not validate the truth of external evidence or produce measured claim-level citation quality.",
+        "sources": [
+          "domain",
+          "builder",
+          "commit_engine"
+        ]
+      },
+      {
+        "text": "**Efficiency and observability.** Packet construction has explicit item caps and an estimated token count, while repository configuration includes a packet-token limit and metrics flag. Run orchestration persists packets and run records and updates aggregate run, token, cost, and execution-time counters. These code structures describe what can be recorded; they are not latency, cost, or storage measurements from this review.",
+        "sources": [
+          "builder",
+          "structure",
+          "run",
+          "metrics"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "No fixture queries or adjudicated answerable/unanswerable outcomes were run; packet selection code does not establish answer accuracy or abstention quality.",
+        "sources": [
+          "builder",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Typed update and supersession surfaces were inspected, but no correction probes or stale-value adjudication were performed.",
+        "sources": [
+          "write",
+          "parity",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No delete operation was identified in the inspected MCP write surface; no post-delete leakage probes or checks of historical copies were run.",
+        "sources": [
+          "parity",
+          "structure",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "The MCP repository guard enforces configured-path/allowed-root checks in code; no paired cross-repository or adversarial isolation workload was run.",
+        "sources": [
+          "guard",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Typed evidence references and packet references exist, but generated claims were not collected or adjudicated for support or citation coverage.",
+        "sources": [
+          "domain",
+          "builder",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No retrieval timing samples were collected.",
+        "sources": [
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timed write-then-recall probes were run.",
+        "sources": [
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "Token/cost counters are present in source, but no model usage or charges were measured for this review.",
+        "sources": [
+          "run",
+          "structure",
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Filesystem JSON layout was inspected, but no corpus size or bytes-per-item measurements were collected.",
+        "sources": [
+          "structure",
+          "working_repo",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This source review covered the official README, architecture/domain/storage and MCP parity documents, plus the current packet builder, runbook selection, application service, filesystem persistence, commit engine, and MCP write/guard code at the verified SHA. It did not inspect every CLI command, provider, viewer path, merge edge case, or concurrency behavior.",
+        "sources": [
+          "readme",
+          "architecture",
+          "domain",
+          "structure",
+          "builder",
+          "selection",
+          "service",
+          "write",
+          "guard",
+          "working_repo",
+          "commit_repo",
+          "lock",
+          "run"
+        ]
+      },
+      {
+        "text": "No CTX runtime, tests, or benchmarks were run. Code and documentation establish implemented structure and declared boundaries, but cannot establish recall quality, state-control outcomes, erasure completeness, practical isolation, or performance and storage characteristics.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No CTX runtime, tests, or benchmarks were run. Project metric definitions and fixture were consulted as contracts only; all metric domains remain unmeasured."
+    }
+  }
+}

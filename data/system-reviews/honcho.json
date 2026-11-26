@@ -1,0 +1,386 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 308,
+    "slug": "honcho",
+    "name": "Honcho",
+    "repository": "https://github.com/plastic-labs/honcho",
+    "listed_repository": "https://github.com/plastic-labs/honcho",
+    "branch": "main",
+    "revision": "1747caf8a388a8efde8fecee9056fc5dc28c473d",
+    "reviewed_at": "2026-11-25T23:32:30Z",
+    "review_timezone": "UTC (checked 2026-11-25 15:32:30 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Honcho is a memory service and library for stateful agents. It stores peer-attributed messages in sessions, processes them asynchronously into conclusions and representations, and exposes semantic search, context and chat APIs. Workspaces, tenants and named scopes define important data boundaries; runtime benchmark behavior was not measured.",
+    "atlas_locator": {
+      "ordinal": 308,
+      "name": "Honcho",
+      "slug": "honcho",
+      "listed_repository": "https://github.com/plastic-labs/honcho",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/honcho.md",
+      "revision": "210b56cf953fcf447ffafcb428d4b4f1823b83fd",
+      "catalog_revision": "739b63e97e116b2ea43dd4bcaa6df79addd3fef7",
+      "note": "Curated identity and locator attribution only; not used as assessment evidence."
+    },
+    "contact": {
+      "email": "support@honcho.dev",
+      "source_url": "https://github.com/plastic-labs/honcho/blob/1747caf8a388a8efde8fecee9056fc5dc28c473d/SECURITY.md",
+      "checked_urls": [
+        "https://github.com/plastic-labs/honcho/blob/1747caf8a388a8efde8fecee9056fc5dc28c473d/README.md",
+        "https://github.com/plastic-labs/honcho/blob/1747caf8a388a8efde8fecee9056fc5dc28c473d/SECURITY.md"
+      ],
+      "note": "SECURITY.md publishes this email for private vulnerability reports. The README was checked for general contact information and publishes no general contact email."
+    },
+    "contact_email": "support@honcho.dev",
+    "contact_email_source_url": "https://github.com/plastic-labs/honcho/blob/1747caf8a388a8efde8fecee9056fc5dc28c473d/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/plastic-labs/honcho/blob/1747caf8a388a8efde8fecee9056fc5dc28c473d/README.md",
+      "https://github.com/plastic-labs/honcho/blob/1747caf8a388a8efde8fecee9056fc5dc28c473d/SECURITY.md"
+    ],
+    "contact_email_note": "support@honcho.dev is published by the official SECURITY.md for vulnerability reporting; the official README was also checked and contains no general contact email.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated roster identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[307], ordinal 308: name, slug, explicit listed repository URL and pinned Atlas attribution",
+        "url": "../memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/honcho.md",
+        "symbol": "Pinned source retained only for curated identity and locator attribution; not used as assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/honcho.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository page",
+        "path": "repository page",
+        "symbol": "Canonical plastic-labs/honcho repository and default branch main",
+        "url": "https://github.com/plastic-labs/honcho"
+      },
+      {
+        "id": "head",
+        "label": "Official current main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Full head SHA 1747caf8a388a8efde8fecee9056fc5dc28c473d; feed update time 2026-11-25T20:23:56Z",
+        "url": "https://github.com/plastic-labs/honcho/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Current overview, message/reason/query flow, supported surfaces, workspace/peer/session/scope concepts, multi-tenant mode and benchmark claims",
+        "url": "https://github.com/plastic-labs/honcho/blob/1747caf8a388a8efde8fecee9056fc5dc28c473d/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Pinned architecture guide",
+        "path": "docs/v3/documentation/core-concepts/architecture.mdx",
+        "symbol": "Peer/session/message data model, async processing, storage/query architecture and named-scope explanation",
+        "url": "https://github.com/plastic-labs/honcho/blob/1747caf8a388a8efde8fecee9056fc5dc28c473d/docs/v3/documentation/core-concepts/architecture.mdx"
+      },
+      {
+        "id": "messages",
+        "label": "Pinned message CRUD and search implementation",
+        "path": "src/crud/message.py",
+        "symbol": "Message/session search, observer and session allowlist scoping, semantic search and context windows",
+        "url": "https://github.com/plastic-labs/honcho/blob/1747caf8a388a8efde8fecee9056fc5dc28c473d/src/crud/message.py"
+      },
+      {
+        "id": "documents",
+        "label": "Pinned conclusion/document CRUD implementation",
+        "path": "src/crud/document.py",
+        "symbol": "Conclusion storage, source-message/source-conclusion links, vector retrieval and lifecycle operations",
+        "url": "https://github.com/plastic-labs/honcho/blob/1747caf8a388a8efde8fecee9056fc5dc28c473d/src/crud/document.py"
+      },
+      {
+        "id": "conclusions",
+        "label": "Pinned conclusion API routes",
+        "path": "src/routers/conclusions.py",
+        "symbol": "Create, list, semantic query, get and delete conclusion endpoints",
+        "url": "https://github.com/plastic-labs/honcho/blob/1747caf8a388a8efde8fecee9056fc5dc28c473d/src/routers/conclusions.py"
+      },
+      {
+        "id": "scopes",
+        "label": "Pinned named-scope implementation",
+        "path": "src/utils/scopes.py",
+        "symbol": "Reserved scope peer identity, scope-key binding and read-option restrictions",
+        "url": "https://github.com/plastic-labs/honcho/blob/1747caf8a388a8efde8fecee9056fc5dc28c473d/src/utils/scopes.py"
+      },
+      {
+        "id": "lifecycle",
+        "label": "Pinned lifecycle predicates",
+        "path": "src/crud/lifecycle.py",
+        "symbol": "Tenant-aware live-row filters and primitive liveness predicates for workspace/peer/session/message/conclusion reads",
+        "url": "https://github.com/plastic-labs/honcho/blob/1747caf8a388a8efde8fecee9056fc5dc28c473d/src/crud/lifecycle.py"
+      },
+      {
+        "id": "graph",
+        "label": "Pinned conclusion graph query",
+        "path": "src/crud/graph.py",
+        "symbol": "Conclusion/source graph rows, lineage completeness, unresolved/deleted/outside sources, and graph retrieval",
+        "url": "https://github.com/plastic-labs/honcho/blob/1747caf8a388a8efde8fecee9056fc5dc28c473d/src/crud/graph.py"
+      },
+      {
+        "id": "graph-route",
+        "label": "Pinned conclusion graph routes",
+        "path": "src/routers/graph.py",
+        "symbol": "Experimental Arrow graph export, workspace auth, row cap, per-process build semaphore, ETag and stage metrics",
+        "url": "https://github.com/plastic-labs/honcho/blob/1747caf8a388a8efde8fecee9056fc5dc28c473d/src/routers/graph.py"
+      },
+      {
+        "id": "graph-doc",
+        "label": "Pinned graph API documentation",
+        "path": "docs/v3/api-reference/endpoint/graph/get-graph.mdx",
+        "symbol": "Graph schema, lineage fields, text endpoint, ETag, cap and filtering guidance",
+        "url": "https://github.com/plastic-labs/honcho/blob/1747caf8a388a8efde8fecee9056fc5dc28c473d/docs/v3/api-reference/endpoint/graph/get-graph.mdx"
+      },
+      {
+        "id": "security",
+        "label": "Pinned official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Published vulnerability reporting contact support@honcho.dev",
+        "url": "https://github.com/plastic-labs/honcho/blob/1747caf8a388a8efde8fecee9056fc5dc28c473d/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Definitions for retrieval, correction, deletion, scope, evidence, latency, delay, tokens/cost and storage metrics; no Honcho result",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Shared synthetic benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Protocol workload only; not executed for Honcho",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Shared benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project execution status only; no Honcho measurement",
+        "url": "../../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The repository is maintained under the Plastic Labs GitHub organization. Its README describes this repository as the core FastAPI service and identifies managed, local-stack and self-hosted use modes; no individual maintainer is asserted here.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      },
+      {
+        "text": "The catalog identifies ordinal 308 as Honcho, slug honcho, with an explicit listed repository URL. Its Atlas attribution is retained only for roster context, not assessment evidence.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The data model centers on workspaces, peers, sessions and messages. Messages are peer-attributed and ordered within sessions; peer conclusions and representations summarize information across sessions, while named scopes constrain which sessions contribute to reads.",
+        "sources": [
+          "readme",
+          "architecture",
+          "scopes"
+        ]
+      },
+      {
+        "text": "The write path stores messages in PostgreSQL and enqueues reasoning work; deriver workers asynchronously generate conclusions and representations. The repository also supplies search, vector-store, SDK, CLI and agent integration components.",
+        "sources": [
+          "readme",
+          "architecture",
+          "messages"
+        ]
+      },
+      {
+        "text": "Conclusions are documents tied to observer/observed perspectives. Source-conclusion and source-message links preserve derivation references; the graph API can expose those links and whether lineage is complete or unresolved.",
+        "sources": [
+          "documents",
+          "conclusions",
+          "graph",
+          "graph-doc"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The documented write flow creates peers and sessions and appends messages; the API also supports explicit conclusion creation. Current architecture documentation describes storage and queue insertion in the request, with LLM derivation outside the synchronous write path.",
+        "sources": [
+          "readme",
+          "architecture",
+          "conclusions"
+        ]
+      },
+      {
+        "text": "Message update operations and conclusion deletion are exposed. The conclusion delete route describes the action as irreversible and removes copied Representation History; this review did not verify physical erasure from every backing store, backup or external copy.",
+        "sources": [
+          "readme",
+          "conclusions",
+          "documents",
+          "lifecycle"
+        ]
+      },
+      {
+        "text": "Retrieval includes peer/workspace chat, session context, representations, semantic conclusion queries, message search and an experimental Arrow graph endpoint. Conclusion queries require an observer/observed pair; message search supports semantic/text retrieval with context and session-scope controls.",
+        "sources": [
+          "readme",
+          "conclusions",
+          "messages",
+          "graph-route"
+        ]
+      },
+      {
+        "text": "Workspaces and tenant row-level security separate applications/tenants. Named scopes are reserved peers representing session groups; scope reads bind to the caller's authorized scope key, and peer-scoped keys cannot request named-scope reads.",
+        "sources": [
+          "readme",
+          "scopes",
+          "lifecycle"
+        ]
+      },
+      {
+        "text": "Source conclusion and message IDs can be retained on derived documents. The graph export marks complete, partial, unknown and not-applicable lineage and counts unresolved source categories; links do not independently prove the derived claim.",
+        "sources": [
+          "documents",
+          "graph",
+          "graph-doc"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency and observability include asynchronous derivation, bounded search and graph work, queue/status surfaces, stage timing, graph counters, ETags and Prometheus instrumentation. These are implementation observations, not benchmark measurements.",
+        "sources": [
+          "readme",
+          "architecture",
+          "messages",
+          "graph-route",
+          "graph-doc"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Search, chat and representation APIs exist; no answerable or unanswerable fixture questions were run.",
+        "sources": [
+          "readme",
+          "conclusions",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Message updates, asynchronous derivation and conclusion lifecycle APIs exist; no correction history or stale-value probes were scored.",
+        "sources": [
+          "architecture",
+          "messages",
+          "documents",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leak rate",
+        "status": "unmeasured",
+        "evidence": "Conclusion and other deletion paths are documented, but no post-delete recall probes or storage audit were run.",
+        "sources": [
+          "conclusions",
+          "lifecycle",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation leak rate",
+        "status": "unmeasured",
+        "evidence": "Workspace, tenant, peer and named-scope boundaries are implemented; no cross-scope or cross-tenant probes were run.",
+        "sources": [
+          "readme",
+          "scopes",
+          "messages",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source IDs and lineage links are available; no response claims or citations were adjudicated against retained source text.",
+        "sources": [
+          "documents",
+          "graph",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No retrieval timings or scheduled post-write probes were collected.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No model usage, provider charges or attributable persistent storage bytes were recorded.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded inspection of official repository documentation and selected current source at one verified commit. Honcho, its tests and benchmarks were not run; source inspection cannot establish runtime answer quality, deployment isolation, deletion completeness or queue behavior.",
+        "sources": [
+          "readme",
+          "architecture",
+          "messages",
+          "documents"
+        ]
+      },
+      {
+        "text": "The project supports different managed, self-hosted and local configurations, optional multi-tenant mode, external vector backends and model providers. Correctness of a particular deployment's database roles, row-level security and provider settings was not tested.",
+        "sources": [
+          "readme",
+          "scopes",
+          "lifecycle"
+        ]
+      },
+      {
+        "text": "The review did not establish physical deletion across backups, vector indexes and external copies, nor that every natural-language answer exposes source citations. Those outcomes require deployment-specific inspection and adjudicated runtime probes.",
+        "sources": [
+          "conclusions",
+          "documents",
+          "graph",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "METRICS.md and the synthetic fixture specify a protocol; the shared execution status is not a Honcho result. No Honcho benchmark was run."
+    }
+  }
+}

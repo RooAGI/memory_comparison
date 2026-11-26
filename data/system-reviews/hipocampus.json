@@ -1,0 +1,343 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 297,
+    "slug": "hipocampus",
+    "name": "Hipocampus",
+    "repository": "https://github.com/kevin-hs-sohn/hipocampus",
+    "listed_repository": "https://github.com/kevin-hs-sohn/hipocampus",
+    "branch": "main",
+    "revision": "df88ca19d42a3aba4caeaba4512da46cae7827da",
+    "reviewed_at": "2026-11-25T23:03:52Z",
+    "review_timezone": "UTC (checked local time: 2026-11-25 15:03:52 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Hipocampus is a project-local memory harness built around Markdown files, lifecycle hooks and agent skills. It keeps a compact topic index available at session start and combines a hierarchical compaction tree with optional qmd search. This source review does not reproduce upstream benchmark claims or measure runtime quality.",
+    "atlas_locator": {
+      "ordinal": 297,
+      "name": "Hipocampus",
+      "slug": "hipocampus",
+      "listed_repository": "https://github.com/kevin-hs-sohn/hipocampus",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hipocampus.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/kevin-hs-sohn/hipocampus/blob/df88ca19d42a3aba4caeaba4512da46cae7827da/README.md",
+      "checked_urls": [
+        "https://github.com/kevin-hs-sohn/hipocampus/blob/df88ca19d42a3aba4caeaba4512da46cae7827da/README.md"
+      ],
+      "note": "Checked only the official pinned README for a published contact email; none was present. No commit/profile metadata, package metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/kevin-hs-sohn/hipocampus/blob/df88ca19d42a3aba4caeaba4512da46cae7827da/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/kevin-hs-sohn/hipocampus/blob/df88ca19d42a3aba4caeaba4512da46cae7827da/README.md"
+    ],
+    "contact_email_note": "No email was published in the checked official pinned README; no profile or package metadata was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated roster identity and locator",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[296], ordinal 297; name, slug, explicit locator and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/hipocampus.md",
+        "symbol": "Used for curated identity/locator context only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hipocampus.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository page",
+        "path": "repository page",
+        "symbol": "Public kevin-hs-sohn/hipocampus; default branch main",
+        "url": "https://github.com/kevin-hs-sohn/hipocampus"
+      },
+      {
+        "id": "head",
+        "label": "Official main commit feed and verified Git head",
+        "path": "main.atom / Git transport",
+        "symbol": "Feed latest entry and git ls-remote plus shallow checkout agree on full head df88ca19d42a3aba4caeaba4512da46cae7827da",
+        "url": "https://github.com/kevin-hs-sohn/hipocampus/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project description, tiers, retrieval, install and upstream MemAware claims; not independently measured",
+        "url": "https://github.com/kevin-hs-sohn/hipocampus/blob/df88ca19d42a3aba4caeaba4512da46cae7827da/README.md"
+      },
+      {
+        "id": "package",
+        "label": "Pinned npm CLI package metadata",
+        "path": "package.json",
+        "symbol": "Package name, executable and runtime metadata",
+        "url": "https://github.com/kevin-hs-sohn/hipocampus/blob/df88ca19d42a3aba4caeaba4512da46cae7827da/package.json"
+      },
+      {
+        "id": "layers",
+        "label": "Pinned memory layers specification",
+        "path": "spec/layers.md",
+        "symbol": "Hot/warm/cold tiers, project files and ROOT index role",
+        "url": "https://github.com/kevin-hs-sohn/hipocampus/blob/df88ca19d42a3aba4caeaba4512da46cae7827da/spec/layers.md"
+      },
+      {
+        "id": "formats",
+        "label": "Pinned memory file format specification",
+        "path": "spec/file-formats.md",
+        "symbol": "Memory types, append and preservation rules, file data model",
+        "url": "https://github.com/kevin-hs-sohn/hipocampus/blob/df88ca19d42a3aba4caeaba4512da46cae7827da/spec/file-formats.md"
+      },
+      {
+        "id": "compaction",
+        "label": "Pinned compaction skill",
+        "path": "skills/compaction/SKILL.md",
+        "symbol": "Tree lifecycle, frontmatter/source lineage, thresholds and type-aware compaction",
+        "url": "https://github.com/kevin-hs-sohn/hipocampus/blob/df88ca19d42a3aba4caeaba4512da46cae7827da/skills/compaction/SKILL.md"
+      },
+      {
+        "id": "compact",
+        "label": "Pinned mechanical compactor",
+        "path": "cli/compact.mjs",
+        "symbol": "Transcript append, thresholds, regex secret scanning, derived tree and compaction state",
+        "url": "https://github.com/kevin-hs-sohn/hipocampus/blob/df88ca19d42a3aba4caeaba4512da46cae7827da/cli/compact.mjs"
+      },
+      {
+        "id": "core",
+        "label": "Pinned core agent protocol",
+        "path": "skills/core/SKILL.md",
+        "symbol": "Session-start, checkpoint, state-file and memory policy",
+        "url": "https://github.com/kevin-hs-sohn/hipocampus/blob/df88ca19d42a3aba4caeaba4512da46cae7827da/skills/core/SKILL.md"
+      },
+      {
+        "id": "recall",
+        "label": "Pinned recall skill",
+        "path": "skills/recall/SKILL.md",
+        "symbol": "ROOT triage, manifest selection and qmd search fallback",
+        "url": "https://github.com/kevin-hs-sohn/hipocampus/blob/df88ca19d42a3aba4caeaba4512da46cae7827da/skills/recall/SKILL.md"
+      },
+      {
+        "id": "hooks",
+        "label": "Pinned session-start hook",
+        "path": "hooks/session-start.sh",
+        "symbol": "Project setup, default ROOT stub/config and protocol injection",
+        "url": "https://github.com/kevin-hs-sohn/hipocampus/blob/df88ca19d42a3aba4caeaba4512da46cae7827da/hooks/session-start.sh"
+      },
+      {
+        "id": "init",
+        "label": "Pinned platform setup CLI",
+        "path": "cli/init.mjs",
+        "symbol": "Platform detection and hook/skill installation",
+        "url": "https://github.com/kevin-hs-sohn/hipocampus/blob/df88ca19d42a3aba4caeaba4512da46cae7827da/cli/init.mjs"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned synthetic fixture; not executed for this system",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared benchmark execution state; not a Hipocampus result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository describes Hipocampus as an installable memory harness for coding agents. The inspected repository consists of an npm CLI, platform hooks/setup, skills, templates and specifications; it stores its memory in project-local files rather than a hosted memory service.",
+        "sources": [
+          "repo",
+          "readme",
+          "package"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The design separates hot operational/context files, warm raw logs and knowledge, and cold content indexed by a compaction tree plus optional qmd search. memory/ROOT.md serves as a bounded topic index, while node frontmatter stores type, status, period, source-file paths and topic keywords.",
+        "sources": [
+          "layers",
+          "formats",
+          "core",
+          "compaction"
+        ]
+      },
+      {
+        "text": "The documented tree is raw daily logs → daily → weekly → monthly → ROOT. The mechanical compactor copies or concatenates below line thresholds, with regex redaction, and creates a needs-summarization placeholder above thresholds for agent-driven LLM summarization. Root is rebuilt from monthly sources and constrained by a configurable token cap.",
+        "sources": [
+          "compaction",
+          "compact"
+        ]
+      },
+      {
+        "text": "The session-start hook creates directories, a ROOT stub and default configuration if absent, then outputs protocol instructions. Platform setup installs hooks and skills; checkpointing and above-threshold summaries require the agent to follow those instructions.",
+        "sources": [
+          "hooks",
+          "init",
+          "core",
+          "compact"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: the agent protocol directs structured checkpoints to be appended to date-stamped Markdown logs and classifies entries as project, feedback, user or reference. The mechanical compactor can also extract user/assistant text from a supplied JSONL transcript and append it to the daily file. This is a file workflow rather than a central typed-record API.",
+        "sources": [
+          "core",
+          "formats",
+          "compact"
+        ]
+      },
+      {
+        "text": "Update: raw logs are append-only by policy. Derived summaries are regenerated from source periods; tentative nodes become fixed as periods age. Feedback and user entries are intended to survive verbatim, while project entries may be summarized and references marked stale. The inspected CLI does not provide semantic correction/versioning of old facts.",
+        "sources": [
+          "core",
+          "compaction",
+          "compact"
+        ]
+      },
+      {
+        "text": "Delete: raw daily logs are specified as permanent, and the reviewed CLI has no item-level memory deletion or erasure operation. Manual file removal is outside the documented lifecycle, and derived summaries may retain content until regenerated. Regex secret redaction during mechanical compaction is not proof of complete erasure from all copies or backups.",
+        "sources": [
+          "core",
+          "compaction",
+          "compact"
+        ]
+      },
+      {
+        "text": "Retrieval: the recall procedure checks ROOT's topic index first, follows file pointers, optionally selects up to five files from node frontmatter, then falls back to qmd BM25/vector search when installed. The workflow depends on the agent executing the protocol; no separate answer service, authorization gate or citation enforcement was found in the reviewed project sources.",
+        "sources": [
+          "recall",
+          "readme",
+          "layers"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "ROOT triage, manifest selection and qmd fallback are documented; no answer/abstention cases were scored.",
+        "sources": [
+          "readme",
+          "recall",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction and stale values",
+        "status": "unmeasured",
+        "evidence": "Type-aware compaction and reference staleness markers are specified; no correction or stale-value sequence was evaluated.",
+        "sources": [
+          "formats",
+          "compaction",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Raw files are permanent by policy and no item erasure operation was inspected; no post-delete probe was run.",
+        "sources": [
+          "core",
+          "compact",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Project directories and optional agent subtrees organize files; no access-control or cross-project probe was run.",
+        "sources": [
+          "layers",
+          "core",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source-file lineage is represented in frontmatter; no claim-support or citation workload was adjudicated.",
+        "sources": [
+          "formats",
+          "compaction",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Index and search paths are described; no latency or freshness timings were collected.",
+        "sources": [
+          "recall",
+          "compact",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost and storage",
+        "status": "unmeasured",
+        "evidence": "Root token cap, optional vector storage and LLM compaction are documented; no usage, cost or storage measurements were collected.",
+        "sources": [
+          "readme",
+          "layers",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The review establishes the pinned source and documented protocol, not whether an agent reliably follows checkpoints, compaction and recall procedures. Summarization and retrieval quality therefore depend partly on agent behavior and deployment configuration; upstream MemAware figures were not reproduced.",
+        "sources": [
+          "core",
+          "recall",
+          "readme"
+        ]
+      },
+      {
+        "text": "The design favors append-only raw logs and derived summaries rather than correction and erasure. The inspected interface does not establish full deletion semantics, authenticated tenant isolation, claim-level evidence, or complete credential removal across all stored copies. qmd, platform injection and configured model behavior are deployment-dependent.",
+        "sources": [
+          "compact",
+          "layers",
+          "formats",
+          "readme"
+        ]
+      },
+      {
+        "text": "No Hipocampus runtime, tests or benchmark workloads were run. Recall, abstention, correction, deletion, isolation, evidence support, latency, token usage, cost and storage outcomes remain unknown.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Hipocampus runtime, tests, or benchmark workload was executed for this review. Upstream README figures and source observations are not measurements produced here."
+    }
+  }
+}

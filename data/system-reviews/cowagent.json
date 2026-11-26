@@ -1,0 +1,392 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 168,
+    "slug": "cowagent",
+    "name": "CowAgent",
+    "repository": "https://github.com/zhayujie/CowAgent",
+    "listed_repository": "https://github.com/zhayujie/CowAgent",
+    "branch": "master",
+    "revision": "7e7f68e8e3a6a53cf92852f12c2cc5499c7586cd",
+    "reviewed_at": "2026-11-25T10:00:39Z",
+    "review_timezone": "UTC (2026-11-25 02:00:39 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "CowAgent is an open-source personal AI assistant and agent harness with a three-stage long-term memory flow: conversation context is summarized into dated Markdown files, then Deep Dream distills daily material into MEMORY.md and a diary. Retrieval combines FTS5 keyword search and embeddings. This review is pinned to the verified current master head; no system, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 168,
+      "name": "CowAgent",
+      "slug": "cowagent",
+      "listed_repository": "https://github.com/zhayujie/CowAgent",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cowagent.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": "sales@simple-future.tech",
+      "source_url": "https://github.com/zhayujie/CowAgent/blob/7e7f68e8e3a6a53cf92852f12c2cc5499c7586cd/README.md",
+      "checked_urls": [
+        "https://github.com/zhayujie/CowAgent/blob/7e7f68e8e3a6a53cf92852f12c2cc5499c7586cd/README.md"
+      ],
+      "note": "The official pinned README publishes sales@simple-future.tech for enterprise inquiries. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": "sales@simple-future.tech",
+    "contact_email_source_url": "https://github.com/zhayujie/CowAgent/blob/7e7f68e8e3a6a53cf92852f12c2cc5499c7586cd/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/zhayujie/CowAgent/blob/7e7f68e8e3a6a53cf92852f12c2cc5499c7586cd/README.md"
+    ],
+    "contact_email_note": "Published in the official pinned README as the enterprise inquiries email. No commit/profile metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Catalog ordinal and listed locator",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[167], ordinal 168; CowAgent identity, slug, explicit listed repository and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/cowagent.md",
+        "symbol": "Pinned roster entry used only to attribute curated identity and locator; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cowagent.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Public CowAgent repository page identifies master as the default branch",
+        "url": "https://github.com/zhayujie/CowAgent"
+      },
+      {
+        "id": "feed",
+        "label": "Official master commit feed",
+        "path": "commits/master.atom",
+        "symbol": "Current full master head 7e7f68e8e3a6a53cf92852f12c2cc5499c7586cd; feed updated 2026-11-25T09:41:50Z",
+        "url": "https://github.com/zhayujie/CowAgent/commits/master.atom"
+      },
+      {
+        "id": "head",
+        "label": "Official reviewed head",
+        "path": "commit/7e7f68e8e3a6a53cf92852f12c2cc5499c7586cd",
+        "symbol": "Official commit page for the verified current master head",
+        "url": "https://github.com/zhayujie/CowAgent/commit/7e7f68e8e3a6a53cf92852f12c2cc5499c7586cd"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product and memory overview, workspace deployment, memory tiers, integrations, safety note and official enterprise contact",
+        "url": "https://github.com/zhayujie/CowAgent/blob/7e7f68e8e3a6a53cf92852f12c2cc5499c7586cd/README.md"
+      },
+      {
+        "id": "memory",
+        "label": "Pinned long-term memory documentation",
+        "path": "docs/memory/index.mdx",
+        "symbol": "Memory files, write triggers, hybrid retrieval, score fusion, decay, optional reranking and configuration",
+        "url": "https://github.com/zhayujie/CowAgent/blob/7e7f68e8e3a6a53cf92852f12c2cc5499c7586cd/docs/memory/index.mdx"
+      },
+      {
+        "id": "dream",
+        "label": "Pinned Deep Dream documentation",
+        "path": "docs/memory/deep-dream.mdx",
+        "symbol": "Daily-to-core consolidation, overwrite behavior, conflict precedence, dream diary and async/safety mechanisms",
+        "url": "https://github.com/zhayujie/CowAgent/blob/7e7f68e8e3a6a53cf92852f12c2cc5499c7586cd/docs/memory/deep-dream.mdx"
+      },
+      {
+        "id": "context",
+        "label": "Pinned short-term context documentation",
+        "path": "docs/memory/context.mdx",
+        "symbol": "Context trimming, summary persistence, overflow handling, session restore and clearing",
+        "url": "https://github.com/zhayujie/CowAgent/blob/7e7f68e8e3a6a53cf92852f12c2cc5499c7586cd/docs/memory/context.mdx"
+      },
+      {
+        "id": "storage",
+        "label": "Pinned memory storage source",
+        "path": "agent/memory/storage.py",
+        "symbol": "MemoryChunk data fields and SQLite/FTS5/vector-backed storage and retrieval implementation",
+        "url": "https://github.com/zhayujie/CowAgent/blob/7e7f68e8e3a6a53cf92852f12c2cc5499c7586cd/agent/memory/storage.py"
+      },
+      {
+        "id": "manager",
+        "label": "Pinned memory manager source",
+        "path": "agent/memory/manager.py",
+        "symbol": "Memory manager integration and memory operation orchestration",
+        "url": "https://github.com/zhayujie/CowAgent/blob/7e7f68e8e3a6a53cf92852f12c2cc5499c7586cd/agent/memory/manager.py"
+      },
+      {
+        "id": "service",
+        "label": "Pinned memory service source",
+        "path": "agent/memory/service.py",
+        "symbol": "Memory service operations at the reviewed revision",
+        "url": "https://github.com/zhayujie/CowAgent/blob/7e7f68e8e3a6a53cf92852f12c2cc5499c7586cd/agent/memory/service.py"
+      },
+      {
+        "id": "vector",
+        "label": "Pinned vector backend source",
+        "path": "agent/memory/vector_backend.py",
+        "symbol": "Vector backend contract, SQLite implementation, metadata filters, embeddings and similarity search",
+        "url": "https://github.com/zhayujie/CowAgent/blob/7e7f68e8e3a6a53cf92852f12c2cc5499c7586cd/agent/memory/vector_backend.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Project quality and efficiency metric domains and definitions; not a measurement",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned benchmark workload specification; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Project benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project status record; no benchmark result produced by this review",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "CowAgent is an open-source personal AI assistant and agent harness. Its memory subsystem complements the broader conversation, tools, skills, and knowledge-base features.",
+        "sources": [
+          "readme",
+          "memory"
+        ]
+      },
+      {
+        "text": "The official repository page identifies master as the default branch. Its master Atom feed reports the full current head 7e7f68e8e3a6a53cf92852f12c2cc5499c7586cd and update time 2026-11-25T09:41:50Z; the official commit page is pinned to that head.",
+        "sources": [
+          "repo",
+          "feed",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The documented long-term memory is workspace-file based: short-term conversation context is summarized into dated daily Markdown files; Deep Dream distills those files into a concise MEMORY.md and writes a dated dream diary. MEMORY.md is injected into each conversation, while historical daily material is retrieved on demand.",
+        "sources": [
+          "readme",
+          "memory",
+          "dream"
+        ]
+      },
+      {
+        "text": "The inspected storage implementation separately models searchable chunks in SQLite. A chunk carries an identifier, user ID, scope, source kind, path, start/end line, text, optional embedding, content hash, and optional metadata. Storage provides FTS5 keyword search and a vector backend; this lower-level index representation should not be conflated with the Markdown files described as durable memory.",
+        "sources": [
+          "storage",
+          "vector"
+        ]
+      },
+      {
+        "text": "The docs describe automatic writes on context trimming, a nightly summary at 23:55, and emergency summarization after model context overflow. Daily summarization and Deep Dream run asynchronously; scheduled distillation follows the completed daily flush.",
+        "sources": [
+          "memory",
+          "dream",
+          "context"
+        ]
+      },
+      {
+        "text": "The workspace is configurable (default ~/cow). The broader README says team agents have their own memory, capabilities, knowledge, and workspace. At the inspected level, this is a workspace and record-scope model; the reviewed sources do not establish a deployment-wide tenant authorization guarantee.",
+        "sources": [
+          "readme",
+          "memory",
+          "storage"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: when turn/token limits trim a conversation, the discarded portion is summarized by an LLM and appended to that date's daily memory; the summary is also injected into the retained context asynchronously. The scheduled summary is skipped when there is no changed content, and an API overflow triggers an emergency save. The agent can also use tools to read and write workspace memory.",
+        "sources": [
+          "memory",
+          "context",
+          "readme"
+        ]
+      },
+      {
+        "text": "Update/consolidation: Deep Dream reads current MEMORY.md plus the selected daily memory, asks an LLM to deduplicate, merge, prune, and extract information, then overwrites MEMORY.md and writes a narrative diary. The documented rule gives newer information precedence when it contradicts an older entry. This is whole-file distillation, not a visible per-fact revision or correction ledger.",
+        "sources": [
+          "dream"
+        ]
+      },
+      {
+        "text": "Delete: the inspected memory guides describe file browsing and memory clearing for short-term session context, but do not specify a long-term memory erasure API or a guaranteed removal procedure across daily files, MEMORY.md, dream diaries, indexes, and backups. The long-term files can be managed in the configured workspace; completeness of any manual deletion was not tested.",
+        "sources": [
+          "memory",
+          "context",
+          "readme"
+        ]
+      },
+      {
+        "text": "Retrieval: the agent can retrieve historical memory with a hybrid keyword (SQLite FTS5/BM25) and embedding-based vector search. The docs describe rank normalization and weighted fusion (default 0.7 vector / 0.3 keyword), a 30-day half-life for daily memory and no decay for core memory. Optional local reranking is off by default. The core MEMORY.md is injected directly; daily material is retrieved as needed.",
+        "sources": [
+          "memory",
+          "storage",
+          "vector"
+        ]
+      },
+      {
+        "text": "Scope isolation: the memory chunk model includes user_id and scope fields, and the README describes per-agent workspaces. These are implementation signals for separating records and files, but this review did not verify all search paths, identity propagation, workspace permissions, or cross-agent isolation under adversarial conditions.",
+        "sources": [
+          "storage",
+          "manager",
+          "readme"
+        ]
+      },
+      {
+        "text": "Provenance/evidence: indexed chunks retain source kind, file path, line range, content hash, user/scope, and optional metadata, which can locate the stored text. The inspected documentation does not describe claim-level citations, truth/confidence states, or an audit trail connecting a correction to a superseded fact. A dream diary records consolidation changes narratively, rather than as a structured mutation ledger.",
+        "sources": [
+          "storage",
+          "dream"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: bounded context trimming, chunking, hybrid search, daily decay, and optional reranking provide tunable ways to control prompt size and retrieval. The memory page exposes workspace files and dream diaries in the web console; context commands expose context statistics and clear/compact actions. The docs warn that Agent mode uses substantially more tokens than regular chat. No latency, token, cost, or storage measurements were collected for this review.",
+        "sources": [
+          "memory",
+          "context",
+          "readme",
+          "storage"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "No fixture questions or response outcomes were run; source inspection cannot establish answer accuracy or abstention quality.",
+        "sources": [
+          "memory",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "The docs describe newer information taking precedence during distillation, but no correction probes or stale-value adjudication were run.",
+        "sources": [
+          "dream",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No long-term deletion workflow was tested and no post-deletion probes were run.",
+        "sources": [
+          "memory",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "The sources describe workspaces and user/scope metadata; no paired allowed/forbidden scope probes were run.",
+        "sources": [
+          "storage",
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "No generated answers were adjudicated for support or citation coverage.",
+        "sources": [
+          "storage",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No retrieval latency samples were collected.",
+        "sources": [
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timed write-then-recall probes were run.",
+        "sources": [
+          "memory",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No provider token usage or costs were measured.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No corpus storage boundary or byte count was measured.",
+        "sources": [
+          "storage",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a selected source and documentation review at the verified master head. It inspected the README, long-term memory, Deep Dream, and short-term context guides, plus the memory storage, manager, service, and vector backend files. It did not inspect every agent tool call path, workspace permission rule, migration, or integration.",
+        "sources": [
+          "readme",
+          "memory",
+          "dream",
+          "context",
+          "storage",
+          "manager",
+          "service",
+          "vector"
+        ]
+      },
+      {
+        "text": "The durable memory flow depends on LLM summaries and consolidation. The docs describe deduplication and conflict handling but provide no adjudicated accuracy results; chained summarization may lose details, and the review did not test for omissions or invented summaries.",
+        "sources": [
+          "memory",
+          "dream",
+          "context",
+          "metrics"
+        ]
+      },
+      {
+        "text": "The inspected material does not settle long-term deletion completeness, cross-agent isolation, recovery/backup behavior, index rebuild effects, or performance under large corpora and concurrent writes. These require further implementation review and/or a controlled runtime evaluation.",
+        "sources": [
+          "storage",
+          "manager",
+          "service",
+          "vector",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No CowAgent runtime, tests, or benchmarks were run. Source inspection and documentation are not benchmark results."
+    }
+  }
+}

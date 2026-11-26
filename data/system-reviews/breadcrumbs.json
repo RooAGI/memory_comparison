@@ -1,0 +1,418 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "breadcrumbs",
+    "name": "breadcrumbs",
+    "repository": "https://github.com/The-825/breadcrumbs",
+    "branch": "main",
+    "revision": "6b50610151860ffff405eb5ad8d8e1ee863ca8dd",
+    "reviewed_at": "2026-11-25T00:15:06Z",
+    "review_timezone": "UTC (2026-11-24 16:15:06 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/README.md","checked_urls":["https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/README.md","https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/SECURITY.md","https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "Breadcrumbs is a public repository of coding-agent memory templates, hooks, scripts, and guardrails, rather than a hosted memory service. It places cues at session start, prompt lookup, file edits, and handoff, and includes two distinct file-backed examples: a TSV-indexed memory desk and a separate Python three-tier memory engine. This is source review, not runtime or benchmark evidence.",
+    "atlas_locator": {
+      "ordinal": 102,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/breadcrumbs.md",
+      "listed_repository": "https://github.com/The-825/breadcrumbs"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/README.md",
+      "https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/SECURITY.md",
+      "https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/CONTRIBUTING.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official public repository",
+        "path": "repository",
+        "symbol": "GitHub repository page",
+        "url": "https://github.com/The-825/breadcrumbs"
+      },
+      {
+        "id": "head",
+        "label": "Verified current main head",
+        "path": "commit",
+        "symbol": "full SHA 6b50610151860ffff405eb5ad8d8e1ee863ca8dd",
+        "url": "https://github.com/The-825/breadcrumbs/commit/6b50610151860ffff405eb5ad8d8e1ee863ca8dd"
+      },
+      {
+        "id": "feed",
+        "label": "Official main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "latest main entry and timestamp",
+        "url": "https://github.com/The-825/breadcrumbs/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "project type, memory pattern, self-reported limitations",
+        "url": "https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/README.md"
+      },
+      {
+        "id": "desk-readme",
+        "label": "Memory desk README",
+        "path": "templates/memory-desk/README.md",
+        "symbol": "store layout, lookup flow, installation and boundaries",
+        "url": "https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/README.md"
+      },
+      {
+        "id": "mem",
+        "label": "Memory desk CLI",
+        "path": "templates/memory-desk/mem",
+        "symbol": "lookup, capture, retirement, drift, integrity checks",
+        "url": "https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/mem"
+      },
+      {
+        "id": "session-hook",
+        "label": "Session-start hook",
+        "path": "templates/memory-desk/hooks/session-start-memory.sh",
+        "symbol": "kernel/journal/index injection behavior",
+        "url": "https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/hooks/session-start-memory.sh"
+      },
+      {
+        "id": "prompt-hook",
+        "label": "Prompt lookup hook",
+        "path": "templates/memory-desk/hooks/prompt-index-hits.sh",
+        "symbol": "prompt truncation, lookup and fail-open behavior",
+        "url": "https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/hooks/prompt-index-hits.sh"
+      },
+      {
+        "id": "gardener",
+        "label": "Gardener contract",
+        "path": "templates/memory-desk/gardener/GARDENER.md",
+        "symbol": "curation steps and human boundaries",
+        "url": "https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/gardener/GARDENER.md"
+      },
+      {
+        "id": "promote",
+        "label": "Gardener implementation",
+        "path": "templates/memory-desk/gardener/promote.py",
+        "symbol": "promotion, tombstone checks, proposals and dry-run default",
+        "url": "https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/gardener/promote.py"
+      },
+      {
+        "id": "engine",
+        "label": "Three-tier memory engine",
+        "path": "templates/ledger-tools/memory_engine.py",
+        "symbol": "working/episodic/semantic storage and engine APIs",
+        "url": "https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/ledger-tools/memory_engine.py"
+      },
+      {
+        "id": "scope",
+        "label": "Scoped context wrapper",
+        "path": "templates/ledger-tools/scoped_context.py",
+        "symbol": "trusted principal mapping and fixed scope policy",
+        "url": "https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/ledger-tools/scoped_context.py"
+      },
+      {
+        "id": "desk-doc",
+        "label": "Memory desk design guide",
+        "path": "docs/memory-desk.md",
+        "symbol": "design role and write/read separation",
+        "url": "https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/docs/memory-desk.md"
+      },
+      {
+        "id": "measure-doc",
+        "label": "Memory measurement guide",
+        "path": "docs/memory-measurement.md",
+        "symbol": "proposed reachability/lane/use/miss instruments",
+        "url": "https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/docs/memory-measurement.md"
+      },
+      {
+        "id": "orientation",
+        "label": "Orientation benchmark guide",
+        "path": "benchmarks/orientation/README.md",
+        "symbol": "synthetic benchmark design and interpretation limits",
+        "url": "https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/benchmarks/orientation/README.md"
+      },
+      {
+        "id": "outcome",
+        "label": "Outcome-evidence benchmark guide",
+        "path": "benchmarks/outcome-evidence/README.md",
+        "symbol": "synthetic outcome-evidence experiment and boundaries",
+        "url": "https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/benchmarks/outcome-evidence/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy checked for contact",
+        "path": "SECURITY.md",
+        "symbol": "private GitHub reporting route; no published email",
+        "url": "https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "comparison metric definitions; not a system result",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned synthetic operations; not a run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "shared comparison run status; not attributed as Breadcrumbs result",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated systems roster",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 102 identity, listed locator, and source attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Roster-provided Atlas attribution",
+        "path": "content/systems/breadcrumbs.md",
+        "symbol": "identity and attribution only; no assessment claims used",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/breadcrumbs.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README frames Breadcrumbs as one person's working answer and says it is not a product or framework launch. The repository contains reusable templates, hooks, scripts and CI examples; the memory desk guide describes that desk as one part of a larger memory pattern. The reviewed code does not establish a hosted service or managed operator.",
+        "sources": [
+          "readme",
+          "desk-readme",
+          "repo"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The top-level pattern places cues at existing work moments. The repository includes handoff, decisions, and settled-facts templates and hooks for session start, prompt lookup, and file edits. The examples are adopter-controlled artifacts, not one unified hosted store.",
+        "sources": [
+          "readme",
+          "desk-readme",
+          "session-hook",
+          "prompt-hook"
+        ]
+      },
+      {
+        "text": "The memory desk stores settled facts in index.tsv with key, aliases, answer, source, and checked date; raw entries append to journal.jsonl. It also uses a small kernel file, tombstones.tsv, and review-only consolidation-proposals.jsonl. The desk is local to the repository where an adopter installs it.",
+        "sources": [
+          "desk-readme",
+          "mem",
+          "gardener"
+        ]
+      },
+      {
+        "text": "A separate Python example defines working state in session_state.json, append-only events in episodes.jsonl, categorized facts in facts.json, and rejected values in tombstones.json. It assumes a caller-owned agent loop and is not the memory-desk CLI or data store.",
+        "sources": [
+          "engine"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The desk's mem add appends a timestamped capture; a later gardener pass promotes durable facts to the TSV index. The separate engine exposes set_goal, note, log_episode, and store_fact. These are code-visible write paths, not an assertion that the repository is deployed with them.",
+        "sources": [
+          "mem",
+          "promote",
+          "engine"
+        ]
+      },
+      {
+        "text": "For the desk, gardener promotion updates an exact key collision; semantic duplicates become review proposals. mem reject removes a matching active row, records a dated tombstone with a reason, and journals the correction; mem check refuses the same key/value if it returns. recheck detects changed source files but does not judge truth. Engine overwrites log a SUPERSEDED episode, and a changed value begins asserted; writing the same value preserves its status.",
+        "sources": [
+          "gardener",
+          "promote",
+          "mem",
+          "engine"
+        ]
+      },
+      {
+        "text": "Retirement is not physical erasure in the reviewed paths: desk journal entries remain append-only and tombstones retain rejected values. Engine reject_fact removes the active fact but records the value in a tombstone and REJECTED episode; lifting a tombstone also appends an event. No general physical-erasure API was found in the inspected paths.",
+        "sources": [
+          "desk-readme",
+          "mem",
+          "engine"
+        ]
+      },
+      {
+        "text": "Desk lookup checks exact keys and aliases before token-overlap ranking and returns at most three rows. Its prompt hook reads at most 400 characters and filters weak matches; the session-start hook emits the kernel, up to three recent journal lines, and row count. A desk miss prints a search-and-capture ladder. Engine build_context combines working data, eligible facts, and up to five episodes by default, with deterministic lexical, action/tag, and recency ranking; it does not match paraphrases.",
+        "sources": [
+          "mem",
+          "prompt-hook",
+          "session-hook",
+          "engine"
+        ]
+      },
+      {
+        "text": "Scope boundaries differ by component. The desk relies on repository-local installation and has no principal filter in the reviewed CLI. The engine's audience filter treats missing fact scope as internal and drops unscoped episodes when an audience is supplied; its separate wrapper maps a host-provided principal to a fixed policy and rejects unknown principals. The context output still includes the working goal and scratchpad regardless of audience, and the engine itself warns that caller-chosen audience is not an authorization boundary.",
+        "sources": [
+          "desk-readme",
+          "engine",
+          "scope"
+        ]
+      },
+      {
+        "text": "Provenance fields include desk source locators and checked dates; engine episodes carry IDs, timestamps, action, outcome and tags, and facts may link known episode IDs. Engine facts begin asserted; verification requires evidence and a distinct tool or human verifier. These fields do not authenticate the named verifier or adjudicate the evidence text.",
+        "sources": [
+          "mem",
+          "engine"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Desk lookup and engine episode-ranking code are inspectable, but answerability and abstention probes were not run.",
+        "sources": [
+          "mem",
+          "engine",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Desk tombstones and engine supersession/time filters are code-visible; no current-versus-stale probe set was run.",
+        "sources": [
+          "mem",
+          "engine",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Retirement paths retain values in journals, tombstones, or episodes; no post-retirement leakage probes were run.",
+        "sources": [
+          "mem",
+          "engine",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation leak rate",
+        "status": "unmeasured",
+        "evidence": "An optional engine audience filter and principal wrapper are present, but no deployment or cross-scope probe was run; the desk has repository-local scope.",
+        "sources": [
+          "engine",
+          "scope",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source locators, episode IDs, and verifier/evidence fields are visible; claim support was not adjudicated.",
+        "sources": [
+          "mem",
+          "engine",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "The inspected paths use local file reads and deterministic matching; no timings were collected.",
+        "sources": [
+          "mem",
+          "engine",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Desk capture and later gardener promotion are separate steps; no acknowledgment-to-recall probes were run.",
+        "sources": [
+          "mem",
+          "promote",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "Hooks filter or bound some injected text, but no provider usage or cost was measured.",
+        "sources": [
+          "prompt-hook",
+          "session-hook",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Text, TSV, JSON, and JSONL stores are visible; persistent bytes and per-item sizes were not measured.",
+        "sources": [
+          "desk-readme",
+          "engine",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a selected source review at one verified commit. The repository is a kit to adapt; deployments may differ in hook wiring, storage, permissions, and host authentication. The examples, tests, runtime integrations, and benchmarks were not executed.",
+        "sources": [
+          "head",
+          "readme",
+          "desk-readme",
+          "status"
+        ]
+      },
+      {
+        "text": "The desk relies on lexical matching and human curation. Source inspection does not establish that stored rows are reachable or useful in a given repository. The separate engine documents that atomic per-file replacement does not prevent concurrent read-modify-write races, its episodic ledger is unbounded, and it has no built-in decay or use stamps.",
+        "sources": [
+          "mem",
+          "engine",
+          "measure-doc"
+        ]
+      },
+      {
+        "text": "Engine scope enforcement assumes a trusted host principal provider. In the inspected context builder, the audience filter excludes unscoped episodes but the working goal and scratchpad remain included; callers must consider that path when placing restricted data. This is a code review observation, not a demonstrated isolation leak.",
+        "sources": [
+          "engine",
+          "scope"
+        ]
+      },
+      {
+        "text": "The README describes an experience in one office and says some usage counts were counted by hand while instrumentation was new. That project-authored account is not a measured result from this review and cannot establish general recall quality, safe deletion, correction quality, benchmark performance, or cost.",
+        "sources": [
+          "readme",
+          "orientation",
+          "outcome"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run for this review. No Breadcrumbs runtime, tests, or benchmark workload was executed. The repository contains synthetic benchmark designs; the project metric definitions and fixture specify a comparison protocol, while the execution-status record is separate and is not attributed here as a Breadcrumbs result.",
+        "sources": [
+          "orientation",
+          "outcome",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ]
+  }
+}

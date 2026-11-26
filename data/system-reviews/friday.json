@@ -1,0 +1,375 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 247,
+    "slug": "friday",
+    "name": "Friday",
+    "repository": "https://github.com/friday-memory/friday",
+    "listed_repository": "https://github.com/friday-memory/friday",
+    "branch": "main",
+    "revision": "fad2a61c38eb77058e4ecb71a558fd579e671dce",
+    "reviewed_at": "2026-11-25T20:43:27Z",
+    "review_timezone": "UTC (2026-11-25 12:43:27 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Friday is a Python memory service for coding agents. Its Compose gateway combines a JSON facts ledger, Mem0-backed episodic search, Neo4j graph extraction, and lifecycle processing; an opt-in gateway uses project-keyed SQLite/libSQL and FTS5. This review covers source behavior only; no runtime, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 247,
+      "name": "Friday",
+      "slug": "friday",
+      "listed_repository": "https://github.com/friday-memory/friday",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/friday.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": "itskie7910@gmail.com",
+      "source_url": "https://github.com/friday-memory/friday/blob/fad2a61c38eb77058e4ecb71a558fd579e671dce/SECURITY.md",
+      "checked_urls": [
+        "https://github.com/friday-memory/friday/blob/fad2a61c38eb77058e4ecb71a558fd579e671dce/SECURITY.md"
+      ],
+      "note": "The official pinned SECURITY.md publishes itskie7910@gmail.com for vulnerability reports. No commit/profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": "itskie7910@gmail.com",
+    "contact_email_source_url": "https://github.com/friday-memory/friday/blob/fad2a61c38eb77058e4ecb71a558fd579e671dce/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/friday-memory/friday/blob/fad2a61c38eb77058e4ecb71a558fd579e671dce/SECURITY.md"
+    ],
+    "contact_email_note": "Published by the official pinned SECURITY.md as the vulnerability-report contact.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Catalog identity and roster locator",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[246], ordinal 247; Friday name, slug, explicit listed repository, pinned Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/friday.md",
+        "symbol": "Pinned attribution source retained only for curated identity and locator context, not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/friday.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Listed repository resolves to friday-memory/friday; official Git remote advertises main as default branch",
+        "url": "https://github.com/friday-memory/friday"
+      },
+      {
+        "id": "head",
+        "label": "Official current main head",
+        "path": "refs/heads/main",
+        "symbol": "git ls-remote and shallow checkout agree on current full main head fad2a61c38eb77058e4ecb71a558fd579e671dce; GitHub REST API returned HTTP 403",
+        "url": "https://github.com/friday-memory/friday/commit/fad2a61c38eb77058e4ecb71a558fd579e671dce"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product description, claimed four-layer architecture, interfaces and README-reported benchmark/efficiency figures",
+        "url": "https://github.com/friday-memory/friday/blob/fad2a61c38eb77058e4ecb71a558fd579e671dce/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Pinned official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Vulnerability-reporting contact address and supported-version policy",
+        "url": "https://github.com/friday-memory/friday/blob/fad2a61c38eb77058e4ecb71a558fd579e671dce/SECURITY.md"
+      },
+      {
+        "id": "gateway",
+        "label": "Pinned Compose FastAPI gateway",
+        "path": "gateway/main.py",
+        "symbol": "Mem0 and facts configuration, API routes, writes, mutation ownership check, search, graph routes and health",
+        "url": "https://github.com/friday-memory/friday/blob/fad2a61c38eb77058e4ecb71a558fd579e671dce/gateway/main.py"
+      },
+      {
+        "id": "mcp",
+        "label": "Pinned MCP server",
+        "path": "mcp/server.py",
+        "symbol": "Tool definitions and HTTP mapping for memory, fact, context, search, graph and mutation tools",
+        "url": "https://github.com/friday-memory/friday/blob/fad2a61c38eb77058e4ecb71a558fd579e671dce/mcp/server.py"
+      },
+      {
+        "id": "autograph",
+        "label": "Pinned automatic graph extraction",
+        "path": "pipelines/auto_graph.py",
+        "symbol": "LLM extraction limits, project handling and Neo4j entity/edge upserts",
+        "url": "https://github.com/friday-memory/friday/blob/fad2a61c38eb77058e4ecb71a558fd579e671dce/pipelines/auto_graph.py"
+      },
+      {
+        "id": "facts",
+        "label": "Pinned fact decay and lifecycle",
+        "path": "layers/decay.py",
+        "symbol": "Energy decay and fact status lifecycle support",
+        "url": "https://github.com/friday-memory/friday/blob/fad2a61c38eb77058e4ecb71a558fd579e671dce/layers/decay.py"
+      },
+      {
+        "id": "records",
+        "label": "Pinned serverless record model",
+        "path": "storage/models.py",
+        "symbol": "Record envelope, record kinds, project identity, canonical serialization and IDs",
+        "url": "https://github.com/friday-memory/friday/blob/fad2a61c38eb77058e4ecb71a558fd579e671dce/storage/models.py"
+      },
+      {
+        "id": "storage",
+        "label": "Pinned SQLite/libSQL store",
+        "path": "storage/local.py",
+        "symbol": "Transactional writes, scoped listing/search, lifecycle mutations and FTS5 record operations",
+        "url": "https://github.com/friday-memory/friday/blob/fad2a61c38eb77058e4ecb71a558fd579e671dce/storage/local.py"
+      },
+      {
+        "id": "serverless",
+        "label": "Pinned opt-in serverless gateway",
+        "path": "gateway/serverless.py",
+        "symbol": "Required project scope, auth middleware, SQLite/libSQL routes and context/retrieval behavior",
+        "url": "https://github.com/friday-memory/friday/blob/fad2a61c38eb77058e4ecb71a558fd579e671dce/gateway/serverless.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Shared benchmark metric definitions; not Friday results",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Shared benchmark inputs; not Friday results",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status; not Friday results",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The repository calls Friday an open-source, self-hosted persistent memory layer and provides a Python package, MCP server, and HTTP gateway. This review treats it as a service/integration with more than one storage deployment path.",
+        "sources": [
+          "readme",
+          "mcp",
+          "gateway",
+          "serverless"
+        ]
+      },
+      {
+        "text": "The official security policy publishes itskie7910@gmail.com for vulnerability reports; this establishes a project contact route, not a maintainer identity.",
+        "sources": [
+          "security"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The Compose gateway sends episodic memories to Mem0 under a fixed user ID with source and project metadata. It stores facts separately in a JSON ledger and optionally queues entity/relationship extraction into Neo4j when configured.",
+        "sources": [
+          "readme",
+          "gateway",
+          "autograph"
+        ]
+      },
+      {
+        "text": "The repository README names ChromaDB as a layer, but the inspected Compose search route invokes Mem0 and contains no direct Chroma client call. The README's four-layer diagram is therefore not evidence of a separately verified Chroma store in this path.",
+        "sources": [
+          "readme",
+          "gateway"
+        ]
+      },
+      {
+        "text": "The opt-in serverless implementation stores records in SQLite/libSQL using a kind/project/id envelope; record kinds include facts, memories, entities, edges, blueprints, and states. FTS5 indexes memory content/source/project, and storage writes use explicit transactions.",
+        "sources": [
+          "serverless",
+          "records",
+          "storage"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Compose add_memory sends content and metadata to Mem0 and schedules best-effort graph extraction if a DeepSeek key is present. Fact writes deduplicate active exact content and support explicit or colon/equal-prefix key supersession.",
+        "sources": [
+          "gateway",
+          "autograph",
+          "facts"
+        ]
+      },
+      {
+        "text": "Compose memory update/delete call Mem0 after an ownership lookup when the client exposes get(). The ownership helper permits legacy unlabelled rows and logs then continues if the lookup raises an ordinary exception; this is not a fail-closed check under that failure condition.",
+        "sources": [
+          "gateway"
+        ]
+      },
+      {
+        "text": "Compose fact revoke marks the fact revoked and superseded, while the delete endpoint supports soft revoke or hard removal. The serverless path separately supports transactional memory update/delete/supersede and fact revoke/hard delete.",
+        "sources": [
+          "gateway",
+          "facts",
+          "serverless",
+          "storage"
+        ]
+      },
+      {
+        "text": "Compose search asks Mem0 for project-filtered results and defensively keeps matching or legacy-unscoped rows. Facts retrieval filters superseded/revoked/decayed states, may include global facts, and MCP context combines facts and recent memories.",
+        "sources": [
+          "gateway",
+          "facts",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Serverless retrieval uses SQLite FTS5 token OR matching with project and active-memory filters; context returns active project facts and up to 50 recent memories. The Compose graph blast-radius source includes no project predicate and has an apparently malformed empty toLower() expression; runtime correctness is unknown.",
+        "sources": [
+          "serverless",
+          "storage",
+          "gateway"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "answerable_retrieval_and_abstention",
+        "evidence": [
+          {
+            "text": "Mem0 semantic search and serverless FTS5 keyword search are implemented, but no answer correctness or abstention evaluation was performed.",
+            "sources": [
+              "gateway",
+              "storage"
+            ]
+          }
+        ],
+        "measurement_status": "unmeasured"
+      },
+      {
+        "domain": "correction_and_staleness",
+        "evidence": [
+          {
+            "text": "Fact supersession/revocation and serverless memory supersession exist in source; no correction sequence or stale-value rate was measured.",
+            "sources": [
+              "gateway",
+              "facts",
+              "storage"
+            ]
+          }
+        ],
+        "measurement_status": "unmeasured"
+      },
+      {
+        "domain": "deletion_leakage",
+        "evidence": [
+          {
+            "text": "Compose memory deletion and fact revoke/hard-delete routes exist; no post-delete retrieval probe or external-copy audit was run.",
+            "sources": [
+              "gateway",
+              "facts"
+            ]
+          }
+        ],
+        "measurement_status": "unmeasured"
+      },
+      {
+        "domain": "scope_isolation",
+        "evidence": [
+          {
+            "text": "Project filters are present, with legacy-unscoped allowances and an unfiltered graph path in Compose; no cross-project isolation workload was run.",
+            "sources": [
+              "gateway",
+              "facts",
+              "autograph",
+              "serverless",
+              "storage"
+            ]
+          }
+        ],
+        "measurement_status": "unmeasured"
+      },
+      {
+        "domain": "evidence_support_and_citation_coverage",
+        "evidence": [
+          {
+            "text": "Source labels and timestamps are carried, but the inspected fact and graph write paths do not establish claim truth or attach answer citations.",
+            "sources": [
+              "gateway",
+              "autograph",
+              "records"
+            ]
+          }
+        ],
+        "measurement_status": "unmeasured"
+      },
+      {
+        "domain": "retrieval_latency_and_write_to_recall_delay",
+        "evidence": [
+          {
+            "text": "The README advertises latency figures; this review collected no timings or write-to-recall measurements.",
+            "sources": [
+              "readme"
+            ]
+          }
+        ],
+        "measurement_status": "unmeasured"
+      },
+      {
+        "domain": "tokens_cost_and_storage_efficiency",
+        "evidence": [
+          {
+            "text": "No workload token, cost, or storage measurements were collected. README figures remain upstream-reported claims.",
+            "sources": [
+              "readme",
+              "metrics",
+              "fixture"
+            ]
+          }
+        ],
+        "measurement_status": "unmeasured"
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a selected inspection of the pinned README, security policy, Compose gateway, MCP tool mapping, graph extraction, fact lifecycle, serverless routes, record model, and SQLite store. It did not execute Friday, tests, or benchmarks.",
+        "sources": [
+          "readme",
+          "security",
+          "gateway",
+          "mcp",
+          "autograph",
+          "facts",
+          "serverless",
+          "records",
+          "storage"
+        ]
+      },
+      {
+        "text": "The review cannot establish live Mem0/Chroma topology, graph-query runtime correctness, dependency-outage behavior, deployment authentication, concurrent Compose JSON writes, or cleanup from backups and external replicas.",
+        "sources": [
+          "readme",
+          "gateway",
+          "serverless",
+          "storage"
+        ]
+      },
+      {
+        "text": "The repository README's benchmark and efficiency figures were not independently reproduced or tied here to a versioned adjudicated result. Code observations are not measured results.",
+        "sources": [
+          "readme",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Friday runtime, tests, or benchmark workload was run. Project metric definitions, fixture, and shared status do not constitute Friday measurements.",
+      "metric_definitions": "../METRICS.md",
+      "fixture": "../fixtures/memory-benchmark-v1.json",
+      "status_record": "../results/initial-baselines-status.json"
+    }
+  }
+}

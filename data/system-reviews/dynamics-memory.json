@@ -1,0 +1,429 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "dynamics-memory",
+    "name": "Dynamics-memory",
+    "ordinal": 204,
+    "repository": "https://github.com/1173591564/memory-manage",
+    "listed_repository": "https://github.com/1173591564/Dynamics-memory",
+    "branch": "mvp-2",
+    "revision": "a779a92d32b888eae4c5141d1bb416472cf093a7",
+    "reviewed_at": "2026-11-25T11:51:42Z",
+    "review_timezone": "UTC (2026-11-25 03:51:42 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "The catalogued Dynamics-memory repository locator now redirects to 1173591564/memory-manage. At its verified default-branch head, the repository README identifies tasklog as the current runnable project and references Dynamics-memory as prior research. This review describes the current pinned tasklog code and documents the identity shift; it does not attribute uninspected historical Dynamics-memory internals to that code.",
+    "atlas_locator": {
+      "ordinal": 204,
+      "name": "Dynamics-memory",
+      "slug": "dynamics-memory",
+      "listed_repository": "https://github.com/1173591564/Dynamics-memory",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dynamics-memory.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": null,
+      "checked_urls": [
+        "https://github.com/1173591564/memory-manage/blob/a779a92d32b888eae4c5141d1bb416472cf093a7/README.md",
+        "https://github.com/1173591564/memory-manage/blob/a779a92d32b888eae4c5141d1bb416472cf093a7/tasklog/README.md",
+        "https://github.com/1173591564/memory-manage/blob/a779a92d32b888eae4c5141d1bb416472cf093a7/SECURITY.md"
+      ],
+      "note": "The two official READMEs contain no published email; SECURITY.md is absent at the reviewed revision."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/1173591564/memory-manage/blob/a779a92d32b888eae4c5141d1bb416472cf093a7/README.md",
+      "https://github.com/1173591564/memory-manage/blob/a779a92d32b888eae4c5141d1bb416472cf093a7/tasklog/README.md",
+      "https://github.com/1173591564/memory-manage/blob/a779a92d32b888eae4c5141d1bb416472cf093a7/SECURITY.md"
+    ],
+    "contact_email_note": "Checked only official repository documentation at the reviewed revision. No email is published in either README, and SECURITY.md is absent; no commit/profile metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[203], ordinal 204: Dynamics-memory, slug dynamics-memory, explicit listed locator",
+        "url": "../memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/dynamics-memory.md",
+        "symbol": "Pinned roster entry retained only for curated identity and locator attribution; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dynamics-memory.md"
+      },
+      {
+        "id": "listed_repo",
+        "label": "Catalog-listed GitHub repository redirect",
+        "path": "repository page",
+        "symbol": "Listed URL redirected to canonical 1173591564/memory-manage",
+        "url": "https://github.com/1173591564/Dynamics-memory"
+      },
+      {
+        "id": "repo_api",
+        "label": "Official GitHub repository metadata",
+        "path": "GitHub REST repository endpoint",
+        "symbol": "Canonical public non-fork repository; default branch mvp-2",
+        "url": "https://api.github.com/repos/1173591564/memory-manage"
+      },
+      {
+        "id": "head",
+        "label": "Official default-branch head",
+        "path": "GitHub REST commits endpoint",
+        "symbol": "mvp-2 head a779a92d32b888eae4c5141d1bb416472cf093a7; commit timestamp 2026-10-14T10:45:53Z",
+        "url": "https://api.github.com/repos/1173591564/memory-manage/commits/mvp-2"
+      },
+      {
+        "id": "head_commit",
+        "label": "Full-SHA commit page",
+        "path": "commit a779a92d32b888eae4c5141d1bb416472cf093a7",
+        "symbol": "Official canonical repository commit page for the reviewed revision",
+        "url": "https://github.com/1173591564/memory-manage/commit/a779a92d32b888eae4c5141d1bb416472cf093a7"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official repository README",
+        "path": "README.md",
+        "symbol": "At reviewed revision identifies tasklog/ as current runnable project and links to Dynamics-memory source research",
+        "url": "https://github.com/1173591564/memory-manage/blob/a779a92d32b888eae4c5141d1bb416472cf093a7/README.md"
+      },
+      {
+        "id": "tasklog_readme",
+        "label": "Pinned official tasklog README",
+        "path": "tasklog/README.md",
+        "symbol": "Documents event-log model, MCP tools, adapters, scope, and stated limits",
+        "url": "https://github.com/1173591564/memory-manage/blob/a779a92d32b888eae4c5141d1bb416472cf093a7/tasklog/README.md"
+      },
+      {
+        "id": "schema",
+        "label": "Pinned SQLite schema",
+        "path": "tasklog/src/db/schema.ts",
+        "symbol": "Schema version 3; tasks, events, edges, symbols, FTS and provenance source fields",
+        "url": "https://github.com/1173591564/memory-manage/blob/a779a92d32b888eae4c5141d1bb416472cf093a7/tasklog/src/db/schema.ts"
+      },
+      {
+        "id": "types",
+        "label": "Pinned core types",
+        "path": "tasklog/src/types.ts",
+        "symbol": "Event, source identity, task and locator contracts",
+        "url": "https://github.com/1173591564/memory-manage/blob/a779a92d32b888eae4c5141d1bb416472cf093a7/tasklog/src/types.ts"
+      },
+      {
+        "id": "ingest",
+        "label": "Pinned event ingestion",
+        "path": "tasklog/src/ingest/events.ts",
+        "symbol": "Append event insertion, idempotence, large-result blob storage and range reads",
+        "url": "https://github.com/1173591564/memory-manage/blob/a779a92d32b888eae4c5141d1bb416472cf093a7/tasklog/src/ingest/events.ts"
+      },
+      {
+        "id": "symbols",
+        "label": "Pinned symbol indexer",
+        "path": "tasklog/src/ingest/symbols.ts",
+        "symbol": "Regex-based symbol extraction and per-kind quotas",
+        "url": "https://github.com/1173591564/memory-manage/blob/a779a92d32b888eae4c5141d1bb416472cf093a7/tasklog/src/ingest/symbols.ts"
+      },
+      {
+        "id": "query",
+        "label": "Pinned query implementation",
+        "path": "tasklog/src/query/index.ts",
+        "symbol": "Task listing, history search, symbol history, resume, event paging, and health query functions",
+        "url": "https://github.com/1173591564/memory-manage/blob/a779a92d32b888eae4c5141d1bb416472cf093a7/tasklog/src/query/index.ts"
+      },
+      {
+        "id": "vector",
+        "label": "Pinned optional vector search",
+        "path": "tasklog/src/query/vector.ts",
+        "symbol": "Optional embedding provider and hybrid search implementation",
+        "url": "https://github.com/1173591564/memory-manage/blob/a779a92d32b888eae4c5141d1bb416472cf093a7/tasklog/src/query/vector.ts"
+      },
+      {
+        "id": "mcp",
+        "label": "Pinned MCP server",
+        "path": "tasklog/src/mcp/server.ts",
+        "symbol": "Read/query tool surface and repo/database environment configuration",
+        "url": "https://github.com/1173591564/memory-manage/blob/a779a92d32b888eae4c5141d1bb416472cf093a7/tasklog/src/mcp/server.ts"
+      },
+      {
+        "id": "db",
+        "label": "Pinned SQLite initialization",
+        "path": "tasklog/src/db/open.ts",
+        "symbol": "Per-project default database path, WAL mode and schema migration",
+        "url": "https://github.com/1173591564/memory-manage/blob/a779a92d32b888eae4c5141d1bb416472cf093a7/tasklog/src/db/open.ts"
+      },
+      {
+        "id": "security",
+        "label": "Pinned repository security policy contact check",
+        "path": "SECURITY.md",
+        "symbol": "File not found at reviewed head; no contact details available",
+        "url": "https://github.com/1173591564/memory-manage/blob/a779a92d32b888eae4c5141d1bb416472cf093a7/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Benchmark domains; not evaluated",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Fixture specification only; not run",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Project benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "No measurement claimed for this source review",
+        "url": "../../results/initial-baselines-status.json"
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The catalogued URL redirects to the canonical repository 1173591564/memory-manage. GitHub repository metadata identifies mvp-2 as the default branch, whose README calls tasklog the current runnable project and lists Dynamics-memory in prior research notes. The current default-branch review therefore describes tasklog and does not claim the old Dynamics-memory implementation is still the active system.",
+        "sources": [
+          "catalog",
+          "listed_repo",
+          "repo_api",
+          "head",
+          "head_commit",
+          "readme"
+        ]
+      },
+      {
+        "text": "Tasklog is a local-first event-history memory layer for coding agents. Its SQLite schema stores events as the fine-grained records, tasks as inferred or user-correctable groupings, task edges for parent/continue/supersede relationships, extracted symbols, full-text indexes, and optional raw-source identity fields. The types explicitly define no Memory or Summary object.",
+        "sources": [
+          "tasklog_readme",
+          "schema",
+          "types"
+        ]
+      },
+      {
+        "text": "The default database is .tasklog/log.db under a configured project root; large event outputs are stored separately as hash-addressed blobs. The schema records session/sequence/time, role, event kind, tool call/result linkage, outcome, task assignment, and source/source_id/source_ref.",
+        "sources": [
+          "db",
+          "schema",
+          "types",
+          "ingest"
+        ]
+      },
+      {
+        "text": "The MCP server exposes tasklog queries and describes when to consult history versus current code; the system is designed for project coding history rather than general cross-project knowledge memory.",
+        "sources": [
+          "mcp",
+          "tasklog_readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: the event ingestion path inserts captured events, extracts code symbols mechanically, updates the full-text index, and writes oversized outputs to blob files while retaining a locator and short mechanical preview. The README characterizes the write path as zero LLM calls.",
+        "sources": [
+          "ingest",
+          "symbols",
+          "tasklog_readme",
+          "schema"
+        ]
+      },
+      {
+        "text": "Update and task organization: imported source records use source plus source_id as an idempotence key; task segmentation and supersedes relationships organize events without replacing the event log. The reviewed MCP tools are read-oriented and do not expose a memory edit or delete operation. No end-to-end ingestion or mutation sequence was run.",
+        "sources": [
+          "schema",
+          "types",
+          "query",
+          "mcp",
+          "tasklog_readme"
+        ]
+      },
+      {
+        "text": "Delete: no deletion or erasure API was found in the reviewed query/MCP surface. This bounded source inspection does not establish what maintenance or direct database operations may exist elsewhere in the repository, nor does it establish physical erasure of blobs or backups.",
+        "sources": [
+          "mcp",
+          "query",
+          "ingest"
+        ]
+      },
+      {
+        "text": "Retrieval: list_tasks provides a task directory; search_history searches event history and may filter by task/symbol; symbol_history performs indexed lookup; resume_task returns a task-oriented state reconstruction; read_events pages original records; read_blob retrieves large outputs. Results carry event/task/session/sequence locators for follow-up reads.",
+        "sources": [
+          "tasklog_readme",
+          "query",
+          "mcp",
+          "ingest",
+          "types"
+        ]
+      },
+      {
+        "text": "Scope isolation: the default SQLite database is stored under the project root, with TASKLOG_REPO and TASKLOG_DB allowing callers to configure the root and database path. This gives a filesystem-level per-project layout, but the reviewed stdio MCP server has no caller authentication or tenant authorization layer; isolation depends on deployment and filesystem boundaries.",
+        "sources": [
+          "db",
+          "mcp",
+          "tasklog_readme"
+        ]
+      },
+      {
+        "text": "Provenance and evidence: imported events can retain host name, stable source ID and raw source metadata separately from inferred sequence, role mapping or outcome. Event and blob locators allow evidence to be reopened. Task boundaries record their source/evidence and can be revised; source metadata does not itself validate the truth of event content.",
+        "sources": [
+          "types",
+          "schema",
+          "ingest",
+          "tasklog_readme"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: exact symbol indexes, SQLite FTS5/trigram search, indexed task/event fields, paging, bounded event previews, blob retrieval and optional vector search reduce the need to load whole histories. The CLI/MCP surface includes index health telemetry; the repository describes local metrics and adapters, but no runtime latency, token, cost or storage result was collected.",
+        "sources": [
+          "schema",
+          "symbols",
+          "query",
+          "vector",
+          "mcp",
+          "tasklog_readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "History search and task resume are implemented; no adjudicated retrieval workload was run.",
+        "sources": [
+          "tasklog_readme",
+          "query",
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Task relationships and superseded markers are code-visible; no correction workload was run.",
+        "sources": [
+          "query",
+          "schema",
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No deletion workload or erasure verification was run; reviewed MCP surface is read-oriented.",
+        "sources": [
+          "mcp",
+          "ingest",
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Scope isolation leak rate",
+        "status": "unmeasured",
+        "evidence": "Per-project database path configuration is visible; no cross-project isolation workload was run.",
+        "sources": [
+          "db",
+          "mcp",
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Events preserve locators and optional imported-source identity; no evidence support adjudication was run.",
+        "sources": [
+          "types",
+          "ingest",
+          "tasklog_readme",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No latency workload or configured telemetry results were collected.",
+        "sources": [
+          "query",
+          "mcp",
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Ingest and indexing paths are documented; no time-to-retrieval workload was run.",
+        "sources": [
+          "ingest",
+          "query",
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "The system states write-side zero LLM calls and optional embeddings; no token or cost accounting was collected.",
+        "sources": [
+          "tasklog_readme",
+          "vector",
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "SQLite and external blob storage are visible; no storage footprint workload was measured.",
+        "sources": [
+          "schema",
+          "ingest",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The repository locator now resolves to memory-manage, where the default branch describes tasklog as the current project and treats Dynamics-memory as prior research. The review records that transition and assesses current tasklog code; continuity between the catalog label and the current project beyond the redirect and repository documentation is not independently established.",
+        "sources": [
+          "catalog",
+          "listed_repo",
+          "repo_api",
+          "head",
+          "head_commit",
+          "readme"
+        ]
+      },
+      {
+        "text": "This bounded inspection covered the root and tasklog READMEs, database schema/opening, core types, ingestion, symbol extraction, queries, optional vector search, and MCP surface. It did not audit every adapter, task-boundary implementation, evaluation path, deployment, or external host integration.",
+        "sources": [
+          "readme",
+          "tasklog_readme",
+          "schema",
+          "ingest",
+          "query",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Source inspection cannot establish retrieval effectiveness, abstention quality, correction/staleness rates, deletion leakage, deployment isolation, observed latency, token/cost consumption, or storage efficiency. No system runtime, tests, or benchmarks were run.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "result",
+          "query",
+          "mcp"
+        ]
+      }
+    ],
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "No runtime, tests, or benchmark workload was executed for this source review."
+    }
+  }
+}

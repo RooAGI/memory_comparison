@@ -1,0 +1,285 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "always-on-memory-agent",
+    "name": "Always-On Memory Agent",
+    "repository": "https://github.com/GoogleCloudPlatform/generative-ai",
+    "branch": "main",
+    "revision": "d86c5cbb6d2401960509e1a15827afb1bb9a438a",
+    "reviewed_at": "2026-11-24T20:31:43Z",
+    "review_timezone": "UTC (2026-11-24 12:31:43 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/GoogleCloudPlatform/generative-ai/blob/d86c5cbb6d2401960509e1a15827afb1bb9a438a/gemini/agents/always-on-memory-agent/README.md","checked_urls":["https://github.com/GoogleCloudPlatform/generative-ai/blob/d86c5cbb6d2401960509e1a15827afb1bb9a438a/gemini/agents/always-on-memory-agent/README.md","https://github.com/GoogleCloudPlatform/generative-ai/blob/d86c5cbb6d2401960509e1a15827afb1bb9a438a/SECURITY.md","https://github.com/GoogleCloudPlatform/generative-ai/blob/d86c5cbb6d2401960509e1a15827afb1bb9a438a/SUPPORT.md"],"note":"No published contact email was found in the official component README or the checked parent security/support paths."},
+    "summary": "A Google ADK sample that uses a local SQLite store, background file ingestion and consolidation, and an aiohttp query API. This bounded source review does not measure runtime behavior.",
+    "atlas_locator": {
+      "ordinal": 52,
+      "name": "Always-On Memory Agent",
+      "slug": "always-on-memory-agent",
+      "listed_repository": "https://github.com/GoogleCloudPlatform/generative-ai/tree/main/gemini/agents/always-on-memory-agent",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/always-on-memory-agent.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/GoogleCloudPlatform/generative-ai/blob/d86c5cbb6d2401960509e1a15827afb1bb9a438a/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/GoogleCloudPlatform/generative-ai/blob/d86c5cbb6d2401960509e1a15827afb1bb9a438a/gemini/agents/always-on-memory-agent/README.md",
+      "https://github.com/GoogleCloudPlatform/generative-ai/blob/d86c5cbb6d2401960509e1a15827afb1bb9a438a/README.md",
+      "https://github.com/GoogleCloudPlatform/generative-ai/blob/d86c5cbb6d2401960509e1a15827afb1bb9a438a/SECURITY.md"
+    ],
+    "contact_email_note": "No published email was found in the checked official project README, parent repository README, or parent SECURITY.md. The README directs general help to GitHub issues and SECURITY.md directs security reports to g.co/vulnz.",
+    "sources": [
+      {
+        "id": "repository",
+        "label": "Official repository page",
+        "path": "repository",
+        "symbol": "canonical GoogleCloudPlatform/generative-ai; GitHub page displays main as default branch",
+        "url": "https://github.com/GoogleCloudPlatform/generative-ai"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed full commit",
+        "path": "commit",
+        "symbol": "d86c5cbb6d2401960509e1a15827afb1bb9a438a",
+        "url": "https://github.com/GoogleCloudPlatform/generative-ai/commit/d86c5cbb6d2401960509e1a15827afb1bb9a438a"
+      },
+      {
+        "id": "readme",
+        "label": "Always-On Memory Agent README",
+        "path": "gemini/agents/always-on-memory-agent/README.md",
+        "symbol": "project description, architecture, inputs, API and stated limits",
+        "url": "https://github.com/GoogleCloudPlatform/generative-ai/blob/d86c5cbb6d2401960509e1a15827afb1bb9a438a/gemini/agents/always-on-memory-agent/README.md"
+      },
+      {
+        "id": "agent",
+        "label": "Agent, storage, orchestration and API implementation",
+        "path": "gemini/agents/always-on-memory-agent/agent.py",
+        "symbol": "SQLite schema; ADK agents; file watcher; consolidation; query/delete routes",
+        "url": "https://github.com/GoogleCloudPlatform/generative-ai/blob/d86c5cbb6d2401960509e1a15827afb1bb9a438a/gemini/agents/always-on-memory-agent/agent.py"
+      },
+      {
+        "id": "dashboard",
+        "label": "Streamlit dashboard",
+        "path": "gemini/agents/always-on-memory-agent/dashboard.py",
+        "symbol": "API client and UI timing",
+        "url": "https://github.com/GoogleCloudPlatform/generative-ai/blob/d86c5cbb6d2401960509e1a15827afb1bb9a438a/gemini/agents/always-on-memory-agent/dashboard.py"
+      },
+      {
+        "id": "root_readme",
+        "label": "Parent repository README",
+        "path": "README.md",
+        "symbol": "repository purpose, help route and sample disclaimer",
+        "url": "https://github.com/GoogleCloudPlatform/generative-ai/blob/d86c5cbb6d2401960509e1a15827afb1bb9a438a/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Parent repository SECURITY.md",
+        "path": "SECURITY.md",
+        "symbol": "security report route; no published email",
+        "url": "https://github.com/GoogleCloudPlatform/generative-ai/blob/d86c5cbb6d2401960509e1a15827afb1bb9a438a/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "benchmark domains; no workload run for this review",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Project execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "shared execution status; no system result claimed",
+        "url": "../../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "evaluation workload; not run",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated system roster",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 52 identity, slug, repository locator and attribution",
+        "url": "../memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas attribution source",
+        "path": "content/systems/always-on-memory-agent.md",
+        "symbol": "identity and locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/always-on-memory-agent.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository describes the folder as a Google ADK and Gemini always-on memory sample. The parent repository says its code samples are demonstrative and not an officially supported Google product. The checked project README does not identify an individual maintainer.",
+        "sources": [
+          "readme",
+          "root_readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "agent.py builds an ADK orchestrator with ingest, consolidation, and query specialist agents; a local SQLite database; an inbox poller; a periodic consolidation task; and an aiohttp API. dashboard.py is a separate Streamlit client.",
+        "sources": [
+          "agent",
+          "dashboard",
+          "readme"
+        ]
+      },
+      {
+        "text": "SQLite memories contain source, raw text, summary, JSON entities/topics/connections, importance, creation time, and a consolidated flag. Consolidations hold source IDs, summary, insight, and timestamp; processed_files tracks paths and processing times. The schema has no tenant or user key.",
+        "sources": [
+          "agent"
+        ]
+      },
+      {
+        "text": "IngestAgent asks Gemini to structure input; ConsolidateAgent proposes cross-record connections and insights; QueryAgent reads recent records and is prompted to cite numeric memory IDs. No vector store or embedding code appears in the inspected implementation.",
+        "sources": [
+          "agent",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Text can be posted to /ingest or found by the inbox poller; supported media is sent as multimodal bytes. Watched text is truncated to 10,000 characters and media above 20 MiB is skipped. Each accepted write inserts a new memory; no general update or deduplication path was found.",
+        "sources": [
+          "agent",
+          "readme"
+        ]
+      },
+      {
+        "text": "The consolidation timer defaults to 30 minutes and invokes the model when at least two rows are unconsolidated. The agent reads at most ten newest rows, writes a new consolidation, appends model-supplied links, and marks supplied IDs consolidated.",
+        "sources": [
+          "agent"
+        ]
+      },
+      {
+        "text": "Query reads at most 50 newest memories and ten newest consolidations; the inspected reader does not rank rows against the question. QueryAgent is asked to synthesize only from those results and cite memory IDs, but citation support and abstention were not evaluated.",
+        "sources": [
+          "agent"
+        ]
+      },
+      {
+        "text": "The API deletes one row by ID or clears memories, consolidations, processed-file markers, and non-hidden files under the inbox. These paths show no tombstone or mutation history; deletion completeness beyond these stores was not established.",
+        "sources": [
+          "agent"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "The source provides a recent-record context window, but no answerable or unsupported query workload was run.",
+        "sources": [
+          "agent",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and staleness",
+        "status": "unmeasured",
+        "evidence": "A general memory update path was not found in the inspected file; no correction or stale-value probes were run.",
+        "sources": [
+          "agent",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Single-row and full-reset deletion code is visible, but no leakage checks were run across copies, logs, or backups.",
+        "sources": [
+          "agent",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "The inspected schema has no tenant/user key and HTTP routes show no auth layer; no runtime boundary probes or deployment review were run.",
+        "sources": [
+          "agent",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "The query prompt requests memory-ID citations, but no claim-to-record support adjudication was done.",
+        "sources": [
+          "agent",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The dashboard displays elapsed action time; no workload latency distribution or write-to-recall delay was measured.",
+        "sources": [
+          "dashboard",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No vector index is used in inspected code, but no token, provider cost, or storage measurements were collected.",
+        "sources": [
+          "agent",
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code and documentation",
+        "evidence": "Source exposes polling interval, bounded text/media sizes, read/consolidation limits, count statistics, logs, and dashboard request timing. These are design observations, not performance results.",
+        "sources": [
+          "agent",
+          "dashboard",
+          "readme"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This was a bounded source review of the project README, agent.py, and dashboard.py at the pinned monorepo commit. ADK internals, deployment controls, service-side retention, concurrent load, backups, and other configurations were not inspected. The app, tests, and benchmarks were not run.",
+        "sources": [
+          "readme",
+          "agent",
+          "dashboard"
+        ]
+      },
+      {
+        "text": "Answer quality, supported evidence, abstention, effective isolation in deployment, deletion completeness, throughput, latency, provider cost, and storage use remain unknown from this inspection.",
+        "sources": [
+          "agent",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "metrics_document": "../../METRICS.md",
+      "result_record": "../../results/initial-baselines-status.json",
+      "fixture": "../../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

@@ -1,0 +1,350 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 80,
+    "slug": "auto-company",
+    "name": "Auto Company",
+    "repository": "https://github.com/MaxMiksa/Autonomous-Company",
+    "listed_repository": "https://github.com/MaxMiksa/Auto-Company",
+    "branch": "main",
+    "revision": "211baad12b08d25c75b10ade86ed301098be69b2",
+    "reviewed_at": "2026-11-24T22:06:17Z",
+    "review_timezone": "UTC (2026-11-24 14:06:17 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Auto Company is a self-hosted continuous-work framework for coding assistants. Each fresh CLI cycle receives a shared Markdown consensus file, performs work under project prompts and rules, and rewrites that file as the handoff for the next cycle. This is a pinned source review, not a runtime or benchmark evaluation.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/auto-company.md"
+    },
+    "contact": {
+      "email": [
+        "kongzheyuan@outlook.com",
+        "zheyuank@tepper.cmu.edu"
+      ],
+      "source_url": "https://github.com/MaxMiksa/Autonomous-Company/blob/211baad12b08d25c75b10ade86ed301098be69b2/README.md",
+      "note": "Both addresses are published in the official pinned README contribution/contact section."
+    },
+    "contact_email": [
+      "kongzheyuan@outlook.com",
+      "zheyuank@tepper.cmu.edu"
+    ],
+    "contact_checked_sources": [
+      "https://github.com/MaxMiksa/Autonomous-Company/blob/211baad12b08d25c75b10ade86ed301098be69b2/README.md"
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[79], position 80; name, slug, listed repository and Atlas source attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas attribution only",
+        "path": "content/systems/auto-company.md",
+        "symbol": "Roster source URL pinned at Atlas revision 19199a4fc249e89c0793be06f0b166b358089ba0",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/auto-company.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official canonical GitHub repository",
+        "path": "",
+        "symbol": "Canonical redirect target MaxMiksa/Autonomous-Company; default branch main",
+        "url": "https://github.com/MaxMiksa/Autonomous-Company"
+      },
+      {
+        "id": "head-feed",
+        "label": "Official main branch commit feed",
+        "path": "",
+        "symbol": "Full current main head 211baad12b08d25c75b10ade86ed301098be69b2",
+        "url": "https://github.com/MaxMiksa/Autonomous-Company/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream head",
+        "path": "",
+        "symbol": "Full reviewed commit SHA 211baad12b08d25c75b10ade86ed301098be69b2",
+        "url": "https://github.com/MaxMiksa/Autonomous-Company/commit/211baad12b08d25c75b10ade86ed301098be69b2"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned README",
+        "path": "README.md",
+        "symbol": "Rename, product description, memory cycle, platforms, operating limits, owner/contact",
+        "url": "https://github.com/MaxMiksa/Autonomous-Company/blob/211baad12b08d25c75b10ade86ed301098be69b2/README.md"
+      },
+      {
+        "id": "loop",
+        "label": "Cycle loop",
+        "path": "scripts/core/auto-loop.sh",
+        "symbol": "Consensus loading, cycle execution/closing, usage accounting, logging and pauses",
+        "url": "https://github.com/MaxMiksa/Autonomous-Company/blob/211baad12b08d25c75b10ade86ed301098be69b2/scripts/core/auto-loop.sh"
+      },
+      {
+        "id": "guard",
+        "label": "Consensus governance guard",
+        "path": "scripts/core/consensus-guard.sh",
+        "symbol": "Initialization, preflight, baseline, verification/recovery, reset and snapshots",
+        "url": "https://github.com/MaxMiksa/Autonomous-Company/blob/211baad12b08d25c75b10ade86ed301098be69b2/scripts/core/consensus-guard.sh"
+      },
+      {
+        "id": "format",
+        "label": "Consensus format validator",
+        "path": "scripts/core/consensus-format.py",
+        "symbol": "Canonical governance headings, P1 grammar, preserved sections and reset archives",
+        "url": "https://github.com/MaxMiksa/Autonomous-Company/blob/211baad12b08d25c75b10ade86ed301098be69b2/scripts/core/consensus-format.py"
+      },
+      {
+        "id": "template",
+        "label": "Consensus template",
+        "path": "memories/consensus.template.md",
+        "symbol": "Shared baton headings and human-governed sections",
+        "url": "https://github.com/MaxMiksa/Autonomous-Company/blob/211baad12b08d25c75b10ade86ed301098be69b2/memories/consensus.template.md"
+      },
+      {
+        "id": "prompt",
+        "label": "Cycle prompt",
+        "path": "PROMPT.md",
+        "symbol": "Read/decide/execute/update lifecycle and governance instructions",
+        "url": "https://github.com/MaxMiksa/Autonomous-Company/blob/211baad12b08d25c75b10ade86ed301098be69b2/PROMPT.md"
+      },
+      {
+        "id": "charter",
+        "label": "Project charter",
+        "path": "CLAUDE.md",
+        "symbol": "Team structure and behavioral guardrails; not enforced isolation",
+        "url": "https://github.com/MaxMiksa/Autonomous-Company/blob/211baad12b08d25c75b10ade86ed301098be69b2/CLAUDE.md"
+      },
+      {
+        "id": "adapters",
+        "label": "Engine adapter documentation",
+        "path": "ENGINE_ADAPTERS.md",
+        "symbol": "Supported engines and adapter configuration",
+        "url": "https://github.com/MaxMiksa/Autonomous-Company/blob/211baad12b08d25c75b10ade86ed301098be69b2/ENGINE_ADAPTERS.md"
+      },
+      {
+        "id": "usage",
+        "label": "Usage accounting",
+        "path": "scripts/core/usage.py",
+        "symbol": "Structured usage and budget accounting implementation",
+        "url": "https://github.com/MaxMiksa/Autonomous-Company/blob/211baad12b08d25c75b10ade86ed301098be69b2/scripts/core/usage.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Proposed recall, correction, deletion, scope, evidence, latency, token, cost and storage metrics",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned planned workload cases, not results",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Initial benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project benchmark execution status; not an Auto Company result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The canonical repository is maintained under GitHub account MaxMiksa; the README identifies Zheyuan (Max) Kong and describes Autonomous Company as a self-hosted AI company framework. It runs independent CLI cycles with Claude Code by default and supports Codex CLI plus explicitly configured optional adapters.",
+        "sources": [
+          "repo",
+          "readme",
+          "adapters"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The shared memory baton is a Markdown file at memories/consensus.md initialized from the tracked consensus.template.md. Each fresh engine cycle receives PROMPT.md and the current baton, and the prompt asks the model to rewrite the baton as its handoff. This is direct whole-file context, not a semantic index.",
+        "sources": [
+          "readme",
+          "loop",
+          "prompt",
+          "template"
+        ]
+      },
+      {
+        "text": "The template carries cycle state, actions, decisions, projects, next action, company state, human overrides, priority issues and open questions. The format validator requires exactly one canonical Human Overrides section and Priority Issues section; the guard and loop also track a pre-cycle backup, pending marker, state/pause files, snapshots, logs and usage data.",
+        "sources": [
+          "template",
+          "format",
+          "guard",
+          "loop"
+        ]
+      },
+      {
+        "text": "The broader repository maintains separate product identities and project workspaces, while the consensus remains a shared baton for the framework checkout. Product catalog isolation does not imply per-user or per-agent controls over memory claims.",
+        "sources": [
+          "readme",
+          "prompt",
+          "format"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Before a cycle, the guard initializes the consensus from its template only when existing recovery state does not signal an unexpected missing file, validates governance headings, and blocks engine invocation when an unresolved P1 exists.",
+        "sources": [
+          "guard",
+          "format",
+          "prompt"
+        ]
+      },
+      {
+        "text": "The prompt instructs each cycle to update the whole consensus. Guard verification compares Human Overrides with the saved baseline byte-for-byte and checks that prior Priority Issues are preserved; rejected changes restore the pre-cycle file and pause the loop. Successful cycle snapshots and recovery files retain prior versions.",
+        "sources": [
+          "prompt",
+          "guard",
+          "format",
+          "loop"
+        ]
+      },
+      {
+        "text": "The next cycle receives the current consensus directly through prompt loading; the reviewed memory path does not query, rank, or automatically retrieve past snapshots. Historical inspection is a separate operator/recovery action.",
+        "sources": [
+          "readme",
+          "loop",
+          "prompt",
+          "guard"
+        ]
+      },
+      {
+        "text": "The reviewed consensus flow has no per-claim delete operation. Reset archives the existing document, restores the template structure and carries forward the human-governed sections; that is a recoverable reset rather than verified secure erasure.",
+        "sources": [
+          "guard",
+          "format"
+        ]
+      },
+      {
+        "text": "Consensus is shared by cycles in one framework checkout. The schema has no tenant, user, or agent access field. Engine permission configuration and the local workspace are deployment boundaries; the charter and prompts are behavioral instructions rather than a demonstrated authorization mechanism.",
+        "sources": [
+          "readme",
+          "format",
+          "prompt",
+          "charter"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "The complete baton is loaded into the next prompt. No answerability or abstention workload was run.",
+        "sources": [
+          "loop",
+          "prompt"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and staleness",
+        "status": "unmeasured",
+        "evidence": "Whole-file updates and governance checks are source-visible, but no claim history or correction probes were measured.",
+        "sources": [
+          "guard",
+          "format"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Reset retains a recoverable archive; no post-reset probing or backup/log copy audit was run.",
+        "sources": [
+          "guard",
+          "format"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "A single shared baton is used within the checkout; no cross-user or cross-project isolation probes were run.",
+        "sources": [
+          "readme",
+          "format"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Consensus content is prose without claim-level citation fields. No citation support adjudication was run.",
+        "sources": [
+          "template",
+          "prompt"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Loop timing, cycle logs and pauses are visible in source. No timings were collected.",
+        "sources": [
+          "loop"
+        ]
+      },
+      {
+        "domain": "Tokens, cost and persistent storage",
+        "status": "unmeasured",
+        "evidence": "The loop records usage and supports budget thresholds, but no memory-attributed tokens, charges or storage bytes were measured.",
+        "sources": [
+          "loop",
+          "usage"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded read-only inspection of selected documentation and source at the reviewed SHA. It does not establish task quality, correctness of generated consensus, runtime reliability, adapter usage completeness, isolation under concurrent work, or deletion completeness across external copies.",
+        "sources": [
+          "readme",
+          "loop",
+          "adapters",
+          "guard"
+        ]
+      },
+      {
+        "text": "The README describes the project as experimental and says continuous operation depends on external engine services and available model quota. Prompt and charter rules are not a security boundary.",
+        "sources": [
+          "readme",
+          "charter",
+          "adapters"
+        ]
+      },
+      {
+        "text": "The consensus file has no built-in semantic query, claim provenance, or per-user memory model. Benchmark outcomes are unknown because the system and benchmark were not run.",
+        "sources": [
+          "template",
+          "prompt",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. This review did not execute Auto Company, a benchmark workload, or tests.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Project metric definitions and the versioned fixture describe proposed measurement procedures, not measured results for Auto Company.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,346 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "basemode",
+    "name": "basemode",
+    "repository": "https://github.com/ChristopherKahler/base",
+    "branch": "main",
+    "revision": "a37b9a8f88fb5676ff9ed3ddd9f124d4cd6aa8ae",
+    "reviewed_at": "2026-11-24T23:21:21Z",
+    "review_timezone": "UTC (checked 2026-11-24 15:21:21 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/ChristopherKahler/base/blob/a37b9a8f88fb5676ff9ed3ddd9f124d4cd6aa8ae/README.md","checked_urls":["https://github.com/ChristopherKahler/base/blob/a37b9a8f88fb5676ff9ed3ddd9f124d4cd6aa8ae/README.md","https://github.com/ChristopherKahler/base/blob/a37b9a8f88fb5676ff9ed3ddd9f124d4cd6aa8ae/SECURITY.md","https://github.com/ChristopherKahler/base/blob/a37b9a8f88fb5676ff9ed3ddd9f124d4cd6aa8ae/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "A local Rust CLI and Claude Code hook integration that stores project, decision, note, rule, document, and code-structure knowledge in an RDF graph and injects selected context at relevant events. This source review is not a benchmark or runtime assessment.",
+    "atlas_locator": {
+      "ordinal": 87,
+      "name": "basemode",
+      "slug": "basemode",
+      "listed_repository": "https://github.com/ChristopherKahler/base",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/basemode.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/ChristopherKahler/base/blob/a37b9a8f88fb5676ff9ed3ddd9f124d4cd6aa8ae/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/ChristopherKahler/base/blob/a37b9a8f88fb5676ff9ed3ddd9f124d4cd6aa8ae/README.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical public repository",
+        "path": "repository",
+        "symbol": "ChristopherKahler/base; main is remote HEAD",
+        "url": "https://github.com/ChristopherKahler/base"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed current main head",
+        "path": "commit",
+        "symbol": "a37b9a8f88fb5676ff9ed3ddd9f124d4cd6aa8ae",
+        "url": "https://github.com/ChristopherKahler/base/commit/a37b9a8f88fb5676ff9ed3ddd9f124d4cd6aa8ae"
+      },
+      {
+        "id": "readme",
+        "label": "Official project README",
+        "path": "README.md",
+        "url": "https://github.com/ChristopherKahler/base/blob/a37b9a8f88fb5676ff9ed3ddd9f124d4cd6aa8ae/README.md"
+      },
+      {
+        "id": "store",
+        "label": "Graph storage, merged reads and writes",
+        "path": "src/store.rs",
+        "symbol": "load_merged; write_back; mutate_and_write",
+        "url": "https://github.com/ChristopherKahler/base/blob/a37b9a8f88fb5676ff9ed3ddd9f124d4cd6aa8ae/src/store.rs"
+      },
+      {
+        "id": "note",
+        "label": "Notes: create, recall, update and remove",
+        "path": "src/crud/note.rs",
+        "url": "https://github.com/ChristopherKahler/base/blob/a37b9a8f88fb5676ff9ed3ddd9f124d4cd6aa8ae/src/crud/note.rs"
+      },
+      {
+        "id": "decision",
+        "label": "Decision write and search paths",
+        "path": "src/crud/decision.rs",
+        "url": "https://github.com/ChristopherKahler/base/blob/a37b9a8f88fb5676ff9ed3ddd9f124d4cd6aa8ae/src/crud/decision.rs"
+      },
+      {
+        "id": "supersede",
+        "label": "Supersession chains",
+        "path": "src/supersede.rs",
+        "url": "https://github.com/ChristopherKahler/base/blob/a37b9a8f88fb5676ff9ed3ddd9f124d4cd6aa8ae/src/supersede.rs"
+      },
+      {
+        "id": "session",
+        "label": "Session-start hook",
+        "path": "src/hook/session_start.rs",
+        "url": "https://github.com/ChristopherKahler/base/blob/a37b9a8f88fb5676ff9ed3ddd9f124d4cd6aa8ae/src/hook/session_start.rs"
+      },
+      {
+        "id": "prompt",
+        "label": "Prompt hook and budget fitting",
+        "path": "src/hook/user_prompt_submit.rs",
+        "url": "https://github.com/ChristopherKahler/base/blob/a37b9a8f88fb5676ff9ed3ddd9f124d4cd6aa8ae/src/hook/user_prompt_submit.rs"
+      },
+      {
+        "id": "pretool",
+        "label": "Pre-tool context hook",
+        "path": "src/hook/pre_tool_use.rs",
+        "url": "https://github.com/ChristopherKahler/base/blob/a37b9a8f88fb5676ff9ed3ddd9f124d4cd6aa8ae/src/hook/pre_tool_use.rs"
+      },
+      {
+        "id": "posttool",
+        "label": "Post-tool hook",
+        "path": "src/hook/post_tool_use.rs",
+        "url": "https://github.com/ChristopherKahler/base/blob/a37b9a8f88fb5676ff9ed3ddd9f124d4cd6aa8ae/src/hook/post_tool_use.rs"
+      },
+      {
+        "id": "stop",
+        "label": "Stop hook and code map refresh",
+        "path": "src/hook/stop.rs",
+        "url": "https://github.com/ChristopherKahler/base/blob/a37b9a8f88fb5676ff9ed3ddd9f124d4cd6aa8ae/src/hook/stop.rs"
+      },
+      {
+        "id": "matchlog",
+        "label": "Prompt and tool match log",
+        "path": "src/emit/match_log.rs",
+        "url": "https://github.com/ChristopherKahler/base/blob/a37b9a8f88fb5676ff9ed3ddd9f124d4cd6aa8ae/src/emit/match_log.rs"
+      },
+      {
+        "id": "ontology",
+        "label": "RDF ontology",
+        "path": "src/ontology/ops.ttl",
+        "url": "https://github.com/ChristopherKahler/base/blob/a37b9a8f88fb5676ff9ed3ddd9f124d4cd6aa8ae/src/ontology/ops.ttl"
+      },
+      {
+        "id": "semantic",
+        "label": "Document-derived semantic graph writes",
+        "path": "src/crud/semantic.rs",
+        "url": "https://github.com/ChristopherKahler/base/blob/a37b9a8f88fb5676ff9ed3ddd9f124d4cd6aa8ae/src/crud/semantic.rs"
+      },
+      {
+        "id": "graph",
+        "label": "Graph maintenance",
+        "path": "src/graph.rs",
+        "url": "https://github.com/ChristopherKahler/base/blob/a37b9a8f88fb5676ff9ed3ddd9f124d4cd6aa8ae/src/graph.rs"
+      },
+      {
+        "id": "durability",
+        "label": "Graph durability and recovery guide",
+        "path": "docs/graph-durability.md",
+        "url": "https://github.com/ChristopherKahler/base/blob/a37b9a8f88fb5676ff9ed3ddd9f124d4cd6aa8ae/docs/graph-durability.md"
+      },
+      {
+        "id": "workspace",
+        "label": "Workspace scoping design document",
+        "path": "docs/workspace-scoping.md",
+        "url": "https://github.com/ChristopherKahler/base/blob/a37b9a8f88fb5676ff9ed3ddd9f124d4cd6aa8ae/docs/workspace-scoping.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog locator and attribution",
+        "path": "data/memory-systems.json",
+        "url": "../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository describes basemode as a single Rust binary that maps a workspace into a knowledge graph and integrates with Claude Code hooks. It is local CLI and hook software with an embedded dashboard and optional extensions, rather than a hosted memory service.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README identifies Oxigraph as an embedded RDF store, SPARQL for queries and updates, and N-Quads files for persistence. Reads load global and nearest-workspace graph tiers into one in-memory store when present.",
+        "sources": [
+          "readme",
+          "store"
+        ]
+      },
+      {
+        "text": "Notes and decisions are typed graph resources with text or name/rationale, status and timestamps, and optional links to domains, projects or entities. Markdown and code extraction add graph entities and relations with source-file metadata where available.",
+        "sources": [
+          "note",
+          "decision",
+          "ontology",
+          "semantic"
+        ]
+      },
+      {
+        "text": "Claude Code hooks gather session-start signals, match prompt context, and add pre-tool or post-tool file context. Stop can refresh touched code maps asynchronously. Hook output is fitted to configured budgets.",
+        "sources": [
+          "session",
+          "prompt",
+          "pretool",
+          "posttool",
+          "stop"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: learn creates a note with note text, type, active status, creation time, and optional domain/project/entity links in the current workspace graph. Decision logging stores decision text and rationale, optionally linked to a domain.",
+        "sources": [
+          "note",
+          "decision"
+        ]
+      },
+      {
+        "text": "Update and correction: note text can be replaced by slug. Supersession retains old and new records and writes replacement edges and a status label together; serving reads filter by the edge. This is not general temporal validity or claim verification.",
+        "sources": [
+          "note",
+          "supersede"
+        ]
+      },
+      {
+        "text": "Delete: note removal deletes its triples from the current workspace graph. Stale-note purge uses lastRead age; the guide documents preview by default and backup before applying. Cleanup of exports, backups, synced copies, or every entity type is unverified.",
+        "sources": [
+          "note",
+          "graph",
+          "durability"
+        ]
+      },
+      {
+        "text": "Retrieval: explicit recall searches note text or domain links. Hooks match graph context against prompts and touched paths, then fit context blocks to budgets; match logs record matches, served and cut items, scores, and withholding reasons. Recall quality was not measured.",
+        "sources": [
+          "note",
+          "prompt",
+          "pretool",
+          "matchlog"
+        ]
+      },
+      {
+        "text": "Scope: merged reads include the global tier and nearest workspace tier. The reviewed code does not establish tenant authorization or cross-user isolation; the workspace scoping document is design context that also contains planned requirements.",
+        "sources": [
+          "store",
+          "workspace"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Keyword/domain recall and prompt-context matching are source-visible; no adjudicated questions or abstention probes were run.",
+        "sources": [
+          "note",
+          "prompt",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Supersession chains preserve explicit replacement history, but no correction-accuracy or stale-value measurement was performed.",
+        "sources": [
+          "supersede",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Note deletion and usage-based purge paths exist; no post-delete probe was run and backup/export cleanup is unverified.",
+        "sources": [
+          "note",
+          "graph",
+          "durability",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Reads combine the global tier with the current workspace tier. No tenant-authorization review or cross-scope probe was run.",
+        "sources": [
+          "store",
+          "workspace",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Graph relations and source-file metadata provide some provenance; no claim-support adjudication or citation-coverage measurement was run.",
+        "sources": [
+          "ontology",
+          "semantic",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Latency, write-to-recall delay, tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "In-memory graph loads, output budgets, and match logging are visible; no runtime latency, token, cost, storage, or write-to-recall measurements were collected.",
+        "sources": [
+          "store",
+          "prompt",
+          "matchlog",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded read-only inspection of selected sources at the verified main head. The system was not executed; answer quality, abstention, deployed access controls, end-to-end deletion, sync reliability, and runtime efficiency remain unknown.",
+        "sources": [
+          "repo",
+          "head",
+          "readme",
+          "store",
+          "note"
+        ]
+      },
+      {
+        "text": "The curated Atlas entry is used only for ordinal, listed locator, and source attribution; Atlas descriptions, marks, prose, and layout are not assessment evidence.",
+        "sources": [
+          "roster"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is not_run. Project metric definitions, fixture, and execution-status record describe the separate project protocol; they are not basemode measurements.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

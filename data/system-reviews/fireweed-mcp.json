@@ -1,0 +1,400 @@
+{
+  "schema_version": 1,
+  "article": {
+    "ordinal": 239,
+    "slug": "fireweed-mcp",
+    "name": "Fireweed MCP",
+    "repository": "https://github.com/Starksood/fireweed-mcp",
+    "listed_repository": "https://github.com/Starksood/fireweed-mcp",
+    "branch": "main",
+    "revision": "b37747b0c8f2ed7f1b6b05309a6fb660a82d8605",
+    "reviewed_at": "2026-11-25T20:29:44Z",
+    "review_timezone": "UTC (checked 2026-11-25 12:29:44 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "A local MCP memory server that stores structured claims only after deterministic checks compare each proposed claim with quoted evidence. It returns grounded records with byte-range receipts and abstains on many ungrounded queries; its README describes retrieval recall as a major limitation.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/fireweed-mcp.md"
+    },
+    "contact": {
+      "email": "sanyamsood2@gmail.com",
+      "source_url": "https://github.com/Starksood/fireweed-mcp/blob/b37747b0c8f2ed7f1b6b05309a6fb660a82d8605/README.md",
+      "checked_sources": [
+        "https://github.com/Starksood/fireweed-mcp/blob/b37747b0c8f2ed7f1b6b05309a6fb660a82d8605/README.md"
+      ],
+      "note": "Published in the official README for commercial-use inquiries; no commit or profile metadata or third-party directory was used."
+    },
+    "contact_email": "sanyamsood2@gmail.com",
+    "contact_email_source_url": "https://github.com/Starksood/fireweed-mcp/blob/b37747b0c8f2ed7f1b6b05309a6fb660a82d8605/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/Starksood/fireweed-mcp/blob/b37747b0c8f2ed7f1b6b05309a6fb660a82d8605/README.md"
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated roster entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[238], ordinal 239; identity, listed locator, Atlas attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/fireweed-mcp.md",
+        "symbol": "Curated locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/fireweed-mcp.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "",
+        "symbol": "Canonical repository and default branch main; checked 2026-11-25",
+        "url": "https://github.com/Starksood/fireweed-mcp"
+      },
+      {
+        "id": "head",
+        "label": "Official current head commit",
+        "path": "",
+        "symbol": "GitHub repository/commit APIs and git ls-remote report full current head SHA",
+        "url": "https://github.com/Starksood/fireweed-mcp/commit/b37747b0c8f2ed7f1b6b05309a6fb660a82d8605"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product scope, interfaces, reported limitations and contact email",
+        "url": "https://github.com/Starksood/fireweed-mcp/blob/b37747b0c8f2ed7f1b6b05309a6fb660a82d8605/README.md"
+      },
+      {
+        "id": "server",
+        "label": "Pinned MCP server and persistence",
+        "path": "src/fireweed_mcp/server.py",
+        "symbol": "Tool surface, write gate, substrate persistence, recall, erasure, export and stats",
+        "url": "https://github.com/Starksood/fireweed-mcp/blob/b37747b0c8f2ed7f1b6b05309a6fb660a82d8605/src/fireweed_mcp/server.py"
+      },
+      {
+        "id": "graph",
+        "label": "Pinned graph data model",
+        "path": "src/fireweed/graph.py",
+        "symbol": "Node, entity, relation, temporal, provenance, status and graph indexes",
+        "url": "https://github.com/Starksood/fireweed-mcp/blob/b37747b0c8f2ed7f1b6b05309a6fb660a82d8605/src/fireweed/graph.py"
+      },
+      {
+        "id": "pipeline",
+        "label": "Pinned ingest and mutation pipeline",
+        "path": "src/fireweed/pipeline.py",
+        "symbol": "Firewall outcomes, mutation dispatch, supersession and conflict handling",
+        "url": "https://github.com/Starksood/fireweed-mcp/blob/b37747b0c8f2ed7f1b6b05309a6fb660a82d8605/src/fireweed/pipeline.py"
+      },
+      {
+        "id": "firewall",
+        "label": "Pinned write firewall",
+        "path": "src/fireweed/firewall.py",
+        "symbol": "Typed deterministic gate decisions and refusal reasons",
+        "url": "https://github.com/Starksood/fireweed-mcp/blob/b37747b0c8f2ed7f1b6b05309a6fb660a82d8605/src/fireweed/firewall.py"
+      },
+      {
+        "id": "retrieval",
+        "label": "Pinned retrieval implementation",
+        "path": "src/fireweed/retrieval.py",
+        "symbol": "Candidate ranking, graph expansion, filters and bounded retrieval results",
+        "url": "https://github.com/Starksood/fireweed-mcp/blob/b37747b0c8f2ed7f1b6b05309a6fb660a82d8605/src/fireweed/retrieval.py"
+      },
+      {
+        "id": "read-gate",
+        "label": "Pinned read gate",
+        "path": "src/fireweed/read_gate.py",
+        "symbol": "Question parsing, subject scope, predicate vocabulary and abstention logic",
+        "url": "https://github.com/Starksood/fireweed-mcp/blob/b37747b0c8f2ed7f1b6b05309a6fb660a82d8605/src/fireweed/read_gate.py"
+      },
+      {
+        "id": "receipts",
+        "label": "Pinned byte-range receipts",
+        "path": "src/fireweed/receipts.py",
+        "symbol": "Document hash, exact UTF-8 byte offsets and receipt verification",
+        "url": "https://github.com/Starksood/fireweed-mcp/blob/b37747b0c8f2ed7f1b6b05309a6fb660a82d8605/src/fireweed/receipts.py"
+      },
+      {
+        "id": "provenance",
+        "label": "Pinned source provenance model",
+        "path": "src/fireweed/source_provenance.py",
+        "symbol": "Computed source hash/length versus caller-declared origin fields",
+        "url": "https://github.com/Starksood/fireweed-mcp/blob/b37747b0c8f2ed7f1b6b05309a6fb660a82d8605/src/fireweed/source_provenance.py"
+      },
+      {
+        "id": "ledger",
+        "label": "Pinned append-only ledger",
+        "path": "src/fireweed/ledger.py",
+        "symbol": "Hash-chained mutation events and graph replay",
+        "url": "https://github.com/Starksood/fireweed-mcp/blob/b37747b0c8f2ed7f1b6b05309a6fb660a82d8605/src/fireweed/ledger.py"
+      },
+      {
+        "id": "sqlite-ledger",
+        "label": "Pinned SQLite ledger",
+        "path": "src/fireweed/ledger_sqlite.py",
+        "symbol": "Durable WAL event writes, synchronous commits, checkpoints and replay",
+        "url": "https://github.com/Starksood/fireweed-mcp/blob/b37747b0c8f2ed7f1b6b05309a6fb660a82d8605/src/fireweed/ledger_sqlite.py"
+      },
+      {
+        "id": "crypto",
+        "label": "Pinned keyring and content encryption",
+        "path": "src/fireweed/crypto.py",
+        "symbol": "Per-subject keys and encrypted ledger node content for crypto-shredding",
+        "url": "https://github.com/Starksood/fireweed-mcp/blob/b37747b0c8f2ed7f1b6b05309a6fb660a82d8605/src/fireweed/crypto.py"
+      },
+      {
+        "id": "erasure",
+        "label": "Pinned erasure implementation",
+        "path": "src/fireweed/erasure.py",
+        "symbol": "Closure computation, ERASE event, key destruction and scoped certificate",
+        "url": "https://github.com/Starksood/fireweed-mcp/blob/b37747b0c8f2ed7f1b6b05309a6fb660a82d8605/src/fireweed/erasure.py"
+      },
+      {
+        "id": "audit",
+        "label": "Pinned read audit",
+        "path": "src/fireweed/read_audit.py",
+        "symbol": "Opt-in read records and salted query fingerprints by default",
+        "url": "https://github.com/Starksood/fireweed-mcp/blob/b37747b0c8f2ed7f1b6b05309a6fb660a82d8605/src/fireweed/read_audit.py"
+      },
+      {
+        "id": "spec",
+        "label": "Pinned open-format specification",
+        "path": "open_format/SPEC.md",
+        "symbol": "Portable snapshot model, state semantics and receipt verification contract",
+        "url": "https://github.com/Starksood/fireweed-mcp/blob/b37747b0c8f2ed7f1b6b05309a6fb660a82d8605/open_format/SPEC.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Assessment domains and definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Project benchmark workload definition, not a Fireweed result",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status, not a Fireweed result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The public repository describes Fireweed MCP as a stdlib-only MCP server over JSON-RPC on stdin/stdout. The server does not call an LLM; an optional companion extractor can propose claim/evidence pairs, which remain subject to the deterministic admission checks.",
+        "sources": [
+          "repo",
+          "readme",
+          "server"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The MCP server persists a graph snapshot as `~/.fireweed/mcp/substrate.json` by default (overridable with `FIREWEED_MCP_STORE`), source documents in a sibling directory, a SQLite event ledger, and keys in a separate directory. The snapshot contains claim nodes, entities, relations, provenance, temporal fields, and status; the open format provides a standard-library reader and versioned JSON contract.",
+        "sources": [
+          "server",
+          "graph",
+          "spec",
+          "readme"
+        ]
+      },
+      {
+        "text": "A node stores the claim text and normalized form, entity references, topical domains and facets, predicate and temporal metadata, provenance, reinforcement, and lifecycle state. The graph also indexes entities and typed relations such as supersedes, supports, contradicts, and causes. The open-format spec warns that emitted entity types are currently unreliable.",
+        "sources": [
+          "graph",
+          "spec"
+        ]
+      },
+      {
+        "text": "The engine pipeline turns a claim proposal into a firewall decision and graph mutation. The server loads and seals the graph with a SQLite ledger, then rewrites the snapshot after mutations. SQLite writes use WAL and synchronous FULL commits; the ledger chains events by prior hash and can replay from checkpoints.",
+        "sources": [
+          "pipeline",
+          "server",
+          "sqlite-ledger",
+          "ledger"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: MCP `remember` requires a claim and quoted evidence, then checks that the evidence names the subject, preserves relation order, supports numerals, and does not add an unsupported predicate. Typed refusals include unknown subject, relation transposition, invented numeral, and unsupported claim. Optional full source text enables a byte-range receipt; source registration also accepts origin and validation fields but records them as caller declarations.",
+        "sources": [
+          "server",
+          "firewall",
+          "receipts",
+          "provenance"
+        ]
+      },
+      {
+        "text": "Update/correction: there is no general in-place update tool in the MCP surface. During ingest, resolver-selected `ModifyMutation` marks the earlier node superseded, records `valid_to` and `superseded_by`, adds a supersedes relation, and creates the replacement. Conflicting claims can instead remain in a disputed state and both may be retrieved; superseded claims remain in the snapshot as history.",
+        "sources": [
+          "server",
+          "pipeline",
+          "graph",
+          "spec"
+        ]
+      },
+      {
+        "text": "Delete/forget: `forget` resolves a subject and computes the connected claim/entity closure, records an ERASE event, removes the affected active graph content, destroys the subject content key when a keyring is attached, redacts matching source text while preserving Merkle proofs for unaffected parts, persists the result, and issues a certificate only after its probe battery passes. The certificate states its scope; it does not promise deletion from external copies or backups.",
+        "sources": [
+          "server",
+          "erasure",
+          "crypto",
+          "receipts",
+          "readme"
+        ]
+      },
+      {
+        "text": "Retrieval: `recall` runs deterministic graph search, ranks candidates using lexical similarity/query coverage, entity match and reinforcement, with optional significance or graph expansion paths. A read gate checks demanded predicate and subject grounding, then returns up to five displayed matches with receipts or a typed abstention and remedy. The optional semantic encoder is documented as unsafe for absent-answer traps and is off by default.",
+        "sources": [
+          "server",
+          "retrieval",
+          "read-gate",
+          "readme"
+        ]
+      },
+      {
+        "text": "The MCP server exposes `remember`, `add_source`, `review_reads`, `trace_evidence`, `recall`, `verify_receipts`, `forget`, `export_memory`, and `memory_stats`. It is a single local store configured with a ledger tenant label `mcp`; no user or tenant authorization boundary is established by that label.",
+        "sources": [
+          "server",
+          "sqlite-ledger",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "No retrieval workload was run for this review. The upstream README reports 4.8% refusal on familiar tuned phrasings and 99.2% on unseen phrasings, and says its prior 98.4% recall figure was withdrawn; evaluation corpora and method are private, so these remain upstream-reported rather than independently verified.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Supersession and disputed-state code are present, but this review ran no correction sequence or post-correction probes.",
+        "sources": [
+          "pipeline",
+          "graph",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The source implements subject closure erasure, source redaction, crypto-shredding and probes, but no deletion workload or backup/external-copy audit was run.",
+        "sources": [
+          "erasure",
+          "server",
+          "crypto",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Single-subject query scoping is described; README explicitly says multi-subject questions still match against the whole store. No cross-scope isolation workload was run.",
+        "sources": [
+          "read-gate",
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "The write gate checks claim-to-quote support and receipts can verify a source hash and byte range. This does not establish that caller-declared source origin is truthful or measure answer-level citation quality.",
+        "sources": [
+          "firewall",
+          "receipts",
+          "provenance",
+          "spec",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No runtime timings or write-to-recall schedule were collected. Snapshot rewrite and synchronous ledger commit are implementation observations, not latency measurements.",
+        "sources": [
+          "server",
+          "sqlite-ledger",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No workload resource measurements were made. The server itself invokes no model, while the optional extractor/semantic encoder may have separate model and storage costs.",
+        "sources": [
+          "readme",
+          "server",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "Receipts establish that a stored quote corresponds to bytes in a source document and that those bytes have not changed under verification. Source hash and byte length are computed, but origin, supplier, validation, and ingest time are caller-declared; a receipt does not prove that the source was authentic or the claim true.",
+        "sources": [
+          "receipts",
+          "provenance",
+          "spec"
+        ]
+      },
+      {
+        "text": "The README presents the system as much stronger at abstaining than answering unseen phrasings, and explicitly retracts an earlier recall claim. It says the reported evaluation corpus and method are private. These numbers are not independently reproducible from this public checkout.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The default HMAC certificate mode is not independently verifiable by someone who lacks the shared secret; the README demo uses HMAC. Optional Ed25519 signing can offer public verification. Encryption and key destruction are not a substitute for a KMS or protection from an attacker with the whole home directory, and certificates describe their exact scope.",
+        "sources": [
+          "server",
+          "crypto",
+          "erasure",
+          "readme"
+        ]
+      },
+      {
+        "text": "This review is a bounded code and documentation inspection at the verified head. No Fireweed process, tests, or benchmarks were run. It does not independently verify retrieval quality, erasure completeness in backups, concurrent behavior, security under hostile access, or the upstream-reported evaluation results.",
+        "sources": [
+          "repo",
+          "readme",
+          "server",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Fireweed runtime, tests, or benchmarks were run. Upstream README-reported figures are not project measurements or independently reproduced results."
+    }
+  }
+}

@@ -1,0 +1,352 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "ai-memory",
+    "name": "ai-memory",
+    "repository": "https://github.com/akitaonrails/ai-memory",
+    "branch": "main",
+    "revision": "ccc7dc0db1271e94785b3e7e5a1758a89fde202d",
+    "reviewed_at": "2026-11-24T19:48:55Z",
+    "review_timezone": "UTC (2026-11-24 11:48:55 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/akitaonrails/ai-memory/blob/ccc7dc0db1271e94785b3e7e5a1758a89fde202d/README.md","checked_urls":["https://github.com/akitaonrails/ai-memory/blob/ccc7dc0db1271e94785b3e7e5a1758a89fde202d/README.md","https://github.com/akitaonrails/ai-memory/blob/ccc7dc0db1271e94785b3e7e5a1758a89fde202d/SECURITY.md","https://github.com/akitaonrails/ai-memory/blob/ccc7dc0db1271e94785b3e7e5a1758a89fde202d/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "A self-hosted memory service for coding agents that captures sanitized session observations, compiles them into a git-versioned Markdown wiki, and retrieves project context across agent sessions. SQLite is a derived index; the default capture, search, and handoff paths are designed to work without an LLM provider. This review records source observations, not measured system or benchmark results.",
+    "atlas_locator": {
+      "ordinal": 40,
+      "name": "ai-memory",
+      "slug": "ai-memory",
+      "listed_repository": "https://github.com/akitaonrails/ai-memory",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/ai-memory.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/akitaonrails/ai-memory/blob/ccc7dc0db1271e94785b3e7e5a1758a89fde202d/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/akitaonrails/ai-memory/blob/ccc7dc0db1271e94785b3e7e5a1758a89fde202d/README.md",
+      "https://github.com/akitaonrails/ai-memory/blob/ccc7dc0db1271e94785b3e7e5a1758a89fde202d/SECURITY.md",
+      "https://aimemory.sh/"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical public repository and default branch",
+        "path": "repository",
+        "symbol": "default branch main",
+        "url": "https://github.com/akitaonrails/ai-memory"
+      },
+      {
+        "id": "head",
+        "label": "Current main branch head",
+        "path": "commit",
+        "symbol": "full SHA ccc7dc0db1271e94785b3e7e5a1758a89fde202d",
+        "url": "https://github.com/akitaonrails/ai-memory/commit/ccc7dc0db1271e94785b3e7e5a1758a89fde202d"
+      },
+      {
+        "id": "feed",
+        "label": "Official current main commits feed",
+        "path": "commits/main.atom",
+        "symbol": "head commit SHA and update time",
+        "url": "https://github.com/akitaonrails/ai-memory/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "url": "https://github.com/akitaonrails/ai-memory/blob/ccc7dc0db1271e94785b3e7e5a1758a89fde202d/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Current architecture and data-flow documentation",
+        "path": "docs/ARCHITECTURE.md",
+        "url": "https://github.com/akitaonrails/ai-memory/blob/ccc7dc0db1271e94785b3e7e5a1758a89fde202d/docs/ARCHITECTURE.md"
+      },
+      {
+        "id": "data-handling",
+        "label": "Official data handling overview",
+        "path": "DATA_HANDLING.md",
+        "url": "https://github.com/akitaonrails/ai-memory/blob/ccc7dc0db1271e94785b3e7e5a1758a89fde202d/DATA_HANDLING.md"
+      },
+      {
+        "id": "observation",
+        "label": "Observation data model",
+        "path": "crates/ai-memory-core/src/observation.rs",
+        "symbol": "NewObservation; ObservationKind; scope and event fields",
+        "url": "https://github.com/akitaonrails/ai-memory/blob/ccc7dc0db1271e94785b3e7e5a1758a89fde202d/crates/ai-memory-core/src/observation.rs"
+      },
+      {
+        "id": "trust",
+        "label": "Ingress and compiled-page trust classes",
+        "path": "crates/ai-memory-core/src/trust.rs",
+        "symbol": "TrustClass; least-trusted source rule",
+        "url": "https://github.com/akitaonrails/ai-memory/blob/ccc7dc0db1271e94785b3e7e5a1758a89fde202d/crates/ai-memory-core/src/trust.rs"
+      },
+      {
+        "id": "router",
+        "label": "Hook capture sanitation and observation insertion",
+        "path": "crates/ai-memory-hooks/src/router.rs",
+        "symbol": "sanitizer; NewObservation; ingress trust",
+        "url": "https://github.com/akitaonrails/ai-memory/blob/ccc7dc0db1271e94785b3e7e5a1758a89fde202d/crates/ai-memory-hooks/src/router.rs"
+      },
+      {
+        "id": "wiki",
+        "label": "Markdown wiki write/delete/restore layer",
+        "path": "crates/ai-memory-wiki/src/wiki.rs",
+        "symbol": "Wiki::write_page; Wiki::delete_page; restore methods",
+        "url": "https://github.com/akitaonrails/ai-memory/blob/ccc7dc0db1271e94785b3e7e5a1758a89fde202d/crates/ai-memory-wiki/src/wiki.rs"
+      },
+      {
+        "id": "writer",
+        "label": "Single-writer SQLite actor",
+        "path": "crates/ai-memory-store/src/writer.rs",
+        "symbol": "WriteCmd; serialized mutations",
+        "url": "https://github.com/akitaonrails/ai-memory/blob/ccc7dc0db1271e94785b3e7e5a1758a89fde202d/crates/ai-memory-store/src/writer.rs"
+      },
+      {
+        "id": "reader",
+        "label": "Hybrid retrieval, explanations, and timings",
+        "path": "crates/ai-memory-store/src/reader.rs",
+        "symbol": "search_pages; SearchExplain; StreamTimings",
+        "url": "https://github.com/akitaonrails/ai-memory/blob/ccc7dc0db1271e94785b3e7e5a1758a89fde202d/crates/ai-memory-store/src/reader.rs"
+      },
+      {
+        "id": "provenance",
+        "label": "Version-specific page source evidence",
+        "path": "crates/ai-memory-store/src/provenance.rs",
+        "symbol": "page_compiled_sources; PageSource; PageCompiledSources",
+        "url": "https://github.com/akitaonrails/ai-memory/blob/ccc7dc0db1271e94785b3e7e5a1758a89fde202d/crates/ai-memory-store/src/provenance.rs"
+      },
+      {
+        "id": "mcp",
+        "label": "MCP memory interfaces",
+        "path": "crates/ai-memory-mcp/src/server.rs",
+        "symbol": "memory_query; memory_write_page; handoff tools",
+        "url": "https://github.com/akitaonrails/ai-memory/blob/ccc7dc0db1271e94785b3e7e5a1758a89fde202d/crates/ai-memory-mcp/src/server.rs"
+      },
+      {
+        "id": "mcp-metrics",
+        "label": "MCP and ingest observability",
+        "path": "crates/ai-memory-mcp/src/metrics.rs",
+        "symbol": "query latency histogram; Prometheus rendering",
+        "url": "https://github.com/akitaonrails/ai-memory/blob/ccc7dc0db1271e94785b3e7e5a1758a89fde202d/crates/ai-memory-mcp/src/metrics.rs"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy; contact check",
+        "path": "SECURITY.md",
+        "symbol": "security reporting guidance; no published email",
+        "url": "https://github.com/akitaonrails/ai-memory/blob/ccc7dc0db1271e94785b3e7e5a1758a89fde202d/SECURITY.md"
+      },
+      {
+        "id": "website",
+        "label": "Official project website; contact check",
+        "path": "aimemory.sh",
+        "symbol": "project overview and footer; no published email",
+        "url": "https://aimemory.sh/"
+      },
+      {
+        "id": "curated",
+        "label": "Curated ordinal, repository locator, and source attribution",
+        "path": "../data/memory-systems.json",
+        "symbol": "ordinal 40; ai-memory",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "../METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "../results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "../fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository describes ai-memory as a Rust application distributed as one binary with MCP, lifecycle-hook, CLI, and optional HTTP/web interfaces. The project site credits Fabio Akita in its footer. This review treats that as project attribution and does not infer additional maintainer roles.",
+        "sources": [
+          "readme",
+          "architecture",
+          "website"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The durable knowledge base is a git-versioned tree of Markdown pages. SQLite is a derived index for pages and versions, full-text/entity/link retrieval, sessions, raw observations, handoffs, audit records, and optional embeddings; the README documents rebuilding the index from the wiki files.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Lifecycle hooks send session-start, prompt, tool, and ending events through the hook router. The router sanitizes text, assigns an ObservationKind and immutable ingress TrustClass, then the store records observations by workspace, project, and session. Observation records retain event kind, body, time, importance, and trust class.",
+        "sources": [
+          "architecture",
+          "observation",
+          "trust",
+          "router"
+        ]
+      },
+      {
+        "text": "A single SQLite writer actor serializes mutations. The wiki layer atomically writes page files and indexes versions; later versions supersede earlier ones. Source evidence can associate a page version with the observations it was compiled from.",
+        "sources": [
+          "architecture",
+          "writer",
+          "wiki",
+          "provenance"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write and compile: hook capture stores sanitized observations. SessionEnd can create a rule-based session page and a claim-once handoff without an LLM. Configured consolidation may rewrite a session summary or emit multiple durable pages; these are separate paths, and optional provider-backed work is not required for basic capture or search.",
+        "sources": [
+          "architecture",
+          "router",
+          "observation",
+          "readme"
+        ]
+      },
+      {
+        "text": "Page updates and deletion: Wiki::write_page atomically writes Markdown and upserts a new indexed page version; conditional writes can reject stale expected versions. Wiki::delete_page removes the page through the wiki/store path, and the MCP documentation says deletion checkpoints the wiki before removing the file and indexed versions. Restore can write a retained version back. These semantics were inspected in source/docs, not exercised.",
+        "sources": [
+          "wiki",
+          "mcp",
+          "readme"
+        ]
+      },
+      {
+        "text": "Retrieval: memory_query combines full-text, entity-match, and link-neighbor reciprocal-rank-fusion streams; configured embeddings add vector retrieval. The architecture docs describe an observation-evidence stream for matching captured turns and bounded raw-observation fallback on non-global misses. Explain mode exposes ranks, score contributions, authority adjustment, and per-stream timings. Retrieval quality was not evaluated.",
+        "sources": [
+          "architecture",
+          "reader",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Handoffs are separate typed session-continuity records, not wiki pages. The documented protocol assigns ownership and allows a handoff to be claimed once; ordinary delivery is scoped to a project and ownership boundary. Cross-project messaging and global queries are explicit features and intentionally cross the normal project boundary.",
+        "sources": [
+          "readme",
+          "architecture",
+          "mcp"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "metric": "Answerable recall and abstention",
+        "status": "not_measured",
+        "evidence": "Source shows lexical, entity, graph, optional vector, and observation retrieval paths. No adjudicated answerable or unanswerable probes were run.",
+        "sources": [
+          "reader",
+          "architecture",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "metric": "Correction accuracy and stale-value rate",
+        "status": "not_measured",
+        "evidence": "Page versions supersede earlier versions and retrieval can expose superseded pages when requested; no correction fixture or stale-value adjudication was run.",
+        "sources": [
+          "wiki",
+          "mcp",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "metric": "Deletion leakage",
+        "status": "not_measured",
+        "evidence": "The source provides page deletion, version removal, retention and restore paths. No post-deletion probes, backup audit, or leakage adjudication was run.",
+        "sources": [
+          "wiki",
+          "mcp",
+          "architecture",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "metric": "Scope isolation",
+        "status": "not_measured",
+        "evidence": "Workspace/project coordinates and access-filtered retrieval are present in source. No cross-project, cross-user, or cross-workspace probes were run; explicit global search and messaging cross project boundaries by design.",
+        "sources": [
+          "observation",
+          "reader",
+          "architecture",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "metric": "Evidence support and citation coverage",
+        "status": "not_measured",
+        "evidence": "Page provenance can retain the source observation IDs for a page version, subject to read authorization. This lineage is not an adjudication that a returned answer is supported by its evidence; no claim-level citation review was performed.",
+        "sources": [
+          "provenance",
+          "trust",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "metric": "Latency, write-to-recall delay, tokens, cost, and storage",
+        "status": "not_measured",
+        "evidence": "Source-visible instrumentation includes explained per-stream query timings and Prometheus query/ingest metrics. No benchmark workload or resource measurements were collected.",
+        "sources": [
+          "reader",
+          "mcp-metrics",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded read-only inspection at the verified main head, focused on official README/architecture/data-handling docs and selected Rust source. It does not establish production reliability, answer quality, correction effectiveness, isolation under adversarial use, or deletion completeness across backups and replicas.",
+        "sources": [
+          "readme",
+          "architecture",
+          "data-handling",
+          "security"
+        ]
+      },
+      {
+        "text": "Trust classes and page-to-observation provenance record origin/lineage; they do not by themselves establish factual correctness or external-source citations. A page can have no recorded source links, which the provenance API defines as not recorded rather than proof that there were no inputs.",
+        "sources": [
+          "trust",
+          "provenance"
+        ]
+      },
+      {
+        "text": "Search ranking includes lexical and derived signals, and vector search/reranking depend on configuration. The source review cannot determine corpus-specific relevance, latency, storage growth, token use, or cost.",
+        "sources": [
+          "architecture",
+          "reader",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No ai-memory system execution, benchmark, or test was run for this review. Metric definitions, the shared benchmark status record, and the fixture describe a separate project evaluation protocol; source observations here are not benchmark results.",
+      "sources": [
+        "metrics",
+        "status",
+        "fixture"
+      ]
+    }
+  }
+}

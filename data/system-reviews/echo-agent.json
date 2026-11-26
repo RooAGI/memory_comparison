@@ -1,0 +1,477 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 207,
+    "slug": "echo-agent",
+    "name": "Echo Agent",
+    "repository": "https://github.com/fuyuxiang/echo-agent",
+    "listed_repository": "https://github.com/fuyuxiang/echo-agent",
+    "branch": "master",
+    "revision": "15f0802faf6eeb37bbac217894f87a05944335cd",
+    "reviewed_at": "2026-11-25T11:56:05Z",
+    "review_timezone": "UTC (2026-11-25 03:56:05 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Echo Agent’s Python Runtime combines session episodes and persistent semantic facts with scoped hybrid recall, provenance-aware writes, and lifecycle maintenance. This assessment is pinned to the verified master head; no runtime, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 207,
+      "name": "Echo Agent",
+      "slug": "echo-agent",
+      "listed_repository": "https://github.com/fuyuxiang/echo-agent",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/echo-agent.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": null,
+      "checked_urls": [
+        "https://github.com/fuyuxiang/echo-agent/blob/15f0802faf6eeb37bbac217894f87a05944335cd/README.md",
+        "https://github.com/fuyuxiang/echo-agent/blob/15f0802faf6eeb37bbac217894f87a05944335cd/SUPPORT.md",
+        "https://github.com/fuyuxiang/echo-agent/blob/15f0802faf6eeb37bbac217894f87a05944335cd/SECURITY.md"
+      ],
+      "note": "No published contact email was found in the checked official repository documents; no commit/profile metadata or third-party directories were used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/fuyuxiang/echo-agent/blob/15f0802faf6eeb37bbac217894f87a05944335cd/README.md",
+      "https://github.com/fuyuxiang/echo-agent/blob/15f0802faf6eeb37bbac217894f87a05944335cd/SUPPORT.md",
+      "https://github.com/fuyuxiang/echo-agent/blob/15f0802faf6eeb37bbac217894f87a05944335cd/SECURITY.md"
+    ],
+    "contact_email_note": "No published contact email found in the official pinned README, SUPPORT.md, or SECURITY.md.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[206], ordinal 207: Echo Agent, slug echo-agent, explicit locator and pinned Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/echo-agent.md",
+        "symbol": "Pinned entry retained only for identity and locator attribution; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/echo-agent.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Public repository page identifies master as default branch",
+        "url": "https://github.com/fuyuxiang/echo-agent"
+      },
+      {
+        "id": "feed",
+        "label": "Official master commit feed",
+        "path": "commits/master.atom",
+        "symbol": "Full current head 15f0802faf6eeb37bbac217894f87a05944335cd; feed updated 2026-11-25T11:28:14Z",
+        "url": "https://github.com/fuyuxiang/echo-agent/commits/master.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream head",
+        "path": "commit",
+        "symbol": "15f0802faf6eeb37bbac217894f87a05944335cd",
+        "url": "https://github.com/fuyuxiang/echo-agent/commit/15f0802faf6eeb37bbac217894f87a05944335cd"
+      },
+      {
+        "id": "readme",
+        "label": "Official README at reviewed head",
+        "path": "README.md",
+        "symbol": "Purpose, Runtime and memory overview; checked for published contact",
+        "url": "https://github.com/fuyuxiang/echo-agent/blob/15f0802faf6eeb37bbac217894f87a05944335cd/README.md"
+      },
+      {
+        "id": "memory-doc",
+        "label": "Memory system concept",
+        "path": "docs/concepts/memory-system.md",
+        "symbol": "Runtime memory hierarchy, consolidation, retrieval, lifecycle and separation from desktop memory",
+        "url": "https://github.com/fuyuxiang/echo-agent/blob/15f0802faf6eeb37bbac217894f87a05944335cd/docs/concepts/memory-system.md"
+      },
+      {
+        "id": "guide",
+        "label": "Memory management guide",
+        "path": "docs/guides/memory-management.md",
+        "symbol": "Runtime write, correction, forgetting, scope, retrieval and backup documentation; checked operational guidance",
+        "url": "https://github.com/fuyuxiang/echo-agent/blob/15f0802faf6eeb37bbac217894f87a05944335cd/docs/guides/memory-management.md"
+      },
+      {
+        "id": "types",
+        "label": "Memory entry and episode types",
+        "path": "echo-agent-runtime/echo_agent/memory/types.py",
+        "symbol": "MemoryEntry and Episode fields plus source-priority provenance guard",
+        "url": "https://github.com/fuyuxiang/echo-agent/blob/15f0802faf6eeb37bbac217894f87a05944335cd/echo-agent-runtime/echo_agent/memory/types.py"
+      },
+      {
+        "id": "store",
+        "label": "Runtime memory store",
+        "path": "echo-agent-runtime/echo_agent/memory/store.py",
+        "symbol": "JSON persistence, scope visibility, add/update/delete/versioning, forgot barriers, snapshot and caps",
+        "url": "https://github.com/fuyuxiang/echo-agent/blob/15f0802faf6eeb37bbac217894f87a05944335cd/echo-agent-runtime/echo_agent/memory/store.py"
+      },
+      {
+        "id": "service",
+        "label": "MemoryService write sequence",
+        "path": "echo-agent-runtime/echo_agent/memory/service.py",
+        "symbol": "Scope/environment/provenance gates, replacement/removal, flush/cache invalidation and optional JSONL audit",
+        "url": "https://github.com/fuyuxiang/echo-agent/blob/15f0802faf6eeb37bbac217894f87a05944335cd/echo-agent-runtime/echo_agent/memory/service.py"
+      },
+      {
+        "id": "tool",
+        "label": "Memory tool interface",
+        "path": "echo-agent-runtime/echo_agent/agent/tools/memory.py",
+        "symbol": "Agent-facing memory actions and invocation path",
+        "url": "https://github.com/fuyuxiang/echo-agent/blob/15f0802faf6eeb37bbac217894f87a05944335cd/echo-agent-runtime/echo_agent/agent/tools/memory.py"
+      },
+      {
+        "id": "retrieval",
+        "label": "Hybrid retriever",
+        "path": "echo-agent-runtime/echo_agent/memory/retrieval.py",
+        "symbol": "Scope and lifecycle filtering, BM25/vector admission, RRF, reranking, quotas and timeout fallback",
+        "url": "https://github.com/fuyuxiang/echo-agent/blob/15f0802faf6eeb37bbac217894f87a05944335cd/echo-agent-runtime/echo_agent/memory/retrieval.py"
+      },
+      {
+        "id": "tiers",
+        "label": "Working and episodic managers",
+        "path": "echo-agent-runtime/echo_agent/memory/tiers.py",
+        "symbol": "Working buffer, episode persistence and session-filtered episode search",
+        "url": "https://github.com/fuyuxiang/echo-agent/blob/15f0802faf6eeb37bbac217894f87a05944335cd/echo-agent-runtime/echo_agent/memory/tiers.py"
+      },
+      {
+        "id": "consolidator",
+        "label": "Sleep consolidation",
+        "path": "echo-agent-runtime/echo_agent/memory/consolidator.py",
+        "symbol": "Episode summarization, fact promotion, conflict/forgetting steps, episode retention and view rendering",
+        "url": "https://github.com/fuyuxiang/echo-agent/blob/15f0802faf6eeb37bbac217894f87a05944335cd/echo-agent-runtime/echo_agent/memory/consolidator.py"
+      },
+      {
+        "id": "forgetting",
+        "label": "Forgetting and lineage",
+        "path": "echo-agent-runtime/echo_agent/memory/forgetting.py",
+        "symbol": "Importance decay, archival/forgetting thresholds, and superseded-version lineage retention",
+        "url": "https://github.com/fuyuxiang/echo-agent/blob/15f0802faf6eeb37bbac217894f87a05944335cd/echo-agent-runtime/echo_agent/memory/forgetting.py"
+      },
+      {
+        "id": "vectors",
+        "label": "Vector index",
+        "path": "echo-agent-runtime/echo_agent/memory/vectors.py",
+        "symbol": "Normalized vector matrix search and model/dimension checks",
+        "url": "https://github.com/fuyuxiang/echo-agent/blob/15f0802faf6eeb37bbac217894f87a05944335cd/echo-agent-runtime/echo_agent/memory/vectors.py"
+      },
+      {
+        "id": "sqlite",
+        "label": "SQLite storage backend",
+        "path": "echo-agent-runtime/echo_agent/storage/sqlite.py",
+        "symbol": "SQLite WAL, foreign keys, migration and serialized async operation setup",
+        "url": "https://github.com/fuyuxiang/echo-agent/blob/15f0802faf6eeb37bbac217894f87a05944335cd/echo-agent-runtime/echo_agent/storage/sqlite.py"
+      },
+      {
+        "id": "config",
+        "label": "Memory configuration",
+        "path": "echo-agent-runtime/echo_agent/config/schema.py",
+        "symbol": "Default session scope policy and cross-channel owner/principal binding settings",
+        "url": "https://github.com/fuyuxiang/echo-agent/blob/15f0802faf6eeb37bbac217894f87a05944335cd/echo-agent-runtime/echo_agent/config/schema.py"
+      },
+      {
+        "id": "loop",
+        "label": "Runtime memory wiring and scope",
+        "path": "echo-agent-runtime/echo_agent/agent/loop.py",
+        "symbol": "MemoryStore construction and per-event memory scope assignment",
+        "url": "https://github.com/fuyuxiang/echo-agent/blob/15f0802faf6eeb37bbac217894f87a05944335cd/echo-agent-runtime/echo_agent/agent/loop.py"
+      },
+      {
+        "id": "desktop",
+        "label": "Desktop memory documentation",
+        "path": "docs/desktop/knowledge-memory.md",
+        "symbol": "Separate embedded desktop memory implementation",
+        "url": "https://github.com/fuyuxiang/echo-agent/blob/15f0802faf6eeb37bbac217894f87a05944335cd/docs/desktop/knowledge-memory.md"
+      },
+      {
+        "id": "support",
+        "label": "Official support instructions",
+        "path": "SUPPORT.md",
+        "symbol": "Support channels and exact contact-email check",
+        "url": "https://github.com/fuyuxiang/echo-agent/blob/15f0802faf6eeb37bbac217894f87a05944335cd/SUPPORT.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Security reporting channels and exact contact-email check",
+        "url": "https://github.com/fuyuxiang/echo-agent/blob/15f0802faf6eeb37bbac217894f87a05944335cd/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Benchmark workload definition only; no Echo Agent run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "No measured Echo Agent result is claimed by this source review",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The curated catalog assigns the explicit repository locator to ordinal 207; the pinned Atlas record is retained only for roster attribution. The README describes a desktop agent and an independently deployable Python Runtime with cross-session memory; this assessment covers the Runtime memory path, not the separate desktop memory implementation.",
+        "sources": [
+          "catalog",
+          "atlas",
+          "repo",
+          "readme",
+          "desktop"
+        ]
+      },
+      {
+        "text": "The inspected memory implementation is a Python Runtime subsystem composed of an agent memory tool, structured store and retrieval/consolidation helpers, and optional SQLite-backed episodic/vector storage.",
+        "sources": [
+          "readme",
+          "tool",
+          "store",
+          "tiers",
+          "sqlite"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The Runtime defines working, episodic, semantic, and archival tiers. MemoryEntry records store USER or ENVIRONMENT facts with keys, content, tags, source session, timestamps, importance/access metadata, embedding/episode IDs, version/supersession, provenance source, and pin state; Episode records keep session key, summary, message range, entity IDs, importance, and time.",
+        "sources": [
+          "memory-doc",
+          "types",
+          "tiers"
+        ]
+      },
+      {
+        "text": "Semantic user/environment records are loaded from separate JSON files under the configured memory directory. The optional storage backend supports episode, contradiction, and vector data; the SQLite implementation enables WAL and serializes operations.",
+        "sources": [
+          "store",
+          "sqlite",
+          "tiers"
+        ]
+      },
+      {
+        "text": "Runtime configuration wires the default session scope policy into MemoryStore and assigns memory scopes per event. Desktop memory is documented as a separate embedded implementation and is outside this code assessment.",
+        "sources": [
+          "config",
+          "loop",
+          "desktop"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: the memory tool exposes add/search/replace/remove/list and contradiction operations. Store add validates content, deduplicates exact same-scope entries, merges conflicts, applies per-type capacity and persists JSON; it queues embeddings for asynchronous generation.",
+        "sources": [
+          "tool",
+          "store"
+        ]
+      },
+      {
+        "text": "Consolidation: after eligible responses, asynchronous processing can summarize session ranges, extract facts, promote them to semantic memory, inspect conflicts, run forgetting/reflection, and re-render a human-readable memory view. Long-term write completion is not necessarily synchronous with a reply.",
+        "sources": [
+          "memory-doc",
+          "guide",
+          "consolidator"
+        ]
+      },
+      {
+        "text": "Update: MemoryService checks scope, environment policy and provenance before calling the store update; store update changes content/tags/source/time and queues new embedding work. Same-key versioning can supersede the previous record. This describes code paths, not measured correction accuracy.",
+        "sources": [
+          "service",
+          "store",
+          "types"
+        ]
+      },
+      {
+        "text": "Delete: removal is gated by scope and provenance. Explicit forget records a fingerprint/time barrier, removes the semantic entry and schedules vector cleanup; episode filtering and consolidation honor forgotten barriers. Expired episodes and old versions have maintenance retention paths. Physical erasure from backups and all historical copies was not established.",
+        "sources": [
+          "service",
+          "store",
+          "tiers",
+          "consolidator",
+          "forgetting"
+        ]
+      },
+      {
+        "text": "Retrieval: the Runtime filters by scope and lifecycle, creates a bounded candidate pool, combines BM25 and optional vector rankings with reciprocal rank fusion, adjusts by importance, and optionally reranks a limited head. Discriminative lexical or above-floor vector evidence is required for admission; embedding/rerank failures degrade rather than block. Result quotas cap ordinary returns at five memory entries and three episodes.",
+        "sources": [
+          "retrieval",
+          "store",
+          "forgetting"
+        ]
+      },
+      {
+        "text": "Scope: default configuration is session-scoped; USER memory visibility and same-scope writes follow that policy, while global tags and ENVIRONMENT facts have separate rules. Explicitly configured principal bindings may share a one-to-one owner scope across channels. This is source-visible behavior, not a deployment or hostile-caller isolation result.",
+        "sources": [
+          "config",
+          "store",
+          "loop",
+          "retrieval"
+        ]
+      },
+      {
+        "text": "Provenance: source labels encode user-stated, consolidated, model-inferred or legacy origin and are used in priority guards. Entries carry session and timestamps; episodes carry session/message ranges; optional JSONL audit records actor, operation, entry, scope, source, outcome/reason and time. MemoryEntry itself has no source-document citation object.",
+        "sources": [
+          "types",
+          "service",
+          "tiers"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: atomic persistence, file locks, bounded candidates and context snapshots, vector timeout/fallback, rerank top-K limits, retention and logs are visible in code. Optional audit is size-rotated. These mechanisms are not performance measurements.",
+        "sources": [
+          "store",
+          "retrieval",
+          "vectors",
+          "sqlite",
+          "consolidator",
+          "service"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "Hybrid ranking and admission rules are visible, but no adjudicated retrieval or abstention workload was run.",
+        "sources": [
+          "retrieval",
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Provenance checks and superseded versions are source-visible; no correction/stale-value probes were performed.",
+        "sources": [
+          "service",
+          "store",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Explicit forget barriers, semantic deletion and vector cleanup scheduling exist; no probe covered backups or all copies.",
+        "sources": [
+          "store",
+          "tiers",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Session and configured owner scopes are represented in configuration and code; no cross-scope or hostile-caller workload was run.",
+        "sources": [
+          "config",
+          "loop",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Provenance labels and audit fields exist, but generated answers were not adjudicated against source evidence.",
+        "sources": [
+          "types",
+          "service",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "An embedding timeout budget and bounded ranking path are visible; no latency distribution was collected.",
+        "sources": [
+          "retrieval",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Long-term consolidation may run asynchronously; no timed write-then-recall workload was run.",
+        "sources": [
+          "consolidator",
+          "memory-doc",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "Context caps exist, but no provider token usage or cost accounting was performed.",
+        "sources": [
+          "store",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "JSON records, SQLite auxiliary records, vector data, and retention paths are visible; no corpus-size or per-item storage measurement was collected.",
+        "sources": [
+          "store",
+          "sqlite",
+          "tiers",
+          "metrics"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected the official README, memory concept and guide, Runtime memory types/store/service/retrieval/consolidation/forgetting/vector code, Runtime configuration and wiring, episodic manager, and SQLite backend. It did not trace every tool integration, desktop implementation, migration, provider, or deployment.",
+        "sources": [
+          "readme",
+          "memory-doc",
+          "guide",
+          "types",
+          "store",
+          "service",
+          "retrieval",
+          "consolidator",
+          "desktop",
+          "sqlite"
+        ]
+      },
+      {
+        "text": "Documentation and source structure cannot establish runtime correctness, retrieval/correction quality, complete deletion across backups, production tenant isolation, evidence support, or operational performance.",
+        "sources": [
+          "guide",
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "text": "No Echo Agent runtime, tests, or benchmarks were run; all project metric domains are unmeasured for this review.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Echo Agent runtime, tests, or benchmarks were run. Source observations and upstream documentation are not benchmark results."
+    }
+  }
+}

@@ -1,0 +1,342 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 114,
+    "slug": "caura",
+    "name": "Caura",
+    "repository": "https://github.com/caura-ai/caura",
+    "branch": "main",
+    "revision": "8dbb7f40a76cdc75827923f1a82597b4c8393130",
+    "reviewed_at": "2026-11-25T07:44:46Z",
+    "review_timezone": "UTC (2026-11-24 23:44:46 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": "info@caura.ai",
+      "source_url": "https://caura.ai/",
+      "checked_urls": [
+        "https://caura.ai/",
+        "https://github.com/caura-ai/caura/blob/8dbb7f40a76cdc75827923f1a82597b4c8393130/README.md",
+        "https://github.com/caura-ai/caura/blob/8dbb7f40a76cdc75827923f1a82597b4c8393130/SUPPORT.md"
+      ],
+      "note": "The official Caura website publishes info@caura.ai. The official README and SUPPORT.md were also checked; neither supplied a different email."
+    },
+    "contact_email": "info@caura.ai",
+    "contact_email_source_url": "https://caura.ai/",
+    "contact_email_checked_sources": [
+      "https://caura.ai/",
+      "https://github.com/caura-ai/caura/blob/8dbb7f40a76cdc75827923f1a82597b4c8393130/README.md",
+      "https://github.com/caura-ai/caura/blob/8dbb7f40a76cdc75827923f1a82597b4c8393130/SUPPORT.md"
+    ],
+    "summary": "Caura is an open-source, multi-agent memory service with REST and MCP interfaces. It stores tenant- and agent-attributed memories in PostgreSQL with pgvector, applies visibility and trust policy, and supports hybrid recall, correction, deletion, and lifecycle processing. This is a source review; no workload was run.",
+    "atlas_locator": {
+      "ordinal": 114,
+      "name": "Caura",
+      "slug": "caura",
+      "listed_repository": "https://github.com/caura-ai/caura",
+      "roster_attribution": "repository_status=explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/caura.md",
+      "atlas_revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official upstream repository and default branch",
+        "path": "repository root",
+        "url": "https://github.com/caura-ai/caura"
+      },
+      {
+        "id": "head",
+        "label": "Verified current main head",
+        "path": "commit",
+        "symbol": "8dbb7f40a76cdc75827923f1a82597b4c8393130",
+        "url": "https://github.com/caura-ai/caura/commit/8dbb7f40a76cdc75827923f1a82597b4c8393130"
+      },
+      {
+        "id": "feed",
+        "label": "Official main commit feed",
+        "path": "main.atom",
+        "url": "https://github.com/caura-ai/caura/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "url": "https://github.com/caura-ai/caura/blob/8dbb7f40a76cdc75827923f1a82597b4c8393130/README.md"
+      },
+      {
+        "id": "fleet",
+        "label": "Shared persistent memory architecture guide",
+        "path": "docs/agent-fleet-memory.md",
+        "url": "https://github.com/caura-ai/caura/blob/8dbb7f40a76cdc75827923f1a82597b4c8393130/docs/agent-fleet-memory.md"
+      },
+      {
+        "id": "api",
+        "label": "API and component reference",
+        "path": "docs/api-reference.md",
+        "url": "https://github.com/caura-ai/caura/blob/8dbb7f40a76cdc75827923f1a82597b4c8393130/docs/api-reference.md"
+      },
+      {
+        "id": "model",
+        "label": "Memory ORM and verification-state source",
+        "path": "common/models/memory.py",
+        "url": "https://github.com/caura-ai/caura/blob/8dbb7f40a76cdc75827923f1a82597b4c8393130/common/models/memory.py"
+      },
+      {
+        "id": "deletion",
+        "label": "Deletion and retention matrix",
+        "path": "docs/deletion-matrix.md",
+        "url": "https://github.com/caura-ai/caura/blob/8dbb7f40a76cdc75827923f1a82597b4c8393130/docs/deletion-matrix.md"
+      },
+      {
+        "id": "otel",
+        "label": "OpenTelemetry memory spans and data policy",
+        "path": "docs/opentelemetry.md",
+        "url": "https://github.com/caura-ai/caura/blob/8dbb7f40a76cdc75827923f1a82597b4c8393130/docs/opentelemetry.md"
+      },
+      {
+        "id": "contact",
+        "label": "Official Caura website contact",
+        "path": "website",
+        "url": "https://caura.ai/"
+      },
+      {
+        "id": "contact_readme",
+        "label": "Official README contact check",
+        "path": "README.md",
+        "url": "https://github.com/caura-ai/caura/blob/8dbb7f40a76cdc75827923f1a82597b4c8393130/README.md"
+      },
+      {
+        "id": "support",
+        "label": "Official support guidance contact check",
+        "path": "SUPPORT.md",
+        "url": "https://github.com/caura-ai/caura/blob/8dbb7f40a76cdc75827923f1a82597b4c8393130/SUPPORT.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated roster identity and locator",
+        "path": "data/memory-systems.json",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/caura.md",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/caura.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository presents Caura as an Apache-2.0 memory layer for multi-agent fleets, accessed through REST, MCP, clients, and an OpenClaw plugin. The service is separate from agent runtimes; managed and self-hosted deployments have different credential provisioning boundaries.",
+        "sources": [
+          "readme",
+          "fleet",
+          "api"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The documented self-hosted topology separates a FastAPI core API (REST, MCP, routes, business logic, providers and pipelines) from a core-storage API that owns PostgreSQL CRUD and migrations. PostgreSQL with pgvector stores memory records; Redis is used for configured cache/bus functions, and worker/operations services handle asynchronous work and lifecycle jobs.",
+        "sources": [
+          "readme",
+          "api"
+        ]
+      },
+      {
+        "text": "The inspected memory model keys each row by tenant and agent and carries optional fleet scope, memory type, text content, embedding, weight, source URI and run ID. The model also defines verification states (`unverified`, `tool_observed`, `corroborated`, `human_verified`, `disputed`) and derives `tool_observed` from a real source URI or tool-call ID; `corroborated` is reserved in the cited model contract.",
+        "sources": [
+          "model"
+        ]
+      },
+      {
+        "text": "Documented capture enriches a plain-text write with a type, title/summary, importance, PII flags, and entity extraction when a provider is configured. The README distinguishes this model-backed path from keyless standalone mode, where deterministic local heuristics are used and keyword search works without embeddings.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write — documentation and code observation. REST/MCP write surfaces accept memory content and identity/scope metadata. The service enriches writes and records source/run evidence and lifecycle state; the memory model makes verification state server-derived rather than caller-authored. No write was sent during this review.",
+        "sources": [
+          "readme",
+          "api",
+          "model"
+        ]
+      },
+      {
+        "text": "Update and correction — documentation observation. The product documents correction as superseding stale memories while retaining lineage and exposing correction workflows. The inspected evidence does not establish that every correction path refreshes every derived artifact or that correction accuracy is high.",
+        "sources": [
+          "fleet",
+          "api"
+        ]
+      },
+      {
+        "text": "Delete and forgetting — documentation observation. The API includes memory deletion, while the deletion matrix documents lifecycle and retention behavior. A memory deletion does not guarantee immediate removal from every derived or external copy: the matrix lists retained correction/conflict records, digests, skill documents, bus notices, logs, and other known gaps pending purge or their own retention.",
+        "sources": [
+          "api",
+          "deletion"
+        ]
+      },
+      {
+        "text": "Retrieval — documentation observation. Caura describes hybrid recall over vector similarity, full-text search, and graph expansion, ranked with freshness and other signals; callers can use agent/fleet scope and filters. The guide describes `scope_agent`, `scope_team`, and governed `scope_org` visibility, and says production writes should preserve distinct agent identity. These are documented design paths, not measured recall quality.",
+        "sources": [
+          "readme",
+          "fleet",
+          "api"
+        ]
+      },
+      {
+        "text": "Scope isolation — documented policy. Tenant and visibility scope are part of each memory operation, and the docs describe service-enforced boundaries and tenant/fleet/agent identity. The guide explicitly distinguishes managed agent-scoped credentials from self-hosted deployments, where the caller must pass explicit agent IDs. This review did not test isolation or authorization.",
+        "sources": [
+          "fleet",
+          "readme",
+          "api"
+        ]
+      },
+      {
+        "text": "Provenance and evidence — code observation. The memory model includes source URI, run ID, agent identity, timestamps, and server-derived verification states; the official docs describe audit events for memory operations and a result author identity. The evidence contract distinguishes a source/tool-observed row from a human-verified claim. These fields support traceability but do not establish that every recalled answer is fully supported by citations.",
+        "sources": [
+          "model",
+          "readme",
+          "fleet"
+        ]
+      },
+      {
+        "text": "Efficiency and observability — documentation observation. The API reference describes typical write and recall latency figures for a specified single-instance configuration, while OpenTelemetry spans expose operation, tenant, record, agent, scope, trust, policy-action and payload-size attributes. Content is not exported by those spans; query content requires an explicit capture setting. The listed figures are upstream documentation claims, not measurements from this review.",
+        "sources": [
+          "api",
+          "otel",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Hybrid retrieval and verification filters are source/documentation-visible; no answerability, abstention, or citation-support workload was run.",
+        "sources": [
+          "readme",
+          "model",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Correction and supersession are documented; no correction cases were adjudicated.",
+        "sources": [
+          "fleet",
+          "api",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Deletion and lifecycle paths are documented, including retained copies; no post-delete retrieval or erasure probe was run.",
+        "sources": [
+          "deletion",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Tenant/fleet/agent scope enforcement is documented; no cross-tenant, cross-agent, or cross-fleet isolation workload was run.",
+        "sources": [
+          "fleet",
+          "api",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and provenance",
+        "status": "unmeasured",
+        "evidence": "Source metadata, verification states, and audit spans are visible in code/docs; no claim-support or citation-coverage evaluation was run.",
+        "sources": [
+          "model",
+          "otel",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Latency, write-to-recall delay, tokens, cost, storage, and observability",
+        "status": "unmeasured",
+        "evidence": "The API reference publishes configuration-specific latency figures and tracing fields, but this review collected no runtime, cost, token, storage, or delay measurements.",
+        "sources": [
+          "api",
+          "otel",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected the current official README, architecture and API documentation, deletion matrix, telemetry guide, and the memory ORM evidence/status model at the pinned upstream head. It did not trace every storage query, authorization route, background worker, migration, or deletion cascade.",
+        "sources": [
+          "readme",
+          "fleet",
+          "api",
+          "model",
+          "deletion",
+          "otel"
+        ]
+      },
+      {
+        "text": "The upstream architecture guide says it is not a fleet-scale benchmark and directs operators to validate throughput, latency, retrieval quality, concurrency, and policy under their own workload. No system execution or benchmark was performed here.",
+        "sources": [
+          "fleet",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Source and documentation do not establish deployment-specific isolation, answer quality, abstention, correction correctness, complete erasure, latency distributions, provider spend, or storage efficiency. Deletion documentation lists several copies that can persist until purge or independent retention expires.",
+        "sources": [
+          "fleet",
+          "deletion",
+          "otel",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is `not_run`. Project metric definitions, fixture, and execution-status record describe the evaluation protocol and do not constitute Caura results. No Caura system, benchmark, or test was run.",
+        "sources": [
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

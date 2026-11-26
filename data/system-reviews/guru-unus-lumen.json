@@ -1,0 +1,375 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 278,
+    "slug": "guru-unus-lumen",
+    "name": "GURU",
+    "repository": "https://github.com/GuruProduction/GURUbyUnusLumen",
+    "listed_repository": "https://github.com/GuruProduction/GURUbyUnusLumen",
+    "branch": "main",
+    "revision": "366208c8799d39cd5ec3921dd85a3d418e93810b",
+    "reviewed_at": "2026-11-25T22:09:07Z",
+    "review_timezone": "UTC (checked 2026-11-25 14:09:07 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "GURU is an Android agent application whose Cerebrum memory engine is a Rust workspace hosted in-process by the app. The reviewed source describes layered buffer, episodic, and semantic memory, graph and lexical retrieval, event records, and an encrypted local vault. This is a source-based review; no app, tests, or benchmark was run.",
+    "atlas_locator": {
+      "ordinal": 278,
+      "name": "GURU",
+      "slug": "guru-unus-lumen",
+      "listed_repository": "https://github.com/GuruProduction/GURUbyUnusLumen",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/guru-unus-lumen.md",
+      "revision": "366208c8799d39cd5ec3921dd85a3d418e93810b"
+    },
+    "contact": {
+      "email": "steven@unuslumen.com",
+      "source_url": "https://github.com/GuruProduction/GURUbyUnusLumen/blob/366208c8799d39cd5ec3921dd85a3d418e93810b/README.md",
+      "checked_urls": [
+        "https://github.com/GuruProduction/GURUbyUnusLumen/blob/366208c8799d39cd5ec3921dd85a3d418e93810b/README.md",
+        "https://github.com/GuruProduction/GURUbyUnusLumen/blob/366208c8799d39cd5ec3921dd85a3d418e93810b/SECURITY.md"
+      ],
+      "note": "The official pinned README and security policy publish steven@unuslumen.com. No commit/profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": "steven@unuslumen.com",
+    "contact_email_source_url": "https://github.com/GuruProduction/GURUbyUnusLumen/blob/366208c8799d39cd5ec3921dd85a3d418e93810b/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/GuruProduction/GURUbyUnusLumen/blob/366208c8799d39cd5ec3921dd85a3d418e93810b/README.md",
+      "https://github.com/GuruProduction/GURUbyUnusLumen/blob/366208c8799d39cd5ec3921dd85a3d418e93810b/SECURITY.md"
+    ],
+    "contact_email_note": "The official pinned README and SECURITY.md publish steven@unuslumen.com.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[277], ordinal 278; curated name, slug, explicit locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/guru-unus-lumen.md",
+        "symbol": "Catalog-pinned attribution for identity and locator context only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/guru-unus-lumen.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "GitHub repository page",
+        "symbol": "Canonical GuruProduction/GURUbyUnusLumen repository; default branch main",
+        "url": "https://github.com/GuruProduction/GURUbyUnusLumen"
+      },
+      {
+        "id": "head",
+        "label": "Official current main commit",
+        "path": "GitHub commits API",
+        "symbol": "main resolves to full SHA 366208c8799d39cd5ec3921dd85a3d418e93810b; commit timestamp 2026-11-21T10:43:08Z",
+        "url": "https://api.github.com/repos/GuruProduction/GURUbyUnusLumen/commits/main"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "GURU product overview, memory description, on-device architecture, data and contact statements",
+        "url": "https://github.com/GuruProduction/GURUbyUnusLumen/blob/366208c8799d39cd5ec3921dd85a3d418e93810b/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Pinned architecture guide",
+        "path": "ARCHITECTURE.md",
+        "symbol": "Android app, Rust Cerebrum workspace, JNI boundary, vault lifecycle, local memory invariants",
+        "url": "https://github.com/GuruProduction/GURUbyUnusLumen/blob/366208c8799d39cd5ec3921dd85a3d418e93810b/ARCHITECTURE.md"
+      },
+      {
+        "id": "core",
+        "label": "Pinned Cerebrum core types",
+        "path": "GURUbeta-FULL/cerebrum/cerebrum-core/src/lib.rs",
+        "symbol": "Memory identifiers and shared record/query/protocol contracts",
+        "url": "https://github.com/GuruProduction/GURUbyUnusLumen/blob/366208c8799d39cd5ec3921dd85a3d418e93810b/GURUbeta-FULL/cerebrum/cerebrum-core/src/lib.rs"
+      },
+      {
+        "id": "state",
+        "label": "Pinned Cerebrum state aggregator",
+        "path": "GURUbeta-FULL/cerebrum/cerebrum-server/src/state.rs",
+        "symbol": "Single in-memory state aggregates engines, lexical index, event store, and experience store",
+        "url": "https://github.com/GuruProduction/GURUbyUnusLumen/blob/366208c8799d39cd5ec3921dd85a3d418e93810b/GURUbeta-FULL/cerebrum/cerebrum-server/src/state.rs"
+      },
+      {
+        "id": "handler",
+        "label": "Pinned request handlers",
+        "path": "GURUbeta-FULL/cerebrum/cerebrum-server/src/handler.rs",
+        "symbol": "CURATE, QUERY, RETRIEVE, SEARCH, GRAPH_TRAVERSE, CONSOLIDATE handlers and archived-entry visibility predicate",
+        "url": "https://github.com/GuruProduction/GURUbyUnusLumen/blob/366208c8799d39cd5ec3921dd85a3d418e93810b/GURUbeta-FULL/cerebrum/cerebrum-server/src/handler.rs"
+      },
+      {
+        "id": "persistence",
+        "label": "Pinned encrypted persistence",
+        "path": "GURUbeta-FULL/cerebrum/cerebrum-server/src/persistence.rs",
+        "symbol": "Subsystem records saved/restored through encrypted vault; generation replacement and subsystem tags",
+        "url": "https://github.com/GuruProduction/GURUbyUnusLumen/blob/366208c8799d39cd5ec3921dd85a3d418e93810b/GURUbeta-FULL/cerebrum/cerebrum-server/src/persistence.rs"
+      },
+      {
+        "id": "crypto",
+        "label": "Pinned vault cryptography",
+        "path": "GURUbeta-FULL/cerebrum/cerebrum-crypto/src/lib.rs",
+        "symbol": "Encrypted record-stream layout, Argon2id/XChaCha20-Poly1305 and RAM-only key contract",
+        "url": "https://github.com/GuruProduction/GURUbyUnusLumen/blob/366208c8799d39cd5ec3921dd85a3d418e93810b/GURUbeta-FULL/cerebrum/cerebrum-crypto/src/lib.rs"
+      },
+      {
+        "id": "decay",
+        "label": "Pinned decay and consolidation engine",
+        "path": "GURUbeta-FULL/cerebrum/cerebrum-decay/src/lib.rs",
+        "symbol": "Buffer/episodic/semantic layers, access strengthening, configured half-lives, hibernation and archival",
+        "url": "https://github.com/GuruProduction/GURUbyUnusLumen/blob/366208c8799d39cd5ec3921dd85a3d418e93810b/GURUbeta-FULL/cerebrum/cerebrum-decay/src/lib.rs"
+      },
+      {
+        "id": "episodic",
+        "label": "Pinned episodic store",
+        "path": "GURUbeta-FULL/cerebrum/cerebrum-episodic/src/lib.rs",
+        "symbol": "Episode context, source/trigger lookup, related-episode links, and capacity eviction",
+        "url": "https://github.com/GuruProduction/GURUbyUnusLumen/blob/366208c8799d39cd5ec3921dd85a3d418e93810b/GURUbeta-FULL/cerebrum/cerebrum-episodic/src/lib.rs"
+      },
+      {
+        "id": "query",
+        "label": "Pinned query engine",
+        "path": "GURUbeta-FULL/cerebrum/cerebrum-query/src/lib.rs",
+        "symbol": "Query classification, tiered retrieval and confidence routing",
+        "url": "https://github.com/GuruProduction/GURUbyUnusLumen/blob/366208c8799d39cd5ec3921dd85a3d418e93810b/GURUbeta-FULL/cerebrum/cerebrum-query/src/lib.rs"
+      },
+      {
+        "id": "storage",
+        "label": "Pinned storage abstraction",
+        "path": "GURUbeta-FULL/cerebrum/cerebrum-storage/src/lib.rs",
+        "symbol": "Key-value put/get/delete/scan interface and in-memory WAL/snapshot components",
+        "url": "https://github.com/GuruProduction/GURUbyUnusLumen/blob/366208c8799d39cd5ec3921dd85a3d418e93810b/GURUbeta-FULL/cerebrum/cerebrum-storage/src/lib.rs"
+      },
+      {
+        "id": "android",
+        "label": "Pinned Android host bridge",
+        "path": "GURUbeta-FULL/cerebrum/cerebrum-android/src/lib.rs",
+        "symbol": "JNI calls, in-process state, local socket, passphrase lifetime, dirty-save watcher and status/error hooks",
+        "url": "https://github.com/GuruProduction/GURUbyUnusLumen/blob/366208c8799d39cd5ec3921dd85a3d418e93810b/GURUbeta-FULL/cerebrum/cerebrum-android/src/lib.rs"
+      },
+      {
+        "id": "security",
+        "label": "Pinned official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Published contact; memory encryption and backup statements, repository security limitations and no-telemetry claims",
+        "url": "https://github.com/GuruProduction/GURUbyUnusLumen/blob/366208c8799d39cd5ec3921dd85a3d418e93810b/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Definitions of benchmark domains; protocol only, not GURU results",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned evaluation cases; not executed in this review",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared project status record, not GURU measurement evidence",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README identifies GURU as an Android application built by Steven Newman / Unus Lumen. Its memory component is the Cerebrum Rust engine linked into the app, rather than a hosted memory service.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The architecture guide places the app, its persistence, and user-facing memory surfaces on-device; the Android host calls the brain through JNI and an app-private Unix socket.",
+        "sources": [
+          "architecture",
+          "android"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Cerebrum is a Rust workspace with separate crates for core contracts, storage, cryptography, decay, episodic memory, graph/query, embeddings, curation, events, and server dispatch. Its core crate defines shared identifiers and data contracts; the storage crate exposes put/get/delete/prefix-scan and flush operations with in-memory WAL and snapshot helpers. CerebrumState aggregates these engines and indices behind shared mutable state.",
+        "sources": [
+          "architecture",
+          "core",
+          "storage",
+          "state",
+          "handler"
+        ]
+      },
+      {
+        "text": "The state includes a context tree, graph store, lexical BM25 index, embedding and signature engines, dynamic wavelet matrix, episodic and decay stores, event history, query caches, and an indexed-experience store. This is a multi-index memory design with several retrieval and curation projections.",
+        "sources": [
+          "state",
+          "handler"
+        ]
+      },
+      {
+        "text": "The Android bridge keeps the brain in-process. It exchanges framed payloads over a local Unix socket, tracks mutating frames, and schedules a trailing encrypted save. The architecture describes Room conversation history as separate from Cerebrum memory.",
+        "sources": [
+          "android",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Persistence writes subsystem snapshots as tagged records inside cerebrum.vault. The cryptography crate describes an Argon2id-derived key and XChaCha20-Poly1305 record encryption; the Android host keeps the passphrase/key material in memory for the brain session and zeroizes the passphrase on stop.",
+        "sources": [
+          "persistence",
+          "crypto",
+          "android"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: the protocol exposes a CURATE operation. The request handler routes curation through a pipeline that updates the context tree and related retrieval and graph subsystems, including lexical indexing, signatures, event recording, episodic data, embeddings, policy summaries, and hot caches.",
+        "sources": [
+          "handler",
+          "state"
+        ]
+      },
+      {
+        "text": "Update and correction: curation includes mutation operations and consolidation components, while the memory design includes duplicate merging and promotion between layers. The inspected sources support these mechanisms, but this review did not run a correction sequence or establish whether every surface preserves a complete prior-value history.",
+        "sources": [
+          "handler",
+          "decay",
+          "readme"
+        ]
+      },
+      {
+        "text": "Delete: the handler's shared retirement predicate treats archived context-tree entries as retired, so read surfaces can exclude them consistently. The README characterizes deletion as archive rather than erasure. This does not establish physical removal from vault generations, backups, exports, or previously copied data.",
+        "sources": [
+          "handler",
+          "readme",
+          "persistence"
+        ]
+      },
+      {
+        "text": "Retrieval: the protocol separates query, retrieve, search, graph traversal, list, prefetch, and consolidate operations. The state includes hot caches, lexical search, embeddings, signatures, and graph engines; the query crate provides query classification, tiered retrieval, and confidence routing.",
+        "sources": [
+          "handler",
+          "state",
+          "query"
+        ]
+      },
+      {
+        "text": "Episodic retrieval can reconstruct an episode with context, valence, and related episode IDs, and search episodes by source or trigger. The store has a configurable capacity and evicts its oldest episode when full.",
+        "sources": [
+          "episodic"
+        ]
+      },
+      {
+        "text": "The README describes promotion from buffer to episodic to semantic with recall, strengthening on access, decay, and a daily consolidation pass. The Rust decay defaults instead specify a one-hour buffer half-life, a 30-day episodic half-life, and an archival threshold of 90 days; these are source defaults, not observed device behavior.",
+        "sources": [
+          "readme",
+          "decay"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable recall and abstention: multiple retrieval indices and confidence routing are present in code; answer correctness, coverage, and abstention were not measured.",
+        "sources": [
+          "state",
+          "query"
+        ]
+      },
+      {
+        "text": "Correction and stale values: curation, consolidation, and archival mechanisms are present; no correction or stale-value probe was run.",
+        "sources": [
+          "handler",
+          "decay"
+        ]
+      },
+      {
+        "text": "Deletion leakage: the read path recognizes archived entries as retired, while the product describes archive semantics; data leakage after deletion and removal from backups were not tested.",
+        "sources": [
+          "handler",
+          "readme",
+          "persistence"
+        ]
+      },
+      {
+        "text": "Scope isolation: GURU is documented as a local, owner-operated Android app with one in-process brain. The inspected state and request handlers do not establish tenant or project authorization boundaries; cross-user isolation was not tested.",
+        "sources": [
+          "readme",
+          "state",
+          "handler"
+        ]
+      },
+      {
+        "text": "Evidence and provenance: episodic entries retain source and trigger information, and the event store is described in code as an audit trail for memory mutations. Citation entailment, provenance completeness, and user-level auditability were not adjudicated.",
+        "sources": [
+          "episodic",
+          "state",
+          "handler"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: the system uses local caches and multiple specialized indices; the host exposes status and last-error reporting and defers saves to a trailing window. Latency, write-to-recall delay, token use, cost, storage efficiency, and save durability under interruption were not measured.",
+        "sources": [
+          "state",
+          "android",
+          "persistence"
+        ]
+      },
+      {
+        "text": "Security and privacy: documentation describes encrypted-at-rest memory and disabled cloud backup; the security policy also states that inference prompts and recalled memory go to the model endpoint selected by the user. No cryptographic audit, network capture, or device test was performed.",
+        "sources": [
+          "readme",
+          "security",
+          "crypto"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This assessment is pinned to public source at main commit 366208c8799d39cd5ec3921dd85a3d418e93810b. It does not establish which capabilities are enabled in a particular APK or installation.",
+        "sources": [
+          "repo",
+          "head",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The README's seven-day decay summary differs from the decay crate's default hour/day parameters. The source-level code paths and configured runtime behavior were not exercised, so the discrepancy remains unresolved.",
+        "sources": [
+          "readme",
+          "decay"
+        ]
+      },
+      {
+        "text": "The repository describes a large, evolving Android application; its security policy says there has been no external professional security audit and documents limits in the trust chain. This review did not conduct a security audit.",
+        "sources": [
+          "readme",
+          "security"
+        ]
+      },
+      {
+        "text": "No runtime, tests, benchmark fixture, or device workload was run. Retrieval quality, correction behavior, deletion leakage, isolation, cryptographic correctness, performance, and operational reliability remain unknown.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No GURU runtime, tests, or benchmark workload was run. Source observations, README statements, and project protocol files are not GURU benchmark results.",
+      "metric_definitions": "../METRICS.md",
+      "fixture": "../fixtures/memory-benchmark-v1.json",
+      "execution_status": "../results/initial-baselines-status.json"
+    }
+  }
+}

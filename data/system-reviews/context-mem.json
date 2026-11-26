@@ -1,0 +1,418 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 144,
+    "slug": "context-mem",
+    "name": "Context Mem",
+    "repository": "https://github.com/JubaKitiashvili/context-mem",
+    "branch": "main",
+    "revision": "2a55af0a4bf3467df89f1315a74bb2e15ad903f7",
+    "reviewed_at": "2026-11-25T08:53:29Z",
+    "review_timezone": "UTC (2026-11-25 00:53:29 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/JubaKitiashvili/context-mem/blob/2a55af0a4bf3467df89f1315a74bb2e15ad903f7/README.md",
+      "checked_urls": [
+        "https://github.com/JubaKitiashvili/context-mem/blob/2a55af0a4bf3467df89f1315a74bb2e15ad903f7/README.md"
+      ],
+      "note": "The official pinned README was checked; it publishes no contact email."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/JubaKitiashvili/context-mem/blob/2a55af0a4bf3467df89f1315a74bb2e15ad903f7/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the official pinned README.",
+    "summary": "Context Mem is a local TypeScript memory and context system for coding agents. It stores observations and structured knowledge in SQLite with lexical and optional vector retrieval, and can maintain a derived Markdown wiki. This is a source review; no runtime, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 144,
+      "name": "Context Mem",
+      "slug": "context-mem",
+      "listed_repository": "https://github.com/JubaKitiashvili/context-mem",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/context-mem.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "sources": [
+      {
+        "id": "roster",
+        "label": "Curated roster identity and repository locator",
+        "path": "data/memory-systems.json",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/context-mem.md",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/context-mem.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository; default branch main",
+        "path": "repository root",
+        "url": "https://github.com/JubaKitiashvili/context-mem"
+      },
+      {
+        "id": "head",
+        "label": "Verified current main head",
+        "path": "commit",
+        "symbol": "2a55af0a4bf3467df89f1315a74bb2e15ad903f7",
+        "url": "https://github.com/JubaKitiashvili/context-mem/commit/2a55af0a4bf3467df89f1315a74bb2e15ad903f7"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "url": "https://github.com/JubaKitiashvili/context-mem/blob/2a55af0a4bf3467df89f1315a74bb2e15ad903f7/README.md"
+      },
+      {
+        "id": "pipeline",
+        "label": "Observation processing pipeline",
+        "path": "src/core/pipeline.ts",
+        "url": "https://github.com/JubaKitiashvili/context-mem/blob/2a55af0a4bf3467df89f1315a74bb2e15ad903f7/src/core/pipeline.ts"
+      },
+      {
+        "id": "kernel",
+        "label": "Observation, search, and lifecycle kernel",
+        "path": "src/core/kernel.ts",
+        "url": "https://github.com/JubaKitiashvili/context-mem/blob/2a55af0a4bf3467df89f1315a74bb2e15ad903f7/src/core/kernel.ts"
+      },
+      {
+        "id": "migrations",
+        "label": "SQLite schema and migrations",
+        "path": "src/plugins/storage/migrations.ts",
+        "url": "https://github.com/JubaKitiashvili/context-mem/blob/2a55af0a4bf3467df89f1315a74bb2e15ad903f7/src/plugins/storage/migrations.ts"
+      },
+      {
+        "id": "lifecycle",
+        "label": "Retention and lifecycle cleanup",
+        "path": "src/core/lifecycle.ts",
+        "url": "https://github.com/JubaKitiashvili/context-mem/blob/2a55af0a4bf3467df89f1315a74bb2e15ad903f7/src/core/lifecycle.ts"
+      },
+      {
+        "id": "bm25",
+        "label": "BM25 retrieval",
+        "path": "src/plugins/search/bm25.ts",
+        "url": "https://github.com/JubaKitiashvili/context-mem/blob/2a55af0a4bf3467df89f1315a74bb2e15ad903f7/src/plugins/search/bm25.ts"
+      },
+      {
+        "id": "vector",
+        "label": "Vector retrieval",
+        "path": "src/plugins/search/vector.ts",
+        "url": "https://github.com/JubaKitiashvili/context-mem/blob/2a55af0a4bf3467df89f1315a74bb2e15ad903f7/src/plugins/search/vector.ts"
+      },
+      {
+        "id": "fusion",
+        "label": "Hybrid retrieval fusion",
+        "path": "src/plugins/search/fusion.ts",
+        "url": "https://github.com/JubaKitiashvili/context-mem/blob/2a55af0a4bf3467df89f1315a74bb2e15ad903f7/src/plugins/search/fusion.ts"
+      },
+      {
+        "id": "knowledge",
+        "label": "Structured knowledge and graph store",
+        "path": "src/plugins/knowledge/knowledge-base.ts",
+        "url": "https://github.com/JubaKitiashvili/context-mem/blob/2a55af0a4bf3467df89f1315a74bb2e15ad903f7/src/plugins/knowledge/knowledge-base.ts"
+      },
+      {
+        "id": "knowledge_tools",
+        "label": "Knowledge MCP tools and contradiction resolution",
+        "path": "src/mcp-server/tools/knowledge.ts",
+        "url": "https://github.com/JubaKitiashvili/context-mem/blob/2a55af0a4bf3467df89f1315a74bb2e15ad903f7/src/mcp-server/tools/knowledge.ts"
+      },
+      {
+        "id": "decision_trail",
+        "label": "Decision evidence-chain retrieval",
+        "path": "src/core/decision-trail.ts",
+        "url": "https://github.com/JubaKitiashvili/context-mem/blob/2a55af0a4bf3467df89f1315a74bb2e15ad903f7/src/core/decision-trail.ts"
+      },
+      {
+        "id": "wiki_schema",
+        "label": "LLM Wiki schema documentation",
+        "path": "docs/llm-wiki-schema.md",
+        "url": "https://github.com/JubaKitiashvili/context-mem/blob/2a55af0a4bf3467df89f1315a74bb2e15ad903f7/docs/llm-wiki-schema.md"
+      },
+      {
+        "id": "methodology",
+        "label": "Upstream benchmark methodology",
+        "path": "docs/benchmarks/methodology.md",
+        "url": "https://github.com/JubaKitiashvili/context-mem/blob/2a55af0a4bf3467df89f1315a74bb2e15ad903f7/docs/benchmarks/methodology.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The curated roster identifies ordinal 144 as Context Mem, slug context-mem, with an explicit repository locator. Atlas is included only as roster attribution.",
+        "sources": [
+          "roster",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The official upstream repository uses main as its default branch; GitHub repository metadata, git ls-remote, and the shallow checkout agreed on current full head 2a55af0a4bf3467df89f1315a74bb2e15ad903f7.",
+        "sources": [
+          "repo",
+          "head"
+        ]
+      },
+      {
+        "text": "The official README presents local agent memory and context infrastructure with observation capture, knowledge tools, hybrid retrieval, and an optional Markdown wiki.",
+        "sources": [
+          "readme",
+          "pipeline",
+          "knowledge_tools"
+        ]
+      },
+      {
+        "text": "The official README was checked for a contact email and publishes none.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README describes SQLite as the authoritative store for observations and structured knowledge; the optional Markdown vault is a derived and human-readable layer governed by a public schema.",
+        "sources": [
+          "readme",
+          "wiki_schema",
+          "migrations"
+        ]
+      },
+      {
+        "text": "Observation records include content, summary, metadata, indexed time, privacy level, session/correlation data, importance, pin state, and compression tier. Separate tables represent knowledge, entities, and relationships; knowledge migrations add temporal validity and supersession fields.",
+        "sources": [
+          "migrations"
+        ]
+      },
+      {
+        "text": "The observation pipeline composes privacy handling, content summarization, enrichment, and storage/indexing. Retrieval combines lexical, vector, and related similarity strategies; the README documents optional query judging and agent context hooks.",
+        "sources": [
+          "pipeline",
+          "kernel",
+          "bm25",
+          "vector",
+          "fusion",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: observe accepts content, type, source, and optional file path. The processing pipeline can redact privacy-sensitive content, summarize by content type, derive importance/entities/topics, and persist/index the observation.",
+        "sources": [
+          "pipeline",
+          "kernel",
+          "migrations"
+        ]
+      },
+      {
+        "text": "Update/correction: structured knowledge supports temporal validity and supersession, with contradiction resolution tools. The inspected sources do not establish a general correction workflow for observation records or correction accuracy.",
+        "sources": [
+          "migrations",
+          "knowledge_tools"
+        ]
+      },
+      {
+        "text": "Delete/retention: lifecycle code removes aged observations subject to protected types and handles private session cleanup. Pinned observations receive special protection. These paths do not establish universal physical erasure across derived files or database remnants.",
+        "sources": [
+          "lifecycle",
+          "kernel"
+        ]
+      },
+      {
+        "text": "Retrieval: BM25 and vector search implementations are combined through a fusion stage. The README additionally describes hybrid strategies and optional LLM reranking; those published performance claims were not tested here.",
+        "sources": [
+          "bm25",
+          "vector",
+          "fusion",
+          "readme",
+          "methodology"
+        ]
+      },
+      {
+        "text": "Scope: the README describes a project-local .context-mem store and also global knowledge promotion/search. Store location and search categories should not be treated as proof of authenticated tenant isolation; no isolation workload was run.",
+        "sources": [
+          "readme",
+          "migrations",
+          "knowledge"
+        ]
+      },
+      {
+        "text": "Provenance: observation metadata retains source and session/correlation information; knowledge has temporal validity and supersession. Decision-trail code retrieves related evidence records, but these relationships do not guarantee factual support or answer citation correctness.",
+        "sources": [
+          "migrations",
+          "decision_trail",
+          "readme"
+        ]
+      },
+      {
+        "text": "Efficiency/observability: content-aware summarizers and tiered compression, search fusion, dashboard, and diagnostics are described or implemented. No latency, token, cost, storage, or operational telemetry measurements were collected for this review.",
+        "sources": [
+          "readme",
+          "pipeline",
+          "fusion",
+          "methodology"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Retrieval components are present, but no answerability or abstention workload was run.",
+        "sources": [
+          "bm25",
+          "vector",
+          "fusion",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Structured knowledge has temporal and supersession fields; no correction or staleness workload was run.",
+        "sources": [
+          "migrations",
+          "knowledge_tools",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Lifecycle cleanup is source-visible; no post-delete retrieval, derived artifact, or storage-remnant check was run.",
+        "sources": [
+          "lifecycle",
+          "kernel",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation leakage",
+        "status": "unmeasured",
+        "evidence": "Project and global knowledge paths are documented, but no cross-project or tenant isolation workload was run.",
+        "sources": [
+          "readme",
+          "knowledge",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Decision-trail and provenance structures exist; no claim-support or citation correctness evaluation was run.",
+        "sources": [
+          "decision_trail",
+          "readme",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "The README publishes upstream performance claims; no latency workload was collected in this review.",
+        "sources": [
+          "readme",
+          "methodology",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Observation processing and retrieval paths are present; indexing delay was not measured.",
+        "sources": [
+          "pipeline",
+          "kernel",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "Summarization and optional model-backed paths are documented; token and cost results were not collected.",
+        "sources": [
+          "readme",
+          "pipeline",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "SQLite and optional vault structures are documented; no storage footprint comparison was performed.",
+        "sources": [
+          "migrations",
+          "wiki_schema",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "Source inspection does not establish runtime retrieval quality, abstention, correction outcomes, scope isolation, deletion completeness, or resource use.",
+        "sources": [
+          "readme",
+          "kernel",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Project-local storage coexists with documented global knowledge functions; project directory boundaries alone do not establish tenant security.",
+        "sources": [
+          "readme",
+          "knowledge"
+        ]
+      },
+      {
+        "text": "Lifecycle cleanup does not prove removal from every derived artifact or physical database storage location.",
+        "sources": [
+          "lifecycle",
+          "kernel"
+        ]
+      },
+      {
+        "text": "This review covered selected current documentation and source files, not every adapter, integration, migration, or deployment configuration.",
+        "sources": [
+          "repo",
+          "head",
+          "readme"
+        ]
+      }
+    ],
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "No Context Mem runtime, tests, or benchmark workloads were executed for this source review."
+    }
+  }
+}

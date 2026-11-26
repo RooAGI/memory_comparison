@@ -1,0 +1,305 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "archeus",
+    "name": "archeus",
+    "repository": "https://github.com/babarmuhammad/archeus",
+    "branch": "main",
+    "revision": "3fc3711c0b54aee9596c2e2a1ec5fd6b5d6d40c4",
+    "reviewed_at": "2026-11-24T21:13:30Z",
+    "review_timezone": "UTC (2026-11-24 13:13:30 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Archeus is a local workspace and memory layer for coding agents. It builds a per-project semantic graph from repository files and session transcripts, then exposes compact project memory through a launcher digest, path-scoped rules, and optional prompt-time retrieval. A separate lesson pipeline extracts durable decisions and corrections from sessions.",
+    "atlas_locator": {
+      "ordinal": 64,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/archeus.md",
+      "listed_repository": "https://github.com/babarmuhammad/archeus"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/babarmuhammad/archeus/blob/3fc3711c0b54aee9596c2e2a1ec5fd6b5d6d40c4/README.md",
+      "note": "Checked the official README.md and SECURITY.md at the reviewed revision; neither publishes a contact email. The SECURITY.md directs vulnerability reports to GitHub private vulnerability reporting."
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "babarmuhammad/archeus; public repository; main shown as default branch",
+        "url": "https://github.com/babarmuhammad/archeus"
+      },
+      {
+        "id": "head",
+        "label": "Verified main head",
+        "path": "commit",
+        "symbol": "main HEAD 3fc3711c0b54aee9596c2e2a1ec5fd6b5d6d40c4",
+        "url": "https://github.com/babarmuhammad/archeus/commit/3fc3711c0b54aee9596c2e2a1ec5fd6b5d6d40c4"
+      },
+      {
+        "id": "head-feed",
+        "label": "Official main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "latest main entry 3fc3711c0b54aee9596c2e2a1ec5fd6b5d6d40c4; feed updated 2026-11-23T14:50:59Z",
+        "url": "https://github.com/babarmuhammad/archeus/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "project overview, installation, memory surfaces, and published documentation links",
+        "url": "https://github.com/babarmuhammad/archeus/blob/3fc3711c0b54aee9596c2e2a1ec5fd6b5d6d40c4/README.md"
+      },
+      {
+        "id": "memory-doc",
+        "label": "Official project memory guide",
+        "path": "docs/memory.md",
+        "symbol": "data flow, injection surfaces, retrieval, refresh, limits, review and observability",
+        "url": "https://github.com/babarmuhammad/archeus/blob/3fc3711c0b54aee9596c2e2a1ec5fd6b5d6d40c4/docs/memory.md"
+      },
+      {
+        "id": "memory-py",
+        "label": "Project memory implementation",
+        "path": "claude_sessions/memory.py",
+        "symbol": "graph persistence, refresh coordination, memory data, invalidation, snapshots, digest and ask entry point",
+        "url": "https://github.com/babarmuhammad/archeus/blob/3fc3711c0b54aee9596c2e2a1ec5fd6b5d6d40c4/claude_sessions/memory.py"
+      },
+      {
+        "id": "recall-py",
+        "label": "Recall implementation",
+        "path": "claude_sessions/recall.py",
+        "symbol": "indexing, ranking, budget fitting, hit logging and retrieval",
+        "url": "https://github.com/babarmuhammad/archeus/blob/3fc3711c0b54aee9596c2e2a1ec5fd6b5d6d40c4/claude_sessions/recall.py"
+      },
+      {
+        "id": "lessons-py",
+        "label": "Session lesson implementation",
+        "path": "claude_sessions/lessons.py",
+        "symbol": "transcript lesson extraction, review status, pinning and eviction",
+        "url": "https://github.com/babarmuhammad/archeus/blob/3fc3711c0b54aee9596c2e2a1ec5fd6b5d6d40c4/claude_sessions/lessons.py"
+      },
+      {
+        "id": "conventions-py",
+        "label": "Cross-project conventions implementation",
+        "path": "claude_sessions/conventions.py",
+        "symbol": "lesson clustering and user-level convention promotion across projects/accounts",
+        "url": "https://github.com/babarmuhammad/archeus/blob/3fc3711c0b54aee9596c2e2a1ec5fd6b5d6d40c4/claude_sessions/conventions.py"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "vulnerability reporting instructions; no published contact email",
+        "url": "https://github.com/babarmuhammad/archeus/blob/3fc3711c0b54aee9596c2e2a1ec5fd6b5d6d40c4/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "shared benchmark metric definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "execution status is not_run; no measurements",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Shared benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned fixture only, not an Archeus measurement",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "position 64 identity, listed repository locator and Atlas source attribution only",
+        "url": "../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The public repository and README describe Archeus as a local memory and workspace layer for AI coding agents, built by Babar Muhammad Anas and licensed MIT. The inspected project-memory feature is part of the larger Python application, with a terminal UI, desktop GUI, and Claude Code plugin surfaces; the README also describes Codex and pi compatibility.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Code observation: `claude_sessions.memory` stores a versioned JSON graph under the project work directory's `.archeus/memory/graph.json` and mirrors it under Archeus's encoded project folder when available. The graph holds entities, relations, repo/module summaries, source provenance, module dependency edges, refresh state, conflicts, stale counts, and aggregate model-call cost fields. Writes use the project's atomic JSON helper; a shrink can record a graph snapshot before saving.",
+        "sources": [
+          "memory-py"
+        ]
+      },
+      {
+        "text": "Code and documentation observation: background refresh extracts codebase and module information with a headless model call, incrementally using file state/content hashes, then merges this with dependency information. Source constants bound per-file and per-batch input and per-module representative files. A per-project exclusive scan lock coordinates refreshes; the documentation describes capped background cycles, queued work, progress, and saving progress between steps.",
+        "sources": [
+          "memory-py",
+          "memory-doc"
+        ]
+      },
+      {
+        "text": "The guide describes three context surfaces: a small always-on CLAUDE.md micro-index, lazy per-module `.claude/rules/` files, and an optional UserPromptSubmit hook that retrieves a task-related subgraph. The recall engine is local lexical ranking; it does not call a model to rank each prompt. A separate project `worklog` can contribute a small number of recent session episodes.",
+        "sources": [
+          "readme",
+          "memory-doc",
+          "recall-py"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write/build — a project memory build scans source files and sends bounded module content to the configured headless model for entities and relations; it also incorporates dependency edges and repo/module summaries. Refresh is incremental. The inspected interface is build/refresh-oriented; no general per-fact user-authored CRUD API was established in the reviewed memory and recall files.",
+        "sources": [
+          "memory-py",
+          "memory-doc"
+        ]
+      },
+      {
+        "text": "Update — when a refresh no longer supports an existing fact, the implementation can mark it invalid and timestamp invalidation rather than immediately removing it. Recall excludes invalid entities. The source defines a bounded invalidated-history count and age window; entity loss can be snapshotted before graph save, with the documentation describing a 12-version history.",
+        "sources": [
+          "memory-py",
+          "recall-py",
+          "memory-doc"
+        ]
+      },
+      {
+        "text": "Delete/forget — the inspected memory model includes eviction and graph-shrinking paths, and the documentation describes pruning with preview/confirmation and undo through snapshots. I did not establish a universal per-entity hard-delete API, nor physical erasure behavior for snapshots, sidecars, backups, or mirrored copies from the bounded files inspected.",
+        "sources": [
+          "memory-py",
+          "memory-doc",
+          "lessons-py"
+        ]
+      },
+      {
+        "text": "Retrieval — recall builds a local index over names and summaries, uses lexical overlap, path/module matches, dependency rank and lesson confidence, combines rankings with reciprocal-rank fusion, and expands selected entities through relations. Invalid facts and pending lessons are skipped. The renderer adds only items that fit the remaining token budget instead of truncating a long item; it returns an empty result for a blank query or empty graph.",
+        "sources": [
+          "recall-py",
+          "memory-doc"
+        ]
+      },
+      {
+        "text": "Lesson write/review — after sessions, lesson extraction asks the configured model for a bounded set of durable error/fix pairs, decisions, corrections and preferences from transcript tails. Lessons carry kind and confidence; people can approve, pin or evict them. The recall path only injects approved or pinned lessons, while configured confidence auto-approval is described in the project guide.",
+        "sources": [
+          "lessons-py",
+          "recall-py",
+          "memory-doc"
+        ]
+      },
+      {
+        "text": "Scope — the graph is selected by project path and encoded project folder, so normal code memory is project-oriented. Lesson scans include sessions for the same project across accounts, and convention processing intentionally scans project graphs across accounts; qualifying preferences, corrections or decisions may be promoted into a user-level CLAUDE.md shared across projects. This global convention surface is a deliberate scope expansion.",
+        "sources": [
+          "memory-py",
+          "lessons-py",
+          "conventions-py",
+          "memory-doc"
+        ]
+      },
+      {
+        "text": "Provenance/evidence — graph provenance and module refresh state track the source files/modules processed; session lessons originate from transcript sessions. Returned memory text includes entity names, summaries, and associated files where available. The inspected graph schema does not provide claim-level citations to source passages or an external evidence adjudication protocol, so source lineage does not prove factual support.",
+        "sources": [
+          "memory-py",
+          "recall-py",
+          "lessons-py",
+          "memory-doc"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency and observability — code sets input bounds, an entity cap, invalid-history limits, query budgets, and scan locks; the docs describe the always-on and per-prompt token budgets. Recall appends only actually injected item names to a hits sidecar, and a later graph build folds those hits into reinforcement; preview mode does not log hits. Graph state includes cumulative cost fields, and UI/docs expose refresh status and spend. These are mechanisms and source-reported limits, not benchmark measurements.",
+        "sources": [
+          "memory-py",
+          "recall-py",
+          "memory-doc",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention are unmeasured. Lexical overlap, stopword handling, and empty-query behavior are code observations; no answerability or unanswerable-query evaluation was run.",
+        "sources": [
+          "recall-py",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate are unmeasured. Superseding a fact can invalidate it and preserve bounded history; no correction probes or stale-answer adjudication were run.",
+        "sources": [
+          "memory-py",
+          "recall-py",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Deletion leakage is unmeasured. Eviction, invalidation, snapshots and multiple graph locations are visible; no deleted-fact retrieval or physical-erasure checks were performed.",
+        "sources": [
+          "memory-py",
+          "memory-doc",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Scope-isolation leakage is unmeasured. Ordinary project graphs are project-oriented, while lesson mining spans accounts for that project and convention promotion is cross-project/user-level by design; no isolation workload was run.",
+        "sources": [
+          "lessons-py",
+          "conventions-py",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Evidence support precision and citation coverage are unmeasured. The review found source-file/module lineage and transcript origins, but no required claim-level source citations; no claim support adjudication was performed.",
+        "sources": [
+          "memory-py",
+          "lessons-py",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Retrieval latency and write-to-recall delay are unmeasured. Documentation gives target/source-described local behavior, but no runtime timings were collected for this review.",
+        "sources": [
+          "memory-doc",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Tokens, model cost and storage efficiency are unmeasured. Source contains token budget controls and aggregate cost fields, but no token/cost/storage observations were recorded for this system.",
+        "sources": [
+          "memory-py",
+          "memory-doc",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "The shared benchmark record is `not_run`; fixture probe counts describe a planned workload and are not results for Archeus.",
+        "sources": [
+          "record",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      "This is a bounded source review of the pinned README, project-memory guide, memory/recall/lesson/convention code, and security policy; it does not establish runtime behavior or cover every UI, plugin, storage, and session subsystem.",
+      "No system process, benchmark, or tests were run. Retrieval quality, abstention, latency, refresh delay, cost, storage growth, and concurrent-workload behavior remain unmeasured.",
+      "The inspected graph has source/module lineage but no claim-level citations; the review cannot establish that extracted facts are correct or that a retrieved summary is supported by the referenced source.",
+      "Physical deletion across snapshots, mirrored graphs, sidecars, transcripts, and backups was not established. Cross-project conventions deliberately broaden the audience of some lesson content."
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "The project execution record is not_run and contains no Archeus measurements. The fixture is a planned workload only. This review did not execute Archeus, benchmarks, or tests."
+    }
+  }
+}

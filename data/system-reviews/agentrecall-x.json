@@ -1,0 +1,298 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "agentrecall-x",
+    "name": "AgentRecall-X",
+    "repository": "https://github.com/Goldentrii/AgentRecall-X",
+    "branch": "main",
+    "revision": "bc03054aa12e1e766bac0780ef4a80e9a4dfb841",
+    "reviewed_at": "2026-11-24T19:10:02Z",
+    "review_timezone": "UTC (2026-11-24 11:10:02 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/Goldentrii/AgentRecall-X/blob/bc03054aa12e1e766bac0780ef4a80e9a4dfb841/README.md","checked_urls":["https://github.com/Goldentrii/AgentRecall-X/blob/bc03054aa12e1e766bac0780ef4a80e9a4dfb841/README.md","https://github.com/Goldentrii/AgentRecall-X/blob/bc03054aa12e1e766bac0780ef4a80e9a4dfb841/SECURITY.md","https://github.com/Goldentrii/AgentRecall-X/blob/bc03054aa12e1e766bac0780ef4a80e9a4dfb841/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "A local-first memory framework and MCP, SDK, and CLI stack organized around persistent project context and a governed correction ledger, with an optional hosted multi-user service. This review records source observations, not measured quality or performance.",
+    "atlas_locator": {
+      "ordinal": 27,
+      "name": "AgentRecall-X",
+      "slug": "agentrecall-x",
+      "listed_repository": "https://github.com/Goldentrii/AgentRecall-X",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agentrecall-x.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": "tongwu0824@gmail.com",
+    "contact_email_source_url": "https://github.com/Goldentrii/AgentRecall-X/blob/bc03054aa12e1e766bac0780ef4a80e9a4dfb841/PRIVACY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/Goldentrii/AgentRecall-X/blob/bc03054aa12e1e766bac0780ef4a80e9a4dfb841/README.md",
+      "https://github.com/Goldentrii/AgentRecall-X/blob/bc03054aa12e1e766bac0780ef4a80e9a4dfb841/PRIVACY.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical public repository and default branch",
+        "path": "repository",
+        "symbol": "default branch main",
+        "url": "https://github.com/Goldentrii/AgentRecall-X"
+      },
+      {
+        "id": "head",
+        "label": "Current main branch head",
+        "path": "commit",
+        "symbol": "full SHA bc03054aa12e1e766bac0780ef4a80e9a4dfb841",
+        "url": "https://github.com/Goldentrii/AgentRecall-X/commit/bc03054aa12e1e766bac0780ef4a80e9a4dfb841"
+      },
+      {
+        "id": "feed",
+        "label": "Official current main commits feed",
+        "path": "commits/main.atom",
+        "symbol": "head commit SHA and update time",
+        "url": "https://github.com/Goldentrii/AgentRecall-X/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "url": "https://github.com/Goldentrii/AgentRecall-X/blob/bc03054aa12e1e766bac0780ef4a80e9a4dfb841/README.md"
+      },
+      {
+        "id": "privacy",
+        "label": "Official hosted-service privacy policy; published contact",
+        "path": "PRIVACY.md",
+        "symbol": "Tong Wu contact email",
+        "url": "https://github.com/Goldentrii/AgentRecall-X/blob/bc03054aa12e1e766bac0780ef4a80e9a4dfb841/PRIVACY.md"
+      },
+      {
+        "id": "corrections",
+        "label": "Correction record schema, storage, and lifecycle",
+        "path": "packages/core/src/storage/corrections.ts",
+        "symbol": "CorrectionRecord; retraction and ranking",
+        "url": "https://github.com/Goldentrii/AgentRecall-X/blob/bc03054aa12e1e766bac0780ef4a80e9a4dfb841/packages/core/src/storage/corrections.ts"
+      },
+      {
+        "id": "paths",
+        "label": "Project path and scope resolution",
+        "path": "packages/core/src/storage/paths.ts",
+        "symbol": "projectSubPath; project paths",
+        "url": "https://github.com/Goldentrii/AgentRecall-X/blob/bc03054aa12e1e766bac0780ef4a80e9a4dfb841/packages/core/src/storage/paths.ts"
+      },
+      {
+        "id": "check-action",
+        "label": "Pre-action matching and verdict",
+        "path": "packages/core/src/tools-logic/check-action.ts",
+        "symbol": "checkAction; tokenize; verdict; outcomes",
+        "url": "https://github.com/Goldentrii/AgentRecall-X/blob/bc03054aa12e1e766bac0780ef4a80e9a4dfb841/packages/core/src/tools-logic/check-action.ts"
+      },
+      {
+        "id": "session-start",
+        "label": "Startup context assembly",
+        "path": "packages/core/src/tools-logic/session-start.ts",
+        "symbol": "sessionStart; cards/full modes",
+        "url": "https://github.com/Goldentrii/AgentRecall-X/blob/bc03054aa12e1e766bac0780ef4a80e9a4dfb841/packages/core/src/tools-logic/session-start.ts"
+      },
+      {
+        "id": "curated",
+        "label": "Curated ordinal, locator, and attribution",
+        "path": "../data/memory-systems.json",
+        "symbol": "ordinal 27; AgentRecall-X",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "../METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "../results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "../fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents AgentRecall-X as an open-source local-first framework with MCP, SDK, CLI, and optional hosted service. The official hosted privacy policy names Tong Wu as data controller for the hosted service; no broader ownership identity is inferred.",
+        "sources": [
+          "readme",
+          "privacy"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Documentation describes project memory in journal, semantic palace rooms, procedural skills, pipeline history, and a persistent correction ledger, with awareness capable of compounding across projects. Local state is plain Markdown/JSON below ~/.agent-recall; hosted state uses a per-user directory with the same layout. Optional Supabase adds vector and full-text search.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The CorrectionRecord model includes rule/context, project, severity, tags, optional kind and holder/authorship, active/retraction/supersession state, proof fields, retrieval/outcome counters, and prediction/failure-class fields. Correction files are kept in the project corrections directory, separate from journal and palace memory.",
+        "sources": [
+          "corrections",
+          "paths"
+        ]
+      },
+      {
+        "text": "The default local MCP transport is stdio; hosted access uses Streamable HTTP and OAuth. The project also publishes an SDK, CLI, and agent hooks. These describe available interfaces and do not establish runtime reliability.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: README documents remember for facts and check for human corrections; the correction record schema stores structured rules and applicability context. Hosted proposals are staged for owner approval; local records are stored in the local project tree. No write was executed in this review.",
+        "sources": [
+          "readme",
+          "corrections"
+        ]
+      },
+      {
+        "text": "Update: correction records carry inactive/superseded markers, superseded_by, merged_from, and soft retraction metadata. The source notes retracted records remain on disk. These fields preserve lifecycle context but do not prove complete auditability of every change.",
+        "sources": [
+          "corrections"
+        ]
+      },
+      {
+        "text": "Delete: retraction is represented as a timestamp and reason while the record remains stored. The hosted privacy policy states account deletion removes the user's memory tree and replaced import data remains in trash for seven days. Completeness across backups or mirrors was not established.",
+        "sources": [
+          "corrections",
+          "privacy"
+        ]
+      },
+      {
+        "text": "Retrieval: README describes session_start, remember, recall, and check. Recall is documented as ranked retrieval across stores with reciprocal-rank fusion and usefulness feedback. check_action uses deterministic token overlap against project corrections, behavior policies, and awareness; an authoritative active P0 match can return blocked unless it is a low-signal noise candidate.",
+        "sources": [
+          "readme",
+          "check-action",
+          "corrections"
+        ]
+      },
+      {
+        "text": "Startup context: session-start code assembles project context and corrections; its documented cards mode includes owner identity, hard rules, and project state, while full mode adds broader context. This inspection did not execute retrieval.",
+        "sources": [
+          "session-start",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "metric": "Answerable recall and abstention",
+        "status": "not_measured",
+        "evidence": "Source and documentation describe retrieval paths, but no adjudicated answerable or unanswerable probe results were collected.",
+        "sources": [
+          "readme",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "metric": "Correction accuracy and stale-value rate",
+        "status": "not_measured",
+        "evidence": "The correction model includes supersession and feedback counters; no post-correction fixture was run.",
+        "sources": [
+          "corrections",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "metric": "Deletion leakage",
+        "status": "not_measured",
+        "evidence": "Soft retraction and hosted deletion/retention are documented; no post-deletion probes were run.",
+        "sources": [
+          "corrections",
+          "privacy",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "metric": "Scope isolation",
+        "status": "not_measured",
+        "evidence": "Local project paths and hosted per-user storage are documented; no cross-project or cross-account probes were run.",
+        "sources": [
+          "paths",
+          "readme",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "metric": "Evidence support and citation coverage",
+        "status": "not_measured",
+        "evidence": "Correction provenance and proof counters exist, but no claim-level evidence adjudication was performed.",
+        "sources": [
+          "corrections",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "metric": "Latency, write-to-recall delay, tokens, cost, and storage",
+        "status": "not_measured",
+        "evidence": "The privacy policy describes aggregate hosted response-time counts and the README describes bounded startup context; no workload, resource accounting, or storage measurement was collected.",
+        "sources": [
+          "privacy",
+          "readme",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded read-only inspection of selected official documentation and TypeScript source at the verified repository head. System behavior, reliability, recall quality, correction effectiveness, and runtime performance remain unverified here.",
+        "sources": [
+          "readme",
+          "corrections",
+          "check-action"
+        ]
+      },
+      {
+        "text": "File-backed project scope and documented per-user hosted storage indicate intended boundaries, but isolation tests were not run. Awareness is documented as cross-project and should not be treated as project-local correction data.",
+        "sources": [
+          "paths",
+          "readme"
+        ]
+      },
+      {
+        "text": "Soft retraction and documented account deletion do not establish deletion from all backups, exports, or external mirrors. No deletion leakage test was run.",
+        "sources": [
+          "corrections",
+          "privacy"
+        ]
+      },
+      {
+        "text": "Source-visible counters and aggregate response-time logging are observability mechanisms, not adjudicated benchmark results or performance distributions.",
+        "sources": [
+          "corrections",
+          "privacy"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is not_run. No AgentRecall-X execution, benchmark, or test was run for this review.",
+        "sources": [
+          "status"
+        ]
+      },
+      {
+        "text": "The project metric definitions and fixture describe a protocol; they are not AgentRecall-X result claims. Source observations above remain separate from measurements.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,463 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 193,
+    "slug": "dna-memory",
+    "name": "DNA Memory",
+    "repository": "https://github.com/AIPMAndy/dna-memory",
+    "branch": "main",
+    "revision": "f135344d7d6f90f1be73e209cd0c6a7083f328ea",
+    "reviewed_at": "2026-11-25T11:14:09Z",
+    "review_timezone": "UTC (2026-11-25 03:14:09 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": null,
+      "source_url": null,
+      "checked_urls": [
+        "https://github.com/AIPMAndy/dna-memory/blob/f135344d7d6f90f1be73e209cd0c6a7083f328ea/README.md",
+        "https://github.com/AIPMAndy/dna-memory/blob/f135344d7d6f90f1be73e209cd0c6a7083f328ea/README_EN.md",
+        "https://github.com/AIPMAndy/dna-memory/blob/f135344d7d6f90f1be73e209cd0c6a7083f328ea/SECURITY.md",
+        "https://metaver.vip/"
+      ],
+      "note": "Checked official repository documentation and the official website named by the README. No published email found; the README lists social/contact routes and SECURITY.md directs sensitive reports to GitHub Security advisories."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/AIPMAndy/dna-memory/blob/f135344d7d6f90f1be73e209cd0c6a7083f328ea/README.md",
+      "https://github.com/AIPMAndy/dna-memory/blob/f135344d7d6f90f1be73e209cd0c6a7083f328ea/README_EN.md",
+      "https://github.com/AIPMAndy/dna-memory/blob/f135344d7d6f90f1be73e209cd0c6a7083f328ea/SECURITY.md",
+      "https://metaver.vip/"
+    ],
+    "contact_email_note": "No email published in the official README, English README, security policy, or checked official website.",
+    "summary": "DNA Memory is a local-first cross-client memory service. Markdown pages in a configured vault are canonical; a disposable SQLite index supports keyword recall, replacement links, feedback, candidate events, and telemetry. The source implements direct MCP writes and daily candidate processing, but recall does not enforce project or session isolation.",
+    "atlas_locator": {
+      "ordinal": 193,
+      "name": "DNA Memory",
+      "slug": "dna-memory",
+      "listed_repository": "https://github.com/AIPMAndy/dna-memory",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dna-memory.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated memory systems roster",
+        "path": "data/memory-systems.json",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/dna-memory.md",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dna-memory.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository metadata and default branch",
+        "url": "https://github.com/AIPMAndy/dna-memory"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch feed",
+        "path": "commits/main.atom; updated 2026-11-19T15:17:48Z",
+        "url": "https://github.com/AIPMAndy/dna-memory/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified full main head",
+        "path": "commit",
+        "url": "https://github.com/AIPMAndy/dna-memory/commit/f135344d7d6f90f1be73e209cd0c6a7083f328ea"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "url": "https://github.com/AIPMAndy/dna-memory/blob/f135344d7d6f90f1be73e209cd0c6a7083f328ea/README.md"
+      },
+      {
+        "id": "readme_en",
+        "label": "Official English README",
+        "path": "README_EN.md",
+        "url": "https://github.com/AIPMAndy/dna-memory/blob/f135344d7d6f90f1be73e209cd0c6a7083f328ea/README_EN.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "url": "https://github.com/AIPMAndy/dna-memory/blob/f135344d7d6f90f1be73e209cd0c6a7083f328ea/SECURITY.md"
+      },
+      {
+        "id": "website",
+        "label": "Official website named by README",
+        "path": "contact email check",
+        "url": "https://metaver.vip/"
+      },
+      {
+        "id": "mcp",
+        "label": "MCP adapter",
+        "path": "scripts/memory_mcp.py",
+        "url": "https://github.com/AIPMAndy/dna-memory/blob/f135344d7d6f90f1be73e209cd0c6a7083f328ea/scripts/memory_mcp.py"
+      },
+      {
+        "id": "service",
+        "label": "Memory service",
+        "path": "scripts/memory_service.py",
+        "url": "https://github.com/AIPMAndy/dna-memory/blob/f135344d7d6f90f1be73e209cd0c6a7083f328ea/scripts/memory_service.py"
+      },
+      {
+        "id": "markdown",
+        "label": "Markdown parser/indexer",
+        "path": "scripts/markdown_memory.py",
+        "url": "https://github.com/AIPMAndy/dna-memory/blob/f135344d7d6f90f1be73e209cd0c6a7083f328ea/scripts/markdown_memory.py"
+      },
+      {
+        "id": "store",
+        "label": "SQLite index",
+        "path": "scripts/unified_memory.py",
+        "url": "https://github.com/AIPMAndy/dna-memory/blob/f135344d7d6f90f1be73e209cd0c6a7083f328ea/scripts/unified_memory.py"
+      },
+      {
+        "id": "ops",
+        "label": "Memory maintenance",
+        "path": "scripts/memory_operations.py",
+        "url": "https://github.com/AIPMAndy/dna-memory/blob/f135344d7d6f90f1be73e209cd0c6a7083f328ea/scripts/memory_operations.py"
+      },
+      {
+        "id": "queue",
+        "label": "Candidate event queue",
+        "path": "scripts/candidate_events.py",
+        "url": "https://github.com/AIPMAndy/dna-memory/blob/f135344d7d6f90f1be73e209cd0c6a7083f328ea/scripts/candidate_events.py"
+      },
+      {
+        "id": "extract",
+        "label": "Native-history extraction",
+        "path": "scripts/native_auto_extract.py",
+        "url": "https://github.com/AIPMAndy/dna-memory/blob/f135344d7d6f90f1be73e209cd0c6a7083f328ea/scripts/native_auto_extract.py"
+      },
+      {
+        "id": "policy",
+        "label": "Sensitive content policy",
+        "path": "scripts/policy.py",
+        "url": "https://github.com/AIPMAndy/dna-memory/blob/f135344d7d6f90f1be73e209cd0c6a7083f328ea/scripts/policy.py"
+      },
+      {
+        "id": "adapters",
+        "label": "Client adapter documentation",
+        "path": "docs/mcp-and-client-adapters.md",
+        "url": "https://github.com/AIPMAndy/dna-memory/blob/f135344d7d6f90f1be73e209cd0c6a7083f328ea/docs/mcp-and-client-adapters.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "results",
+        "label": "Shared benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes a local-first shared memory service for Codex, Claude, Hermes, and Obsidian, using a stdio MCP server; native transcripts remain in their client stores.",
+        "sources": [
+          "readme",
+          "readme_en",
+          "mcp"
+        ]
+      },
+      {
+        "text": "The roster places DNA Memory at ordinal 193, slug dna-memory, and lists the explicit repository locator above. Atlas is recorded only for roster identity and locator attribution.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The public upstream identifies main as default. The official feed updated 2026-11-19T15:17:48Z at full head f135344d7d6f90f1be73e209cd0c6a7083f328ea; fresh git ls-remote and a shallow checkout matched.",
+        "sources": [
+          "repo",
+          "feed",
+          "head"
+        ]
+      },
+      {
+        "text": "Checked official README, English README, SECURITY.md and the README-linked website; none publishes a contact email.",
+        "sources": [
+          "readme",
+          "readme_en",
+          "security",
+          "website"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Seven MCP tools provide recall, get, remember, feedback, close-session, status, and reindex. Configuration selects vault, managed Markdown directory, SQLite index, importer locations, and backups.",
+        "sources": [
+          "readme",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Markdown YAML stores stable ID, one of eight types, status, confidence, importance, timestamps, source pointers/hashes, supersedes relation, client, project path, and session ID. The first body paragraph becomes the indexed summary; SQLite holds the index, candidate events, feedback, and hashed-query recall telemetry.",
+        "sources": [
+          "service",
+          "markdown",
+          "store",
+          "queue"
+        ]
+      },
+      {
+        "text": "Markdown is durable truth and SQLite is rebuildable. Reindex validates frontmatter/type/status/body and sensitive-content policy, upserts recognized pages, and removes indexed pages absent from the scan.",
+        "sources": [
+          "readme",
+          "markdown",
+          "store"
+        ]
+      },
+      {
+        "text": "Importers retain bounded provenance pointers and candidate proposals rather than full transcripts by default. Source references and hashes are lineage pointers, not proof that a claim is supported.",
+        "sources": [
+          "readme",
+          "extract",
+          "service"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: memory_remember validates one of eight memory types, nonempty summary, and sensitive-content rules; then writes a Markdown page. Active source-hash matches deduplicate; otherwise same-type summaries are compared after Unicode, whitespace, and case normalization. Writes stage files with backups/rollback and reindex the configured knowledge root.",
+        "sources": [
+          "mcp",
+          "service",
+          "policy",
+          "markdown"
+        ]
+      },
+      {
+        "text": "Automatic proposals: importers queue bounded events; daily maintenance sends pending memory_proposal rows through the same write service after type, emptiness, and sensitive-content checks. The inspected code has no recorded human approval step, despite README language about reviewable proposals and verified conclusions.",
+        "sources": [
+          "queue",
+          "ops",
+          "service",
+          "extract",
+          "readme"
+        ]
+      },
+      {
+        "text": "Update: no separate MCP update tool. A write may name exact active IDs in supersedes; a new page is created and old pages become superseded while retained. Duplicate handling is exact after normalization, not fuzzy.",
+        "sources": [
+          "mcp",
+          "service",
+          "readme_en"
+        ]
+      },
+      {
+        "text": "Delete: no memory-delete MCP tool. Removing a Markdown page and reindexing removes its current SQLite row; that does not prove erasure from backups or other copies. Daily maintenance deletes terminal event rows after retention; weekly maintenance backs up and rotates SQLite snapshots.",
+        "sources": [
+          "mcp",
+          "markdown",
+          "store",
+          "ops",
+          "adapters"
+        ]
+      },
+      {
+        "text": "Retrieval: recall tokenizes distinct query terms and uses case-insensitive substring LIKE matches against active summaries. Ranking is by matched-term count, useful-minus-misleading feedback, confidence, importance, and update time; maximum result count is 20. memory_get fetches by ID. No semantic/vector query appears in this path.",
+        "sources": [
+          "service",
+          "store",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Scope: client, project_path, and session_id are stored, and recall accepts client/session arguments, but its SQL uses them only for telemetry, not filtering; there is no project filter. Deployment separation through distinct vaults/databases and OS permissions is an outer boundary, not per-record enforcement.",
+        "sources": [
+          "service",
+          "store",
+          "mcp",
+          "security"
+        ]
+      },
+      {
+        "text": "Provenance: source_refs, source_hash, client, project path, session ID, and supersedes provide lineage or relationship metadata; confidence and importance affect ranking. Records require no verbatim evidence quote or source verification. Direct writes validate format/sensitivity, not factual support.",
+        "sources": [
+          "service",
+          "markdown",
+          "mcp",
+          "security"
+        ]
+      },
+      {
+        "text": "Efficiency/observability: recall performs substring matching and feedback aggregation. Writes scan same-type active rows for exact duplicates and reindex the configured root. Recall stores query hash, client, session, result count, and increments record counters; feedback is separate. No performance was measured.",
+        "sources": [
+          "service",
+          "store",
+          "markdown"
+        ]
+      },
+      {
+        "text": "Feedback accepts any nonempty outcome, while ranking changes only for useful (+1) and misleading (−1); other labels can be stored but do not affect rank.",
+        "sources": [
+          "service",
+          "store"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "Keyword substring recall is source-visible; no answerability or abstention workload was run.",
+        "sources": [
+          "metrics",
+          "results",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Supersedes uses explicit IDs and retains old pages; no correction sequence was measured.",
+        "sources": [
+          "metrics",
+          "results",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Reindex removes absent pages from the current index; no post-delete or residual-storage check was run.",
+        "sources": [
+          "metrics",
+          "results",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Recall does not filter by client, project, or session; no isolation workload was run.",
+        "sources": [
+          "metrics",
+          "results",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Lineage pointers exist, but no claim-support evaluation was run.",
+        "sources": [
+          "metrics",
+          "results",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No latency workload was measured.",
+        "sources": [
+          "metrics",
+          "results",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timing to first correct recall was measured.",
+        "sources": [
+          "metrics",
+          "results",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No token or cost measurements were collected.",
+        "sources": [
+          "metrics",
+          "results",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No storage-footprint measurement was collected.",
+        "sources": [
+          "metrics",
+          "results",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "Source review does not show that caller-labeled verified content is factually supported: direct writes do not require evidence quotes or reviewer approval.",
+        "sources": [
+          "service",
+          "mcp",
+          "readme",
+          "security"
+        ]
+      },
+      {
+        "text": "Client/project/session metadata does not constrain recall; isolation requires deployment boundaries that were not exercised.",
+        "sources": [
+          "service",
+          "store",
+          "security"
+        ]
+      },
+      {
+        "text": "Substring ranking may miss synonyms and paraphrases; scaling and retrieval quality are unknown.",
+        "sources": [
+          "service",
+          "store",
+          "metrics"
+        ]
+      },
+      {
+        "text": "Deletion is a file/reindex workflow. Backups and external copies are outside its current-index behavior.",
+        "sources": [
+          "markdown",
+          "store",
+          "ops",
+          "security"
+        ]
+      },
+      {
+        "text": "No runtime, tests, or benchmarks were run; quality, abstention, correction, deletion leakage, isolation, latency, write-to-recall delay, token/cost, and storage remain unknown.",
+        "sources": [
+          "repo",
+          "head",
+          "metrics",
+          "results",
+          "fixture"
+        ]
+      }
+    ],
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "No DNA Memory runtime, tests, or benchmark workloads were run for this source review."
+    }
+  }
+}

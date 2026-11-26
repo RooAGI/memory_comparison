@@ -1,0 +1,292 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "agentic-context-engine",
+    "name": "Agentic Context Engine",
+    "repository": "https://github.com/kayba-ai/agentic-context-engine",
+    "branch": "main",
+    "revision": "3a319831785ede6ba4a3a4002756233095c59e17",
+    "reviewed_at": "2026-11-24T18:45:47Z",
+    "review_timezone": "UTC (2026-11-24 10:45:47 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Agentic Context Engine is an agent learning framework whose Skillbook keeps readable strategies derived from task feedback. Agents receive Skillbook prompt context, while Reflector and SkillManager components analyze outcomes and mutate the strategy collection.",
+    "atlas_locator": {
+      "ordinal": 17,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agentic-context-engine.md",
+      "listed_repository": "https://github.com/kayba-ai/agentic-context-engine"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/kayba-ai/agentic-context-engine/blob/3a319831785ede6ba4a3a4002756233095c59e17/README.md",
+      "note": "No published contact email found in the checked official repository README."
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Current canonical GitHub repository",
+        "path": "repository page",
+        "symbol": "kayba-ai/agentic-context-engine; selected branch main",
+        "url": "https://github.com/kayba-ai/agentic-context-engine"
+      },
+      {
+        "id": "history",
+        "label": "Current main branch history",
+        "path": "commits/main.atom",
+        "symbol": "main head commit 3a319831785ede6ba4a3a4002756233095c59e17",
+        "url": "https://github.com/kayba-ai/agentic-context-engine/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified full-SHA head commit",
+        "path": "commit",
+        "symbol": "release merge commit 3a319831785ede6ba4a3a4002756233095c59e17",
+        "url": "https://github.com/kayba-ai/agentic-context-engine/commit/3a319831785ede6ba4a3a4002756233095c59e17"
+      },
+      {
+        "id": "readme",
+        "label": "Official project README",
+        "path": "README.md",
+        "symbol": "product model, roles, persistence, integrations and benchmark claims",
+        "url": "https://github.com/kayba-ai/agentic-context-engine/blob/3a319831785ede6ba4a3a4002756233095c59e17/README.md"
+      },
+      {
+        "id": "overview",
+        "label": "ACE concept overview",
+        "path": "docs/concepts/overview.md",
+        "symbol": "learning loop and integration patterns",
+        "url": "https://github.com/kayba-ai/agentic-context-engine/blob/3a319831785ede6ba4a3a4002756233095c59e17/docs/concepts/overview.md"
+      },
+      {
+        "id": "skillbook-doc",
+        "label": "Skillbook documentation",
+        "path": "docs/concepts/skillbook.md",
+        "symbol": "record schema, rendering, persistence, stats and provenance",
+        "url": "https://github.com/kayba-ai/agentic-context-engine/blob/3a319831785ede6ba4a3a4002756233095c59e17/docs/concepts/skillbook.md"
+      },
+      {
+        "id": "updates-doc",
+        "label": "Update operations documentation",
+        "path": "docs/concepts/updates.md",
+        "symbol": "ADD, UPDATE, TAG, soft REMOVE and update flow",
+        "url": "https://github.com/kayba-ai/agentic-context-engine/blob/3a319831785ede6ba4a3a4002756233095c59e17/docs/concepts/updates.md"
+      },
+      {
+        "id": "skillbook-code",
+        "label": "Skill and Skillbook implementation",
+        "path": "ace/core/skillbook.py",
+        "symbol": "Skill fields, InsightSource handling, provenance queries and Skillbook methods",
+        "url": "https://github.com/kayba-ai/agentic-context-engine/blob/3a319831785ede6ba4a3a4002756233095c59e17/ace/core/skillbook.py"
+      },
+      {
+        "id": "skill-manager",
+        "label": "SkillManager implementation",
+        "path": "ace/implementations/skill_manager.py",
+        "symbol": "search/read/mutation tools, applied updates, audit output and run trace metadata",
+        "url": "https://github.com/kayba-ai/agentic-context-engine/blob/3a319831785ede6ba4a3a4002756233095c59e17/ace/implementations/skill_manager.py"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog entry and attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 17 identity, listed repository locator, and pinned catalog source attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "shared not_run status; no Agentic Context Engine measurements",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned workload only; no results",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The public repository is under the kayba-ai GitHub organization. The README presents ACE as an open-source agent learning framework that evolves a Skillbook of strategies from task feedback, and lists standalone, full-pipeline, trace-analysis, browser-use, LangChain, and Claude Code integrations. This review covers the Skillbook and selected learning-loop components, not the hosted Kayba service.",
+        "sources": [
+          "repo",
+          "readme",
+          "overview"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "ACE documents a learning loop with an Agent that uses Skillbook strategies, an Environment that evaluates outcomes, a Reflector that analyzes results, and a SkillManager that updates the Skillbook. Its integration pattern allows an external framework to execute while ACE injects context and learns from results.",
+        "sources": [
+          "overview",
+          "readme"
+        ]
+      },
+      {
+        "text": "The Skillbook holds records with ID, section, keywords, issue, optional insight, active state, outcome counters, usage counts, timestamps, and provenance occurrences. The two sections are context and harness. The documented default persistence is JSON plus an embeddings sidecar; similarity-based deduplication is optional.",
+        "sources": [
+          "skillbook-doc",
+          "skillbook-code"
+        ]
+      },
+      {
+        "text": "The current canonical repository is kayba-ai/agentic-context-engine; GitHub identifies main as the default branch and its main Atom feed resolves head 3a319831785ede6ba4a3a4002756233095c59e17. Reviewed 2026-11-24 18:45:47 UTC (10:45:47 PST; America/Los_Angeles).",
+        "sources": [
+          "repo",
+          "history",
+          "head"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write and update: the documented operations are ADD, UPDATE, TAG, and REMOVE. ADD creates a strategy; UPDATE changes its issue, insight, or keywords; TAG adjusts helpful/harmful/neutral counters; REMOVE marks it inactive. Current SkillManager code applies tool mutations directly to the supplied Skillbook and returns an audit list of actions already performed.",
+        "sources": [
+          "updates-doc",
+          "skill-manager",
+          "skillbook-code"
+        ]
+      },
+      {
+        "text": "Deletion is soft. The reviewed code and guide do not establish hard erasure from saved JSON, older copies, traces, or embedding sidecars. No general retention-erasure workflow was identified in the reviewed Skillbook surface.",
+        "sources": [
+          "updates-doc",
+          "skillbook-doc",
+          "skillbook-code"
+        ]
+      },
+      {
+        "text": "Retrieval is prompt-context based: the Agent receives Skillbook text rendered by section. SkillManager can inspect skills with search/read tools. The reviewed material does not document a general memory question-answering API that returns source-grounded factual answers; optional embedding similarity is documented for deduplication rather than measured recall.",
+        "sources": [
+          "skillbook-doc",
+          "overview",
+          "skill-manager"
+        ]
+      },
+      {
+        "text": "Scope isolation is not represented in the reviewed Skill model: no tenant, user, or project field or core authorization check appears in the Skillbook schema/API. Scope depends on which Skillbook object/file an integration supplies. Shared-store isolation is unknown and was not probed.",
+        "sources": [
+          "skillbook-doc",
+          "skillbook-code",
+          "overview"
+        ]
+      },
+      {
+        "text": "Provenance occurrences can link skills to source system, trace UID/ID, display name, epoch/step, learning text, and best-effort structured trace references. The source exposes maps, summaries, and filters over those records. Provenance supports auditing strategy origin but does not establish claim-level evidence support.",
+        "sources": [
+          "skillbook-doc",
+          "skillbook-code"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "The inspected materials describe prompt-rendered strategies and SkillManager inspection tools, but no answerable recall or abstention probes were executed.",
+        "sources": [
+          "skillbook-doc",
+          "overview",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "UPDATE can refine strategies and REMOVE can make them inactive. No correction or stale-answer workload was run.",
+        "sources": [
+          "updates-doc",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "REMOVE is documented as soft deactivation; no hard-delete behavior or post-delete leakage probe was established.",
+        "sources": [
+          "updates-doc",
+          "skillbook-code",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope-isolation leakage",
+        "status": "unmeasured",
+        "evidence": "No tenant/user scope is represented in the reviewed Skill model, and no shared-store isolation probes were run.",
+        "sources": [
+          "skillbook-doc",
+          "skillbook-code",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Trace provenance records origin references, but no generated answer claims were checked for evidential support or citation coverage.",
+        "sources": [
+          "skillbook-doc",
+          "skillbook-code",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No latency distribution or scheduled post-write recall observations were collected.",
+        "sources": [
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The repository describes counters, model-loop metadata, JSON persistence, and an embeddings sidecar; no benchmark token, cost, or corpus-attributed storage measurement was collected.",
+        "sources": [
+          "skillbook-doc",
+          "skillbook-code",
+          "skill-manager",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code",
+        "evidence": "The Skillbook exposes statistics and provenance summaries. SkillManager output carries run metadata plus iteration/compaction counts and logs failures/budget exhaustion. These are source-visible signals, not measured performance.",
+        "sources": [
+          "skillbook-code",
+          "skill-manager",
+          "readme"
+        ]
+      }
+    ],
+    "limits": [
+      "This is a bounded read-only review of selected official documentation and Skillbook/SkillManager source at the pinned revision; other integrations and optional features were not exhaustively traced.",
+      "The review did not run ACE, benchmarks, or tests and does not establish runtime correctness, recall quality, tenant isolation, hard erasure, latency, token use, cost, or storage efficiency.",
+      "The shared project benchmark status record is not_run and includes no Agentic Context Engine measurements; fixture counts are planned cases, not measured denominators."
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Agentic Context Engine system, benchmark workload, or test suite was executed. Source observations are separate from measurements; no metric values were produced.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

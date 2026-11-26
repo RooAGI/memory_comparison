@@ -1,0 +1,378 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 223,
+    "slug": "engram-alpha",
+    "name": "Engram Alpha",
+    "repository": "https://github.com/techtheist/engram",
+    "listed_repository": "https://github.com/techtheist/engram",
+    "branch": "main",
+    "revision": "f816646eb85531012e95b26d27eef76dd894db86",
+    "reviewed_at": "2026-11-25T19:24:12Z",
+    "review_timezone": "UTC (2026-11-25 11:24:12 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Engram Alpha is a local-first graph memory for software projects, exposed through an MCP and HTTP core, CLI, IDE extensions, and a web pane. It stores typed nodes and relations in one graph file per project, then serves hybrid keyword/vector retrieval with graph context, trust and confidence signals. This review is source-based; no runtime or benchmark was executed.",
+    "atlas_locator": {
+      "ordinal": 223,
+      "name": "Engram Alpha",
+      "slug": "engram-alpha",
+      "listed_repository": "https://github.com/techtheist/engram",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/engram-alpha.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/techtheist/engram/blob/f816646eb85531012e95b26d27eef76dd894db86/README.md",
+      "checked_urls": [
+        "https://github.com/techtheist/engram/blob/f816646eb85531012e95b26d27eef76dd894db86/README.md"
+      ],
+      "note": "Checked the official pinned repository README for a published contact email; none was found. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/techtheist/engram/blob/f816646eb85531012e95b26d27eef76dd894db86/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/techtheist/engram/blob/f816646eb85531012e95b26d27eef76dd894db86/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the official pinned README.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated memory systems roster",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[222], ordinal 223; name, slug, explicit listed repository, Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/engram-alpha.md",
+        "symbol": "Pinned identity/locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/engram-alpha.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository and remote",
+        "path": "GitHub repository and Git remote",
+        "symbol": "Canonical repository techtheist/engram; official origin remote https://github.com/techtheist/engram.git",
+        "url": "https://github.com/techtheist/engram"
+      },
+      {
+        "id": "head",
+        "label": "Verified current main head",
+        "path": "Official Git smart transport and shallow checkout",
+        "symbol": "git ls-remote --symref reported HEAD -> refs/heads/main and f816646eb85531012e95b26d27eef76dd894db86; shallow checkout of main resolved to same full SHA. GitHub REST API request was rate-limited.",
+        "url": "https://github.com/techtheist/engram/commit/f816646eb85531012e95b26d27eef76dd894db86"
+      },
+      {
+        "id": "tree",
+        "label": "Reviewed upstream tree",
+        "path": "repository tree",
+        "symbol": "Shallow checkout at verified current main head",
+        "url": "https://github.com/techtheist/engram/tree/f816646eb85531012e95b26d27eef76dd894db86/crates/engram-core/src"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Product description, stack, storage/model summary, benchmark claims; contact-email check",
+        "url": "https://github.com/techtheist/engram/blob/f816646eb85531012e95b26d27eef76dd894db86/README.md"
+      },
+      {
+        "id": "workspace",
+        "label": "Rust workspace manifest",
+        "path": "Cargo.toml",
+        "symbol": "Core, MCP, HTTP, CLI and evaluation workspace members",
+        "url": "https://github.com/techtheist/engram/blob/f816646eb85531012e95b26d27eef76dd894db86/Cargo.toml"
+      },
+      {
+        "id": "schema",
+        "label": "Core graph schema",
+        "path": "crates/engram-core/src/schema.rs",
+        "symbol": "Nodes, edges, suspects, append-only audit, metadata and tasks tables",
+        "url": "https://github.com/techtheist/engram/blob/f816646eb85531012e95b26d27eef76dd894db86/crates/engram-core/src/schema.rs"
+      },
+      {
+        "id": "types",
+        "label": "Core data types",
+        "path": "crates/engram-core/src/types.rs",
+        "symbol": "Node, NewNode, SearchHit, source and audit data structures",
+        "url": "https://github.com/techtheist/engram/blob/f816646eb85531012e95b26d27eef76dd894db86/crates/engram-core/src/types.rs"
+      },
+      {
+        "id": "storage",
+        "label": "Storage guide",
+        "path": "docs/storage.md",
+        "symbol": "TepinDB storage, SQLite migration, encryption and model metadata documentation",
+        "url": "https://github.com/techtheist/engram/blob/f816646eb85531012e95b26d27eef76dd894db86/docs/storage.md"
+      },
+      {
+        "id": "write",
+        "label": "Checked write path",
+        "path": "crates/engram-core/src/engine/write.rs",
+        "symbol": "Duplicate check, embedding, conflict nomination and write outcome flow",
+        "url": "https://github.com/techtheist/engram/blob/f816646eb85531012e95b26d27eef76dd894db86/crates/engram-core/src/engine/write.rs"
+      },
+      {
+        "id": "nodes",
+        "label": "Node operations",
+        "path": "crates/engram-core/src/engine/nodes.rs",
+        "symbol": "Node creation, update, direct delete and Tombstone deletion path",
+        "url": "https://github.com/techtheist/engram/blob/f816646eb85531012e95b26d27eef76dd894db86/crates/engram-core/src/engine/nodes.rs"
+      },
+      {
+        "id": "merge",
+        "label": "Graph merge operations",
+        "path": "crates/engram-core/src/engine/merge.rs",
+        "symbol": "Merge and edge rehoming implementation",
+        "url": "https://github.com/techtheist/engram/blob/f816646eb85531012e95b26d27eef76dd894db86/crates/engram-core/src/engine/merge.rs"
+      },
+      {
+        "id": "search",
+        "label": "Hybrid search",
+        "path": "crates/engram-core/src/engine/search.rs",
+        "symbol": "Hybrid retrieval, reranking, cuts, diversity, neighbors, confidence and observability stamp",
+        "url": "https://github.com/techtheist/engram/blob/f816646eb85531012e95b26d27eef76dd894db86/crates/engram-core/src/engine/search.rs"
+      },
+      {
+        "id": "recall",
+        "label": "Recall and capture guide",
+        "path": "docs/recall-and-capture.md",
+        "symbol": "Documented session brief, search context, writes, tombstone warnings and redaction",
+        "url": "https://github.com/techtheist/engram/blob/f816646eb85531012e95b26d27eef76dd894db86/docs/recall-and-capture.md"
+      },
+      {
+        "id": "memory-model",
+        "label": "Memory model guide",
+        "path": "docs/memory-model.md",
+        "symbol": "Node/edge model, durability, source attribution and review semantics",
+        "url": "https://github.com/techtheist/engram/blob/f816646eb85531012e95b26d27eef76dd894db86/docs/memory-model.md"
+      },
+      {
+        "id": "registry",
+        "label": "Project registry",
+        "path": "crates/engram-core/src/registry.rs",
+        "symbol": "Project root to graph-file mapping and project selector resolution",
+        "url": "https://github.com/techtheist/engram/blob/f816646eb85531012e95b26d27eef76dd894db86/crates/engram-core/src/registry.rs"
+      },
+      {
+        "id": "hub",
+        "label": "Cross-project hub",
+        "path": "crates/engram-core/src/hub/federation.rs",
+        "symbol": "Project roster, bound-session context, all-project search and foreign-hit provenance",
+        "url": "https://github.com/techtheist/engram/blob/f816646eb85531012e95b26d27eef76dd894db86/crates/engram-core/src/hub/federation.rs"
+      },
+      {
+        "id": "multi-project",
+        "label": "Multi-project guide",
+        "path": "docs/multi-project.md",
+        "symbol": "Per-project graph layout, home graph, session binding and all-project read behavior",
+        "url": "https://github.com/techtheist/engram/blob/f816646eb85531012e95b26d27eef76dd894db86/docs/multi-project.md"
+      },
+      {
+        "id": "audit",
+        "label": "Audit log implementation",
+        "path": "crates/engram-core/src/engine/audit_log.rs",
+        "symbol": "Writer attribution and audit query/undo implementation",
+        "url": "https://github.com/techtheist/engram/blob/f816646eb85531012e95b26d27eef76dd894db86/crates/engram-core/src/engine/audit_log.rs"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Comparison metric definitions, not Engram results",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Shared benchmark status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Current shared execution status; no Engram measurement claimed",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned comparison fixture; not an Engram result",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Engram Alpha as a local graph memory shared by coding assistants, with a Rust core, Vue/TypeScript pane and IDE integrations. This review does not infer an individual maintainer identity.",
+        "sources": [
+          "readme",
+          "workspace"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The Rust workspace separates core, MCP, HTTP, CLI and evaluation crates. The graph schema holds typed nodes and edges, a suspects queue, metadata, tasks, and an append-only mutation journal. Node fields include source/session, created and validity times, tags, code refs, custom fields and trust timestamps.",
+        "sources": [
+          "workspace",
+          "schema",
+          "types"
+        ]
+      },
+      {
+        "text": "The README and storage guide describe TepinDB as the graph-file backend, SQLite as a migration source, and local embedding, reranking and NLI components as configurable. These are project architecture statements, not measured resource results.",
+        "sources": [
+          "readme",
+          "storage"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The checked write path embeds a proposed note, checks same-type current near-duplicates, and either returns a match for caller-side merging or creates a node and returns warnings/suspect pairs. Node operations validate configured types and fields and journal updates.",
+        "sources": [
+          "write",
+          "nodes"
+        ]
+      },
+      {
+        "text": "Replacement archives the old node behind a replaces relation; explicit deletion can mint a Tombstone with removed content and reason, while a direct delete path removes the node and connected edges. Merge rehomes relationships. Secure erasure from backups or storage media was not established.",
+        "sources": [
+          "nodes",
+          "merge",
+          "recall"
+        ]
+      },
+      {
+        "text": "Search fuses keyword and vector retrieval, optionally reranks a bounded candidate set, applies delivery filters and session diversity, adds one-hop neighbors, attaches standing information, and stamps returned hits for observability. Confidence is calibrated only when the reranker is available; runtime quality was not measured.",
+        "sources": [
+          "search",
+          "recall"
+        ]
+      },
+      {
+        "text": "Project roots map to separate graph files. Bound sessions use their selected project; the home graph can accompany briefs, and all-project search/claim checks are read-only and mark foreign hits with project provenance. No OS-level local-user access boundary was established by this source review.",
+        "sources": [
+          "registry",
+          "hub",
+          "multi-project"
+        ]
+      },
+      {
+        "text": "Node source and session fields plus audit action, before/after snapshots, front-end origin, session, working directory, process and version provide provenance. They support traceability, not proof that a memory is correct or that downstream claims cite it faithfully.",
+        "sources": [
+          "schema",
+          "types",
+          "audit"
+        ]
+      },
+      {
+        "text": "Source-inspected efficiency features include FTS indexes, vectors, bounded reranker candidate fetch, result limits and one-hop neighbor caps. Returned-hit last_seen is observability-only by source comments. No latency, cost, token, storage or operational-load measurements were collected.",
+        "sources": [
+          "schema",
+          "search",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Confidence verdicts and project negative-question evaluation are documented; this review ran no answerability or abstention workload.",
+        "sources": [
+          "search",
+          "recall",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Supersession, conflict review, trust/decay, and temporal fields are source-inspected; correction accuracy and stale-value rate were not measured.",
+        "sources": [
+          "nodes",
+          "search",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Direct deletion and Tombstone paths were inspected; no residual-read or secure-erasure probe was run.",
+        "sources": [
+          "nodes",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Project-specific routing and optional cross-project reads were inspected; no isolation workload was run.",
+        "sources": [
+          "registry",
+          "hub",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source/session lineage, audit context, graph relations and standing were inspected; answer support precision and citation coverage were not scored.",
+        "sources": [
+          "schema",
+          "audit",
+          "types",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No runtime timings were collected.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No token, provider billing, or storage measurements were collected.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a source review at the verified main head. Engram Alpha, tests and benchmarks were not run.",
+        "sources": [
+          "repo",
+          "head",
+          "readme"
+        ]
+      },
+      {
+        "text": "Live retrieval quality, actual abstention behavior, secure erasure, access control against other local processes, model quality, scaling, latency, and cost remain unknown from this review. The GitHub REST API was rate-limited; official Git remote and shallow checkout agreed on branch and full head SHA.",
+        "sources": [
+          "repo",
+          "head",
+          "nodes",
+          "hub",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Engram Alpha runtime, tests, or benchmarks were run. Project metric definitions and comparison fixtures are not Engram results."
+    }
+  }
+}

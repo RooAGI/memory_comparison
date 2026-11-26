@@ -1,0 +1,358 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 281,
+    "slug": "harness-evolution",
+    "name": "Harness Evolution as Learning",
+    "repository": "https://github.com/ZyGan1999/self-evolving-harness-as-learning",
+    "listed_repository": "https://github.com/ZyGan1999/self-evolving-harness-as-learning",
+    "branch": "main",
+    "revision": "9f7e8178588513f30296cd965a9923c17f5ff98c",
+    "reviewed_at": "2026-11-25T22:26:05Z",
+    "review_timezone": "UTC (checked 2026-11-25 14:26:05 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Harness Evolution as Learning is a research experiment repository for AppWorld agents. It compares prompt memory with learned checkers, statistics, action controls, and several memory-update algorithms. Its memory state is primarily maintained in process during an experiment and saved in run outputs; this review does not establish runtime quality or performance.",
+    "atlas_locator": {
+      "ordinal": 281,
+      "name": "Harness Evolution as Learning",
+      "slug": "harness-evolution",
+      "listed_repository": "https://github.com/ZyGan1999/self-evolving-harness-as-learning",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/harness-evolution.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/ZyGan1999/self-evolving-harness-as-learning/blob/9f7e8178588513f30296cd965a9923c17f5ff98c/README.md",
+      "checked_urls": [
+        "https://github.com/ZyGan1999/self-evolving-harness-as-learning/blob/9f7e8178588513f30296cd965a9923c17f5ff98c/README.md"
+      ],
+      "note": "Checked the official pinned repository README for a published contact email; none was present. No commit/profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/ZyGan1999/self-evolving-harness-as-learning/blob/9f7e8178588513f30296cd965a9923c17f5ff98c/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/ZyGan1999/self-evolving-harness-as-learning/blob/9f7e8178588513f30296cd965a9923c17f5ff98c/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the checked official pinned README.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[280], ordinal 281; identity, listed locator, and Atlas roster attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/harness-evolution.md",
+        "symbol": "Curated identity/locator attribution only; excluded from implementation assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/harness-evolution.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Canonical repository ZyGan1999/self-evolving-harness-as-learning; default branch main",
+        "url": "https://github.com/ZyGan1999/self-evolving-harness-as-learning"
+      },
+      {
+        "id": "head",
+        "label": "Official current head commit",
+        "path": "commit",
+        "symbol": "Current main head 9f7e8178588513f30296cd965a9923c17f5ff98c; verified by GitHub commit API and fresh shallow checkout; committer timestamp 2026-09-25T09:04:15Z",
+        "url": "https://github.com/ZyGan1999/self-evolving-harness-as-learning/commit/9f7e8178588513f30296cd965a9923c17f5ff98c"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Q1-Q3 experiment scope, task splits, harness architecture, commands and reported configuration; checked for contact email",
+        "url": "https://github.com/ZyGan1999/self-evolving-harness-as-learning/blob/9f7e8178588513f30296cd965a9923c17f5ff98c/README.md"
+      },
+      {
+        "id": "driver",
+        "label": "Pinned AppWorld session driver",
+        "path": "appworld_p/driver.py",
+        "symbol": "Memory injection, training feedback/update order, checkpoint evaluation, history and output handling",
+        "url": "https://github.com/ZyGan1999/self-evolving-harness-as-learning/blob/9f7e8178588513f30296cd965a9923c17f5ff98c/appworld_p/driver.py"
+      },
+      {
+        "id": "agent",
+        "label": "Pinned agent prompt integration",
+        "path": "appworld_p/agent.py",
+        "symbol": "How rendered memory is inserted into agent prompts",
+        "url": "https://github.com/ZyGan1999/self-evolving-harness-as-learning/blob/9f7e8178588513f30296cd965a9923c17f5ff98c/appworld_p/agent.py"
+      },
+      {
+        "id": "ace",
+        "label": "Pinned ACE-style updater",
+        "path": "appworld_p/ace_updater.py",
+        "symbol": "Bullet memory, JSON add/modify deltas, content IDs, trigram deduplication, capacity, state and save",
+        "url": "https://github.com/ZyGan1999/self-evolving-harness-as-learning/blob/9f7e8178588513f30296cd965a9923c17f5ff98c/appworld_p/ace_updater.py"
+      },
+      {
+        "id": "baselines",
+        "label": "Pinned baseline updaters",
+        "path": "appworld_p/baseline_updaters.py",
+        "symbol": "Reflexion, TEPA and TRACE write, retention, revocation, rendering, diagnostics and save implementations",
+        "url": "https://github.com/ZyGan1999/self-evolving-harness-as-learning/blob/9f7e8178588513f30296cd965a9923c17f5ff98c/appworld_p/baseline_updaters.py"
+      },
+      {
+        "id": "updaters",
+        "label": "Pinned updater interfaces and Q3 rewrite",
+        "path": "appworld_p/updaters.py",
+        "symbol": "Updater interface, whole-memory rewrite, truncation and state",
+        "url": "https://github.com/ZyGan1999/self-evolving-harness-as-learning/blob/9f7e8178588513f30296cd965a9923c17f5ff98c/appworld_p/updaters.py"
+      },
+      {
+        "id": "feedback",
+        "label": "Pinned feedback construction",
+        "path": "appworld_p/feedback.py",
+        "symbol": "Acceptance and feedback tiers supplied to updaters",
+        "url": "https://github.com/ZyGan1999/self-evolving-harness-as-learning/blob/9f7e8178588513f30296cd965a9923c17f5ff98c/appworld_p/feedback.py"
+      },
+      {
+        "id": "runner",
+        "label": "Pinned Q3 experiment runner",
+        "path": "scripts/run_q3_evolve.py",
+        "symbol": "Q3 updater selection, checkpoint configuration, output index and final updater snapshots",
+        "url": "https://github.com/ZyGan1999/self-evolving-harness-as-learning/blob/9f7e8178588513f30296cd965a9923c17f5ff98c/scripts/run_q3_evolve.py"
+      },
+      {
+        "id": "persona",
+        "label": "Pinned Q3 persona configuration",
+        "path": "configs/personas/q3_self_evolution.yaml",
+        "symbol": "The five preference rules used by the Q3 self-evolution persona",
+        "url": "https://github.com/ZyGan1999/self-evolving-harness-as-learning/blob/9f7e8178588513f30296cd965a9923c17f5ff98c/configs/personas/q3_self_evolution.yaml"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Project evaluation domains and metric definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Shared planned workload; not executed for this system",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status; no Harness Evolution as Learning measurements",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository README describes a Python research implementation and configurations for Q1–Q3 experiments using AppWorld tasks. It is an experiment harness rather than a general-purpose hosted memory service or standalone persistence API. The README identifies one contributor on GitHub, but this review makes no maintainer identity claim from profile or commit metadata.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      },
+      {
+        "text": "The canonical repository is ZyGan1999/self-evolving-harness-as-learning. GitHub identifies main as its default branch; the official current-main commit API and a fresh shallow checkout both resolve to 9f7e8178588513f30296cd965a9923c17f5ff98c. The commit API reports committer timestamp 2026-09-25T09:04:15Z. Reviewed 2026-11-25 22:26:05 UTC (14:26:05 PST; America/Los_Angeles).",
+        "sources": [
+          "repo",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The driver runs an agent for an AppWorld episode, evaluates persona rules, turns violations into feedback, passes feedback to an updater, and carries session history forward. At configured checkpoints it freezes the current memory for evaluation episodes without update feedback. Agent memory is rendered into the prompt at episode start; there is no query-time retrieval index in this path.",
+        "sources": [
+          "driver",
+          "agent",
+          "feedback"
+        ]
+      },
+      {
+        "text": "Q3's ACE-style updater stores a bounded ordered list of one-sentence preference bullets with six-character content-derived IDs and helpful/harmful fields. Its updater asks an LLM for JSON add/modify deltas after rejected episodes; local character-trigram vectors support deduplication. The alternate self-evolving arm stores a single rewritten text string. Reflexion stores a short rolling list, TEPA stores keyed precedents with active/revoked metadata, and TRACE stores executable API argument checks.",
+        "sources": [
+          "ace",
+          "updaters",
+          "baselines"
+        ]
+      },
+      {
+        "text": "Updater state lives in Python objects while the process runs. The runner writes result rows and a final updater JSON snapshot under the experiment output directory; the driver also writes episode/history and checkpoint artifacts. This is run-output persistence, not evidence of a general cross-run memory load path; the reviewed runner does not restore updater state from a prior experiment.",
+        "sources": [
+          "runner",
+          "driver",
+          "ace",
+          "baselines"
+        ]
+      },
+      {
+        "text": "The current README describes Q1 comparisons, a Q2 memory-length sweep, and Q3 self-evolution alongside baseline arms. Its latest revision removes a prose explanation of TEPA/TRACE, while the current pinned source still contains those updater implementations; source-level descriptions here follow the code and are not attributed to removed README prose.",
+        "sources": [
+          "readme",
+          "baselines",
+          "runner"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "**Write.** Accepted episodes and episodes without feedback text are ignored by the updaters. On rejected episodes, ACE asks the model to add or modify bullets; malformed JSON is counted and retained in a short diagnostic. Self-evolution asks for a full memory rewrite and truncates the result at its configured character limit. Reflexion appends a reflection, TEPA generates keyed precedents from action summaries and feedback, and TRACE compiles corrections into API/argument/predicate/value checks.",
+        "sources": [
+          "ace",
+          "updaters",
+          "baselines",
+          "feedback"
+        ]
+      },
+      {
+        "text": "**Update and delete.** ACE modifies a bullet by ID, drops later bullets judged trigram-similar above its cosine threshold, and keeps the newest bullets when capacity is exceeded. This can discard a newer conflicting statement as a duplicate; no explicit delete operation is exposed on its bullet interface. The rewrite arm replaces all prior text, while Reflexion evicts older entries beyond its window. TEPA deactivates older precedents under the same key and retains them in its archive; exact repeats can reactivate an archived item. TRACE rejects duplicates and maintains a bounded rule set. These are algorithm-specific lifecycle rules, not a common durable CRUD API.",
+        "sources": [
+          "ace",
+          "updaters",
+          "baselines"
+        ]
+      },
+      {
+        "text": "**Retrieval and injection.** The driver obtains the complete rendered updater memory and inserts it into the agent prompt for each episode. ACE and TEPA render their current bullets/active precedents; the rewrite and Reflexion arms render their text/reflections; TRACE renders executable checks for enforcement. There is no semantic or lexical search over a growing personal memory store in this path. Q2 separately ranks a fixed candidate assertion pool and constructs a requested-length block; this is an experiment condition, not a general recall service.",
+        "sources": [
+          "driver",
+          "agent",
+          "ace",
+          "baselines",
+          "updaters"
+        ]
+      },
+      {
+        "text": "**Scope.** The Q3 updater is created for a single experiment arm/session and has no user, tenant, project, or conversation scope key in the memory record itself. The driver associates it with a selected persona and task stream. Any stronger isolation across concurrent runs or deployments is outside this repository review.",
+        "sources": [
+          "runner",
+          "driver",
+          "ace",
+          "baselines",
+          "persona"
+        ]
+      },
+      {
+        "text": "**Provenance and evidence.** ACE history records episode numbers, applied deltas and capacity/dedup drops; TEPA history records additions, revocations, re-promotions and parse failures, while stored records include added/revoked episode numbers. These traces are local updater diagnostics and do not retain a source-linked evidence object for each preference. Feedback comes from programmatic persona checkers and templates; the learner does not receive a human-reviewed evidence adjudication step in the inspected flow.",
+        "sources": [
+          "ace",
+          "baselines",
+          "feedback",
+          "driver"
+        ]
+      },
+      {
+        "text": "**Efficiency and observability.** The code exposes updater state such as memory characters/lines, number of bullets or active entries, update and parse-failure counts, and selected drop/revocation counts. The runner records experiment configuration, evaluation points, LLM usage, and final updater snapshots. These are instrumentation and saved experiment artifacts; this review collected no latency, token-cost, storage, or memory-quality measurements.",
+        "sources": [
+          "ace",
+          "baselines",
+          "runner",
+          "driver"
+        ]
+      },
+      {
+        "text": "**Limits and unknowns.** This review did not establish performance under a live AppWorld/model setup, restart recovery, multi-user isolation, retention/erasure across all generated outputs, or whether learned statements remain correct outside the frozen personas and task splits. No user-facing lifecycle or access-control guarantees are documented by the reviewed experiment path.",
+        "sources": [
+          "readme",
+          "driver",
+          "runner",
+          "metrics"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval accuracy and abstention — unmeasured. The inspected Q3 path injects the full rendered memory; no retrieval or abstention probes were run.",
+        "sources": [
+          "driver",
+          "agent",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured. The implementations include modify, rewrite, keyed replacement and rule updates, but no correction benchmark was run here.",
+        "sources": [
+          "ace",
+          "updaters",
+          "baselines",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Deletion leakage — unmeasured. Several arms evict or deactivate entries, but no deletion or post-deletion leakage workload was run.",
+        "sources": [
+          "ace",
+          "baselines",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Scope-isolation leakage — unmeasured. The experiment driver creates per-run updater objects, but no cross-session or cross-user isolation probe was run.",
+        "sources": [
+          "driver",
+          "runner",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Evidence support and citation coverage — unmeasured. Updater history is not source-linked claim evidence, and no generated answer evidence was adjudicated.",
+        "sources": [
+          "ace",
+          "baselines",
+          "feedback",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Retrieval latency and write-to-recall delay — unmeasured. The injection path and update order are visible in code, but the system was not run to time them.",
+        "sources": [
+          "driver",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Tokens, cost, and storage efficiency — unmeasured. The runner records provider usage for experiment runs and updater output files, but this review collected no values or normalized storage measurements.",
+        "sources": [
+          "runner",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "The repository README describes reported experimental protocols and metrics, but those descriptions are not results reproduced by this review. The shared fixture and status record describe project evaluation artifacts, not system-specific benchmark findings.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      "This is a bounded source review of the pinned README and selected driver, prompt integration, updater, feedback, runner, and Q3 persona files. Other experiment paths and all edge cases were not exhaustively traced.",
+      "The review did not execute Harness Evolution as Learning, its tests, AppWorld workloads, or any benchmark. It establishes no runtime correctness, answer quality, isolation guarantee, restart recovery, latency, token/cost, or storage result.",
+      "The repository is an experimental harness with persona-specific task protocols. The reviewed source does not establish generalization to other users, agents, tasks, or deployed environments.",
+      "Commit-time source state was verified from official GitHub metadata and a shallow checkout; these findings apply to the pinned SHA and may not describe later source."
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Harness Evolution as Learning runtime, tests, or benchmark workload was executed. Source observations and README-reported experimental protocol descriptions are not measurements; no metric values are claimed.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

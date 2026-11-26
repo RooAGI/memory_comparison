@@ -1,0 +1,315 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 122,
+    "slug": "claude-self-reflect",
+    "name": "Claude Self-Reflect",
+    "repository": "https://github.com/ramakay/claude-self-reflect",
+    "branch": "main",
+    "revision": "f2f749ce02d80ba961fd0153ae30def978eeaa74",
+    "reviewed_at": "2026-11-25T08:02:46Z",
+    "review_timezone": "UTC (2026-11-25 00:02:46 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/ramakay/claude-self-reflect/blob/f2f749ce02d80ba961fd0153ae30def978eeaa74/README.md",
+      "checked_urls": [
+        "https://github.com/ramakay/claude-self-reflect/blob/f2f749ce02d80ba961fd0153ae30def978eeaa74/README.md",
+        "https://github.com/ramakay/claude-self-reflect/blob/f2f749ce02d80ba961fd0153ae30def978eeaa74/SECURITY.md"
+      ],
+      "note": "No published email address was found in the official pinned README or security policy. No commit/profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/ramakay/claude-self-reflect/blob/f2f749ce02d80ba961fd0153ae30def978eeaa74/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/ramakay/claude-self-reflect/blob/f2f749ce02d80ba961fd0153ae30def978eeaa74/README.md",
+      "https://github.com/ramakay/claude-self-reflect/blob/f2f749ce02d80ba961fd0153ae30def978eeaa74/SECURITY.md"
+    ],
+    "contact_email_note": "No published email address was found in the official pinned README or security policy. No commit/profile metadata, third-party directory, or inferred address was used.",
+    "summary": "Claude Self-Reflect is a local Rust application for Claude Code that imports session transcripts into SQLite, retrieves prior work, and creates evidence-linked recaps, receipts, and stale-conclusion checks. It integrates through Claude Code hooks and an on-demand stdio MCP server; an optional daemon handles background work. Some narrative and dream features invoke the user's Claude Code account. This review covers selected pinned source and documentation, not runtime performance or quality.",
+    "atlas_locator": {
+      "ordinal": 122,
+      "name": "Claude Self-Reflect",
+      "slug": "claude-self-reflect",
+      "listed_repository": "https://github.com/ramakay/claude-self-reflect",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/claude-self-reflect.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository page",
+        "path": "repository",
+        "symbol": "canonical repository, public status, default branch main, current abbreviated head",
+        "url": "https://github.com/ramakay/claude-self-reflect"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "head f2f749ce02d80ba961fd0153ae30def978eeaa74; updated 2026-11-24T04:17:11Z",
+        "url": "https://github.com/ramakay/claude-self-reflect/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed full commit",
+        "path": "commit",
+        "symbol": "f2f749ce02d80ba961fd0153ae30def978eeaa74",
+        "url": "https://github.com/ramakay/claude-self-reflect/commit/f2f749ce02d80ba961fd0153ae30def978eeaa74"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "product overview, setup, reported evaluations, limits, uninstall and privacy disclosures",
+        "url": "https://github.com/ramakay/claude-self-reflect/blob/f2f749ce02d80ba961fd0153ae30def978eeaa74/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Architecture guide",
+        "path": "docs-site/src/content/architecture.md",
+        "symbol": "components, local embeddings, storage, indexes, MCP, provenance and efficiency notes",
+        "url": "https://github.com/ramakay/claude-self-reflect/blob/f2f749ce02d80ba961fd0153ae30def978eeaa74/docs-site/src/content/architecture.md"
+      },
+      {
+        "id": "import",
+        "label": "Transcript import implementation",
+        "path": "csr-engine/src/import/mod.rs",
+        "symbol": "chunk model, deterministic IDs, transcript sanitization and import evidence",
+        "url": "https://github.com/ramakay/claude-self-reflect/blob/f2f749ce02d80ba961fd0153ae30def978eeaa74/csr-engine/src/import/mod.rs"
+      },
+      {
+        "id": "provenance",
+        "label": "Provenance implementation",
+        "path": "csr-engine/src/provenance.rs",
+        "symbol": "trust tiers and transcript/chunk provenance records",
+        "url": "https://github.com/ramakay/claude-self-reflect/blob/f2f749ce02d80ba961fd0153ae30def978eeaa74/csr-engine/src/provenance.rs"
+      },
+      {
+        "id": "search",
+        "label": "Search index implementation",
+        "path": "csr-engine/src/search/mod.rs",
+        "symbol": "HNSW index structures, generation manifests and incremental cursors",
+        "url": "https://github.com/ramakay/claude-self-reflect/blob/f2f749ce02d80ba961fd0153ae30def978eeaa74/csr-engine/src/search/mod.rs"
+      },
+      {
+        "id": "hybrid",
+        "label": "Hybrid ranking implementation",
+        "path": "csr-engine/src/search/hybrid.rs",
+        "symbol": "semantic, full-text and identifier ranking fusion",
+        "url": "https://github.com/ramakay/claude-self-reflect/blob/f2f749ce02d80ba961fd0153ae30def978eeaa74/csr-engine/src/search/hybrid.rs"
+      },
+      {
+        "id": "project_scope",
+        "label": "Project resolution implementation",
+        "path": "csr-engine/src/search/cross_project.rs",
+        "symbol": "project folder decoding and constrained project-family alias handling",
+        "url": "https://github.com/ramakay/claude-self-reflect/blob/f2f749ce02d80ba961fd0153ae30def978eeaa74/csr-engine/src/search/cross_project.rs"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "external model-call disclosure, local data handling and security reporting route",
+        "url": "https://github.com/ramakay/claude-self-reflect/blob/f2f749ce02d80ba961fd0153ae30def978eeaa74/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "comparison domains; no Claude Self-Reflect run",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Shared benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "project execution record; no Claude Self-Reflect run",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned workload only; not run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution",
+        "path": "content/systems/claude-self-reflect.md",
+        "symbol": "ordinal 122 identity, slug and listed locator attribution only",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/claude-self-reflect.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Claude Self-Reflect as a Claude Code continuity layer with evidence-bearing recaps, receipts, stale-conclusion checks, transcript recovery, local session search, and MCP tools. It packages a Rust binary with embedded SQLite and optional daemon and companion components.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The architecture guide describes Claude Code JSONL transcript parsing into chunks, local 384-dimensional FastEmbed vectors, and a single SQLite database containing chunks, embeddings, reflections, enrichment state, retrieval events, and import de-duplication state. SQLite connections are mutex-protected and use WAL for concurrent reads.",
+        "sources": [
+          "architecture",
+          "import"
+        ]
+      },
+      {
+        "text": "The importer records project, conversation, timestamp, speaker, sequence and sidechain metadata; generates deterministic UUIDv5 chunk IDs; and tracks provenance evidence. The provenance module defines trust tiers and source-event/span records.",
+        "sources": [
+          "import",
+          "provenance"
+        ]
+      },
+      {
+        "text": "The docs describe a memory-mapped f16 generation for chunk vectors and HNSW for reflections. The inspected search source also contains HNSW-backed chunk/reflection structures, generation manifests and update cursors. The active index mix can depend on index state and is not established for a live installation here.",
+        "sources": [
+          "architecture",
+          "search"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The README and architecture guide describe transcript import through setup/hooks, local embedding and enrichment stages. The importer separates stored chunks from derived artifacts and recognizes CSR's own tool blocks and hook wrappers for suppression from derived material.",
+        "sources": [
+          "readme",
+          "architecture",
+          "import"
+        ]
+      },
+      {
+        "text": "Hybrid ranking source implements reciprocal-rank fusion across rankings and includes semantic, full-text, identifier and other search modules. The README describes retrieval of past sessions through MCP and reports its own evaluation outcomes; this review did not reproduce them.",
+        "sources": [
+          "hybrid",
+          "search",
+          "readme"
+        ]
+      },
+      {
+        "text": "The README documents uninstall controls that preserve the user's data by default, purge the main data directory, or additionally purge the transcript mirror. Every data-erasure path and residual copy was not inspected, so deletion completeness is unknown.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "Project namespaces are derived from Claude Code's project folder naming; the project-resolution source decodes those names and allows selected hyphenated aliases only when the shorter project directory exists beneath ~/projects. This does not demonstrate an authenticated tenant boundary, and no cross-project probe was run.",
+        "sources": [
+          "import",
+          "project_scope"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Search channels and fusion are visible in source. No independent answerable or abstention benchmark was run.",
+        "sources": [
+          "hybrid",
+          "readme"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and staleness",
+        "status": "unmeasured",
+        "evidence": "The README describes dream checks against Git history and stale-conclusion markers. No correction or staleness probes were run.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Uninstall and purge controls are documented. No deletion-leak probe or residual-copy audit was run.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Project namespace resolution is visible in source; no cross-project isolation probe or full authorization review was run.",
+        "sources": [
+          "project_scope"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "The README describes evidence-bearing receipts and source lineage is represented in code. No evidence-support adjudication was run.",
+        "sources": [
+          "readme",
+          "provenance"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No latency was measured in this review. Upstream documentation discusses index lookup targets and reported evaluations, which were not reproduced.",
+        "sources": [
+          "architecture",
+          "readme"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No scheduled recall-after-write measurement was run.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No token or cost measurement was collected. The security policy documents optional calls to Anthropic through the user's Claude Code account.",
+        "sources": [
+          "security",
+          "readme"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No database or index size measurement was collected.",
+        "sources": [
+          "architecture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The review inspected selected official documentation and source files only. It did not inspect all tool, hook, authorization, mutation, or erasure paths, validate an installed system, or run runtime isolation and deletion probes.",
+        "sources": [
+          "readme",
+          "import",
+          "project_scope"
+        ]
+      },
+      {
+        "text": "The README characterizes its results as based on one operator's corpus and identifies external-corpus generalization, paraphrased queries, staleness coverage, and labeled evaluation sets as open work. Those upstream claims are not task measurements.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The official security policy says some briefing, narrative, ratification and dream features invoke Claude Code under the user's account, and advises disabling them when conversation data should not be sent to Anthropic.",
+        "sources": [
+          "security"
+        ]
+      }
+    ],
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "No system, benchmark, or tests were run for this review. Upstream-reported development-history evaluations are not results from this task."
+    }
+  }
+}

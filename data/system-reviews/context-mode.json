@@ -1,0 +1,460 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 145,
+    "slug": "context-mode",
+    "name": "Context Mode",
+    "repository": "https://github.com/mksglu/context-mode",
+    "listed_repository": "https://github.com/mksglu/context-mode",
+    "branch": "main",
+    "revision": "2065c0ffdf89b0ee88637c5095bff88d6bce0039",
+    "reviewed_at": "2026-11-25T08:57:44Z",
+    "review_timezone": "UTC (2026-11-25 00:57:44 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Context Mode is a local coding-agent plugin that keeps large tool output in a per-project SQLite FTS index and gives the agent bounded replies plus search and resume tools. Hooks journal selected session and tool events; ctx_index also stores files, text, and fetched pages. The review is pinned to the verified current main head. No Context Mode runtime, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 145,
+      "name": "Context Mode",
+      "slug": "context-mode",
+      "listed_repository": "https://github.com/mksglu/context-mode",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/context-mode.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/mksglu/context-mode/blob/2065c0ffdf89b0ee88637c5095bff88d6bce0039/README.md",
+      "checked_urls": [
+        "https://github.com/mksglu/context-mode/blob/2065c0ffdf89b0ee88637c5095bff88d6bce0039/README.md"
+      ],
+      "note": "Checked the official pinned README for a published contact email. It directs defect reports and ideas to Discord but publishes no email."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/mksglu/context-mode/blob/2065c0ffdf89b0ee88637c5095bff88d6bce0039/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the official pinned README; it directs users to Discord. No commit/profile metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Catalog ordinal and locator",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[144], ordinal 145; curated identity, explicit listed repository and Atlas locator",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/context-mode.md",
+        "symbol": "Pinned report used only to attribute the curated roster identity/locator; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/context-mode.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Public repository page identifies main as default branch",
+        "url": "https://github.com/mksglu/context-mode"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Current full main head 2065c0ffdf89b0ee88637c5095bff88d6bce0039; updated 2026-11-25T03:28:45Z",
+        "url": "https://github.com/mksglu/context-mode/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Official reviewed head",
+        "path": "commit/2065c0ffdf89b0ee88637c5095bff88d6bce0039",
+        "symbol": "Official commit page for verified current main head",
+        "url": "https://github.com/mksglu/context-mode/commit/2065c0ffdf89b0ee88637c5095bff88d6bce0039"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product description, local SQLite design, workflows, scope, security/privacy, limitations, upstream-published benchmark claims and contact check",
+        "url": "https://github.com/mksglu/context-mode/blob/2065c0ffdf89b0ee88637c5095bff88d6bce0039/README.md"
+      },
+      {
+        "id": "tools",
+        "label": "Pinned tools reference",
+        "path": "docs/tools.md",
+        "symbol": "Tool contracts and input/scope behavior",
+        "url": "https://github.com/mksglu/context-mode/blob/2065c0ffdf89b0ee88637c5095bff88d6bce0039/docs/tools.md"
+      },
+      {
+        "id": "how",
+        "label": "Pinned architecture and flow guide",
+        "path": "docs/how-it-works.md",
+        "symbol": "Project database, lifecycle, search scopes/ranking, chunking and compaction/resume",
+        "url": "https://github.com/mksglu/context-mode/blob/2065c0ffdf89b0ee88637c5095bff88d6bce0039/docs/how-it-works.md"
+      },
+      {
+        "id": "project",
+        "label": "Project identity and path resolution",
+        "path": "src/core/project/resolve.ts",
+        "symbol": "Project and worktree identity, project database path derivation and containment root",
+        "url": "https://github.com/mksglu/context-mode/blob/2065c0ffdf89b0ee88637c5095bff88d6bce0039/src/core/project/resolve.ts"
+      },
+      {
+        "id": "schema",
+        "label": "SQLite schema",
+        "path": "src/core/store/schema.ts",
+        "symbol": "Journal, source and chunk tables; event/source fields and FTS tables",
+        "url": "https://github.com/mksglu/context-mode/blob/2065c0ffdf89b0ee88637c5095bff88d6bce0039/src/core/store/schema.ts"
+      },
+      {
+        "id": "db",
+        "label": "SQLite lifecycle",
+        "path": "src/core/store/db.ts",
+        "symbol": "WAL mode, busy timeout, atomic database creation, migrations and write transactions",
+        "url": "https://github.com/mksglu/context-mode/blob/2065c0ffdf89b0ee88637c5095bff88d6bce0039/src/core/store/db.ts"
+      },
+      {
+        "id": "fts",
+        "label": "FTS storage and ranking",
+        "path": "src/core/store/fts.ts",
+        "symbol": "Chunk/source writes and deletes, FTS indexing and per-session/worktree/project filtering",
+        "url": "https://github.com/mksglu/context-mode/blob/2065c0ffdf89b0ee88637c5095bff88d6bce0039/src/core/store/fts.ts"
+      },
+      {
+        "id": "journal",
+        "label": "Journal append path",
+        "path": "src/core/journal/append.ts",
+        "symbol": "Typed event append and retained call metadata",
+        "url": "https://github.com/mksglu/context-mode/blob/2065c0ffdf89b0ee88637c5095bff88d6bce0039/src/core/journal/append.ts"
+      },
+      {
+        "id": "index",
+        "label": "Index tool",
+        "path": "src/core/tools/index.ts",
+        "symbol": "Path/content/URL indexing inputs and project-root handling",
+        "url": "https://github.com/mksglu/context-mode/blob/2065c0ffdf89b0ee88637c5095bff88d6bce0039/src/core/tools/index.ts"
+      },
+      {
+        "id": "search",
+        "label": "Search tool",
+        "path": "src/core/tools/search.ts",
+        "symbol": "Search API, default worktree scope, scope filtering, paging and source behavior",
+        "url": "https://github.com/mksglu/context-mode/blob/2065c0ffdf89b0ee88637c5095bff88d6bce0039/src/core/tools/search.ts"
+      },
+      {
+        "id": "purge",
+        "label": "Purge tool",
+        "path": "src/core/tools/purge.ts",
+        "symbol": "Session/source/project deletion behavior",
+        "url": "https://github.com/mksglu/context-mode/blob/2065c0ffdf89b0ee88637c5095bff88d6bce0039/src/core/tools/purge.ts"
+      },
+      {
+        "id": "resume",
+        "label": "Resume tool",
+        "path": "src/core/tools/resume.ts",
+        "symbol": "Session-scoped state and journal recall behavior",
+        "url": "https://github.com/mksglu/context-mode/blob/2065c0ffdf89b0ee88637c5095bff88d6bce0039/src/core/tools/resume.ts"
+      },
+      {
+        "id": "dispatch",
+        "label": "Hook dispatch",
+        "path": "src/core/hooks/dispatch.ts",
+        "symbol": "Prompt/tool event journaling and compaction state delivery",
+        "url": "https://github.com/mksglu/context-mode/blob/2065c0ffdf89b0ee88637c5095bff88d6bce0039/src/core/hooks/dispatch.ts"
+      },
+      {
+        "id": "execute",
+        "label": "Sandboxed execution",
+        "path": "src/core/tools/execute.ts",
+        "symbol": "Execution, output indexing and bounded selection behavior",
+        "url": "https://github.com/mksglu/context-mode/blob/2065c0ffdf89b0ee88637c5095bff88d6bce0039/src/core/tools/execute.ts"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Required quality and efficiency metrics; definitions are not measurements",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned workload specification; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Project benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Existing project execution status; no result was produced by this review",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Context Mode as a free, local plugin for coding agents. Its hooks, sandbox, MCP tools, and per-project SQLite index run on the user's machine; a separately hosted Context Mode Gateway is a different product.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      },
+      {
+        "text": "The official repository page identifies main as the default branch. Its main commit feed reports full head 2065c0ffdf89b0ee88637c5095bff88d6bce0039 at 2026-11-25T03:28:45Z, and a shallow checkout resolved to the same SHA.",
+        "sources": [
+          "repo",
+          "feed",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The plugin has host-specific hooks/adapters, a local MCP server, sandboxed execution tools, a journal, an FTS content store, and one SQLite database per project. The schema separates session events from indexed sources/chunks; event rows retain session, worktree, agent, kind, tool/key/path, result and byte fields.",
+        "sources": [
+          "readme",
+          "how",
+          "schema",
+          "project"
+        ]
+      },
+      {
+        "text": "The database uses Node's built-in SQLite in WAL mode and FTS5. Content chunks are indexed in a Porter-stemmed word table and a trigram table for paths and partial terms; a line-unit FTS table supports journal recall. Project path identity is derived from the repository's common Git directory (or the plain project directory), while worktree identity remains separately recorded.",
+        "sources": [
+          "schema",
+          "db",
+          "fts",
+          "project",
+          "how"
+        ]
+      },
+      {
+        "text": "ctx_execute and ctx_batch run user-supplied code/commands as local child processes; large output is indexed and the tool returns selected bounded content. ctx_index stores files/folders, supplied text, or fetched URLs. Hooks also capture prompt, edit, command, tool-error, decision, and usage events as available from each host adapter.",
+        "sources": [
+          "readme",
+          "tools",
+          "execute",
+          "index",
+          "dispatch",
+          "journal"
+        ]
+      },
+      {
+        "text": "The local plugin's searchable store is project-local. The README distinguishes it from Context Mode Gateway, which is a separate hosted service for cross-session/agent features.",
+        "sources": [
+          "readme",
+          "project"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write/index: ctx_index accepts one path, content body, or URL; path inputs are resolved under the project worktree and checked against permitted roots. Indexed text is chunked and stored with source labels and session/worktree/agent attribution. Tool output from sandboxed execution and hook replacement can also be indexed for later retrieval.",
+        "sources": [
+          "tools",
+          "index",
+          "fts",
+          "execute",
+          "dispatch"
+        ]
+      },
+      {
+        "text": "Update/correction: the inspected public tool contract has index and purge operations but no update or correction operation. Re-indexing creates source records; the inspected implementation does not establish in-place correction semantics, supersession, or a fact-level history. A caller can purge a source and index replacement content, but that sequence was not run.",
+        "sources": [
+          "tools",
+          "index",
+          "purge",
+          "fts"
+        ]
+      },
+      {
+        "text": "Delete: ctx_purge accepts exactly one session, source, or project scope. The source path removes matching chunk/index rows and source metadata; project scope removes the project's event and source/chunk data. The code reports deletion from the local index; this review does not establish deletion of raw project files, backups, copied output, or external host logs.",
+        "sources": [
+          "tools",
+          "purge",
+          "fts",
+          "readme"
+        ]
+      },
+      {
+        "text": "Retrieval: ctx_search defaults to worktree scope and supports session, worktree, and whole-project scopes, optional source filtering, relevance or timeline ordering, and paging. Search applies scope filters to indexed chunks; word and trigram matches use BM25 and results are combined for project-wide relevance. ctx_resume reads the session's bounded state summary or a journal row by sequence. Retrieved text is accompanied by source labels/headings, not claim-level citations.",
+        "sources": [
+          "tools",
+          "search",
+          "fts",
+          "resume",
+          "how"
+        ]
+      },
+      {
+        "text": "Scope isolation: the database is keyed to a project identity. Search scopes are session, current worktree, or project; project-wide mode intentionally includes worktrees of that project. Project resolution and path containment are local filesystem boundaries, not a tenant authorization service. No cross-project or hostile-caller isolation test was run for this review.",
+        "sources": [
+          "project",
+          "search",
+          "fts",
+          "purge",
+          "metrics"
+        ]
+      },
+      {
+        "text": "Provenance/evidence: journal rows retain event type, session/worktree/agent, tool/key/path, outcome, timestamps and byte counts; indexed sources retain source kind/label and session/worktree/agent. Search output identifies source labels and headings. The inspected model does not represent validated factual claims, truth/confidence state, source passages attached to generated answers, or a mutation audit linking corrections to replaced claims.",
+        "sources": [
+          "schema",
+          "journal",
+          "fts",
+          "search",
+          "metrics"
+        ]
+      },
+      {
+        "text": "Efficiency/observability: bounded output, chunk selection, paging, FTS indexing, and compact resume summaries are designed to keep large tool output out of the model context. Local ctx_stats and ctx_doctor report use and installation/database health; README claims zero telemetry and lists network calls for URL fetch, update checks, installs/upgrades, and user-triggered issue reports. Upstream README publishes benchmark figures from a separately dated/revisioned run; those are upstream-reported results, not measurements from this review.",
+        "sources": [
+          "readme",
+          "tools",
+          "how",
+          "execute",
+          "search",
+          "metrics"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "No fixture queries or adjudicated response outcomes were run; code inspection cannot establish answer accuracy or abstention behavior.",
+        "sources": [
+          "search",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "No in-place correction contract was found and no correction probes were run.",
+        "sources": [
+          "tools",
+          "purge",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The local index purge path was inspected, but no post-delete probes or checks of copies, backups, or host logs were run.",
+        "sources": [
+          "purge",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Code filters retrieval by session/worktree/project; no paired allowed/forbidden scope workload was run.",
+        "sources": [
+          "search",
+          "project",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "No generated responses were captured or adjudicated for source support/citation coverage; source labels are not citation accuracy results.",
+        "sources": [
+          "search",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No retrieval latency samples were collected.",
+        "sources": [
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timed write-then-recall probes were run.",
+        "sources": [
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No token usage or provider charges were measured for this review.",
+        "sources": [
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "SQLite/FTS storage structure was inspected, but no corpus storage size or per-item efficiency was measured.",
+        "sources": [
+          "schema",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected the README, tools and architecture guides, project resolution, SQLite schema/lifecycle, FTS store, journal append, index/search/purge/resume tools, hook dispatch, and sandbox execution at the verified head. It did not inspect every host adapter, policy rule, CLI operation, or all code paths.",
+        "sources": [
+          "readme",
+          "tools",
+          "how",
+          "project",
+          "schema",
+          "db",
+          "fts",
+          "journal",
+          "index",
+          "search",
+          "purge",
+          "resume",
+          "dispatch",
+          "execute"
+        ]
+      },
+      {
+        "text": "The README's published byte-saving and timing figures describe its own benchmark runs with stated revisions, workloads, dates and environments. This task did not reproduce them; all project-defined benchmark domains remain unmeasured for Context Mode at the reviewed head.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "text": "The local project database, filesystem containment, and search scopes are visible in source, but the review did not establish deployment-level access control, deletion from every copy, factual correctness, or behavior under concurrent/hostile workloads.",
+        "sources": [
+          "project",
+          "search",
+          "purge",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Context Mode runtime, tests, or benchmarks were run. Source observations and upstream-published benchmark figures are not results from this project review."
+    }
+  }
+}

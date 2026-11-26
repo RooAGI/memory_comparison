@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "roster_source": "No system roster is currently configured",
+  "roster_policy": "No systems are currently included in the project assessment roster. Benchmark execution records remain separately versioned and are not an assessment roster.",
+  "criteria_source": "METRICS.md and REVIEW.md",
+  "criteria": [
+    {"id":"recall","label":"Answerable recall","definition":"Correct answerable cases divided by all eligible answerable cases.","evidence_mode":"benchmark"},
+    {"id":"abstention","label":"Unanswerable abstention","definition":"Expected abstentions divided by all eligible unanswerable cases.","evidence_mode":"benchmark"},
+    {"id":"correction","label":"Correction accuracy","definition":"Post-correction probes returning the current gold value divided by all eligible post-correction answerable probes.","evidence_mode":"benchmark"},
+    {"id":"stale_value","label":"Stale-value rate","definition":"Post-correction probes asserting a superseded value as current divided by eligible post-correction probes.","evidence_mode":"benchmark"},
+    {"id":"deletion","label":"Deletion leak rate","definition":"Forbidden deleted-content returns divided by scheduled eligible post-delete probes.","evidence_mode":"benchmark"},
+    {"id":"scope","label":"Scope isolation leak rate","definition":"Forbidden cross-scope returns divided by scheduled eligible cross-scope probes.","evidence_mode":"benchmark"},
+    {"id":"evidence","label":"Evidence support and citation coverage","definition":"Report support precision and resolvable citation coverage with their own claim denominators.","evidence_mode":"benchmark"},
+    {"id":"latency","label":"Retrieval latency","definition":"Per-operation latency distribution with units, observed sample count, failures, and nearest-rank p50/p95/p99.","evidence_mode":"benchmark"},
+    {"id":"write_to_recall","label":"Write-to-recall delay","definition":"Time from acknowledged write to first correct scheduled recall; retain successful fraction and censoring.","evidence_mode":"benchmark"},
+    {"id":"usage","label":"Tokens and cost","definition":"Input/output token observations and USD cost with usage source and dated price schedule.","evidence_mode":"benchmark"},
+    {"id":"storage","label":"Storage efficiency","definition":"Persistent bytes at a named boundary and bytes per accepted item when measured.","evidence_mode":"benchmark"},
+    {"id":"source_review","label":"Source review","definition":"Code observations tied to inspected files/symbols and exact analyzed repository revision; not a runtime or benchmark claim.","evidence_mode":"source"}
+  ],
+  "systems": []
+}

@@ -1,0 +1,339 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 150,
+    "slug": "contextstream-mcp",
+    "name": "ContextStream MCP Server",
+    "repository": "https://github.com/contextstream/mcp-server",
+    "branch": "main",
+    "revision": "c9d4cfe5727a26cc00b39736c9371dd95886a31e",
+    "reviewed_at": "2026-11-25T09:07:01Z",
+    "review_timezone": "UTC (2026-11-25 01:07:01 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": null,
+      "source_url": null,
+      "checked_urls": [
+        "https://github.com/contextstream/mcp-server/blob/c9d4cfe5727a26cc00b39736c9371dd95886a31e/README.md",
+        "https://github.com/contextstream/mcp-server/blob/c9d4cfe5727a26cc00b39736c9371dd95886a31e/SUPPORT.md"
+      ],
+      "note": "The official pinned README and SUPPORT.md were checked. SUPPORT.md directs account, billing, hosted-service, and customer-data questions to ContextStream's support channel but publishes no email address."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/contextstream/mcp-server/blob/c9d4cfe5727a26cc00b39736c9371dd95886a31e/README.md",
+      "https://github.com/contextstream/mcp-server/blob/c9d4cfe5727a26cc00b39736c9371dd95886a31e/SUPPORT.md"
+    ],
+    "summary": "ContextStream MCP Server is an open-source Rust MCP client/tool layer for a hosted context platform: it exposes memory, project, code/document context and related operations to MCP clients. The hosted API and persistence backend are not in this repository, so this review describes only the visible client behavior and official product documentation. No system, benchmark, or test was run.",
+    "atlas_locator": {
+      "ordinal": 150,
+      "name": "ContextStream MCP Server",
+      "slug": "contextstream-mcp",
+      "listed_repository": "https://github.com/contextstream/mcp-server",
+      "roster_attribution": "repository_status=explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/contextstream-mcp.md",
+      "atlas_revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official upstream repository; public repository and default branch main",
+        "path": "repository root",
+        "url": "https://github.com/contextstream/mcp-server"
+      },
+      {
+        "id": "feed",
+        "label": "Official main commit Atom feed; current head and update timestamp",
+        "path": "commits/main.atom",
+        "url": "https://github.com/contextstream/mcp-server/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Official current main head commit",
+        "path": "commit",
+        "symbol": "c9d4cfe5727a26cc00b39736c9371dd95886a31e",
+        "url": "https://github.com/contextstream/mcp-server/commit/c9d4cfe5727a26cc00b39736c9371dd95886a31e"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README; product overview, memory tools, indexing and published performance claims",
+        "path": "README.md",
+        "url": "https://github.com/contextstream/mcp-server/blob/c9d4cfe5727a26cc00b39736c9371dd95886a31e/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Pinned architecture and public boundary documentation",
+        "path": "docs/architecture.md",
+        "url": "https://github.com/contextstream/mcp-server/blob/c9d4cfe5727a26cc00b39736c9371dd95886a31e/docs/architecture.md"
+      },
+      {
+        "id": "data",
+        "label": "Pinned official client data handling and user controls",
+        "path": "docs/data-handling.md",
+        "url": "https://github.com/contextstream/mcp-server/blob/c9d4cfe5727a26cc00b39736c9371dd95886a31e/docs/data-handling.md"
+      },
+      {
+        "id": "memory",
+        "label": "Pinned Rust memory-domain MCP tools, result cache and memory operations",
+        "path": "crates/mcp-tools/src/domains/memory.rs",
+        "url": "https://github.com/contextstream/mcp-server/blob/c9d4cfe5727a26cc00b39736c9371dd95886a31e/crates/mcp-tools/src/domains/memory.rs"
+      },
+      {
+        "id": "scope",
+        "label": "Pinned workspace/project scope resolution implementation",
+        "path": "crates/mcp-tools/src/domains/scope.rs",
+        "url": "https://github.com/contextstream/mcp-server/blob/c9d4cfe5727a26cc00b39736c9371dd95886a31e/crates/mcp-tools/src/domains/scope.rs"
+      },
+      {
+        "id": "delete",
+        "label": "Pinned irreversible delete-action registry and confirmation boundary",
+        "path": "crates/mcp-tools/src/domains/destructive.rs",
+        "url": "https://github.com/contextstream/mcp-server/blob/c9d4cfe5727a26cc00b39736c9371dd95886a31e/crates/mcp-tools/src/domains/destructive.rs"
+      },
+      {
+        "id": "support",
+        "label": "Pinned official support instructions checked for a published email",
+        "path": "SUPPORT.md",
+        "url": "https://github.com/contextstream/mcp-server/blob/c9d4cfe5727a26cc00b39736c9371dd95886a31e/SUPPORT.md"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog identity and listed repository locator",
+        "path": "data/memory-systems.json",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas entry retained only as roster attribution",
+        "path": "content/systems/contextstream-mcp.md",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/contextstream-mcp.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project benchmark metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status file",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture protocol",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The curated roster places ContextStream MCP Server at ordinal 150, slug `contextstream-mcp`, with the explicit locator https://github.com/contextstream/mcp-server. Atlas is retained only as identity/locator attribution; it is not evidence for the assessment. The official public repository identifies `main` as its default branch, and its main commit feed reported full head `c9d4cfe5727a26cc00b39736c9371dd95886a31e` at 2026-11-25T01:11:02Z.",
+        "sources": [
+          "roster",
+          "atlas",
+          "repo",
+          "feed",
+          "head"
+        ]
+      },
+      {
+        "text": "The project presents itself as a hosted context platform for agents, with an open-source Rust MCP server/client, editor integrations, and tools for memory, project/code search, and team context. Its architecture document says the hosted API and backend are separate and are not included in this repository. The official SUPPORT.md directs account, billing, hosted-service, and customer-data questions to ContextStream's support channel and publishes no email.",
+        "sources": [
+          "readme",
+          "architecture",
+          "support"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The repository contains local stdio and HTTP transport, MCP domain tools, shared types, session and checkout identity logic, setup/install tooling, and client code for the hosted API. The public architecture document explicitly excludes the hosted backend, production overlay, evaluation data, and premium provider implementation; therefore storage schema and server-side execution cannot be inspected here.",
+        "sources": [
+          "architecture",
+          "repo"
+        ]
+      },
+      {
+        "text": "The memory domain is one part of a wider context tool surface. The inspected Rust module imports client operations for memory nodes/events, tasks, todos, diagrams, documents, roadmaps and transcript search, and resolves scope before calling the API. The MCP layer renders tool results and keeps a bounded in-process result cache; it is not a local canonical memory database.",
+        "sources": [
+          "memory",
+          "scope",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The memory search cache is process-local, caller-partitioned, expires after 30 seconds, and is bounded to 64 entries globally, eight per caller and 128 KiB per entry. The search path has a six-second tool timeout, with shorter documented internal document-search timeouts. These are source-visible resource bounds, not measured performance results.",
+        "sources": [
+          "memory"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write and update — code observation. The memory tool layer exposes create and update operations for memory nodes and events, alongside other typed context records. It submits operations through the hosted client and resolves workspace/project scope first. The private API owns canonical persistence and validation; its transaction and conflict semantics cannot be established from this repository. No memory was written during this review.",
+        "sources": [
+          "memory",
+          "scope",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Delete — code observation. Irreversible actions are moved into a dedicated `delete` tool marked destructive, with actions such as deleting nodes, events, tasks, todos, diagrams, documents and transcripts. The project states that clients should obtain confirmation for destructive actions. `project.purge` removes indexed server-side project content and cannot be undone; `project.forget_local` removes only the local machine mapping. The backend's erasure and retention behavior was not inspected or tested.",
+        "sources": [
+          "delete",
+          "data",
+          "readme"
+        ]
+      },
+      {
+        "text": "Retrieval — code and documentation observation. Memory tools include typed get/search operations; the client source applies workspace/project scope and caches eligible rendered search responses briefly. The product documentation describes indexed code and documents, saved decisions, and traceable sources, and asks clients to cite retrieved sources. Search ranking, source selection, answer quality and evidence persistence are partly implemented by the hosted service and cannot be verified from this repository. No retrieval call was made.",
+        "sources": [
+          "memory",
+          "scope",
+          "readme",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Scope isolation — code observation with a hosted boundary. The client resolves workspace/project IDs from request arguments, session state, authentication overrides and configured defaults. It accepts a project UUID or resolves a project name within a workspace; reads check whether the selected project belongs to that workspace. This shows client-side scope handling, not server-side tenant isolation. The hosted authorization model and cross-tenant guarantees are not present in this repository, and no isolation test was run.",
+        "sources": [
+          "scope",
+          "memory",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Provenance and evidence — documentation observation. The README describes traceable sources and directs agents to cite retrieved source material. The data-handling document specifies which indexed repository content and metadata the client sends, including repository identity/fingerprint and branch/commit information, and provides ignore and purge controls. The MCP layer's visible contracts do not establish how the hosted backend retains per-memory provenance, ranks evidence, or enforces citation support; those details remain unknown.",
+        "sources": [
+          "readme",
+          "data",
+          "memory",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Efficiency and observability — documentation/code observation. The client exposes setup/status and diagnostic surfaces and applies bounded cache sizes and request timeouts. The README reports production search latency (61 ms median server-side and 127 ms p95 in an October 27 run), but these figures are upstream-reported and were not reproduced here. The local client does not expose enough of the hosted storage and model accounting to independently measure retrieval quality, total latency, token use, cost, or storage efficiency.",
+        "sources": [
+          "readme",
+          "memory",
+          "architecture",
+          "data"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "The repository exposes memory search and the README reports product-level retrieval benchmarks; this review ran no fixture queries and did not inspect the hosted retrieval implementation.",
+        "sources": [
+          "memory",
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "The client exposes memory update operations, but the hosted correction/version semantics and current-value selection are unavailable here; no correction probes were performed.",
+        "sources": [
+          "memory",
+          "architecture",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Client delete actions and project purge are visible, but server-side erasure, replicas, retention and backups cannot be checked from the client repository; no post-delete probes were run.",
+        "sources": [
+          "delete",
+          "data",
+          "architecture",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation leak rate",
+        "status": "unmeasured",
+        "evidence": "Client-side workspace/project resolution is visible, while hosted authorization and tenant isolation are outside the repository; no cross-scope workload was run.",
+        "sources": [
+          "scope",
+          "architecture",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support precision, citation coverage, and provenance",
+        "status": "unmeasured",
+        "evidence": "The product describes traceable sources and citation-oriented retrieval, but this review did not issue queries or adjudicate whether returned evidence supports answers.",
+        "sources": [
+          "readme",
+          "data",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Latency, write-to-recall delay, tokens, cost, storage, and observability",
+        "status": "unmeasured",
+        "evidence": "The README publishes selected search timing figures, but this review collected no independent timings or usage data; backend storage and accounting are not included in the repository.",
+        "sources": [
+          "readme",
+          "architecture",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This assessment reviewed the current README, public architecture and data-handling documents, the Rust memory tool layer, scope resolver, and destructive-action registry. It did not inspect every client, tool family, hosted API endpoint, service implementation, database, retention job, or deployment configuration.",
+        "sources": [
+          "readme",
+          "architecture",
+          "data",
+          "memory",
+          "scope",
+          "delete"
+        ]
+      },
+      {
+        "text": "The most consequential unknowns are backend schema and storage, server-side authorization, memory write/update conflict behavior, search ranking and retrieval provenance, source retention, deletion completeness, and the contract between citations and supporting passages. The client repository alone cannot establish these properties.",
+        "sources": [
+          "architecture",
+          "data",
+          "memory",
+          "scope",
+          "delete"
+        ]
+      },
+      {
+        "text": "The project documents that repository indexing sends eligible source contents to the hosted service; transcript exchange saving is enabled by default when applicable, while ignore rules, transcript controls, and project purge provide user controls. These are product-documented data flows and controls, not an independent privacy or deletion audit.",
+        "sources": [
+          "data",
+          "readme"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is `not_run`. Project metric definitions and fixture are protocol material, not ContextStream results. The README's published figures are identified as upstream claims and were not independently reproduced. No ContextStream runtime, benchmark or test was run.",
+        "sources": [
+          "metrics",
+          "status",
+          "fixture",
+          "readme"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,309 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 205,
+    "slug": "ean-agentos",
+    "name": "EAN AgentOS",
+    "repository": "https://github.com/eanai-ro/ean-agentos",
+    "listed_repository": "https://github.com/eanai-ro/ean-agentos",
+    "branch": "not verified",
+    "revision": "not verified",
+    "reviewed_at": "2026-11-25T11:50:42Z",
+    "review_timezone": "UTC (2026-11-25 03:50:42 PST; America/Los_Angeles)",
+    "source_status": "not_reviewed",
+    "benchmark_status": "not_run",
+    "summary": "The catalog identifies EAN AgentOS at ordinal 205 and lists eanai-ro/ean-agentos, but the official repository and catalog-pinned pages returned GitHub Page not found, the repository API returned 404, and git ls-remote could not obtain refs in this device environment. Current upstream identity, branch, head, source behavior, and contact remain unverified; no implementation review is claimed.",
+    "atlas_locator": {
+      "ordinal": 205,
+      "name": "EAN AgentOS",
+      "slug": "ean-agentos",
+      "listed_repository": "https://github.com/eanai-ro/ean-agentos",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/ean-agentos.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "catalog_revision": "0c5e0ecfdb971f8b38c9ffc0848ef9e33fec6da6",
+      "note": "Catalog and Atlas are retained only for curated identity and locator attribution, not assessment evidence."
+    },
+    "contact": {
+      "email": null,
+      "source_url": null,
+      "checked_urls": [
+        "https://github.com/eanai-ro/ean-agentos",
+        "https://github.com/eanai-ro/ean-agentos/blob/0c5e0ecfdb971f8b38c9ffc0848ef9e33fec6da6/README.md",
+        "https://github.com/eanai-ro/ean-agentos/blob/0c5e0ecfdb971f8b38c9ffc0848ef9e33fec6da6/SECURITY.md"
+      ],
+      "note": "No official contact email could be verified because the repository and pinned contact pages rendered GitHub Page not found."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/eanai-ro/ean-agentos/blob/0c5e0ecfdb971f8b38c9ffc0848ef9e33fec6da6/README.md",
+      "https://github.com/eanai-ro/ean-agentos/blob/0c5e0ecfdb971f8b38c9ffc0848ef9e33fec6da6/SECURITY.md"
+    ],
+    "contact_email_note": "The official repository README and SECURITY.md were checked at the catalog revision but returned Page not found. No email was inferred; profile/commit metadata and third-party directories were not used.",
+    "blocker": {
+      "reason": "Official upstream could not be verified or checked out: repository and catalog-pinned commit/README/SECURITY pages returned GitHub Page not found, the official repository API returned 404, and read-only git ls-remote could not read a GitHub username in this device environment.",
+      "checked_at": "2026-11-25T11:50:42Z",
+      "evidence": [
+        "https://github.com/eanai-ro/ean-agentos",
+        "https://api.github.com/repos/eanai-ro/ean-agentos",
+        "https://github.com/eanai-ro/ean-agentos/commit/0c5e0ecfdb971f8b38c9ffc0848ef9e33fec6da6",
+        "https://github.com/eanai-ro/ean-agentos/blob/0c5e0ecfdb971f8b38c9ffc0848ef9e33fec6da6/README.md",
+        "https://github.com/eanai-ro/ean-agentos/blob/0c5e0ecfdb971f8b38c9ffc0848ef9e33fec6da6/SECURITY.md",
+        "https://github.com/eanai-ro/ean-agentos.git"
+      ],
+      "consequence": "Canonical current upstream, default branch, full current head, source behavior, and contact remain unverified. No implementation assessment is asserted."
+    },
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[204], ordinal 205: EAN AgentOS, slug ean-agentos, explicit listed locator; catalog revision 0c5e0ecfdb971f8b38c9ffc0848ef9e33fec6da6",
+        "url": "../memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/ean-agentos.md",
+        "symbol": "Pinned Atlas entry used only for curated identity and locator attribution, not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/ean-agentos.md"
+      },
+      {
+        "id": "repo",
+        "label": "Listed official GitHub repository page",
+        "path": "repository page",
+        "symbol": "Opened 2026-11-25; page title was Page not found · GitHub · GitHub",
+        "url": "https://github.com/eanai-ro/ean-agentos"
+      },
+      {
+        "id": "api",
+        "label": "Official GitHub repository API",
+        "path": "GitHub REST repository endpoint",
+        "symbol": "Returned HTTP 404 with message Not Found",
+        "url": "https://api.github.com/repos/eanai-ro/ean-agentos"
+      },
+      {
+        "id": "pinned_commit",
+        "label": "Catalog-pinned commit check",
+        "path": "commit 0c5e0ecfdb971f8b38c9ffc0848ef9e33fec6da6",
+        "symbol": "Official GitHub page rendered Page not found; this catalog revision is not verified as current head",
+        "url": "https://github.com/eanai-ro/ean-agentos/commit/0c5e0ecfdb971f8b38c9ffc0848ef9e33fec6da6"
+      },
+      {
+        "id": "readme",
+        "label": "Catalog-pinned official README check",
+        "path": "README.md",
+        "symbol": "Official GitHub page rendered Page not found; contents and contact could not be inspected",
+        "url": "https://github.com/eanai-ro/ean-agentos/blob/0c5e0ecfdb971f8b38c9ffc0848ef9e33fec6da6/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Catalog-pinned official security policy check",
+        "path": "SECURITY.md",
+        "symbol": "Official GitHub page rendered Page not found; contents and contact could not be inspected",
+        "url": "https://github.com/eanai-ro/ean-agentos/blob/0c5e0ecfdb971f8b38c9ffc0848ef9e33fec6da6/SECURITY.md"
+      },
+      {
+        "id": "remote",
+        "label": "Read-only remote refs check",
+        "path": "git ls-remote --symref",
+        "symbol": "Could not obtain remote refs: fatal could not read Username for https://github.com: Device not configured",
+        "url": "https://github.com/eanai-ro/ean-agentos.git"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Benchmark domains listed for reporting; none evaluated",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Fixture not run",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "No EAN AgentOS benchmark result created or claimed",
+        "url": "../../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The curated catalog lists ordinal 205, name EAN AgentOS, slug ean-agentos, an explicit repository locator, and catalog revision 0c5e0ecfdb971f8b38c9ffc0848ef9e33fec6da6. That older pin is roster metadata only and was not verified as current upstream.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The official repository and pinned source pages rendered Page not found, the repository API returned 404, and git ls-remote could not obtain refs. Current canonical upstream, default branch, and full head SHA remain unverified.",
+        "sources": [
+          "repo",
+          "api",
+          "pinned_commit",
+          "remote"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Architecture and data model were not assessed because no official current upstream source or documentation could be inspected; Atlas descriptions are excluded as implementation evidence.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write, update, delete, retrieval, and scope-isolation behavior remain unknown because no official implementation or documentation was accessible.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      },
+      {
+        "text": "Provenance, evidence handling, efficiency, and observability are not assessed because no current source or official documentation was accessible.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "No upstream review or benchmark workload was possible.",
+        "sources": [
+          "repo",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale retrieval",
+        "status": "unmeasured",
+        "evidence": "No upstream review or benchmark workload was possible.",
+        "sources": [
+          "repo",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No upstream review or benchmark workload was possible.",
+        "sources": [
+          "repo",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "No upstream review or benchmark workload was possible.",
+        "sources": [
+          "repo",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "No upstream review or benchmark workload was possible.",
+        "sources": [
+          "repo",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No upstream review or benchmark workload was possible.",
+        "sources": [
+          "repo",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No upstream review or benchmark workload was possible.",
+        "sources": [
+          "repo",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No upstream review or benchmark workload was possible.",
+        "sources": [
+          "repo",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No upstream review or benchmark workload was possible.",
+        "sources": [
+          "repo",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The listed repository and catalog-pinned commit, README, and SECURITY.md returned GitHub Page not found; the repository API returned HTTP 404. A read-only git ls-remote attempt could not read a username in this device environment. These observations do not establish whether the project was removed, renamed, private, or temporarily inaccessible.",
+        "sources": [
+          "repo",
+          "api",
+          "pinned_commit",
+          "readme",
+          "security",
+          "remote"
+        ]
+      },
+      {
+        "text": "No current branch or full head SHA, source behavior, or official contact can be responsibly stated. The catalog revision is retained only as unverified roster metadata.",
+        "sources": [
+          "catalog",
+          "pinned_commit",
+          "repo"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "metrics_document": "../../METRICS.md",
+      "result_record": "../../results/initial-baselines-status.json",
+      "fixture": "../../fixtures/memory-benchmark-v1.json",
+      "note": "No EAN AgentOS runtime, tests, or benchmarks were run. Source verification was blocked."
+    }
+  }
+}

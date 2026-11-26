@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "article": {
+    "ordinal": 124,
+    "slug": "claude-mem",
+    "name": "Claude-Mem",
+    "repository": "https://github.com/thedotmack/claude-mem",
+    "branch": "main",
+    "revision": "11fdec893eb4ece18ff946758e75e82c92aff71b",
+    "reviewed_at": "2026-11-25T08:07:02Z",
+    "review_timezone": "UTC (2026-11-25 00:07:02 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Claude-Mem is a local-first agent memory plugin and worker. Hooks hand session activity to an observer that stores observations and summaries; later sessions receive scoped context and can search compact indexes before opening selected detail. This source review includes no runtime measurements.",
+    "who_what": [
+      {
+        "text": "Claude-Mem is a persistent-context plugin and local worker for agent integrations. The official README identifies Alex Newman as its author.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Agent-specific hooks send activity to a Bun-managed local HTTP worker. The worker coordinates observer providers, SQLite storage, context generation, search, viewer, and MCP interfaces.",
+        "sources": [
+          "readme",
+          "worker"
+        ]
+      },
+      {
+        "text": "The documented local data model stores sessions, observations, and summaries in SQLite, with prompts and tool-use records also available. Optional Chroma provides semantic search alongside SQLite keyword search.",
+        "sources": [
+          "readme",
+          "worker",
+          "search"
+        ]
+      },
+      {
+        "text": "Observation helpers fingerprint session/title/narrative content and separately hash structured observation details. File-path lookup uses an indexed observation_files relation and project/platform filters.",
+        "sources": [
+          "store",
+          "get"
+        ]
+      },
+      {
+        "text": "SQLite uses WAL, foreign keys, busy timeouts, and versioned schema compatibility guards. These are source-visible storage mechanisms, not workload results.",
+        "sources": [
+          "connection"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: the README describes hook activity being summarized by an observer into observations and session summaries. The explicit /api/memory/save route accepts validated user-supplied text and optional title/project/metadata, applies project exclusion checks, then writes a manual memory.",
+        "sources": [
+          "readme",
+          "observer",
+          "memory"
+        ]
+      },
+      {
+        "text": "Update and correction: the inspected storage helper provides content and details fingerprints. The reviewed paths do not establish a general correction/edit-history API for generated observations or demonstrate that existing observations are edited in place.",
+        "sources": [
+          "store",
+          "memory"
+        ]
+      },
+      {
+        "text": "Deletion: the inspected save route and selected data/search paths do not establish a general hard-delete or end-to-end erasure contract across SQLite, summaries, Chroma, backups, or optional Cloud Sync.",
+        "sources": [
+          "readme",
+          "memory",
+          "data"
+        ]
+      },
+      {
+        "text": "Retrieval: context generation selects recent project-scoped observations and summaries, with mode/type/concept filters and optional reinforcement ranking. Search combines semantic Chroma selection where configured with SQLite filter-only search; progressive search returns index rows, timeline context, and details fetched by chosen IDs.",
+        "sources": [
+          "context",
+          "compiler",
+          "search",
+          "progressive"
+        ]
+      },
+      {
+        "text": "Scope isolation: project and platform-source filters are visible in context, search, and indexed file lookup. Project merge keys can include adopted records; startup context defaults to the current harness unless configured otherwise.",
+        "sources": [
+          "compiler",
+          "get",
+          "search",
+          "readme"
+        ]
+      },
+      {
+        "text": "Provenance: session IDs, observations, tool-use records, file references, and selected observation IDs allow lookup back to recorded activity. This does not establish that generated claims are always supported or that every transformation is immutably audited.",
+        "sources": [
+          "readme",
+          "worker",
+          "progressive",
+          "store",
+          "get"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Search and context retrieval are source-visible; no answerability or abstention workload was run.",
+        "sources": [
+          "search",
+          "progressive",
+          "result"
+        ]
+      },
+      {
+        "domain": "Correction and stale values",
+        "status": "unmeasured",
+        "evidence": "No correction sequence or stale-value workload was run, and the reviewed paths do not establish a general edit-history API.",
+        "sources": [
+          "store",
+          "memory",
+          "result"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The inspected routes do not establish end-to-end erasure; no post-deletion retrieval or residual-copy workload was run.",
+        "sources": [
+          "memory",
+          "data",
+          "result"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Project and platform filters appear in source, but no cross-project or cross-tenant isolation workload was run.",
+        "sources": [
+          "compiler",
+          "get",
+          "search",
+          "result"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Record and file provenance paths are visible, but no claim-to-source adjudication workload was run.",
+        "sources": [
+          "readme",
+          "progressive",
+          "get",
+          "result"
+        ]
+      },
+      {
+        "domain": "Efficiency and observability",
+        "status": "unmeasured",
+        "evidence": "Bounded indexes, detail reads, database settings, worker logs, health and SSE routes are source-visible. No latency, tokens, cost, storage, or telemetry coverage was measured.",
+        "sources": [
+          "progressive",
+          "connection",
+          "worker",
+          "result"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The live observer lifecycle describes a bounded in-memory handoff and deliberate skipping/discarding under some failures, which can leave gaps in generated memories.",
+        "sources": [
+          "observer"
+        ]
+      },
+      {
+        "text": "The selected source paths do not establish universal hard deletion, backup erasure, synchronized-copy deletion, every integration's authorization boundary, or complete correction history.",
+        "sources": [
+          "readme",
+          "memory",
+          "data"
+        ]
+      },
+      {
+        "text": "The review did not audit every integration, Cloud Sync behavior, retention setting, production deployment guarantee, or the complete database lifecycle.",
+        "sources": [
+          "repo",
+          "head",
+          "readme"
+        ]
+      },
+      {
+        "text": "Source and documentation inspection cannot establish runtime retrieval quality, isolation, latency, token use, cost, storage efficiency, or production behavior.",
+        "sources": [
+          "repo",
+          "head",
+          "result"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated roster",
+        "path": "data/memory-systems.json",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas attribution only",
+        "path": "content/systems/claude-mem.md",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/claude-mem.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official repository",
+        "path": "repository",
+        "url": "https://github.com/thedotmack/claude-mem"
+      },
+      {
+        "id": "head",
+        "label": "Verified current main head",
+        "path": "commit",
+        "symbol": "11fdec893eb4ece18ff946758e75e82c92aff71b",
+        "url": "https://github.com/thedotmack/claude-mem/commit/11fdec893eb4ece18ff946758e75e82c92aff71b"
+      },
+      {
+        "id": "feed",
+        "label": "Official main commits Atom feed",
+        "path": "commits/main.atom",
+        "url": "https://github.com/thedotmack/claude-mem/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "url": "https://github.com/thedotmack/claude-mem/blob/11fdec893eb4ece18ff946758e75e82c92aff71b/README.md"
+      },
+      {
+        "id": "worker",
+        "label": "Worker service README",
+        "path": "src/services/worker/README.md",
+        "url": "https://github.com/thedotmack/claude-mem/blob/11fdec893eb4ece18ff946758e75e82c92aff71b/src/services/worker/README.md"
+      },
+      {
+        "id": "connection",
+        "label": "SQLite connection",
+        "path": "src/services/sqlite/connection.ts",
+        "url": "https://github.com/thedotmack/claude-mem/blob/11fdec893eb4ece18ff946758e75e82c92aff71b/src/services/sqlite/connection.ts"
+      },
+      {
+        "id": "store",
+        "label": "Observation storage helpers",
+        "path": "src/services/sqlite/observations/store.ts",
+        "url": "https://github.com/thedotmack/claude-mem/blob/11fdec893eb4ece18ff946758e75e82c92aff71b/src/services/sqlite/observations/store.ts"
+      },
+      {
+        "id": "get",
+        "label": "Observation lookup",
+        "path": "src/services/sqlite/observations/get.ts",
+        "url": "https://github.com/thedotmack/claude-mem/blob/11fdec893eb4ece18ff946758e75e82c92aff71b/src/services/sqlite/observations/get.ts"
+      },
+      {
+        "id": "search",
+        "label": "Search orchestrator",
+        "path": "src/services/worker/search/SearchOrchestrator.ts",
+        "url": "https://github.com/thedotmack/claude-mem/blob/11fdec893eb4ece18ff946758e75e82c92aff71b/src/services/worker/search/SearchOrchestrator.ts"
+      },
+      {
+        "id": "progressive",
+        "label": "Progressive memory search",
+        "path": "src/services/worker/ProgressiveMemorySearch.ts",
+        "url": "https://github.com/thedotmack/claude-mem/blob/11fdec893eb4ece18ff946758e75e82c92aff71b/src/services/worker/ProgressiveMemorySearch.ts"
+      },
+      {
+        "id": "context",
+        "label": "Context builder",
+        "path": "src/services/context/ContextBuilder.ts",
+        "url": "https://github.com/thedotmack/claude-mem/blob/11fdec893eb4ece18ff946758e75e82c92aff71b/src/services/context/ContextBuilder.ts"
+      },
+      {
+        "id": "compiler",
+        "label": "Context observation compiler",
+        "path": "src/services/context/ObservationCompiler.ts",
+        "url": "https://github.com/thedotmack/claude-mem/blob/11fdec893eb4ece18ff946758e75e82c92aff71b/src/services/context/ObservationCompiler.ts"
+      },
+      {
+        "id": "memory",
+        "label": "Explicit memory save route",
+        "path": "src/services/worker/http/routes/MemoryRoutes.ts",
+        "url": "https://github.com/thedotmack/claude-mem/blob/11fdec893eb4ece18ff946758e75e82c92aff71b/src/services/worker/http/routes/MemoryRoutes.ts"
+      },
+      {
+        "id": "data",
+        "label": "Data routes",
+        "path": "src/services/worker/http/routes/DataRoutes.ts",
+        "url": "https://github.com/thedotmack/claude-mem/blob/11fdec893eb4ece18ff946758e75e82c92aff71b/src/services/worker/http/routes/DataRoutes.ts"
+      },
+      {
+        "id": "observer",
+        "label": "Observer lifecycle documentation",
+        "path": "docs/architecture/observer-lifecycle.md",
+        "url": "https://github.com/thedotmack/claude-mem/blob/11fdec893eb4ece18ff946758e75e82c92aff71b/docs/architecture/observer-lifecycle.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "result",
+        "label": "Review record",
+        "path": "data/system-reviews/claude-mem.json",
+        "url": "../data/system-reviews/claude-mem.json"
+      }
+    ],
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/thedotmack/claude-mem/blob/11fdec893eb4ece18ff946758e75e82c92aff71b/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/thedotmack/claude-mem/blob/11fdec893eb4ece18ff946758e75e82c92aff71b/README.md"
+    ],
+    "atlas_locator": {
+      "ordinal": 124,
+      "name": "Claude-Mem",
+      "slug": "claude-mem",
+      "listed_repository": "https://github.com/thedotmack/claude-mem",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/claude-mem.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    }
+  }
+}

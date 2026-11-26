@@ -1,0 +1,451 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 108,
+    "slug": "byterover",
+    "name": "ByteRover",
+    "repository": "https://github.com/campfirein/byterover-cli",
+    "listed_repository": "https://github.com/campfirein/byterover-cli",
+    "branch": "main",
+    "revision": "1052ac1a5dd0fde4da8693d4712064f7876c269c",
+    "reviewed_at": "2026-11-25T00:34:39Z",
+    "review_timezone": "UTC (2026-11-24 16:34:39 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "ByteRover CLI (brv) is a project knowledge and agent memory toolkit. Its main project-memory path curates structured HTML or Markdown topics under a project context tree and retrieves them with a cached local BM25 index; a separate Cipher MemoryManager stores scratch memories as blobs.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/byterover.md"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/campfirein/byterover-cli/blob/1052ac1a5dd0fde4da8693d4712064f7876c269c/README.md",
+      "note": "The pinned official README lists Discord and GitHub issue channels but no published contact email. SECURITY.md and SUPPORT.md are absent at the reviewed head; their exact pinned paths are also recorded as checked sources."
+    },
+    "contact_email": null,
+    "contact_checked_sources": [
+      "https://github.com/campfirein/byterover-cli/blob/1052ac1a5dd0fde4da8693d4712064f7876c269c/README.md",
+      "https://github.com/campfirein/byterover-cli/blob/1052ac1a5dd0fde4da8693d4712064f7876c269c/SECURITY.md",
+      "https://github.com/campfirein/byterover-cli/blob/1052ac1a5dd0fde4da8693d4712064f7876c269c/SUPPORT.md"
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[107], position 108; name, slug, listed repository, and Atlas attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas attribution only",
+        "path": "content/systems/byterover.md",
+        "symbol": "Catalog source URL pinned at Atlas revision 19199a4fc249e89c0793be06f0b166b358089ba0",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/byterover.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "",
+        "symbol": "Canonical campfirein/byterover-cli; repository page marks it archived and shows main as default branch",
+        "url": "https://github.com/campfirein/byterover-cli"
+      },
+      {
+        "id": "head-feed",
+        "label": "Official main commit feed",
+        "path": "",
+        "symbol": "Full main head 1052ac1a5dd0fde4da8693d4712064f7876c269c; feed updated 2026-06-25T17:00:57Z",
+        "url": "https://github.com/campfirein/byterover-cli/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream head",
+        "path": "",
+        "symbol": "Full reviewed commit SHA 1052ac1a5dd0fde4da8693d4712064f7876c269c; read-only shallow checkout resolved to the same HEAD",
+        "url": "https://github.com/campfirein/byterover-cli/commit/1052ac1a5dd0fde4da8693d4712064f7876c269c"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project description, product boundaries, integrations, local/cloud model, support channels and upstream-reported benchmark claims",
+        "url": "https://github.com/campfirein/byterover-cli/blob/1052ac1a5dd0fde4da8693d4712064f7876c269c/README.md"
+      },
+      {
+        "id": "memory-types",
+        "label": "Cipher memory types",
+        "path": "src/agent/core/domain/memory/types.ts",
+        "symbol": "Memory, attachment, update/list inputs, and MemoryConfig shape",
+        "url": "https://github.com/campfirein/byterover-cli/blob/1052ac1a5dd0fde4da8693d4712064f7876c269c/src/agent/core/domain/memory/types.ts"
+      },
+      {
+        "id": "memory-manager",
+        "label": "Cipher MemoryManager",
+        "path": "src/agent/infra/memory/memory-manager.ts",
+        "symbol": "Blob-backed CRUD, validation, filtering, sorting, attachments, size/tag limits",
+        "url": "https://github.com/campfirein/byterover-cli/blob/1052ac1a5dd0fde4da8693d4712064f7876c269c/src/agent/infra/memory/memory-manager.ts"
+      },
+      {
+        "id": "service-init",
+        "label": "Cipher service initialization",
+        "path": "src/agent/infra/agent/service-initializer.ts",
+        "symbol": "MemoryManager construction over the configured BlobStorage",
+        "url": "https://github.com/campfirein/byterover-cli/blob/1052ac1a5dd0fde4da8693d4712064f7876c269c/src/agent/infra/agent/service-initializer.ts"
+      },
+      {
+        "id": "search",
+        "label": "Context tree search service",
+        "path": "src/agent/infra/tools/implementations/search-knowledge-service.ts",
+        "symbol": "HTML/Markdown corpus discovery, MiniSearch BM25, cache, scope behavior, score thresholds and excerpts",
+        "url": "https://github.com/campfirein/byterover-cli/blob/1052ac1a5dd0fde4da8693d4712064f7876c269c/src/agent/infra/tools/implementations/search-knowledge-service.ts"
+      },
+      {
+        "id": "query-executor",
+        "label": "Query executor",
+        "path": "src/server/infra/executor/query-executor.ts",
+        "symbol": "Tiered query handling, workspace scoping, context prefetch, timing and token capture",
+        "url": "https://github.com/campfirein/byterover-cli/blob/1052ac1a5dd0fde4da8693d4712064f7876c269c/src/server/infra/executor/query-executor.ts"
+      },
+      {
+        "id": "source-schema",
+        "label": "Read-only project source configuration",
+        "path": "src/server/core/domain/source/source-schema.ts",
+        "symbol": "Shared project roots require readOnly true and are resolved to context-tree roots",
+        "url": "https://github.com/campfirein/byterover-cli/blob/1052ac1a5dd0fde4da8693d4712064f7876c269c/src/server/core/domain/source/source-schema.ts"
+      },
+      {
+        "id": "curate-tool",
+        "label": "Curation operations",
+        "path": "src/agent/infra/tools/implementations/curate-tool.ts",
+        "symbol": "Add/update/upsert/merge/delete, structural-loss handling, backups, review metadata and sidecar updates",
+        "url": "https://github.com/campfirein/byterover-cli/blob/1052ac1a5dd0fde4da8693d4712064f7876c269c/src/agent/infra/tools/implementations/curate-tool.ts"
+      },
+      {
+        "id": "curate-log",
+        "label": "Curation log entity",
+        "path": "src/server/core/domain/entities/curate-log-entry.ts",
+        "symbol": "Recorded operation, reason, summary, review state, token usage and timings",
+        "url": "https://github.com/campfirein/byterover-cli/blob/1052ac1a5dd0fde4da8693d4712064f7876c269c/src/server/core/domain/entities/curate-log-entry.ts"
+      },
+      {
+        "id": "curate-log-store",
+        "label": "Curation log persistence",
+        "path": "src/server/infra/storage/file-curate-log-store.ts",
+        "symbol": "Validated file records with retention and mutation review updates",
+        "url": "https://github.com/campfirein/byterover-cli/blob/1052ac1a5dd0fde4da8693d4712064f7876c269c/src/server/infra/storage/file-curate-log-store.ts"
+      },
+      {
+        "id": "markdown-writer",
+        "label": "Context topic model and writer",
+        "path": "src/server/core/domain/knowledge/markdown-writer.ts",
+        "symbol": "ContextData facts/narrative/tags/relations and semantic frontmatter",
+        "url": "https://github.com/campfirein/byterover-cli/blob/1052ac1a5dd0fde4da8693d4712064f7876c269c/src/server/core/domain/knowledge/markdown-writer.ts"
+      },
+      {
+        "id": "context-tree",
+        "label": "Context tree lifecycle",
+        "path": "src/server/infra/context-tree/file-context-tree-service.ts",
+        "symbol": "Project-local .brv/context-tree initialize, exists and recursive delete",
+        "url": "https://github.com/campfirein/byterover-cli/blob/1052ac1a5dd0fde4da8693d4712064f7876c269c/src/server/infra/context-tree/file-context-tree-service.ts"
+      },
+      {
+        "id": "archive",
+        "label": "Context archive service",
+        "path": "src/server/infra/context-tree/file-context-tree-archive-service.ts",
+        "symbol": "Lossless full archive plus searchable stub, drill-down, restore and original-file removal",
+        "url": "https://github.com/campfirein/byterover-cli/blob/1052ac1a5dd0fde4da8693d4712064f7876c269c/src/server/infra/context-tree/file-context-tree-archive-service.ts"
+      },
+      {
+        "id": "runtime-signals",
+        "label": "Runtime ranking sidecar",
+        "path": "src/server/core/domain/knowledge/runtime-signals-schema.ts",
+        "symbol": "Importance, recency, maturity, access and update signals separated from shared content",
+        "url": "https://github.com/campfirein/byterover-cli/blob/1052ac1a5dd0fde4da8693d4712064f7876c269c/src/server/core/domain/knowledge/runtime-signals-schema.ts"
+      },
+      {
+        "id": "query-log-entry",
+        "label": "Query log data model",
+        "path": "src/server/core/domain/entities/query-log-entry.ts",
+        "symbol": "Matched document, retrieval score, tier, input/output tokens and timing fields",
+        "url": "https://github.com/campfirein/byterover-cli/blob/1052ac1a5dd0fde4da8693d4712064f7876c269c/src/server/core/domain/entities/query-log-entry.ts"
+      },
+      {
+        "id": "query-log-store",
+        "label": "Query log persistence",
+        "path": "src/server/infra/storage/file-query-log-store.ts",
+        "symbol": "Validated atomic JSON log writes and default 30-day/1000-entry pruning",
+        "url": "https://github.com/campfirein/byterover-cli/blob/1052ac1a5dd0fde4da8693d4712064f7876c269c/src/server/infra/storage/file-query-log-store.ts"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Metric formulas and reporting protocol; no system result",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned workload cases and scoring labels; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project-wide status is not_run; no ByteRover measurement",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "security",
+        "label": "Official SECURITY.md path checked",
+        "path": "SECURITY.md",
+        "symbol": "Absent at reviewed head; checked for published contact email",
+        "url": "https://github.com/campfirein/byterover-cli/blob/1052ac1a5dd0fde4da8693d4712064f7876c269c/SECURITY.md"
+      },
+      {
+        "id": "support",
+        "label": "Official SUPPORT.md path checked",
+        "path": "SUPPORT.md",
+        "symbol": "Absent at reviewed head; checked for published contact email",
+        "url": "https://github.com/campfirein/byterover-cli/blob/1052ac1a5dd0fde4da8693d4712064f7876c269c/SUPPORT.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes ByteRover CLI as built and maintained by the ByteRover team. It is a local CLI/TUI and agent-tool framework with an optional hosted cloud collaboration service; the repository was archived by its owner on 2026-09-27 and is read-only at review time.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      },
+      {
+        "text": "The product has two relevant persistence paths in inspected code: the project context tree used for curated knowledge and the Cipher agent's blob-backed scratch-memory manager. They have different schemas and retrieval surfaces.",
+        "sources": [
+          "readme",
+          "memory-types",
+          "memory-manager",
+          "service-init",
+          "context-tree"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The context-tree service initializes project data at .brv/context-tree. Topics are files with semantic frontmatter such as title, summary, tags, related paths, keywords, and timestamps; the context model can also carry facts, narrative, snippets, raw concept metadata, and relations. Current curation uses HTML topics while Markdown remains supported by selected readers and legacy paths.",
+        "sources": [
+          "context-tree",
+          "markdown-writer",
+          "search",
+          "curate-tool"
+        ]
+      },
+      {
+        "text": "Search indexes the project topic corpus with MiniSearch using BM25-style text ranking over title, content and path. It also builds symbol/reference structures, extracts excerpts, and can index configured read-only shared project sources. Runtime importance, recency, maturity, accessCount, and updateCount are kept in a per-project sidecar rather than shared topic frontmatter.",
+        "sources": [
+          "search",
+          "source-schema",
+          "runtime-signals",
+          "markdown-writer"
+        ]
+      },
+      {
+        "text": "Cipher MemoryManager stores JSON memory objects through an injected BlobStorage. A memory has an ID, content, created/updated timestamps, optional tags and metadata (including source and pinned), with attachment descriptors pointing to separate blobs. The initializer constructs this manager over configured blob storage.",
+        "sources": [
+          "memory-types",
+          "memory-manager",
+          "service-init"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Curation supports ADD, UPDATE, UPSERT, MERGE, and DELETE operations. An update reads existing topic structure, detects proposed structural loss, merges omitted pieces back, raises review impact when loss is detected, backs up content when review is enabled, writes the new topic atomically, and updates runtime ranking signals. Deletes remove a topic file or recursively remove a topic folder and drop corresponding sidecar entries; they are not a benchmarked secure-erasure guarantee.",
+        "sources": [
+          "curate-tool",
+          "markdown-writer",
+          "curate-log"
+        ]
+      },
+      {
+        "text": "Archive is a separate lifecycle operation: it saves the original content losslessly as a .full.md file, creates a searchable .stub.md cue, removes the original path, and can later drill down or restore. The inspected archive code therefore preserves content in the archive; it is not deletion.",
+        "sources": [
+          "archive",
+          "runtime-signals"
+        ]
+      },
+      {
+        "text": "Search defaults to at most 10 results, builds a cache with a five-second default TTL, uses a 10,000-result cap in each HTML/Markdown file-discovery pass, chunks long documents into roughly 800-character overlapping spans for excerpts, and applies score thresholds and a score-gap cutoff. For multiword queries it tries AND then falls back to OR. If a scoped search returns no results, the service retries globally, so a path scope is a relevance hint rather than an enforced isolation boundary.",
+        "sources": [
+          "search"
+        ]
+      },
+      {
+        "text": "The query executor uses cache, direct-search, optimized-LLM and full-agentic tiers, and can prefetch a small set of high-confidence results. Workspace-relative scope is passed into search, but the source comment notes semantically organized topic paths often do not match workspace paths and the search can fall through to unscoped retrieval. Configured shared sources are explicitly read-only, but still contribute documents to search.",
+        "sources": [
+          "query-executor",
+          "source-schema",
+          "search"
+        ]
+      },
+      {
+        "text": "Cipher memories can be created, retrieved by ID, listed with source/pinned filters and pagination, partially updated, and deleted with associated attachment cleanup attempts. Validation limits a memory body to 10,000 characters, tags to 10 tags of at most 50 characters, and does not expose project or user scope fields in the Memory schema. Listing loads all stored memories before filtering and sorting newest-updated first.",
+        "sources": [
+          "memory-types",
+          "memory-manager"
+        ]
+      },
+      {
+        "text": "Query logs record query text, matched paths/titles/scores, status, tier, token usage, and optional search/LLM/total timings. Curation logs record operation type/path, reason, summaries, review state, token usage, and timing. These are observable fields, not measured quality or latency results here.",
+        "sources": [
+          "query-log-entry",
+          "query-log-store",
+          "curate-log",
+          "curate-log-store"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "BM25 retrieval, score filtering and a no-match response are source-visible; no query outcomes were measured.",
+        "sources": [
+          "search",
+          "query-executor",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Curate update and structural-loss repair mechanisms exist; no correction probes or stale-value adjudication were performed.",
+        "sources": [
+          "curate-tool",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Topic and scratch-memory delete paths exist, but no post-delete probing, archive purge, backup, cloud-sync or repository-history leakage test was run.",
+        "sources": [
+          "curate-tool",
+          "memory-manager",
+          "archive",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Project roots and read-only shared sources are represented in code, but scoped retrieval can fall back globally and no cross-project or user-isolation workload was run.",
+        "sources": [
+          "query-executor",
+          "source-schema",
+          "search",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Topics support related paths and context metadata, while query logs record matched document paths; no claim-level evidence-support adjudication was performed.",
+        "sources": [
+          "markdown-writer",
+          "query-log-entry",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Caches, search timers and query timing fields are implemented; no timing samples were collected.",
+        "sources": [
+          "search",
+          "query-executor",
+          "query-log-entry",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "Query and curation logs can capture token usage; this review did not collect token totals or provider charges.",
+        "sources": [
+          "query-log-entry",
+          "curate-log",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Persistent storage",
+        "status": "unmeasured",
+        "evidence": "Topic files, sidecar data, logs and scratch-memory blobs are source-visible storage components; no storage bytes or per-item efficiency were measured.",
+        "sources": [
+          "context-tree",
+          "runtime-signals",
+          "query-log-store",
+          "memory-manager",
+          "metrics"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected a read-only source snapshot and selected code paths. It does not establish capture quality, answer quality, how well scores calibrate relevance, actual isolation, cloud behavior, or deletion from backups, Git history, remote shares and archival copies.",
+        "sources": [
+          "readme",
+          "search",
+          "query-executor",
+          "archive",
+          "metrics"
+        ]
+      },
+      {
+        "text": "The README's benchmark section reports LoCoMo 96.1% and LongMemEval-S 92.8% LLM-as-Judge accuracy. These are upstream-reported figures from the README; this review did not reproduce or adjudicate them and records no ByteRover result.",
+        "sources": [
+          "readme",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "The inspected Cipher MemoryConfig type documents maxMemories and a default storageDir, but the MemoryManager constructor receives BlobStorage and the reviewed CRUD path does not itself enforce a memory-count cap. No operational scale or concurrency behavior was tested.",
+        "sources": [
+          "memory-types",
+          "memory-manager",
+          "service-init"
+        ]
+      },
+      {
+        "text": "The main search index combines local and configured shared project trees and can retry without the requested scope when it finds no scoped results. The code review cannot establish whether every caller or deployment wraps that behavior with additional authorization controls.",
+        "sources": [
+          "search",
+          "source-schema",
+          "query-executor"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No ByteRover system execution, benchmark workload, or tests were run for this review.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "The project metric definitions and six-case fixture specify a planned evaluation protocol; project execution status is not_run and is not a ByteRover result. The README's published percentages remain upstream claims, not observations from this task.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status",
+          "readme"
+        ]
+      }
+    ]
+  }
+}

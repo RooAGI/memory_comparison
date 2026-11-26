@@ -1,0 +1,382 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 129,
+    "slug": "clio",
+    "name": "CLIO",
+    "repository": "https://github.com/SyntheticAutonomicMind/CLIO",
+    "branch": "main",
+    "revision": "4babd7be9dc15acc894d4089ff4eb840ad3e10cf",
+    "reviewed_at": "2026-11-25T08:17:43Z",
+    "review_timezone": "UTC (2026-11-25 00:17:43 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/SyntheticAutonomicMind/CLIO/blob/4babd7be9dc15acc894d4089ff4eb840ad3e10cf/SECURITY.md",
+      "checked_urls": [
+        "https://github.com/SyntheticAutonomicMind/CLIO/blob/4babd7be9dc15acc894d4089ff4eb840ad3e10cf/SECURITY.md"
+      ],
+      "note": "No email was found in the official pinned SECURITY.md. The policy points readers to maintainer GitHub profile metadata, which was not used; no inferred address or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/SyntheticAutonomicMind/CLIO/blob/4babd7be9dc15acc894d4089ff4eb840ad3e10cf/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/SyntheticAutonomicMind/CLIO/blob/4babd7be9dc15acc894d4089ff4eb840ad3e10cf/SECURITY.md"
+    ],
+    "contact_email_note": "No email was found in the official pinned SECURITY.md. The policy points readers to maintainer GitHub profile metadata, which was not used; no inferred address or third-party directory was used.",
+    "summary": "CLIO is a Perl terminal agent with project-scoped long-term memory, session key/value notes, searchable session history, and context recovery. Its source describes explicit memory writes, lexical relevance scoring, trust corroboration, and local persistence. This is a source review; no runtime or benchmark results were collected.",
+    "atlas_locator": {
+      "ordinal": 129,
+      "name": "CLIO",
+      "slug": "clio",
+      "listed_repository": "https://github.com/SyntheticAutonomicMind/CLIO",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/clio.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official upstream GitHub repository",
+        "path": "repository page",
+        "symbol": "public canonical repository; default branch main; latest commit prefix 4babd7b",
+        "url": "https://github.com/SyntheticAutonomicMind/CLIO"
+      },
+      {
+        "id": "history",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "full main head 4babd7be9dc15acc894d4089ff4eb840ad3e10cf; updated 2026-11-17T23:53:30Z",
+        "url": "https://github.com/SyntheticAutonomicMind/CLIO/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified current head commit",
+        "path": "commit",
+        "symbol": "4babd7be9dc15acc894d4089ff4eb840ad3e10cf",
+        "url": "https://github.com/SyntheticAutonomicMind/CLIO/commit/4babd7be9dc15acc894d4089ff4eb840ad3e10cf"
+      },
+      {
+        "id": "readme",
+        "label": "Official repository README",
+        "path": "README.md",
+        "symbol": "project description, local-first positioning, integration and supported memory operations",
+        "url": "https://github.com/SyntheticAutonomicMind/CLIO/blob/4babd7be9dc15acc894d4089ff4eb840ad3e10cf/README.md"
+      },
+      {
+        "id": "memory_guide",
+        "label": "Official memory architecture guide",
+        "path": "docs/MEMORY.md",
+        "symbol": "STM, YaRN, LTM, session memory, trust, retrieval, storage and lifecycle documentation",
+        "url": "https://github.com/SyntheticAutonomicMind/CLIO/blob/4babd7be9dc15acc894d4089ff4eb840ad3e10cf/docs/MEMORY.md"
+      },
+      {
+        "id": "ltm",
+        "label": "Long-term memory implementation",
+        "path": "lib/CLIO/Memory/LongTerm.pm",
+        "symbol": "LTM categories, entry mutation, corroboration and pruning",
+        "url": "https://github.com/SyntheticAutonomicMind/CLIO/blob/4babd7be9dc15acc894d4089ff4eb840ad3e10cf/lib/CLIO/Memory/LongTerm.pm"
+      },
+      {
+        "id": "memory_tool",
+        "label": "Memory operations tool",
+        "path": "lib/CLIO/Tools/MemoryOperations.pm",
+        "symbol": "operation contract for session store/delete, transcript recall, LTM writes, update, pruning and stats",
+        "url": "https://github.com/SyntheticAutonomicMind/CLIO/blob/4babd7be9dc15acc894d4089ff4eb840ad3e10cf/lib/CLIO/Tools/MemoryOperations.pm"
+      },
+      {
+        "id": "context",
+        "label": "ContextBuilder implementation",
+        "path": "lib/CLIO/Core/ContextBuilder.pm",
+        "symbol": "request-specific relevance scoring and bounded context projection",
+        "url": "https://github.com/SyntheticAutonomicMind/CLIO/blob/4babd7be9dc15acc894d4089ff4eb840ad3e10cf/lib/CLIO/Core/ContextBuilder.pm"
+      },
+      {
+        "id": "paths",
+        "label": "Project PathResolver",
+        "path": "lib/CLIO/Util/PathResolver.pm",
+        "symbol": "project UUID and project data path resolution",
+        "url": "https://github.com/SyntheticAutonomicMind/CLIO/blob/4babd7be9dc15acc894d4089ff4eb840ad3e10cf/lib/CLIO/Util/PathResolver.pm"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "official contact instructions; no published email in this page",
+        "url": "https://github.com/SyntheticAutonomicMind/CLIO/blob/4babd7be9dc15acc894d4089ff4eb840ad3e10cf/SECURITY.md"
+      },
+      {
+        "id": "roster",
+        "label": "Curated systems catalog",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 129 identity, slug, listed locator, explicit repository status, Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Roster attribution only",
+        "path": "content/systems/clio.md",
+        "symbol": "catalog-pinned Atlas locator used for identity and locator attribution only, not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/clio.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "assessment metric domains; no CLIO measurement",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "project status context; no CLIO run",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned workload only; not run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The catalog identifies CLIO, slug clio, and lists the repository with explicit locator status. It attributes the roster entry to the pinned Atlas report; Atlas was used for identity and locator attribution only.",
+        "sources": [
+          "roster",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The official repository is public and names main as the default branch. Its main feed reports full head 4babd7be9dc15acc894d4089ff4eb840ad3e10cf updated 2026-11-17T23:53:30Z; the repository page shows the matching abbreviated head.",
+        "sources": [
+          "repo",
+          "history",
+          "head"
+        ]
+      },
+      {
+        "text": "The official README describes CLIO as a Perl terminal agent and extensible harness. The memory guide documents local project and session state, rather than a hosted memory service.",
+        "sources": [
+          "readme",
+          "memory_guide"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The documented memory design combines STM, a sliding active message window; YaRN, a durable session thread archive with compressed summaries; and project-level LTM. Separate operations provide session key/value notes and transcript search.",
+        "sources": [
+          "memory_guide",
+          "ltm",
+          "memory_tool"
+        ]
+      },
+      {
+        "text": "LTM stores discoveries, problem-solution pairs, code patterns, workflows, failures, and context rules in JSON with metadata. Entries can carry confidence, timestamps, examples, counts, and corroboration state. PathResolver maps a project UUID from .clio/project_uuid to data under ~/.clio/projects/<uuid>/.",
+        "sources": [
+          "memory_guide",
+          "ltm",
+          "paths"
+        ]
+      },
+      {
+        "text": "The context builder scores memories against the current request, active task, and unresolved state, then places selected items in dynamic context. Session transcript recall and key/value retrieval are distinct tool operations.",
+        "sources": [
+          "memory_guide",
+          "context",
+          "memory_tool"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: agents explicitly call add_discovery, add_solution, or add_pattern for significant knowledge. LTM persistence uses atomic writes; session working notes use separate key/value operations.",
+        "sources": [
+          "memory_guide",
+          "ltm",
+          "memory_tool"
+        ]
+      },
+      {
+        "text": "Update: update_ltm replaces matching entry text. A rewritten entry resets to unverified and clears prior corroboration identities and count. The inspected sources do not establish automatic correction behavior for arbitrary transcript messages.",
+        "sources": [
+          "memory_guide",
+          "ltm",
+          "memory_tool"
+        ]
+      },
+      {
+        "text": "Delete: session memory supports delete by key. The exposed LTM maintenance operation prunes old or low-confidence entries with tier-specific retention, but the reviewed tool contract has no direct delete-by-entry operation. Complete erasure from backups or every copy is not established.",
+        "sources": [
+          "memory_guide",
+          "ltm",
+          "memory_tool"
+        ]
+      },
+      {
+        "text": "Retrieval: ContextBuilder uses lexical keyword overlap, a relevance threshold, confidence floor, and a maximum of five injected LTM entries. recall_sessions returns scored matches from previous session histories; session key/value records can be retrieved, searched, or listed. No answer-level abstention or citation guarantee was identified.",
+        "sources": [
+          "memory_guide",
+          "context",
+          "memory_tool"
+        ]
+      },
+      {
+        "text": "Scope: project data directories are keyed by project UUID resolved from .clio/project_uuid. The path resolver documents the launch directory as the project root and explicit project boundaries. This source inspection did not verify isolation with runtime boundary tests.",
+        "sources": [
+          "memory_guide",
+          "paths"
+        ]
+      },
+      {
+        "text": "Provenance and evidence: LTM corroboration is attributed to distinct agent:session identities and can promote trust tier; the runtime tool constrains supplied identity to active runtime identity. This supports an origin/corroboration record, not claim-level citations or proof that a generated answer follows from a memory.",
+        "sources": [
+          "memory_guide",
+          "ltm",
+          "memory_tool"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: persistence uses local files and atomic writes; LTM selection is bounded and the tool exposes statistics. Context management uses token estimates and a bounded projection. These are documented/source-visible design choices, not measured results.",
+        "sources": [
+          "memory_guide",
+          "ltm",
+          "context",
+          "memory_tool"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "LTM scoring and transcript search exist; no answerability or abstention probes were run.",
+        "sources": [
+          "context",
+          "memory_tool",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and staleness",
+        "status": "unmeasured",
+        "evidence": "LTM text updates reset trust; no correction accuracy or stale-memory probe was run.",
+        "sources": [
+          "ltm",
+          "memory_tool",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Session deletion and LTM pruning are exposed; no deletion leakage or residual-copy audit was run.",
+        "sources": [
+          "memory_tool",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Project UUID path resolution is implemented; no cross-project isolation probe was run.",
+        "sources": [
+          "paths",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Corroboration identity is recorded, but answer-level evidence support was not adjudicated.",
+        "sources": [
+          "ltm",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No retrieval timing workload was run.",
+        "sources": [
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timed write-and-recall workload was run.",
+        "sources": [
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No token or cost measurement was collected.",
+        "sources": [
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No storage size measurement was collected.",
+        "sources": [
+          "metrics"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded inspection of the official README, memory guide, LTM store, memory tool, context builder, and project path resolver at one verified SHA; it does not cover every integration, migration, or failure mode.",
+        "sources": [
+          "readme",
+          "memory_guide",
+          "ltm",
+          "memory_tool",
+          "context",
+          "paths"
+        ]
+      },
+      {
+        "text": "No CLIO runtime, tests, or benchmark workload was run. Runtime reliability, recall quality, correction quality, deletion completeness, project isolation under edge cases, and all metric values remain unknown.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "text": "The documentation describes trust promotion, pruning, and recovery; these behaviors were not verified by execution for this review.",
+        "sources": [
+          "memory_guide",
+          "ltm"
+        ]
+      },
+      {
+        "text": "No direct LTM item deletion operation was found in the inspected tool contract. Complete erasure from backups or every persisted copy remains unknown.",
+        "sources": [
+          "memory_tool",
+          "memory_guide"
+        ]
+      },
+      {
+        "text": "Corroboration records distinct agent/session identity but does not establish the truth of stored content or provide claim-level citations.",
+        "sources": [
+          "memory_guide",
+          "ltm",
+          "memory_tool"
+        ]
+      }
+    ],
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "No CLIO runtime, tests, or benchmark workload was run for this review. Source inspection and documentation are not project measurements."
+    }
+  }
+}

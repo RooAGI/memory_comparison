@@ -1,0 +1,357 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "all-agentic-architectures",
+    "name": "All Agentic Architectures",
+    "repository": "https://github.com/FareedKhan-dev/all-agentic-architectures",
+    "branch": "main",
+    "revision": "e82faf3e211995d91738af5f39d6efd26045e435",
+    "reviewed_at": "2026-11-24T20:21:24Z",
+    "review_timezone": "UTC (2026-11-24 12:21:24 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "A Python library and runnable textbook containing multiple agent patterns, including several distinct memory designs. It is not one unified memory product: selected implementations combine vector episodes, graph facts, bounded context/archive tiers, or learned workflow recipes. This source review did not execute the library or evaluate memory quality.",
+    "atlas_locator": {
+      "ordinal": 48,
+      "name": "All Agentic Architectures",
+      "slug": "all-agentic-architectures",
+      "listed_repository": "https://github.com/FareedKhan-dev/all-agentic-architectures",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/all-agentic-architectures.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": "dev@friendlyai.fi",
+      "source_url": "https://github.com/FareedKhan-dev/all-agentic-architectures/blob/e82faf3e211995d91738af5f39d6efd26045e435/README.md",
+      "note": "The official pinned README publishes this email in its Questions section."
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository page",
+        "path": "repository",
+        "symbol": "FareedKhan-dev/all-agentic-architectures; public repository; default branch main",
+        "url": "https://github.com/FareedKhan-dev/all-agentic-architectures"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "current head e82faf3e211995d91738af5f39d6efd26045e435; feed updated 2026-11-16T07:17:25Z",
+        "url": "https://github.com/FareedKhan-dev/all-agentic-architectures/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed full commit",
+        "path": "commit",
+        "symbol": "e82faf3e211995d91738af5f39d6efd26045e435",
+        "url": "https://github.com/FareedKhan-dev/all-agentic-architectures/commit/e82faf3e211995d91738af5f39d6efd26045e435"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "library overview, architecture list, memory variants, benchmark claims, published contact email",
+        "url": "https://github.com/FareedKhan-dev/all-agentic-architectures/blob/e82faf3e211995d91738af5f39d6efd26045e435/README.md"
+      },
+      {
+        "id": "memory-tree",
+        "label": "Memory abstraction source directory",
+        "path": "src/agentic_architectures/memory",
+        "symbol": "episodic.py, semantic.py, vector.py, graph.py",
+        "url": "https://github.com/FareedKhan-dev/all-agentic-architectures/tree/e82faf3e211995d91738af5f39d6efd26045e435/src/agentic_architectures/memory"
+      },
+      {
+        "id": "episodic",
+        "label": "Episodic memory implementation",
+        "path": "src/agentic_architectures/memory/episodic.py",
+        "symbol": "Episode; EpisodicMemory.record; recall; episodes",
+        "url": "https://github.com/FareedKhan-dev/all-agentic-architectures/blob/e82faf3e211995d91738af5f39d6efd26045e435/src/agentic_architectures/memory/episodic.py"
+      },
+      {
+        "id": "semantic",
+        "label": "Semantic memory implementation",
+        "path": "src/agentic_architectures/memory/semantic.py",
+        "symbol": "SemanticMemory.add_fact; add_facts; facts_about; reset",
+        "url": "https://github.com/FareedKhan-dev/all-agentic-architectures/blob/e82faf3e211995d91738af5f39d6efd26045e435/src/agentic_architectures/memory/semantic.py"
+      },
+      {
+        "id": "vector",
+        "label": "Vector memory implementation",
+        "path": "src/agentic_architectures/memory/vector.py",
+        "symbol": "get_vector_store; VectorMemory.add; search; backend selection",
+        "url": "https://github.com/FareedKhan-dev/all-agentic-architectures/blob/e82faf3e211995d91738af5f39d6efd26045e435/src/agentic_architectures/memory/vector.py"
+      },
+      {
+        "id": "graph",
+        "label": "Graph memory backend",
+        "path": "src/agentic_architectures/memory/graph.py",
+        "symbol": "NetworkXGraphMemory; Neo4jGraphMemory; triple writes; query; reset",
+        "url": "https://github.com/FareedKhan-dev/all-agentic-architectures/blob/e82faf3e211995d91738af5f39d6efd26045e435/src/agentic_architectures/memory/graph.py"
+      },
+      {
+        "id": "episodic-semantic",
+        "label": "Episodic + Semantic architecture",
+        "path": "src/agentic_architectures/architectures/episodic_semantic.py",
+        "symbol": "EpisodicSemanticAgent retrieval, answer, fact extraction, episode save, trace and metadata",
+        "url": "https://github.com/FareedKhan-dev/all-agentic-architectures/blob/e82faf3e211995d91738af5f39d6efd26045e435/src/agentic_architectures/architectures/episodic_semantic.py"
+      },
+      {
+        "id": "graph-memory",
+        "label": "Graph Memory architecture",
+        "path": "src/agentic_architectures/architectures/graph_memory.py",
+        "symbol": "GraphMemoryAgent ingestion, entity matching, graph traversal, trace and metadata",
+        "url": "https://github.com/FareedKhan-dev/all-agentic-architectures/blob/e82faf3e211995d91738af5f39d6efd26045e435/src/agentic_architectures/architectures/graph_memory.py"
+      },
+      {
+        "id": "memgpt",
+        "label": "MemGPT architecture",
+        "path": "src/agentic_architectures/architectures/memgpt.py",
+        "symbol": "bounded context tier, archival vector memory, action loop and run history",
+        "url": "https://github.com/FareedKhan-dev/all-agentic-architectures/blob/e82faf3e211995d91738af5f39d6efd26045e435/src/agentic_architectures/architectures/memgpt.py"
+      },
+      {
+        "id": "awm",
+        "label": "Agent Workflow Memory architecture",
+        "path": "src/agentic_architectures/architectures/agent_workflow_memory.py",
+        "symbol": "workflow recipes, in-process list, vector index and run history",
+        "url": "https://github.com/FareedKhan-dev/all-agentic-architectures/blob/e82faf3e211995d91738af5f39d6efd26045e435/src/agentic_architectures/architectures/agent_workflow_memory.py"
+      },
+      {
+        "id": "roster",
+        "label": "Curated roster attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 48 name, slug, listed repository locator, source attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "review status only; no upstream system measurements",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Planned benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "evaluation protocol, not a result",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README identifies Fareed Khan as the creator and describes the project as a Python library and runnable textbook with 36 agent architectures built on LangGraph. The curated title covers the whole architecture collection; memory appears as a family of patterns rather than a single shared service.",
+        "sources": [
+          "readme",
+          "repo",
+          "roster"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The repository groups runnable Architecture classes around a common run(task) interface, with per-pattern code and notebooks. Memory examples use shared helpers under agentic_architectures.memory, but their storage lifecycle and state differ by pattern.",
+        "sources": [
+          "readme",
+          "memory-tree",
+          "episodic-semantic",
+          "graph-memory",
+          "memgpt",
+          "awm"
+        ]
+      },
+      {
+        "text": "The dual-memory pattern pairs timestamped Episode records (content, role, metadata) in a vector-backed EpisodicMemory with subject-predicate-object triples in SemanticMemory. The graph abstraction defaults to in-process NetworkX and can select Neo4j; vector configuration offers in-memory, FAISS, Chroma, or Qdrant backends.",
+        "sources": [
+          "episodic",
+          "semantic",
+          "vector",
+          "graph"
+        ]
+      },
+      {
+        "text": "Other inspected patterns represent memory differently: MemGPT keeps a bounded list context tier and sends evicted or explicitly written text to an archival vector store; Agent Workflow Memory stores task-type recipe steps in an in-process list and indexes them for similarity lookup. This makes the project a teaching and comparison collection, not a uniform persistent database.",
+        "sources": [
+          "memgpt",
+          "awm",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: EpisodicMemory.record appends an Episode to its in-process list and adds a LangChain Document to VectorMemory. EpisodicSemanticAgent.run retrieves first, generates an answer, extracts structured triples from the interaction, adds those facts, then records the Q&A episode. GraphMemoryAgent.ingest separately extracts triples from supplied text and adds each to SemanticMemory.",
+        "sources": [
+          "episodic",
+          "episodic-semantic",
+          "graph-memory",
+          "semantic"
+        ]
+      },
+      {
+        "text": "Update and delete: the inspected shared episodic and semantic wrappers expose no item-level update or delete operation. SemanticMemory.reset clears its graph; generic episodic/vector wrappers shown here do not expose a reset/delete method. MemGPT archives evicted context but the inspected class has no targeted removal workflow. These observations are limited to the selected APIs.",
+        "sources": [
+          "episodic",
+          "semantic",
+          "vector",
+          "memgpt"
+        ]
+      },
+      {
+        "text": "Retrieval: episodes use vector similarity search with a configurable top-k. The dual-memory pattern also performs simple entity-name substring matching against NetworkX nodes (and falls back to up to ten entities for short generic questions), then calls facts_about at a configured graph depth. GraphMemoryAgent matches entity names in the question, falls back to up to twenty entities for short queries, traverses facts, and asks the model to answer from those triples. AWM retrieves one similar recipe; MemGPT lets the model choose archive writes, searches, or an answer within a bounded action loop.",
+        "sources": [
+          "episodic",
+          "semantic",
+          "vector",
+          "episodic-semantic",
+          "graph-memory",
+          "awm",
+          "memgpt"
+        ]
+      },
+      {
+        "text": "Scope isolation: the selected Episode and triple schemas do not require tenant, user, project, or agent ownership fields, and their retrieval wrappers do not accept scope filters. AWM's task_type metadata identifies recipe categories but is not an authorization boundary. Backend/database deployment controls may be supplied by a host, but they were not inspected as isolation guarantees.",
+        "sources": [
+          "episodic",
+          "semantic",
+          "vector",
+          "graph",
+          "awm"
+        ]
+      },
+      {
+        "text": "Provenance and evidence: Episode has a timestamp, role, and free-form metadata; SemanticMemory stores only the triple through its wrapper. EpisodicSemanticAgent traces retrieved excerpts, facts, generated answer, and newly extracted facts. GraphMemory asks the answering model to cite triples in its text, but the selected retrieval interface does not itself enforce claim-to-source citations or preserve source documents with each triple.",
+        "sources": [
+          "episodic",
+          "semantic",
+          "episodic-semantic",
+          "graph-memory"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency and observability: vector search accepts k and delegates to the configured vector store. The NetworkX implementation uses a MultiDiGraph and implements a small Cypher subset; its documentation says larger workloads or unsupported queries should use Neo4j. ArchitectureResult includes traces and counts such as episodes/facts recalled, entities, graph backend, AWM library size, and MemGPT action history. These are source-visible controls and diagnostic outputs, not measured speed, resource use, or costs.",
+        "sources": [
+          "vector",
+          "graph",
+          "episodic-semantic",
+          "graph-memory",
+          "awm",
+          "memgpt"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "The selected code provides vector or entity-anchored retrieval and prompts, but no adjudicated recall or abstention result was collected in this review.",
+        "sources": [
+          "episodic-semantic",
+          "graph-memory",
+          "vector"
+        ]
+      },
+      {
+        "domain": "Correction and stale retrieval",
+        "status": "unmeasured",
+        "evidence": "No common correction/revision model or post-correction evaluation was established in the selected memory APIs; the wrappers add facts/episodes and do not expose an item update contract.",
+        "sources": [
+          "episodic",
+          "semantic",
+          "graph",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion and forget compliance",
+        "status": "unmeasured",
+        "evidence": "Selected wrappers expose graph reset but no unified per-item forget API; no deletion probes or storage inspection were performed.",
+        "sources": [
+          "episodic",
+          "semantic",
+          "vector",
+          "memgpt"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Selected memory APIs do not carry enforced tenant/user scope fields or filters. No cross-scope probes were run.",
+        "sources": [
+          "episodic",
+          "semantic",
+          "vector",
+          "awm"
+        ]
+      },
+      {
+        "domain": "Evidence and citations",
+        "status": "unmeasured",
+        "evidence": "Traces can surface retrieved episodes and facts, and GraphMemory prompts the model to cite triples. No claim-support adjudication or citation-resolution measurement was made.",
+        "sources": [
+          "episodic-semantic",
+          "graph-memory",
+          "episodic"
+        ]
+      },
+      {
+        "domain": "Latency, write-to-recall, tokens, cost, storage",
+        "status": "unmeasured",
+        "evidence": "Backend choices and top-k/context bounds are visible in source, but this review collected no runtime timings, token/cost totals, storage footprint, or write-to-recall delay.",
+        "sources": [
+          "vector",
+          "graph",
+          "memgpt",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded review of the official README and selected current memory abstractions and architectures at the pinned head. It does not inspect all 36 architectures, every backend adapter, notebook cell, dependency, or deployment setup.",
+        "sources": [
+          "readme",
+          "memory-tree",
+          "head"
+        ]
+      },
+      {
+        "text": "The source supports statements about APIs, model shapes, and code paths, not observed runtime quality, security, persistence durability, or performance. Default NetworkX and in-memory vector stores are process-local; persistence depends on configured alternatives and host setup.",
+        "sources": [
+          "graph",
+          "vector",
+          "episodic",
+          "readme"
+        ]
+      },
+      {
+        "text": "No system, test suite, or benchmark was run. The README publishes historical benchmark information for the collection, but that is not a result from this review and does not establish memory-specific performance.",
+        "sources": [
+          "readme",
+          "record"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status: not run for this review. No library execution, benchmark workload, or tests were run. Project [metric definitions](../METRICS.md), [execution status](../results/initial-baselines-status.json), and [planned fixture](../fixtures/memory-benchmark-v1.json) describe the review protocol, not findings about this upstream project.",
+        "sources": [
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "text": "The official README publishes a historical collection-level benchmark summary. It is reported as an upstream claim only and is not used as a measurement of these memory designs or as evidence for this review.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ]
+  }
+}

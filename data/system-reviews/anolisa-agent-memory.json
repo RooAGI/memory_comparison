@@ -1,0 +1,403 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 58,
+    "slug": "anolisa-agent-memory",
+    "name": "ANOLISA Agent Memory",
+    "repository": "https://github.com/agentic-os-org/ANOLISA",
+    "listed_repository": "https://github.com/agentic-os-org/ANOLISA",
+    "branch": "main",
+    "revision": "9878def83cd9e7ce988e0fa02feea175c92ebfe3",
+    "reviewed_at": "2026-11-24T20:58:05Z",
+    "review_timezone": "UTC (2026-11-24 12:58:05 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "ANOLISA Agent Memory is a Linux-oriented, file-first memory component served to agents through MCP. Markdown files are the durable store; an optional SQLite search index supplies keyword and embedding retrieval, while tools support observation, context assembly, snapshots, and user-controlled forgetting. This review is pinned source inspection, not a runtime or benchmark result.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/anolisa-agent-memory.md"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/agentic-os-org/ANOLISA/blob/9878def83cd9e7ce988e0fa02feea175c92ebfe3/SECURITY.md",
+      "note": "No published contact email was found in the official pinned repository README, component README, or SECURITY.md; the security policy directs vulnerability reports through GitHub Security Advisories."
+    },
+    "contact_email": null,
+    "contact_checked_sources": [
+      "https://github.com/agentic-os-org/ANOLISA/blob/9878def83cd9e7ce988e0fa02feea175c92ebfe3/README.md",
+      "https://github.com/agentic-os-org/ANOLISA/blob/9878def83cd9e7ce988e0fa02feea175c92ebfe3/src/agent-memory/README.md",
+      "https://github.com/agentic-os-org/ANOLISA/blob/9878def83cd9e7ce988e0fa02feea175c92ebfe3/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated system roster",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[57], curated ordinal 58: name, slug, listed repository locator and source attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/anolisa-agent-memory.md",
+        "symbol": "Roster locator/source attribution; not used as assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/anolisa-agent-memory.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official ANOLISA repository",
+        "path": "",
+        "symbol": "Canonical public repository; unqualified root page opens main",
+        "url": "https://github.com/agentic-os-org/ANOLISA"
+      },
+      {
+        "id": "head-feed",
+        "label": "Official main commit feed",
+        "path": "",
+        "symbol": "Latest commit entry on main identifies current full head",
+        "url": "https://github.com/agentic-os-org/ANOLISA/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream head",
+        "path": "",
+        "symbol": "Full reviewed commit 9878def83cd9e7ce988e0fa02feea175c92ebfe3",
+        "url": "https://github.com/agentic-os-org/ANOLISA/commit/9878def83cd9e7ce988e0fa02feea175c92ebfe3"
+      },
+      {
+        "id": "readme",
+        "label": "Agent Memory component README",
+        "path": "src/agent-memory/README.md",
+        "symbol": "Component purpose, architecture, tools, filesystem model, installation, adapter and search behavior",
+        "url": "https://github.com/agentic-os-org/ANOLISA/blob/9878def83cd9e7ce988e0fa02feea175c92ebfe3/src/agent-memory/README.md"
+      },
+      {
+        "id": "root-readme",
+      "label": "Official ANOLISA root README",
+      "path": "README.md",
+      "symbol": "ANOLISA multi-component system stack and Agent Memory positioning",
+      "url": "https://github.com/agentic-os-org/ANOLISA/blob/9878def83cd9e7ce988e0fa02feea175c92ebfe3/README.md"
+    },
+    {
+      "id": "guide",
+        "label": "Agent Memory user guide",
+        "path": "docs/user-guide/en/agent-memory/index.md",
+        "symbol": "MCP operation contract, session promotion, search timing, setup limits and troubleshooting",
+        "url": "https://github.com/agentic-os-org/ANOLISA/blob/9878def83cd9e7ce988e0fa02feea175c92ebfe3/docs/user-guide/en/agent-memory/index.md"
+      },
+      {
+        "id": "search",
+        "label": "Search tool implementation",
+        "path": "src/agent-memory/src/tools/memory_search.rs",
+        "symbol": "BM25/vector/hybrid modes, agent-scope handling, category filtering and audit behavior",
+        "url": "https://github.com/agentic-os-org/ANOLISA/blob/9878def83cd9e7ce988e0fa02feea175c92ebfe3/src/agent-memory/src/tools/memory_search.rs"
+      },
+      {
+        "id": "writer",
+        "label": "Filesystem write implementation",
+        "path": "src/agent-memory/src/tools/write.rs",
+        "symbol": "Write size cap, path validation, overwrite/create behavior, atomic replacement and audit",
+        "url": "https://github.com/agentic-os-org/ANOLISA/blob/9878def83cd9e7ce988e0fa02feea175c92ebfe3/src/agent-memory/src/tools/write.rs"
+      },
+      {
+        "id": "observation",
+        "label": "Observation and capture implementation",
+        "path": "src/agent-memory/src/tools/memory_observe.rs",
+        "symbol": "Memory types, Markdown frontmatter, explicit observation and consent-gated capture",
+        "url": "https://github.com/agentic-os-org/ANOLISA/blob/9878def83cd9e7ce988e0fa02feea175c92ebfe3/src/agent-memory/src/tools/memory_observe.rs"
+      },
+      {
+        "id": "context",
+        "label": "Context retrieval implementation",
+        "path": "src/agent-memory/src/tools/memory_get_context.rs",
+        "symbol": "Recent-file traversal, bounded previews, byte cap and audit",
+        "url": "https://github.com/agentic-os-org/ANOLISA/blob/9878def83cd9e7ce988e0fa02feea175c92ebfe3/src/agent-memory/src/tools/memory_get_context.rs"
+      },
+      {
+        "id": "sovereignty",
+        "label": "Memory forget implementation",
+        "path": "src/agent-memory/src/tools/memory_sovereignty.rs",
+        "symbol": "Top-20 search preview, confirmation, file deletion and deletion audit",
+        "url": "https://github.com/agentic-os-org/ANOLISA/blob/9878def83cd9e7ce988e0fa02feea175c92ebfe3/src/agent-memory/src/tools/memory_sovereignty.rs"
+      },
+      {
+        "id": "remove",
+        "label": "Filesystem removal implementation",
+        "path": "src/agent-memory/src/tools/remove.rs",
+        "symbol": "Sandboxed file and recursive-directory removal; mount metadata path is protected",
+        "url": "https://github.com/agentic-os-org/ANOLISA/blob/9878def83cd9e7ce988e0fa02feea175c92ebfe3/src/agent-memory/src/tools/remove.rs"
+      },
+      {
+        "id": "service",
+      "label": "MemoryService implementation",
+      "path": "src/agent-memory/src/service/mod.rs",
+      "symbol": "Service ownership, namespace mount, audit logger, optional sessions, index and embeddings",
+      "url": "https://github.com/agentic-os-org/ANOLISA/blob/9878def83cd9e7ce988e0fa02feea175c92ebfe3/src/agent-memory/src/service/mod.rs"
+    },
+    {
+      "id": "index-api",
+        "label": "Search index interface",
+        "path": "src/agent-memory/src/index/mod.rs",
+        "symbol": "SQLite FTS5 worker, search result model, index health, scope-aware BM25 and vector calls",
+        "url": "https://github.com/agentic-os-org/ANOLISA/blob/9878def83cd9e7ce988e0fa02feea175c92ebfe3/src/agent-memory/src/index/mod.rs"
+      },
+      {
+        "id": "index-store",
+        "label": "SQLite search store",
+        "path": "src/agent-memory/src/index/store.rs",
+        "symbol": "BM25 SQLite store, WAL settings, schema version and search index behavior",
+        "url": "https://github.com/agentic-os-org/ANOLISA/blob/9878def83cd9e7ce988e0fa02feea175c92ebfe3/src/agent-memory/src/index/store.rs"
+      },
+      {
+        "id": "audit",
+        "label": "Audit record implementation",
+        "path": "src/agent-memory/src/audit/mod.rs",
+        "symbol": "JSONL record fields, query sanitization markers, byte/token estimates and trace IDs",
+        "url": "https://github.com/agentic-os-org/ANOLISA/blob/9878def83cd9e7ce988e0fa02feea175c92ebfe3/src/agent-memory/src/audit/mod.rs"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Vulnerability reporting route; checked for a published contact email",
+        "url": "https://github.com/agentic-os-org/ANOLISA/blob/9878def83cd9e7ce988e0fa02feea175c92ebfe3/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Proposed quality and efficiency metrics; definitions only",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Versioned benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Synthetic workload and scoring cases; planned fixture, not system results",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project-level status is not_run; no ANOLISA measurement is recorded",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The upstream repository presents ANOLISA as a multi-component system software stack, and describes Agent Memory as one Agent Semantic Layer component. Agent Memory itself is a Rust MCP server and filesystem memory service, not a hosted memory API. The component README credits no individual maintainer; no person is named here.",
+        "sources": [
+          "root-readme",
+          "readme",
+          "repo"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The component exposes a Tokio-based MCP server over stdio JSON-RPC. Its top-level MemoryService owns a user namespace mount, audit logger, optional session log, optional index and embedding provider, and optional Git versioning. The README groups its visible tools into filesystem operations, structured retrieval, governance, and sovereignty/task tools.",
+        "sources": [
+          "readme",
+          "index-api"
+        ]
+      },
+      {
+        "text": "Markdown files under the mount are the primary memory objects: ordinary files can be read or written directly, while observations are written under `notes/observed/<ULID>.md` with frontmatter for type, optional hint, source, and creation time. The observation taxonomy is `user`, `feedback`, `project`, and `reference`; omitted type defaults to `user`.",
+        "sources": [
+          "observation",
+          "readme"
+        ]
+      },
+      {
+        "text": "When indexing is enabled, a background index maintains a SQLite database at `.anolisa/index/bm25.db`. The inspected index interface identifies an SQLite FTS5 BM25 store and optional dense embeddings; search results include a path, snippet, ranking score, and suspicious-content flag. The SQLite store enables WAL and uses a 5-second busy timeout.",
+        "sources": [
+          "index-api",
+          "index-store",
+          "search"
+        ]
+      },
+      {
+        "text": "The service starts the index as an optional component: an open failure is logged and the service continues without it. The component README also describes namespace isolation, path sandboxing with Linux `openat2` resolution constraints, optional Git auto-commits, and compressed snapshots.",
+        "sources": [
+          "service",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "`mem_write(path, content)` creates parent directories and rejects oversized payloads above the configured byte cap. With overwrite disabled, an existing file returns `AlreadyExists`; overwrite mode stages an atomic replacement for an existing file. Path resolution and safe filesystem helpers guard mount boundaries and symlink traversal. `memory_observe` instead creates a new ULID-named note with metadata; `memory_capture` checks capture consent before writing.",
+        "sources": [
+          "writer",
+          "observation"
+        ]
+      },
+      {
+        "text": "`memory_search` offers BM25 keyword search by default, vector search when an embedding provider is configured, and hybrid reciprocal-rank fusion. It returns ranked path/snippet hits; the user guide notes a short indexing debounce, so a just-written file can be absent briefly and `mem_grep` is the filesystem-based fallback. Search errors are audited, and an incomplete index refuses results while retry is pending.",
+        "sources": [
+          "search",
+          "index-api",
+          "guide"
+        ]
+      },
+      {
+        "text": "BM25 supports `shared`, `isolated`, or `filter` agent scopes, with `MCP_CLIENT_NAME` used to form an agent key for the latter two. The implementation warns and falls back to unscoped/shared search if isolated or filter scope is selected without that environment value. Vector and hybrid search do not have a scoped vector column; the search implementation degrades those requests to scoped BM25 rather than return unscoped vector results. Category filtering occurs in BM25 before its top-k limit but after top-k on vector/hybrid, so the latter may return fewer matches.",
+        "sources": [
+          "search",
+          "index-api"
+        ]
+      },
+      {
+        "text": "`memory_get_context(max_tokens)` does not query the search index: it walks mount files, excludes the `.anolisa` metadata and `.git` trees, sorts eligible text files by modification time, and emits previews bounded to about `max_tokens × 4` bytes and 256 preview bytes per file. It records output bytes in the audit log.",
+        "sources": [
+          "context"
+        ]
+      },
+      {
+        "text": "`memory_forget(topic, confirm)` searches up to 20 matching index hits. Without confirmation it lists the candidate paths; with confirmation it re-resolves and removes each file and reports successes and failures. `mem_remove` separately deletes one file or, when explicitly recursive, a directory; the root and metadata directory are not valid targets. These are file deletions, not evidence of erasure from backups or every external copy.",
+        "sources": [
+          "sovereignty",
+          "remove",
+          "guide"
+        ]
+      },
+      {
+        "text": "The component also documents Git-backed file history and named compressed snapshots for rollback. These are optional versioning/recovery features; this inspection did not trace every restore, consolidation, or adapter path.",
+        "sources": [
+          "readme",
+          "guide"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "The source exposes keyword/vector/hybrid retrieval and snippets, but no adjudicated answerability or abstention score was collected.",
+        "sources": [
+          "search",
+          "index-api",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction and staleness",
+        "status": "unmeasured",
+        "evidence": "File overwrite, edit, and consolidation tools provide mechanisms to change stored notes; this review did not run correction histories or stale-value probes.",
+        "sources": [
+          "writer",
+          "readme",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Confirmed forget/removal deletes matching files and audit records the operation; no post-delete probes or residual-copy audit were run.",
+        "sources": [
+          "sovereignty",
+          "remove",
+          "audit",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "BM25 scope filters and the missing-client fallback are visible in source; no cross-agent isolation probes were executed.",
+        "sources": [
+          "search",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Search results expose a memory path and snippet, and observation frontmatter can retain a hint/source marker; no claim-to-source adjudication or citation coverage measurement was performed.",
+        "sources": [
+          "search",
+          "observation",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Index availability and debounce behavior are documented, but no latency or write-to-recall timings were recorded.",
+        "sources": [
+          "guide",
+          "index-api",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "Audit rows may record approximate response tokens as bytes divided by four for selected retrieval tools; this is not provider token accounting or a cost measurement.",
+        "sources": [
+          "audit",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The durable files and derived SQLite index are identifiable, but no attributable byte count or per-item storage calculation was made.",
+        "sources": [
+          "readme",
+          "index-store",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded inspection of selected current documentation and Rust files at the pinned commit. It does not establish runtime correctness, retrieval quality, deployment safety, or behavior across all MCP adapters and configuration combinations.",
+        "sources": [
+          "readme",
+          "guide",
+          "search"
+        ]
+      },
+      {
+        "text": "The BM25 scope fallback to shared search when `MCP_CLIENT_NAME` is absent is a source-visible configuration hazard. Vector/hybrid behavior and category post-filtering have different semantics from BM25, and index freshness is eventually consistent after writes.",
+        "sources": [
+          "search",
+          "index-api",
+          "guide"
+        ]
+      },
+      {
+        "text": "`memory_forget` only considers up to 20 search hits; this inspection cannot establish that all semantically related material, Git history, snapshots, backups, or external copies are erased. No runtime deletion or isolation audit was performed.",
+        "sources": [
+          "sovereignty",
+          "remove",
+          "readme"
+        ]
+      },
+      {
+        "text": "The reviewed source set did not include every consolidation heuristic, namespace implementation, embedding backend, or OpenClaw adapter contract. Their detailed guarantees and the effects of configuration defaults remain unknown here.",
+        "sources": [
+          "readme",
+          "guide"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "metric_definitions": "METRICS.md",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "execution_status": "results/initial-baselines-status.json",
+      "note": "No ANOLISA Agent Memory system execution, benchmark workload, build, or tests were run for this source review. Project fixture counts and source-visible mechanisms are not measurements."
+    }
+  }
+}

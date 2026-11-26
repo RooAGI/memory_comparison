@@ -1,0 +1,386 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "diffmem",
+    "name": "DiffMem",
+    "ordinal": 191,
+    "repository": "https://github.com/Growth-Kinetics/DiffMem",
+    "listed_repository": "https://github.com/growth-kinetics/diffmem",
+    "branch": "main",
+    "revision": "48ecbb61e7fedca40d1b41bdfb217a5f80432b20",
+    "reviewed_at": "2026-11-25T11:14:44Z",
+    "review_timezone": "UTC (2026-11-25 03:14:44 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "DiffMem is a Python memory service and library that keeps each user's current memory in Markdown files on an isolated Git branch, with Git history preserving committed changes. An LLM writer processes session transcripts and a separate retrieval agent explores files and Git history through constrained shell commands. This is a pinned source review, not a runtime or benchmark assessment.",
+    "atlas_locator": {
+      "ordinal": 191,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/diffmem.md",
+      "listed_repository": "https://github.com/growth-kinetics/diffmem"
+    },
+    "contact": {
+      "email": null,
+      "source_url": null,
+      "checked_urls": [
+        "https://github.com/Growth-Kinetics/DiffMem/blob/48ecbb61e7fedca40d1b41bdfb217a5f80432b20/README.md"
+      ],
+      "note": "The official pinned README was checked for a published contact email; none was found."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/Growth-Kinetics/DiffMem/blob/48ecbb61e7fedca40d1b41bdfb217a5f80432b20/README.md"
+    ],
+    "contact_email_note": "No published contact email was found in the official pinned README. No commit/profile metadata or third-party directories were used.",
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official GitHub repository metadata",
+        "path": "GitHub repository API",
+        "symbol": "Public canonical Growth-Kinetics/DiffMem repository; default branch main",
+        "url": "https://api.github.com/repos/growth-kinetics/diffmem"
+      },
+      {
+        "id": "history",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Current main head 48ecbb61e7fedca40d1b41bdfb217a5f80432b20; feed updated 2026-08-28T11:06:51Z",
+        "url": "https://github.com/growth-kinetics/diffmem/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified full-SHA head commit",
+        "path": "commit",
+        "symbol": "Current main head 48ecbb61e7fedca40d1b41bdfb217a5f80432b20",
+        "url": "https://github.com/Growth-Kinetics/DiffMem/commit/48ecbb61e7fedca40d1b41bdfb217a5f80432b20"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Product, storage architecture, API, deployment, limitations, roadmap, and published contact check",
+        "url": "https://github.com/Growth-Kinetics/DiffMem/blob/48ecbb61e7fedca40d1b41bdfb217a5f80432b20/README.md"
+      },
+      {
+        "id": "code_index",
+        "label": "Repository code index",
+        "path": "docs/CODE_INDEX.md",
+        "symbol": "Module boundaries and write/read/storage flows",
+        "url": "https://github.com/Growth-Kinetics/DiffMem/blob/48ecbb61e7fedca40d1b41bdfb217a5f80432b20/docs/CODE_INDEX.md"
+      },
+      {
+        "id": "api",
+        "label": "Python API",
+        "path": "src/diffmem/api.py",
+        "symbol": "DiffMemory facade and context/write operations",
+        "url": "https://github.com/Growth-Kinetics/DiffMem/blob/48ecbb61e7fedca40d1b41bdfb217a5f80432b20/src/diffmem/api.py"
+      },
+      {
+        "id": "writer",
+        "label": "Session writer",
+        "path": "src/diffmem/writer_agent/agent.py",
+        "symbol": "Transcript archival, entity write/update, timeline/index refresh, and commit staging",
+        "url": "https://github.com/Growth-Kinetics/DiffMem/blob/48ecbb61e7fedca40d1b41bdfb217a5f80432b20/src/diffmem/writer_agent/agent.py"
+      },
+      {
+        "id": "retrieval",
+        "label": "Retrieval agent",
+        "path": "src/diffmem/retrieval_agent/agent.py",
+        "symbol": "LLM command loop and structured retrieval plan",
+        "url": "https://github.com/Growth-Kinetics/DiffMem/blob/48ecbb61e7fedca40d1b41bdfb217a5f80432b20/src/diffmem/retrieval_agent/agent.py"
+      },
+      {
+        "id": "router",
+        "label": "Retrieval command router",
+        "path": "src/diffmem/retrieval_agent/command_router.py",
+        "symbol": "Allowlisted commands, output/time limits, and command execution",
+        "url": "https://github.com/Growth-Kinetics/DiffMem/blob/48ecbb61e7fedca40d1b41bdfb217a5f80432b20/src/diffmem/retrieval_agent/command_router.py"
+      },
+      {
+        "id": "resolver",
+        "label": "Retrieval pointer resolver",
+        "path": "src/diffmem/retrieval_agent/resolver.py",
+        "symbol": "File/section/Git pointer resolution and token budget",
+        "url": "https://github.com/Growth-Kinetics/DiffMem/blob/48ecbb61e7fedca40d1b41bdfb217a5f80432b20/src/diffmem/retrieval_agent/resolver.py"
+      },
+      {
+        "id": "local_storage",
+        "label": "Local Git storage backend",
+        "path": "src/diffmem/storage/local_storage.py",
+        "symbol": "Per-user orphan branches/worktrees, local commits, and user wipe",
+        "url": "https://github.com/Growth-Kinetics/DiffMem/blob/48ecbb61e7fedca40d1b41bdfb217a5f80432b20/src/diffmem/storage/local_storage.py"
+      },
+      {
+        "id": "server",
+        "label": "HTTP server",
+        "path": "src/diffmem/server.py",
+        "symbol": "HTTP route user IDs and shared API-key authentication settings",
+        "url": "https://github.com/Growth-Kinetics/DiffMem/blob/48ecbb61e7fedca40d1b41bdfb217a5f80432b20/src/diffmem/server.py"
+      },
+      {
+        "id": "repo_manager",
+        "label": "Repository manager",
+        "path": "src/diffmem/repo_manager.py",
+        "symbol": "Storage and optional backup composition; best-effort backup deletion",
+        "url": "https://github.com/Growth-Kinetics/DiffMem/blob/48ecbb61e7fedca40d1b41bdfb217a5f80432b20/src/diffmem/repo_manager.py"
+      },
+      {
+        "id": "github_backup",
+        "label": "GitHub backup backend",
+        "path": "src/diffmem/storage/github_backup.py",
+        "symbol": "Remote branch push/pull; inspected source has no delete_user method",
+        "url": "https://github.com/Growth-Kinetics/DiffMem/blob/48ecbb61e7fedca40d1b41bdfb217a5f80432b20/src/diffmem/storage/github_backup.py"
+      },
+      {
+        "id": "frontmatter",
+        "label": "Entity frontmatter helpers",
+        "path": "src/diffmem/frontmatter.py",
+        "symbol": "YAML metadata fields and legacy semantic-index compatibility",
+        "url": "https://github.com/Growth-Kinetics/DiffMem/blob/48ecbb61e7fedca40d1b41bdfb217a5f80432b20/src/diffmem/frontmatter.py"
+      },
+      {
+        "id": "status",
+        "label": "Status canonicalization helper",
+        "path": "src/diffmem/status.py",
+        "symbol": "Deterministic normalization of entity status strings",
+        "url": "https://github.com/Growth-Kinetics/DiffMem/blob/48ecbb61e7fedca40d1b41bdfb217a5f80432b20/src/diffmem/status.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Benchmark domains and protocols",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Workload specification only; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status_record",
+        "label": "Project benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Execution status; no DiffMem result from this review",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster entry (identity/locator only)",
+        "path": "content/systems/diffmem.md",
+        "symbol": "Pinned roster identity and listed repository only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/diffmem.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The README describes DiffMem as a self-hostable conversational-agent memory backend and Python library maintained by Growth Kinetics. It reports production use with Annabelle; this is an upstream statement and was not independently verified.",
+        "sources": [
+          "readme",
+          "api"
+        ]
+      },
+      {
+        "text": "The explicit catalog locator is https://github.com/growth-kinetics/diffmem. GitHub's official repository API identifies the canonical public, non-fork Growth-Kinetics/DiffMem repository and default branch main; its main feed and head commit page identify the reviewed full SHA.",
+        "sources": [
+          "repo",
+          "history",
+          "head",
+          "atlas"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The Python package exposes a DiffMemory API and FastAPI service, with separate writer, retrieval, onboarding, and consolidation agents. The local storage backend holds a central Git repository and per-user worktrees; optional GitHub backup mirrors user branches. The README also documents an optional Hatchet execution deployment.",
+        "sources": [
+          "code_index",
+          "api",
+          "local_storage",
+          "readme"
+        ]
+      },
+      {
+        "text": "A user branch is named user/{user_id}. Its worktree contains a user profile, index, ontology-defined entity Markdown files, monthly timeline entries, and archived session transcripts. Ontology profiles control entity folders and prompts. YAML frontmatter stores structured entity metadata; parsing tolerates legacy semantic-index blocks.",
+        "sources": [
+          "local_storage",
+          "writer",
+          "frontmatter",
+          "readme"
+        ]
+      },
+      {
+        "text": "The system keeps the latest memory in editable Markdown files and earlier committed states in Git history. It does not use vector databases, embeddings, or BM25 in the documented retrieval path.",
+        "sources": [
+          "readme",
+          "local_storage",
+          "retrieval"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Session processing archives the transcript under sessions/, asks an LLM writer to identify entities to create or update, applies those changes, adds a timeline entry, refreshes entity/master indexes and optionally followups, then stages changes for a commit. Commit messages include the session ID and changed entity names. Later updates change the current file contents while Git history retains previous committed versions.",
+        "sources": [
+          "writer",
+          "api"
+        ]
+      },
+      {
+        "text": "Retrieval starts with a baseline that may include the user entity, recent timeline, and always-loaded entities. A multi-turn LLM uses a command tool to inspect files and Git history, emits file/section/history pointers, and the resolver loads those under a token budget. The router allowlists read-oriented Unix commands and selected Git subcommands; it bounds command runtime and output and logs command timing.",
+        "sources": [
+          "code_index",
+          "retrieval",
+          "resolver",
+          "router"
+        ]
+      },
+      {
+        "text": "The local storage backend creates an orphan branch per user and a separate worktree. Its wipe operation removes the worktree and local branch. RepoManager invokes a backup deletion method only if the configured backup backend has one; the inspected GitHub backup implementation supports push and pull but defines no delete_user method. Remote branch deletion and physical reclamation of Git history, snapshots, or other copies therefore were not established.",
+        "sources": [
+          "local_storage",
+          "repo_manager",
+          "github_backup"
+        ]
+      },
+      {
+        "text": "The system uses YAML frontmatter for queryable entity metadata and code-owned status normalization. The writer archives source transcripts and commits changes, but the inspected path did not establish required claim-level links from each fact to a transcript or a citation format for answers.",
+        "sources": [
+          "frontmatter",
+          "status",
+          "writer",
+          "retrieval"
+        ]
+      },
+      {
+        "text": "The source-visible efficiency controls include baseline loading, a bounded retrieval turn/time budget, allowlisted shell commands with output limits, pointer resolution under a token budget, and optional out-of-band backup. The README lists robust indexing and configurable context caps as roadmap items; these mechanisms do not establish measured speed or cost.",
+        "sources": [
+          "retrieval",
+          "resolver",
+          "router",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval accuracy and abstention — unmeasured. Retrieval can return selected file/history context; no answerability or abstention cases were scored.",
+        "sources": [
+          "retrieval",
+          "metrics",
+          "status_record"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured. The writer edits current entity files and Git preserves prior commits; no correction workload was run.",
+        "sources": [
+          "writer",
+          "metrics",
+          "status_record"
+        ]
+      },
+      {
+        "text": "Deletion leakage — unmeasured. Local user wipe and file lifecycle mechanisms are visible; no post-delete probes, remote-backup deletion, or storage-reclamation checks were run.",
+        "sources": [
+          "local_storage",
+          "repo_manager",
+          "github_backup",
+          "metrics",
+          "status_record"
+        ]
+      },
+      {
+        "text": "Scope isolation leakage — unmeasured. Per-user branches/worktrees and optional shared bearer-key configuration are documented; no cross-user leakage workload was run.",
+        "sources": [
+          "local_storage",
+          "readme",
+          "server",
+          "metrics",
+          "status_record"
+        ]
+      },
+      {
+        "text": "Evidence support precision and citation coverage — unmeasured. Session archives and commits offer historical context, but the inspected flow did not show a required claim-level citation contract; no outputs were adjudicated.",
+        "sources": [
+          "writer",
+          "retrieval",
+          "metrics",
+          "status_record"
+        ]
+      },
+      {
+        "text": "Retrieval latency and write-to-recall delay — unmeasured. Retrieval timeouts/logging and asynchronous write options are present; no timings or write-to-recall probes were collected.",
+        "sources": [
+          "retrieval",
+          "router",
+          "readme",
+          "metrics",
+          "status_record"
+        ]
+      },
+      {
+        "text": "Tokens and cost — unmeasured. LLM calls and context budgets are configured, but no runtime usage or costs were collected.",
+        "sources": [
+          "writer",
+          "retrieval",
+          "resolver",
+          "metrics",
+          "status_record"
+        ]
+      },
+      {
+        "text": "Storage efficiency — unmeasured. Markdown and Git are the persistent memory substrate; no corpus-attributed storage size was measured.",
+        "sources": [
+          "readme",
+          "local_storage",
+          "metrics",
+          "status_record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded review inspected the official README, code index, public API, session writer, retrieval agent/resolver/command router, local storage, GitHub backup, frontmatter, and status helper. It did not inspect every HTTP route, executor, deployment setting, ontology, consolidation tool, or provider integration.",
+        "sources": [
+          "readme",
+          "code_index",
+          "api",
+          "writer",
+          "retrieval",
+          "router",
+          "resolver",
+          "local_storage",
+          "github_backup",
+          "frontmatter",
+          "status"
+        ]
+      },
+      {
+        "text": "Source inspection cannot establish retrieval quality, writer correctness, effective deployment authentication, actual isolation, deletion from all replicas/backups, latency, provider usage/cost, or storage efficiency. No DiffMem runtime, tests, or benchmark workload were run.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status_record"
+        ]
+      },
+      {
+        "text": "README statements about production deployment, server sizing, and write duration are upstream claims only; they were not independently checked or measured here. The remote wipe path is specifically unknown because the inspected GitHub backup backend has no delete_user method.",
+        "sources": [
+          "readme",
+          "repo_manager",
+          "github_backup"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No DiffMem runtime, tests, or benchmark workload was executed. The project fixture is a workload specification, not a result; upstream README claims and source observations are not measurements from this review.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

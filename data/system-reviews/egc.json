@@ -1,0 +1,495 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 209,
+    "slug": "egc",
+    "name": "EGC",
+    "repository": "https://github.com/Fmarzochi/EGC",
+    "listed_repository": "https://github.com/Fmarzochi/EGC",
+    "branch": "main",
+    "revision": "afb9a74ef450535f06cc25e94b76cdb4c92892fd",
+    "reviewed_at": "2026-11-25T12:06:29Z",
+    "review_timezone": "UTC (2026-11-25 04:06:29 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "EGC is a local-first runtime whose memory is split across encrypted project and global Markdown state documents and a separate SQLite store for decisions, lessons, and short-lived working memory. Branch-aware state and project-keyed working memory coexist with history and lesson searches that do not filter by project in the inspected query paths. This review describes selected current source and documentation at main head afb9a74ef450535f06cc25e94b76cdb4c92892fd; no EGC runtime, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 209,
+      "name": "EGC",
+      "slug": "egc",
+      "listed_repository": "https://github.com/Fmarzochi/EGC",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/egc.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/Fmarzochi/EGC/blob/afb9a74ef450535f06cc25e94b76cdb4c92892fd/README.md",
+      "checked_urls": [
+        "https://github.com/Fmarzochi/EGC/blob/afb9a74ef450535f06cc25e94b76cdb4c92892fd/README.md"
+      ],
+      "note": "The official pinned README was checked for a published contact email; none was found. No commit or profile metadata or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/Fmarzochi/EGC/blob/afb9a74ef450535f06cc25e94b76cdb4c92892fd/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/Fmarzochi/EGC/blob/afb9a74ef450535f06cc25e94b76cdb4c92892fd/README.md"
+    ],
+    "contact_email_note": "The official pinned README was checked for a published contact email; none was found. No commit or profile metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Catalog identity and roster locator",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[208], ordinal 209; EGC name, slug, listed repository, explicit status and pinned Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/egc.md",
+        "symbol": "Pinned catalog source retained only for curated identity and locator attribution, not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/egc.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Public repository identifies main as the default branch and shows latest head prefix afb9a74",
+        "url": "https://github.com/Fmarzochi/EGC"
+      },
+      {
+        "id": "feed",
+        "label": "Official main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Current full main head afb9a74ef450535f06cc25e94b76cdb4c92892fd; feed updated 2026-11-22T05:10:00Z",
+        "url": "https://github.com/Fmarzochi/EGC/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Official reviewed head",
+        "path": "commit/afb9a74ef450535f06cc25e94b76cdb4c92892fd",
+        "symbol": "Official full-SHA commit page for verified main head",
+        "url": "https://github.com/Fmarzochi/EGC/commit/afb9a74ef450535f06cc25e94b76cdb4c92892fd"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Local-first product description, memory types, local encryption claim and Team Brain boundary; checked for contact email",
+        "url": "https://github.com/Fmarzochi/EGC/blob/afb9a74ef450535f06cc25e94b76cdb4c92892fd/README.md"
+      },
+      {
+        "id": "state_tools",
+        "label": "Pinned state read/write implementation",
+        "path": "mcp/servers/egc-memory/src/memory-state-tools.ts",
+        "symbol": "update_state project/global write path, state encryption and integrity, lock, sanitization, notifications, and propagation",
+        "url": "https://github.com/Fmarzochi/EGC/blob/afb9a74ef450535f06cc25e94b76cdb4c92892fd/mcp/servers/egc-memory/src/memory-state-tools.ts"
+      },
+      {
+        "id": "branch",
+        "label": "Pinned branch state resolver",
+        "path": "mcp/servers/egc-memory/src/branch-state.ts",
+        "symbol": "Project slug, hashed branch keys, current/default/legacy read fallback, detached-commit isolation and path checks",
+        "url": "https://github.com/Fmarzochi/EGC/blob/afb9a74ef450535f06cc25e94b76cdb4c92892fd/mcp/servers/egc-memory/src/branch-state.ts"
+      },
+      {
+        "id": "state_doc",
+        "label": "Pinned state document model",
+        "path": "mcp/servers/egc-memory/src/state-doc.ts",
+        "symbol": "Markdown sections, caps, update merge, retirement/restoration markers and serialization",
+        "url": "https://github.com/Fmarzochi/EGC/blob/afb9a74ef450535f06cc25e94b76cdb4c92892fd/mcp/servers/egc-memory/src/state-doc.ts"
+      },
+      {
+        "id": "tools",
+        "label": "Pinned MCP memory tool definitions",
+        "path": "mcp/servers/egc-memory/src/memory-tool-definitions.ts",
+        "symbol": "Memory tool surface and documented scope/retention semantics for state, decisions, lessons and working memory",
+        "url": "https://github.com/Fmarzochi/EGC/blob/afb9a74ef450535f06cc25e94b76cdb4c92892fd/mcp/servers/egc-memory/src/memory-tool-definitions.ts"
+      },
+      {
+        "id": "db",
+        "label": "Pinned SQLite database setup",
+        "path": "mcp/servers/egc-memory/src/memory-db.ts",
+        "symbol": "Local state.db location, SQLite WAL and migrations for the memory store, FTS availability/fallback readiness, write arbitration",
+        "url": "https://github.com/Fmarzochi/EGC/blob/afb9a74ef450535f06cc25e94b76cdb4c92892fd/mcp/servers/egc-memory/src/memory-db.ts"
+      },
+      {
+        "id": "misc",
+        "label": "Pinned decision and working-memory operations",
+        "path": "mcp/servers/egc-memory/src/memory-misc-tools.ts",
+        "symbol": "Decision write and unfiltered query/search paths, working-memory tools and record metadata",
+        "url": "https://github.com/Fmarzochi/EGC/blob/afb9a74ef450535f06cc25e94b76cdb4c92892fd/mcp/servers/egc-memory/src/memory-misc-tools.ts"
+      },
+      {
+        "id": "lessons",
+        "label": "Pinned lesson lifecycle",
+        "path": "mcp/servers/egc-memory/src/memory-lessons.ts",
+        "symbol": "Lesson fields, exact-match deduplication, recall, reinforcement, decay/archive and content checks",
+        "url": "https://github.com/Fmarzochi/EGC/blob/afb9a74ef450535f06cc25e94b76cdb4c92892fd/mcp/servers/egc-memory/src/memory-lessons.ts"
+      },
+      {
+        "id": "search",
+        "label": "Pinned FTS search implementation",
+        "path": "mcp/servers/egc-memory/src/search.ts",
+        "symbol": "FTS5 indexes, query tokenization, BM25 rank normalization and project-unfiltered decision/lesson searches",
+        "url": "https://github.com/Fmarzochi/EGC/blob/afb9a74ef450535f06cc25e94b76cdb4c92892fd/mcp/servers/egc-memory/src/search.ts"
+      },
+      {
+        "id": "working",
+        "label": "Pinned transient working-memory implementation",
+        "path": "mcp/servers/egc-memory/src/working-memory.ts",
+        "symbol": "Working-memory schema, default and maximum TTL, expiry deletion and project-key/path filtering",
+        "url": "https://github.com/Fmarzochi/EGC/blob/afb9a74ef450535f06cc25e94b76cdb4c92892fd/mcp/servers/egc-memory/src/working-memory.ts"
+      },
+      {
+        "id": "records",
+        "label": "Pinned synchronized record identity and scope",
+        "path": "mcp/servers/egc-memory/src/sync/records.ts",
+        "symbol": "Project identity by repository remote, record data and machine attribution, sealed Team Brain sync and merge",
+        "url": "https://github.com/Fmarzochi/EGC/blob/afb9a74ef450535f06cc25e94b76cdb4c92892fd/mcp/servers/egc-memory/src/sync/records.ts"
+      },
+      {
+        "id": "encryption",
+        "label": "Pinned state encryption implementation",
+        "path": "mcp/servers/egc-memory/src/encryption.ts",
+        "symbol": "AES-256-GCM encryption for state Markdown files, local key file, atomic write and undecryptable-file quarantine",
+        "url": "https://github.com/Fmarzochi/EGC/blob/afb9a74ef450535f06cc25e94b76cdb4c92892fd/mcp/servers/egc-memory/src/encryption.ts"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Project quality and efficiency metric domains; definitions only, no measurement",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Portable scripted workload; inspected only and not run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Project benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project status record referenced without producing a benchmark result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "EGC is a local-first runtime and MCP integration for coding agents. The repository describes project memory as shared among installed agents on one machine, with optional Team Brain synchronization to a private Git remote.",
+        "sources": [
+          "readme",
+          "tools"
+        ]
+      },
+      {
+        "text": "The official repository page identifies main as the default branch; its main Atom feed reports full current head afb9a74ef450535f06cc25e94b76cdb4c92892fd, updated 2026-11-22T05:10:00Z. This review pins source links to that SHA.",
+        "sources": [
+          "repo",
+          "feed",
+          "head"
+        ]
+      },
+      {
+        "text": "Catalog ordinal 209 identifies EGC and lists its repository as an explicit locator; the pinned Atlas entry is used only for roster identity and locator attribution, not as assessment evidence.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The reviewed memory subsystem has two durable stores. Project and user-wide state are Markdown documents under ~/.egc/state and ~/.egc/global/state.md; the memory MCP server encrypts those documents with AES-256-GCM and keeps a separate HMAC integrity sidecar. A separate SQLite database at ~/.egc/memory/state.db stores decisions, lessons, working memory, and session-related tables. The README's broad encrypted-memory description should be read alongside this implementation split: the inspected SQLite open path does not apply document encryption to state.db.",
+        "sources": [
+          "readme",
+          "state_tools",
+          "db",
+          "encryption"
+        ]
+      },
+      {
+        "text": "A state document has Context, Active Decisions, Do Not Repeat, Preferences, and Next Session sections, plus project/branch/author/update metadata. Active Decisions, Do Not Repeat, and Preferences are capped at 15, 10, and 15 entries respectively; entries are merged newest-first with exact-text deduplication. Retired-entry hashes support restoration during team merges.",
+        "sources": [
+          "state_doc",
+          "state_tools"
+        ]
+      },
+      {
+        "text": "Project document names derive from the last two path components; branch files use a sanitized readable prefix plus a SHA-256 branch digest. A detached checkout gets a file keyed to that exact commit. SQLite decisions and lessons carry path/project-key data, while transient working memory is keyed by project and key.",
+        "sources": [
+          "branch",
+          "misc",
+          "lessons",
+          "working",
+          "records"
+        ]
+      },
+      {
+        "text": "SQLite opens in WAL mode when available, enables foreign keys and a busy timeout, and serializes shared writes through an arbitration queue. FTS5 indexes are created for decisions and lessons when the SQLite build supports them; the server removes unusable FTS triggers and keeps substring fallbacks available.",
+        "sources": [
+          "db",
+          "search",
+          "misc"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write project/global state: update_state validates bounded fields, scans free-text inputs for suspicious instructions, resolves the project and Git branch, takes a per-file merge lock, merges into the selected Markdown document, encrypts it, writes an HMAC, and notifies sessions. Project state is also scrubbed and propagated into supported coding-tool instruction files. Global state is a separate user-wide document.",
+        "sources": [
+          "state_tools",
+          "branch",
+          "state_doc",
+          "encryption",
+          "tools"
+        ]
+      },
+      {
+        "text": "State updates replace Context when a nonempty replacement is supplied, rewrite Next Session, and merge decisions, avoid entries, and preferences. The state document builder places incoming values first, deduplicates exact strings, applies per-section caps, and tracks retirement/restoration marks; this is section-level consolidation rather than a typed fact revision history.",
+        "sources": [
+          "state_doc"
+        ]
+      },
+      {
+        "text": "Store decisions: store_decision appends a row with a stable record ID, project path/key, and machine label. query_history returns rows by timestamp and search_history uses FTS5 BM25 ranking (with a substring fallback if FTS5 is unavailable). The inspected query and search SQL do not constrain results by the caller's project path or project key, and tool definitions describe this store separately from get_state.",
+        "sources": [
+          "misc",
+          "search",
+          "tools"
+        ]
+      },
+      {
+        "text": "Lessons: lesson_save stores content, context, optional tags, confidence, author, and timestamps; an exact matching active content/context pair is reinforced rather than duplicated. Recall filters archived lessons and minimum confidence, ranks with FTS5 when present or scans a bounded confidence-ordered set with substring matching otherwise. Confidence decays by 0.05 per week after a 30-day grace period and lessons below 0.2 are archived. The inspected lesson recall query has no project predicate.",
+        "sources": [
+          "lessons",
+          "search",
+          "db"
+        ]
+      },
+      {
+        "text": "Working memory: working_memory_set upserts a project-scoped key/value with a default one-day TTL and a maximum seven-day TTL. Reads match by repository project key or exact project path, discard expired entries, and return one latest entry per key. Expired rows are physically deleted by read-time or maintenance sweeps.",
+        "sources": [
+          "working",
+          "misc",
+          "records"
+        ]
+      },
+      {
+        "text": "Delete and correction: the tool definitions expose no general decision-delete or lesson-delete tool. Short-lived working memory is deleted at expiration. Project state can be changed by section updates and retirement/cap rules, but the reviewed tool surface does not provide a general per-item erase with a cross-store/index/sync completeness guarantee. State-file recovery quarantines undecryptable documents as a sibling backup rather than deleting their contents.",
+        "sources": [
+          "tools",
+          "working",
+          "state_doc",
+          "encryption",
+          "misc"
+        ]
+      },
+      {
+        "text": "Retrieval: get_state resolves branch-specific state first, then the default-branch state, with legacy flat-state compatibility; detached HEAD reads only the matching commit state. It can append a deduplicated global-memory section after project state. Decision history uses literalized query terms joined with OR and normalized BM25 scores; lessons use confidence-filtered FTS results. These record searches are independent of branch state and do not visibly apply project scope.",
+        "sources": [
+          "tools",
+          "branch",
+          "state_tools",
+          "search",
+          "misc",
+          "lessons"
+        ]
+      },
+      {
+        "text": "Scope boundaries are mixed. State documents distinguish project, branch, detached commit, and explicit global scope; working memory filters by project identity. In contrast, decisions and lessons have project attribution fields but the inspected history and lesson retrieval SQL does not filter on them. The repository's per-agent workspaces and local process boundaries are not evidence of complete cross-agent or tenant isolation.",
+        "sources": [
+          "readme",
+          "branch",
+          "state_tools",
+          "working",
+          "misc",
+          "lessons",
+          "records"
+        ]
+      },
+      {
+        "text": "Provenance and evidence: state headers record project, branch, author, and updated time; decision/lesson/working-memory records carry IDs, timestamps, project identity and/or machine/author labels. State files have HMAC integrity checks and sanitized memory writes. These sources do not show claim-level source citations or a mutation audit linking a corrected fact to its former value. Team-synchronized records are sealed with the team key and merged by record ID/time; the README says the SQLite database itself is not synced by Team Brain.",
+        "sources": [
+          "state_doc",
+          "state_tools",
+          "misc",
+          "lessons",
+          "working",
+          "records",
+          "encryption",
+          "readme"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: FTS5/BM25 retrieval, indexed working-memory expiry, SQLite WAL, write arbitration, bounded record/result inputs, periodic lesson-decay and working-memory expiry sweeps, and structured server logs are visible in source. The health tool reports the selected SQLite engine and arbitration mode; none of these source mechanisms provides measured latency, token, cost, or storage results.",
+        "sources": [
+          "search",
+          "working",
+          "db",
+          "state_tools",
+          "misc",
+          "metrics"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "No fixture queries were executed or answer outcomes adjudicated.",
+        "sources": [
+          "tools",
+          "search",
+          "fixture",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "The state merge and lesson reinforcement rules were inspected, but no correction probes or stale-value adjudication were run.",
+        "sources": [
+          "state_doc",
+          "lessons",
+          "fixture",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No post-delete probes were run; decision/lesson erase completeness was not established.",
+        "sources": [
+          "tools",
+          "working",
+          "fixture",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Branch and working-memory filters are visible, but no paired permitted/forbidden scope cases were run.",
+        "sources": [
+          "branch",
+          "working",
+          "misc",
+          "lessons",
+          "fixture",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "No generated answers were adjudicated for evidence support or citation coverage.",
+        "sources": [
+          "misc",
+          "lessons",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No retrieval latency samples were collected.",
+        "sources": [
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timed write-then-recall probes were run.",
+        "sources": [
+          "state_tools",
+          "misc",
+          "fixture",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No model token usage or cost measurements were collected.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No persistent storage sizes or bytes-per-accepted-item measurements were collected.",
+        "sources": [
+          "db",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a selected review of the pinned README and selected MCP memory state, branch, document, database, decision, lesson, search, working-memory, record-sync, and encryption sources. It does not trace every caller identity, coding-tool integration, project path boundary, migration, or Team Brain deployment.",
+        "sources": [
+          "readme",
+          "state_tools",
+          "branch",
+          "state_doc",
+          "db",
+          "misc",
+          "lessons",
+          "search",
+          "working",
+          "records",
+          "encryption"
+        ]
+      },
+      {
+        "text": "The source shows decision and lesson records are attributed to projects but does not scope the inspected recall queries, leaving cross-project disclosure behavior a concrete concern for environments that rely on those tools across projects. This is a source-level observation, not a runtime exploit or isolation test.",
+        "sources": [
+          "misc",
+          "search",
+          "lessons"
+        ]
+      },
+      {
+        "text": "The README describes encrypted memory broadly, while the inspected implementation separately encrypts Markdown state documents and opens the SQLite database through the SQLite driver. The review did not inspect filesystem-level encryption, deployment wrappers, backups, or every record storage boundary.",
+        "sources": [
+          "readme",
+          "db",
+          "encryption"
+        ]
+      },
+      {
+        "text": "The review did not establish decision/lesson deletion, cleanup across replicated records or Git history, benchmark quality, large-corpus behavior, recovery correctness, or the completeness of state propagation into every supported tool.",
+        "sources": [
+          "tools",
+          "records",
+          "state_tools",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No EGC runtime, tests, or benchmarks were run. Source observations and upstream descriptions are not benchmark results.",
+      "sources": [
+        "metrics",
+        "fixture",
+        "result"
+      ]
+    }
+  }
+}

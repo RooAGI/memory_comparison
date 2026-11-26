@@ -1,0 +1,413 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 192,
+    "slug": "distill-kura",
+    "name": "distill-kura",
+    "repository": "https://github.com/lna-lab/distill-kura",
+    "branch": "master",
+    "revision": "3a02c04e5155cd66d49cfd95d11b09239499c97d",
+    "reviewed_at": "2026-11-25T11:13:14Z",
+    "review_timezone": "UTC (2026-11-25 03:13:14 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/lna-lab/distill-kura/blob/3a02c04e5155cd66d49cfd95d11b09239499c97d/README.md",
+      "checked_urls": [
+        "https://github.com/lna-lab/distill-kura/blob/3a02c04e5155cd66d49cfd95d11b09239499c97d/README.md"
+      ],
+      "note": "The official pinned README was checked for a published contact email; none was found."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/lna-lab/distill-kura/blob/3a02c04e5155cd66d49cfd95d11b09239499c97d/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/lna-lab/distill-kura/blob/3a02c04e5155cd66d49cfd95d11b09239499c97d/README.md"
+    ],
+    "contact_email_note": "No contact email is published in the official README at the reviewed revision. Commit/profile metadata and third-party directories were not used.",
+    "summary": "distill-kura is a local-first, file-based long-term memory service for agents. It stores one Markdown file per memory and a recognition-oriented index, gates transcript distillation with deterministic evidence checks, and retrieves relevant memories through a fast direct-match path or model-assisted selection followed by link walking.",
+    "atlas_locator": {
+      "ordinal": 192,
+      "name": "distill-kura",
+      "slug": "distill-kura",
+      "listed_repository": "https://github.com/lna-lab/distill-kura",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/distill-kura.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated system catalog",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 192 identity, slug, listed locator and repository attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster attribution only",
+        "path": "content/systems/distill-kura.md",
+        "symbol": "curated identity and listed locator attribution; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/distill-kura.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "public repository and default branch master",
+        "url": "https://github.com/lna-lab/distill-kura"
+      },
+      {
+        "id": "history",
+        "label": "Official master branch history",
+        "path": "master commits feed",
+        "symbol": "latest full current master SHA and feed update timestamp 2026-09-30T10:40:08Z",
+        "url": "https://github.com/lna-lab/distill-kura/commits/master.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream commit",
+        "path": "commit 3a02c04e5155cd66d49cfd95d11b09239499c97d",
+        "symbol": "full reviewed master head SHA and commit metadata",
+        "url": "https://github.com/lna-lab/distill-kura/commit/3a02c04e5155cd66d49cfd95d11b09239499c97d"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "project purpose, memory model, retrieval/distillation flow, host integrations, operations and project-described efficiency/observability; checked for contact",
+        "url": "https://github.com/lna-lab/distill-kura/blob/3a02c04e5155cd66d49cfd95d11b09239499c97d/README.md"
+      },
+      {
+        "id": "store",
+        "label": "Store implementation",
+        "path": "distill_kura/store.py",
+        "symbol": "file-backed memory/index model, store paths, mutations, validation, retirement and doctor report",
+        "url": "https://github.com/lna-lab/distill-kura/blob/3a02c04e5155cd66d49cfd95d11b09239499c97d/distill_kura/store.py"
+      },
+      {
+        "id": "recall",
+        "label": "Recall implementation",
+        "path": "distill_kura/recall.py",
+        "symbol": "fastpath/meaning/degraded-word retrieval, graph walk, context budgets and response observability fields",
+        "url": "https://github.com/lna-lab/distill-kura/blob/3a02c04e5155cd66d49cfd95d11b09239499c97d/distill_kura/recall.py"
+      },
+      {
+        "id": "gate",
+        "label": "Evidence gate",
+        "path": "distill_kura/distill/gate.py",
+        "symbol": "verbatim quote checks, evidence class rules, echo suppression, factual-surface validation",
+        "url": "https://github.com/lna-lab/distill-kura/blob/3a02c04e5155cd66d49cfd95d11b09239499c97d/distill_kura/distill/gate.py"
+      },
+      {
+        "id": "pipeline",
+        "label": "Distillation pipeline",
+        "path": "distill_kura/distill/pipeline.py",
+        "symbol": "journal intake, candidate/draft/pour lifecycle, retries and pending work",
+        "url": "https://github.com/lna-lab/distill-kura/blob/3a02c04e5155cd66d49cfd95d11b09239499c97d/distill_kura/distill/pipeline.py"
+      },
+      {
+        "id": "transition",
+        "label": "Transition verifier",
+        "path": "distill_kura/distill/transition.py",
+        "symbol": "human-evidence proof required for supersession and successor relation",
+        "url": "https://github.com/lna-lab/distill-kura/blob/3a02c04e5155cd66d49cfd95d11b09239499c97d/distill_kura/distill/transition.py"
+      },
+      {
+        "id": "trust",
+        "label": "Trust and isolation documentation",
+        "path": "docs/TRUST.md",
+        "symbol": "write policies, unauthenticated HTTP boundary, store/journal/model separation and hardlink caveat",
+        "url": "https://github.com/lna-lab/distill-kura/blob/3a02c04e5155cd66d49cfd95d11b09239499c97d/docs/TRUST.md"
+      },
+      {
+        "id": "metrics_doc",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "benchmark domains and protocol definitions; no distill-kura measurements",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Shared benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "shared run status; not a distill-kura result",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Planned benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned synthetic workload only",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The catalog places distill-kura at ordinal 192, uses slug distill-kura, and lists the explicit locator https://github.com/lna-lab/distill-kura. Its pinned Atlas report is retained only for identity and locator attribution.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The official public repository is https://github.com/lna-lab/distill-kura; the GitHub repository page identifies master as the default branch. The official master Atom feed identifies full head 3a02c04e5155cd66d49cfd95d11b09239499c97d and was updated at 2026-09-30T10:40:08Z.",
+        "sources": [
+          "repo",
+          "history",
+          "head"
+        ]
+      },
+      {
+        "text": "The README describes a Python file-based memory package, shipped with a DeepSeek Harness plugin, MCP bridge, HTTP service, CLI, and Python library. It describes the system as standard-library-only with no vector database or embedding dependency.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The official pinned README was checked for a published contact email and none was found. No commit/profile metadata or third-party directories were used.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "A store is a directory containing MEMORY.md, one Markdown file per memory, optional _study notes, and a private _still work area for drafts, watermarks, read logs, write-ahead records, and revision state. The implementation uses deterministic file operations; the thinker model is used for semantic index selection when the fast path has no confident hit.",
+        "sources": [
+          "store",
+          "recall",
+          "readme"
+        ]
+      },
+      {
+        "text": "Memory frontmatter includes a slug/name, description, type and optional tags plus curation annotations; body prose carries the remembered fact, rationale, application guidance, and [[slug]] relations. The index contains one recognition trigger per memory and supports structured sections and derived links. There is no vector database or embedding store in the described design.",
+        "sources": [
+          "store",
+          "readme"
+        ]
+      },
+      {
+        "text": "Distillation separates intake, candidate generation, a deterministic gate, novelty checks, composition, draft staging, and a later cold re-read that pours, fixes, or discards each draft. Evidence manifests and signed draft envelopes support verification before canonical store mutation.",
+        "sources": [
+          "pipeline",
+          "gate",
+          "readme"
+        ]
+      },
+      {
+        "text": "The store's doctor report exposes health and integrity information including dead links, isolated memories, index drift, evidence-manifest problems, revision/WAL replay state, hardlinks, curation marks, retired entries, fastpath state, and observed capacity units.",
+        "sources": [
+          "store",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write by distillation: journal adapters classify transcript segments as USER, TOOL, ACT, or SELF. The brain proposes memory candidates with quotes; the gate accepts only surviving quotes found verbatim in the matching class material, suppresses quotes already present in the store, requires self-only material to be framed as judgement, and flags numbers without TOOL/ACT support. Later model-written surfaces are rechecked for unsupported numbers, attribution, links, and quotations.",
+        "sources": [
+          "pipeline",
+          "gate"
+        ]
+      },
+      {
+        "text": "Draft lifecycle: model output is staged rather than immediately becoming memory. The scribe re-reads each draft without its earlier context and chooses pour, fix, or toss; failures and pending intake are retained for retry rather than silently treated as empty work. Direct remember and annotation routes are separately controlled by the store's write_policy.",
+        "sources": [
+          "pipeline",
+          "readme",
+          "trust"
+        ]
+      },
+      {
+        "text": "Update/correction: ordinary annotation merges tags and curation text onto a memory; a dedicated retirement operation changes the index line to show a superseded memory and successor. Retirement requires an evidence manifest whose single USER-class quote explicitly names the old memory, states a replacement/retirement construction, and names its successor. It does not erase the old Markdown memory.",
+        "sources": [
+          "store",
+          "transition",
+          "trust",
+          "readme"
+        ]
+      },
+      {
+        "text": "Delete: no general memory deletion or secure-erasure route is described in the inspected API/docs. Retirement is a marked transition, and retired memories remain stored and can remain in the index/retrieval path. Backup, filesystem, and model-retention behavior is outside the in-process operation.",
+        "sources": [
+          "store",
+          "transition",
+          "readme",
+          "trust"
+        ]
+      },
+      {
+        "text": "Retrieval: a deterministic fastpath tries direct recognition and only returns gated hits; otherwise a thinker receives the full recognition index and names relevant slugs by meaning. The store walks links from those picks and returns context subject to per-memory and whole-context character limits. If the thinker is unavailable, recall falls back to index-line word overlap and labels the degraded method; an explicit empty model selection remains an abstention.",
+        "sources": [
+          "recall",
+          "readme"
+        ]
+      },
+      {
+        "text": "Scope: each store is a separate directory, with modes/session configuration selecting the store before a conversation. Directories and mode binding are routing boundaries, not authorization: the HTTP server has no authentication. Trust documentation calls for process/user and filesystem separation, warns that hardlinked files are served, and notes that shared models or journal roots can cross intended privacy boundaries.",
+        "sources": [
+          "trust",
+          "readme",
+          "store"
+        ]
+      },
+      {
+        "text": "Provenance: the deterministic gate verifies that quoted text occurs in a classified raw source and that claims follow the surviving evidence classes; manifests preserve evidence references, and retirement re-proves the transition from a USER quote. This establishes traceability to source text/classification, not the truth of a statement or correctness of the journal adapter's classification. The trust docs also identify filesystem access to adjacent gate keys/manifests as outside the threat boundary.",
+        "sources": [
+          "gate",
+          "pipeline",
+          "transition",
+          "trust"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: source design avoids embeddings and a vector database; direct recognition can bypass a thinker call, while meaning-based selection sends the index to a model. Recall reports method, fastpath verdict/time, walked and included slugs, budget drops, estimated tokens, and elapsed time. The README and store doctor describe JSONL distillation metrics/logs and store-health/integrity counters; these are observability surfaces, not measurements from this review.",
+        "sources": [
+          "readme",
+          "recall",
+          "store",
+          "pipeline"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "Code provides fastpath gates, model selection, and an explicit no-pick result; no project retrieval/abstention workload was run.",
+        "sources": [
+          "recall",
+          "metrics_doc",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "A proven retirement transition is available; no corrected-value probe workload was run.",
+        "sources": [
+          "transition",
+          "store",
+          "metrics_doc",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No general deletion route was established in inspected sources and no post-delete probes were run.",
+        "sources": [
+          "store",
+          "readme",
+          "metrics_doc",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation leak rate",
+        "status": "unmeasured",
+        "evidence": "Trust documentation describes directory/mode isolation and its unauthenticated-service and hardlink limits; no cross-scope probes were run.",
+        "sources": [
+          "trust",
+          "metrics_doc",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "The gate checks source-text occurrence and class rules; no response claim adjudication was performed.",
+        "sources": [
+          "gate",
+          "pipeline",
+          "metrics_doc",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "Recall includes timing fields, but no timing samples were collected in this review.",
+        "sources": [
+          "recall",
+          "metrics_doc",
+          "status"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No acknowledged writes or scheduled recall probes were run.",
+        "sources": [
+          "pipeline",
+          "metrics_doc",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "The code can report estimated context tokens, but no provider usage or cost accounting was collected.",
+        "sources": [
+          "recall",
+          "metrics_doc",
+          "status"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Doctor exposes memory/index/body estimates and bytes, but no benchmark corpus footprint was measured.",
+        "sources": [
+          "store",
+          "metrics_doc",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The evidence gate verifies quote occurrence and permitted claim forms, not that the source is truthful, complete, or correctly classified; a contaminated journal or misclassified source can still ground a memory in the wrong way.",
+        "sources": [
+          "gate",
+          "pipeline"
+        ]
+      },
+      {
+        "text": "The retrieval meaning tier depends on the configured model; degraded word-overlap recall and direct fastpath cover different query shapes. Source design does not establish recall accuracy for a workload.",
+        "sources": [
+          "recall",
+          "readme",
+          "metrics_doc"
+        ]
+      },
+      {
+        "text": "Store/mode selection is not confidentiality enforcement. An unauthenticated HTTP endpoint, shared model/journal configuration, filesystem access, or hardlinks can expose content outside the intended mode boundary.",
+        "sources": [
+          "trust"
+        ]
+      },
+      {
+        "text": "Retirement records a supersession face but preserves the old memory. The inspected material does not establish hard deletion, backup erasure, hosted-model retention, or comprehensive secure erasure.",
+        "sources": [
+          "store",
+          "transition",
+          "trust"
+        ]
+      },
+      {
+        "text": "No distill-kura runtime, tests, or benchmark workloads were run for this review. All project metric domains remain unmeasured.",
+        "sources": [
+          "metrics_doc",
+          "status",
+          "fixture"
+        ]
+      }
+    ],
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "No distill-kura runtime, tests, or benchmark workload was run for this source review."
+    }
+  }
+}

@@ -1,0 +1,430 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 240,
+    "slug": "flair",
+    "name": "Flair",
+    "repository": "https://github.com/tpsdev-ai/flair",
+    "listed_repository": "https://github.com/tpsdev-ai/flair",
+    "branch": "main",
+    "revision": "5a9dd65a027adb6206c871018000393c9425065f",
+    "reviewed_at": "2026-11-25T20:30:49Z",
+    "review_timezone": "UTC (2026-11-25 12:30:49 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Flair is a self-hosted agent identity and memory service built as a native Harper application. It stores agent memories in Harper/RocksDB, creates embeddings in process, and combines vector and lexical retrieval. This is a source-based review; no system behavior or performance was measured.",
+    "atlas_locator": {
+      "ordinal": 240,
+      "name": "Flair",
+      "slug": "flair",
+      "listed_repository": "https://github.com/tpsdev-ai/flair",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/flair.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/tpsdev-ai/flair/blob/5a9dd65a027adb6206c871018000393c9425065f/README.md",
+      "checked_urls": [
+        "https://github.com/tpsdev-ai/flair/blob/5a9dd65a027adb6206c871018000393c9425065f/README.md",
+        "https://github.com/tpsdev-ai/flair/blob/5a9dd65a027adb6206c871018000393c9425065f/SECURITY.md",
+        "https://github.com/tpsdev-ai/flair/blob/5a9dd65a027adb6206c871018000393c9425065f/CONTRIBUTING.md"
+      ],
+      "note": "No contact email was found in the checked official README, SECURITY.md, or CONTRIBUTING.md. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/tpsdev-ai/flair/blob/5a9dd65a027adb6206c871018000393c9425065f/README.md",
+      "https://github.com/tpsdev-ai/flair/blob/5a9dd65a027adb6206c871018000393c9425065f/SECURITY.md",
+      "https://github.com/tpsdev-ai/flair/blob/5a9dd65a027adb6206c871018000393c9425065f/CONTRIBUTING.md"
+    ],
+    "contact_email_note": "No contact email was published in the checked official repository documentation. No commit/profile metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[239], ordinal 240; system identity, listed repository locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/flair.md",
+        "symbol": "Pinned attribution retained only for curated identity and listed locator context; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/flair.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository metadata",
+        "path": "",
+        "symbol": "GitHub repository API confirms canonical tpsdev-ai/flair and default branch main",
+        "url": "https://api.github.com/repos/tpsdev-ai/flair"
+      },
+      {
+        "id": "head",
+        "label": "Official current main commit",
+        "path": "",
+        "symbol": "Official GitHub commits API and git ls-remote agree that main points to 5a9dd65a027adb6206c871018000393c9425065f; commit metadata timestamp 2026-11-25T17:54:18Z",
+        "url": "https://api.github.com/repos/tpsdev-ai/flair/commits/main"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product scope, Harper architecture, local embeddings, retrieval, durability, integrations, lifecycle, and reported capabilities",
+        "url": "https://github.com/tpsdev-ai/flair/blob/5a9dd65a027adb6206c871018000393c9425065f/README.md"
+      },
+      {
+        "id": "schema",
+        "label": "Pinned Memory and relationship schema",
+        "path": "schemas/memory.graphql",
+        "symbol": "Memory row fields, HNSW embedding index, durability, temporal validity, supersession, provenance, hit and usage counters",
+        "url": "https://github.com/tpsdev-ai/flair/blob/5a9dd65a027adb6206c871018000393c9425065f/schemas/memory.graphql"
+      },
+      {
+        "id": "memory",
+        "label": "Pinned Memory resource",
+        "path": "resources/Memory.ts",
+        "symbol": "Memory reads, scoped collection search, authenticated create/update/delete, embedding and server-stamped fields, write locking, hit overlays",
+        "url": "https://github.com/tpsdev-ai/flair/blob/5a9dd65a027adb6206c871018000393c9425065f/resources/Memory.ts"
+      },
+      {
+        "id": "retrieval",
+        "label": "Pinned semantic retrieval endpoint",
+        "path": "resources/SemanticSearch.ts",
+        "symbol": "Query handling, archive/scope filters, candidate fetch depth, retrieval mode, abstention/trust options, result projection and diagnostics",
+        "url": "https://github.com/tpsdev-ai/flair/blob/5a9dd65a027adb6206c871018000393c9425065f/resources/SemanticSearch.ts"
+      },
+      {
+        "id": "scope",
+        "label": "Pinned centralized read-scope rule",
+        "path": "resources/memory-read-scope.ts",
+        "symbol": "Shared per-instance scope: own memories at any visibility plus other agents' non-private memories",
+        "url": "https://github.com/tpsdev-ai/flair/blob/5a9dd65a027adb6206c871018000393c9425065f/resources/memory-read-scope.ts"
+      },
+      {
+        "id": "access",
+        "label": "Pinned access-control documentation",
+        "path": "docs/access-control.md",
+        "symbol": "Authentication, read/write policy, visibility defaults, access-control and federation boundary",
+        "url": "https://github.com/tpsdev-ai/flair/blob/5a9dd65a027adb6206c871018000393c9425065f/docs/access-control.md"
+      },
+      {
+        "id": "api",
+        "label": "Pinned API reference",
+        "path": "docs/api-reference.md",
+        "symbol": "Memory API operations, MCP mapping, delete/archive/purge distinction, schema and lifecycle semantics",
+        "url": "https://github.com/tpsdev-ai/flair/blob/5a9dd65a027adb6206c871018000393c9425065f/docs/api-reference.md"
+      },
+      {
+        "id": "archive",
+        "label": "Pinned archive resource",
+        "path": "resources/MemoryArchive.ts",
+        "symbol": "Basement/restore behavior and validation of archive writes",
+        "url": "https://github.com/tpsdev-ai/flair/blob/5a9dd65a027adb6206c871018000393c9425065f/resources/MemoryArchive.ts"
+      },
+      {
+        "id": "purge",
+        "label": "Pinned operator purge resource",
+        "path": "resources/MemoryPurge.ts",
+        "symbol": "Operator-only physical removal and confirmation/deletion-history behavior",
+        "url": "https://github.com/tpsdev-ai/flair/blob/5a9dd65a027adb6206c871018000393c9425065f/resources/MemoryPurge.ts"
+      },
+      {
+        "id": "bm25",
+        "label": "Pinned BM25 retrieval implementation",
+        "path": "resources/bm25.ts",
+        "symbol": "Lexical retrieval mode selection and BM25 candidate-union RRF hybrid",
+        "url": "https://github.com/tpsdev-ai/flair/blob/5a9dd65a027adb6206c871018000393c9425065f/resources/bm25.ts"
+      },
+      {
+        "id": "scoring",
+        "label": "Pinned retrieval scoring implementation",
+        "path": "resources/scoring.ts",
+        "symbol": "Temporal and usage/retrieval scoring functions and bounded relevance boosts",
+        "url": "https://github.com/tpsdev-ai/flair/blob/5a9dd65a027adb6206c871018000393c9425065f/resources/scoring.ts"
+      },
+      {
+        "id": "hits",
+        "label": "Pinned retrieval-hit tracking",
+        "path": "resources/hit-tracking.ts",
+        "symbol": "Separate MemoryHitStat counters, buffered/coalesced hit writes, metrics and best-effort behavior",
+        "url": "https://github.com/tpsdev-ai/flair/blob/5a9dd65a027adb6206c871018000393c9425065f/resources/hit-tracking.ts"
+      },
+      {
+        "id": "security",
+        "label": "Pinned official security documentation",
+        "path": "SECURITY.md",
+        "symbol": "Official documentation contact check; no project contact email published",
+        "url": "https://github.com/tpsdev-ai/flair/blob/5a9dd65a027adb6206c871018000393c9425065f/SECURITY.md"
+      },
+      {
+        "id": "contributing",
+        "label": "Pinned official contributing documentation",
+        "path": "CONTRIBUTING.md",
+        "symbol": "Official documentation contact check; no project contact email published",
+        "url": "https://github.com/tpsdev-ai/flair/blob/5a9dd65a027adb6206c871018000393c9425065f/CONTRIBUTING.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Project benchmark metrics and definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Project evaluation protocol fixture, not a Flair result",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project run status, not a Flair result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The current README presents Flair as an open-source, self-hosted identity and memory substrate for agents, with a CLI, Harper server, MCP integrations, client libraries, and framework bridges. This review covers its memory service and adjacent scope controls; it does not establish a complete maintainer roster.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      },
+      {
+        "text": "The repository describes Flair as a native Harper application. Harper provides HTTP handling and persistence in one process, backed by RocksDB; the project says it does not require a separate vector database or embedding API.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The Memory table stores an owner agent ID, text, visibility, durability, timestamps, optional temporal validity and supersession fields, archive state, provenance, and usage/search counters. The schema declares an HNSW index on its embedding column; relationships are represented separately as temporal subject-predicate-object records.",
+        "sources": [
+          "schema",
+          "api"
+        ]
+      },
+      {
+        "text": "For local semantic retrieval, the README documents in-process nomic-embed-text-v1.5 embeddings with 768 dimensions on CPU or supported GPU. Harper persists the vectors alongside records; the service also uses a lexical BM25 index and fuses lexical and vector candidates with reciprocal rank fusion (RRF).",
+        "sources": [
+          "readme",
+          "bm25"
+        ]
+      },
+      {
+        "text": "The semantic endpoint filters candidates by read scope, archive state, and optional tag, subject, time, and score constraints. It over-fetches candidates before returning the requested limit, and offers optional explain-plan and per-leg candidate diagnostics.",
+        "sources": [
+          "retrieval",
+          "scope"
+        ]
+      },
+      {
+        "text": "MCP exposes memory_store, memory_search, memory_update, memory_get, and memory_delete among other tools. The README describes local stdio clients and a separate native OAuth-backed /mcp endpoint, which is off by default.",
+        "sources": [
+          "readme",
+          "api"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "**Write.** Authenticated agent writes are attributed to the caller and restricted to its own rows. Memory writes are auto-embedded when the local embedding path is available; server-controlled fields include provenance timestamps and row-incarnation metadata. Durability defaults to standard; omitted visibility defaults to private for standard or ephemeral memories and shared for permanent or persistent memories. The CLI and MCP/API surfaces expose memory_store.",
+        "sources": [
+          "memory",
+          "schema",
+          "api",
+          "access"
+        ]
+      },
+      {
+        "text": "**Update and correction.** Memory update uses a read-modify-write flow that can update a record in place or create a successor using `supersedes`; the successor chain and validFrom/validTo fields represent revisions and temporal validity. Maintenance can archive expired standard memories and reap expired ephemeral ones; these lifecycle labels do not imply backup or replica acknowledgements.",
+        "sources": [
+          "api",
+          "schema",
+          "readme",
+          "archive"
+        ]
+      },
+      {
+        "text": "**Delete and archive.** Owner or admin `DELETE /Memory/<id>` is the user-facing delete operation; permanent-memory deletion may append deletion history. Basement/archive sets an archive flag and can be reversed, retaining the row. Physical purge is a separate operator/internal operation with post-commit confirmation; agent keys, including admin-agent keys, do not authorize it.",
+        "sources": [
+          "api",
+          "archive",
+          "purge"
+        ]
+      },
+      {
+        "text": "**Retrieval.** The default retrieval mode is hybrid BM25 plus vector candidates fused by RRF, with vector-only and BM25-only modes also represented in source. Search supports filters and optional trust evidence or abstention; these options are opt-in. The displayed semantic similarity is a ranking signal, not a calibrated probability of answering correctly.",
+        "sources": [
+          "bm25",
+          "retrieval",
+          "scoring",
+          "readme"
+        ]
+      },
+      {
+        "text": "**Scope isolation.** A verified non-admin reader can read all of its own memories and other agents' non-private memories on the same instance. `private` is the owner-only visibility; missing visibility is treated as non-private for legacy rows. Writes are isolated to the authenticated owner. Admin and trusted in-process reads have broader access, while federation applies an inter-instance boundary. This is an open shared knowledge model within one instance, not strict per-agent read isolation.",
+        "sources": [
+          "scope",
+          "access",
+          "memory"
+        ]
+      },
+      {
+        "text": "**Provenance and evidence.** Local writes stamp a server-derived verified agent and receipt time in provenance, while caller-supplied model/client or claimed creation-time fields remain claims. Search can expose provenance and optional trust context; trust metadata informs the reader and is not an authorization decision. The schema also supports source pointers and usage signals. These records aid traceability but do not establish that a memory is true or that an answer is entailed by it.",
+        "sources": [
+          "schema",
+          "memory",
+          "retrieval",
+          "api"
+        ]
+      },
+      {
+        "text": "**Efficiency and observability.** The code uses HNSW vector retrieval, a bounded BM25 candidate window and RRF fusion, scope-aware candidate filtering, selected-field projections, and batched source-pointer joins. Search-hit counts are written to a separate MemoryHitStat table rather than rewriting memory rows for every hit; a distinct usageCount records explicit use feedback. Explain mode and optional retrieval-leg output expose query/candidate diagnostics. These are design observations, not measured latency, throughput, or storage results.",
+        "sources": [
+          "schema",
+          "bm25",
+          "retrieval",
+          "hits",
+          "scoring"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Hybrid retrieval and an opt-in abstention path are present in source; no answers were scored.",
+        "sources": [
+          "bm25",
+          "retrieval",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "In-place and successor updates plus temporal validity are represented; no correction sequence or stale-value probe was run.",
+        "sources": [
+          "memory",
+          "schema",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Owner delete, archival, and operator purge are documented; no post-delete recall or index cleanup workload was run.",
+        "sources": [
+          "api",
+          "archive",
+          "purge",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "The source defines open-within-instance reads with a private-owner exception; no cross-agent or cross-instance isolation workload was measured.",
+        "sources": [
+          "scope",
+          "access",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Provenance and optional trust/source information are exposed; no generated answer claims were adjudicated against cited memories.",
+        "sources": [
+          "schema",
+          "retrieval",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The source describes vector and lexical retrieval paths but this review collected no timings.",
+        "sources": [
+          "readme",
+          "bm25",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No workload token counts, charges, or corpus-attributable storage measurements were collected.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded review inspected the current README, API and access-control docs, Memory schema, centralized scope, memory CRUD/archive/purge, retrieval, ranking, and hit-tracking source at the verified main SHA. Flair, its tests, and benchmarks were not run.",
+        "sources": [
+          "readme",
+          "api",
+          "access",
+          "schema",
+          "memory",
+          "scope",
+          "retrieval",
+          "archive",
+          "purge",
+          "bm25",
+          "scoring",
+          "hits"
+        ]
+      },
+      {
+        "text": "The docs state that the system is self-hosted and that memory data is not encrypted with the agent signing key. Deployment security, backups, restore behavior, key operations, and production configuration were not exercised in this review.",
+        "sources": [
+          "readme",
+          "access"
+        ]
+      },
+      {
+        "text": "The open-within-instance read policy permits any verified agent to read another agent's non-private memories. Whether this is suitable depends on instance trust and visibility choices; federation and private visibility do not turn all same-instance reads into tenant isolation.",
+        "sources": [
+          "scope",
+          "access"
+        ]
+      },
+      {
+        "text": "Source structure and project-published retrieval examples do not establish recall quality, abstention calibration, correctness of provenance, deletion leakage, scope safety under a workload, concurrency outcomes, latency, cost, or storage efficiency. These remain unknown here.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Flair runtime, tests, or benchmarks were run. Source observations and upstream-published figures are not results from this project's benchmark."
+    }
+  }
+}

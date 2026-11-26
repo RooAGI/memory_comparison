@@ -1,0 +1,413 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "dsh-superagent",
+    "name": "dsh-superagent",
+    "ordinal": 203,
+    "repository": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+    "listed_repository": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+    "branch": "main",
+    "revision": "8c32a9dc5d72c033816c6a8110b37f40cf94fba4",
+    "reviewed_at": "2026-11-25T11:48:06Z",
+    "review_timezone": "UTC (2026-11-25 03:48:06 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "dsh-superagent is a repository-scoped proactive coding agent bundle for DeepSeek Harness, with optional Feishu integration. It persists event, thread, decision, ticket, assignment, version and effect-queue state in SQLite and separates a main orchestration Session from ticket-specific worker Sessions. The upstream README identifies it as a research prototype, not an official DeepSeek product or production-ready system. This is a source review, not a runtime or benchmark assessment.",
+    "atlas_locator": {
+      "ordinal": 203,
+      "name": "dsh-superagent",
+      "slug": "dsh-superagent",
+      "listed_repository": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dsh-superagent.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/8c32a9dc5d72c033816c6a8110b37f40cf94fba4/README.md",
+      "checked_urls": [
+        "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/8c32a9dc5d72c033816c6a8110b37f40cf94fba4/README.md"
+      ],
+      "note": "Checked the official pinned README for a published contact email; none was found."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/8c32a9dc5d72c033816c6a8110b37f40cf94fba4/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the official pinned README. No commit/profile metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Catalog ordinal and listed locator",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[202], ordinal 203; curated identity and explicit listed repository",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/dsh-superagent.md",
+        "symbol": "Pinned report used only to attribute catalog identity and locator; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dsh-superagent.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Public repository; GitHub page identifies main as default branch",
+        "url": "https://github.com/deepseek-ai/dsh-superagent-prototype"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Full current main head 8c32a9dc5d72c033816c6a8110b37f40cf94fba4; feed updated 2026-10-31T12:06:31Z",
+        "url": "https://github.com/deepseek-ai/dsh-superagent-prototype/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Official reviewed head",
+        "path": "commit/8c32a9dc5d72c033816c6a8110b37f40cf94fba4",
+        "symbol": "Official full-SHA commit page; current main head 8c32a9dc5d72c033816c6a8110b37f40cf94fba4",
+        "url": "https://github.com/deepseek-ai/dsh-superagent-prototype/commit/8c32a9dc5d72c033816c6a8110b37f40cf94fba4"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "System scope, research-prototype qualification, integrations and limitations; contact check",
+        "url": "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/8c32a9dc5d72c033816c6a8110b37f40cf94fba4/README.md"
+      },
+      {
+        "id": "domain",
+        "label": "Domain model documentation",
+        "path": "docs/001-domain.md",
+        "symbol": "Trigger, Thread, Decision, Ticket, Mandate and Assignment concepts",
+        "url": "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/8c32a9dc5d72c033816c6a8110b37f40cf94fba4/docs/001-domain.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Architecture documentation",
+        "path": "docs/007-architecture.md",
+        "symbol": "Engine, Store, Sources, Sessions, DshExecutor, effects and persistence overview",
+        "url": "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/8c32a9dc5d72c033816c6a8110b37f40cf94fba4/docs/007-architecture.md"
+      },
+      {
+        "id": "model",
+        "label": "Domain record types",
+        "path": "src/core/model.ts",
+        "symbol": "Trigger, Thread, Decision, Mandate, Ticket, Assignment and lifecycle state",
+        "url": "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/8c32a9dc5d72c033816c6a8110b37f40cf94fba4/src/core/model.ts"
+      },
+      {
+        "id": "engine",
+        "label": "Core Engine",
+        "path": "src/core/engine.ts",
+        "symbol": "Transactional intake, decision, ticket lifecycle, retries, stop and unsubscribe commands",
+        "url": "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/8c32a9dc5d72c033816c6a8110b37f40cf94fba4/src/core/engine.ts"
+      },
+      {
+        "id": "store",
+        "label": "SQLite persistence",
+        "path": "src/app/store.ts",
+        "symbol": "Tables, WAL/FULL synchronous mode, savepoint transactions, repository writes and deletions",
+        "url": "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/8c32a9dc5d72c033816c6a8110b37f40cf94fba4/src/app/store.ts"
+      },
+      {
+        "id": "runtime",
+        "label": "Session runtime",
+        "path": "src/app/runtime.ts",
+        "symbol": "Main and per-ticket worker Session and tool construction",
+        "url": "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/8c32a9dc5d72c033816c6a8110b37f40cf94fba4/src/app/runtime.ts"
+      },
+      {
+        "id": "resources",
+        "label": "Resource reader",
+        "path": "src/app/resources.ts",
+        "symbol": "Paginated named resources and worker ticket/thread/trigger read checks",
+        "url": "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/8c32a9dc5d72c033816c6a8110b37f40cf94fba4/src/app/resources.ts"
+      },
+      {
+        "id": "main_tools",
+        "label": "Main Session tools",
+        "path": "src/app/tools/main.ts",
+        "symbol": "Main resource read and ticket/settings/prompt operational commands",
+        "url": "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/8c32a9dc5d72c033816c6a8110b37f40cf94fba4/src/app/tools/main.ts"
+      },
+      {
+        "id": "worker_tools",
+        "label": "Worker Session tools",
+        "path": "src/app/tools/executor.ts",
+        "symbol": "Ticket-bound worker resource read, acknowledge, thread context and report tools",
+        "url": "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/8c32a9dc5d72c033816c6a8110b37f40cf94fba4/src/app/tools/executor.ts"
+      },
+      {
+        "id": "settings",
+        "label": "Settings versioning",
+        "path": "src/app/settings.ts",
+        "symbol": "Settings save validation and revisioned snapshots",
+        "url": "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/8c32a9dc5d72c033816c6a8110b37f40cf94fba4/src/app/settings.ts"
+      },
+      {
+        "id": "versions",
+        "label": "Versioned snapshots",
+        "path": "src/app/versions.ts",
+        "symbol": "Monotonic revisions, stored snapshots and current pointer",
+        "url": "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/8c32a9dc5d72c033816c6a8110b37f40cf94fba4/src/app/versions.ts"
+      },
+      {
+        "id": "effects",
+        "label": "Durable effect queue",
+        "path": "src/app/effects.ts",
+        "symbol": "Post-commit dispatch, coalescing, concurrency, retries and backoff",
+        "url": "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/8c32a9dc5d72c033816c6a8110b37f40cf94fba4/src/app/effects.ts"
+      },
+      {
+        "id": "kv",
+        "label": "Typed key-value records",
+        "path": "src/kv.ts",
+        "symbol": "Owner-typed persistent key families",
+        "url": "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/8c32a9dc5d72c033816c6a8110b37f40cf94fba4/src/kv.ts"
+      },
+      {
+        "id": "health",
+        "label": "Health board",
+        "path": "src/infra/health.ts",
+        "symbol": "Single-writer component health entries",
+        "url": "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/8c32a9dc5d72c033816c6a8110b37f40cf94fba4/src/infra/health.ts"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Required quality and efficiency metrics; definitions are not measurements",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned workload specification; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Project benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Existing not-run execution status; no result was produced by this review",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes dsh-superagent as a GitHub-repository-scoped proactive coding agent packaged for DeepSeek Harness, with optional Feishu support. It explicitly calls the public repository research code, not an official DeepSeek product or production-ready software, and notes that it differs from an internal implementation and the research article.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The official repository page identifies main as the default branch. The official main commit feed reports full head 8c32a9dc5d72c033816c6a8110b37f40cf94fba4 at 2026-10-31T12:06:31Z; read-only git ls-remote and a shallow checkout independently resolved main to the same SHA.",
+        "sources": [
+          "repo",
+          "feed",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The core Engine coordinates event intake, evaluation, ticket and assignment lifecycle, and replies. Source adapters translate external events into Triggers; the main Session evaluates and routes; DshExecutor launches one worker Session and directory per Ticket.",
+        "sources": [
+          "domain",
+          "architecture",
+          "runtime"
+        ]
+      },
+      {
+        "text": "Trigger, Thread, Decision, Ticket, Mandate, Assignment and Input are the main persistent domain objects. A Ticket records its authorization Mandate, triggering origin, channels, thread bindings, inputs, assignments, execution metadata and outcome; a Decision records kind, reason, policy version, strength and optional audit.",
+        "sources": [
+          "model",
+          "engine"
+        ]
+      },
+      {
+        "text": "The Store uses one SQLite database with tables for triggers, dispositions, threads, tickets, decisions, outbox receipts, trigger/thread indexing and durable effects, plus typed key-value state. JSON values hold records; generated active/open columns are indexed. The connection uses WAL and synchronous=FULL, and domain commands use savepoint transactions.",
+        "sources": [
+          "store",
+          "kv",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Settings and prompts are stored as numbered snapshots. A durable effects table queues external work inside a transaction and dispatches after commit with concurrency limits, retry/backoff and component health reporting.",
+        "sources": [
+          "settings",
+          "versions",
+          "effects",
+          "health"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Source events enter the Engine as Triggers and are associated with Threads and dispositions. Evaluation and routing may create a Ticket and Assignment; worker reports, incoming messages and policy changes update ticket inputs and assignment state within repository transactions.",
+        "sources": [
+          "engine",
+          "model",
+          "store",
+          "effects"
+        ]
+      },
+      {
+        "text": "Ticket updates represent work progress and outcomes, not factual-memory correction. The Engine exposes stop and retry operations and thread unsubscription; its ticket model distinguishes completed, merged, closed, dropped and stopped outcomes. Prompt or settings edits instead create numbered configuration snapshots.",
+        "sources": [
+          "engine",
+          "model",
+          "main_tools",
+          "versions",
+          "settings"
+        ]
+      },
+      {
+        "text": "The inspected Engine and resource surfaces have no hard-delete command for Triggers, Decisions or Tickets. Stop ends a Ticket and withdraws its Mandate; it does not establish erasure of stored history. The Store does delete selected operational rows such as effect and key-value entries; complete retention or erasure behavior for all records, transcripts and backups was not established.",
+        "sources": [
+          "engine",
+          "resources",
+          "store"
+        ]
+      },
+      {
+        "text": "orchestrator_read retrieves named, paginated resources such as tickets, triggers, threads, decisions, assignments, reports, inputs and transcripts. The inspected paths provide addressed operational reads, not semantic or general text search over stored work records.",
+        "sources": [
+          "resources",
+          "main_tools",
+          "worker_tools"
+        ]
+      },
+      {
+        "text": "Worker reads are constructed with a bound Ticket ID. The resource reader rejects another ticket's ticket resource, checks trigger reachability through ticket origin/input/subscription or followed threads, and restricts thread reads to subscribed or followed threads; a worker's shared-thread view omits other tickets and decision history.",
+        "sources": [
+          "runtime",
+          "resources",
+          "worker_tools",
+          "model"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "Named ticket, trigger and thread resources were inspected; no answerability cases were scored.",
+        "sources": [
+          "resources",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Ticket lifecycle and versioned settings/prompt updates were inspected; no correction probes were run.",
+        "sources": [
+          "engine",
+          "versions",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Ticket stop and thread unsubscribe paths were inspected; no post-delete or retention probes were run.",
+        "sources": [
+          "engine",
+          "store",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Ticket-bound worker resource checks were inspected; no paired permitted/forbidden cross-scope workload was run.",
+        "sources": [
+          "resources",
+          "worker_tools",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Trigger and decision lineage fields were inspected; no output claims were adjudicated for evidence support.",
+        "sources": [
+          "model",
+          "engine",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No latency samples or timed write/read probes were collected.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No model usage or provider charges were measured.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "SQLite tables, JSON records and indexes were inspected; no corpus-attributed bytes or per-item storage size was measured.",
+        "sources": [
+          "store",
+          "architecture",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded review inspected the official README, domain/architecture documentation, core Engine and records, SQLite persistence, worker resource filtering, main/worker tools, settings and prompt versioning, durable effects and health reporting. It did not inspect every Source adapter, policy and prompt rule, deployment configuration, or external DeepSeek Harness behavior. The README warns that this is research code and not production-ready; source inspection cannot establish deployed configuration, runtime correctness, isolation, deletion completeness, retrieval quality or performance.",
+        "sources": [
+          "readme",
+          "domain",
+          "architecture",
+          "engine",
+          "store",
+          "resources",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No dsh-superagent runtime, tests or benchmark workload was executed. Upstream documentation and code observations are not measured results.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

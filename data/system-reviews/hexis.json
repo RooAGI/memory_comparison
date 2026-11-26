@@ -1,0 +1,339 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 294,
+    "slug": "hexis",
+    "name": "Hexis",
+    "repository": "https://github.com/QuixiAI/Hexis",
+    "listed_repository": "https://github.com/quixiai/hexis",
+    "branch": "main",
+    "revision": "209804c84ed1ff449f37b9508c91b97384a80e13",
+    "reviewed_at": "2026-11-25T22:57:42Z",
+    "review_timezone": "UTC (checked 2026-11-25 14:57:42 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Hexis is a PostgreSQL centered cognitive architecture for a persistent agent. Its database stores memory, graph, belief/evidence, identity, and runtime state; PostgreSQL extensions provide vector and graph capabilities, while Python services expose database functions to chat, workers, CLI, and MCP paths. This review describes inspected source, not measured runtime quality.",
+    "atlas_locator": {
+      "ordinal": 294,
+      "name": "Hexis",
+      "slug": "hexis",
+      "listed_repository": "https://github.com/quixiai/hexis",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hexis.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/QuixiAI/Hexis/blob/209804c84ed1ff449f37b9508c91b97384a80e13/README.md",
+      "checked_urls": [
+        "https://github.com/QuixiAI/Hexis/blob/209804c84ed1ff449f37b9508c91b97384a80e13/README.md"
+      ],
+      "note": "Checked the official pinned README for a published contact email; none was listed. No commit/profile metadata or third-party directories were used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/QuixiAI/Hexis/blob/209804c84ed1ff449f37b9508c91b97384a80e13/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/QuixiAI/Hexis/blob/209804c84ed1ff449f37b9508c91b97384a80e13/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the official pinned README checked for this review; no commit/profile metadata or third-party directories were used.",
+    "sources": [
+      {
+        "id": "roster",
+        "label": "Curated catalog identity and listed locator",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[293], ordinal 294; name, slug, explicit listed locator and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/hexis.md",
+        "symbol": "Curated identity/locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hexis.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository page",
+        "path": "repository",
+        "symbol": "QuixiAI/Hexis; default branch main",
+        "url": "https://github.com/QuixiAI/Hexis"
+      },
+      {
+        "id": "head",
+        "label": "Official main commit feed",
+        "path": "main.atom",
+        "symbol": "Full current main head 209804c84ed1ff449f37b9508c91b97384a80e13; feed updated 2026-11-23T23:45:53Z",
+        "url": "https://github.com/QuixiAI/Hexis/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "README at reviewed head",
+        "path": "README.md",
+        "symbol": "Project purpose, PostgreSQL architecture, memory types, operations, deployment pattern, and checked for published contact",
+        "url": "https://github.com/QuixiAI/Hexis/blob/209804c84ed1ff449f37b9508c91b97384a80e13/README.md"
+      },
+      {
+        "id": "tables",
+        "label": "Base schema and graph/index setup",
+        "path": "db/00_tables.sql",
+        "symbol": "PostgreSQL extensions, graph labels/edges, indexes, ingestion aggregates",
+        "url": "https://github.com/QuixiAI/Hexis/blob/209804c84ed1ff449f37b9508c91b97384a80e13/db/00_tables.sql"
+      },
+      {
+        "id": "core",
+        "label": "Core recall wrapper",
+        "path": "db/04_functions_core.sql",
+        "symbol": "fast_recall delegates to recmem_recall_context; configured recency and access updates",
+        "url": "https://github.com/QuixiAI/Hexis/blob/209804c84ed1ff449f37b9508c91b97384a80e13/db/04_functions_core.sql"
+      },
+      {
+        "id": "provenance",
+        "label": "Source normalization and filtered recall",
+        "path": "db/05_functions_provenance_trust.sql",
+        "symbol": "Source references, chunk/hash/sensitivity fields, active/valid filters and source attribution",
+        "url": "https://github.com/QuixiAI/Hexis/blob/209804c84ed1ff449f37b9508c91b97384a80e13/db/05_functions_provenance_trust.sql"
+      },
+      {
+        "id": "supersessions",
+        "label": "Temporal memory supersession",
+        "path": "db/46c_functions_memory_supersessions.sql",
+        "symbol": "Validity normalization, supersession events, replacement lineage and point-in-time history",
+        "url": "https://github.com/QuixiAI/Hexis/blob/209804c84ed1ff449f37b9508c91b97384a80e13/db/46c_functions_memory_supersessions.sql"
+      },
+      {
+        "id": "belief",
+        "label": "Belief revision and evidence audit",
+        "path": "db/59_belief_revision.sql",
+        "symbol": "Independent evidence, confidence policy bounds, audit records and evidence target discovery",
+        "url": "https://github.com/QuixiAI/Hexis/blob/209804c84ed1ff449f37b9508c91b97384a80e13/db/59_belief_revision.sql"
+      },
+      {
+        "id": "retention",
+        "label": "Current memory retention implementation",
+        "path": "db/47_functions_retention.sql",
+        "symbol": "Consolidation, archive, opt-in irreversible pruning, retention status and dry run",
+        "url": "https://github.com/QuixiAI/Hexis/blob/209804c84ed1ff449f37b9508c91b97384a80e13/db/47_functions_retention.sql"
+      },
+      {
+        "id": "retention-design",
+        "label": "Retention design document",
+        "path": "docs/memory_retention_design.md",
+        "symbol": "Official design text marked proposed v5; used only to qualify design versus shipped behavior",
+        "url": "https://github.com/QuixiAI/Hexis/blob/209804c84ed1ff449f37b9508c91b97384a80e13/docs/memory_retention_design.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status record",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository identifies QuixiAI. Its README describes Hexis as an open source, locally runnable agent architecture, with a Python client/CLI, PostgreSQL brain, stateless workers, and optional dashboard, messaging, and MCP interfaces.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README calls PostgreSQL the system of record and lists pgvector, Apache AGE, btree_gist, and pg_trgm in the technical stack. The base schema initializes graph labels and typed relationships alongside relational tables; documented memory types include episodic, semantic, procedural, strategic, and working.",
+        "sources": [
+          "readme",
+          "tables"
+        ]
+      },
+      {
+        "text": "A unified RecMem context path handles retrieval over memory and graph context. Memory rows have lifecycle and temporal state; source attribution and metadata hold evidence references, trust, sensitivity, and related state.",
+        "sources": [
+          "core",
+          "provenance",
+          "supersessions"
+        ]
+      },
+      {
+        "text": "The official retention design document is marked proposed v5, so it is not treated as the shipped contract. Retention behavior below is grounded in current SQL.",
+        "sources": [
+          "retention-design",
+          "retention"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write/evidence: documented memory operations support adding claims and supporting or contradicting evidence. Source normalization preserves kind/reference, author, observation time, trust, content hash, document/chunk identifiers, and sensitivity. Independent evidence can revise semantic-memory confidence within configured bounds and records prior/posterior values, evidence, policy, reason, and digest in an audit row.",
+        "sources": [
+          "readme",
+          "provenance",
+          "belief"
+        ]
+      },
+      {
+        "text": "Update/correction: explicit supersession records carry reason, actor, effective time, replacement and status. An active supersession closes the prior memory's valid-time window without deleting its row, permitting point-in-time recall. Confidence revision is distinct from supersession and does not establish retrieval correctness.",
+        "sources": [
+          "supersessions",
+          "belief"
+        ]
+      },
+      {
+        "text": "Delete/forget: current retention SQL consolidates eligible episodic memories into a gist and archives originals; irreversible pruning is separately opt-in and off by default. Retention status and rollback-based dry-run functions are present. The README's hexis uninstall --purge is a whole-install purge, not a per-memory delete. This review cannot establish erasure from backups, external provider logs, or every deployment copy.",
+        "sources": [
+          "retention",
+          "readme"
+        ]
+      },
+      {
+        "text": "Retrieval: fast_recall delegates to recmem_recall_context, which the source describes as the shared ranker. Inputs include association, episode binding, recency, strength, mood congruence, trust, activation and sensitivity; the filtered wrapper returns active, currently valid rows and applies type/importance filters. The base schema defines graph and property indexes; no quality or speed is measured.",
+        "sources": [
+          "core",
+          "provenance",
+          "tables"
+        ]
+      },
+      {
+        "text": "Evidence and observability: source records preserve passage handles and hashes, belief revisions are audited, and supersessions retain actor/reason lineage. These mechanisms establish recorded provenance, not semantic entailment of generated answers.",
+        "sources": [
+          "provenance",
+          "belief",
+          "supersessions"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "Unified scored retrieval and active/valid filters are present, but no answers were scored.",
+        "sources": [
+          "core",
+          "provenance",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Evidence revision and temporal supersession are implemented; no correction probes were run.",
+        "sources": [
+          "belief",
+          "supersessions",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Retention/archive/pruning controls exist; no deletion probes or residue checks were run.",
+        "sources": [
+          "retention",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "The README documents a database-per-user deployment pattern; no isolation workload was run.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source references and belief audits exist, but generated-answer entailment and citations were not adjudicated.",
+        "sources": [
+          "provenance",
+          "belief",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No runtime timing samples were collected.",
+        "sources": [
+          "core",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No model usage, cost, or database-size measurements were collected.",
+        "sources": [
+          "readme",
+          "tables",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The README documents one database per user as the multi-tenant deployment pattern. The reviewed sources show sensitivity filtering and instance/deployment concepts, but this review did not test credential boundaries or cross-instance isolation; deployment setup remains part of the security boundary.",
+        "sources": [
+          "readme",
+          "provenance"
+        ]
+      },
+      {
+        "text": "Source references, confidence updates, and supersession history provide traceability metadata. They do not establish that evidence semantically supports an answer.",
+        "sources": [
+          "provenance",
+          "belief",
+          "supersessions"
+        ]
+      },
+      {
+        "text": "The retention design document is labeled proposed v5; it can describe intended directions but does not replace current SQL as evidence of shipped behavior. This review inspected selected files only and did not test deletion, backups, provider retention, or production configuration.",
+        "sources": [
+          "retention",
+          "retention-design"
+        ]
+      },
+      {
+        "text": "No runtime, tests, or benchmark workload was run. Answer correctness, abstention, correction robustness, deletion completeness, scope isolation, evidence support, availability, latency, token use, cost, and storage remain unknown.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Hexis runtime, tests, or benchmark workload was executed. No metric values are claimed; upstream README figures are not reproduced here.",
+      "metric_definitions": "../METRICS.md",
+      "fixture": "../fixtures/memory-benchmark-v1.json",
+      "execution_status": "../results/initial-baselines-status.json"
+    }
+  }
+}

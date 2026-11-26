@@ -1,0 +1,330 @@
+{
+  "schema_version": 1,
+  "article": {
+    "ordinal": 113,
+    "slug": "cass-memory-system",
+    "name": "CASS",
+    "repository": "https://github.com/Dicklesworthstone/cass_memory_system",
+    "listed_repository": "https://github.com/Dicklesworthstone/cass_memory_system",
+    "branch": "main",
+    "revision": "f4cefd2726e527f4a027cc4673412490daf69b84",
+    "reviewed_at": "2026-11-25T07:40:16Z",
+    "review_timezone": "UTC (2026-11-24 23:40:16 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "CASS is a local procedural-memory CLI for coding agents. It searches raw session history, reflects sessions into a confidence-tracked YAML playbook, and filters/ranks relevant rules for task context. This is a pinned source review, not a runtime or benchmark evaluation.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cass-memory-system.md"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/Dicklesworthstone/cass_memory_system/blob/f4cefd2726e527f4a027cc4673412490daf69b84/README.md",
+      "note": "No contact email is published in the official pinned README."
+    },
+    "contact_email": null,
+    "contact_checked_sources": [
+      "https://github.com/Dicklesworthstone/cass_memory_system/blob/f4cefd2726e527f4a027cc4673412490daf69b84/README.md"
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[112], ordinal 113; roster name, slug, listed locator, and source attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/cass-memory-system.md",
+        "symbol": "Catalog attribution at revision 19199a4fc249e89c0793be06f0b166b358089ba0; identity and locator context only",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cass-memory-system.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "",
+        "symbol": "Canonical public repository and default branch main",
+        "url": "https://github.com/Dicklesworthstone/cass_memory_system"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream head",
+        "path": "",
+        "symbol": "Current main head f4cefd2726e527f4a027cc4673412490daf69b84 verified by GitHub and read-only checkout",
+        "url": "https://github.com/Dicklesworthstone/cass_memory_system/commit/f4cefd2726e527f4a027cc4673412490daf69b84"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned README and contact check",
+        "path": "README.md",
+        "symbol": "Project description, reflection/retrieval workflows, scope selectors, playbook management, embedding configuration; checked for a published contact email",
+        "url": "https://github.com/Dicklesworthstone/cass_memory_system/blob/f4cefd2726e527f4a027cc4673412490daf69b84/README.md"
+      },
+      {
+        "id": "types",
+        "label": "Playbook and feedback data model",
+        "path": "src/types.ts",
+        "symbol": "PlaybookBullet and FeedbackEvent schemas, scope/state/maturity/provenance fields",
+        "url": "https://github.com/Dicklesworthstone/cass_memory_system/blob/f4cefd2726e527f4a027cc4673412490daf69b84/src/types.ts"
+      },
+      {
+        "id": "playbook",
+        "label": "Playbook storage and lifecycle",
+        "path": "src/playbook.ts",
+        "symbol": "Validated YAML load/save, derived embedding omission, blocklist, active filtering, add/deprecate, markdown export",
+        "url": "https://github.com/Dicklesworthstone/cass_memory_system/blob/f4cefd2726e527f4a027cc4673412490daf69b84/src/playbook.ts"
+      },
+      {
+        "id": "context",
+        "label": "Context retrieval and scope filters",
+        "path": "src/commands/context.ts",
+        "symbol": "Workspace and named-scope filtering, optional semantic scoring, result selection and token budget",
+        "url": "https://github.com/Dicklesworthstone/cass_memory_system/blob/f4cefd2726e527f4a027cc4673412490daf69b84/src/commands/context.ts"
+      },
+      {
+        "id": "reflect",
+        "label": "Session reflection",
+        "path": "src/reflect.ts",
+        "symbol": "Structured LLM deltas and authoritative session provenance normalization",
+        "url": "https://github.com/Dicklesworthstone/cass_memory_system/blob/f4cefd2726e527f4a027cc4673412490daf69b84/src/reflect.ts"
+      },
+      {
+        "id": "curate",
+        "label": "Curation and merge lifecycle",
+        "path": "src/curate.ts",
+        "symbol": "Duplicate/conflict checks, provenance updates, merges and retirement lifecycle",
+        "url": "https://github.com/Dicklesworthstone/cass_memory_system/blob/f4cefd2726e527f4a027cc4673412490daf69b84/src/curate.ts"
+      },
+      {
+        "id": "forget",
+        "label": "Forget command",
+        "path": "src/commands/forget.ts",
+        "symbol": "Separate blocked log append and rule deprecation workflow",
+        "url": "https://github.com/Dicklesworthstone/cass_memory_system/blob/f4cefd2726e527f4a027cc4673412490daf69b84/src/commands/forget.ts"
+      },
+      {
+        "id": "scoring",
+        "label": "Confidence and feedback scoring",
+        "path": "src/scoring.ts",
+        "symbol": "Decayed feedback score and maturity behavior used by retrieval",
+        "url": "https://github.com/Dicklesworthstone/cass_memory_system/blob/f4cefd2726e527f4a027cc4673412490daf69b84/src/scoring.ts"
+      },
+      {
+        "id": "tracking",
+        "label": "Usage tracking",
+        "path": "src/tracking.ts",
+        "symbol": "Usage event types including command duration/outcome, feedback, reflection, playbook changes, and errors",
+        "url": "https://github.com/Dicklesworthstone/cass_memory_system/blob/f4cefd2726e527f4a027cc4673412490daf69b84/src/tracking.ts"
+      },
+      {
+        "id": "audit",
+        "label": "Rule/session audit",
+        "path": "src/audit.ts",
+        "symbol": "Bounded concurrent session audit and reported rule violation evidence",
+        "url": "https://github.com/Dicklesworthstone/cass_memory_system/blob/f4cefd2726e527f4a027cc4673412490daf69b84/src/audit.ts"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Definitions for retrieval, correction, deletion, scope, evidence, latency, tokens/cost, and storage metrics",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned synthetic workload cases; not CASS measurements",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "not_run; no measured result record",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The GitHub repository is maintained under Dicklesworthstone and describes CASS as procedural memory for AI coding agents. The inspected product is a local CLI and library integrating session search, reflection, and a playbook; this review does not establish a hosted service or runtime deployment.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The design separates episodic session history searched by cass, diary entries as working memory, and procedural YAML playbooks containing rules, feedback, scopes, lifecycle state, and provenance.",
+        "sources": [
+          "readme",
+          "types",
+          "playbook"
+        ]
+      },
+      {
+        "text": "Global and repository playbooks can be merged for retrieval. Semantic vectors are derived and cached separately from the validated YAML record; retrieval supports optional local Transformers/Ollama embeddings and keyword scoring.",
+        "sources": [
+          "playbook",
+          "context",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Reflection converts a diary and optional cass history into structured proposed deltas. Curation validates duplicate/conflict/merge operations, preserves session provenance, applies lifecycle changes, then saves the playbook through bounded validation and atomic locked writes.",
+        "sources": [
+          "reflect",
+          "curate",
+          "playbook"
+        ]
+      },
+      {
+        "text": "cm forget appends the rule ID, text, reason, and time to a separate global or repository blocked.log and retires/deprecates the bullet. Active retrieval filters retired/deprecated entries; this is removal from active use, not proof of physical erasure across copies or backups.",
+        "sources": [
+          "forget",
+          "playbook"
+        ]
+      },
+      {
+        "text": "cm context applies workspace matching and explicit language/framework/task selectors before ranking active rules. Ranking combines keyword relevance and optional semantic similarity with feedback/confidence scoring, then caps results by relevance, count, and estimated token budget; optional session-history search uses cass.",
+        "sources": [
+          "context",
+          "scoring",
+          "readme"
+        ]
+      },
+      {
+        "text": "Rules retain source session paths and source-agent labels, feedback-event metadata, reasoning, and search pointers. Reflection normalizes the authoritative session path independently of model-proposed values; the repository documents cm why for provenance inspection.",
+        "sources": [
+          "types",
+          "reflect",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Source includes keyword/optional semantic ranking and relevance selection, but no answerability, retrieval accuracy, or abstention workload was run.",
+        "sources": [
+          "context",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Rule updates, merges, feedback, and maturity lifecycle exist in source; post-correction recall and stale-value behavior were not measured.",
+        "sources": [
+          "curate",
+          "playbook",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Forget retires a rule and writes a blocked-log entry, but deletion leakage and physical erasure across backups/copies were not probed.",
+        "sources": [
+          "forget",
+          "playbook",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Workspace and named selectors filter retrieved rules. No cross-scope probes or authenticated tenant isolation assessment was run.",
+        "sources": [
+          "context",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Memory records retain source-session provenance and feedback evidence; claim-level support and citations in generated answers were not adjudicated.",
+        "sources": [
+          "types",
+          "reflect",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Code includes bounded results, embeddings, and usage-event duration fields, but this review collected no timings.",
+        "sources": [
+          "context",
+          "tracking",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "A context token budget and LLM cost/usage-related source exist, but no token totals, measured charges, or corpus-attributed storage were gathered.",
+        "sources": [
+          "context",
+          "readme",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a read-only review at the verified head. No system commands, tests, or benchmark workload were run. Source inspection cannot establish deployed behavior, retrieval quality, confidence calibration, correction correctness, deletion completeness, latency, cost, or storage efficiency.",
+        "sources": [
+          "repo",
+          "head",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Workspace and named-scope filters are applicability mechanisms; the reviewed evidence does not establish an authenticated multi-tenant boundary. No cross-workspace isolation probes were run.",
+        "sources": [
+          "context",
+          "readme"
+        ]
+      },
+      {
+        "text": "The official pinned README was checked for contact information and publishes no contact email; contact_email is null and the checked source URL is recorded.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No CASS runtime, tests, benchmark workload, or system commands were executed for this review.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "The project metric definitions and fixture describe intended measurement domains and cases; they are not measured CASS outcomes.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 89,
+    "slug": "beads",
+    "name": "beads",
+    "repository": "https://github.com/gastownhall/beads",
+    "listed_repository": "https://github.com/gastownhall/beads",
+    "branch": "main",
+    "revision": "78624109904655d7a4609f27d34eb0982cd8963f",
+    "reviewed_at": "2026-11-24T23:28:48Z",
+    "review_timezone": "UTC (2026-11-24 15:28:48 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Beads is a Dolt-backed, workspace-scoped task graph for coding agents that also exposes a small persistent memory plane. Named memories are stored as string values in a reserved namespace, can be recalled or forgotten by exact key, and are appended to `bd prime` session context. This is a pinned source review, not a runtime or benchmark evaluation.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/beads.md"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/gastownhall/beads/blob/78624109904655d7a4609f27d34eb0982cd8963f/SECURITY.md",
+      "note": "The pinned security policy directs vulnerability reports through GitHub private reporting and publishes no email; the pinned README was also checked and does not publish a contact email."
+    },
+    "contact_email": null,
+    "contact_checked_sources": [
+      "https://github.com/gastownhall/beads/blob/78624109904655d7a4609f27d34eb0982cd8963f/README.md",
+      "https://github.com/gastownhall/beads/blob/78624109904655d7a4609f27d34eb0982cd8963f/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[88], position 89; name, slug, listed repository and Atlas attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas attribution only",
+        "path": "content/systems/beads.md",
+        "symbol": "Roster source URL pinned at Atlas revision 19199a4fc249e89c0793be06f0b166b358089ba0",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/beads.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "",
+        "symbol": "Canonical gastownhall/beads repository; main is the default branch",
+        "url": "https://github.com/gastownhall/beads"
+      },
+      {
+        "id": "head-feed",
+        "label": "Official main commit feed",
+        "path": "",
+        "symbol": "Full current main head 78624109904655d7a4609f27d34eb0982cd8963f; feed updated 2026-11-20T20:42:29Z",
+        "url": "https://github.com/gastownhall/beads/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream head",
+        "path": "",
+        "symbol": "Full reviewed commit SHA 78624109904655d7a4609f27d34eb0982cd8963f",
+        "url": "https://github.com/gastownhall/beads/commit/78624109904655d7a4609f27d34eb0982cd8963f"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product, persistent-memory commands, workspace initialization, Dolt storage modes, and contact check",
+        "url": "https://github.com/gastownhall/beads/blob/78624109904655d7a4609f27d34eb0982cd8963f/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Pinned official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Plaintext storage, filesystem-based access control, local-first network model, and private GitHub vulnerability reporting; contact check",
+        "url": "https://github.com/gastownhall/beads/blob/78624109904655d7a4609f27d34eb0982cd8963f/SECURITY.md"
+      },
+      {
+        "id": "memory-doc",
+        "label": "Memory plane package documentation",
+        "path": "memoryops/doc.go",
+        "symbol": "Workspace memory-plane architecture, reserved config namespace, merge class, enumeration limits, and experimental stability",
+        "url": "https://github.com/gastownhall/beads/blob/78624109904655d7a4609f27d34eb0982cd8963f/memoryops/doc.go"
+      },
+      {
+        "id": "memory-api",
+        "label": "Memory operations contract",
+        "path": "memoryops/memories.go",
+        "symbol": "Remember, Recall, Forget and List request/result semantics, validation and transactional observations",
+        "url": "https://github.com/gastownhall/beads/blob/78624109904655d7a4609f27d34eb0982cd8963f/memoryops/memories.go"
+      },
+      {
+        "id": "prime",
+        "label": "Prime command and memory injection",
+        "path": "cmd/bd/prime.go",
+        "symbol": "Workspace startup injection, disable/only modes, count/character caps, timeout and context-budget behavior",
+        "url": "https://github.com/gastownhall/beads/blob/78624109904655d7a4609f27d34eb0982cd8963f/cmd/bd/prime.go"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Recall, abstention, correction, deletion, scope, evidence and efficiency measurement definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned planned workload cases, not results",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Initial benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project-wide execution record showing no Beads run; not a Beads result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The canonical repository is gastownhall/beads. The README presents Beads as a distributed graph issue tracker for AI coding agents, powered by Dolt, and describes `bd remember` as a way to store durable project facts for later `bd prime` injection. It is a Go CLI and library with embedded or server-backed Dolt storage and an experimental HTTP backend; this review covers only its persistent memory plane, not the broader issue-tracking system.",
+        "sources": [
+          "repo",
+          "readme",
+          "memory-doc"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The memory plane is a keyed string namespace exposed through four operations: Remember, Recall, Forget, and List. The package deliberately separates this plane from workspace settings even though both share the config table. A user key is encoded under the reserved `kv.memory.` prefix by storage implementations; callers use the unprefixed key. The package docs describe a distinct merge rule that auto-resolves a config conflict only when every conflicted key has that prefix, making merge behavior part of the memory contract.",
+        "sources": [
+          "memory-doc",
+          "memory-api"
+        ]
+      },
+      {
+        "text": "The project README identifies Dolt as the database backend. It documents an embedded default mode and a server mode for concurrent writers, with workspace data in `.beads/`; memoryops describes memories as workspace-owned rather than per-user records. Dolt remotes synchronize database contents across clones. The project security policy says data is plaintext and access control relies on filesystem permissions, so the source does not establish separate agent or operating-system-user memory isolation.",
+        "sources": [
+          "readme",
+          "security",
+          "memory-doc"
+        ]
+      },
+      {
+        "text": "`bd prime` combines agent workflow context with persistent memories and supports replacing the workflow template while still appending memories. It also provides memory-only and no-memory modes. The prime implementation documents count and character caps at whole-memory boundaries, with an explicit zero meaning unlimited, and a configurable store timeout. This review inspected the command contract and memory operation interface; it did not trace every CLI/library adapter into its concrete database implementation.",
+        "sources": [
+          "prime",
+          "memory-doc",
+          "memory-api"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "`bd remember` stores content under an explicit key or derives a key when omitted. The operation contract rejects content empty after trimming and rejects content from which no usable key can be derived; explicit keys are used verbatim. Stored content is otherwise preserved verbatim. The result returns the effective key and value and reports whether a prior row existed, including when its previous value was empty.",
+        "sources": [
+          "memory-api",
+          "readme"
+        ]
+      },
+      {
+        "text": "Remember, Recall, Forget, and List operate on the memory namespace only, not neighboring settings or generic key/value rows in the shared config table. Remember always performs the write, even when the value is unchanged. Its `Replaced` result and Forget's removed value are observed in the same transaction as the write/delete, avoiding a separate read/write race. Recall is read-only; a missing key is represented by `Found: false` rather than a not-found error. Forget of an absent key succeeds with `Found: false` and deletes nothing; repeating it is safe under the described contract.",
+        "sources": [
+          "memory-api",
+          "memory-doc"
+        ]
+      },
+      {
+        "text": "`bd recall` retrieves one exact key. `bd memories` lists the namespace and can filter by case-insensitive substring in the key or value. List returns an unpaged, unordered map; front doors sort keys when printing. The package explicitly says this contract is intended for workspaces with tens of memories, not thousands. `bd prime` injects persistent memories into session context, subject to optional count and character caps; whole memories are the truncation boundary and at least one is retained under the documented cap behavior.",
+        "sources": [
+          "readme",
+          "memory-api",
+          "memory-doc",
+          "prime"
+        ]
+      },
+      {
+        "text": "Scope follows the selected Beads workspace/database. The package records memories in that workspace's reserved namespace and the README describes initialization in a project plus Git-free custom workspace paths. Dolt sync can carry workspace records between clones. The reviewed memory request types contain no tenant, principal, agent, or per-memory ACL field, and the security policy describes no built-in access control beyond filesystem permissions. Cross-workspace separation and shared-server authorization were not independently traced through all backend implementations.",
+        "sources": [
+          "memory-doc",
+          "memory-api",
+          "readme",
+          "security"
+        ]
+      },
+      {
+        "text": "A memory is only a key and string value at the public operation boundary. The inspected contract does not require source URLs, evidence excerpts, author identity, timestamps, confidence, trust state, or correction history. The README recommends using `bd remember` for durable project facts and keeping operator preferences in a harness's own memory, but no source-grounded validation or human review step is part of the inspected memory interface. Issue records have separate graph/history facilities, which are not part of these memory operations.",
+        "sources": [
+          "memory-api",
+          "readme",
+          "memory-doc"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Exact-key Recall and substring List are specified; no answerable or unanswerable probes were run.",
+        "sources": [
+          "memory-api",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Remember replaces a value under a key, but no correction sequence or stale-value response was measured.",
+        "sources": [
+          "memory-api",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Forget removes a namespace row; no post-delete probes, synced-copy checks, or backup checks were run.",
+        "sources": [
+          "memory-api",
+          "security",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "The interface is workspace-scoped and has no per-record principal field; no cross-workspace or multi-user isolation workload was run.",
+        "sources": [
+          "memory-doc",
+          "memory-api",
+          "security",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "The memory value is unstructured text without required citation/evidence fields; no claim-support adjudication was run.",
+        "sources": [
+          "memory-api",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Prime exposes a store timeout and configurable memory caps, but no latency or write-to-recall timings were collected.",
+        "sources": [
+          "prime",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "Prime caps injected memory count or characters; no token usage, provider cost, or attributable storage bytes were measured.",
+        "sources": [
+          "prime",
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded read-only review of selected official documentation and source at the reviewed SHA. It does not establish the runtime CLI behavior, database transaction implementation, cross-workspace isolation across all backends, exact default injection caps, deletion behavior across Dolt history/remotes/backups, or performance and reliability.",
+        "sources": [
+          "memory-doc",
+          "memory-api",
+          "prime",
+          "security"
+        ]
+      },
+      {
+        "text": "The memory operations package is explicitly marked experimental and outside the compatibility promise; consumers are told to pin an exact Beads version. Its unpaged map contract assumes a small number of workspace memories.",
+        "sources": [
+          "memory-doc"
+        ]
+      },
+      {
+        "text": "Project metric definitions and the versioned fixture define possible evaluations, while the initial status record is project-wide and contains no Beads measurements. No system operations, benchmark workload, or tests were run for this review.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. This review did not execute Beads, a benchmark workload, or tests.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "The project fixture and metric definitions specify evaluation protocols, not Beads results. The project-wide execution-status record is not a system-specific finding.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ]
+  }
+}

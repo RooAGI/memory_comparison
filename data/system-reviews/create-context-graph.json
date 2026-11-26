@@ -1,0 +1,371 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 170,
+    "slug": "create-context-graph",
+    "name": "Create Context Graph",
+    "repository": "https://github.com/neo4j-labs/create-context-graph",
+    "branch": "main",
+    "revision": "926e3b3e7a2d3318f94e8a2cc5196677046bbe6d",
+    "reviewed_at": "2026-11-25T10:05:17Z",
+    "review_timezone": "UTC (2026-11-25 02:05:17 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/neo4j-labs/create-context-graph/blob/926e3b3e7a2d3318f94e8a2cc5196677046bbe6d/README.md",
+      "checked_urls": [
+        "https://github.com/neo4j-labs/create-context-graph/blob/926e3b3e7a2d3318f94e8a2cc5196677046bbe6d/README.md"
+      ],
+      "note": "The official pinned README was checked; it directs users to GitHub Issues and the Neo4j Community Forum and publishes no contact email."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/neo4j-labs/create-context-graph/blob/926e3b3e7a2d3318f94e8a2cc5196677046bbe6d/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the official pinned README.",
+    "summary": "Create Context Graph is a Python CLI that scaffolds domain-specific agent applications with a graph memory layer. Generated applications can use hosted Neo4j Agent Memory Service or self-hosted Neo4j; this is a source review, not a runtime assessment.",
+    "atlas_locator": {
+      "ordinal": 170,
+      "name": "Create Context Graph",
+      "slug": "create-context-graph",
+      "listed_repository": "https://github.com/neo4j-labs/create-context-graph",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/create-context-graph.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "sources": [
+      {
+        "id": "roster",
+        "label": "Curated roster identity, listed locator, and repository attribution",
+        "path": "data/memory-systems.json",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas attribution for roster identity and locator only",
+        "path": "content/systems/create-context-graph.md",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/create-context-graph.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository; repository page shows public repository and default branch main",
+        "path": "repository root",
+        "url": "https://github.com/neo4j-labs/create-context-graph"
+      },
+      {
+        "id": "head",
+        "label": "Official GitHub commit page; commit API resolves current main head and timestamp",
+        "path": "commit",
+        "symbol": "926e3b3e7a2d3318f94e8a2cc5196677046bbe6d",
+        "url": "https://github.com/neo4j-labs/create-context-graph/commit/926e3b3e7a2d3318f94e8a2cc5196677046bbe6d",
+        "metadata_url": "https://api.github.com/repos/neo4j-labs/create-context-graph/commits/main"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README and contact check",
+        "path": "README.md",
+        "url": "https://github.com/neo4j-labs/create-context-graph/blob/926e3b3e7a2d3318f94e8a2cc5196677046bbe6d/README.md"
+      },
+      {
+        "id": "generator",
+        "label": "CLI scaffold generation pipeline",
+        "path": "src/create_context_graph/generator.py",
+        "url": "https://github.com/neo4j-labs/create-context-graph/blob/926e3b3e7a2d3318f94e8a2cc5196677046bbe6d/src/create_context_graph/generator.py"
+      },
+      {
+        "id": "ontology",
+        "label": "Ontology schema and domain model",
+        "path": "src/create_context_graph/ontology.py",
+        "url": "https://github.com/neo4j-labs/create-context-graph/blob/926e3b3e7a2d3318f94e8a2cc5196677046bbe6d/src/create_context_graph/ontology.py"
+      },
+      {
+        "id": "memory",
+        "label": "Generated app message storage and context retrieval wrapper",
+        "path": "src/create_context_graph/templates/backend/shared/memory.py.j2",
+        "url": "https://github.com/neo4j-labs/create-context-graph/blob/926e3b3e7a2d3318f94e8a2cc5196677046bbe6d/src/create_context_graph/templates/backend/shared/memory.py.j2"
+      },
+      {
+        "id": "client",
+        "label": "Generated Neo4j client and Cypher operations",
+        "path": "src/create_context_graph/templates/backend/shared/context_graph_client.py.j2",
+        "url": "https://github.com/neo4j-labs/create-context-graph/blob/926e3b3e7a2d3318f94e8a2cc5196677046bbe6d/src/create_context_graph/templates/backend/shared/context_graph_client.py.j2"
+      },
+      {
+        "id": "adapter",
+        "label": "NAMS REST backend adapters and fixture ingestion",
+        "path": "src/create_context_graph/templates/backend/shared/memory_adapter.py.j2",
+        "url": "https://github.com/neo4j-labs/create-context-graph/blob/926e3b3e7a2d3318f94e8a2cc5196677046bbe6d/src/create_context_graph/templates/backend/shared/memory_adapter.py.j2"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The curated roster identifies ordinal 170 as Create Context Graph, slug create-context-graph, with an explicit repository locator; Atlas is retained only for roster attribution.",
+        "sources": [
+          "roster",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The official GitHub repository page showed main as the default branch and current head prefix 926e3b3; the official GitHub commit API resolved main to full SHA 926e3b3e7a2d3318f94e8a2cc5196677046bbe6d, with commit time 2026-10-09T14:51:25Z.",
+        "sources": [
+          "repo",
+          "head"
+        ]
+      },
+      {
+        "text": "The official README describes an experimental scaffold generator maintained by Neo4j staff and community members; it is not a supported Neo4j product.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The pinned README was checked for email contact and lists GitHub Issues and the Neo4j Community Forum instead; no contact email is published there.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The ontology schema models domain metadata, POLE+O entity types and properties, relationships, document templates, decision-trace steps, agent tools with Cypher, and visualization configuration.",
+        "sources": [
+          "ontology"
+        ]
+      },
+      {
+        "text": "The generator renders a project scaffold from the selected ontology; the README describes a FastAPI backend, selectable agent framework, Next.js frontend, and optional MCP interface.",
+        "sources": [
+          "generator",
+          "readme"
+        ]
+      },
+      {
+        "text": "The README describes short-term message memory, long-term entity graphs, and reasoning memory made of decision traces; persistence differs between NAMS and Bolt backends.",
+        "sources": [
+          "readme",
+          "memory",
+          "adapter"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Generated app message writes resolve a session identifier and call MemoryIntegration.store_message; the wrapper catches backend errors and returns no result on unavailable/unsupported paths.",
+        "sources": [
+          "memory"
+        ]
+      },
+      {
+        "text": "NAMS fixture ingestion writes entity attributes into descriptions, serializes outbound relationship metadata in ccg-edges blocks, and records documents as both long-term entities and short-term messages. Bolt ingestion delegates to Cypher-based client operations.",
+        "sources": [
+          "adapter",
+          "client"
+        ]
+      },
+      {
+        "text": "Bolt mode exposes parameterized Cypher operations and a whole-database reset that DETACH DELETEs all nodes. The inspected message and REST adapter templates do not establish general per-record correction or deletion APIs.",
+        "sources": [
+          "client",
+          "memory",
+          "adapter"
+        ]
+      },
+      {
+        "text": "The README describes context retrieval over messages, entities, preferences, and traces, as well as domain-specific agent Cypher tools and graph browsing. No recall quality or abstention evaluation was run.",
+        "sources": [
+          "readme",
+          "memory"
+        ]
+      },
+      {
+        "text": "The README documents reduced NAMS REST functionality, including the absence of arbitrary Cypher writes and native relationship writes; app client code uses domain predicates in selected graph operations, not all operations.",
+        "sources": [
+          "readme",
+          "client",
+          "adapter"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy",
+        "status": "unmeasured",
+        "evidence": "Context and graph retrieval paths are documented, but no answerable-recall workload was run.",
+        "sources": [
+          "readme",
+          "memory",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Abstention quality",
+        "status": "unmeasured",
+        "evidence": "No abstention behavior or workload was evaluated.",
+        "sources": [
+          "readme",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "The inspected message wrapper and adapters do not define a general correction protocol; no correction workload was run.",
+        "sources": [
+          "memory",
+          "adapter",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "A Bolt whole-database reset exists, but no post-deletion retrieval or storage-remnant check was run.",
+        "sources": [
+          "client",
+          "adapter",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation leakage",
+        "status": "unmeasured",
+        "evidence": "Domain filters appear in selected graph operations; there was no cross-project or tenant isolation workload.",
+        "sources": [
+          "client",
+          "memory",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Decision traces preserve reasoning steps, but no claim-support or answer-citation evaluation was run.",
+        "sources": [
+          "readme",
+          "ontology",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No latency workload or deployment telemetry was collected.",
+        "sources": [
+          "memory",
+          "client",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Message storage and context retrieval paths were inspected, but indexing or propagation delay was not measured.",
+        "sources": [
+          "memory",
+          "adapter",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "Provider and embedding configuration are documented, but token usage and cost were not measured.",
+        "sources": [
+          "readme",
+          "memory",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The generated application can use graph backends, but no storage footprint was measured.",
+        "sources": [
+          "readme",
+          "adapter",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected selected scaffolder documentation, ontology/generation code, and shared memory/client templates, not every framework-specific agent, route, connector, or generated query.",
+        "sources": [
+          "readme",
+          "generator",
+          "ontology",
+          "memory"
+        ]
+      },
+      {
+        "text": "NAMS behavior and isolation depend on a separate hosted service not audited here; generated code alone does not establish its access-control boundary.",
+        "sources": [
+          "readme",
+          "memory",
+          "adapter"
+        ]
+      },
+      {
+        "text": "Domain predicates in selected client operations do not establish comprehensive tenant isolation, particularly when arbitrary Cypher is available in Bolt mode.",
+        "sources": [
+          "client",
+          "readme"
+        ]
+      },
+      {
+        "text": "The inspected files do not establish comprehensive per-record correction/deletion or physical erasure across backend persistence, derived artifacts, and backups.",
+        "sources": [
+          "memory",
+          "adapter",
+          "client"
+        ]
+      },
+      {
+        "text": "No runtime, tests, benchmarks, or resource measurements were performed; source observations do not establish runtime retrieval quality or reliability.",
+        "sources": [
+          "readme",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      }
+    ],
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "No Create Context Graph runtime, tests, or benchmark workload was executed for this source review."
+    }
+  }
+}

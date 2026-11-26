@@ -1,0 +1,374 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 180,
+    "slug": "daimon",
+    "name": "Daimon",
+    "repository": "https://github.com/Daily-Nerd/daimon",
+    "listed_repository": "https://github.com/Daily-Nerd/daimon",
+    "branch": "main",
+    "revision": "3e94f9441671abf1e9fa7c932b9e956dbf891fe8",
+    "reviewed_at": "2026-11-25T10:35:44Z",
+    "review_timezone": "UTC (2026-11-25 02:35:44 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Daimon is a local-first session memory system that extracts cognitive checkpoints from coding-agent transcripts and renders project-scoped briefings. Deterministic code verifies quotations, provenance and lifecycle policy; durable state is local checkpoint JSON and ledgers, with SQLite FTS5 as a rebuildable recall index. The review is pinned to the verified current main head. No Daimon runtime, tests or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 180,
+      "name": "Daimon",
+      "slug": "daimon",
+      "listed_repository": "https://github.com/Daily-Nerd/daimon",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/daimon.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/Daily-Nerd/daimon/blob/3e94f9441671abf1e9fa7c932b9e956dbf891fe8/README.md",
+      "checked_urls": [
+        "https://github.com/Daily-Nerd/daimon/blob/3e94f9441671abf1e9fa7c932b9e956dbf891fe8/README.md",
+        "https://github.com/Daily-Nerd/daimon/blob/3e94f9441671abf1e9fa7c932b9e956dbf891fe8/SECURITY.md"
+      ],
+      "note": "Checked official pinned README and SECURITY.md; neither publishes an email. The security policy directs vulnerability reports to GitHub private vulnerability reporting."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/Daily-Nerd/daimon/blob/3e94f9441671abf1e9fa7c932b9e956dbf891fe8/README.md",
+      "https://github.com/Daily-Nerd/daimon/blob/3e94f9441671abf1e9fa7c932b9e956dbf891fe8/SECURITY.md"
+    ],
+    "contact_email_note": "No email was published in the official pinned README or SECURITY.md; the latter directs reports to GitHub private vulnerability reporting. No profile/commit metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Catalog ordinal and listed locator",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[179], ordinal 180; identity, explicit repository locator, Atlas locator",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/daimon.md",
+        "symbol": "Pinned report used only for curated identity/locator attribution, not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/daimon.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official repository",
+        "path": "repository page",
+        "symbol": "Public Daily-Nerd/daimon; default branch main",
+        "url": "https://github.com/Daily-Nerd/daimon"
+      },
+      {
+        "id": "feed",
+        "label": "Official main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Full main head 3e94f9441671abf1e9fa7c932b9e956dbf891fe8; updated 2026-11-25T03:07:12Z",
+        "url": "https://github.com/Daily-Nerd/daimon/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Official reviewed head",
+        "path": "commit/3e94f9441671abf1e9fa7c932b9e956dbf891fe8",
+        "symbol": "Official full-SHA commit page for verified current main head",
+        "url": "https://github.com/Daily-Nerd/daimon/commit/3e94f9441671abf1e9fa7c932b9e956dbf891fe8"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product description, trust classes, host capabilities, recall, team memory and contact check",
+        "url": "https://github.com/Daily-Nerd/daimon/blob/3e94f9441671abf1e9fa7c932b9e956dbf891fe8/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Pinned runtime architecture",
+        "path": "docs/RUNTIME-ARCHITECTURE.md",
+        "symbol": "Current component map, write/read paths, scope, trust and persistence invariants",
+        "url": "https://github.com/Daily-Nerd/daimon/blob/3e94f9441671abf1e9fa7c932b9e956dbf891fe8/docs/RUNTIME-ARCHITECTURE.md"
+      },
+      {
+        "id": "capture",
+        "label": "Pinned capture pipeline",
+        "path": "plugin/daimon_briefing/capture.py",
+        "symbol": "Transcript serialization, provenance, carry, candidate emission, and common write orchestration",
+        "url": "https://github.com/Daily-Nerd/daimon/blob/3e94f9441671abf1e9fa7c932b9e956dbf891fe8/plugin/daimon_briefing/capture.py"
+      },
+      {
+        "id": "provenance",
+        "label": "Pinned provenance implementation",
+        "path": "plugin/daimon_briefing/provenance.py",
+        "symbol": "Source references, quote receipts, host root resolution and evidence states",
+        "url": "https://github.com/Daily-Nerd/daimon/blob/3e94f9441671abf1e9fa7c932b9e956dbf891fe8/plugin/daimon_briefing/provenance.py"
+      },
+      {
+        "id": "store",
+        "label": "Pinned checkpoint store",
+        "path": "plugin/daimon_briefing/store.py",
+        "symbol": "Local JSON persistence, project routing, atomic writes, pointers, garbage collection and tombstones",
+        "url": "https://github.com/Daily-Nerd/daimon/blob/3e94f9441671abf1e9fa7c932b9e956dbf891fe8/plugin/daimon_briefing/store.py"
+      },
+      {
+        "id": "recall",
+        "label": "Pinned recall index",
+        "path": "plugin/daimon_briefing/recall.py",
+        "symbol": "Derived SQLite FTS5 index, ranking, stale index rebuild and search error handling",
+        "url": "https://github.com/Daily-Nerd/daimon/blob/3e94f9441671abf1e9fa7c932b9e956dbf891fe8/plugin/daimon_briefing/recall.py"
+      },
+      {
+        "id": "forget",
+        "label": "Pinned forget implementation",
+        "path": "plugin/daimon_briefing/forget.py",
+        "symbol": "Deletion surface registry, phase ordering, tombstone refusal and reach reporting",
+        "url": "https://github.com/Daily-Nerd/daimon/blob/3e94f9441671abf1e9fa7c932b9e956dbf891fe8/plugin/daimon_briefing/forget.py"
+      },
+      {
+        "id": "security",
+        "label": "Pinned official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Private vulnerability reporting guidance; contact email check",
+        "url": "https://github.com/Daily-Nerd/daimon/blob/3e94f9441671abf1e9fa7c932b9e956dbf891fe8/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Metric domains and interpretation; contract only, not executed",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Fixture reviewed as contract only; no run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Project baseline status reference",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Status reference only; not evidence of Daimon results",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Daimon as a memory system for coding-agent sessions: it captures decisions and open items at session end and injects a short briefing when a later session starts. It says the system skips sub-agent exchanges and is not a live monitor.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The official repository page identifies main as the default branch. The official main Atom feed reports full head 3e94f9441671abf1e9fa7c932b9e956dbf891fe8, updated 2026-11-25T03:07:12Z; the review is pinned to that head.",
+        "sources": [
+          "repo",
+          "feed",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The current runtime architecture describes a local-first, host-agnostic Python modular monolith. Host hooks and CLI serialization enter one capture pipeline; MCP and viewer surfaces are optional readers. No remote memory service, always-on daemon, vector database, or graph database is required.",
+        "sources": [
+          "architecture",
+          "readme"
+        ]
+      },
+      {
+        "text": "Durable state consists of per-session checkpoint JSON, project pointers, and append-oriented lifecycle/knowledge ledgers. Checkpoints are written atomically; project routing prevents one project's checkpoint from becoming another project's carried state. The global pointer is an orientation/compatibility surface, not proof of project ownership.",
+        "sources": [
+          "store",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The SQLite FTS5 recall index is derived and disposable. It scans checkpoint files; auto-refresh read paths rebuild it when missing, corrupt, schema-mismatched, or stale. By-id inspection uses a read-only locator and does not rebuild the index.",
+        "sources": [
+          "recall",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The design puts deterministic quote verification, provenance binding, carry, admission, and rendering after model extraction. The model proposes candidate memory but does not assign its own trust class or final authority.",
+        "sources": [
+          "architecture",
+          "capture",
+          "provenance",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: capture checks transcript readability and minimum content, performs one shared serialization flow, attaches a source reference and transcript hash where available, stamps the checkpoint, carries eligible unresolved items, emits advisory lifecycle candidates, then writes. Advisory carry/emission failures are fail-open; the hook also follows a never-raise contract.",
+        "sources": [
+          "capture",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Update/correction: later checkpoints carry unresolved prior items according to deterministic matching and configured limits. Explicit resolution and typed supersession evidence record lifecycle change rather than silently replacing prior content. Suggested supersession and rank demotions are not equivalent to a human-confirmed transition; no correction workload was executed.",
+        "sources": [
+          "capture",
+          "recall",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Delete: forget runs registered surface handlers in phase order. It writes a tombstone first; if that cannot be recorded, the operation refuses before touching other surfaces. Later failures are isolated and reported by surface reach. The design covers declared local and team/index copies, but this review does not establish deletion from unregistered external copies, backups, or host logs.",
+        "sources": [
+          "forget",
+          "architecture",
+          "readme"
+        ]
+      },
+      {
+        "text": "Retrieval: session-start hooks render a deterministic project briefing. Explicit recall searches checkpoint history via SQLite FTS5; superseded or contradicted items may be demoted but remain visible. By-id inspection uses a read-only locator. Items outside the live carry set remain available to explicit history recall.",
+        "sources": [
+          "readme",
+          "recall",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Scope: checkpoints are project-stamped and reads/carry use project routing and alias-aware membership. Cross-project reads are deliberate CLI operations; optional MCP is read-only and defaults to its own project unless granted broader access. Team sync is opt-in and author labels are declared, not authenticated; Git repository membership is the stated team boundary. This was not tested as hostile multi-tenant isolation.",
+        "sources": [
+          "store",
+          "architecture",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "Briefing and FTS search were inspected, but no fixture cases or adjudicated response outcomes were run.",
+        "sources": [
+          "readme",
+          "recall",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Carry and lifecycle mechanisms were inspected; no correction probes or adjudication were performed.",
+        "sources": [
+          "capture",
+          "recall",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Forget registry and tombstone behavior were inspected, but no post-delete probes or copy/backup checks were run.",
+        "sources": [
+          "forget",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Project routing and optional MCP boundary were inspected; no paired allowed/forbidden scope workload was run.",
+        "sources": [
+          "store",
+          "architecture",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Quote receipts and source attribution were inspected; no generated claims or answer citations were adjudicated.",
+        "sources": [
+          "provenance",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No retrieval timing samples were collected.",
+        "sources": [
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timed write-then-recall probes were run.",
+        "sources": [
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No model/provider token usage or charges were measured.",
+        "sources": [
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "JSON/SQLite storage structure was inspected; no corpus size or per-item storage measurement was taken.",
+        "sources": [
+          "store",
+          "recall",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The review inspected README, runtime architecture, capture pipeline, provenance resolution, checkpoint store, recall index, and forget implementation at the verified head. It did not inspect every host adapter, serializer prompt, CLI command, policy module, team synchronization path, or all UI/MCP read routes.",
+        "sources": [
+          "readme",
+          "architecture",
+          "capture",
+          "provenance",
+          "store",
+          "recall",
+          "forget"
+        ]
+      },
+      {
+        "text": "Host capabilities differ and some surfaces are opt-in or documented as capture-only/unverified. Source inspection cannot establish answer quality, complete erasure outside declared surfaces, or security against a hostile local user or team member.",
+        "sources": [
+          "readme",
+          "architecture",
+          "forget"
+        ]
+      },
+      {
+        "text": "No Daimon runtime, tests, or benchmarks were run. Project metric definitions are not measured outcomes; all project benchmark domains remain unmeasured for this review.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Daimon runtime, tests, or benchmarks were run. Source inspection and upstream-published descriptions are not benchmark results."
+    }
+  }
+}

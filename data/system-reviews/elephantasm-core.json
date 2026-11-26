@@ -1,0 +1,474 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 212,
+    "slug": "elephantasm-core",
+    "name": "Elephantasm",
+    "repository": "https://github.com/kaminocorp/elephantasm-core",
+    "listed_repository": "https://github.com/kaminocorp/elephantasm-core",
+    "branch": "master",
+    "revision": "3dc935e52b1b98e40f386194a5f2b39489e42b85",
+    "reviewed_at": "2026-11-26T00:31:13Z",
+    "review_timezone": "UTC (2026-11-25 16:31:13 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact_email": null,
+    "contact_source_url": "https://github.com/kaminocorp/elephantasm-core/blob/3dc935e52b1b98e40f386194a5f2b39489e42b85/README.md",
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/kaminocorp/elephantasm-core/blob/3dc935e52b1b98e40f386194a5f2b39489e42b85/README.md",
+      "note": "Checked the official README for a published contact email; none found. The linked official website had an expired TLS certificate when checked."
+    },
+    "summary": "A Python framework that transforms agent interaction events into curated memories, typed knowledge, identity, and token-budgeted prompt packs. This review records code evidence at one verified revision; no system behavior or performance was measured.",
+    "atlas_locator": {
+      "ordinal": 212,
+      "name": "Elephantasm",
+      "slug": "elephantasm-core",
+      "listed_repository": "https://github.com/kaminocorp/elephantasm-core",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/elephantasm-core.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/kaminocorp/elephantasm-core",
+      "use": "Curated identity and locator attribution only; not assessment evidence."
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Current canonical GitHub repository metadata",
+        "path": "repository metadata",
+        "symbol": "full_name, owner, default_branch",
+        "url": "https://api.github.com/repos/kaminocorp/elephantasm-core"
+      },
+      {
+        "id": "head",
+        "label": "Current master branch head metadata",
+        "path": "master commit endpoint",
+        "symbol": "full SHA 3dc935e52b1b98e40f386194a5f2b39489e42b85",
+        "url": "https://api.github.com/repos/kaminocorp/elephantasm-core/commits/master"
+      },
+      {
+        "id": "tree",
+        "label": "Reviewed upstream repository tree",
+        "path": "repository",
+        "symbol": "commit 3dc935e52b1b98e40f386194a5f2b39489e42b85",
+        "url": "https://github.com/kaminocorp/elephantasm-core/tree/3dc935e52b1b98e40f386194a5f2b39489e42b85"
+      },
+      {
+        "id": "readme",
+        "label": "Project README",
+        "path": "README.md",
+        "symbol": "architecture, synthesis, retrieval, lineage, official contact check",
+        "url": "https://github.com/kaminocorp/elephantasm-core/blob/3dc935e52b1b98e40f386194a5f2b39489e42b85/README.md"
+      },
+      {
+        "id": "events",
+        "label": "Event model",
+        "path": "app/models/database/events.py",
+        "symbol": "EventBase, Event",
+        "url": "https://github.com/kaminocorp/elephantasm-core/blob/3dc935e52b1b98e40f386194a5f2b39489e42b85/app/models/database/events.py"
+      },
+      {
+        "id": "memories",
+        "label": "Memory model",
+        "path": "app/models/database/memories.py",
+        "symbol": "MemoryBase, Memory, lifecycle and embedding",
+        "url": "https://github.com/kaminocorp/elephantasm-core/blob/3dc935e52b1b98e40f386194a5f2b39489e42b85/app/models/database/memories.py"
+      },
+      {
+        "id": "knowledge",
+        "label": "Knowledge model",
+        "path": "app/models/database/knowledge.py",
+        "symbol": "KnowledgeType, Knowledge and embedding",
+        "url": "https://github.com/kaminocorp/elephantasm-core/blob/3dc935e52b1b98e40f386194a5f2b39489e42b85/app/models/database/knowledge.py"
+      },
+      {
+        "id": "event-route",
+        "label": "Event API routes",
+        "path": "app/api/routes/events.py",
+        "symbol": "create_event, update_event, delete_event, list_events",
+        "url": "https://github.com/kaminocorp/elephantasm-core/blob/3dc935e52b1b98e40f386194a5f2b39489e42b85/app/api/routes/events.py"
+      },
+      {
+        "id": "memory-ops",
+        "label": "Memory CRUD operations",
+        "path": "app/domain/memory_operations.py",
+        "symbol": "create, update, soft_delete, restore",
+        "url": "https://github.com/kaminocorp/elephantasm-core/blob/3dc935e52b1b98e40f386194a5f2b39489e42b85/app/domain/memory_operations.py"
+      },
+      {
+        "id": "memory-route",
+        "label": "Memory API routes",
+        "path": "app/api/routes/memories.py",
+        "symbol": "create, list, search, update and delete routes",
+        "url": "https://github.com/kaminocorp/elephantasm-core/blob/3dc935e52b1b98e40f386194a5f2b39489e42b85/app/api/routes/memories.py"
+      },
+      {
+        "id": "memory-persistence",
+        "label": "Memory synthesis persistence",
+        "path": "app/workflows/memory_synthesis/nodes/memory_persistence.py",
+        "symbol": "persist_memory, provenance links, best-effort embedding",
+        "url": "https://github.com/kaminocorp/elephantasm-core/blob/3dc935e52b1b98e40f386194a5f2b39489e42b85/app/workflows/memory_synthesis/nodes/memory_persistence.py"
+      },
+      {
+        "id": "memory-event",
+        "label": "Memory/event provenance junction",
+        "path": "app/models/database/memories_events.py",
+        "symbol": "MemoryEvent, memory_id, event_id, link_strength",
+        "url": "https://github.com/kaminocorp/elephantasm-core/blob/3dc935e52b1b98e40f386194a5f2b39489e42b85/app/models/database/memories_events.py"
+      },
+      {
+        "id": "knowledge-persistence",
+        "label": "Knowledge synthesis persistence",
+        "path": "app/workflows/knowledge_synthesis/nodes/knowledge_persistence.py",
+        "symbol": "knowledge extraction persistence and source memory",
+        "url": "https://github.com/kaminocorp/elephantasm-core/blob/3dc935e52b1b98e40f386194a5f2b39489e42b85/app/workflows/knowledge_synthesis/nodes/knowledge_persistence.py"
+      },
+      {
+        "id": "knowledge-route",
+        "label": "Knowledge API routes",
+        "path": "app/api/routes/knowledge.py",
+        "symbol": "CRUD and audit creation",
+        "url": "https://github.com/kaminocorp/elephantasm-core/blob/3dc935e52b1b98e40f386194a5f2b39489e42b85/app/api/routes/knowledge.py"
+      },
+      {
+        "id": "knowledge-audit",
+        "label": "Knowledge audit model",
+        "path": "app/models/database/knowledge_audit_log.py",
+        "symbol": "action, source_id, before_state, after_state",
+        "url": "https://github.com/kaminocorp/elephantasm-core/blob/3dc935e52b1b98e40f386194a5f2b39489e42b85/app/models/database/knowledge_audit_log.py"
+      },
+      {
+        "id": "dreamer",
+        "label": "Dreamer domain operations",
+        "path": "app/domain/dreamer_operations.py",
+        "symbol": "DreamSession and DreamAction operations",
+        "url": "https://github.com/kaminocorp/elephantasm-core/blob/3dc935e52b1b98e40f386194a5f2b39489e42b85/app/domain/dreamer_operations.py"
+      },
+      {
+        "id": "compiler",
+        "label": "Memory Pack Compiler",
+        "path": "app/services/memory_pack_compiler.py",
+        "symbol": "compile, four retrieval layers and score structures",
+        "url": "https://github.com/kaminocorp/elephantasm-core/blob/3dc935e52b1b98e40f386194a5f2b39489e42b85/app/services/memory_pack_compiler.py"
+      },
+      {
+        "id": "memory-retrieval",
+        "label": "Memory retrieval operations",
+        "path": "app/domain/memory_retrieval.py",
+        "symbol": "get_by_time_window and anima/state filters",
+        "url": "https://github.com/kaminocorp/elephantasm-core/blob/3dc935e52b1b98e40f386194a5f2b39489e42b85/app/domain/memory_retrieval.py"
+      },
+      {
+        "id": "knowledge-retrieval",
+        "label": "Knowledge retrieval operations",
+        "path": "app/domain/knowledge_retrieval.py",
+        "symbol": "search_similar and cosine-distance threshold",
+        "url": "https://github.com/kaminocorp/elephantasm-core/blob/3dc935e52b1b98e40f386194a5f2b39489e42b85/app/domain/knowledge_retrieval.py"
+      },
+      {
+        "id": "packs",
+        "label": "Memory pack routes",
+        "path": "app/api/routes/memory_packs.py",
+        "symbol": "query-aware fresh compile and no-query cached pack",
+        "url": "https://github.com/kaminocorp/elephantasm-core/blob/3dc935e52b1b98e40f386194a5f2b39489e42b85/app/api/routes/memory_packs.py"
+      },
+      {
+        "id": "rls",
+        "label": "Authenticated API RLS dependency",
+        "path": "app/core/rls_dependencies.py",
+        "symbol": "get_db_with_rls and current-user context",
+        "url": "https://github.com/kaminocorp/elephantasm-core/blob/3dc935e52b1b98e40f386194a5f2b39489e42b85/app/core/rls_dependencies.py"
+      },
+      {
+        "id": "workflow-rls",
+        "label": "Workflow RLS context",
+        "path": "app/workflows/utils/rls_context.py",
+        "symbol": "session_with_rls_context",
+        "url": "https://github.com/kaminocorp/elephantasm-core/blob/3dc935e52b1b98e40f386194a5f2b39489e42b85/app/workflows/utils/rls_context.py"
+      },
+      {
+        "id": "retrieval-config",
+        "label": "Retrieval configuration DTO",
+        "path": "app/models/dto/retrieval.py",
+        "symbol": "max_tokens and scoring weights",
+        "url": "https://github.com/kaminocorp/elephantasm-core/blob/3dc935e52b1b98e40f386194a5f2b39489e42b85/app/models/dto/retrieval.py"
+      },
+      {
+        "id": "synthesis-metrics",
+        "label": "Synthesis metric operations",
+        "path": "app/domain/synthesis_metrics.py",
+        "symbol": "source-visible synthesis bookkeeping",
+        "url": "https://github.com/kaminocorp/elephantasm-core/blob/3dc935e52b1b98e40f386194a5f2b39489e42b85/app/domain/synthesis_metrics.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog identity and locator attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 212; catalog revision 19199a4fc249e89c0793be06f0b166b358089ba0; identity only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "repo-page",
+        "label": "Official repository page for the listed canonical locator",
+        "path": "repository page",
+        "symbol": "kaminocorp/elephantasm-core; identity and locator only",
+        "url": "https://github.com/kaminocorp/elephantasm-core"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster attribution only",
+        "path": "content/systems/elephantasm-core.md",
+        "symbol": "Used for curated identity and locator context only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/elephantasm-core.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "GitHub repository metadata identifies kaminocorp as the public organization that owns the canonical repository. The README presents Elephantasm as an open-source Python framework for long-term agentic memory; this review assesses its memory subsystem at the reviewed revision.",
+        "sources": [
+          "repo",
+          "repo-page",
+          "readme"
+        ]
+      },
+      {
+        "text": "The project roster places Elephantasm at ordinal 212 and records the listed repository locator and Atlas roster attribution. Atlas is used only for identity/locator context, not assessment evidence.",
+        "sources": [
+          "roster",
+          "atlas"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "PostgreSQL stores Animas, raw Events, Memories, typed Knowledge, identities, memory packs and audit/session records. Memories include content/summary, importance, confidence, lifecycle state, time range and optional pgvector embeddings; Knowledge has one of five epistemic types, confidence, source type, soft-delete state and optional embeddings.",
+        "sources": [
+          "events",
+          "memories",
+          "knowledge"
+        ]
+      },
+      {
+        "text": "The documented pipeline accumulates raw events, synthesizes them into structured memories after a configurable threshold, extracts typed knowledge, and supports Dreamer background curation. The MemoryEvent junction links memories to source events; knowledge audit rows can link derived knowledge to a source memory.",
+        "sources": [
+          "readme",
+          "memory-persistence",
+          "memory-event",
+          "knowledge-persistence",
+          "knowledge-audit",
+          "dreamer"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: event ingestion stores raw messages/tool/system events and can enqueue a threshold check when background jobs are enabled. Synthesis creates a Memory and its MemoryEvent provenance links in one RLS-scoped transaction. Embedding generation is best effort and may fail without failing memory persistence; knowledge extraction then writes typed items associated with the source memory.",
+        "sources": [
+          "event-route",
+          "events",
+          "memory-persistence",
+          "knowledge-persistence"
+        ]
+      },
+      {
+        "text": "Update/delete: memory operations permit partial updates, soft deletion and restoration; event routes provide updates and soft deletion; knowledge routes persist audit records for mutations. Soft-deleted rows remain stored. The inspected code does not establish complete erasure across all derived records, backups, embeddings and caches.",
+        "sources": [
+          "memory-ops",
+          "memory-route",
+          "event-route",
+          "knowledge-route",
+          "knowledge-audit"
+        ]
+      },
+      {
+        "text": "Retrieval: the compiler assembles identity, recent session memories, semantically retrieved knowledge, and scored long-term memories. It can embed a query, filters retrieval by anima/state/time/type/deletion status, and packages selected results with retrieval reason/score details. Query-aware pack requests compile fresh; a no-query path can return the latest stored pack. Source structure does not establish retrieval quality.",
+        "sources": [
+          "compiler",
+          "memory-retrieval",
+          "knowledge-retrieval",
+          "packs"
+        ]
+      },
+      {
+        "text": "Provenance and trust: memory/event links preserve source event identifiers; knowledge audit records retain source memory identifiers and before/after state. Memory and knowledge confidence and lifecycle fields are present, but these are stored signals rather than externally adjudicated truth or evidence support. No citation-resolution or answer-grounding evaluation was performed.",
+        "sources": [
+          "memory-event",
+          "knowledge-audit",
+          "memories",
+          "knowledge"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: the compiler is synchronous, query retrieval uses an embedding provider, retrieval DTOs accept a maximum token budget, and synthesis/curation code logs activity and errors. Accumulation thresholds defer some synthesis work. These are source-visible mechanisms only; no latency, cost, token or storage measurements were collected.",
+        "sources": [
+          "compiler",
+          "retrieval-config",
+          "readme",
+          "synthesis-metrics"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Retrieval paths exist, but no answerable or unanswerable probe outputs were collected or adjudicated.",
+        "sources": [
+          "compiler",
+          "memory-retrieval",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Memory updates and curation are implemented, but no correction history probes measured current-value or stale-value behavior.",
+        "sources": [
+          "memory-ops",
+          "dreamer",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Soft-delete paths are visible, but no post-delete probes or complete-erasure checks were run.",
+        "sources": [
+          "memory-ops",
+          "event-route",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Anima filters and authenticated-user RLS context are present in source; no cross-user or cross-anima isolation probes were run.",
+        "sources": [
+          "memory-retrieval",
+          "rls",
+          "workflow-rls",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source lineage identifiers exist, but no generated claims or citations were collected and adjudicated for support or coverage.",
+        "sources": [
+          "memory-event",
+          "knowledge-audit",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No retrieval latency distribution was measured.",
+        "sources": [
+          "compiler",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No scheduled post-write recall probes were run.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "A pack token budget and synthesis bookkeeping are source-visible; no benchmark token usage or charges were recorded.",
+        "sources": [
+          "retrieval-config",
+          "synthesis-metrics",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No benchmark-attributable storage byte measurements were collected.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Source-visible observability",
+        "status": "available in code",
+        "evidence": "Source contains synthesis metric helpers and persisted sessions/packs, but this review collected no runtime telemetry.",
+        "sources": [
+          "synthesis-metrics",
+          "packs"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded read-only inspection of the official README and selected source files at the verified head. The system, tests, and benchmarks were not run; no runtime reliability, answer quality, authorization outcome, deletion completeness, resilience or performance claim is made.",
+        "sources": [
+          "readme",
+          "tree",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "RLS and per-anima filters provide source evidence of an intended boundary, not proof against deployment misconfiguration or adversarial access. External model/embedding provider behavior, production configuration, and full derived-data deletion were not assessed.",
+        "sources": [
+          "rls",
+          "workflow-rls",
+          "memory-retrieval",
+          "memory-persistence"
+        ]
+      },
+      {
+        "text": "The official README was checked for a published contact email and none was found. The linked official website returned an expired TLS certificate during this check, so it could not be inspected; no email was inferred from commit or profile metadata.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Status: Benchmark not run for Elephantasm. No system execution, benchmark workload or test suite was run. Project metrics and fixture specify protocol and are not Elephantasm results.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

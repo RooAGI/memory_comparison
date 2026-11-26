@@ -1,0 +1,99 @@
+# Breadcrumbs source review
+
+## Identity and review pin
+
+- **Curated ordinal:** 102 in [data/memory-systems.json](../data/memory-systems.json)
+- **Listed name / slug:** breadcrumbs / `breadcrumbs`
+- **Listed repository locator:** https://github.com/The-825/breadcrumbs
+- **Canonical repository:** https://github.com/The-825/breadcrumbs
+- **Default branch:** `main`
+- **Reviewed head:** [`6b50610151860ffff405eb5ad8d8e1ee863ca8dd`](https://github.com/The-825/breadcrumbs/commit/6b50610151860ffff405eb5ad8d8e1ee863ca8dd)
+- **Reviewed at:** 2026-11-25 00:15:06 UTC (2026-11-24 16:15:06 PST; America/Los_Angeles)
+- **Status:** Reviewed from code
+- **Benchmark status:** Benchmark not run
+
+The official repository page identifies `main`; the official main Atom feed reports the full head above, and a fresh `git ls-remote --symref` independently resolved `HEAD` to `main` at the same SHA. A shallow checkout matched. The roster's [Atlas attribution page](https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/breadcrumbs.md) is recorded for ordinal identity and attribution only. Its descriptions, marks, and analysis were not used as review evidence.
+
+## Summary
+
+Breadcrumbs is a public repository of coding-agent memory templates, hooks, scripts, and guardrails, rather than a hosted memory service. Its memory approach puts small cues at session start, prompt lookup, file edits, and handoff; the repository also contains two distinct file-backed examples: a TSV-indexed memory desk and a separate Python three-tier memory engine. This is a source review at one commit, not a runtime or benchmark result. [official README](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/README.md)
+
+## Who and what
+
+The README describes Breadcrumbs as one person's working answer to recurring context and coordination problems, and explicitly says it is not a product or framework launch. The repository provides copy-and-adapt artifacts plus runnable scripts and CI examples; the memory-desk guide calls that desk one part of a larger memory pattern. The inspected code does not establish a hosted operator, managed service, or authentication deployment. [official README](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/README.md) [memory desk guide](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/README.md)
+
+## Architecture and data model
+
+The top-level pattern is cue placement around existing work. Templates provide a session handoff, decisions and settled-facts files; hooks can put the kernel at session start, match index rows to a prompt, or surface a note after an edit touches a file. The repository distinguishes this practical kit from broader design documents and from the runnable example modules. [official README](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/README.md) [memory desk README](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/README.md) [session-start hook](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/hooks/session-start-memory.sh) [prompt lookup hook](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/hooks/prompt-index-hits.sh)
+
+The memory desk stores settled facts in a tab-separated index with key, aliases, answer, source, and checked date; raw capture goes to append-only journal.jsonl. A small kernel file is read at boot, while tombstones.tsv retains retired key/value pairs and consolidation-proposals.jsonl holds review-only possible semantic duplicates. The desk is a user-installed template, and its files are local to the adopting repository. [memory desk README](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/README.md) [memory desk CLI](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/mem) [gardener contract](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/gardener/GARDENER.md)
+
+Separately, templates/ledger-tools/memory_engine.py defines a working tier in session_state.json, an append-only episodic episodes.jsonl, a semantic facts.json map, and tombstones.json. The working tier holds a goal and scratchpad; episodes hold timestamped action/outcome/tag rows; facts are keyed by category and key and carry value, trust status, scope, timestamps, and optional source episode IDs. This module is a library/example for an agent loop that the adopter builds, not the same store or interface as the memory desk. [memory engine](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/ledger-tools/memory_engine.py)
+
+## Write, update, delete, and retrieval
+
+- **Write:** In the memory desk, mem add appends a timestamped fact, decision, gotcha, todo, or state entry to journal.jsonl; the gardener later promotes durable entries into index.tsv. In the separate engine, set_goal and note write working state, log_episode appends an event, and store_fact writes a categorized fact. [memory desk CLI](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/mem) [gardener](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/gardener/promote.py) [memory engine](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/ledger-tools/memory_engine.py)
+- **Update and correction:** The desk gardener updates an exact key collision in the index and leaves semantic duplicate candidates for human review. mem reject removes a matching live index row, appends a tombstone with reason and date, and journals the correction; mem check flags the same rejected key/value if it returns. recheck reports when a source file moved after its checked date; it does not decide whether the fact is false. In the engine, changing an existing fact logs a SUPERSEDED episode before replacing the value, and the replacement starts asserted. Re-storing the same value does not demote its trust status. [gardener](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/gardener/promote.py) [memory desk CLI](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/mem) [memory engine](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/ledger-tools/memory_engine.py)
+- **Delete and retirement:** The desk's reject operation retires an answer from the active index, but the raw journal remains append-only and the tombstone itself retains the rejected value. The engine's reject_fact removes the active fact and stores a tombstone, while appending a REJECTED episode that also contains the value; lift_tombstone removes the block but appends a lift event. I found no general physical-erasure API in these inspected paths. These are correction and retrieval controls, not proof of complete erasure. [memory desk README](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/README.md) [memory desk CLI](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/mem) [memory engine](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/ledger-tools/memory_engine.py)
+- **Retrieval:** The desk returns an exact key or alias first, then ranks token overlap across keys, aliases, and answer text; it returns at most three rows. Its prompt hook truncates the incoming text to 400 characters, requires a minimum match score, and emits nothing for a weak match. A miss prints a repo-search and capture ladder rather than an answer. The session-start hook prints the kernel, up to the last three raw journal lines, and the index row count. [memory desk CLI](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/mem) [prompt lookup hook](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/hooks/prompt-index-hits.sh) [session-start hook](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/hooks/session-start-memory.sh)
+- **Engine retrieval:** build_context combines goal and scratchpad, eligible facts, and up to five episodes by default. Episode ranking is deterministic reciprocal-rank fusion over lexical overlap in outcome, action/tag overlap, and recency; the source explicitly says it does not match paraphrases. Optional as_of, valid_at, and audience filters apply to facts, with as_of replay also downgrading facts whose verification had not yet occurred. [memory engine](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/ledger-tools/memory_engine.py)
+- **Scope:** Memory desk files are repository-local by adoption convention, not isolated by a tenant or principal in the reviewed CLI. The engine's low-level audience filter treats unscoped facts as internal and omits the scope-less episodic tier whenever an audience is set. Its separate ScopedContextService maps a host-provided principal through a fixed policy and refuses principals without grants. The engine documentation warns that a caller able to choose audience can widen it. The output still includes the working goal and scratchpad independent of audience, so those fields need separate handling if they may contain restricted material. [memory desk README](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/README.md) [memory engine](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/ledger-tools/memory_engine.py) [scoped context wrapper](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/ledger-tools/scoped_context.py)
+- **Provenance and evidence:** Desk rows retain a source locator and checked date; its journal preserves raw capture, and retirement preserves a reason and old answer. Engine episodes have IDs, timestamps, actions, outcomes, and tags; a fact can name existing source episode IDs. New engine facts begin asserted. verify_fact requires nonempty evidence and a distinct verifier with tool or human authority; it refuses an agent verifier and the asserting actor. Those are field and control observations, not an independent proof that the named verifier or evidence is authentic. [memory desk CLI](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/mem) [memory engine](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/ledger-tools/memory_engine.py)
+- **Maintenance:** The gardener defaults to dry-run. Its apply mode promotes new journal entries, updates exact key collisions, checks tombstones, records semantic-duplicate proposals for review, validates the desk, then advances its journal watermark. The documented refresh and retirement decisions remain human work. [gardener contract](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/gardener/GARDENER.md) [gardener implementation](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/gardener/promote.py)
+
+## Metric-domain evidence
+
+These are code observations. No retrieval, correction, deletion, isolation, latency, token, cost, or storage measurement was made in this review. The project metric definitions and fixture specify a protocol; the execution-status file is not a Breadcrumbs result. [project metric definitions](../METRICS.md) [project fixture](../fixtures/memory-benchmark-v1.json) [execution status](../results/initial-baselines-status.json)
+
+| Domain | Source observation | Measurement status |
+|---|---|---|
+| Answerable retrieval and abstention | The desk has exact/alias then lexical lookup and a search ladder on misses; the engine ranks episodes lexically/action-tag/recency. | Unmeasured |
+| Correction accuracy and stale values | The desk tombstones rejected values; the engine logs supersession and supports valid-time and learned-time replay. | Unmeasured |
+| Deletion leakage | Reviewed retirement paths retain old values in tombstones, journal, or episodic records; no erase probes were run. | Unmeasured |
+| Scope isolation | The engine has an optional audience filter and principal-policy wrapper; the desk is a local-repository template. | Unmeasured |
+| Evidence support and citation coverage | Source locators, episode IDs, and verifier/evidence fields are present; claim support was not adjudicated. | Unmeasured |
+| Retrieval latency | The inspected paths are local file reads and deterministic ranking; no timings were collected. | Unmeasured |
+| Write-to-recall delay | The desk separates raw journal capture from later gardener promotion; no acknowledgment-to-recall probes were run. | Unmeasured |
+| Tokens and cost | Hooks bound some injected text and filter weak matches; provider usage and cost were not measured. | Unmeasured |
+| Storage efficiency | The stores use text/JSON/JSONL/TSV files; no persistent bytes or per-item sizes were measured. | Unmeasured |
+
+The upstream [memory measurement guide](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/docs/memory-measurement.md) describes reachability, lane, use-stamp, and search-miss instruments, while the [orientation benchmark guide](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/benchmarks/orientation/README.md) defines a synthetic comparison and the [outcome-evidence guide](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/benchmarks/outcome-evidence/README.md) defines a separate synthetic audit. Their existence and design do not establish results for this review.
+
+## Limits and unknowns
+
+This review covers selected code and documentation at one verified commit. The repository is a kit to adapt; deployments can change hook wiring, storage location, permissions, and host authentication. I did not run the examples, tests, the adopter's setup, or either upstream benchmark.
+
+The memory desk uses simple lexical matching and a human curation step; source presence does not establish that a row is reachable or useful in a particular repository. The separate engine documents that per-file atomic replacement does not make concurrent read-modify-write safe, that its episodic ledger is unbounded, and that it has no built-in decay or use stamps. Its scoped wrapper assumes an authenticated host principal, and the working tier is not filtered by audience in the inspected context builder. These constraints leave deployed isolation and data retention dependent on integration choices. [memory engine](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/ledger-tools/memory_engine.py) [scoped context wrapper](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/ledger-tools/scoped_context.py) [memory measurement guide](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/docs/memory-measurement.md)
+
+The README describes experience in one office and states that usage figures were counted by hand while instrumentation was new. I treat that as a project-authored description, not a measured result from this review. The source review cannot establish general recall quality, safe deletion, correction quality, benchmark performance, or cost. [official README](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/README.md)
+
+## Benchmark status
+
+**Benchmark not run.** No Breadcrumbs runtime, tests, or benchmark workload was run for this review. The repository contains synthetic benchmark designs; they are not results for this review. Project comparison definitions, planned fixture, and execution status are linked separately. [metric definitions](../METRICS.md) [planned fixture](../fixtures/memory-benchmark-v1.json) [execution-status record](../results/initial-baselines-status.json) [upstream orientation benchmark guide](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/benchmarks/orientation/README.md) [upstream outcome-evidence guide](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/benchmarks/outcome-evidence/README.md)
+
+## Sources
+
+- [Canonical public repository](https://github.com/The-825/breadcrumbs)
+- [Official main commit feed](https://github.com/The-825/breadcrumbs/commits/main.atom)
+- [Verified reviewed head](https://github.com/The-825/breadcrumbs/commit/6b50610151860ffff405eb5ad8d8e1ee863ca8dd)
+- [README.md](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/README.md)
+- [Memory desk README](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/README.md)
+- [Memory desk CLI](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/mem)
+- [Session-start hook](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/hooks/session-start-memory.sh)
+- [Prompt lookup hook](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/hooks/prompt-index-hits.sh)
+- [Gardener contract](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/gardener/GARDENER.md)
+- [Gardener promotion code](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/memory-desk/gardener/promote.py)
+- [Three-tier memory engine](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/ledger-tools/memory_engine.py)
+- [Scoped context wrapper](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/templates/ledger-tools/scoped_context.py)
+- [Memory desk design guide](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/docs/memory-desk.md)
+- [Memory measurement guide](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/docs/memory-measurement.md)
+- [Orientation benchmark guide](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/benchmarks/orientation/README.md)
+- [Outcome-evidence benchmark guide](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/benchmarks/outcome-evidence/README.md)
+- [Official security policy checked for contact](https://github.com/The-825/breadcrumbs/blob/6b50610151860ffff405eb5ad8d8e1ee863ca8dd/SECURITY.md)
+- [Project metric definitions](../METRICS.md)
+- [Project benchmark fixture](../fixtures/memory-benchmark-v1.json)
+- [Project execution-status record](../results/initial-baselines-status.json)
+- [Curated roster](../data/memory-systems.json)
+- [Atlas attribution source, identity only](https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/breadcrumbs.md)
+
+**Review boundary:** source inspection only; no Breadcrumbs execution, tests, or benchmarks were run.

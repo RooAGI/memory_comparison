@@ -1,0 +1,72 @@
+# Hermes Agent source review
+
+**Review status:** Reviewed from code  
+**Benchmark status:** Benchmark not run  
+**Roster ordinal / name / slug:** 289 / Hermes Agent / hermes-agent  
+**Listed repository locator:** [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)  
+**Current canonical repository:** [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)  
+**Default branch / reviewed head:** main / `3113542d64752423e1e9d2ff13bfbd2ce764dea9`  
+**Review time:** 2026-11-25 22:44:26 UTC (14:44:26 PST; America/Los_Angeles).
+
+## Identity and scope
+
+The curated roster places Hermes Agent at ordinal 289 with slug `hermes-agent`, explicit locator `https://github.com/NousResearch/hermes-agent`, and an Atlas attribution pinned to revision `19199a4fc249e89c0793be06f0b166b358089ba0`. I use that roster only for identity, repository locator, and attribution. The official GitHub repository page identifies the default branch as `main`; its official `main.atom` commit feed reports current full head `3113542d64752423e1e9d2ff13bfbd2ce764dea9` at `2026-11-25T21:49:23Z`. Assessment claims below come from the official repository, its pinned sources, and official project documentation, not Atlas.[[catalog entry](../data/memory-systems.json)] [[official repository](https://github.com/NousResearch/hermes-agent)] [[official main commit feed](https://github.com/NousResearch/hermes-agent/commits/main.atom)] [[reviewed head](https://github.com/NousResearch/hermes-agent/commit/3113542d64752423e1e9d2ff13bfbd2ce764dea9)]
+
+## Who and what
+
+The repository describes Hermes Agent as an open-source personal agent developed by Nous Research, available through CLI, messaging gateway, desktop, and TUI interfaces. Built-in memory and historical session search are features of the agent application; separate memory providers can also be installed as plugins. This review focuses on the built-in memory and session-history paths.[[README](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/README.md)] [[Persistent Memory guide](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory)]
+
+## Architecture and data model
+
+**Curated memory.** Two profile-scoped Markdown files hold durable notes: `MEMORY.md` for environment, workflow, and learned facts, and `USER.md` for user preferences and profile details. The official guide gives character limits of 2,200 and 1,375 respectively. In source, `MemoryStore` parses entries separated by `§`, enforces the configured character budgets, checks text for threat patterns, and persists file changes atomically.[[Persistent Memory guide](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory)] [[memory tool](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/tools/memory_tool.py)] [[memory store](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/tools/memory_tool_store.py)]
+
+At session start, Hermes renders the stores into the system prompt with usage counts and delimited entries. This is a frozen snapshot: subsequent writes update disk but do not change an already-running session's prompt. The documentation says this keeps the prompt prefix stable for caching. An updated entry becomes prompt context in a later session.[[Persistent Memory guide](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory)] [[memory tool](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/tools/memory_tool.py)]
+
+**Conversation history.** Separately, CLI and messaging conversations are stored in the profile's SQLite state database with FTS5 full-text search. The `session_search` tool provides discovery, scroll-around-message, whole-session read, and browse shapes. Its source says responses contain actual database messages without LLM summarization; discovery deduplicates by session lineage and hydrates selected messages after searching.[[Persistent Memory guide](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory)] [[session search](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/tools/session_search_tool.py)]
+
+External memory providers are an additional plugin path that can run alongside built-in files. Their storage, scope, and retrieval behavior varies by provider and is not assessed here.[[Persistent Memory guide](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory)] [[README](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/README.md)]
+
+## Write, update, delete, and retrieval
+
+**Writes.** The built-in `memory` tool takes a top-level target, `memory` or `user`, and supports `add`, `patch`, `remove`, and batched operations. Additions are checked for duplicates; a batch is applied against the resulting character budget. The documentation describes an error response with current entries and remaining capacity when an operation would overflow, allowing the model to consolidate and retry.[[Persistent Memory guide](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory)] [[memory tool](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/tools/memory_tool.py)] [[memory store](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/tools/memory_tool_store.py)]
+
+**Updates and removals.** Patch replaces a uniquely matched substring within an entry and preserves the rest. Remove deletes the matching entry. Ambiguous matches are rejected. The guide explains that whole-entry replace was removed from the advertised operation set because it had caused unrelated facts in multi-fact entries to be lost. These are model-directed edits; the reviewed source does not establish automatic fact correction or a versioned correction ledger.[[Persistent Memory guide](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory)] [[memory tool](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/tools/memory_tool.py)] [[memory store](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/tools/memory_tool_store.py)]
+
+**Deletion.** Removing an entry deletes it from the curated memory file. The official `/journey` guide also documents editing or deleting memory chunks through the learning timeline. The inspected material does not establish tombstones or mutation history for curated-file removals, nor a complete transcript erasure lifecycle for the separate session database.[[Persistent Memory guide](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory)] [[memory store](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/tools/memory_tool_store.py)] [[session search](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/tools/session_search_tool.py)]
+
+**Retrieval.** Curated memory is always prompt-injected at session start rather than selected by a retrieval query. Historical messages are retrieved on demand through FTS5; users can discover matches and then read or scroll through the underlying session. The source bounds individual returned message content and discovery scan size, hides tool, subagent, and kanban sources from ordinary history search, and demotes cron results relative to interactive sessions. These controls affect search output, not a documented answer-level abstention guarantee.[[Persistent Memory guide](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory)] [[session search](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/tools/session_search_tool.py)]
+
+## Scope isolation
+
+Built-in memories live under the active Hermes home/profile. The guide warns against two agents sharing one home because writes are automatic and will mix. The official security policy describes Hermes as a single-tenant personal agent and says profiles under one OS user share the same trust envelope; profiles are not tenant boundaries. No cross-profile or cross-user leakage probe was run.[[Persistent Memory guide](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory)] [[memory tool](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/tools/memory_tool.py)] [[SECURITY.md](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/SECURITY.md)]
+
+## Provenance and evidence
+
+The curated entry format preserves text, but the reviewed memory store path does not show per-entry source-document citations, confidence, or a mutation audit trail. Session search returns stored messages and session metadata, which supplies conversational context for inspection; it does not itself establish that a generated answer is supported by those messages. Threat-pattern scanning protects prompt-injected memory as an in-process heuristic, and the security policy explicitly says such heuristics are not security boundaries.[[memory store](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/tools/memory_tool_store.py)] [[session search](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/tools/session_search_tool.py)] [[SECURITY.md](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/SECURITY.md)]
+
+## Efficiency and observability
+
+Source-visible efficiency choices include strict character caps for always-injected memory, a frozen prompt snapshot, and FTS5 search on demand rather than replaying every historical conversation. The session search implementation caps message content returned and the number of raw discovery rows scanned. The official guide reports example query timing figures, but this review did not reproduce them; there are no measured latency, token, provider-cost, or storage results here.[[Persistent Memory guide](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory)] [[session search](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/tools/session_search_tool.py)] [[project metric definitions](../METRICS.md)]
+
+## Project metric domains
+
+All project benchmark domains remain **unmeasured for Hermes Agent in this review**.
+
+- **Answerable recall and abstention:** curated memory is always injected; session history uses FTS5 discovery. No answerable or unanswerable workload was run.[[Persistent Memory guide](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory)] [[session search](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/tools/session_search_tool.py)] [[metric definitions](../METRICS.md)] [[benchmark fixture](../fixtures/memory-benchmark-v1.json)]
+- **Correction and staleness:** patch and remove are implemented, but no correction accuracy or stale-value probes were adjudicated.[[memory tool](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/tools/memory_tool.py)] [[memory store](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/tools/memory_tool_store.py)] [[metric definitions](../METRICS.md)]
+- **Deletion:** curated-file removal is documented; no post-delete leakage probe or full transcript erasure probe was run.[[memory store](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/tools/memory_tool_store.py)] [[metric definitions](../METRICS.md)]
+- **Scope isolation:** paths are profile-scoped, but the security policy says profiles under one OS user share a trust envelope. No scope-isolation workload was run.[[SECURITY.md](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/SECURITY.md)] [[metric definitions](../METRICS.md)]
+- **Evidence support:** memory/session data can be surfaced, but no claim-level citation guarantee was established and no evidence-support cases were adjudicated.[[memory store](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/tools/memory_tool_store.py)] [[session search](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/tools/session_search_tool.py)] [[metric definitions](../METRICS.md)]
+- **Latency, write-to-recall delay, tokens/cost, and storage:** no measurements were collected. Protocol definitions and fixture are references only.[[metric definitions](../METRICS.md)] [[benchmark fixture](../fixtures/memory-benchmark-v1.json)] [[benchmark status](../results/initial-baselines-status.json)]
+
+## Limits and unknowns
+
+This is a read-only inspection of selected sources at the verified main head and the official persistent-memory and security documentation. Hermes Agent, its tests, and benchmark workloads were not run. The evidence does not establish answer quality, calibrated abstention, correction accuracy, deletion completeness, tenant isolation, latency, or operating cost.[[reviewed README](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/README.md)] [[memory tool](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/tools/memory_tool.py)] [[session search](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/tools/session_search_tool.py)] [[metric definitions](../METRICS.md)]
+
+## Contact
+
+The official pinned `SECURITY.md` publishes `security@nousresearch.com` for private vulnerability reports. I record it as the official security contact only, not as a general support address. No commit or profile metadata or third-party directory was used.[[SECURITY.md](https://github.com/NousResearch/hermes-agent/blob/3113542d64752423e1e9d2ff13bfbd2ce764dea9/SECURITY.md)]
+
+## Benchmark status
+
+**Benchmark not run.** No Hermes Agent runtime, tests, or benchmark workloads were run. The structured [system review](../data/system-reviews/hermes-agent.json) sets `benchmark_status: not_run`; project [metric definitions](../METRICS.md), [benchmark fixture](../fixtures/memory-benchmark-v1.json), and [execution status](../results/initial-baselines-status.json) are protocol/status references and not Hermes measurements.

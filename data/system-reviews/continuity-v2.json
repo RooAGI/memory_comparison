@@ -1,0 +1,369 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 151,
+    "slug": "continuity-v2",
+    "name": "continuity v2",
+    "repository": "https://github.com/Haustorium12/continuity-v2",
+    "branch": "main",
+    "revision": "4e98d464555603a6166df7acc177bd990096dedb",
+    "reviewed_at": "2026-11-25T09:10:34Z",
+    "review_timezone": "UTC (2026-11-25 01:10:34 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/Haustorium12/continuity-v2/blob/4e98d464555603a6166df7acc177bd990096dedb/README.md",
+      "checked_urls": [
+        "https://github.com/Haustorium12/continuity-v2/blob/4e98d464555603a6166df7acc177bd990096dedb/README.md",
+        "https://github.com/Haustorium12/continuity-v2/blob/4e98d464555603a6166df7acc177bd990096dedb/SECURITY.md",
+        "https://github.com/Haustorium12/continuity-v2/blob/4e98d464555603a6166df7acc177bd990096dedb/SUPPORT.md"
+      ],
+      "note": "No published contact email was found in the official README. SECURITY.md and SUPPORT.md were absent at the reviewed revision; no personal profile, commit metadata, or third-party directory was used."
+    },
+    "summary": "A local episodic-memory index for Claude Code and claude.ai conversations. It derives a searchable SQLite database from transcript files, exposes lexical, semantic, and thread retrieval through MCP, and includes Claude Code compaction hooks.",
+    "atlas_locator": {
+      "ordinal": 151,
+      "name": "continuity v2",
+      "slug": "continuity-v2",
+      "listed_repository": "https://github.com/Haustorium12/continuity-v2",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/continuity-v2.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/Haustorium12/continuity-v2/blob/4e98d464555603a6166df7acc177bd990096dedb/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/Haustorium12/continuity-v2/blob/4e98d464555603a6166df7acc177bd990096dedb/README.md",
+      "https://github.com/Haustorium12/continuity-v2/blob/4e98d464555603a6166df7acc177bd990096dedb/SECURITY.md",
+      "https://github.com/Haustorium12/continuity-v2/blob/4e98d464555603a6166df7acc177bd990096dedb/SUPPORT.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical GitHub repository and default branch",
+        "path": "repository page",
+        "url": "https://github.com/Haustorium12/continuity-v2"
+      },
+      {
+        "id": "head",
+        "label": "Official main commits feed (full head and feed timestamp)",
+        "path": "commits/main.atom",
+        "symbol": "4e98d464555603a6166df7acc177bd990096dedb",
+        "url": "https://github.com/Haustorium12/continuity-v2/commits/main.atom"
+      },
+      {
+        "id": "commit",
+        "label": "Reviewed full head commit",
+        "path": "commit",
+        "symbol": "4e98d464555603a6166df7acc177bd990096dedb",
+        "url": "https://github.com/Haustorium12/continuity-v2/commit/4e98d464555603a6166df7acc177bd990096dedb"
+      },
+      {
+        "id": "security",
+        "label": "Checked official SECURITY.md path (absent at reviewed revision)",
+        "path": "SECURITY.md",
+        "url": "https://github.com/Haustorium12/continuity-v2/blob/4e98d464555603a6166df7acc177bd990096dedb/SECURITY.md"
+      },
+      {
+        "id": "support",
+        "label": "Checked official SUPPORT.md path (absent at reviewed revision)",
+        "path": "SUPPORT.md",
+        "url": "https://github.com/Haustorium12/continuity-v2/blob/4e98d464555603a6166df7acc177bd990096dedb/SUPPORT.md"
+      },
+      {
+        "id": "readme",
+        "label": "Official README at reviewed revision",
+        "path": "README.md",
+        "url": "https://github.com/Haustorium12/continuity-v2/blob/4e98d464555603a6166df7acc177bd990096dedb/README.md"
+      },
+      {
+        "id": "index",
+        "label": "JSONL indexing, schema, updates, and FTS source",
+        "path": "index.py",
+        "symbol": "SCHEMA, extract_text, index_file",
+        "url": "https://github.com/Haustorium12/continuity-v2/blob/4e98d464555603a6166df7acc177bd990096dedb/index.py"
+      },
+      {
+        "id": "mcp",
+        "label": "MCP search, retrieval, scope, and maintenance source",
+        "path": "mcp_server.py",
+        "symbol": "search_sessions, find_similar, thread_recall, index_stats",
+        "url": "https://github.com/Haustorium12/continuity-v2/blob/4e98d464555603a6166df7acc177bd990096dedb/mcp_server.py"
+      },
+      {
+        "id": "embed",
+        "label": "Embedding model and vector indexing source",
+        "path": "embed.py",
+        "symbol": "is_embeddable, main",
+        "url": "https://github.com/Haustorium12/continuity-v2/blob/4e98d464555603a6166df7acc177bd990096dedb/embed.py"
+      },
+      {
+        "id": "temporal",
+        "label": "Temporal edge construction source",
+        "path": "wire_edges.py",
+        "symbol": "wire_temporal",
+        "url": "https://github.com/Haustorium12/continuity-v2/blob/4e98d464555603a6166df7acc177bd990096dedb/wire_edges.py"
+      },
+      {
+        "id": "similar",
+        "label": "Similarity edge construction source",
+        "path": "wire_similar.py",
+        "symbol": "SIMILAR_TO",
+        "url": "https://github.com/Haustorium12/continuity-v2/blob/4e98d464555603a6166df7acc177bd990096dedb/wire_similar.py"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog identity and listed locator",
+        "path": "../data/memory-systems.json",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Roster attribution source (identity/locator context only)",
+        "path": "Agent Memory Atlas catalog entry",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/continuity-v2.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "../METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark status record",
+        "path": "../results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "../fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The roster places continuity v2 at ordinal 151, gives the explicit locator above, and attributes the discovery entry to the Agent Memory Atlas source revision shown in the attribution record. That catalog and Atlas reference are used only for identity and locator context. The official GitHub repository page identifies main as the default branch; its main commits feed reports full current head 4e98d464555603a6166df7acc177bd990096dedb, also shown as the latest repository commit. Review time is 2026-11-25 09:10:34 UTC (01:10:34 PST; America/Los_Angeles).",
+        "sources": [
+          "roster",
+          "atlas",
+          "repo",
+          "head",
+          "commit"
+        ]
+      },
+      {
+        "text": "The README describes a local Claude Code memory layer, with cross-session recall built over existing JSONL conversation records. A separate import path accepts an Anthropic claude.ai data export. The README also documents four Claude Code hooks for compaction checkpointing and session-start context injection. These are product/documentation descriptions; implementation observations below are tied to the pinned revision.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The indexer maps source transcripts into a SQLite database. Sessions retain an ID, project directory name, title, working directory, start/end timestamps, turn count, source-file path and modification time. Turns retain session ID, sequence index, timestamp, role and extracted text. An FTS5 external-content table mirrors turn text using insert/delete triggers. SQLite WAL mode is enabled by the indexer and MCP connection.",
+        "sources": [
+          "index",
+          "readme"
+        ]
+      },
+      {
+        "text": "The source extractor retains text blocks, turns tool calls into a tool-name plus optional description marker, and truncates each tool result to 500 characters. Embedding storage is a sqlite-vec table keyed by turn row ID with 384-dimensional all-MiniLM-L6-v2 vectors. A separate edge table represents consecutive TEMPORAL turns and SIMILAR_TO relationships, built by separate maintenance scripts rather than during transcript indexing.",
+        "sources": [
+          "index",
+          "embed",
+          "temporal",
+          "similar",
+          "readme"
+        ]
+      },
+      {
+        "text": "The README documents a stdio MCP server for search, similar-turn lookup, thread recall, session replay, recent sessions, index statistics, reindexing and FTS integrity maintenance. The database lives under the repository's data directory and is gitignored, so transcript-derived content is stored locally by default.",
+        "sources": [
+          "readme",
+          "mcp"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write/index: the indexer scans Claude Code project JSONL files. A matching session file modification time skips work; a changed file causes the indexed turns and session row to be deleted and the transcript to be parsed again. It extracts user and assistant messages, records turn metadata, and refreshes FTS through triggers. The README separately documents an importer for exported claude.ai conversations. There is no direct fact-writing or memory-editing API in the inspected interfaces; the indexed transcript is the input record.",
+        "sources": [
+          "index",
+          "readme"
+        ]
+      },
+      {
+        "text": "Update and deletion: changed transcripts are replaced as whole indexed sessions rather than corrected as individual facts. No explicit delete/forget tool appears in the reviewed MCP interface. The reindex path deletes turns and sessions but the inspected code does not remove corresponding sqlite-vec rows or derived edge rows before IDs are regenerated; whether other cleanup paths address this was not established. There is no source-visible mutation history or semantic supersession model in the inspected files.",
+        "sources": [
+          "index",
+          "mcp",
+          "embed",
+          "temporal"
+        ]
+      },
+      {
+        "text": "Retrieval: FTS5 search returns ranked matching turns with highlighted snippets and optional project substring and source filters. Semantic find_similar embeds the query, retrieves vector neighbors, then reranks up to three times the requested limit using semantic similarity, recency, and session turn count; returned rows print these score components. thread_recall is documented as a breadth-first walk across TEMPORAL edges, while recall_session returns a full or sliced transcript replay.",
+        "sources": [
+          "readme",
+          "mcp",
+          "embed",
+          "temporal",
+          "similar"
+        ]
+      },
+      {
+        "text": "Scope isolation is caller-selected for lexical search and recent-session listing through optional project and source parameters. The README's MCP signatures show no such filters on find_similar, thread_recall, or recall_session. The selected sources do not establish isolation enforcement at a user or tenant boundary, or that every retrieval route remains within a requested project.",
+        "sources": [
+          "readme",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Provenance consists primarily of source session IDs, turn indices, timestamps, roles, project labels, and a stored source-file path. Extracted tool calls and tool results are represented as synthesized text, with result content truncated; no citation object or claim-to-source support model was found in the inspected files. Embedding eligibility is decided by text length and a string-prefix check for tool/result markers.",
+        "sources": [
+          "index",
+          "embed",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Efficiency and observability visible in source: unchanged files are skipped using modification time; the indexer uses WAL, FTS optimization and reports indexing errors and counts. Embeddings are generated in batches of 128 from text capped at 512 characters. The MCP loads the sentence-transformer model on demand, reports index/vector/edge health, and has FTS integrity/rebuild tools. The README reports an approximate database size, but no run or independent measurement was performed here.",
+        "sources": [
+          "index",
+          "embed",
+          "mcp",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "The sources expose lexical, semantic, temporal-thread, and session replay retrieval. No answerable or unanswerable workload cases were run, so recall and calibrated abstention remain unknown.",
+        "sources": [
+          "readme",
+          "mcp",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Changed source files are reindexed by deleting and rebuilding the indexed session when file modification time differs; this is not a semantic correction workflow. No correction or stale-value probes were run.",
+        "sources": [
+          "index",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No explicit delete or forget operation was found in the inspected index and MCP interfaces. Reindexing a changed source removes turn rows before rebuilding, but vector and edge cleanup was not established; no post-deletion probes were run.",
+        "sources": [
+          "index",
+          "mcp",
+          "embed",
+          "temporal",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Search and recent-session listing accept optional project and source filters. Semantic search, temporal thread recall, and session replay do not expose equivalent project/source filters in the documented MCP interface. No cross-project isolation probes were run.",
+        "sources": [
+          "readme",
+          "mcp",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Indexed turns retain role, timestamp, session and turn identifiers; extraction synthesizes tool-call descriptions and truncates tool results. These are traceability clues rather than source citations, and no claim-support or citation workload was adjudicated.",
+        "sources": [
+          "index",
+          "mcp",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The repository provides index health/counts but the inspected sources do not provide workload latency distributions or scheduled write-to-recall observations. None were measured.",
+        "sources": [
+          "mcp",
+          "readme",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Embeddings use batches of 128 and at most 512 characters per turn, and the README reports a rough database size; no project corpus token, cost, or storage measurements were collected.",
+        "sources": [
+          "embed",
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code and documentation",
+        "evidence": "Indexing skips sessions with unchanged modification time, uses SQLite WAL and FTS optimization, and reports errors and index counts. Embeddings are batched, the semantic model is loaded lazily by the MCP server, and find_similar over-fetches candidates before weighted reranking. These are design observations, not measured performance.",
+        "sources": [
+          "index",
+          "embed",
+          "mcp",
+          "readme"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review covers the pinned README, indexer, MCP implementation, embedding and temporal-edge builders, and similarity-edge builder. It did not inspect every hook, installer, importer, dependency configuration, or every auxiliary script. The repository was not executed, and no tests or benchmarks were run.",
+        "sources": [
+          "readme",
+          "index",
+          "mcp",
+          "embed",
+          "temporal",
+          "similar"
+        ]
+      },
+      {
+        "text": "The sources do not establish answer quality, calibrated abstention, physical deletion completeness across SQLite/FTS/vector/edge stores, redaction behavior across every input path, cross-project isolation for all retrieval modes, runtime latency, token use, cost, or storage efficiency on a controlled corpus. These remain unknown rather than inferred capabilities or defects.",
+        "sources": [
+          "index",
+          "mcp",
+          "embed",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No continuity v2 runtime, test suite, or benchmark workload was run. Project metric definitions, fixture, and status record describe the separate measurement protocol; source observations above are not workload results.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

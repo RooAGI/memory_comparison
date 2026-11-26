@@ -1,0 +1,428 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 302,
+    "slug": "hivemind-lesur",
+    "name": "Hivemind (Lesur)",
+    "repository": "https://github.com/Lesur-ai/hivemind",
+    "listed_repository": "https://github.com/Lesur-ai/hivemind",
+    "branch": "main",
+    "revision": "6b05533bdf71bf2dfeb6a50281050608e6630df3",
+    "reviewed_at": "2026-11-25T23:15:34Z",
+    "review_timezone": "UTC (checked 2026-11-25 15:15:34 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Hivemind is a self-hosted MCP service that organizes agent memory into short-lived notes, an editable Markdown project bank, and a derived graph/vector index. The tiers have different write and authority rules: SHORT captures activity, MID is the project handbook, and LONG helps discover related historical context but is non-authoritative. This review is source-based; no runtime, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 302,
+      "name": "Hivemind (Lesur)",
+      "slug": "hivemind-lesur",
+      "listed_repository": "https://github.com/Lesur-ai/hivemind",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hivemind-lesur.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/Lesur-ai/hivemind/blob/6b05533bdf71bf2dfeb6a50281050608e6630df3/README.md",
+      "checked_urls": [
+        "https://github.com/Lesur-ai/hivemind/blob/6b05533bdf71bf2dfeb6a50281050608e6630df3/README.md",
+        "https://github.com/Lesur-ai/hivemind/blob/6b05533bdf71bf2dfeb6a50281050608e6630df3/SUPPORT.md"
+      ],
+      "note": "The official pinned README and SUPPORT.md were checked; neither publishes a contact email. SUPPORT.md directs ordinary support to GitHub issue forms and says no separate private support inbox is advertised. No address was inferred from commit/profile metadata or taken from a third-party directory."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/Lesur-ai/hivemind/blob/6b05533bdf71bf2dfeb6a50281050608e6630df3/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/Lesur-ai/hivemind/blob/6b05533bdf71bf2dfeb6a50281050608e6630df3/README.md",
+      "https://github.com/Lesur-ai/hivemind/blob/6b05533bdf71bf2dfeb6a50281050608e6630df3/SUPPORT.md"
+    ],
+    "contact_email_note": "No contact email was published in the checked official pinned README or SUPPORT.md. No address was inferred from commit/profile metadata or obtained from a third-party directory.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[301], ordinal 302; identity, listed locator, and Atlas attribution only",
+        "url": "../memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/hivemind-lesur.md",
+        "symbol": "Pinned curated attribution/locator context only; not evidence for this assessment",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hivemind-lesur.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "",
+        "symbol": "Repository page identifies Lesur-ai/hivemind and default branch main",
+        "url": "https://github.com/Lesur-ai/hivemind"
+      },
+      {
+        "id": "head",
+        "label": "Official current main head",
+        "path": "main commit",
+        "symbol": "GitHub commits/main API, repository page, and fresh git ls-remote agree on 6b05533bdf71bf2dfeb6a50281050608e6630df3; commit timestamp 2026-11-08T16:26:18Z",
+        "url": "https://github.com/Lesur-ai/hivemind/commit/6b05533bdf71bf2dfeb6a50281050608e6630df3"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Three tiers, operating flow, MCP surface, scope/security claims and stated limits; checked for contact email",
+        "url": "https://github.com/Lesur-ai/hivemind/blob/6b05533bdf71bf2dfeb6a50281050608e6630df3/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Pinned architecture contracts",
+        "path": "docs/ARCHITECTURE_CONTRACTS.md",
+        "symbol": "Tier boundaries, space ownership, Project Mesh contract, mono-tenant status and long non-authority",
+        "url": "https://github.com/Lesur-ai/hivemind/blob/6b05533bdf71bf2dfeb6a50281050608e6630df3/docs/ARCHITECTURE_CONTRACTS.md"
+      },
+      {
+        "id": "live",
+        "label": "Short note storage and retrieval",
+        "path": "src/live_mem/core/live.py",
+        "symbol": "Append-only note object, token-derived agent metadata, read/search filters and provenance enrichment",
+        "url": "https://github.com/Lesur-ai/hivemind/blob/6b05533bdf71bf2dfeb6a50281050608e6630df3/src/live_mem/core/live.py"
+      },
+      {
+        "id": "live_tools",
+        "label": "Short MCP tools",
+        "path": "src/live_mem/tools/live.py",
+        "symbol": "short/live note, read and search API and permission gates",
+        "url": "https://github.com/Lesur-ai/hivemind/blob/6b05533bdf71bf2dfeb6a50281050608e6630df3/src/live_mem/tools/live.py"
+      },
+      {
+        "id": "bank_tools",
+        "label": "Mid bank MCP tools",
+        "path": "src/live_mem/tools/bank.py",
+        "symbol": "Consolidation queue, bank reads, direct writes/deletes, confirmation and permission behavior",
+        "url": "https://github.com/Lesur-ai/hivemind/blob/6b05533bdf71bf2dfeb6a50281050608e6630df3/src/live_mem/tools/bank.py"
+      },
+      {
+        "id": "consolidator",
+        "label": "Mid consolidation implementation",
+        "path": "src/live_mem/core/consolidator.py",
+        "symbol": "LLM plan/edit application, note disposition/deletion, batching and result counters",
+        "url": "https://github.com/Lesur-ai/hivemind/blob/6b05533bdf71bf2dfeb6a50281050608e6630df3/src/live_mem/core/consolidator.py"
+      },
+      {
+        "id": "archive",
+        "label": "MID capture projection",
+        "path": "src/live_mem/core/mid_archive_projection.py",
+        "symbol": "Durable processing of retained bank preimages into LONG and retry/status handling",
+        "url": "https://github.com/Lesur-ai/hivemind/blob/6b05533bdf71bf2dfeb6a50281050608e6630df3/src/live_mem/core/mid_archive_projection.py"
+      },
+      {
+        "id": "graph_tools",
+        "label": "Long MCP tools",
+        "path": "src/live_mem/tools/graph.py",
+        "symbol": "Long query and explicit push/ingestion entry points",
+        "url": "https://github.com/Lesur-ai/hivemind/blob/6b05533bdf71bf2dfeb6a50281050608e6630df3/src/live_mem/tools/graph.py"
+      },
+      {
+        "id": "graph",
+        "label": "Embedded graph data model and retrieval",
+        "path": "services/graph-memory/src/mcp_memory/core/graph.py",
+        "symbol": "Document/source-path metadata, entity search/context, graph scoping and document lifecycle",
+        "url": "https://github.com/Lesur-ai/hivemind/blob/6b05533bdf71bf2dfeb6a50281050608e6630df3/services/graph-memory/src/mcp_memory/core/graph.py"
+      },
+      {
+        "id": "vector",
+        "label": "Embedded vector retrieval",
+        "path": "services/graph-memory/src/mcp_memory/core/vector_store.py",
+        "symbol": "Namespace-filtered chunk search, payload verification, result context and chunk deletion",
+        "url": "https://github.com/Lesur-ai/hivemind/blob/6b05533bdf71bf2dfeb6a50281050608e6630df3/services/graph-memory/src/mcp_memory/core/vector_store.py"
+      },
+      {
+        "id": "auth",
+        "label": "Access and token scope",
+        "path": "src/live_mem/auth/context.py",
+        "symbol": "Bearer-token identity, space access checks, permission hierarchy and validation",
+        "url": "https://github.com/Lesur-ai/hivemind/blob/6b05533bdf71bf2dfeb6a50281050608e6630df3/src/live_mem/auth/context.py"
+      },
+      {
+        "id": "security",
+        "label": "Official security model",
+        "path": "docs/SECURITY.md",
+        "symbol": "Mono-tenant deployment boundary, token handling and operational responsibilities",
+        "url": "https://github.com/Lesur-ai/hivemind/blob/6b05533bdf71bf2dfeb6a50281050608e6630df3/docs/SECURITY.md"
+      },
+      {
+        "id": "mesh",
+        "label": "Official Project Mesh contract",
+        "path": "docs/PROJECT_MESH.md",
+        "symbol": "Two-node sharing, signed pairing, all-ACK contract and documented limits",
+        "url": "https://github.com/Lesur-ai/hivemind/blob/6b05533bdf71bf2dfeb6a50281050608e6630df3/docs/PROJECT_MESH.md"
+      },
+      {
+        "id": "agent_setup",
+        "label": "Official agent memory workflow",
+        "path": "docs/AGENT_MEMORY_SETUP.md",
+        "symbol": "Guidance for note capture, consolidation, and non-authoritative long retrieval",
+        "url": "https://github.com/Lesur-ai/hivemind/blob/6b05533bdf71bf2dfeb6a50281050608e6630df3/docs/AGENT_MEMORY_SETUP.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Project evaluation domains, not Hivemind results",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned workload only; not executed",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project baseline execution record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "No Hivemind measured result claimed by this review",
+        "url": "../../results/initial-baselines-status.json"
+      },
+      {
+        "id": "support",
+        "label": "Official support policy",
+        "path": "SUPPORT.md",
+        "symbol": "Official support channels and whether a separate support inbox is advertised; checked for email",
+        "url": "https://github.com/Lesur-ai/hivemind/blob/6b05533bdf71bf2dfeb6a50281050608e6630df3/SUPPORT.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes a vendor-neutral, self-hosted MCP service for shared agent memory; it includes the Hivemind core, a WAF, and an embedded LONG graph-memory service. The README credits Christophe Lesur as the creator of Hivemind and its original memory engines. Hivemind is a deployable service with a Python maintenance CLI, not only a client-side memory library.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The product separates three horizons. SHORT stores timestamped Markdown note objects per space, with note category, content, tags, and authenticated agent identity. MID stores project handbook files as Markdown plus rules and operational metadata. LONG projects source documents and retained MID captures into graph entities/relations and chunk embeddings. A space_id is the project unit across these tiers; LONG remains a derived discovery index rather than the authority for project state.",
+        "sources": [
+          "readme",
+          "architecture",
+          "live",
+          "graph"
+        ]
+      },
+      {
+        "text": "SHORT writes create unique timestamp/agent/category/UUID filenames, avoiding overwrite conflicts between concurrent note writers. MID consolidation reads rules, prior residual summary, selected notes, and current bank; the configured model returns structured edit operations and note dispositions. The application validates and applies those operations to Markdown files, and records processing counters. LONG uses an embedded Graph Memory service with Neo4j graph records and Qdrant chunks; source paths and hashes connect derived records to source documents.",
+        "sources": [
+          "live",
+          "consolidator",
+          "graph",
+          "vector"
+        ]
+      },
+      {
+        "text": "The top-level project contract says short, mid, long, and hive are separate engine ports. MID writes route through a write sink; shared-space changes pass through Hivemind's serialized commit path. The LONG engine consumes committed MID state, but LONG does not decide commits, rollback, membership, audit, tombstones, watermarks, backup, or recovery.",
+        "sources": [
+          "architecture",
+          "mesh",
+          "graph_tools"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: agents call short_note (historically live_note) with a space, category, content, and optional tags. Agent identity is derived from the bearer token, and the service appends a new object rather than editing a prior note. The normal integration guide recommends short notes for durable decisions, observations, questions, and work summaries.",
+        "sources": [
+          "live",
+          "live_tools",
+          "agent_setup"
+        ]
+      },
+      {
+        "text": "Update and consolidation: mid_consolidate queues an asynchronous per-space operation. By default a writer consolidates its own notes; selecting another agent or all agents requires manage-level authorization. One job at a time runs per space. The model proposes per-file edits/dispositions, and the implementation validates the response before writes. Processed notes are deleted only after the corresponding successful work; partial results and retained notes are reported for retry/diagnosis. Direct MID write and delete tools are available to managers, with destructive deletion requiring confirm=true.",
+        "sources": [
+          "bank_tools",
+          "consolidator"
+        ]
+      },
+      {
+        "text": "Delete: SHORT notes have no ordinary single-note delete operation in the inspected agent tool set; administrative garbage collection is a separate maintenance path. MID provides confirmed file deletion, but deletion is subject to the write-sink route and is not a general guarantee about copies in backups or derived LONG indexes. Space deletion is an explicit destructive operator action. LONG supports document and memory lifecycle tools, including document deletion, while archive projection maintains independently retained MID preimages; source deletion, graph cleanup, backups, and restored copies therefore have distinct lifecycle boundaries.",
+        "sources": [
+          "live_tools",
+          "bank_tools",
+          "graph_tools",
+          "graph",
+          "archive",
+          "security"
+        ]
+      },
+      {
+        "text": "Retrieval: SHORT reads newest-first with category, agent, and since filters; short_search is case-insensitive substring search over note content and also sorts newest-first. MID can list/read one or all Markdown bank files. LONG query embeds the query and searches graph and vector projections without a generative chat completion; graph entity search uses full-text search with a CONTAINS fallback, and vector search validates the memory namespace on returned payloads. Returned long passages include source section context and document metadata, but callers must consult the current MID source for authoritative current state.",
+        "sources": [
+          "live",
+          "live_tools",
+          "bank_tools",
+          "graph_tools",
+          "graph",
+          "vector",
+          "readme",
+          "agent_setup"
+        ]
+      },
+      {
+        "text": "Scope: within one deployment, tool access checks the authenticated token's space allowlist and permission level; space_id is validated before access. The official security contract is explicit that the OSS product is mono-tenant and a space allowlist is not a tenant boundary. Project Mesh can coordinate one logical project across two paired deployments, using signed invitations and full-mesh all-ACK writes; it does not claim quorum semantics, offline CRDT merging, or multi-tenant isolation.",
+        "sources": [
+          "auth",
+          "security",
+          "mesh",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Provenance and evidence: SHORT note metadata records agent identity, timestamp, category, tags, and space; Hivemind-specific provenance enrichment can attach origin information. Consolidation preserves disposition counters and application history, but the inspected contract does not make model-written handbook claims independently true. LONG documents retain source path, source hash, ingestion status, and chunk/section context, and graph relations identify their actual endpoints and direction. These fields help locate source material; they do not certify that extracted claims are entailed or current.",
+        "sources": [
+          "live",
+          "consolidator",
+          "graph",
+          "vector",
+          "readme"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: SHORT read/search scan objects under a space prefix and then filter/sort in application code. Consolidation is batched, has asynchronous status/queue reporting and per-job counters, and different spaces can run concurrently while one space is serialized. LONG uses graph full-text indexes and vector search; source exposes namespace-specific collection identity and bounded result limits. The service provides health, status, and audit surfaces, while some job/audit views are process-local or diagnostic rather than durable records. No latency, token, cost, or storage efficiency was measured here.",
+        "sources": [
+          "live",
+          "bank_tools",
+          "consolidator",
+          "graph",
+          "vector",
+          "security",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention — unmeasured. SHORT text search and LONG hybrid graph/vector retrieval exist; no answer or abstention workload was scored.",
+        "sources": [
+          "live",
+          "graph",
+          "vector",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured. MID allows structured edits and direct manager changes; no correction challenge set was run.",
+        "sources": [
+          "consolidator",
+          "bank_tools",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Deletion leakage — unmeasured. Note, bank, document, space, and retained backup lifecycles are separate; no deletion or restore probe was run.",
+        "sources": [
+          "bank_tools",
+          "graph",
+          "archive",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Scope-isolation leakage — unmeasured. The product documents space access checks and a mono-tenant deployment boundary; no cross-space or cross-deployment probe was run.",
+        "sources": [
+          "auth",
+          "security",
+          "mesh",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Evidence support precision and citation coverage — unmeasured. LONG retains source metadata and section context; no extracted claim was adjudicated against source evidence.",
+        "sources": [
+          "graph",
+          "vector",
+          "consolidator",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Retrieval latency and write-to-recall delay — unmeasured. The code exposes statuses and operation counters; no workload was timed.",
+        "sources": [
+          "bank_tools",
+          "consolidator",
+          "graph",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Tokens, cost, and storage efficiency — unmeasured. Consolidation and embeddings may use configured inference services, but no token/cost totals or storage measurements were collected.",
+        "sources": [
+          "consolidator",
+          "vector",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected the pinned README and selected architecture, SHORT, MID, LONG, auth, and deployment-contract paths. It does not exhaustively review every operator path, provider adapter, or deployment configuration.",
+        "sources": [
+          "readme",
+          "architecture",
+          "auth",
+          "security"
+        ]
+      },
+      {
+        "text": "Hivemind, its tests, and benchmark workloads were not run. Source review cannot establish deployed correctness, answer quality, cross-space isolation, physical erasure across backups, latency, token use, cost, or storage efficiency.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "The source and docs describe different operational authorities across SHORT, MID, and LONG. In particular, LONG is explicitly derived and non-authoritative; current project decisions should be checked in current MID files and recent SHORT notes.",
+        "sources": [
+          "architecture",
+          "agent_setup",
+          "readme"
+        ]
+      },
+      {
+        "text": "OSS is mono-tenant. Token space allowlists restrict accessible spaces for a credential but do not create tenant isolation between unrelated customers sharing one deployment.",
+        "sources": [
+          "security",
+          "readme",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The inspected retrieval source returns source references and context but does not establish semantic correctness of extraction, completeness of retrieved evidence, or model abstention behavior.",
+        "sources": [
+          "graph",
+          "vector",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Hivemind runtime, tests, or benchmark workload was executed. Source observations are not measurements, and no metric values are produced.",
+      "metric_definitions": "../../METRICS.md",
+      "execution_status_record": "../../results/initial-baselines-status.json",
+      "fixture": "../../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

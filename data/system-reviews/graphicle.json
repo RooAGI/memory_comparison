@@ -1,0 +1,348 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 270,
+    "slug": "graphicle",
+    "name": "Graphicle",
+    "repository": "https://github.com/Graphicle-AI/graphicle",
+    "listed_repository": "https://github.com/Graphicle-AI/graphicle",
+    "branch": "main",
+    "revision": "b0bb41407d1ffe863221181112656c28c483046c",
+    "reviewed_at": "2026-11-25T21:30:39Z",
+    "review_timezone": "UTC (2026-11-25 13:30:39 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Graphicle is a local Rust application that combines a code graph, project documents and sessions, reviewed memory, MCP tools, a CLI, and a browser app. Agent-proposed memories remain drafts until approval; retrieval can return source excerpts and reviewed memories with citations. This is a source review, not a runtime evaluation.",
+    "atlas_locator": {
+      "ordinal": 270,
+      "name": "Graphicle",
+      "slug": "graphicle",
+      "listed_repository": "https://github.com/Graphicle-AI/graphicle",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/graphicle.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "catalog_position": {
+      "ordinal": 270,
+      "name": "Graphicle",
+      "slug": "graphicle"
+    },
+    "listed_repository_locator": "https://github.com/Graphicle-AI/graphicle",
+    "catalog_source_url": "../data/memory-systems.json",
+    "contact": {
+      "email": "info@karlexai.com",
+      "source_url": "https://www.karlex.ai/graphicle",
+      "checked_urls": [
+        "https://github.com/Graphicle-AI/graphicle/blob/b0bb41407d1ffe863221181112656c28c483046c/README.md",
+        "https://github.com/Graphicle-AI/graphicle/blob/b0bb41407d1ffe863221181112656c28c483046c/SECURITY.md",
+        "https://www.karlex.ai/graphicle"
+      ],
+      "note": "The official project website publishes info@karlexai.com. The pinned README and SECURITY.md were also checked; neither was used as an email source. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": "info@karlexai.com",
+    "contact_email_source_url": "https://www.karlex.ai/graphicle",
+    "contact_email_checked_sources": [
+      "https://github.com/Graphicle-AI/graphicle/blob/b0bb41407d1ffe863221181112656c28c483046c/README.md",
+      "https://github.com/Graphicle-AI/graphicle/blob/b0bb41407d1ffe863221181112656c28c483046c/SECURITY.md",
+      "https://www.karlex.ai/graphicle"
+    ],
+    "sources": [
+      {
+        "id": "roster",
+        "label": "Curated catalog identity and listed locator",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[269], ordinal 270; identity, slug, explicit listed repository locator, pinned Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/graphicle.md",
+        "symbol": "Curated identity and locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/graphicle.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official Graphicle upstream repository page",
+        "path": "repository page",
+        "symbol": "Canonical Graphicle-AI/graphicle repository; default branch main",
+        "url": "https://github.com/Graphicle-AI/graphicle"
+      },
+      {
+        "id": "head",
+        "label": "Official GitHub current main commit API",
+        "path": "main commit",
+        "symbol": "Current full main head b0bb41407d1ffe863221181112656c28c483046c; commit timestamp 2026-11-21T12:14:08Z",
+        "url": "https://api.github.com/repos/Graphicle-AI/graphicle/commits/main"
+      },
+      {
+        "id": "readme",
+        "label": "README at reviewed head",
+        "path": "README.md",
+        "symbol": "Project purpose, Rust program/components, local deployment, source-cited context, review-gated memory, and upstream-reported pre-release results",
+        "url": "https://github.com/Graphicle-AI/graphicle/blob/b0bb41407d1ffe863221181112656c28c483046c/README.md"
+      },
+      {
+        "id": "mcp",
+        "label": "MCP architecture and operation guide at reviewed head",
+        "path": "docs/mcp.md",
+        "symbol": "Server/client modes, recall tools, reviewed memory lifecycle, project/workspace access, scope constraints, context budget, and workspace caveats",
+        "url": "https://github.com/Graphicle-AI/graphicle/blob/b0bb41407d1ffe863221181112656c28c483046c/docs/mcp.md"
+      },
+      {
+        "id": "recall",
+        "label": "Structured memory selector at reviewed head",
+        "path": "crates/graphicle-memory/src/recall.rs",
+        "symbol": "Metadata, validation, states, semantic scope and validity filters, identity/lexical search, BM25-like weighting, and selection limits",
+        "url": "https://github.com/Graphicle-AI/graphicle/blob/b0bb41407d1ffe863221181112656c28c483046c/crates/graphicle-memory/src/recall.rs"
+      },
+      {
+        "id": "structured",
+        "label": "Structured memory lifecycle at reviewed head",
+        "path": "crates/graphicle/src/structured_memory.rs",
+        "symbol": "Recall metadata attachment, revision-checked same-scope supersession, validity intervals, and context eligibility",
+        "url": "https://github.com/Graphicle-AI/graphicle/blob/b0bb41407d1ffe863221181112656c28c483046c/crates/graphicle/src/structured_memory.rs"
+      },
+      {
+        "id": "memory",
+        "label": "Memory storage and provenance at reviewed head",
+        "path": "crates/graphicle/src/memory.rs",
+        "symbol": "Source authorization and SHA-256 validation, citation dependency tracking, optimistic revisions, append revision records, drafts/review, and stale-source handling",
+        "url": "https://github.com/Graphicle-AI/graphicle/blob/b0bb41407d1ffe863221181112656c28c483046c/crates/graphicle/src/memory.rs"
+      },
+      {
+        "id": "deletion",
+        "label": "Deletion and receipt implementation at reviewed head",
+        "path": "crates/graphicle/src/deletion.rs",
+        "symbol": "Controlled source/project forgetting, derived artifact cleanup, state comparison and hash-chained receipts; documented exclusions",
+        "url": "https://github.com/Graphicle-AI/graphicle/blob/b0bb41407d1ffe863221181112656c28c483046c/crates/graphicle/src/deletion.rs"
+      },
+      {
+        "id": "security",
+        "label": "Security policy at reviewed head",
+        "path": "SECURITY.md",
+        "symbol": "Supported release policy and private vulnerability reporting; checked for a published contact email",
+        "url": "https://github.com/Graphicle-AI/graphicle/blob/b0bb41407d1ffe863221181112656c28c483046c/SECURITY.md"
+      },
+      {
+        "id": "website",
+        "label": "Official Graphicle project website",
+        "path": "https://www.karlex.ai/graphicle",
+        "symbol": "Product description and published contact info@karlexai.com",
+        "url": "https://www.karlex.ai/graphicle"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status record",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Graphicle as a Rust port of Graphify with project memory, delivered as a local program for coding agents. Its components include the graphicle CLI/server, graph and memory crates, an app, and SDKs; the README describes no account or telemetry for local use.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      },
+      {
+        "text": "The repository identifies KarLex AI, Inc. as copyright holder, while the project page publishes its contact email. This review does not infer individual maintainer identity from commit metadata.",
+        "sources": [
+          "readme",
+          "website"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Graphicle combines a parsed code graph with source documents, reviewed memories, and captured Claude Code/Codex sessions. Its README describes a local application with one data folder, CLI, browser app, and MCP server; the documented default persistence is SQLite.",
+        "sources": [
+          "readme",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Memory records are stored per repository with a current row and a revision journal. Structured recall metadata has a named identity, aliases, optional semantic scopes, active/historical/resolved/open-question state, validity interval, and supersession reference. This semantic scope is distinct from authorization to a project or source.",
+        "sources": [
+          "memory",
+          "recall",
+          "structured"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: MCP learning tools propose memory drafts with quotes that must match current authorized source text. Drafts are withheld from recall until a person with approval permission reviews them; direct member-reviewed notes follow a separate approve-authorized path.",
+        "sources": [
+          "mcp",
+          "memory"
+        ]
+      },
+      {
+        "text": "Update and correction: writes use optimistic revision checks and append revision records. Structured supersession requires an accessible current reviewed target, matching semantic scopes, active states, an expected revision, and an explicit effective time; the old validity interval closes at the replacement's start.",
+        "sources": [
+          "memory",
+          "structured"
+        ]
+      },
+      {
+        "text": "Delete and forgetting: the code documents deletion of source documents, connectors, and projects, removes controlled derived artifacts, checks residue, and creates a hash-chained receipt. Its own contract excludes prior backups, provider retention of requests already sent, and copies exported before deletion; receipts report residue rather than hide it.",
+        "sources": [
+          "deletion"
+        ]
+      },
+      {
+        "text": "Retrieval: memory search supports exact whole-word identity matching against declared names/aliases and a separate explicit lexical discovery mode. Scope, state, and valid-time checks are eligibility filters; lexical mode uses term overlap with inverse document frequency weighting and results are capped by the requested limit. The MCP recall path combines code, documents, sessions, and reviewed memory into cited context within a token budget and does not call a model itself.",
+        "sources": [
+          "recall",
+          "mcp",
+          "readme"
+        ]
+      },
+      {
+        "text": "Freshness and evidence: cited quotes must occur in an authorized current source; memory records retain source identifiers, hashes, and dependencies. Reads verify repository-file content against SHA-256, and source changes can mark dependent memories stale and withhold them until refreshed and reviewed.",
+        "sources": [
+          "memory",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Operational observability: retrieval packets report selected memories/evidence, withheld unreviewed or stale counts, matching mode, temporal parameters, and explicitly state that semantic entailment was not verified. Workflow status exposes queued work and model usage; query logging is opt-in for graph queries. These are code/document interfaces, not measured usefulness.",
+        "sources": [
+          "structured",
+          "mcp"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "Source code exposes identity and lexical selection and cited context, but no benchmark responses were produced or scored.",
+        "sources": [
+          "recall",
+          "mcp",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Revision checks and effective-time supersession are implemented; no correction sequence or probes were run.",
+        "sources": [
+          "memory",
+          "structured",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Controlled deletion and receipts are implemented, but no fixture deletion or post-delete probe was run; documented external-copy limits remain.",
+        "sources": [
+          "deletion",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Project and credential access controls exist, but no cross-project or workspace isolation workload was run.",
+        "sources": [
+          "mcp",
+          "memory",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Exact source-quote validation and source citations are implemented; semantic entailment is explicitly not verified and no responses were adjudicated.",
+        "sources": [
+          "memory",
+          "structured",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No runtime timing samples were collected.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "The project has configurable context budgets and a local store, but no token, cost, or storage measurements were collected for this review.",
+        "sources": [
+          "mcp",
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The identity-only or lexical memory selector is not a semantic-entailment judge. The retrieval response explicitly sets semantic_entailment_verified to false; exact quote presence establishes source membership, not that the quote supports every generated interpretation.",
+        "sources": [
+          "recall",
+          "memory",
+          "structured"
+        ]
+      },
+      {
+        "text": "A project MCP connection constrains memory and document recall to its project, but its graph tools can address other projects accessible to the credential. Workspace recall searches up to eight accessible projects by default; a normal local MCP connection uses the saved credential, which may be the owner's key and can read all projects. Least-privilege credential setup matters.",
+        "sources": [
+          "mcp"
+        ]
+      },
+      {
+        "text": "Deletion receipts cover the state Graphicle controls; earlier backups, provider-side retention and previously exported copies are outside the stated guarantee. No runtime isolation or deletion probe was run in this review.",
+        "sources": [
+          "deletion",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Graphicle runtime, test suite, or benchmark workload was run. The official README contains upstream-reported figures for particular pre-release versions and configurations; they are not results from this review or this pinned main revision. Project metrics, fixture, and status files define the local evaluation protocol and current not_run state.",
+      "sources": [
+        "readme",
+        "metrics",
+        "fixture",
+        "status"
+      ]
+    }
+  }
+}

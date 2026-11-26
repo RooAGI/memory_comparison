@@ -1,0 +1,396 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "artex",
+    "name": "ARTEX",
+    "repository": "https://github.com/BaaRai/ARTEX",
+    "branch": "main",
+    "revision": "3cb06383fd99ffe7686abe1d375de11da7cfad54",
+    "reviewed_at": "2026-11-24T21:41:28Z",
+    "review_timezone": "UTC (2026-11-24 13:41:28 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/BaaRai/ARTEX/blob/3cb06383fd99ffe7686abe1d375de11da7cfad54/README.md","checked_urls":["https://github.com/BaaRai/ARTEX/blob/3cb06383fd99ffe7686abe1d375de11da7cfad54/README.md","https://github.com/BaaRai/ARTEX/blob/3cb06383fd99ffe7686abe1d375de11da7cfad54/SECURITY.md","https://github.com/BaaRai/ARTEX/blob/3cb06383fd99ffe7686abe1d375de11da7cfad54/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "ARTEX is a self-hosted, LLM-driven penetration-testing application whose persistent memory includes a shared asset graph, per-task exploration graphs, activity traces, and an optional evidence-gated lesson library. Source inspection shows how these records are written, selected, and framed for agents; no ARTEX runtime or benchmark was run.",
+    "atlas_locator": {
+      "ordinal": 72,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/artex.md",
+      "listed_repository": "https://github.com/BaaRai/ARTEX"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/BaaRai/ARTEX/blob/3cb06383fd99ffe7686abe1d375de11da7cfad54/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/BaaRai/ARTEX/blob/3cb06383fd99ffe7686abe1d375de11da7cfad54/README.md",
+      "https://github.com/BaaRai/ARTEX/blob/3cb06383fd99ffe7686abe1d375de11da7cfad54/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical public repository",
+        "path": "repository",
+        "symbol": "official ARTEX repository page",
+        "url": "https://github.com/BaaRai/ARTEX"
+      },
+      {
+        "id": "head",
+        "label": "Verified current main head",
+        "path": "commit",
+        "symbol": "full current head 3cb06383fd99ffe7686abe1d375de11da7cfad54",
+        "url": "https://github.com/BaaRai/ARTEX/commit/3cb06383fd99ffe7686abe1d375de11da7cfad54"
+      },
+      {
+        "id": "feed",
+        "label": "Official main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "latest main entry and update time",
+        "url": "https://github.com/BaaRai/ARTEX/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "project type, dual-graph overview, evidence and operating model",
+        "url": "https://github.com/BaaRai/ARTEX/blob/3cb06383fd99ffe7686abe1d375de11da7cfad54/README.md"
+      },
+      {
+        "id": "schema",
+        "label": "Database schema",
+        "path": "db/schema.sql",
+        "symbol": "exploration graph, activity, lessons, scope and coverage tables/indexes",
+        "url": "https://github.com/BaaRai/ARTEX/blob/3cb06383fd99ffe7686abe1d375de11da7cfad54/db/schema.sql"
+      },
+      {
+        "id": "exploration",
+        "label": "Exploration graph store",
+        "path": "db/exploration.go",
+        "symbol": "typed-node writes, scoped reads, intent cancellation and node retention",
+        "url": "https://github.com/BaaRai/ARTEX/blob/3cb06383fd99ffe7686abe1d375de11da7cfad54/db/exploration.go"
+      },
+      {
+        "id": "sources",
+        "label": "Cross-task exploration reads",
+        "path": "db/exploration_sources.go",
+        "symbol": "direct-source inheritance, terminal intent filtering and inherited provenance",
+        "url": "https://github.com/BaaRai/ARTEX/blob/3cb06383fd99ffe7686abe1d375de11da7cfad54/db/exploration_sources.go"
+      },
+      {
+        "id": "lessons",
+        "label": "Lesson extraction and selection",
+        "path": "db/lessons.go",
+        "symbol": "evidence-gated extraction, retraction, ranking, evidence counts and rendering",
+        "url": "https://github.com/BaaRai/ARTEX/blob/3cb06383fd99ffe7686abe1d375de11da7cfad54/db/lessons.go"
+      },
+      {
+        "id": "rsi-doc",
+        "label": "RSI lesson documentation",
+        "path": "docs/rsi-lessons.md",
+        "symbol": "modes, extraction rules, selection scope, limits and proposed comparison measures",
+        "url": "https://github.com/BaaRai/ARTEX/blob/3cb06383fd99ffe7686abe1d375de11da7cfad54/docs/rsi-lessons.md"
+      },
+      {
+        "id": "server-lessons",
+        "label": "Task lesson integration",
+        "path": "server/lessons.go",
+        "symbol": "off/shadow/inject mode and lesson usage logging",
+        "url": "https://github.com/BaaRai/ARTEX/blob/3cb06383fd99ffe7686abe1d375de11da7cfad54/server/lessons.go"
+      },
+      {
+        "id": "envelope",
+        "label": "Derived-data prompt envelope",
+        "path": "agent/data_envelope.go",
+        "symbol": "nonce-framed derived content and lesson block treatment",
+        "url": "https://github.com/BaaRai/ARTEX/blob/3cb06383fd99ffe7686abe1d375de11da7cfad54/agent/data_envelope.go"
+      },
+      {
+        "id": "compactor",
+        "label": "Exploration graph compactor",
+        "path": "agent/compaction.go",
+        "symbol": "hot/cold graph maintenance and background digest generation",
+        "url": "https://github.com/BaaRai/ARTEX/blob/3cb06383fd99ffe7686abe1d375de11da7cfad54/agent/compaction.go"
+      },
+      {
+        "id": "coverage",
+        "label": "Coverage ledger",
+        "path": "db/coverage_ledger.go",
+        "symbol": "current coverage upsert and append-only history",
+        "url": "https://github.com/BaaRai/ARTEX/blob/3cb06383fd99ffe7686abe1d375de11da7cfad54/db/coverage_ledger.go"
+      },
+      {
+        "id": "task-delete",
+        "label": "Task deletion",
+        "path": "db/tasks.go",
+        "symbol": "task cascade cleanup behavior",
+        "url": "https://github.com/BaaRai/ARTEX/blob/3cb06383fd99ffe7686abe1d375de11da7cfad54/db/tasks.go"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy checked for contact",
+        "path": "SECURITY.md",
+        "symbol": "private GitHub vulnerability-report form; no email published",
+        "url": "https://github.com/BaaRai/ARTEX/blob/3cb06383fd99ffe7686abe1d375de11da7cfad54/SECURITY.md"
+      },
+      {
+        "id": "contact-readme",
+        "label": "Official README checked for contact",
+        "path": "README.md",
+        "symbol": "checked for a published contact email",
+        "url": "https://github.com/BaaRai/ARTEX/blob/3cb06383fd99ffe7686abe1d375de11da7cfad54/README.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "benchmark domains and protocol; not an ARTEX result",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "shared status record; no ARTEX run asserted",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned workload only; no ARTEX workload was run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated system roster",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 72 identity, listed locator and attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas-entry",
+        "label": "Roster-provided Atlas attribution",
+        "path": "content/systems/artex.md",
+        "symbol": "identity and attribution only; descriptions, marks and layout excluded from assessment",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/artex.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents ARTEX as a self-hosted, LLM-driven penetration-testing application with a Go backend, embedded Next.js interface, PostgreSQL, model-provider integrations, planner/worker agents, and real tool execution. The memory structures reviewed here are part of that application, rather than a standalone hosted memory service.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README describes two linked graph layers. A company-owned asset graph stores shared domains, IPs, services, applications and endpoints. Each task has an exploration graph of typed goal, intent, fact, finding, hint and digest nodes connected by lineage edges; anchors associate those nodes with assets. The planner and workers read and write the task graph while the asset graph remains shared across tasks.",
+        "sources": [
+          "readme",
+          "schema"
+        ]
+      },
+      {
+        "text": "In PostgreSQL, `explorations` own `exploration_nodes` with JSONB payloads, kind, state, priority, origin, ownership and timestamps. `exploration_edges` represent `spawns`, `derived_from`, `yields`, `proves` and `covers`; `exploration_anchors` connect nodes to asset rows. Activity records retain worker/tool events, summaries, details, metadata and token-use fields. Schema indexes cover exploration/kind reads, open-intent priority and activity pagination/lookups.",
+        "sources": [
+          "schema",
+          "exploration"
+        ]
+      },
+      {
+        "text": "A separate RSI lesson library stores short cue/action records with kind, optional task-category and company scope, status and a stable deduplication key. Evidence rows identify their finding or retest source, detail and withdrawal time; usage rows record the task and shadow/inject mode. This library is deterministic in the inspected implementation and does not ask an LLM to invent the lesson.",
+        "sources": [
+          "schema",
+          "lessons",
+          "rsi-doc"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: agent tools and task workflows add typed nodes and edges to the task's exploration. Node payloads are JSONB; optional asset anchors are checked for fact writes. Terminal task outcomes, finding disposition changes and completed retests can trigger lesson extraction. Extraction creates a candidate only when it has a cue, action and source evidence, and deduplicates equivalent lessons by kind, scope, cue and action.",
+        "sources": [
+          "exploration",
+          "schema",
+          "lessons",
+          "rsi-doc"
+        ]
+      },
+      {
+        "text": "Update/correction: a changed finding disposition or completed retest reruns deterministic extraction. Repeated extraction is idempotent. When a disposition reverses, the old evidence row is marked withdrawn; a lesson with no remaining live support is retired. Reconfirmation may restore evidence. This corrects the lesson library's support state; it does not demonstrate correction accuracy across agent behavior.",
+        "sources": [
+          "lessons",
+          "rsi-doc",
+          "server-lessons"
+        ]
+      },
+      {
+        "text": "Delete/retirement: open, running or paused intents support a soft-delete state that retains the node, outputs and lineage with a reason. The cancellation path can physically remove an intent and descendants supported only through it, while protecting goals, origin facts and shared descendants. Task deletion cascades through per-task exploration nodes, edges and activity. These paths differ; the inspected code does not establish complete physical erasure of all derived content or deployment backups.",
+        "sources": [
+          "exploration",
+          "schema",
+          "task-delete"
+        ]
+      },
+      {
+        "text": "Retrieval: task graph reads are newest-first and paginated by kind; graph overviews and activity traces supply current task context. Related-task helpers expose direct sources only and mark inherited records as read-only provenance. Lesson selection filters by company/category, orders matching scope first, then positive, negative and caution lessons, then support and recency. The task agent bundle selects up to eight lessons and renders a block capped at 1,800 characters.",
+        "sources": [
+          "exploration",
+          "sources",
+          "lessons",
+          "server-lessons",
+          "rsi-doc"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Source exposes typed graph reads and optional lesson selection; no answerability or abstention probes were run.",
+        "sources": [
+          "exploration",
+          "lessons",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Finding dispositions retract or restore lesson evidence, but no correction fixture or answer scoring was run.",
+        "sources": [
+          "lessons",
+          "rsi-doc",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Intent cancellation and task cascades are source-visible; no post-delete probes or remnant audit were run.",
+        "sources": [
+          "exploration",
+          "task-delete",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Task graphs are exploration-bound and lesson retrieval has company/category predicates; no forbidden cross-scope probes were run.",
+        "sources": [
+          "schema",
+          "sources",
+          "lessons",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Graph lineage, activity, anchors and lesson evidence IDs are retained; no generated claims were adjudicated.",
+        "sources": [
+          "schema",
+          "coverage",
+          "lessons",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "SQL indexes, paging and bounded lesson selection are visible in code; no latency timings were collected.",
+        "sources": [
+          "schema",
+          "exploration",
+          "lessons",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Writes and reads are implemented, but no acknowledged-write probe schedule was executed.",
+        "sources": [
+          "exploration",
+          "lessons",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "Activity schema includes provider token-use fields and lessons have a bounded prompt rendering path; no accounting was done.",
+        "sources": [
+          "schema",
+          "envelope",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Schema and indexes describe stored structures; no attributable persistent byte count was collected.",
+        "sources": [
+          "schema",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a selected source review at one verified commit. ARTEX, its services, tests and benchmark workloads were not run. Code structure does not establish retrieval quality, calibrated abstention, timely corrections, complete deletion, isolation under a deployment, or latency/cost/storage behavior.",
+        "sources": [
+          "head",
+          "readme",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "The graph combines per-task reasoning with a globally shared company asset graph. Related-task inheritance is limited to direct relations and read-only tagging in the helper; the actual host, authorization, and database deployment still determine operational isolation. This review did not audit every API, query or deployment boundary.",
+        "sources": [
+          "readme",
+          "sources",
+          "schema"
+        ]
+      },
+      {
+        "text": "RSI lessons are off by default. Shadow mode logs what would be shown without changing prompts; inject mode appends derived content. The lesson block includes evidence identifiers but the prompt envelope is advisory to the model, not an enforcement mechanism. The documentation itself cautions that support counts are not causal evidence and that the layer has no time-based decay.",
+        "sources": [
+          "server-lessons",
+          "rsi-doc",
+          "envelope",
+          "lessons"
+        ]
+      },
+      {
+        "text": "Compaction maintains graph hot/cold state synchronously on planner rounds and may launch background LLM digest generation after configured thresholds, with per-task concurrency/cooldown guards. This design can summarize older graph material, but this review did not inspect every compaction persistence path or test whether digests preserve each fact needed by a later query.",
+        "sources": [
+          "compactor",
+          "schema"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No ARTEX runtime, tests, or benchmark workload was executed. The metric definitions, fixture and shared execution-status record describe the project's proposed protocol; they are not ARTEX results.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      }
+    ]
+  }
+}

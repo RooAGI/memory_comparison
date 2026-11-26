@@ -1,0 +1,304 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "agent-working-memory",
+    "name": "AgentWorkingMemory",
+    "repository": "https://github.com/CompleteIdeas/agent-working-memory",
+    "branch": "master",
+    "revision": "e1c8705849f7f72ee8106c440d796337d17d1518",
+    "reviewed_at": "2026-11-24T19:26:22Z",
+    "review_timezone": "UTC (2026-11-24 11:26:22 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "AgentWorkingMemory (AWM) is a local-first agent memory application with selective writes, multi-stage retrieval, correction and retraction flows, and local or server database backends. This is a source review, not a runtime or performance assessment.",
+    "atlas_locator": {
+      "ordinal": 32,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agent-working-memory.md",
+      "listed_repository": "https://github.com/CompleteIdeas/agent-working-memory"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/CompleteIdeas/agent-working-memory/blob/e1c8705849f7f72ee8106c440d796337d17d1518/README.md",
+      "note": "Checked the official repository README for a published contact email; none was found. No address was inferred."
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical upstream repository",
+        "path": "repository",
+        "symbol": "CompleteIdeas/agent-working-memory; repository page identifies master as default branch",
+        "url": "https://github.com/CompleteIdeas/agent-working-memory"
+      },
+      {
+        "id": "head",
+        "label": "Verified current head",
+        "path": "commit",
+        "symbol": "master head e1c8705849f7f72ee8106c440d796337d17d1518",
+        "url": "https://github.com/CompleteIdeas/agent-working-memory/commit/e1c8705849f7f72ee8106c440d796337d17d1518"
+      },
+      {
+        "id": "readme",
+        "label": "Official AWM README",
+        "path": "README.md",
+        "symbol": "project identity and documented package/integration overview",
+        "url": "https://github.com/CompleteIdeas/agent-working-memory/blob/e1c8705849f7f72ee8106c440d796337d17d1518/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Architecture guide",
+        "path": "docs/architecture.md",
+        "symbol": "entry points, storage schema, retrieval/consolidation flow and backend overview",
+        "url": "https://github.com/CompleteIdeas/agent-working-memory/blob/e1c8705849f7f72ee8106c440d796337d17d1518/docs/architecture.md"
+      },
+      {
+        "id": "mcp",
+        "label": "MCP interface",
+        "path": "src/mcp.ts",
+        "symbol": "tool surface, setup, agent identity, write pipeline, logging and sidecar integration",
+        "url": "https://github.com/CompleteIdeas/agent-working-memory/blob/e1c8705849f7f72ee8106c440d796337d17d1518/src/mcp.ts"
+      },
+      {
+        "id": "write",
+        "label": "Shared write pipeline",
+        "path": "src/core/write-pipeline.ts",
+        "symbol": "salience, novelty, reinforce/create/supersede behavior, async embedding and redaction",
+        "url": "https://github.com/CompleteIdeas/agent-working-memory/blob/e1c8705849f7f72ee8106c440d796337d17d1518/src/core/write-pipeline.ts"
+      },
+      {
+        "id": "activation",
+        "label": "Activation engine",
+        "path": "src/engine/activation.ts",
+        "symbol": "candidate retrieval, scoring, graph walk, reranking, gates and event logging",
+        "url": "https://github.com/CompleteIdeas/agent-working-memory/blob/e1c8705849f7f72ee8106c440d796337d17d1518/src/engine/activation.ts"
+      },
+      {
+        "id": "retraction",
+        "label": "Retraction engine",
+        "path": "src/engine/retraction.ts",
+        "symbol": "soft invalidation, optional correction and bounded confidence propagation",
+        "url": "https://github.com/CompleteIdeas/agent-working-memory/blob/e1c8705849f7f72ee8106c440d796337d17d1518/src/engine/retraction.ts"
+      },
+      {
+        "id": "sqlite",
+        "label": "SQLite store",
+        "path": "src/storage/sqlite.ts",
+        "symbol": "SQLite/FTS5 persistence, WAL/cache configuration, engram schema and activation data",
+        "url": "https://github.com/CompleteIdeas/agent-working-memory/blob/e1c8705849f7f72ee8106c440d796337d17d1518/src/storage/sqlite.ts"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[31], ordinal 32: name, slug, listed repository locator and source_url attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas-entry",
+        "label": "Atlas source attribution from curated entry",
+        "path": "content/systems/agent-working-memory.md",
+        "symbol": "pinned source URL copied from curated catalog; used for attribution only",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agent-working-memory.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Planned benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository README describes AgentWorkingMemory as a local-first AI-agent memory application distributed as a Node.js package with MCP, HTTP, CLI, and Claude Code integration surfaces. This review makes no individual maintainer claim.",
+        "sources": [
+          "readme",
+          "mcp"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The architecture guide describes MCP and HTTP entry points over shared cognitive engines and SQLite/FTS5 storage. The MCP entry point registers memory and task tools and starts a hook sidecar; the guide says the MCP and HTTP entry points are not designed to run simultaneously against one database.",
+        "sources": [
+          "architecture",
+          "mcp"
+        ]
+      },
+      {
+        "text": "The engram schema includes agent ID, concept, content, tags, type/class, salience, confidence, access state, embedding and lifecycle stage; optional validity, question, slot, task and origin fields are also described. Associations connect engrams and episodes group related items.",
+        "sources": [
+          "architecture",
+          "sqlite"
+        ]
+      },
+      {
+        "text": "The default backend is SQLite with FTS5, WAL and a slim in-memory cache; the architecture guide also describes PGlite and Postgres backends. Backend parity and production behavior were not tested.",
+        "sources": [
+          "architecture",
+          "sqlite"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write uses the shared pipeline to redact configured sensitive patterns, evaluate novelty and salience, and create, reinforce an exact-concept match, or supersede a prior item under correction rules. Some low-salience writes are staged or discarded; embedding and connection work may continue asynchronously.",
+        "sources": [
+          "write",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Supersession creates a replacement engram and marks the prior one superseded. Retraction is a soft invalidation path: it can create a correction and invalidation edge and lower confidence in a bounded set of connected memories. A general hard-delete tool was not identified in the inspected MCP surface.",
+        "sources": [
+          "mcp",
+          "write",
+          "retraction"
+        ]
+      },
+      {
+        "text": "Retrieval embeds the query, obtains lexical and vector candidates, computes text/confidence/decay/association signals, walks graph links, reranks a bounded pool with a local cross-encoder, applies validity/supersession and agreement rules, and returns a limited result. Some calibrated abstention behavior is opt-in.",
+        "sources": [
+          "activation",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The schema and entry point expose activation events, retrieval feedback, staging events, structured logs and loop-lag monitoring. These are instrumentation paths, not measured results from this review.",
+        "sources": [
+          "architecture",
+          "activation",
+          "mcp",
+          "sqlite"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Multi-stage retrieval and agreement or optional calibrated gates are visible in code; no adjudicated answerable or unsupported probes were run.",
+        "sources": [
+          "activation",
+          "architecture",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Supersession, validity windows and retraction mechanisms exist; no correction or stale-value workload was measured.",
+        "sources": [
+          "write",
+          "activation",
+          "retraction",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Retraction marks a record invalid without hard deletion; the reviewed MCP surface did not establish general permanent-erasure coverage.",
+        "sources": [
+          "retraction",
+          "mcp",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Agent and session identifiers are used in memory flows, but this review did not test API authorization or cross-scope leakage.",
+        "sources": [
+          "mcp",
+          "architecture",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Origin and reference fields preserve some context, but a required validated evidence chain was not established.",
+        "sources": [
+          "architecture",
+          "write",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Parallel lexical/vector retrieval, local model scoring, and event latency fields are visible; no workload timings were collected.",
+        "sources": [
+          "activation",
+          "sqlite",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "Local models, SQLite configuration, and token/context helpers are present; no task-specific token, cost, or storage measurements were taken.",
+        "sources": [
+          "architecture",
+          "mcp",
+          "sqlite",
+          "metrics"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded inspection of selected documentation and source at one verified repository head. It did not establish runtime correctness, retrieval quality, deletion completeness, authorization, production reliability, or measured resource use.",
+        "sources": [
+          "head",
+          "readme",
+          "architecture",
+          "record"
+        ]
+      },
+      {
+        "text": "The repository documents multiple storage backends and configurable paths. Backend parity, every route-level scope check, lifecycle edge cases, and maintenance effects were not exhaustively audited.",
+        "sources": [
+          "architecture",
+          "mcp",
+          "sqlite"
+        ]
+      },
+      {
+        "text": "The checked official README did not publish a contact email. The contact record stores null and the exact checked README source URL; no address was inferred.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The curated roster and its pinned Atlas locator supplied ordinal, name, repository locator, and source attribution only; Atlas assessment descriptions, marks, and layout were excluded.",
+        "sources": [
+          "roster",
+          "atlas-entry"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status: not run for AgentWorkingMemory in this task. The project's metric definitions, status record, and planned fixture are separate from these source findings. No system execution, benchmark, or tests were run.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

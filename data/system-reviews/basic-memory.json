@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 88,
+    "slug": "basic-memory",
+    "name": "Basic Memory",
+    "repository": "https://github.com/basicmachines-co/basic-memory",
+    "listed_repository": "https://github.com/basicmachines-co/basic-memory",
+    "branch": "main",
+    "revision": "8d002c93fd5d68fbb9690c6de9b90792040dce1c",
+    "reviewed_at": "2026-11-24T23:21:12Z",
+    "review_timezone": "UTC (2026-11-24 15:21:12 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Basic Memory is a local-first knowledge management system in which Markdown notes are the durable source of truth and an indexed database provides structured graph, full-text, and optional semantic retrieval. Humans and MCP clients can read and update the same notes; local and hosted deployments share the note model while using different storage and routing adapters.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/basic-memory.md"
+    },
+    "contact": {
+      "email": "hello@basicmachines.co",
+      "source_url": "https://github.com/basicmachines-co/basic-memory/blob/8d002c93fd5d68fbb9690c6de9b90792040dce1c/SECURITY.md",
+      "note": "The official security policy publishes this address for vulnerability reports; the official README was also checked and publishes no contact email."
+    },
+    "contact_email": "hello@basicmachines.co",
+    "contact_checked_sources": [
+      "https://github.com/basicmachines-co/basic-memory/blob/8d002c93fd5d68fbb9690c6de9b90792040dce1c/README.md",
+      "https://github.com/basicmachines-co/basic-memory/blob/8d002c93fd5d68fbb9690c6de9b90792040dce1c/SECURITY.md"
+    ],
+    "sources": [
+      {"id":"catalog","label":"Curated catalog identity and ordinal","path":"data/memory-systems.json","symbol":"systems[87], position 88; name, slug, listed repository, and Atlas attribution only","url":"../data/memory-systems.json"},
+      {"id":"atlas","label":"Atlas attribution only","path":"content/systems/basic-memory.md","symbol":"Roster source URL pinned at Atlas revision 19199a4fc249e89c0793be06f0b166b358089ba0","url":"https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/basic-memory.md"},
+      {"id":"repo","label":"Official GitHub repository","path":"","symbol":"Canonical basicmachines-co/basic-memory repository; main is the default branch","url":"https://github.com/basicmachines-co/basic-memory"},
+      {"id":"head-feed","label":"Official main commit feed","path":"","symbol":"Full current main head 8d002c93fd5d68fbb9690c6de9b90792040dce1c","url":"https://github.com/basicmachines-co/basic-memory/commits/main.atom"},
+      {"id":"head","label":"Reviewed upstream head","path":"","symbol":"Full reviewed commit SHA 8d002c93fd5d68fbb9690c6de9b90792040dce1c; shallow checkout matched","url":"https://github.com/basicmachines-co/basic-memory/commit/8d002c93fd5d68fbb9690c6de9b90792040dce1c"},
+      {"id":"readme","label":"Pinned official README","path":"README.md","symbol":"Product, deployment, integrations, telemetry and logging descriptions; contact check","url":"https://github.com/basicmachines-co/basic-memory/blob/8d002c93fd5d68fbb9690c6de9b90792040dce1c/README.md"},
+      {"id":"security","label":"Pinned official security policy","path":"SECURITY.md","symbol":"Local-first threat model, access-control limit, and published vulnerability contact","url":"https://github.com/basicmachines-co/basic-memory/blob/8d002c93fd5d68fbb9690c6de9b90792040dce1c/SECURITY.md"},
+      {"id":"architecture","label":"Architecture documentation","path":"docs/ARCHITECTURE.md","symbol":"Entry points, composition roots, dependency layers, accepted-note persistence boundary","url":"https://github.com/basicmachines-co/basic-memory/blob/8d002c93fd5d68fbb9690c6de9b90792040dce1c/docs/ARCHITECTURE.md"},
+      {"id":"note-format","label":"Note format documentation","path":"docs/NOTE-FORMAT.md","symbol":"Markdown source of truth, YAML frontmatter, observation and relation syntax, timestamps","url":"https://github.com/basicmachines-co/basic-memory/blob/8d002c93fd5d68fbb9690c6de9b90792040dce1c/docs/NOTE-FORMAT.md"},
+      {"id":"domain","label":"Domain schemas","path":"src/basic_memory/schemas/base.py","symbol":"Entity, observation and directed relation value models","url":"https://github.com/basicmachines-co/basic-memory/blob/8d002c93fd5d68fbb9690c6de9b90792040dce1c/src/basic_memory/schemas/base.py"},
+      {"id":"models","label":"Knowledge database models","path":"src/basic_memory/models/knowledge.py","symbol":"Project-owned entities, observations, relations, checksums, timestamps, actor IDs and temporal/search projections","url":"https://github.com/basicmachines-co/basic-memory/blob/8d002c93fd5d68fbb9690c6de9b90792040dce1c/src/basic_memory/models/knowledge.py"},
+      {"id":"scoped-target","label":"MCP project routing boundary","path":"src/basic_memory/mcp/note_targets.py","symbol":"Project-qualified routing, exact target resolution, and path containment check","url":"https://github.com/basicmachines-co/basic-memory/blob/8d002c93fd5d68fbb9690c6de9b90792040dce1c/src/basic_memory/mcp/note_targets.py"},
+      {"id":"write","label":"MCP note write tool","path":"src/basic_memory/mcp/tools/write.py","symbol":"bm_write create/replace semantics and expected-checksum guard","url":"https://github.com/basicmachines-co/basic-memory/blob/8d002c93fd5d68fbb9690c6de9b90792040dce1c/src/basic_memory/mcp/tools/write.py"},
+      {"id":"edit","label":"MCP note edit tool","path":"src/basic_memory/mcp/tools/edit.py","symbol":"Exact-target append/prepend/find-replace/section/metadata editing and checksum guard","url":"https://github.com/basicmachines-co/basic-memory/blob/8d002c93fd5d68fbb9690c6de9b90792040dce1c/src/basic_memory/mcp/tools/edit.py"},
+      {"id":"delete","label":"MCP note delete tool","path":"src/basic_memory/mcp/tools/delete.py","symbol":"Note and recursive-directory deletion contract with checksum guard","url":"https://github.com/basicmachines-co/basic-memory/blob/8d002c93fd5d68fbb9690c6de9b90792040dce1c/src/basic_memory/mcp/tools/delete.py"},
+      {"id":"search","label":"MCP ranked search tool","path":"src/basic_memory/mcp/tools/ranked_search.py","symbol":"Search modes, filters, paging, and result controls","url":"https://github.com/basicmachines-co/basic-memory/blob/8d002c93fd5d68fbb9690c6de9b90792040dce1c/src/basic_memory/mcp/tools/ranked_search.py"},
+      {"id":"context","label":"MCP graph context tool","path":"src/basic_memory/mcp/tools/context.py","symbol":"Bounded relation traversal, pagination, and compact mode","url":"https://github.com/basicmachines-co/basic-memory/blob/8d002c93fd5d68fbb9690c6de9b90792040dce1c/src/basic_memory/mcp/tools/context.py"},
+      {"id":"note-writes","label":"Accepted note mutation service","path":"src/basic_memory/services/note_content_writes.py","symbol":"Accepted-note mutation actor context, checksum conflict and delegated write lifecycle","url":"https://github.com/basicmachines-co/basic-memory/blob/8d002c93fd5d68fbb9690c6de9b90792040dce1c/src/basic_memory/services/note_content_writes.py"},
+      {"id":"semantic","label":"Semantic search guide","path":"docs/semantic-search.md","symbol":"FTS/vector/hybrid modes, embedding providers, vector candidate count, batching and reranking options","url":"https://github.com/basicmachines-co/basic-memory/blob/8d002c93fd5d68fbb9690c6de9b90792040dce1c/docs/semantic-search.md"},
+      {"id":"search-trace","label":"Search trace value model","path":"src/basic_memory/repository/search_trace.py","symbol":"Source-visible candidate, rejection, threshold, stage count and latency fields","url":"https://github.com/basicmachines-co/basic-memory/blob/8d002c93fd5d68fbb9690c6de9b90792040dce1c/src/basic_memory/repository/search_trace.py"},
+      {"id":"metrics","label":"Project metric definitions","path":"METRICS.md","symbol":"Recall, correction, deletion, scope, evidence, latency, cost and storage metric domains","url":"../METRICS.md"},
+      {"id":"fixture","label":"Project benchmark fixture","path":"fixtures/memory-benchmark-v1.json","symbol":"Versioned planned workload cases, not results","url":"../fixtures/memory-benchmark-v1.json"},
+      {"id":"status","label":"Initial benchmark execution status","path":"results/initial-baselines-status.json","symbol":"Project-wide execution record, not a Basic Memory result","url":"../results/initial-baselines-status.json"}
+    ],
+    "who_what": [
+      {
+        "text": "The canonical repository belongs to the basicmachines-co GitHub organization and identifies Basic Machines as the project maker. It is a Python application exposed through MCP, a REST API, and a CLI, with hosted cloud components and agent integrations maintained in the same repository.",
+        "sources": ["repo","readme","architecture"]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Notes are plain Markdown files with optional YAML frontmatter, categorized observations, and wiki-link relations. Frontmatter carries title, type, tags, permalink, timestamps, and arbitrary metadata; parser-derived observations and relations are projections of the Markdown. Permalinks are stable note identifiers, while paths identify the source file.",
+        "sources": ["note-format","domain","models"]
+      },
+      {
+        "text": "The database represents each note as a project-owned entity, with observation rows for categorized facts, directed relation rows for graph links, section and search projections, and optional semantic chunks and vectors. Entity rows carry a project ID, external ID, path, permalink, checksums, timestamps, and optional creator/updater identifiers. SQLite is the default local database; PostgreSQL and optional Milvus/pgvector paths are also present. Markdown remains the authorable source and indexes can be rebuilt.",
+        "sources": ["models","note-format","semantic","architecture"]
+      },
+      {
+        "text": "API, MCP, and CLI entrypoints are wired through composition roots. MCP tools call typed API clients, which delegate through API routers, services, repositories, and indexing workflows. Accepted note changes persist a snapshot transactionally, then publish graph and search projections after commit; derived-index failures are logged and converged later instead of rolling back the accepted note.",
+        "sources": ["architecture","note-writes"]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "bm_write creates notes by path or title and directory. Existing notes require overwrite; expected_checksum can guard a replacement against the revision read. Replacement retains existing frontmatter keys unless new content or arguments set them. bm_edit changes an exact-resolved existing note by append, prepend, find/replace, section edits, or metadata merge; a missing note is not created. Disk edits are picked up through indexing and sync workflows.",
+        "sources": ["write","edit","architecture","note-format"]
+      },
+      {
+        "text": "bm_delete removes one note or a directory when recursive intent is explicit; expected_checksum can guard one note. Entity-owned observations and outgoing relations cascade, while incoming edges preserve the unresolved target name. File and derived-index cleanup use mutation and indexing paths. No per-fact tombstone or verified secure erasure across backups and external copies is established here.",
+        "sources": ["delete","models","note-writes"]
+      },
+      {
+        "text": "bm_search searches notes, observations, and relations using full text, semantic, hybrid, title, or permalink modes with project and content filters. bm_read fetches a note. bm_context traverses graph relations from a starting note with bounded depth, paging, and compact mode. Embeddings can lag accepted content until vector sync catches up.",
+        "sources": ["search","context","semantic","models"]
+      },
+      {
+        "text": "MCP target routing resolves an explicit or path-qualified project and checks local filesystem targets remain inside that project's root. These are project-level safeguards; the official security policy says the local OSS application does not separate operating-system users. Hosted team sharing and cloud authorization are beyond this core review.",
+        "sources": ["scoped-target","security","readme","models"]
+      },
+      {
+        "text": "The source supports inspectable Markdown and arbitrary metadata, and entity rows include checksums, timestamps and optional creator/updater IDs. The note schema does not require claim-level citations, evidence excerpts, confidence, or a verified state. A relation target can remain unresolved while its authored name remains visible.",
+        "sources": ["note-format","models","domain"]
+      }
+    ],
+    "metrics": [
+      {"domain":"Answerable recall and abstention","status":"unmeasured","evidence":"Ranked search and graph context are implemented; no answerability or abstention cases were evaluated.","sources":["search","context"]},
+      {"domain":"Correction accuracy and stale values","status":"unmeasured","evidence":"Exact edits and checksum guards are available; no correction or stale-fact probe was adjudicated.","sources":["write","edit"]},
+      {"domain":"Deletion leakage","status":"unmeasured","evidence":"Note and recursive directory deletion exist; no residual-copy or deletion-leakage probe was run.","sources":["delete","models"]},
+      {"domain":"Scope isolation","status":"unmeasured","evidence":"Project routing and scoped indexes are visible; no cross-project or cross-user isolation workload was run.","sources":["scoped-target","models","security"]},
+      {"domain":"Evidence support and citation coverage","status":"unmeasured","evidence":"Markdown supports source metadata and relation context but does not require claim citations; no support adjudication was run.","sources":["note-format","domain"]},
+      {"domain":"Latency and write-to-recall delay","status":"unmeasured","evidence":"Search traces expose stage timing fields and vector freshness is tracked; no latency or freshness timing was collected.","sources":["search-trace","models"]},
+      {"domain":"Tokens, cost, and storage","status":"unmeasured","evidence":"Local embedding and configurable hosted providers are available; no token, price, or storage measurement was collected.","sources":["semantic","models"]}
+    ],
+    "limits": [
+      {"text":"This is a bounded read-only source review of selected documentation and code at the reviewed SHA. It does not establish retrieval accuracy, correction quality under user workflows, secure erasure across backups or synced copies, cloud authorization behavior, index convergence time, provider reliability, or real latency, cost, and storage.","sources":["architecture","write","delete","search","semantic","security"]},
+      {"text":"Deployment and retrieval behavior depends on configuration, backend, and integration. This review did not exercise those variants; documentation statements are not runtime evidence and implementation observations are not measured outcomes.","sources":["readme","semantic","architecture"]},
+      {"text":"The project metric definitions and versioned fixture are measurement plans, not Basic Memory findings. Benchmark outcomes are unknown because this review did not run the system or workload.","sources":["metrics","fixture","status"]}
+    ],
+    "benchmark": [
+      {"text":"Benchmark not run. This review did not execute Basic Memory, a benchmark workload, or tests.","sources":["metrics","fixture","status"]},
+      {"text":"Project metric definitions and the versioned fixture describe evaluation domains and planned procedures; the project-wide execution record is not a Basic Memory result.","sources":["metrics","fixture","status"]}
+    ]
+  }
+}

@@ -1,0 +1,280 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "autoresearchclaw",
+    "name": "AutoResearchClaw",
+    "repository": "https://github.com/aiming-lab/AutoResearchClaw",
+    "branch": "main",
+    "revision": "be4ba4755bf1b52220f25e13b2293b5956590070",
+    "reviewed_at": "2026-11-24T23:13:08Z",
+    "review_timezone": "UTC (2026-11-24 15:13:08 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/aiming-lab/AutoResearchClaw/blob/be4ba4755bf1b52220f25e13b2293b5956590070/README.md","checked_urls":["https://github.com/aiming-lab/AutoResearchClaw/blob/be4ba4755bf1b52220f25e13b2293b5956590070/README.md","https://github.com/aiming-lab/AutoResearchClaw/blob/be4ba4755bf1b52220f25e13b2293b5956590070/SECURITY.md","https://github.com/aiming-lab/AutoResearchClaw/blob/be4ba4755bf1b52220f25e13b2293b5956590070/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "AutoResearchClaw is a research-paper pipeline with a local JSONL memory library, a separate run-scoped lesson store, and an optional lesson-to-skill bridge. The review reports source observations only; the system and benchmarks were not run.",
+    "atlas_locator": {
+      "ordinal": 85,
+      "name": "AutoResearchClaw",
+      "slug": "autoresearchclaw",
+      "listed_repository": "https://github.com/aiming-lab/AutoResearchClaw",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/autoresearchclaw.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/aiming-lab/AutoResearchClaw/blob/be4ba4755bf1b52220f25e13b2293b5956590070/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/aiming-lab/AutoResearchClaw/blob/be4ba4755bf1b52220f25e13b2293b5956590070/README.md",
+      "https://github.com/aiming-lab/AutoResearchClaw/blob/be4ba4755bf1b52220f25e13b2293b5956590070/SECURITY.md",
+      "https://github.com/aiming-lab/AutoResearchClaw/blob/be4ba4755bf1b52220f25e13b2293b5956590070/SUPPORT.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical GitHub repository",
+        "path": "repository",
+        "url": "https://github.com/aiming-lab/AutoResearchClaw"
+      },
+      {
+        "id": "head",
+        "label": "Verified current main head",
+        "path": "commit",
+        "symbol": "be4ba4755bf1b52220f25e13b2293b5956590070",
+        "url": "https://github.com/aiming-lab/AutoResearchClaw/commit/be4ba4755bf1b52220f25e13b2293b5956590070"
+      },
+      {
+        "id": "readme",
+        "label": "Official project README",
+        "path": "README.md",
+        "url": "https://github.com/aiming-lab/AutoResearchClaw/blob/be4ba4755bf1b52220f25e13b2293b5956590070/README.md"
+      },
+      {
+        "id": "memory_store",
+        "label": "Memory entry and JSONL storage implementation",
+        "path": "researchclaw/memory/store.py",
+        "symbol": "MemoryEntry, MemoryStore.add, update_confidence, mark_accessed, prune, save, load",
+        "url": "https://github.com/aiming-lab/AutoResearchClaw/blob/be4ba4755bf1b52220f25e13b2293b5956590070/researchclaw/memory/store.py"
+      },
+      {
+        "id": "retriever",
+        "label": "Similarity, decay, confidence, and access-weighted retrieval",
+        "path": "researchclaw/memory/retriever.py",
+        "symbol": "MemoryRetriever.recall, recall_by_text, format_for_prompt",
+        "url": "https://github.com/aiming-lab/AutoResearchClaw/blob/be4ba4755bf1b52220f25e13b2293b5956590070/researchclaw/memory/retriever.py"
+      },
+      {
+        "id": "embeddings",
+        "label": "Embedding backend selection and fallback",
+        "path": "researchclaw/memory/embeddings.py",
+        "symbol": "EmbeddingProvider",
+        "url": "https://github.com/aiming-lab/AutoResearchClaw/blob/be4ba4755bf1b52220f25e13b2293b5956590070/researchclaw/memory/embeddings.py"
+      },
+      {
+        "id": "decay",
+        "label": "Time decay and confidence score helper",
+        "path": "researchclaw/memory/decay.py",
+        "symbol": "time_decay_weight, confidence_update",
+        "url": "https://github.com/aiming-lab/AutoResearchClaw/blob/be4ba4755bf1b52220f25e13b2293b5956590070/researchclaw/memory/decay.py"
+      },
+      {
+        "id": "wrappers",
+        "label": "Experiment memory wrapper and its public constructor",
+        "path": "researchclaw/memory/experiment_memory.py",
+        "symbol": "ExperimentMemory.__init__, recall_best_configs",
+        "url": "https://github.com/aiming-lab/AutoResearchClaw/blob/be4ba4755bf1b52220f25e13b2293b5956590070/researchclaw/memory/experiment_memory.py"
+      },
+      {
+        "id": "runner",
+        "label": "Pipeline experiment-memory setup and result recording hooks",
+        "path": "researchclaw/pipeline/runner.py",
+        "symbol": "ExperimentMemory initialization and post-stage record hook",
+        "url": "https://github.com/aiming-lab/AutoResearchClaw/blob/be4ba4755bf1b52220f25e13b2293b5956590070/researchclaw/pipeline/runner.py"
+      },
+      {
+        "id": "evolution",
+        "label": "Run lesson model, JSONL store, extraction, and overlay",
+        "path": "researchclaw/evolution.py",
+        "symbol": "LessonEntry, EvolutionStore, extract_lessons, build_overlay",
+        "url": "https://github.com/aiming-lab/AutoResearchClaw/blob/be4ba4755bf1b52220f25e13b2293b5956590070/researchclaw/evolution.py"
+      },
+      {
+        "id": "helpers",
+        "label": "Stage prompt assembly from lessons and skill files",
+        "path": "researchclaw/pipeline/_helpers.py",
+        "symbol": "build_evolution_overlay",
+        "url": "https://github.com/aiming-lab/AutoResearchClaw/blob/be4ba4755bf1b52220f25e13b2293b5956590070/researchclaw/pipeline/_helpers.py"
+      },
+      {
+        "id": "config",
+        "label": "Memory and MetaClaw configuration defaults",
+        "path": "researchclaw/config.py",
+        "symbol": "MemoryConfig, MetaClawBridgeConfig, _parse_memory_config, _parse_metaclaw_bridge_config",
+        "url": "https://github.com/aiming-lab/AutoResearchClaw/blob/be4ba4755bf1b52220f25e13b2293b5956590070/researchclaw/config.py"
+      },
+      {
+        "id": "bridge",
+        "label": "Lesson conversion to reusable MetaClaw skills",
+        "path": "researchclaw/metaclaw_bridge/lesson_to_skill.py",
+        "symbol": "convert_lessons_to_skills, _write_skill",
+        "url": "https://github.com/aiming-lab/AutoResearchClaw/blob/be4ba4755bf1b52220f25e13b2293b5956590070/researchclaw/metaclaw_bridge/lesson_to_skill.py"
+      },
+      {
+        "id": "integration",
+        "label": "Official MetaClaw integration documentation",
+        "path": "docs/integration-guide.md",
+        "symbol": "MetaClaw integration section",
+        "url": "https://github.com/aiming-lab/AutoResearchClaw/blob/be4ba4755bf1b52220f25e13b2293b5956590070/docs/integration-guide.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog identity and source attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 85",
+        "url": "../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The public repository is under the aiming-lab GitHub organization. Its README describes AutoResearchClaw as an open-source research-paper pipeline with optional human guidance and integrations. The memory library is a supporting repository subsystem, not a separately hosted memory service.",
+        "sources": ["repo", "readme"]
+      },
+      {
+        "text": "The README describes optional MetaClaw cross-run lesson-to-skill transfer; the integration guide documents the bridge setup and workflow. Repository descriptions are documentation observations, not performance findings.",
+        "sources": ["readme", "integration"]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "MemoryEntry records an ID, one of three categories, content, free-form metadata, embedding, confidence, created/access times, and access count. MemoryStore keeps category lists in memory and persists ideation.jsonl, experiment.jsonl, and writing.jsonl.",
+        "sources": ["memory_store"]
+      },
+      {
+        "text": "The separate EvolutionStore appends stage, category, severity, description, timestamp, and run ID lesson objects to run-local evolution/lessons.jsonl. Stage prompt assembly can read those lessons plus up to five arc-* skills from the configured MetaClaw skills directory.",
+        "sources": ["evolution", "helpers"]
+      },
+      {
+        "text": "The default MemoryConfig names .researchclaw/memory, caps each category at 500, and configures a 90-day decay half-life and confidence threshold 0.3. The pipeline runner separately creates a run-local experiment_memory directory for the experiment wrapper.",
+        "sources": ["config", "runner"]
+      },
+      {
+        "text": "When the optional bridge is enabled, its post-run hook can generate skill files from sufficiently severe lessons; the default bridge is disabled. The shared skills directory is the source-visible cross-run persistence path, separate from run-local EvolutionStore lessons.",
+        "sources": ["config", "bridge", "helpers", "integration", "evolution"]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "MemoryStore.add validates the category, creates an ID and timestamps, appends an entry, and enforces the per-category cap by keeping higher-confidence entries. update_confidence clamps to [0, 1]; mark_accessed updates timestamp and count. prune removes low-confidence or over-age entries. Save rewrites full JSONL category files and load skips malformed rows. No edit-content or delete-by-ID method appears in the inspected store.",
+        "sources": ["memory_store"]
+      },
+      {
+        "text": "MemoryRetriever scores category-selected entries using weighted cosine similarity, exponential age decay, confidence, and normalized access frequency, then sorts and returns top-k. Text recall needs an embedding callback; absent one, it logs and returns no results. Retrieved entries are marked accessed.",
+        "sources": ["retriever", "decay"]
+      },
+      {
+        "text": "EmbeddingProvider selects a configured OpenAI-compatible embedding endpoint, sentence-transformers when installed, or a 256-dimensional hashed-token TF-IDF fallback. API failures fall back to TF-IDF. This describes branches visible in source, not their runtime availability or quality.",
+        "sources": ["embeddings"]
+      },
+      {
+        "text": "ExperimentMemory.__init__ takes a MemoryStore and MemoryRetriever, but the pipeline runner constructs it with store_dir=. The call is inside an exception handler, so source inspection indicates initialization is skipped for this hook. The subsequent runner hook also imports ExperimentOutcome and calls record_outcome, neither of which is defined in the inspected experiment_memory.py; errors are caught and recording is skipped. These are static mismatches; no runtime execution was performed.",
+        "sources": ["wrappers", "runner"]
+      },
+      {
+        "text": "EvolutionStore appends lesson JSONL rows and can query recent lessons for a stage with recency and severity weighting. The runner extracts and appends lessons under that run directory; prompt assembly reads that directory and can add arc-* skills from the shared configured skills path. The lesson store has append/read/query behavior and no general update or delete API in the inspected code.",
+        "sources": ["evolution", "runner", "helpers"]
+      },
+      {
+        "text": "The optional bridge filters lessons by severity, asks an LLM to create skills, sanitizes skill names, and writes SKILL.md directories. The current source caps the conversion count by max_skills; prompt assembly reads at most five arc-* skills. The bridge config defaults to disabled, so these cross-run skill actions depend on configuration.",
+        "sources": ["bridge", "config", "helpers"]
+      },
+      {
+        "text": "Direct MemoryEntry metadata can include caller-supplied run IDs but has no user, tenant, or enforced principal scope field. Run-local evolution directories and the shared skills directory have different scope boundaries; category filtering is not authorization.",
+        "sources": ["memory_store", "evolution", "helpers", "config"]
+      },
+      {
+        "text": "Memory and lesson records carry IDs, time, category, confidence/severity, and run context, but the inspected paths do not attach a verified source passage or adjudicate whether stored content is supported. Generated skills are LLM-authored guidance rather than source citations.",
+        "sources": ["memory_store", "evolution", "bridge"]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Similarity-ranked retrieval is visible in source, but no answerable recall or abstention workload was measured.",
+        "sources": ["retriever", "metrics", "record"]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Confidence updates exist, but no content correction path or stale-value evaluation was measured.",
+        "sources": ["memory_store", "metrics", "fixture"]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Pruning removes entries by confidence/age, but no deletion completeness or leakage probe was run.",
+        "sources": ["memory_store", "metrics", "record"]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Categories and run directories are visible, but no tenant isolation boundary or cross-scope probe was verified.",
+        "sources": ["memory_store", "evolution", "metrics", "fixture"]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Records carry context metadata, but no claim-to-source evidence model or support-precision workload was measured.",
+        "sources": ["memory_store", "evolution", "metrics", "record"]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The source uses in-memory list scans and file persistence; no retrieval latency distribution or write-to-recall delay was collected.",
+        "sources": ["memory_store", "retriever", "metrics", "fixture"]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Embedding backends and prompt character bounds are source-visible, but no token, provider cost, or storage workload was measured.",
+        "sources": ["embeddings", "retriever", "helpers", "metrics", "record"]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded review inspected the current README and integration guide, memory store/retriever/embedding modules, specialized wrappers, pipeline runner and prompt assembly, EvolutionStore, and the lesson-to-skill bridge at the verified SHA.",
+        "sources": ["readme", "integration", "memory_store", "retriever", "embeddings", "wrappers", "runner", "evolution", "helpers", "bridge"]
+      },
+      {
+        "text": "The code was not executed and no tests or benchmarks were run. Static call mismatches, deployed configuration, runtime isolation, retrieval quality, deletion completeness, and real cost/performance remain unverified.",
+        "sources": ["runner", "wrappers", "metrics", "record", "fixture"]
+      },
+      {
+        "text": "The official README and pinned SECURITY.md and SUPPORT.md paths were checked for a published contact email. No project contact email was published; the README's noreply address is an OpenAlex configuration example and was not treated as contact information.",
+        "sources": ["readme", "roster"]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No AutoResearchClaw memory path, system workload, tests, or benchmark was executed. Project metrics, status, and fixture are protocol artifacts, not findings about this system.",
+        "sources": ["metrics", "record", "fixture"]
+      }
+    ]
+  }
+}

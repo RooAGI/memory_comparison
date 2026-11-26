@@ -1,0 +1,347 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "autogen",
+    "name": "AutoGen",
+    "repository": "https://github.com/microsoft/autogen",
+    "branch": "main",
+    "revision": "8390985108cb1e3881f5f7297765758d8ad2540c",
+    "reviewed_at": "2026-11-24T23:03:15Z",
+    "review_timezone": "UTC (checked 2026-11-24 15:03:15 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":"secure@microsoft.com","source_url":"https://github.com/microsoft/autogen/blob/8390985108cb1e3881f5f7297765758d8ad2540c/SECURITY.md","note":"Published as an unauthenticated reporting contact by the official security policy."},
+    "summary": "AutoGen is a multi-agent application framework with a pluggable Python memory interface. Its common contract stores and retrieves MemoryContent, while implementations choose persistence, ranking, and context injection. This is a source review; no workload results were measured.",
+    "atlas_locator": {
+      "ordinal": 82,
+      "name": "AutoGen",
+      "slug": "autogen",
+      "listed_repository": "https://github.com/microsoft/autogen",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/autogen.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/autogen.md"
+    },
+    "contact_email": "secure@microsoft.com",
+    "contact_email_source_url": "https://github.com/microsoft/autogen/blob/8390985108cb1e3881f5f7297765758d8ad2540c/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/microsoft/autogen/blob/8390985108cb1e3881f5f7297765758d8ad2540c/README.md",
+      "https://github.com/microsoft/autogen/blob/8390985108cb1e3881f5f7297765758d8ad2540c/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official AutoGen repository",
+        "path": "repository root; GitHub identifies main and archive status",
+        "url": "https://github.com/microsoft/autogen"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom; current head entry updated 2026-11-12T10:19:33Z",
+        "url": "https://github.com/microsoft/autogen/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified current full head",
+        "path": "commit",
+        "symbol": "8390985108cb1e3881f5f7297765758d8ad2540c",
+        "url": "https://github.com/microsoft/autogen/commit/8390985108cb1e3881f5f7297765758d8ad2540c"
+      },
+      {
+        "id": "readme",
+        "label": "Official AutoGen README at reviewed head",
+        "path": "README.md",
+        "url": "https://github.com/microsoft/autogen/blob/8390985108cb1e3881f5f7297765758d8ad2540c/README.md"
+      },
+      {
+        "id": "base",
+        "label": "Core memory contract and content types",
+        "path": "python/packages/autogen-core/src/autogen_core/memory/_base_memory.py",
+        "symbol": "MemoryContent; MemoryQueryResult; Memory.update_context/query/add/clear/close",
+        "url": "https://github.com/microsoft/autogen/blob/8390985108cb1e3881f5f7297765758d8ad2540c/python/packages/autogen-core/src/autogen_core/memory/_base_memory.py"
+      },
+      {
+        "id": "list",
+        "label": "In-process ListMemory implementation",
+        "path": "python/packages/autogen-core/src/autogen_core/memory/_list_memory.py",
+        "symbol": "ListMemory.query/update_context/add/clear",
+        "url": "https://github.com/microsoft/autogen/blob/8390985108cb1e3881f5f7297765758d8ad2540c/python/packages/autogen-core/src/autogen_core/memory/_list_memory.py"
+      },
+      {
+        "id": "assistant",
+        "label": "AgentChat AssistantAgent memory integration",
+        "path": "python/packages/autogen-agentchat/src/autogen_agentchat/agents/_assistant_agent.py",
+        "symbol": "_update_model_context_with_memory; MemoryQueryEvent",
+        "url": "https://github.com/microsoft/autogen/blob/8390985108cb1e3881f5f7297765758d8ad2540c/python/packages/autogen-agentchat/src/autogen_agentchat/agents/_assistant_agent.py"
+      },
+      {
+        "id": "chroma_config",
+        "label": "ChromaDB vector memory configuration",
+        "path": "python/packages/autogen-ext/src/autogen_ext/memory/chromadb/_chroma_configs.py",
+        "url": "https://github.com/microsoft/autogen/blob/8390985108cb1e3881f5f7297765758d8ad2540c/python/packages/autogen-ext/src/autogen_ext/memory/chromadb/_chroma_configs.py"
+      },
+      {
+        "id": "chroma",
+        "label": "ChromaDB vector memory implementation",
+        "path": "python/packages/autogen-ext/src/autogen_ext/memory/chromadb/_chromadb.py",
+        "symbol": "add; query; update_context; clear; reset",
+        "url": "https://github.com/microsoft/autogen/blob/8390985108cb1e3881f5f7297765758d8ad2540c/python/packages/autogen-ext/src/autogen_ext/memory/chromadb/_chromadb.py"
+      },
+      {
+        "id": "redis",
+        "label": "Redis memory implementation and configuration",
+        "path": "python/packages/autogen-ext/src/autogen_ext/memory/redis/_redis_memory.py",
+        "symbol": "RedisMemoryConfig; add; query; update_context; clear; close",
+        "url": "https://github.com/microsoft/autogen/blob/8390985108cb1e3881f5f7297765758d8ad2540c/python/packages/autogen-ext/src/autogen_ext/memory/redis/_redis_memory.py"
+      },
+      {
+        "id": "mem0",
+        "label": "Mem0 adapter implementation",
+        "path": "python/packages/autogen-ext/src/autogen_ext/memory/mem0/_mem0.py",
+        "symbol": "Mem0MemoryConfig; add; query; update_context; clear",
+        "url": "https://github.com/microsoft/autogen/blob/8390985108cb1e3881f5f7297765758d8ad2540c/python/packages/autogen-ext/src/autogen_ext/memory/mem0/_mem0.py"
+      },
+      {
+        "id": "canvas",
+        "label": "Experimental text canvas memory adapter",
+        "path": "python/packages/autogen-ext/src/autogen_ext/memory/canvas/_text_canvas_memory.py",
+        "symbol": "update_context; query; add; clear",
+        "url": "https://github.com/microsoft/autogen/blob/8390985108cb1e3881f5f7297765758d8ad2540c/python/packages/autogen-ext/src/autogen_ext/memory/canvas/_text_canvas_memory.py"
+      },
+      {
+        "id": "security",
+        "label": "Official Microsoft security reporting policy",
+        "path": "SECURITY.md",
+        "symbol": "secure@microsoft.com",
+        "url": "https://github.com/microsoft/autogen/blob/8390985108cb1e3881f5f7297765758d8ad2540c/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Versioned project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated system locator and Atlas attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 82",
+        "url": "data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository identifies Microsoft as the publisher and describes AutoGen as a framework for multi-agent AI applications. Its README says the repository is archived and no longer actively maintained by Microsoft, and describes Core, AgentChat, and Extensions as framework layers. The inspected memory component is part of the Python framework.",
+        "sources": [
+          "repo",
+          "readme",
+          "base"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "MemoryContent stores a string, bytes, dictionary, or image with a MIME type and optional arbitrary metadata. MemoryQueryResult contains returned MemoryContent values. The Memory component requires update_context, query, add, clear, and close, but delegates storage and retrieval mechanics to each adapter.",
+        "sources": [
+          "base"
+        ]
+      },
+      {
+        "text": "ListMemory holds items in an in-process list, returns all entries without query filtering, and appends them as a chronological system message. Its content list is directly mutable and clear discards all entries.",
+        "sources": [
+          "list"
+        ]
+      },
+      {
+        "text": "AssistantAgent calls each configured memory's update_context before inference and emits MemoryQueryEvent for returned memories. Extension adapters include ChromaDB vector search, Redis semantic/sequential search, Mem0, and an experimental text canvas whose edits are handled by separate tools.",
+        "sources": [
+          "assistant",
+          "chroma_config",
+          "chroma",
+          "redis",
+          "mem0",
+          "canvas"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The core exposes add(MemoryContent), not an automatic conversation-to-fact extraction pipeline. ListMemory appends content; ChromaDB stores extracted text and metadata under a generated UUID and queries with configured top-k and threshold; Redis supports semantic search or recent sequential retrieval; Mem0 delegates add/search to its client with a result limit.",
+        "sources": [
+          "base",
+          "list",
+          "chroma",
+          "redis",
+          "mem0"
+        ]
+      },
+      {
+        "text": "AssistantAgent invokes memory context updates before model inference. ChromaDB, Redis, and Mem0 query from the last context message and insert returned text as a system message; ListMemory injects the full list. Query formation, prompt formatting, ranking, and filtering are adapter-specific.",
+        "sources": [
+          "assistant",
+          "list",
+          "chroma",
+          "redis",
+          "mem0"
+        ]
+      },
+      {
+        "text": "The shared contract has no targeted update or delete method, only full clear. ChromaDB has clear and a separately gated reset; Redis clears its history; Mem0 delegates clear to delete_all for the configured user. These different methods do not establish shared correction semantics or deletion completeness across backups and derived copies.",
+        "sources": [
+          "base",
+          "chroma",
+          "redis",
+          "mem0"
+        ]
+      },
+      {
+        "text": "The common interface does not enforce a tenant or principal. Mem0 uses a configured user_id but generates a random UUID when omitted; ChromaDB path/collection and Redis index/prefix can partition storage, but are configuration boundaries rather than authentication or ownership checks.",
+        "sources": [
+          "base",
+          "mem0",
+          "chroma_config",
+          "redis"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Retrieval is implementation-defined: ListMemory returns all items and vector adapters use configured top-k/threshold. The shared interface contains no evaluation or abstention rule; no workload was run.",
+        "sources": [
+          "base",
+          "list",
+          "chroma",
+          "redis",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction and stale values",
+        "status": "unmeasured",
+        "evidence": "The common contract has no item update, supersession, or correction history operation; no correction workload was run.",
+        "sources": [
+          "base",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The common contract offers full clear only and adapters implement backend-specific clearing. No deletion probes were run.",
+        "sources": [
+          "base",
+          "chroma",
+          "redis",
+          "mem0",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Scope is adapter configuration; the common API has no principal enforcement, and no cross-scope probe was run.",
+        "sources": [
+          "base",
+          "mem0",
+          "chroma_config",
+          "redis",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citations",
+        "status": "unmeasured",
+        "evidence": "MemoryContent supports arbitrary metadata but defines no source citation or provenance contract. No generated claims were adjudicated.",
+        "sources": [
+          "base",
+          "chroma",
+          "mem0",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The inspected memory path exposes no shared timing instrumentation; no timed retrieval or write-to-recall probe was run.",
+        "sources": [
+          "assistant",
+          "chroma",
+          "redis",
+          "mem0",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "Adapters expose backend and embedding configuration but no common token, cost, or storage accounting. No runtime data was collected.",
+        "sources": [
+          "chroma_config",
+          "chroma",
+          "redis",
+          "mem0",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The review covered the Python Core memory contract and ListMemory, AssistantAgent integration, and selected ChromaDB, Redis, Mem0, and text-canvas adapters. It did not inspect every adapter, all .NET code, every task-centric memory sample, or deployment configuration.",
+        "sources": [
+          "base",
+          "list",
+          "assistant",
+          "chroma",
+          "redis",
+          "mem0",
+          "canvas"
+        ]
+      },
+      {
+        "text": "Source inspection cannot establish real retrieval quality, safe tenant isolation, application-specific correction behavior, deletion completeness, latency, token usage, or cost. The pinned README says AutoGen is archived and Microsoft no longer provides fixes, features, or support.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No AutoGen runtime, benchmark workload, or tests were run. The shared fixture, metric definitions, and execution-status record are protocol artifacts and not AutoGen measurements.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

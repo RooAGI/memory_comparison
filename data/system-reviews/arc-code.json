@@ -1,0 +1,372 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "arc-code",
+    "name": "arc-code",
+    "repository": "https://github.com/jerber/arc-code",
+    "branch": "main",
+    "revision": "6b33c1f7c2ad45997663c69157f5559d1be61bd9",
+    "reviewed_at": "2026-11-24T21:09:58Z",
+    "review_timezone": "UTC (2026-11-24 13:09:58 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/jerber/arc-code/blob/6b33c1f7c2ad45997663c69157f5559d1be61bd9/README.md","checked_urls":["https://github.com/jerber/arc-code/blob/6b33c1f7c2ad45997663c69157f5559d1be61bd9/README.md","https://github.com/jerber/arc-code/blob/6b33c1f7c2ad45997663c69157f5559d1be61bd9/SECURITY.md","https://github.com/jerber/arc-code/blob/6b33c1f7c2ad45997663c69157f5559d1be61bd9/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "A general-purpose coding-agent harness for playing ARC-AGI-3 through a small actuator. It makes a generated action log the agent's complete game memory, while the agent can create notes and helper programs in a per-game workspace. A broker, isolated sandbox, audit trail, and optional Postgres record support controlled and reviewable runs. This article records source observations at the pinned revision; no system or benchmark was run.",
+    "atlas_locator": {
+      "ordinal": 63,
+      "name": "arc-code",
+      "slug": "arc-code",
+      "listed_repository": "https://github.com/jerber/arc-code",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/arc-code.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/jerber/arc-code/blob/6b33c1f7c2ad45997663c69157f5559d1be61bd9/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/jerber/arc-code/blob/6b33c1f7c2ad45997663c69157f5559d1be61bd9/README.md",
+      "https://github.com/jerber/arc-code/blob/6b33c1f7c2ad45997663c69157f5559d1be61bd9/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "roster",
+        "label": "Curated roster identity, ordinal, locator and source attribution",
+        "path": "../data/memory-systems.json",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Roster source attribution only",
+        "path": "content/systems/arc-code.md",
+        "symbol": "catalog attribution revision",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/arc-code.md"
+      },
+      {
+        "id": "repo",
+        "label": "Canonical public repository and default branch",
+        "path": "repository",
+        "symbol": "GitHub repository page shows main as default branch",
+        "url": "https://github.com/jerber/arc-code"
+      },
+      {
+        "id": "head",
+        "label": "Verified current main branch head",
+        "path": "commit",
+        "symbol": "full SHA 6b33c1f7c2ad45997663c69157f5559d1be61bd9",
+        "url": "https://github.com/jerber/arc-code/commit/6b33c1f7c2ad45997663c69157f5559d1be61bd9"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "url": "https://github.com/jerber/arc-code/blob/6b33c1f7c2ad45997663c69157f5559d1be61bd9/README.md"
+      },
+      {
+        "id": "prompt",
+        "label": "Agent method and memory instructions",
+        "path": "PROMPT.md",
+        "url": "https://github.com/jerber/arc-code/blob/6b33c1f7c2ad45997663c69157f5559d1be61bd9/PROMPT.md"
+      },
+      {
+        "id": "arc",
+        "label": "Generic ARC interface brief",
+        "path": "ARC.md",
+        "url": "https://github.com/jerber/arc-code/blob/6b33c1f7c2ad45997663c69157f5559d1be61bd9/ARC.md"
+      },
+      {
+        "id": "act",
+        "label": "Actuator state, action and log implementation",
+        "path": "act.py",
+        "symbol": "RunState; log_initial; log_action; cmd_do; restart",
+        "url": "https://github.com/jerber/arc-code/blob/6b33c1f7c2ad45997663c69157f5559d1be61bd9/act.py"
+      },
+      {
+        "id": "run",
+        "label": "Session orchestration and workspace construction",
+        "path": "run.py",
+        "symbol": "make_workspace; play; child_env",
+        "url": "https://github.com/jerber/arc-code/blob/6b33c1f7c2ad45997663c69157f5559d1be61bd9/run.py"
+      },
+      {
+        "id": "agents",
+        "label": "Agent event streams and usage accounting",
+        "path": "rig/agents.py",
+        "symbol": "Agent adapters; cost",
+        "url": "https://github.com/jerber/arc-code/blob/6b33c1f7c2ad45997663c69157f5559d1be61bd9/rig/agents.py"
+      },
+      {
+        "id": "broker",
+        "label": "Broker-held game key and canonical action log",
+        "path": "rig/broker.py",
+        "symbol": "play; tail; finished; close_card",
+        "url": "https://github.com/jerber/arc-code/blob/6b33c1f7c2ad45997663c69157f5559d1be61bd9/rig/broker.py"
+      },
+      {
+        "id": "db",
+        "label": "Run, game, action and artifact record",
+        "path": "rig/db.py",
+        "symbol": "DDL; push_state; push_slice; push_artifacts; track",
+        "url": "https://github.com/jerber/arc-code/blob/6b33c1f7c2ad45997663c69157f5559d1be61bd9/rig/db.py"
+      },
+      {
+        "id": "audit",
+        "label": "Trace audit and audit verdict model",
+        "path": "rig/audit.py",
+        "symbol": "Audit; grade; audit_session; reaudit",
+        "url": "https://github.com/jerber/arc-code/blob/6b33c1f7c2ad45997663c69157f5559d1be61bd9/rig/audit.py"
+      },
+      {
+        "id": "cloud",
+        "label": "Per-game E2B sandbox and deny-by-default egress fence",
+        "path": "rig/cloud.py",
+        "symbol": "fence; sandbox network setup",
+        "url": "https://github.com/jerber/arc-code/blob/6b33c1f7c2ad45997663c69157f5559d1be61bd9/rig/cloud.py"
+      },
+      {
+        "id": "score",
+        "label": "ARC score reconstruction and verification",
+        "path": "rig/score.py",
+        "symbol": "level_score; scores; verify",
+        "url": "https://github.com/jerber/arc-code/blob/6b33c1f7c2ad45997663c69157f5559d1be61bd9/rig/score.py"
+      },
+      {
+        "id": "reproduce",
+        "label": "Official reproduction guide and stated uncertainties",
+        "path": "docs/REPRODUCE.md",
+        "url": "https://github.com/jerber/arc-code/blob/6b33c1f7c2ad45997663c69157f5559d1be61bd9/docs/REPRODUCE.md"
+      },
+      {
+        "id": "security",
+        "label": "Checked expected official SECURITY.md path; file is absent at reviewed revision",
+        "path": "SECURITY.md",
+        "url": "https://github.com/jerber/arc-code/blob/6b33c1f7c2ad45997663c69157f5559d1be61bd9/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "../METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status record",
+        "path": "../results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "../fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The GitHub repository page lists one contributor, jerber (Jeremy Berman), but does not explicitly identify an owner or maintainer role. The project is a Python harness for running coding agents against ARC-AGI-3 games, not a standalone memory database or retrieval service.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The agent-facing memory is file-based: `logs.txt` is the complete actuator-written action/board history, while the agent may keep `notes.md` and write parsers, simulators, and search programs in its workspace. The prompt instructs agents to inspect the log with grep, sed, and Python rather than load large boards into the context window.",
+        "sources": [
+          "act",
+          "prompt",
+          "readme"
+        ]
+      },
+      {
+        "text": "`act.py` stores the game/session state in `state.json` (game ID, score, action budget and count, level/attempt, session GUID/cookies, history and last board). It renders observations as hexadecimal board grids and appends a plan, action and resulting board to the log. `run.py` creates one workspace and agent session per game; in broker mode the workspace gets a forwarding client rather than the actuator or game key.",
+        "sources": [
+          "act",
+          "run",
+          "broker"
+        ]
+      },
+      {
+        "text": "The surrounding rig supplies E2B sandboxes, the game-key-holding broker, agent adapters, audit, score reconstruction and export. Optional Postgres records run/game rows, parsed actions and gzip-compressed workspace artifacts. The database uses run/game identifiers; the source does not present this as a general-purpose memory store.",
+        "sources": [
+          "readme",
+          "run",
+          "broker",
+          "db",
+          "cloud"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Writes to the action history are append operations after each game action; the actuator persists updated state after every step. The prompt encourages short 1–2 action experiments while testing a hypothesis, then batches of roughly 10–20 actions after mechanics are understood. A batch stops when score changes or the game becomes terminal, and unused actions are discarded.",
+        "sources": [
+          "act",
+          "prompt"
+        ]
+      },
+      {
+        "text": "The agent can rewrite its own notes and programs. In the optional database record, run/game state is updated, action rows are inserted with conflict protection, and artifact rows are replaced when the mirrored file size differs. The source explicitly calls size a coarse change detector; a same-size rewrite is not detected by that path. No agent-facing edit or version API for memory is defined.",
+        "sources": [
+          "db",
+          "run"
+        ]
+      },
+      {
+        "text": "There is no general memory-delete operation. Restarting/resetting game state is distinct from deleting stored evidence. The database schema cascades game-linked action and artifact rows when a run/game parent is deleted, but the reviewed CLI and agent interface do not expose a user-facing record-erasure workflow; artifact removal reconciliation and deletion from backups are not established here.",
+        "sources": [
+          "act",
+          "db",
+          "readme"
+        ]
+      },
+      {
+        "text": "Retrieval is performed by the agent through ordinary shell/file tools: the prompt names grep, sed, and Python for selective log inspection and encourages durable notes and reusable helper scripts. A fresh resumed agent is told to recover from `notes.md` and `logs.txt`. No indexed semantic retrieval, query API, ranking, or abstention policy was found in the inspected interface.",
+        "sources": [
+          "prompt",
+          "run",
+          "readme",
+          "act"
+        ]
+      },
+      {
+        "text": "The run recorder captures a full agent event stream, including tool commands and file changes, and periodically mirrors state and workspace artifacts to Postgres. In broker mode, the broker holds the ARC key, serializes per-game actions, and writes the canonical log; the agent receives a forwarding client. Audit results are stored with each game, and stricter re-audit is retained in a separate field rather than replacing the first verdict.",
+        "sources": [
+          "agents",
+          "run",
+          "broker",
+          "db",
+          "audit"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "metric": "Answerable retrieval and abstention",
+        "status": "not_measured",
+        "evidence": "The prompt provides procedural file retrieval, but no answerable/unanswerable memory probes or adjudicated outcomes were run.",
+        "sources": [
+          "prompt",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "metric": "Correction accuracy and stale-value rate",
+        "status": "not_measured",
+        "evidence": "Notes are freely editable and logs append, but no correction protocol or stale-value probes were run.",
+        "sources": [
+          "act",
+          "prompt",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "metric": "Deletion leakage",
+        "status": "not_measured",
+        "evidence": "No agent-facing memory deletion workflow was found; no deletion probes or erasure checks were run.",
+        "sources": [
+          "db",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "metric": "Scope isolation",
+        "status": "not_measured",
+        "evidence": "Source shows a separate workspace/sandbox per game and run/game database keys, but no tenant or principal isolation probes were run.",
+        "sources": [
+          "run",
+          "cloud",
+          "db",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "metric": "Evidence support and citation coverage",
+        "status": "not_measured",
+        "evidence": "Action logs and agent streams provide trace evidence, and audit code grades events; no claim-level answer evidence or citation adjudication was run.",
+        "sources": [
+          "act",
+          "agents",
+          "audit",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "metric": "Retrieval latency",
+        "status": "not_measured",
+        "evidence": "The record schema captures overall session seconds and usage counters, but no retrieval-only latency distribution was measured.",
+        "sources": [
+          "run",
+          "db",
+          "agents",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "metric": "Write-to-recall delay",
+        "status": "not_measured",
+        "evidence": "No controlled write/probe schedule or recall timing was collected.",
+        "sources": [
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "metric": "Tokens and cost",
+        "status": "not_measured",
+        "evidence": "Agent adapters and run rows have token and cost fields, including derived token-price cost for Codex; this review collected no runtime usage.",
+        "sources": [
+          "agents",
+          "db",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "metric": "Storage efficiency",
+        "status": "not_measured",
+        "evidence": "Postgres artifact rows preserve original byte counts and gzip bodies, but no attributable storage footprint or per-item efficiency was measured.",
+        "sources": [
+          "db",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded inspection of selected official documentation and Python source at the verified `main` head. It does not establish answer quality, reproducibility of reported scores, generalization beyond ARC-AGI-3, security against every sandbox escape, record deletion completeness, or runtime cost and performance. README and reproduction-guide figures are project-reported results; they are not results of this review.",
+        "sources": [
+          "readme",
+          "reproduce",
+          "cloud",
+          "db"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No arc-code runtime, benchmark workload, or tests were run. Every metric domain above is unmeasured. Source observations and any upstream README results are not measurements produced by this review.",
+      "sources": [
+        "metrics",
+        "status",
+        "fixture",
+        "reproduce"
+      ]
+    }
+  }
+}

@@ -1,0 +1,482 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "deer-flow",
+    "name": "DeerFlow",
+    "ordinal": 184,
+    "repository": "https://github.com/bytedance/deer-flow",
+    "listed_repository": "https://github.com/bytedance/deer-flow",
+    "repository_status": "explicit",
+    "branch": "main",
+    "revision": "5398a584c64ae6d38381caeff2a772acbff2fc5a",
+    "reviewed_at": "2026-11-25T10:48:15Z",
+    "review_timezone": "UTC (2026-11-25 02:48:15 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "DeerFlow is a long-running agent harness with a pluggable memory subsystem. Its default DeerMem backend extracts structured facts and summaries, stores user-level summaries in JSON and agent-scoped facts in Markdown files, and retrieves facts with a local FTS5/BM25 index. Optional Mem0, OpenViking, and Honcho backends have different storage, scope, and management behavior. This is a source review; no runtime or benchmark results were collected.",
+    "atlas_locator": {
+      "ordinal": 184,
+      "name": "DeerFlow",
+      "slug": "deer-flow",
+      "listed_repository": "https://github.com/bytedance/deer-flow",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/deer-flow.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": null,
+      "checked_urls": [
+        "https://github.com/bytedance/deer-flow/blob/5398a584c64ae6d38381caeff2a772acbff2fc5a/README.md",
+        "https://github.com/bytedance/deer-flow/blob/5398a584c64ae6d38381caeff2a772acbff2fc5a/SECURITY.md"
+      ],
+      "note": "The official pinned README publishes no contact email; SECURITY.md directs vulnerability reports to GitHub Security. No email was inferred from commit or profile metadata."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/bytedance/deer-flow/blob/5398a584c64ae6d38381caeff2a772acbff2fc5a/README.md",
+      "https://github.com/bytedance/deer-flow/blob/5398a584c64ae6d38381caeff2a772acbff2fc5a/SECURITY.md"
+    ],
+    "contact_email_note": "No contact email was published in the official README or SECURITY.md at the reviewed revision.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated memory-system roster",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 184, name, slug, listed repository, repository_status, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster entry (identity/locator attribution only)",
+        "path": "content/systems/deer-flow.md",
+        "symbol": "Curated roster attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/deer-flow.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "Public bytedance/deer-flow; main is default branch",
+        "url": "https://github.com/bytedance/deer-flow"
+      },
+      {
+        "id": "head_feed",
+        "label": "Official main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Full current main head 5398a584c64ae6d38381caeff2a772acbff2fc5a; updated 2026-11-25T10:13:38Z",
+        "url": "https://github.com/bytedance/deer-flow/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified current head commit",
+        "path": "commit",
+        "symbol": "Full current main head 5398a584c64ae6d38381caeff2a772acbff2fc5a",
+        "url": "https://github.com/bytedance/deer-flow/commit/5398a584c64ae6d38381caeff2a772acbff2fc5a"
+      },
+      {
+        "id": "readme",
+        "label": "Official repository README",
+        "path": "README.md",
+        "symbol": "DeerFlow harness description and components",
+        "url": "https://github.com/bytedance/deer-flow/blob/5398a584c64ae6d38381caeff2a772acbff2fc5a/README.md"
+      },
+      {
+        "id": "memory_guide",
+        "label": "Official long-term memory guide",
+        "path": "docs/guide/memory.md",
+        "symbol": "Backend behavior, extraction, scope, queueing, eviction, retrieval, and boundaries",
+        "url": "https://github.com/bytedance/deer-flow/blob/5398a584c64ae6d38381caeff2a772acbff2fc5a/docs/guide/memory.md"
+      },
+      {
+        "id": "backend_contract",
+        "label": "Official memory backend contract",
+        "path": "backend/packages/harness/deerflow/agents/memory/backends/README.md",
+        "symbol": "Backend selection, capabilities, default DeerMem, hooks, and host integration",
+        "url": "https://github.com/bytedance/deer-flow/blob/5398a584c64ae6d38381caeff2a772acbff2fc5a/backend/packages/harness/deerflow/agents/memory/backends/README.md"
+      },
+      {
+        "id": "deermem",
+        "label": "DeerMem manager implementation",
+        "path": "backend/packages/harness/deerflow/agents/memory/backends/deermem/deer_mem.py",
+        "symbol": "Default backend wiring, management APIs, compatibility shape, and retrieval status",
+        "url": "https://github.com/bytedance/deer-flow/blob/5398a584c64ae6d38381caeff2a772acbff2fc5a/backend/packages/harness/deerflow/agents/memory/backends/deermem/deer_mem.py"
+      },
+      {
+        "id": "storage",
+        "label": "DeerMem storage implementation",
+        "path": "backend/packages/harness/deerflow/agents/memory/backends/deermem/deermem/core/storage.py",
+        "symbol": "Summary/fact persistence, revisioning, journal, cache, and derived retrieval interface",
+        "url": "https://github.com/bytedance/deer-flow/blob/5398a584c64ae6d38381caeff2a772acbff2fc5a/backend/packages/harness/deerflow/agents/memory/backends/deermem/deermem/core/storage.py"
+      },
+      {
+        "id": "updater",
+        "label": "DeerMem updater implementation",
+        "path": "backend/packages/harness/deerflow/agents/memory/backends/deermem/deermem/core/updater.py",
+        "symbol": "Extraction and memory read/write/update/delete operations",
+        "url": "https://github.com/bytedance/deer-flow/blob/5398a584c64ae6d38381caeff2a772acbff2fc5a/backend/packages/harness/deerflow/agents/memory/backends/deermem/deermem/core/updater.py"
+      },
+      {
+        "id": "retrieval",
+        "label": "DeerMem FTS5 retrieval implementation",
+        "path": "backend/packages/harness/deerflow/agents/memory/backends/deermem/deermem/core/retrieval.py",
+        "symbol": "BM25 FTS5 search, category and user/agent filters, score components, and optional tokenizer",
+        "url": "https://github.com/bytedance/deer-flow/blob/5398a584c64ae6d38381caeff2a772acbff2fc5a/backend/packages/harness/deerflow/agents/memory/backends/deermem/deermem/core/retrieval.py"
+      },
+      {
+        "id": "paths",
+        "label": "DeerMem identity and path layout",
+        "path": "backend/packages/harness/deerflow/agents/memory/backends/deermem/deermem/core/paths.py",
+        "symbol": "User ID normalization, agent bucket rules, fact paths, and derived index location",
+        "url": "https://github.com/bytedance/deer-flow/blob/5398a584c64ae6d38381caeff2a772acbff2fc5a/backend/packages/harness/deerflow/agents/memory/backends/deermem/deermem/core/paths.py"
+      },
+      {
+        "id": "eviction",
+        "label": "DeerMem capacity eviction policy",
+        "path": "backend/packages/harness/deerflow/agents/memory/backends/deermem/deermem/core/eviction.py",
+        "symbol": "Confidence and hybrid-v1 scoring, reserved correction slots, and metadata audit records",
+        "url": "https://github.com/bytedance/deer-flow/blob/5398a584c64ae6d38381caeff2a772acbff2fc5a/backend/packages/harness/deerflow/agents/memory/backends/deermem/deermem/core/eviction.py"
+      },
+      {
+        "id": "prompt",
+        "label": "DeerMem prompt and context assembly",
+        "path": "backend/packages/harness/deerflow/agents/memory/backends/deermem/deermem/core/prompt.py",
+        "symbol": "Token-aware formatting and optional relevance/diversity support",
+        "url": "https://github.com/bytedance/deer-flow/blob/5398a584c64ae6d38381caeff2a772acbff2fc5a/backend/packages/harness/deerflow/agents/memory/backends/deermem/deermem/core/prompt.py"
+      },
+      {
+        "id": "security",
+        "label": "Official repository security policy",
+        "path": "SECURITY.md",
+        "symbol": "Vulnerability reports directed to GitHub Security; no email listed",
+        "url": "https://github.com/bytedance/deer-flow/blob/5398a584c64ae6d38381caeff2a772acbff2fc5a/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Workload fixture only; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "No DeerFlow measured result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes DeerFlow as an open-source long-horizon super-agent harness with memory, tools, skills, subagents, and sandbox support. It is an application framework with memory backends rather than a standalone memory database.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The catalog resolves ordinal 184 to DeerFlow, slug deer-flow, listed repository https://github.com/bytedance/deer-flow, with explicit repository attribution. Its pinned Atlas entry is retained only for curated identity and locator attribution, not as assessment evidence.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The official GitHub repository identifies main as the default branch. The main feed reports full head 5398a584c64ae6d38381caeff2a772acbff2fc5a at 2026-11-25T10:13:38Z, and source links pin that commit. Review time: 2026-11-25 10:48:15 UTC (02:48:15 PST; America/Los_Angeles).",
+        "sources": [
+          "repo",
+          "head_feed",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "DeerFlow routes memory through a pluggable MemoryManager contract. Every backend implements add and get_context; management operations and lifecycle hooks are optional. The factory selects the backend from config and supplies storage path and host callbacks. DeerMem is the default; no-op, Mem0, OpenViking, and Honcho are also documented.",
+        "sources": [
+          "backend_contract",
+          "memory_guide"
+        ]
+      },
+      {
+        "text": "DeerMem owns its update queue, updater, storage, and retrieval dependencies. Default file storage separates global user/history summaries in per-user memory.json from canonical fact files below per-agent fact directories. Fact records include identity, content, category, confidence, timestamps, and source metadata.",
+        "sources": [
+          "deermem",
+          "storage",
+          "paths"
+        ]
+      },
+      {
+        "text": "The default retrieval adapter maintains a derived SQLite FTS5 index that can be rebuilt from canonical fact files. The memory guide documents startup or first-search rebuilding and a substring fallback when the adapter is disabled.",
+        "sources": [
+          "storage",
+          "retrieval",
+          "memory_guide"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "DeerMem middleware accepts user inputs and final assistant replies for extraction, while assistant turns that request tools are excluded. Updates are queued and debounced independently per conversation, user, and agent, then extracted serially. Documented defaults are 30 seconds debounce and 300 seconds maximum wait; backlog or process exit can delay or lose pending work.",
+        "sources": [
+          "memory_guide",
+          "updater"
+        ]
+      },
+      {
+        "text": "The memory guide describes classification of extracted facts by scope, durability, and authority before a deterministic write gate. These labels guide admission and are not stored as fact evidence. The guide also documents duplicate suppression and correction/removal behavior during apply.",
+        "sources": [
+          "memory_guide",
+          "updater"
+        ]
+      },
+      {
+        "text": "DeerMem exposes explicit fact create, update, and delete hooks, along with reload and clear/import/export management methods when supported. Its storage layer uses revisions and conflict checks to reject stale writes. The documentation does not describe a complete version history for every replaced fact value.",
+        "sources": [
+          "deermem",
+          "storage",
+          "updater",
+          "backend_contract"
+        ]
+      },
+      {
+        "text": "Capacity eviction is physical. The optional hybrid-v1 policy combines confidence, explicit-confirmation freshness, and access heat, and may reserve correction slots. Its bounded audit records metadata such as IDs, category, scores, and reasons, not fact content.",
+        "sources": [
+          "eviction",
+          "memory_guide"
+        ]
+      },
+      {
+        "text": "FTS5 supports scoped text search, category filters, and bounded results. The implementation describes BM25 combined with time decay and confidence, optional jieba tokenization with CJK-bigram fallback, and optional query-aware relevance/diversity ranking. Exact fact-ID lookup and context injection are separate APIs.",
+        "sources": [
+          "retrieval",
+          "deermem",
+          "prompt",
+          "memory_guide"
+        ]
+      },
+      {
+        "text": "The official repository page identifies main as default; the official commit feed and commit page identify current head 5398a584c64ae6d38381caeff2a772acbff2fc5a. The current reviewed source URLs pin that revision.",
+        "sources": [
+          "repo",
+          "head_feed",
+          "head"
+        ]
+      }
+    ],
+    "scope": [
+      {
+        "text": "DeerMem normalizes user IDs into directory-safe names and places each user's summary under a user-specific storage bucket. Fact files are stored under a normalized per-agent path; omitted agent names resolve to the reserved __default__ bucket. Retrieval carries user and agent scope filters.",
+        "sources": [
+          "paths",
+          "storage",
+          "retrieval",
+          "deermem"
+        ]
+      },
+      {
+        "text": "The official guide describes project-scoped durable facts as separate from user-global summaries and conversation-local temporary task state. The exact runtime deployment mapping is configuration-dependent and was not tested.",
+        "sources": [
+          "memory_guide"
+        ]
+      },
+      {
+        "text": "The optional OpenViking backend has its own single-user and fail-closed multi-user/multi-tenant configuration. DeerFlow source boundaries do not establish that a deployed instance has correct cross-scope isolation.",
+        "sources": [
+          "memory_guide",
+          "backend_contract"
+        ]
+      }
+    ],
+    "provenance": [
+      {
+        "text": "DeerMem facts can retain source metadata, including conversation-source information, plus a confidence value. The compatibility API projects structured source metadata back to a legacy string.",
+        "sources": [
+          "deermem",
+          "updater"
+        ]
+      },
+      {
+        "text": "Source metadata does not provide quoted source passages, claim-level citations, or independent verification of extracted facts. No citation-support evaluation was performed.",
+        "sources": [
+          "deermem",
+          "memory_guide",
+          "metrics"
+        ]
+      }
+    ],
+    "efficiency_observability": [
+      {
+        "text": "Source-visible controls include debounced writes, bounded queued work, incremental fact-file operations, optimistic revisions, an LRU cap on in-process scope caches, and a rebuildable SQLite index.",
+        "sources": [
+          "memory_guide",
+          "storage",
+          "retrieval"
+        ]
+      },
+      {
+        "text": "The host can pass tracing callbacks for memory-related LLM calls. DeerMem exposes retrieval status and has logging for extraction, indexing, and queue failures; the source does not report benchmark measurements.",
+        "sources": [
+          "backend_contract",
+          "deermem",
+          "retrieval"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Search and prompt injection exist, but no answerability workload was run.",
+        "sources": [
+          "retrieval",
+          "prompt",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Automatic updates and explicit fact edits exist, but no correction sequence was evaluated.",
+        "sources": [
+          "updater",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Fact deletion and physical capacity eviction are documented; no residual-data probe was run.",
+        "sources": [
+          "storage",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "User, agent, and project boundaries are described; no cross-scope workload was run.",
+        "sources": [
+          "paths",
+          "retrieval",
+          "memory_guide",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source metadata exists, but no claim-evidence adjudication was performed.",
+        "sources": [
+          "deermem",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "FTS5 and indexing paths are inspectable, but no timing probe was run.",
+        "sources": [
+          "retrieval",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Debounced and serial extraction is documented; no acknowledgment-to-recall timing was measured.",
+        "sources": [
+          "memory_guide",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "The configured extractor may call an LLM, but no usage or provider-cost data was collected.",
+        "sources": [
+          "updater",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Canonical files and a derived index are described, but no corpus-attributed storage measurement was made.",
+        "sources": [
+          "storage",
+          "retrieval",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "DeerFlow is a broad agent harness with multiple selectable memory backends; behavior differs between backend implementations.",
+        "sources": [
+          "readme",
+          "backend_contract"
+        ]
+      },
+      {
+        "text": "DeerMem extraction depends on model output and deterministic admission gates. Source inspection cannot establish factual quality, correction accuracy, or correct scope classification at runtime.",
+        "sources": [
+          "memory_guide",
+          "updater"
+        ]
+      },
+      {
+        "text": "Fact source and confidence fields provide limited metadata, not verified citations or calibrated certainty.",
+        "sources": [
+          "deermem",
+          "memory_guide"
+        ]
+      },
+      {
+        "text": "Physical fact deletion and capacity eviction do not establish removal from backups, snapshots, or copied data. No deletion or residual-data test was run.",
+        "sources": [
+          "storage",
+          "memory_guide",
+          "metrics"
+        ]
+      },
+      {
+        "text": "This is a bounded review of selected official documentation and DeerMem source at the verified main head. It did not audit every backend, API route, deployment mode, or integration.",
+        "sources": [
+          "memory_guide",
+          "backend_contract",
+          "deermem",
+          "storage",
+          "retrieval"
+        ]
+      },
+      {
+        "text": "No DeerFlow runtime, tests, or benchmarks were run. All project metric domains remain unmeasured.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "No DeerFlow runtime, tests, or benchmarks were run. Source observations and project benchmark materials are not measured results."
+    }
+  }
+}

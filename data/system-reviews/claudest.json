@@ -1,0 +1,395 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 126,
+    "slug": "claudest",
+    "name": "Claudest (claude-memory)",
+    "repository": "https://github.com/gupsammy/claudest",
+    "branch": "main",
+    "revision": "266a7281bf9dbae9b025fae1d9fef3acb35e7636",
+    "reviewed_at": "2026-11-25T08:10:25Z",
+    "review_timezone": "UTC (2026-11-25 00:10:25 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/gupsammy/claudest/blob/266a7281bf9dbae9b025fae1d9fef3acb35e7636/plugins/claude-memory/README.md",
+      "checked_urls": [
+        "https://github.com/gupsammy/claudest/blob/266a7281bf9dbae9b025fae1d9fef3acb35e7636/plugins/claude-memory/README.md"
+      ],
+      "note": "No contact email was found in the official pinned claude-memory README. No commit/profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/gupsammy/claudest/blob/266a7281bf9dbae9b025fae1d9fef3acb35e7636/plugins/claude-memory/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/gupsammy/claudest/blob/266a7281bf9dbae9b025fae1d9fef3acb35e7636/plugins/claude-memory/README.md"
+    ],
+    "contact_email_note": "No contact email was found in the official pinned claude-memory README. No commit/profile metadata, third-party directory, or inferred address was used.",
+    "summary": "Claudest is a Claude Code plugin marketplace whose claude-memory plugin captures Claude Code and Codex sessions into a local SQLite database, injects recent same-project context at session start, and supports on-demand conversation search. Its default recall is lexical; optional semantic indexing uses local Ollama. This review covers selected pinned source and documentation, not runtime behavior or measured quality.",
+    "atlas_locator": {
+      "ordinal": 126,
+      "name": "Claudest (claude-memory)",
+      "slug": "claudest",
+      "listed_repository": "https://github.com/gupsammy/claudest",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/claudest.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical upstream GitHub repository",
+        "path": "repository page",
+        "symbol": "public gupsammy/claudest; default branch main",
+        "url": "https://github.com/gupsammy/claudest"
+      },
+      {
+        "id": "history",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "main head 266a7281bf9dbae9b025fae1d9fef3acb35e7636; feed updated 2026-10-29T07:09:47Z",
+        "url": "https://github.com/gupsammy/claudest/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified current head commit",
+        "path": "commit",
+        "symbol": "266a7281bf9dbae9b025fae1d9fef3acb35e7636",
+        "url": "https://github.com/gupsammy/claudest/commit/266a7281bf9dbae9b025fae1d9fef3acb35e7636"
+      },
+      {
+        "id": "readme",
+        "label": "Official claude-memory README",
+        "path": "plugins/claude-memory/README.md",
+        "symbol": "architecture, operation, security, optional semantic search, and contact check",
+        "url": "https://github.com/gupsammy/claudest/blob/266a7281bf9dbae9b025fae1d9fef3acb35e7636/plugins/claude-memory/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Official memory architecture notes",
+        "path": ".claude/rules/claude-memory-architecture.md",
+        "symbol": "database model, hooks, sync, branch handling, imports, migrations and semantic search",
+        "url": "https://github.com/gupsammy/claudest/blob/266a7281bf9dbae9b025fae1d9fef3acb35e7636/.claude/rules/claude-memory-architecture.md"
+      },
+      {
+        "id": "db",
+        "label": "Memory database implementation",
+        "path": "plugins/claude-memory/skills/recall-conversations/scripts/memory_lib/db.py",
+        "symbol": "SQLite schema, WAL, busy timeout, import and logging configuration",
+        "url": "https://github.com/gupsammy/claudest/blob/266a7281bf9dbae9b025fae1d9fef3acb35e7636/plugins/claude-memory/skills/recall-conversations/scripts/memory_lib/db.py"
+      },
+      {
+        "id": "import",
+        "label": "Transcript importer",
+        "path": "plugins/claude-memory/hooks/import_conversations.py",
+        "symbol": "file hash import log, message/session records, project mapping and branch writes",
+        "url": "https://github.com/gupsammy/claudest/blob/266a7281bf9dbae9b025fae1d9fef3acb35e7636/plugins/claude-memory/hooks/import_conversations.py"
+      },
+      {
+        "id": "sync",
+        "label": "Incremental session sync",
+        "path": "plugins/claude-memory/hooks/sync_current.py",
+        "symbol": "Stop-hook session parsing, transcript validation, sync and optional embedding",
+        "url": "https://github.com/gupsammy/claudest/blob/266a7281bf9dbae9b025fae1d9fef3acb35e7636/plugins/claude-memory/hooks/sync_current.py"
+      },
+      {
+        "id": "parsing",
+        "label": "Branch parser",
+        "path": "plugins/claude-memory/skills/recall-conversations/scripts/memory_lib/parsing.py",
+        "symbol": "UUID parent graph, logicalParentUuid traversal, branch selection and stale-branch pruning",
+        "url": "https://github.com/gupsammy/claudest/blob/266a7281bf9dbae9b025fae1d9fef3acb35e7636/plugins/claude-memory/skills/recall-conversations/scripts/memory_lib/parsing.py"
+      },
+      {
+        "id": "context",
+        "label": "Session context hook",
+        "path": "plugins/claude-memory/hooks/memory-context.py",
+        "symbol": "same-project startup selection, cached summaries, related sessions, bounded context output",
+        "url": "https://github.com/gupsammy/claudest/blob/266a7281bf9dbae9b025fae1d9fef3acb35e7636/plugins/claude-memory/hooks/memory-context.py"
+      },
+      {
+        "id": "search",
+        "label": "Conversation search CLI",
+        "path": "plugins/claude-memory/skills/recall-conversations/scripts/search_conversations.py",
+        "symbol": "FTS/BM25 snippets, scope, query filters and optional semantic retrieval",
+        "url": "https://github.com/gupsammy/claudest/blob/266a7281bf9dbae9b025fae1d9fef3acb35e7636/plugins/claude-memory/skills/recall-conversations/scripts/search_conversations.py"
+      },
+      {
+        "id": "scope",
+        "label": "Search scope implementation",
+        "path": "plugins/claude-memory/skills/recall-conversations/scripts/memory_lib/cli_common.py",
+        "symbol": "project path resolution and path-keyed scope filters",
+        "url": "https://github.com/gupsammy/claudest/blob/266a7281bf9dbae9b025fae1d9fef3acb35e7636/plugins/claude-memory/skills/recall-conversations/scripts/memory_lib/cli_common.py"
+      },
+      {
+        "id": "roster",
+        "label": "Curated memory systems roster",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 126 identity, slug, explicit listed locator and Atlas source attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Roster attribution only",
+        "path": "content/systems/claudest.md",
+        "symbol": "pinned source locator attributed by catalog entry; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/claudest.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "assessment domains; no Claudest measurements",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "project execution-status context; no Claudest run",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned workload only; not run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The catalog identifies Claudest (claude-memory), slug claudest, and lists https://github.com/gupsammy/claudest with explicit repository status. The catalog attributes the roster record to its pinned Atlas report; that report was used for roster attribution only, not to assess the implementation.",
+        "sources": [
+          "roster",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The official repository is public and identifies main as the default branch. Its main feed reports full head 266a7281bf9dbae9b025fae1d9fef3acb35e7636, updated 2026-10-29T07:09:47Z; repository page and head commit corroborate the identity and abbreviated/full revision.",
+        "sources": [
+          "repo",
+          "history",
+          "head"
+        ]
+      },
+      {
+        "text": "The official README describes claude-memory as one plugin in a personally curated Claude Code marketplace. It requires Python 3.7+ and SQLite from the standard library; this assessment is of the plugin, not a hosted service.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The documented storage is ~/.claude-memory/conversations.db using SQLite WAL and a 5-second busy timeout. The schema separates projects, sessions, messages, branches, and a branch_messages join table. Messages are stored once per session by UUID, while branches hold aggregated content and active-branch metadata for recall; imports are tracked in import_log.",
+        "sources": [
+          "readme",
+          "db",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The Stop hook dispatches an asynchronous parser/sync process so transcript processing does not block shutdown. The parser reads JSONL records and follows parentUuid or logicalParentUuid to reconstruct rewinds and compaction boundaries; branch rows no longer present in a fresh parse are pruned. The current revision also supports a minimal Codex transcript adapter.",
+        "sources": [
+          "readme",
+          "sync",
+          "parsing",
+          "import"
+        ]
+      },
+      {
+        "text": "On SessionStart, the context hook selects recent substantive sessions from the same resolved project, uses cached summaries when available, and keeps the injected context within a character budget. On-demand recall supports keyword search and chronological browsing. FTS capability falls back across FTS5, FTS4, then LIKE; semantic search is opt-in and embeds exchanges with EmbeddingGemma 2 through local Ollama.",
+        "sources": [
+          "readme",
+          "context",
+          "search",
+          "architecture"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: the Stop hook reads Claude JSONL transcripts, parses messages and branch relationships, and inserts or synchronizes project/session/message/branch rows. The importer records file hashes in import_log to skip unchanged transcripts. The Codex adapter imports selected user turns and final answers; it deliberately omits commentary, tool calls, function results and reasoning content, which can make those sessions thinner in recall.",
+        "sources": [
+          "sync",
+          "import",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Update: repeat imports reconcile sessions and branches, with UUID-based message identity and stale branch pruning. Automatic migration and backup behavior is documented in the architecture notes. The reviewed README exposes no per-message correction or supersession API; curated learnings are proposed with diffs and rationale and written only after explicit approval through extract-learnings.",
+        "sources": [
+          "import",
+          "parsing",
+          "architecture",
+          "readme"
+        ]
+      },
+      {
+        "text": "Delete: the manual reset documented by the README is to delete ~/.claude-memory/conversations.db and reimport. I did not find a supported per-message deletion workflow in the inspected README and selected hooks. Removing the database is a broad local reset; complete erasure from backups or other derived files was not established by this review.",
+        "sources": [
+          "readme",
+          "db"
+        ]
+      },
+      {
+        "text": "Retrieval: startup injection chooses recent same-project sessions, with a preference for substantive sessions and a fixed context-size budget. On-demand search retrieves FTS/BM25 excerpts or uses the platform fallback; when enabled and available, semantic search fuses keyword and vector ranking. Search queries are generated by the agent and may be iterated; no answer-level abstention or citation guarantee was identified in the inspected paths.",
+        "sources": [
+          "context",
+          "search",
+          "readme"
+        ]
+      },
+      {
+        "text": "Scope: search defaults to the project detected from the current working directory and resolves project scope by path; explicit project selection is also available. Worktrees can fold into their main checkout, and folderless chats map to a shared scratch project. Related-session suggestions intentionally compare across projects when semantic search is on. These code paths were inspected but no isolation or authorization probe was run.",
+        "sources": [
+          "scope",
+          "architecture",
+          "context",
+          "readme"
+        ]
+      },
+      {
+        "text": "Provenance and evidence: stored messages retain source session/message identifiers, timestamps and project/branch associations; import_log records source file path, hash and import counts. Search snippets can show matching conversation text. The inspected design does not provide a claim-to-source citation ledger or prove that a generated answer is supported by retrieved passages.",
+        "sources": [
+          "db",
+          "import",
+          "search",
+          "readme"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: SQLite, FTS indexes, branch-level aggregation and cached startup summaries avoid external infrastructure for default recall. Optional local embeddings trade extra index/build work for semantic retrieval; the README describes background indexing and lexical fallback when Ollama is unavailable. Logging is configurable in settings. These are source-visible design characteristics, not measurements.",
+        "sources": [
+          "readme",
+          "db",
+          "architecture",
+          "search"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Search and context assembly are implemented, but no answerable recall or abstention probes were run.",
+        "sources": [
+          "search",
+          "context",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and staleness",
+        "status": "unmeasured",
+        "evidence": "Imports reconcile current transcripts and prune stale branches; no correction or staleness probes were run.",
+        "sources": [
+          "import",
+          "parsing",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The documented reset removes the local database; no deletion leakage or residual-backup audit was run.",
+        "sources": [
+          "readme",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Project path filters are implemented; no cross-project isolation probe was run.",
+        "sources": [
+          "scope",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Conversation source identity is retained, but answer-level support was not adjudicated.",
+        "sources": [
+          "db",
+          "search",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No retrieval latency workload was run.",
+        "sources": [
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timed write-then-recall workload was run.",
+        "sources": [
+          "sync",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No token or cost measurement was collected.",
+        "sources": [
+          "readme",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No database or index size measurement was collected.",
+        "sources": [
+          "db",
+          "metrics"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded review of the official README, architecture notes, and selected importer, branch parsing, context, search, and database paths at one verified commit. It did not trace every hook, CLI option, migration, or failure mode.",
+        "sources": [
+          "readme",
+          "architecture",
+          "sync",
+          "search"
+        ]
+      },
+      {
+        "text": "No Claudest runtime, tests, or benchmark workload was executed. Runtime reliability, recall quality, semantic ranking quality, isolation under adversarial inputs, deletion completeness, and all metric values remain unknown.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "text": "The Codex adapter intentionally omits intermediate commentary and tool activity. The README's local-only statement for semantic embeddings describes the documented Ollama path; this review did not audit all optional marketplace features or their network behavior.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The inspected source supports project-scoped recall, but project detection and fallback behavior need runtime testing to establish isolation guarantees. No per-item deletion contract was located; reset and backup-retention details do not establish erasure from every copy.",
+        "sources": [
+          "scope",
+          "db",
+          "readme"
+        ]
+      }
+    ],
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "No Claudest system, tests, or benchmark workload was run for this review. Source structure and upstream descriptions are not project measurements."
+    }
+  }
+}

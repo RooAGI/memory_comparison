@@ -1,0 +1,361 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "cortex",
+    "name": "Cortex",
+    "ordinal": 157,
+    "repository": "https://github.com/CortexPrism/cortex",
+    "listed_repository": "https://github.com/CortexPrism/cortex",
+    "branch": "main",
+    "revision": "0c446572ddaad588164af939f2e093441b06921f",
+    "reviewed_at": "2026-11-25T09:29:16Z",
+    "review_timezone": "UTC (2026-11-25 01:29:16 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "CortexPrism is a self-hosted Deno agent operating system with episodic, semantic, procedural, graph, and reflection memory. Its inspected recall path combines lexical search, optional vectors, graph hits, and decay scoring before injecting a small context into each turn. This is a pinned source review, not a runtime or benchmark assessment.",
+    "atlas_locator": {
+      "ordinal": 157,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cortex.md",
+      "listed_repository": "https://github.com/CortexPrism/cortex"
+    },
+    "contact": {
+      "email": "security@cortexprism.io",
+      "source_url": "https://github.com/CortexPrism/cortex/blob/0c446572ddaad588164af939f2e093441b06921f/SECURITY.md",
+      "note": "Published in the official pinned security policy."
+    },
+    "contact_email": "security@cortexprism.io",
+    "contact_email_source_url": "https://github.com/CortexPrism/cortex/blob/0c446572ddaad588164af939f2e093441b06921f/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/CortexPrism/cortex/blob/0c446572ddaad588164af939f2e093441b06921f/README.md",
+      "https://github.com/CortexPrism/cortex/blob/0c446572ddaad588164af939f2e093441b06921f/SECURITY.md"
+    ],
+    "contact_email_note": "The official pinned SECURITY.md publishes security@cortexprism.io. The official pinned README was also checked. No commit/profile metadata or third-party directories were used.",
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository metadata",
+        "path": "GitHub repository API",
+        "symbol": "Canonical public repository; not a fork; default branch main",
+        "url": "https://api.github.com/repos/CortexPrism/cortex"
+      },
+      {
+        "id": "history",
+        "label": "Official main branch history",
+        "path": "commits/main.atom",
+        "symbol": "Current main head 0c446572ddaad588164af939f2e093441b06921f; updated 2026-06-25T23:47:43Z",
+        "url": "https://github.com/CortexPrism/cortex/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified full-SHA head commit",
+        "path": "commit",
+        "symbol": "Current main head 0c446572ddaad588164af939f2e093441b06921f",
+        "url": "https://github.com/CortexPrism/cortex/commit/0c446572ddaad588164af939f2e093441b06921f"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Product scope, five memory tiers, capabilities, architecture and operating model",
+        "url": "https://github.com/CortexPrism/cortex/blob/0c446572ddaad588164af939f2e093441b06921f/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Architecture documentation",
+        "path": "docs/ARCHITECTURE.md",
+        "symbol": "Single-process design, SQLite databases, memory data flow and agent loop",
+        "url": "https://github.com/CortexPrism/cortex/blob/0c446572ddaad588164af939f2e093441b06921f/docs/ARCHITECTURE.md"
+      },
+      {
+        "id": "store",
+        "label": "Memory store implementation",
+        "path": "packages/ai/src/memory/store.ts",
+        "symbol": "Episodic and semantic writes, retrieval fanout, ranking, decay and access updates",
+        "url": "https://github.com/CortexPrism/cortex/blob/0c446572ddaad588164af939f2e093441b06921f/packages/ai/src/memory/store.ts"
+      },
+      {
+        "id": "graph",
+        "label": "Memory graph implementation",
+        "path": "packages/ai/src/memory/graph.ts",
+        "symbol": "Graph entities, typed relations, relation updates and traversal",
+        "url": "https://github.com/CortexPrism/cortex/blob/0c446572ddaad588164af939f2e093441b06921f/packages/ai/src/memory/graph.ts"
+      },
+      {
+        "id": "consolidation",
+        "label": "Memory consolidation implementation",
+        "path": "packages/ai/src/memory/consolidate.ts",
+        "symbol": "Hourly/daily/weekly jobs, decay, stale deletion, retention and reflection consolidation",
+        "url": "https://github.com/CortexPrism/cortex/blob/0c446572ddaad588164af939f2e093441b06921f/packages/ai/src/memory/consolidate.ts"
+      },
+      {
+        "id": "heuristics",
+        "label": "Memory heuristic maintenance",
+        "path": "packages/ai/src/memory/heuristics.ts",
+        "symbol": "Regex categories/tags, access statistics, importance and decay heuristics",
+        "url": "https://github.com/CortexPrism/cortex/blob/0c446572ddaad588164af939f2e093441b06921f/packages/ai/src/memory/heuristics.ts"
+      },
+      {
+        "id": "inject",
+        "label": "Memory prompt injection",
+        "path": "packages/ai/src/memory/inject.ts",
+        "symbol": "Default retrieval limit and injected-memory formatting",
+        "url": "https://github.com/CortexPrism/cortex/blob/0c446572ddaad588164af939f2e093441b06921f/packages/ai/src/memory/inject.ts"
+      },
+      {
+        "id": "privacy",
+        "label": "Memory privacy and retention",
+        "path": "packages/ai/src/memory/privacy.ts",
+        "symbol": "In-process privacy policy map, PII redaction helper and row/vector retention deletion",
+        "url": "https://github.com/CortexPrism/cortex/blob/0c446572ddaad588164af939f2e093441b06921f/packages/ai/src/memory/privacy.ts"
+      },
+      {
+        "id": "vectors",
+        "label": "Optional vector-store adapters",
+        "path": "packages/ai/src/memory/vector_backends.ts",
+        "symbol": "Vector record contract and Qdrant, Chroma and Pinecone backend selection",
+        "url": "https://github.com/CortexPrism/cortex/blob/0c446572ddaad588164af939f2e093441b06921f/packages/ai/src/memory/vector_backends.ts"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Session isolation boundary and published security contact email",
+        "url": "https://github.com/CortexPrism/cortex/blob/0c446572ddaad588164af939f2e093441b06921f/SECURITY.md"
+      },
+      {
+        "id": "observability",
+        "label": "Observability documentation",
+        "path": "docs/observability.md",
+        "symbol": "Structured logging, Prometheus, OTLP and Langfuse configuration and signals",
+        "url": "https://github.com/CortexPrism/cortex/blob/0c446572ddaad588164af939f2e093441b06921f/docs/observability.md"
+      },
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 157, Cortex name, slug, explicit listed repository and pinned Atlas locator",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster locator",
+        "path": "content/systems/cortex.md",
+        "symbol": "Curated roster identity and locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cortex.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned workload only; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status; no Cortex measurements",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes CortexPrism as a self-hosted open-source Deno agent operating system with CLI, web UI, persistent memory, tools, and layered security. It identifies the project license as Apache-2.0.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Cortex is a single-process Deno application organized into six package boundaries. SQLite in WAL mode is split across core, memory, Lens audit, and vault databases; memory functions obtain their database through a shared client.",
+        "sources": [
+          "readme",
+          "architecture",
+          "store"
+        ]
+      },
+      {
+        "text": "The README describes five memory tiers: episodic, semantic, procedural skills, graph relations, and reflections. Episodic records include session, summary, topics, entities, timestamps, importance, decay and optional embedding; semantic records include content, category, tags, importance, decay and optional embedding.",
+        "sources": [
+          "readme",
+          "store"
+        ]
+      },
+      {
+        "text": "GitHub's official repository API identifies CortexPrism/cortex as public, non-fork, and defaulting to main. The official main Atom feed identifies full head 0c446572ddaad588164af939f2e093441b06921f, updated 2026-06-25T23:47:43Z; reviewed 2026-11-25 09:29:16 UTC (01:29:16 PST; America/Los_Angeles).",
+        "sources": [
+          "repo",
+          "history",
+          "head"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Episodic and semantic writes insert records into SQLite and corresponding FTS rows. An optional embedder adds vectors, and a configured Qdrant, Chroma, or Pinecone adapter may mirror them; embedding and vector-mirror write failures are non-fatal in the inspected paths.",
+        "sources": [
+          "store",
+          "vectors"
+        ]
+      },
+      {
+        "text": "Regex heuristics assign categories and tags; access tracking can boost importance or slow decay, and graph heuristics can strengthen co-occurring relations. Existing graph relations increment strength and access count when added again.",
+        "sources": [
+          "heuristics",
+          "graph"
+        ]
+      },
+      {
+        "text": "Hourly consolidation joins recent same-session summaries into a newer episodic row. Daily jobs update decay, delete stale rows, run heuristics, and enforce retention; weekly work also runs reflection consolidation when a configured model is available.",
+        "sources": [
+          "consolidation"
+        ]
+      },
+      {
+        "text": "Daily stale-entry deletion and retention cleanup delete SQLite records and ask the optional vector store to delete their IDs. Vector deletion errors are suppressed; the inspected paths do not demonstrate physical erasure from SQLite storage, WAL, backups, or remote vector backups.",
+        "sources": [
+          "consolidation",
+          "privacy",
+          "store"
+        ]
+      },
+      {
+        "text": "Recall combines keyword, optional vector, and graph-derived hits; deduplicates, applies time-decay, ranks, and limits them. The prompt injector defaults to five entries and formats tier, age, selected metadata, and a truncated text excerpt.",
+        "sources": [
+          "store",
+          "inject",
+          "graph"
+        ]
+      },
+      {
+        "text": "Episodic keyword/vector paths accept a session filter, while the inspected semantic and graph arms do not. The final filter occurs after ranking/limiting and accepts records whose session ID is null. This describes source behavior, not a measured isolation result.",
+        "sources": [
+          "store",
+          "graph"
+        ]
+      },
+      {
+        "text": "Episodic entries retain session/time/topic/entity metadata; semantic entries retain category and tags; graph edges may store a context string. The inspected injection output does not attach source-document identifiers or claim-level citations. The privacy module exposes an in-process policy map and redaction helper, but this review did not establish that policy enforcement covers every memory path.",
+        "sources": [
+          "store",
+          "graph",
+          "inject",
+          "privacy"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention — unmeasured. Hybrid retrieval is present; no scored answerability or abstention probes were run.",
+        "sources": [
+          "store",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured. Consolidation and graph updates are implemented; no correction workload or adjudication was run.",
+        "sources": [
+          "consolidation",
+          "graph",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Deletion leakage — unmeasured. Age/decay deletion and retention paths exist; no post-delete probe, storage inspection, or backup check was run.",
+        "sources": [
+          "consolidation",
+          "privacy",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Scope isolation — unmeasured. Episodic session filters exist with global semantic/graph paths; no leakage workload was run.",
+        "sources": [
+          "store",
+          "graph",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Evidence support precision and citation coverage — unmeasured. Retrieved memory has limited metadata and no inspected claim-level citation contract; no claims were scored.",
+        "sources": [
+          "store",
+          "inject",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Retrieval latency and write-to-recall delay — unmeasured. No timing samples or timed probes were collected.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Tokens and cost — unmeasured. Observability docs describe token and cost fields, but no runtime metrics were collected.",
+        "sources": [
+          "observability",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Storage efficiency — unmeasured. No corpus-attributed storage size was measured.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The review is bounded to the official README, architecture and observability documentation, and selected memory store, graph, heuristic, vector, injection, consolidation, privacy, and security files. It did not inspect every migration, tool route, model adapter, or deployment configuration.",
+        "sources": [
+          "readme",
+          "architecture",
+          "observability",
+          "store",
+          "consolidation"
+        ]
+      },
+      {
+        "text": "Source and documentation review does not establish runtime correctness, recall or correction quality, deletion completeness, deployed session isolation, latency, write-to-recall delay, token/cost totals, or storage efficiency. No system runtime, tests, or benchmarks were run.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "The code does not establish the deployment's session-ID propagation, vector-store configuration, privacy-policy use, retention schedule, or telemetry configuration. Vector mirror errors are suppressed and deletion completeness beyond the inspected paths remains unknown.",
+        "sources": [
+          "store",
+          "vectors",
+          "privacy",
+          "consolidation",
+          "observability"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Cortex runtime, tests, or benchmark workload was executed. Source and documentation observations are not measurements.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

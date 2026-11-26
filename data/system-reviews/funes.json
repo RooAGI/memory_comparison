@@ -1,0 +1,397 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 248,
+    "slug": "funes",
+    "name": "funes",
+    "repository": "https://github.com/huggingface/funes",
+    "listed_repository": "https://github.com/huggingface/funes",
+    "branch": "main",
+    "revision": "7b933e7f73297d2105be05f2d88b7babde118261",
+    "reviewed_at": "2026-11-25T20:44:15Z",
+    "review_timezone": "UTC (2026-11-25 12:44:15 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "funes indexes coding-agent sessions into a local Lance vector dataset and recalls passages with hybrid search and reranking. Optional Hugging Face dataset publishing shares an append-oriented memory across agents and machines.",
+    "atlas_locator": {
+      "revision": "942caf8730ed07c7236ba52aef7668f5b8f8544d",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/funes.md"
+    },
+    "contact": {
+      "email": "security@huggingface.co",
+      "source_url": "https://github.com/huggingface/funes/blob/7b933e7f73297d2105be05f2d88b7babde118261/SECURITY.md",
+      "note": "Official pinned SECURITY.md publishes security@huggingface.co for vulnerability reports. The official pinned README was also checked and contains no contact email; no account or commit metadata or third-party directory was used."
+    },
+    "contact_email": "security@huggingface.co",
+    "contact_email_source_url": "https://github.com/huggingface/funes/blob/7b933e7f73297d2105be05f2d88b7babde118261/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/huggingface/funes/blob/7b933e7f73297d2105be05f2d88b7babde118261/README.md",
+      "https://github.com/huggingface/funes/blob/7b933e7f73297d2105be05f2d88b7babde118261/SECURITY.md"
+    ],
+    "contact_email_note": "The official pinned SECURITY.md publishes security@huggingface.co for vulnerability reporting. README and SECURITY.md were the official project documents checked; no account or commit metadata, inferred address, or third-party directory was used.",
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository page",
+        "path": "repository metadata",
+        "symbol": "canonical huggingface/funes; official page names default branch main",
+        "url": "https://github.com/huggingface/funes"
+      },
+      {
+        "id": "head",
+        "label": "Official upstream main ref",
+        "path": "refs/heads/main",
+        "symbol": "git ls-remote and shallow checkout agree on full current head 7b933e7f73297d2105be05f2d88b7babde118261",
+        "url": "https://github.com/huggingface/funes/commits/main"
+      },
+      {
+        "id": "tree",
+        "label": "Reviewed upstream tree",
+        "path": "repository",
+        "symbol": "reviewed commit 7b933e7f73297d2105be05f2d88b7babde118261",
+        "url": "https://github.com/huggingface/funes/tree/7b933e7f73297d2105be05f2d88b7babde118261"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "project, local-first behavior, integrations, sharing, telemetry, and embedding model",
+        "url": "https://github.com/huggingface/funes/blob/7b933e7f73297d2105be05f2d88b7babde118261/README.md"
+      },
+      {
+        "id": "jsonl",
+        "label": "Turns input format",
+        "path": "docs/funes-jsonl.md",
+        "symbol": "turn/block schema and producer contract",
+        "url": "https://github.com/huggingface/funes/blob/7b933e7f73297d2105be05f2d88b7babde118261/docs/funes-jsonl.md"
+      },
+      {
+        "id": "chunk",
+        "label": "Chunk model and provenance",
+        "path": "src/chunk.rs",
+        "symbol": "chunk identity, text splitting, and source/session coordinates",
+        "url": "https://github.com/huggingface/funes/blob/7b933e7f73297d2105be05f2d88b7babde118261/src/chunk.rs"
+      },
+      {
+        "id": "index",
+        "label": "Index command implementation",
+        "path": "src/commands/index.rs",
+        "symbol": "incremental source enumeration, ID deduplication, append, pending embeddings",
+        "url": "https://github.com/huggingface/funes/blob/7b933e7f73297d2105be05f2d88b7babde118261/src/commands/index.rs"
+      },
+      {
+        "id": "dataset",
+        "label": "Lance dataset operations",
+        "path": "src/memory/dataset.rs",
+        "symbol": "dataset schema, model identity, scans, append, and overwrite",
+        "url": "https://github.com/huggingface/funes/blob/7b933e7f73297d2105be05f2d88b7babde118261/src/memory/dataset.rs"
+      },
+      {
+        "id": "index_docs",
+        "label": "Index and compaction guide",
+        "path": "docs/index.md",
+        "symbol": "index behavior, incremental updates, resumption, filters, and compaction",
+        "url": "https://github.com/huggingface/funes/blob/7b933e7f73297d2105be05f2d88b7babde118261/docs/index.md"
+      },
+      {
+        "id": "recall",
+        "label": "Recall implementation",
+        "path": "src/commands/recall.rs",
+        "symbol": "hybrid search, filters, reranking, hit and turn reconstruction",
+        "url": "https://github.com/huggingface/funes/blob/7b933e7f73297d2105be05f2d88b7babde118261/src/commands/recall.rs"
+      },
+      {
+        "id": "recall_docs",
+        "label": "Recall guide",
+        "path": "docs/recall.md",
+        "symbol": "retrieval semantics, result provenance, output bounds, filters and recency limitation",
+        "url": "https://github.com/huggingface/funes/blob/7b933e7f73297d2105be05f2d88b7babde118261/docs/recall.md"
+      },
+      {
+        "id": "ask",
+        "label": "Grounded ask guide",
+        "path": "docs/ask.md",
+        "symbol": "agent answer workflow and source session attribution",
+        "url": "https://github.com/huggingface/funes/blob/7b933e7f73297d2105be05f2d88b7babde118261/docs/ask.md"
+      },
+      {
+        "id": "push_docs",
+        "label": "Publishing and scrub guide",
+        "path": "docs/push.md",
+        "symbol": "remote append, secret gate, scrub, and remote deletion limitations",
+        "url": "https://github.com/huggingface/funes/blob/7b933e7f73297d2105be05f2d88b7babde118261/docs/push.md"
+      },
+      {
+        "id": "scrub",
+        "label": "Scrub implementation",
+        "path": "src/commands/scrub.rs",
+        "symbol": "secret scan, block rewrite, index rebuild, and old-version removal",
+        "url": "https://github.com/huggingface/funes/blob/7b933e7f73297d2105be05f2d88b7babde118261/src/commands/scrub.rs"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "contact email, local data handling, Hub access, secrets, and untrusted remote memory",
+        "url": "https://github.com/huggingface/funes/blob/7b933e7f73297d2105be05f2d88b7babde118261/SECURITY.md"
+      },
+      {
+        "id": "automation",
+        "label": "Automation guide",
+        "path": "docs/automation.md",
+        "symbol": "per-turn indexing and session-boundary publishing",
+        "url": "https://github.com/huggingface/funes/blob/7b933e7f73297d2105be05f2d88b7babde118261/docs/automation.md"
+      },
+      {
+        "id": "storage",
+        "label": "Storage guide",
+        "path": "docs/storage.md",
+        "symbol": "data/index footprint model and maintenance claims",
+        "url": "https://github.com/huggingface/funes/blob/7b933e7f73297d2105be05f2d88b7babde118261/docs/storage.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Catalog identity and attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 248 funes; explicit listed locator and pinned Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas locator attribution",
+        "path": "content/systems/funes.md",
+        "symbol": "curated roster attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/funes.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes funes as durable searchable memory for agent coding sessions. It is a Rust CLI and local Lance dataset with optional integrations, MCP tools, and Hugging Face dataset sharing; no hosted service is claimed here. The official SECURITY.md publishes security@huggingface.co for vulnerability reporting. Repository ownership metadata is not used to infer an individual maintainer.",
+        "sources": [
+          "readme",
+          "security",
+          "repo"
+        ]
+      },
+      {
+        "text": "The catalog assigns ordinal 248 to funes with the explicit huggingface/funes locator. Its pinned Atlas record is retained only as roster attribution, not assessment evidence.",
+        "sources": [
+          "roster",
+          "atlas"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Integrations parse agent-specific session histories into a shared turn/block model or a documented funes JSONL file. Chunk IDs derive from session, turn UUID, block index, and split index; stored rows retain timestamp, role, source path, harness, workdir, repository, and turn coordinates.",
+        "sources": [
+          "jsonl",
+          "chunk",
+          "index"
+        ]
+      },
+      {
+        "text": "The Lance dataset stores chunk text and vectors and pins the embedding-model identity. Local memory is the default; optional Hub dataset repositories allow sharing. A memory holds vectors for one model and rejects pushes made with a different model.",
+        "sources": [
+          "dataset",
+          "readme",
+          "storage"
+        ]
+      },
+      {
+        "text": "Indexing appends unseen chunk IDs and can leave new text searchable while embeddings remain pending. Incremental state and later runs resume incomplete work. Compaction merges fragments and rebuilds search indexes without logically removing live rows.",
+        "sources": [
+          "index",
+          "dataset",
+          "index_docs"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: indexing reads converted turn units, renders and chunks blocks, assigns repository facets when resolvable, appends rows, and embeds them with a pinned local model. Per-turn integrations can repeat indexing incrementally. Rows with existing stable IDs are skipped; changed text at an existing ID does not replace the stored passage.",
+        "sources": [
+          "index",
+          "chunk",
+          "index_docs",
+          "automation"
+        ]
+      },
+      {
+        "text": "Update/correction: new turns append and become searchable, while stored chunk IDs are deduplicated. No general edit or supersession mechanism for a remembered passage was found; repeated or corrected statements may coexist, and ranking is not inherently recency weighted.",
+        "sources": [
+          "index",
+          "recall_docs"
+        ]
+      },
+      {
+        "text": "Delete: no general per-session or per-row deletion operation was found in the inspected CLI/docs. `funes scrub` is a secret-remediation rewrite that redacts or drops blocks and deletes old local dataset versions. It does not rewrite source transcripts or delete remote Hub history; remote remediation requires separate dataset deletion/recreation.",
+        "sources": [
+          "push_docs",
+          "scrub",
+          "security"
+        ]
+      },
+      {
+        "text": "Retrieval: recall fuses vector and BM25 rankings per block type using reciprocal rank, then reranks a candidate pool with a cross-encoder when needed. It returns source passages with session/turn drill-down; filters cover type, role, harness, repo and date. Ranking favors relevance over recency; `ask` can provide a generated answer that names the sessions it used.",
+        "sources": [
+          "recall",
+          "recall_docs",
+          "ask"
+        ]
+      },
+      {
+        "text": "Scope: one memory can aggregate all indexed agent sessions and repositories. Harness/repository filters narrow results but do not enforce authorization. Hub ownership, visibility, and tokens gate remote access; public memories are readable to anyone, and local access to the dataset exposes its contents.",
+        "sources": [
+          "readme",
+          "recall_docs",
+          "security"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy",
+        "status": "unmeasured",
+        "evidence": "Hybrid vector/BM25 search and reranking are implemented; the fixture defines answerable probes, but no answerable probe quality was tested.",
+        "sources": [
+          "recall",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Unanswerable abstention",
+        "status": "unmeasured",
+        "evidence": "No-result behavior exists; calibrated abstention on unanswerable prompts was not evaluated.",
+        "sources": [
+          "recall_docs",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Writes are append-oriented and relevance ranking is not recency weighted; no correction or stale-value probe was run.",
+        "sources": [
+          "index",
+          "recall_docs",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Secret scrub rewrites local rows; general row deletion and automatic remote erasure are absent from the inspected workflow. No leakage probe was run.",
+        "sources": [
+          "scrub",
+          "push_docs",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Hub repository access and retrieval filters are source-visible; no adversarial cross-scope evaluation was run.",
+        "sources": [
+          "security",
+          "recall_docs",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Transcript coordinates and session citations are available; claim support was not adjudicated.",
+        "sources": [
+          "chunk",
+          "ask",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Incremental indexing and hybrid retrieval are present; no end-to-end latency or delay was measured.",
+        "sources": [
+          "index",
+          "recall",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "Hit count, candidate pool, and oneline output bound payload; no token or cost workload was measured.",
+        "sources": [
+          "recall_docs",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Storage efficiency and operational observability",
+        "status": "unmeasured",
+        "evidence": "Storage/compaction design and status/backlog reporting are documented; no actual disk, reliability, or telemetry data was collected.",
+        "sources": [
+          "storage",
+          "push_docs",
+          "automation",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a source review of the official repository at the verified main head. funes, its tests, and benchmarks were not run.",
+        "sources": [
+          "repo",
+          "head",
+          "tree",
+          "readme"
+        ]
+      },
+      {
+        "text": "Runtime retrieval quality, correction handling, calibrated abstention, deletion leakage, local-process isolation, actual resource use, and production reliability remain unknown. Local transcripts store credentials as written until scrubbed; remote publication and erasure depend on Hub operations. Public shared memories are untrusted prompt input.",
+        "sources": [
+          "security",
+          "push_docs",
+          "recall_docs",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No funes runtime, tests, or benchmark workload was run. Project metric definitions and fixture describe a protocol, not funes results."
+    }
+  }
+}

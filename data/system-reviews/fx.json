@@ -1,0 +1,331 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 249,
+    "slug": "fx",
+    "name": "fx",
+    "repository": "https://github.com/vercel-labs/fx",
+    "listed_repository": "https://github.com/vercel-labs/fx",
+    "branch": "main",
+    "revision": "75fb0649d45ce552a749a50d60c36c14358973db",
+    "reviewed_at": "2026-11-25T20:45:45Z",
+    "review_timezone": "UTC (checked 2026-11-25 12:45:45 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Current fx is a native Zig coding agent whose persistent memory is primarily its resumable conversation history. It stores session events locally, compacts older turns to fit model context, and keeps originals available for later lookup. This review did not find a separate durable fact store or run the system.",
+    "atlas_locator": {
+      "ordinal": 249,
+      "name": "fx",
+      "slug": "fx",
+      "listed_repository": "https://github.com/vercel-labs/fx",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/fx.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/vercel-labs/fx/blob/75fb0649d45ce552a749a50d60c36c14358973db/README.md",
+      "checked_urls": [
+        "https://github.com/vercel-labs/fx/blob/75fb0649d45ce552a749a50d60c36c14358973db/README.md"
+      ],
+      "note": "Checked the official pinned README for a published contact email; none was present. No commit/profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/vercel-labs/fx/blob/75fb0649d45ce552a749a50d60c36c14358973db/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/vercel-labs/fx/blob/75fb0649d45ce552a749a50d60c36c14358973db/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the checked official pinned README. No commit/profile metadata, third-party directory, or inferred address was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[248], ordinal 249; name/slug/listed repository and Atlas locator attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/fx.md",
+        "symbol": "Pinned attribution source for curated identity and locator only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/fx.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "",
+        "symbol": "Public repository page; canonical identity and default branch main",
+        "url": "https://github.com/vercel-labs/fx"
+      },
+      {
+        "id": "head",
+        "label": "Official current main commit feed",
+        "path": "",
+        "symbol": "Recent Commits to fx:main Atom feed; full current head 75fb0649d45ce552a749a50d60c36c14358973db and update time",
+        "url": "https://github.com/vercel-labs/fx/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "fx description, single native Zig binary, saved sessions and compaction, installation and usage",
+        "url": "https://github.com/vercel-labs/fx/blob/75fb0649d45ce552a749a50d60c36c14358973db/README.md"
+      },
+      {
+        "id": "session-log",
+        "label": "Pinned session event log source",
+        "path": "src/core/session/session_log.zig",
+        "symbol": "JSONL event persistence, replay/progress handling, event types, session files and private permissions",
+        "url": "https://github.com/vercel-labs/fx/blob/75fb0649d45ce552a749a50d60c36c14358973db/src/core/session/session_log.zig"
+      },
+      {
+        "id": "session-store",
+        "label": "Pinned session store source",
+        "path": "src/core/session/session_store.zig",
+        "symbol": "Session store, discovery, loading, resume/fork and read-only loading paths",
+        "url": "https://github.com/vercel-labs/fx/blob/75fb0649d45ce552a749a50d60c36c14358973db/src/core/session/session_store.zig"
+      },
+      {
+        "id": "layout",
+        "label": "Pinned session layout source",
+        "path": "src/core/session/session_layout.zig",
+        "symbol": "Session identifiers, path validation and v2 storage layout",
+        "url": "https://github.com/vercel-labs/fx/blob/75fb0649d45ce552a749a50d60c36c14358973db/src/core/session/session_layout.zig"
+      },
+      {
+        "id": "compactor",
+        "label": "Pinned conversation compactor source",
+        "path": "src/core/compactor/compactor.zig",
+        "symbol": "Compaction pipeline, preserved recent turns, model summary and searchable saved records",
+        "url": "https://github.com/vercel-labs/fx/blob/75fb0649d45ce552a749a50d60c36c14358973db/src/core/compactor/compactor.zig"
+      },
+      {
+        "id": "context",
+        "label": "Pinned built-in context source",
+        "path": "src/builtins/context.zig",
+        "symbol": "Prompt/context assembly, project instruction files and context limits",
+        "url": "https://github.com/vercel-labs/fx/blob/75fb0649d45ce552a749a50d60c36c14358973db/src/builtins/context.zig"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Project assessment domains and definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Shared benchmark fixture, not a result for fx",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status, not an fx result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The upstream README describes fx as a tiny, open, embeddable native coding agent written in Zig, distributed as one binary. This is a coding-agent repository; its current documented persistence centers on sessions rather than a standalone knowledge service.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      },
+      {
+        "text": "The catalog's pinned Atlas entry is retained only as attribution for the curated ordinal and repository locator. None of its profile claims are used as evidence in this review.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README says fx saves conversations under ~/.fx/sessions/ and resumes them with `fx -c`; when context fills, it compacts older turns but leaves their full text on disk for later lookup. This is session continuity, not a user-managed collection of independent facts.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The inspected session event log uses a session directory with `events.jsonl`, a `session.json` manifest, a permissions file and recovery checkpoint. Conversation events are sequenced and replayed into session history; session identifiers are path-validated. The code declares restrictive directory/file permissions (0700/0600).",
+        "sources": [
+          "session-log",
+          "layout"
+        ]
+      },
+      {
+        "text": "The session store handles session discovery, read-only inspection, loading, resuming, and forking. The data model includes workspace metadata and durable conversation state, while the context builder separately composes project instruction files and transient prompt context.",
+        "sources": [
+          "session-store",
+          "context"
+        ]
+      },
+      {
+        "text": "The compactor selects an older history window, leaves recent turns unchanged, asks a model to summarize, and stores a checkpoint plus a searchable record set for turns, tool calls, and earlier compactions. The checkpoint is used as replacement context while older raw conversation remains in the session archive.",
+        "sources": [
+          "compactor",
+          "session-log"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Writes happen as fx records conversation and tool events during a session. Compaction adds a summary checkpoint; it does not rewrite the archived conversation as an edited fact. The inspected source does not establish a supported per-fact create/update API.",
+        "sources": [
+          "readme",
+          "session-log",
+          "compactor"
+        ]
+      },
+      {
+        "text": "Session resume and fork are supported by the session store. This review did not identify a reviewed session-delete or per-record correction operation, so deletion and fact correction semantics remain unknown.",
+        "sources": [
+          "session-store"
+        ]
+      },
+      {
+        "text": "Retrieval is oriented around resuming a session and looking up earlier conversation. The compactor exposes phrase search over saved turns, tool calls, prior compactions and older conversation archives; this is lexical/archive lookup, not a reviewed semantic fact-ranking service.",
+        "sources": [
+          "readme",
+          "session-store",
+          "compactor"
+        ]
+      },
+      {
+        "text": "Session records preserve the conversation sequence, tool calls/results and related execution context, allowing historical claims to be traced to a session. Compactor lint checks notes and references against saved turns and tool calls and marks unsupported items; this is provenance inside a conversation archive, not a general truth or source-citation model.",
+        "sources": [
+          "session-log",
+          "compactor"
+        ]
+      },
+      {
+        "text": "Sessions are local to the user's fx profile and carry workspace metadata used for project-oriented continuation. The inspected material does not establish hard tenant isolation or a tested cross-workspace security boundary.",
+        "sources": [
+          "readme",
+          "session-store",
+          "layout"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Conversation resume and phrase search over saved turns are available, but no answer quality or abstention was scored.",
+        "sources": [
+          "readme",
+          "compactor",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction and stale values",
+        "status": "unmeasured",
+        "evidence": "Session transcripts and compaction checkpoints preserve conversation history; no memory-fact correction workflow was assessed.",
+        "sources": [
+          "session-log",
+          "compactor",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The inspected sources establish session storage and replay, but this review did not locate or exercise a session erase path or test deletion leakage.",
+        "sources": [
+          "session-store",
+          "session-log",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Sessions retain workspace metadata and are discovered through the local session store; no cross-workspace or cross-user isolation workload was run.",
+        "sources": [
+          "session-store",
+          "layout",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Event records preserve conversation and tool context; no generated answer evidence was adjudicated.",
+        "sources": [
+          "session-log",
+          "compactor",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No runtime timings or write-to-recall samples were collected.",
+        "sources": [
+          "session-log",
+          "compactor",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "Compaction is intended to bound the active conversation context while archived turns remain available; no token, cost, or storage measurements were collected.",
+        "sources": [
+          "readme",
+          "compactor",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review is limited to the current README, session event/store/layout code, compaction pipeline, and prompt context builder. It did not inspect every command or all session cleanup paths; absence of a behavior in these files is not proof that no related command exists elsewhere.",
+        "sources": [
+          "readme",
+          "session-log",
+          "session-store",
+          "layout",
+          "compactor",
+          "context"
+        ]
+      },
+      {
+        "text": "The archived conversation can include sensitive prompts and tool context. The source declares restrictive local permissions, but this review did not test encryption, backup behavior, recovery after corruption, or deletion from external backups.",
+        "sources": [
+          "session-log",
+          "session-store"
+        ]
+      },
+      {
+        "text": "Source structure and documented features cannot establish whether summaries preserve the useful information, whether archive lookup finds the right turn, whether scope is isolated in use, or what latency and resource cost users experience.",
+        "sources": [
+          "compactor",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No fx runtime, tests, or benchmarks were run. The project fixture and metric definitions are evaluation materials, not fx measurements."
+    }
+  }
+}

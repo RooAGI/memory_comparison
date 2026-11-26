@@ -1,0 +1,353 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "backboard-desktop",
+    "name": "Backboard Desktop",
+    "repository": "https://github.com/Backboard-io/Backboard-Desktop",
+    "branch": "stable",
+    "revision": "7e05905a32a587f0b17ce7507ca3528b67d22a9c",
+    "reviewed_at": "2026-11-24T23:24:13Z",
+    "review_timezone": "UTC (2026-11-24 15:24:13 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/Backboard-io/Backboard-Desktop/blob/7e05905a32a587f0b17ce7507ca3528b67d22a9c/README.md","checked_urls":["https://github.com/Backboard-io/Backboard-Desktop/blob/7e05905a32a587f0b17ce7507ca3528b67d22a9c/README.md","https://github.com/Backboard-io/Backboard-Desktop/blob/7e05905a32a587f0b17ce7507ca3528b67d22a9c/SECURITY.md","https://github.com/Backboard-io/Backboard-Desktop/blob/7e05905a32a587f0b17ce7507ca3528b67d22a9c/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "Backboard Desktop is an open-source desktop agent IDE. Its README advertises memory across chats, while the bounded current CLI source inspection found durable per-session conversation and request logs but no semantic memory store or cross-chat recall path. This review records source observations and does not establish runtime memory behavior.",
+    "atlas_locator": {
+      "ordinal": 86,
+      "name": "Backboard Desktop",
+      "slug": "backboard-desktop",
+      "listed_repository": "https://github.com/Backboard-io/Backboard-Desktop",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/backboard-desktop.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": "hello@backboard.io",
+    "contact_email_source_url": "https://backboard.io/company/contact",
+    "contact_email_checked_sources": [
+      "https://github.com/Backboard-io/Backboard-Desktop/blob/7e05905a32a587f0b17ce7507ca3528b67d22a9c/README.md",
+      "https://backboard.io/company/contact"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository and branch page",
+        "path": "repository",
+        "url": "https://github.com/Backboard-io/Backboard-Desktop"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed stable branch head",
+        "path": "commit/7e05905a32a587f0b17ce7507ca3528b67d22a9c",
+        "url": "https://github.com/Backboard-io/Backboard-Desktop/commit/7e05905a32a587f0b17ce7507ca3528b67d22a9c"
+      },
+      {
+        "id": "feed",
+        "label": "Official stable branch commit feed",
+        "path": "commits/stable.atom",
+        "url": "https://github.com/Backboard-io/Backboard-Desktop/commits/stable.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Official repository README",
+        "path": "README.md",
+        "url": "https://github.com/Backboard-io/Backboard-Desktop/blob/7e05905a32a587f0b17ce7507ca3528b67d22a9c/README.md"
+      },
+      {
+        "id": "sessions_arch",
+        "label": "Sessions architecture documentation",
+        "path": "backboard/src/vs/sessions/SESSIONS.md",
+        "symbol": "Sessions, chats, workspace scope, and pluggable providers",
+        "url": "https://github.com/Backboard-io/Backboard-Desktop/blob/7e05905a32a587f0b17ce7507ca3528b67d22a9c/backboard/src/vs/sessions/SESSIONS.md"
+      },
+      {
+        "id": "session_store",
+        "label": "CLI session store and metadata layout",
+        "path": "backboard/cli-ts/src/core/session/SessionStore.ts",
+        "symbol": "SessionPaths, SessionMeta, sessionPathsForRoot, SessionStore.init",
+        "url": "https://github.com/Backboard-io/Backboard-Desktop/blob/7e05905a32a587f0b17ce7507ca3528b67d22a9c/backboard/cli-ts/src/core/session/SessionStore.ts"
+      },
+      {
+        "id": "paths",
+        "label": "CLI project and session path helpers",
+        "path": "backboard/cli-ts/src/config/paths.ts",
+        "symbol": "qProjectConfigDir, qProjectWorkspaceId, qSessionDir",
+        "url": "https://github.com/Backboard-io/Backboard-Desktop/blob/7e05905a32a587f0b17ce7507ca3528b67d22a9c/backboard/cli-ts/src/config/paths.ts"
+      },
+      {
+        "id": "lifecycle",
+        "label": "Session create, resume, and lease lifecycle",
+        "path": "backboard/cli-ts/src/core/session/SessionLifecycle.ts",
+        "symbol": "initialize, startNew, resume, activate, acquireLease",
+        "url": "https://github.com/Backboard-io/Backboard-Desktop/blob/7e05905a32a587f0b17ce7507ca3528b67d22a9c/backboard/cli-ts/src/core/session/SessionLifecycle.ts"
+      },
+      {
+        "id": "session",
+        "label": "In-memory session projection and hydration",
+        "path": "backboard/cli-ts/src/core/session/Session.ts",
+        "symbol": "Session.hydrate, reset, getMessages, usage",
+        "url": "https://github.com/Backboard-io/Backboard-Desktop/blob/7e05905a32a587f0b17ce7507ca3528b67d22a9c/backboard/cli-ts/src/core/session/Session.ts"
+      },
+      {
+        "id": "message",
+        "label": "Message and tool-result shapes",
+        "path": "backboard/cli-ts/src/core/session/Message.ts",
+        "symbol": "Message, UserMessage, AssistantMessage, ToolMessage",
+        "url": "https://github.com/Backboard-io/Backboard-Desktop/blob/7e05905a32a587f0b17ce7507ca3528b67d22a9c/backboard/cli-ts/src/core/session/Message.ts"
+      },
+      {
+        "id": "client_log",
+        "label": "Client event trace schema and writer",
+        "path": "backboard/cli-ts/src/core/session/ClientEventLog.ts",
+        "symbol": "ClientLogRecord, ClientEventLog",
+        "url": "https://github.com/Backboard-io/Backboard-Desktop/blob/7e05905a32a587f0b17ce7507ca3528b67d22a9c/backboard/cli-ts/src/core/session/ClientEventLog.ts"
+      },
+      {
+        "id": "server_log",
+        "label": "Server request/response trace and header redaction",
+        "path": "backboard/cli-ts/src/core/session/ServerEventLog.ts",
+        "symbol": "ServerRequestRecord, ServerResponseRecord, redactHeaders",
+        "url": "https://github.com/Backboard-io/Backboard-Desktop/blob/7e05905a32a587f0b17ce7507ca3528b67d22a9c/backboard/cli-ts/src/core/session/ServerEventLog.ts"
+      },
+      {
+        "id": "writer",
+        "label": "Ordered append-only JSONL writer",
+        "path": "backboard/cli-ts/src/core/session/JsonlWriter.ts",
+        "symbol": "JsonlWriter.writeBatch, flush, ensureAppendBoundary",
+        "url": "https://github.com/Backboard-io/Backboard-Desktop/blob/7e05905a32a587f0b17ce7507ca3528b67d22a9c/backboard/cli-ts/src/core/session/JsonlWriter.ts"
+      },
+      {
+        "id": "stream",
+        "label": "Client JSON event stream",
+        "path": "backboard/cli-ts/src/core/session/JsonEventStream.ts",
+        "symbol": "JsonEventRecord, JsonEventStream",
+        "url": "https://github.com/Backboard-io/Backboard-Desktop/blob/7e05905a32a587f0b17ce7507ca3528b67d22a9c/backboard/cli-ts/src/core/session/JsonEventStream.ts"
+      },
+      {
+        "id": "contact",
+        "label": "Official Backboard contact page",
+        "path": "company/contact",
+        "url": "https://backboard.io/company/contact"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated identity and Atlas attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 86",
+        "url": "../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The repository presents Backboard Desktop as a free MIT-licensed desktop agent IDE built on Code - OSS. It runs a TypeScript/Bun agent process alongside the IDE and advertises coding agents, multi-session workflows, skills, MCP, and memory across chats. The inspected code is an application/runtime, not a standalone memory service.",
+        "sources": [
+          "readme",
+          "sessions_arch"
+        ]
+      },
+      {
+        "text": "The README names Erin Tomorri and Nihal Kodukula among contributors. This identifies contributors as stated by the project, without inferring maintainership beyond the documentation.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The CLI Session projection keeps a Backboard thread ID, assistant ID, ordered user/assistant/tool messages, todos, status, and usage/context counters in memory. It can hydrate from a supplied thread and transcript; this is conversation state, not an extracted fact-memory model.",
+        "sources": [
+          "session",
+          "message"
+        ]
+      },
+      {
+        "text": "SessionStore creates <baseDir>/.backboard/sessions/<sessionId>/ with client/server JSONL paths, meta.json, worker state, checkpoints, and a pending-undo pointer. Checkpoint objects use a sibling shared objects directory. Session metadata records ID, creation time, cwd, model, and profile.",
+        "sources": [
+          "session_store",
+          "paths"
+        ]
+      },
+      {
+        "text": "The sessions architecture documentation describes a session as one or more chats sharing workspace context and outlines pluggable providers for local and remote agent hosts. That documentation describes the session platform; it does not establish how the README's cross-chat memory feature is implemented.",
+        "sources": [
+          "sessions_arch",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The client event logger subscribes to all runtime bus events and appends timestamped records with session ID, sequence, type, source, and payload. The server event logger stores HTTP request/response metadata, bodies, status, and latency, and redacts x-api-key, authorization, and x-session-token headers.",
+        "sources": [
+          "client_log",
+          "server_log"
+        ]
+      },
+      {
+        "text": "JsonlWriter serializes queued appends in order, checks for a missing final newline, and exposes flush() for a durability barrier. SessionLifecycle initializes a new session store, can activate a session directory by ID, and uses a file lease while a session is active.",
+        "sources": [
+          "writer",
+          "lifecycle"
+        ]
+      },
+      {
+        "text": "Session.hydrate replaces the in-memory transcript from caller-supplied messages; reset clears the in-memory thread, messages, todos, and usage. I found no semantic memory edit, deletion-by-item, or query interface in the inspected session/store/log files. The logs may support diagnostics and continuity, but they do not demonstrate fact retrieval across chats.",
+        "sources": [
+          "session",
+          "session_store",
+          "lifecycle"
+        ]
+      },
+      {
+        "text": "The JSON event stream can emit a timestamped full client event trace to stdout for debugging and automation. It is separate from persisted client/server event logs.",
+        "sources": [
+          "stream",
+          "client_log"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "The README advertises memory across chats, but the inspected code slice did not reveal a semantic memory query or answerable-recall/abstention evaluation. No workload was measured.",
+        "sources": [
+          "readme",
+          "session",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "The inspected session model hydrates or resets transcripts; no memory-item correction path or staleness probe was examined or measured.",
+        "sources": [
+          "session",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The inspected files expose no semantic-memory item deletion API, and no deletion completeness or leakage workload was run.",
+        "sources": [
+          "session_store",
+          "lifecycle",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Session directories are placed under a supplied base directory and metadata includes cwd/profile, but no cross-user or tenant isolation test was run.",
+        "sources": [
+          "paths",
+          "session_store",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Event traces retain timestamps and event/request context, but no source-passage support model or citation-quality evaluation was inspected or measured.",
+        "sources": [
+          "client_log",
+          "server_log",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The server trace schema can record request latency; no memory retrieval path or write-to-recall timing workload was measured.",
+        "sources": [
+          "server_log",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Session runtime tracks provider-reported token/context usage and local JSONL files are append-based, but no tokens-per-answer, cost, storage-efficiency, or memory workload was measured.",
+        "sources": [
+          "session",
+          "writer",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded source review inspected the README, sessions architecture documentation, CLI session/message model, session paths/store/lifecycle, JSONL persistence, and client/server event tracing at the pinned head.",
+        "sources": [
+          "readme",
+          "sessions_arch",
+          "session",
+          "message",
+          "session_store",
+          "paths",
+          "lifecycle",
+          "client_log",
+          "server_log",
+          "writer",
+          "stream"
+        ]
+      },
+      {
+        "text": "It did not inspect or execute every desktop provider, hosted Backboard service, or all code that may implement the README's memory-across-chats feature. The exact memory write/retrieval behavior, update/delete controls, retention, evidence linkage, and scope enforcement remain unknown.",
+        "sources": [
+          "readme",
+          "sessions_arch",
+          "session_store"
+        ]
+      },
+      {
+        "text": "No runtime behavior, test result, retrieval quality, isolation property, deletion completeness, overhead, or cost is established by static source observations.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No Backboard Desktop runtime, memory workload, tests, or benchmarks were executed. Project metric definitions, status, and fixture are protocol artifacts only and are not findings about this system.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  },
+  "contact_email": "hello@backboard.io",
+  "contact_email_source_url": "https://backboard.io/company/contact",
+  "contact_email_checked_sources": [
+    "https://github.com/Backboard-io/Backboard-Desktop/blob/7e05905a32a587f0b17ce7507ca3528b67d22a9c/README.md",
+    "https://backboard.io/company/contact"
+  ]
+}

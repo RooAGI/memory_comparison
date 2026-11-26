@@ -1,0 +1,344 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 262,
+    "slug": "gmr",
+    "name": "GMR",
+    "repository": "https://github.com/Anchorstate-Lab/GMR",
+    "branch": "main",
+    "revision": "7bee2a081a455e9d48331af7594ee50508588d77",
+    "reviewed_at": "2026-11-25T21:18:09Z",
+    "review_timezone": "UTC (2026-11-25 13:18:09 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "GMR (Grounded Memory Runtime) is a Rust runtime that connects externally stored memories and one-shot conclusions to versioned observations of facts they depend on. It surfaces memories when their declared grounding changes and reports whether conclusions still stand; it is an anchoring and provenance layer, not a semantic memory store or a judge of claim truth.",
+    "atlas_locator": {
+      "ordinal": 262,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/gmr.md",
+      "listed_repository": "https://github.com/Anchorstate-Lab/GMR"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/Anchorstate-Lab/GMR/blob/7bee2a081a455e9d48331af7594ee50508588d77/README.md",
+      "note": "No contact email was published in the official README checked at the reviewed revision."
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical GitHub repository",
+        "path": "repository page",
+        "symbol": "Anchorstate-Lab/GMR; default branch main",
+        "url": "https://github.com/Anchorstate-Lab/GMR"
+      },
+      {
+        "id": "history",
+        "label": "Current main branch history",
+        "path": "git ls-remote --symref",
+        "symbol": "HEAD -> refs/heads/main at 7bee2a081a455e9d48331af7594ee50508588d77",
+        "url": "https://github.com/Anchorstate-Lab/GMR/commits/main"
+      },
+      {
+        "id": "head",
+        "label": "Verified full-SHA head commit",
+        "path": "commit",
+        "symbol": "main head 7bee2a081a455e9d48331af7594ee50508588d77",
+        "url": "https://github.com/Anchorstate-Lab/GMR/commit/7bee2a081a455e9d48331af7594ee50508588d77"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "GMR purpose, commands, integration, operating model and limits; checked for contact email",
+        "url": "https://github.com/Anchorstate-Lab/GMR/blob/7bee2a081a455e9d48331af7594ee50508588d77/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Architecture source of truth",
+        "path": "docs/ARCHITECTURE.md",
+        "symbol": "workspace architecture, data model, read/observe distinction, queue, storage and implementation gaps",
+        "url": "https://github.com/Anchorstate-Lab/GMR/blob/7bee2a081a455e9d48331af7594ee50508588d77/docs/ARCHITECTURE.md"
+      },
+      {
+        "id": "anchor",
+        "label": "Anchor and state model",
+        "path": "crates/gmr-core/src/anchor.rs",
+        "symbol": "AnchorKey, State, transitions, terminal statuses and supersession",
+        "url": "https://github.com/Anchorstate-Lab/GMR/blob/7bee2a081a455e9d48331af7594ee50508588d77/crates/gmr-core/src/anchor.rs"
+      },
+      {
+        "id": "journal",
+        "label": "Journal model",
+        "path": "crates/gmr-core/src/journal.rs",
+        "symbol": "Observation, Reading, Sighting and append event variants",
+        "url": "https://github.com/Anchorstate-Lab/GMR/blob/7bee2a081a455e9d48331af7594ee50508588d77/crates/gmr-core/src/journal.rs"
+      },
+      {
+        "id": "probe",
+        "label": "Probe observation model",
+        "path": "crates/gmr-core/src/probe.rs",
+        "symbol": "probe derivation, fact address, outcomes and version identity",
+        "url": "https://github.com/Anchorstate-Lab/GMR/blob/7bee2a081a455e9d48331af7594ee50508588d77/crates/gmr-core/src/probe.rs"
+      },
+      {
+        "id": "read",
+        "label": "Grounded read implementation",
+        "path": "crates/gmr-runtime/src/read.rs",
+        "symbol": "freshness instructions, anchor/memory views and grounding footing states",
+        "url": "https://github.com/Anchorstate-Lab/GMR/blob/7bee2a081a455e9d48331af7594ee50508588d77/crates/gmr-runtime/src/read.rs"
+      },
+      {
+        "id": "observe",
+        "label": "Observation implementation",
+        "path": "crates/gmr-runtime/src/observe.rs",
+        "symbol": "probe calls, budgets, observation outcomes, queue leasing and journal writes",
+        "url": "https://github.com/Anchorstate-Lab/GMR/blob/7bee2a081a455e9d48331af7594ee50508588d77/crates/gmr-runtime/src/observe.rs"
+      },
+      {
+        "id": "binding",
+        "label": "Binding and revocation implementation",
+        "path": "crates/gmr-runtime/src/bind.rs",
+        "symbol": "bind external claims to anchors and revoke observed binding tags",
+        "url": "https://github.com/Anchorstate-Lab/GMR/blob/7bee2a081a455e9d48331af7594ee50508588d77/crates/gmr-runtime/src/bind.rs"
+      },
+      {
+        "id": "memory",
+        "label": "External memory/provider resolution",
+        "path": "crates/gmr-runtime/src/memory.rs",
+        "symbol": "binding metadata, provider resolution, current version checks and rationale access",
+        "url": "https://github.com/Anchorstate-Lab/GMR/blob/7bee2a081a455e9d48331af7594ee50508588d77/crates/gmr-runtime/src/memory.rs"
+      },
+      {
+        "id": "content",
+        "label": "Content provider contract",
+        "path": "crates/gmr-content/src/lib.rs",
+        "symbol": "provider fetch, optional version history and optional memory listing contracts",
+        "url": "https://github.com/Anchorstate-Lab/GMR/blob/7bee2a081a455e9d48331af7594ee50508588d77/crates/gmr-content/src/lib.rs"
+      },
+      {
+        "id": "schema",
+        "label": "SQLite schema",
+        "path": "crates/gmr-store/src/sqlite/schema.rs",
+        "symbol": "journal, bindings, revocations, links, sealed content, operational settings and queue tables/triggers",
+        "url": "https://github.com/Anchorstate-Lab/GMR/blob/7bee2a081a455e9d48331af7594ee50508588d77/crates/gmr-store/src/sqlite/schema.rs"
+      },
+      {
+        "id": "health",
+        "label": "Health reporting",
+        "path": "crates/gmr-runtime/src/health.rs",
+        "symbol": "per-anchor and corpus health counters and diagnoses",
+        "url": "https://github.com/Anchorstate-Lab/GMR/blob/7bee2a081a455e9d48331af7594ee50508588d77/crates/gmr-runtime/src/health.rs"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "project-wide status is not_run; no GMR measured result",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned workload only, not run in this task",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated roster entry and attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 262 identity, listed locator, and pinned Atlas attribution only",
+        "url": "../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository identifies the project as Grounded Memory Runtime and describes a Rust workspace with a CLI plus Node and Python bindings. GMR anchors external memory and generated conclusions to facts; memory content remains in external providers or, for the built-in note flow, user files. This is a runtime/library and CLI, not a hosted memory service.",
+        "sources": [
+          "readme",
+          "architecture",
+          "content"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The workspace separates domain-neutral vocabulary and deterministic state projection (gmr-core), expression evaluation, probe invocation contracts, content-provider interfaces (gmr-content), storage interfaces and SQLite implementation (gmr-store), and orchestration (gmr-runtime). The gmr facade re-exports the substrate; batteries and the coding pack supply transports, providers, probes, and domain behavior. Console code assembles those pieces for CLI, Node, and Python users.",
+        "sources": [
+          "architecture",
+          "readme",
+          "content"
+        ]
+      },
+      {
+        "text": "An Anchor has a key, probe reference, transition rules over JSON state, optional terminal status IDs, and optional supersession. A successful Observation records its outcome, content-addressed fact address, and version tuple for declaration, probe derivation, and evaluator. Journal entries include Open, Transition, Still, Attempt, Revise, and Close; current state is projected by folding the ordered log. SQLite stores journal history, bindings and revocations, links, immutable sealed rationale, plus mutable run settings and scheduling state.",
+        "sources": [
+          "anchor",
+          "journal",
+          "probe",
+          "schema",
+          "architecture"
+        ]
+      },
+      {
+        "text": "A stored memory is referenced by provider ID and external ID. A binding associates that reference, or a one-shot said: conclusion, with one or more anchors and may retain the version, reading address shown to the author, invariant expression, source classification, and bind-time journal sequence. The provider contract fetches current content and may optionally expose historical fetch or record listing; GMR keeps the grounding relation and does not copy external memory content into its journal.",
+        "sources": [
+          "binding",
+          "memory",
+          "content",
+          "schema"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Opening an anchor invokes its probe, evaluates the initial transition, and appends an Open entry. Later observe/check operations invoke the configured transport under a budget and append Transition, Still, or Attempt. A scheduled queue can lease work and fence stale workers; direct observation without a configured queue remains supported. Read projects existing history without probing, while observe obtains a fresh observation. A bounded max-staleness instruction can request a fresh read and budget limits constrain that work.",
+        "sources": [
+          "read",
+          "observe",
+          "architecture",
+          "readme"
+        ]
+      },
+      {
+        "text": "Writes of memories are external to GMR: callers or provider integrations create/update memory records, then bind or attest their provider reference to anchor(s). Rebinding adds an assertion with version and evidence-of-reading metadata. Criteria changes are explicit journal revisions with sealed rationale. Close retires an anchor. No general physical-delete operation for provider content was established by the inspected runtime paths.",
+        "sources": [
+          "binding",
+          "memory",
+          "schema",
+          "readme",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Grounding resolves each bound external record and compares its current provider version with the bound version. Returned footing distinguishes current, unverified, rewritten, no prior version, gone, provider unavailable, unreachable, and not asked because budget was spent. For said: conclusions, GMR separately reports cited readings, stated dependencies, and whether the ground still settles them. This surfaces drift or unsupported citations; it does not determine whether the memory or conclusion is factually correct.",
+        "sources": [
+          "read",
+          "memory",
+          "content",
+          "readme",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Scope is primarily the runtime/store assembly for a project root and provider reference namespace. The inspected core model does not define per-user or per-tenant authorization or a principal-aware read filter. A host that shares a store or provider across users must provide its own authorization and namespace boundary; isolation leakage was not runtime-tested.",
+        "sources": [
+          "readme",
+          "architecture",
+          "anchor",
+          "content"
+        ]
+      },
+      {
+        "text": "Provenance is structural: fact addresses identify the observed value together with the probe derivation, readings carry timestamps and versions, sightings record which anchor saw an address, and bindings can preserve the reading shown (saw), source class, provider version, and invariant. The journal also retains rationale hashes and content-addressed sealed rationale. These fields make the declared basis inspectable; they do not prove semantic entailment or truth.",
+        "sources": [
+          "probe",
+          "journal",
+          "binding",
+          "schema",
+          "readme"
+        ]
+      },
+      {
+        "text": "Efficiency controls visible in source include per-observation and batch budgets, bounded observation concurrency, optional scheduled queue leases, compaction of repeated unchanged sightings into Still references, and SQLite indexes for journal lookup and binding/link traversal. Health reporting counts sightings, answered probes, whether a memory moved, failure/stall ratios, and rationale sizes. The reviewed material does not establish built-in distributed telemetry coverage or any measured latency, token, cost, or storage result.",
+        "sources": [
+          "observe",
+          "read",
+          "health",
+          "schema",
+          "architecture"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention — unmeasured. GMR surfaces records through grounding and version checks; no answer-quality or abstention workload was run.",
+        "sources": [
+          "read",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured. Provider rewrites can be reported as rewritten footing, but no correction cases were scored.",
+        "sources": [
+          "read",
+          "content",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Deletion leakage — unmeasured. Binding revocation and anchor closure are not proof of provider erasure; no deletion probes were run.",
+        "sources": [
+          "binding",
+          "schema",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Scope-isolation leakage — unmeasured. The inspected core has no user/tenant authorization filter, and no cross-scope probes were run.",
+        "sources": [
+          "architecture",
+          "read",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Evidence support precision and citation coverage — unmeasured. Reading addresses and dependencies are retained, but no generated claims were adjudicated against source passages.",
+        "sources": [
+          "read",
+          "journal",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Retrieval latency and write-to-recall delay — unmeasured. Budgets and health counters are source-visible controls/signals; no workload was timed.",
+        "sources": [
+          "observe",
+          "health",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Tokens, cost, and storage efficiency — unmeasured. No token/cost totals or corpus-attributed storage measurements were collected.",
+        "sources": [
+          "schema",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Source-visible observability — health reports operational counters and last failure information; this task did not execute the runtime or collect telemetry.",
+        "sources": [
+          "health",
+          "architecture"
+        ]
+      }
+    ],
+    "limits": [
+      "This is a bounded read-only inspection of the pinned README, architecture guide, core model, runtime read/observe/bind paths, content-provider interface, SQLite schema, and health reporting. Other adapters, providers, and CLI policy paths were not exhaustively reviewed.",
+      "No GMR runtime, tests, or benchmark workloads were run. Source structure does not establish deployed correctness, answer quality, external provider behavior, authorization isolation, physical erasure, latency, or costs.",
+      "GMR reports whether declared facts, versions, and invariants still support a memory or conclusion. It does not decide whether a recorded claim was true when written or whether its prose follows from the cited reading.",
+      "The substrate has no per-user or per-tenant access-control model in the inspected paths; host configuration and provider implementation determine whether shared deployments are isolated.",
+      "Revocation removes a binding relation from grounded views by recording which prior assertions it kills. It does not by itself remove data from an external provider, backups, exports, or other copies."
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No GMR runtime, tests, or benchmark workload was executed. Source observations are not measurements, and no metric values were produced.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

@@ -1,0 +1,363 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "ai-agent-book",
+    "name": "AI Agents in Depth",
+    "repository": "https://github.com/bojieli/ai-agent-book",
+    "branch": "main",
+    "revision": "f36d57f515ddc93867e45f23ce34fe4165335ff8",
+    "reviewed_at": "2026-11-24T19:40:20Z",
+    "review_timezone": "UTC (2026-11-24 11:40:20 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/README.md","checked_urls":["https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/README.md","https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/SECURITY.md","https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "A book repository with chapter companion projects. This review is bounded to its Chapter 3 user-memory example: local JSON-backed notes/cards, separate conversational and background processing, and provider-backed LLM tools. No runtime, benchmark, or tests were run.",
+    "atlas_locator": {
+      "ordinal": 36,
+      "name": "AI Agents in Depth",
+      "slug": "ai-agent-book",
+      "listed_repository": "https://github.com/bojieli/ai-agent-book",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/ai-agent-book.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/README.md",
+      "https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/README.en.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical public repository and default branch",
+        "path": "repository",
+        "symbol": "main branch",
+        "url": "https://github.com/bojieli/ai-agent-book"
+      },
+      {
+        "id": "head",
+        "label": "Current main branch head commit",
+        "path": "commit",
+        "symbol": "full SHA f36d57f515ddc93867e45f23ce34fe4165335ff8",
+        "url": "https://github.com/bojieli/ai-agent-book/commit/f36d57f515ddc93867e45f23ce34fe4165335ff8"
+      },
+      {
+        "id": "readme",
+        "label": "Official English README and repository description",
+        "path": "README.en.md",
+        "url": "https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/README.en.md"
+      },
+      {
+        "id": "readme-root",
+        "label": "Official root README checked for contact",
+        "path": "README.md",
+        "url": "https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/README.md"
+      },
+      {
+        "id": "chapter",
+        "label": "Book Chapter 3: user memory, formats, update principles",
+        "path": "book-en/chapter3.md",
+        "url": "https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/book-en/chapter3.md"
+      },
+      {
+        "id": "guide",
+        "label": "Chapter 3 user-memory companion guide and architecture",
+        "path": "chapter3/user-memory/README.md",
+        "url": "https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/README.md"
+      },
+      {
+        "id": "manager",
+        "label": "Memory note and JSON-card data models, persistence, CRUD, search, consolidation",
+        "path": "chapter3/user-memory/memory_manager.py",
+        "symbol": "MemoryNote, NotesMemoryManager, JSONMemoryManager, AdvancedJSONMemoryManager",
+        "url": "https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/memory_manager.py?plain=1"
+      },
+      {
+        "id": "agent",
+        "label": "Memory agent tools and model interaction",
+        "path": "chapter3/user-memory/agent.py",
+        "symbol": "UserMemoryAgent, add/update/delete/search memory tools",
+        "url": "https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/agent.py?plain=1"
+      },
+      {
+        "id": "processor",
+        "label": "Background memory analysis and update scheduling",
+        "path": "chapter3/user-memory/background_memory_processor.py",
+        "symbol": "BackgroundMemoryProcessor",
+        "url": "https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/background_memory_processor.py?plain=1"
+      },
+      {
+        "id": "conversation-agent",
+        "label": "Conversation-time memory context assembly",
+        "path": "chapter3/user-memory/conversational_agent.py",
+        "symbol": "ConversationalAgent",
+        "url": "https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/conversational_agent.py?plain=1"
+      },
+      {
+        "id": "history",
+        "label": "Conversation history persistence and search",
+        "path": "chapter3/user-memory/conversation_history.py",
+        "symbol": "ConversationHistory",
+        "url": "https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/conversation_history.py?plain=1"
+      },
+      {
+        "id": "config",
+        "label": "Memory mode, user paths, and memory-item limit",
+        "path": "chapter3/user-memory/config.py",
+        "symbol": "MemoryMode, Config",
+        "url": "https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/config.py?plain=1"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project fixed benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated identity and source attribution only",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 36",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas-attribution",
+        "label": "Catalog attribution source only; not assessment evidence",
+        "path": "content/systems/ai-agent-book.md",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/ai-agent-book.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository identifies AI Agents in Depth as a book and companion-code repository. This review assesses only its Chapter 3 user-memory example, a Python teaching project with CLI/demo and evaluation helpers, rather than a hosted memory service.",
+        "sources": [
+          "readme",
+          "guide"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The chapter separates conversational response from memory maintenance: the conversational agent reads stored memory, while BackgroundMemoryProcessor analyzes recent turns and invokes UserMemoryAgent tools; MemoryManager owns mode-specific persistence. Processing can be scheduled after a configured number of conversation rounds.",
+        "sources": [
+          "guide",
+          "conversation-agent",
+          "processor",
+          "agent"
+        ]
+      },
+      {
+        "text": "Four modes are notes, enhanced_notes, json_cards, and advanced_json_cards. The first two use the notes manager; notes store UUID, content, session, timestamps, and tags. Basic cards nest values under category/subcategory/key. Advanced cards retain arbitrary JSON fields and add creation/update times and a source session; prompts recommend backstory, person, and relationship data.",
+        "sources": [
+          "guide",
+          "manager",
+          "agent"
+        ]
+      },
+      {
+        "text": "Memory and conversation history are separate local JSON stores with paths derived from configured user IDs. Save paths write a temporary JSON file and replace the target. This supports local persistence, while the reviewed code does not establish authorization for a shared service.",
+        "sources": [
+          "manager",
+          "history",
+          "config"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The background agent offers add, update, delete, and search tools. Notes get generated IDs; basic cards use dotted category/subcategory/key IDs. Updates replace the active note or card content and refresh timestamps/source-session metadata. The default MAX_MEMORY_ITEMS is 100 and the note manager drops the oldest updated notes above the cap; the card managers do not use this note cap.",
+        "sources": [
+          "agent",
+          "manager",
+          "config"
+        ]
+      },
+      {
+        "text": "Deletion removes the selected note or card from the active collection and saves the file; clear-all is also provided. Conversation history is stored separately and is not removed by the memory-record delete path. The inspected manager does not preserve tombstones or a durable mutation history.",
+        "sources": [
+          "manager",
+          "history"
+        ]
+      },
+      {
+        "text": "Memory search is case-insensitive substring matching over note content/tags or card paths and values; the implementation iterates stored entries. Conversation-history search scans text unless the optional Dify integration is enabled. Context assembly can render the stored memories into the request rather than retrieving a ranked subset.",
+        "sources": [
+          "manager",
+          "history",
+          "conversation-agent"
+        ]
+      },
+      {
+        "text": "Session IDs and timestamps provide limited provenance. The memory record shape does not include an exact conversation-turn reference or quoted source span; backstory is free text. Tool-operation logs and reasons do not establish durable evidence lineage or answer-level citations.",
+        "sources": [
+          "manager",
+          "agent",
+          "processor"
+        ]
+      },
+      {
+        "text": "User IDs determine local filenames, and session IDs label memories and conversation turns. The selected code does not authenticate or prove that a caller is entitled to use a given user ID, so filename partitioning alone does not establish shared-deployment scope isolation.",
+        "sources": [
+          "manager",
+          "history",
+          "config"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency is limited: memory search and context formatting iterate or serialize stored items, and only the notes manager enforces the default count cap. ConversationalAgent keeps the raw message separate from the transient memory context when making a request, avoiding repeated context in stored user turns. These implementation details are not measured savings.",
+        "sources": [
+          "manager",
+          "conversation-agent",
+          "config"
+        ]
+      },
+      {
+        "text": "Logging exposes provider/session and processing events, errors, and memory operations; verbose paths can log prompt and memory context. Evaluation helpers expose token and latency accounting fields, but no operational trace or measurement was collected for this review.",
+        "sources": [
+          "agent",
+          "processor",
+          "guide"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "The chapter includes memory recall examples and evaluation helpers, but no answerability or abstention workload was run for this review.",
+        "sources": [
+          "guide",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Update and consolidation mechanisms exist; no current-versus-superseded-value probes were run.",
+        "sources": [
+          "manager",
+          "chapter",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Delete removes active memory records, but no post-delete probes were run and conversation history remains a separate store.",
+        "sources": [
+          "manager",
+          "history",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "State paths are keyed by user ID; no cross-user access probes or authorization review were performed.",
+        "sources": [
+          "manager",
+          "config",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Records carry session/source labels and timestamps, but no answer-claim evidence or citation adjudication was performed.",
+        "sources": [
+          "manager",
+          "agent",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No retrieval latency distributions or post-write recall schedule was measured.",
+        "sources": [
+          "guide",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No provider token totals, price-based cost, or persistent storage size was collected.",
+        "sources": [
+          "guide",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code and documentation",
+        "evidence": "Substring scans, whole-context formatting, note caps, logging, and evaluation accounting fields are visible in the code and docs. These are source observations, not performance measurements.",
+        "sources": [
+          "manager",
+          "agent",
+          "processor",
+          "config",
+          "guide"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded inspection of the book README, Chapter 3 memory guide, and selected code at the verified current head. The example, tests, and benchmarks were not run. Answer quality, correction reliability, complete deletion, shared-deployment authorization, runtime performance, cost, and storage remain unverified.",
+        "sources": [
+          "readme",
+          "guide",
+          "manager",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "The repository contains chapter-level demonstrations and evaluation artifacts. Any published chapter experiment is not a result from this source review; the project benchmark status recorded here is not_run.",
+        "sources": [
+          "guide",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "The official root and English READMEs were checked for a published contact email. Neither publishes one; contact_email is null with both exact checked source URLs.",
+        "sources": [
+          "readme-root",
+          "readme"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No system execution, Chapter 3 example, benchmark, or tests were performed. Project metric definitions, fixture, and status record describe protocol and execution status, not measurements for this system.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

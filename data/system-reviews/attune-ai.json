@@ -1,0 +1,296 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "attune-ai",
+    "name": "Attune AI",
+    "repository": "https://github.com/Smart-AI-Memory/attune-ai",
+    "branch": "main",
+    "revision": "d076f7d31bccef75915ff988a949f6e2069d6c7d",
+    "reviewed_at": "2026-11-24T21:48:26Z",
+    "review_timezone": "UTC (2026-11-24 13:48:26 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":"security@smartaimemory.com","source_url":"https://github.com/Smart-AI-Memory/attune-ai/blob/d076f7d31bccef75915ff988a949f6e2069d6c7d/SECURITY.md","note":"Published in the official security policy."},
+    "summary": "Attune AI combines cross-session findings, curated project lessons, and prompt-triggered lesson recall. Its inspected design uses expiring raw findings, human-gated promotion, local files, and an optional Redis memory backend; this review contains no new measurements.",
+    "atlas_locator": {
+      "ordinal": 74,
+      "name": "Attune AI",
+      "slug": "attune-ai",
+      "listed_repository": "https://github.com/Smart-AI-Memory/attune-ai",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/attune-ai.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": "security@smartaimemory.com",
+    "contact_email_source_url": "https://github.com/Smart-AI-Memory/attune-ai/blob/d076f7d31bccef75915ff988a949f6e2069d6c7d/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/Smart-AI-Memory/attune-ai/blob/d076f7d31bccef75915ff988a949f6e2069d6c7d/README.md",
+      "https://github.com/Smart-AI-Memory/attune-ai/blob/d076f7d31bccef75915ff988a949f6e2069d6c7d/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository and default branch",
+        "path": "repository root",
+        "url": "https://github.com/Smart-AI-Memory/attune-ai"
+      },
+      {
+        "id": "feed",
+        "label": "Official current main commit feed",
+        "path": "commits/main.atom",
+        "url": "https://github.com/Smart-AI-Memory/attune-ai/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed full head commit",
+        "path": "commit",
+        "symbol": "d076f7d31bccef75915ff988a949f6e2069d6c7d",
+        "url": "https://github.com/Smart-AI-Memory/attune-ai/commit/d076f7d31bccef75915ff988a949f6e2069d6c7d"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "url": "https://github.com/Smart-AI-Memory/attune-ai/blob/d076f7d31bccef75915ff988a949f6e2069d6c7d/README.md"
+      },
+      {
+        "id": "session",
+        "label": "Cross-session stash types and backend resolution",
+        "path": "src/attune/memory/session_stash.py",
+        "url": "https://github.com/Smart-AI-Memory/attune-ai/blob/d076f7d31bccef75915ff988a949f6e2069d6c7d/src/attune/memory/session_stash.py"
+      },
+      {
+        "id": "file",
+        "label": "Local searchable file stash",
+        "path": "src/attune/memory/file_stash.py",
+        "url": "https://github.com/Smart-AI-Memory/attune-ai/blob/d076f7d31bccef75915ff988a949f6e2069d6c7d/src/attune/memory/file_stash.py"
+      },
+      {
+        "id": "pattern_ops",
+        "label": "Long-term pattern access and deletion operations",
+        "path": "src/attune/memory/long_term_operations.py",
+        "url": "https://github.com/Smart-AI-Memory/attune-ai/blob/d076f7d31bccef75915ff988a949f6e2069d6c7d/src/attune/memory/long_term_operations.py"
+      },
+      {
+        "id": "provenance",
+        "label": "Recall provenance and framing",
+        "path": "src/attune/memory/provenance.py",
+        "url": "https://github.com/Smart-AI-Memory/attune-ai/blob/d076f7d31bccef75915ff988a949f6e2069d6c7d/src/attune/memory/provenance.py"
+      },
+      {
+        "id": "lessons",
+        "label": "File-based lesson manager",
+        "path": "src/attune/memory/lessons.py",
+        "url": "https://github.com/Smart-AI-Memory/attune-ai/blob/d076f7d31bccef75915ff988a949f6e2069d6c7d/src/attune/memory/lessons.py"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy and published contact",
+        "path": "SECURITY.md",
+        "url": "https://github.com/Smart-AI-Memory/attune-ai/blob/d076f7d31bccef75915ff988a949f6e2069d6c7d/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated system locator and source attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 74",
+        "url": "../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The repository identifies Smart AI Memory, LLC and credits Patrick Roebuck. Attune AI is an open source developer workflow package and Claude Code plugin with CLI and MCP surfaces; its cross-session memory is one part of a broader workflow hub.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "SessionStashEntry stores an ID, originating session, working directory, UTC timestamp, type, content, tags, and TTL. The type set is decision, pattern, bug, reference, or note; blank content is rejected and content above 500 characters is truncated. Backend resolution supports an injected searchable backend or registered entry points, preferring a connected upgrade to the file fallback.",
+        "sources": [
+          "session"
+        ]
+      },
+      {
+        "text": "The local searchable fallback stores findings as JSONL in ~/.attune/session_stash/findings.jsonl and key/value entries in a sibling kv.json. It applies a 30-day default retention and a three-day recency half-life, pruning old findings lazily on access.",
+        "sources": [
+          "file"
+        ]
+      },
+      {
+        "text": "Documentation describes curated, git-tracked Markdown promoted through a review-gated stash-to-curated flow, as well as prompt/tool-triggered lessons. The inspected lesson manager uses project-local .attune/lessons.md and global ~/.attune/lessons.md files, with optional sync into a managed section of .claude/CLAUDE.md.",
+        "sources": [
+          "readme",
+          "lessons"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The README documents a Stop hook that extracts session decisions, bugs, and references into the stash. The session-stash module describes a PII/secrets check before writes; this review did not inspect the full hook or gate implementation.",
+        "sources": [
+          "readme",
+          "session"
+        ]
+      },
+      {
+        "text": "SessionStart uses query-less recent recall. The session API says same-working-directory findings are preferred, which is a soft ranking preference. The file backend combines keyword overlap and recency; the README also documents on-demand topic recall and prompt/tool-triggered lesson retrieval, whose complete wiring was not inspected.",
+        "sources": [
+          "session",
+          "file",
+          "readme"
+        ]
+      },
+      {
+        "text": "Raw findings can be forgotten by ID. The prefix helper resolves a prefix only when it uniquely matches one of the recent records. File-tier expiry is lazy; the key/value store exposes key deletion. A general fact correction or complete removal contract across all storage tiers and derived copies was not established.",
+        "sources": [
+          "session",
+          "file",
+          "readme"
+        ]
+      },
+      {
+        "text": "Long-term pattern operations expose access-filtered listing and deletion by pattern ID, and append an audit event after successful deletion. Concrete pattern backends and all write routes were outside this bounded review.",
+        "sources": [
+          "pattern_ops"
+        ]
+      },
+      {
+        "text": "The provenance renderer frames recalled content as untrusted source-attributed evidence, marks author class and tier, and flags instruction-shaped content. Its source explicitly says this delimiter is a weak defense and the scanner flags rather than blocks; it is not a guarantee against prompt injection.",
+        "sources": [
+          "provenance"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "The code exposes keyword/recency recall and a backend protocol; no adjudicated answerable or unanswerable workload was run.",
+        "sources": [
+          "session",
+          "file",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Raw entries can be forgotten and curated Markdown can be edited; no end-to-end correction or stale-value protocol was inspected or executed.",
+        "sources": [
+          "session",
+          "readme",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Expiry, forgetting, key deletion, and pattern deletion are visible, but cross-tier deletion completeness was not established and no leakage probes were run.",
+        "sources": [
+          "session",
+          "file",
+          "pattern_ops",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Current working directory is a soft recall preference in the session API; no cross-project probe was run.",
+        "sources": [
+          "session",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Recall provenance and instruction-shaped-content flags exist; no factual-claim entailment or citation-coverage adjudication was conducted.",
+        "sources": [
+          "provenance",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Local scan and recency mechanisms are visible, but no timed operations or scheduled post-write probes were collected.",
+        "sources": [
+          "file",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "The local backend exposes finding count/path/TTL and documentation describes bounded lesson context; no system storage, token, or cost measurements were collected.",
+        "sources": [
+          "file",
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded review inspected the README, session stash, file backend, lesson manager, provenance renderer, and pattern list/delete operations. It did not inspect all hooks, stores, or backend implementations and did not run the package, tests, or benchmarks.",
+        "sources": [
+          "readme",
+          "session",
+          "file",
+          "lessons",
+          "provenance",
+          "pattern_ops"
+        ]
+      },
+      {
+        "text": "The selected sources do not establish complete project isolation, physical deletion across replicas and derived stores, evidence entailment, or runtime quality and cost. The file backend's local path and the session API's soft working-directory ranking alone do not prove a security boundary.",
+        "sources": [
+          "session",
+          "file",
+          "pattern_ops",
+          "provenance"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. The comparison fixture, metric definitions, and status record are protocol artifacts, not Attune AI measurements. README-reported figures are kept separate and were not reproduced in this review.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture",
+          "readme"
+        ]
+      }
+    ]
+  }
+}
