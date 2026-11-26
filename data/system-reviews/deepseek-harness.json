@@ -1,0 +1,380 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "deepseek-harness",
+    "name": "DeepSeek Harness",
+    "ordinal": 183,
+    "repository": "https://github.com/deepseek-ai/deepseek-harness",
+    "listed_repository": "https://github.com/deepseek-ai/deepseek-harness",
+    "branch": "master",
+    "revision": "4b399c39a6d1479cd84ca591b4d7c88e24d38a96",
+    "reviewed_at": "2026-11-25T02:45:10Z",
+    "review_timezone": "UTC (2026-11-24 18:45:10 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "DeepSeek Harness is a plugin-composed agent runtime. Its durable interaction memory is a typed append-only session log from which model-visible messages are derived; optional persistence and session-query plugins add durable storage and searchable history. This is session history, not a standalone user-fact memory database.",
+    "atlas_locator": {
+      "ordinal": 183,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/deepseek-harness.md",
+      "listed_repository": "https://github.com/deepseek-ai/deepseek-harness"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/deepseek-ai/deepseek-harness/blob/4b399c39a6d1479cd84ca591b4d7c88e24d38a96/README.md",
+      "note": "The official pinned README was checked. It directs feedback and bug reports to GitHub Discussions and publishes no contact email."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/deepseek-ai/deepseek-harness/blob/4b399c39a6d1479cd84ca591b4d7c88e24d38a96/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/deepseek-ai/deepseek-harness/blob/4b399c39a6d1479cd84ca591b4d7c88e24d38a96/README.md"
+    ],
+    "contact_email_note": "No contact email is published in the official pinned README; it directs feedback and bug reports to GitHub Discussions. No profile, commit metadata, or third-party directory was used.",
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository",
+        "symbol": "Public repository; default branch master",
+        "url": "https://github.com/deepseek-ai/deepseek-harness"
+      },
+      {
+        "id": "feed",
+        "label": "Official master commit feed",
+        "path": "commits/master.atom",
+        "symbol": "Current master head 4b399c39a6d1479cd84ca591b4d7c88e24d38a96; updated 2026-11-22T08:50:28Z",
+        "url": "https://github.com/deepseek-ai/deepseek-harness/commits/master.atom"
+      },
+      {
+        "id": "commit",
+        "label": "Verified current head commit",
+        "path": "commit",
+        "symbol": "Full master SHA 4b399c39a6d1479cd84ca591b4d7c88e24d38a96",
+        "url": "https://github.com/deepseek-ai/deepseek-harness/commit/4b399c39a6d1479cd84ca591b4d7c88e24d38a96"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Project description, developer-preview status, official support route; contact check",
+        "url": "https://github.com/deepseek-ai/deepseek-harness/blob/4b399c39a6d1479cd84ca591b4d7c88e24d38a96/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Architecture documentation",
+        "path": "docs/architecture.md",
+        "symbol": "Plugin composition, event domains, lifecycle, session log and extension seams",
+        "url": "https://github.com/deepseek-ai/deepseek-harness/blob/4b399c39a6d1479cd84ca591b4d7c88e24d38a96/docs/architecture.md"
+      },
+      {
+        "id": "sessiondoc",
+        "label": "Session subsystem documentation",
+        "path": "docs/subsystems/session.md",
+        "symbol": "SessionEvent model, append-only history, derived messages, append, replacement, replay and flush",
+        "url": "https://github.com/deepseek-ai/deepseek-harness/blob/4b399c39a6d1479cd84ca591b4d7c88e24d38a96/docs/subsystems/session.md"
+      },
+      {
+        "id": "persistence",
+        "label": "Persistence subsystem documentation",
+        "path": "docs/subsystems/persistence.md",
+        "symbol": "SessionPersistence contract, JSONL and SQLite providers, recovery and durability",
+        "url": "https://github.com/deepseek-ai/deepseek-harness/blob/4b399c39a6d1479cd84ca591b4d7c88e24d38a96/docs/subsystems/persistence.md"
+      },
+      {
+        "id": "query",
+        "label": "Session Query subsystem documentation",
+        "path": "docs/subsystems/session-query.md",
+        "symbol": "Logical corpus, filters, text extraction, full-text pages, traces and bounded reads",
+        "url": "https://github.com/deepseek-ai/deepseek-harness/blob/4b399c39a6d1479cd84ca591b4d7c88e24d38a96/docs/subsystems/session-query.md"
+      },
+      {
+        "id": "compaction",
+        "label": "Compaction subsystem documentation",
+        "path": "docs/subsystems/compaction.md",
+        "symbol": "Summary records, source event references, surface replacement and pruning",
+        "url": "https://github.com/deepseek-ai/deepseek-harness/blob/4b399c39a6d1479cd84ca591b4d7c88e24d38a96/docs/subsystems/compaction.md"
+      },
+      {
+        "id": "eventtypes",
+        "label": "Session event types",
+        "path": "packages/core/session/src/types.ts",
+        "symbol": "SessionHeader, typed events, log sequence, append-only event vocabulary",
+        "url": "https://github.com/deepseek-ai/deepseek-harness/blob/4b399c39a6d1479cd84ca591b4d7c88e24d38a96/packages/core/session/src/types.ts"
+      },
+      {
+        "id": "surface",
+        "label": "Session surface implementation",
+        "path": "packages/core/session/src/surface.ts",
+        "symbol": "Message derivation, append/replacement classification and fold behavior",
+        "url": "https://github.com/deepseek-ai/deepseek-harness/blob/4b399c39a6d1479cd84ca591b4d7c88e24d38a96/packages/core/session/src/surface.ts"
+      },
+      {
+        "id": "persistenceapi",
+        "label": "Session persistence API",
+        "path": "packages/session/session-persistence/src/index.ts",
+        "symbol": "Durable storage operations, handles and persistence contract",
+        "url": "https://github.com/deepseek-ai/deepseek-harness/blob/4b399c39a6d1479cd84ca591b4d7c88e24d38a96/packages/session/session-persistence/src/index.ts"
+      },
+      {
+        "id": "querytypes",
+        "label": "Session query types",
+        "path": "packages/session-query/session-query/src/types.ts",
+        "symbol": "Session query request/result types and source contracts",
+        "url": "https://github.com/deepseek-ai/deepseek-harness/blob/4b399c39a6d1479cd84ca591b4d7c88e24d38a96/packages/session-query/session-query/src/types.ts"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Workload definition only; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "No measurement recorded by this review",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "catalog",
+        "label": "Curated system catalog",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 183 identity and listed locator",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution",
+        "path": "content/systems/deepseek-harness.md",
+        "symbol": "Curated identity/locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/deepseek-harness.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes DeepSeek Harness (dsh) as an open-source agent harness developed by DeepSeek AI, built on Cordis with an everything-is-a-plugin architecture. The README labels it a rapidly iterating developer preview with compatibility-breaking changes expected.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The project catalog places this system at ordinal 183 and attributes its curated identity and listed repository locator to the pinned Atlas roster entry; that entry was not used as assessment evidence.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "Official GitHub identifies master as the default branch. Its current commit feed and the reviewed commit page identify the full head SHA used to pin this review.",
+        "sources": [
+          "repo",
+          "feed",
+          "commit"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The runtime is assembled at boot from ordered bundles and profile patches. Core services, including the model adapter, tool registry, persistence, and agent loop, are plugins. Persistence is a separate capability, so an in-memory Session does not by itself imply durable storage.",
+        "sources": [
+          "architecture",
+          "sessiondoc",
+          "persistence"
+        ]
+      },
+      {
+        "text": "A SessionHeader stores session identity and metadata such as creation time, working-directory cwd, parent-session lineage, seeded/fork status, origin, delegation depth, and agent preset. Typed SessionEvents carry contiguous sequence numbers, timestamps, and event payloads; examples include turn/step boundaries, user and system context, model outputs, tool calls/results, request headers, and optional extension records.",
+        "sources": [
+          "eventtypes",
+          "sessiondoc"
+        ]
+      },
+      {
+        "text": "Session.append validates and freezes JSON event data before committing it. The session surface folds message-producing events into model history; log-only events remain available for replay and inspection. Surface replacement shadows prior model-visible messages without deleting their raw events.",
+        "sources": [
+          "sessiondoc",
+          "surface",
+          "compaction"
+        ]
+      },
+      {
+        "text": "The persistence seam supports append-only JSONL storage and an optional SQLite backend. The documented JSONL provider stores compressed checksummed frames by default; the SQLite option stores compressed event segments and indexes session metadata. Both expose per-session handles and durability flushes.",
+        "sources": [
+          "persistence",
+          "persistenceapi"
+        ]
+      },
+      {
+        "text": "The optional session-query layer reads the live-preferred logical corpus. It supports exact event windows, metadata filters, lineage and replacement traces, semantic text extraction, and cursor-paginated full-text search; the documented SQLite provider owns FTS indexing.",
+        "sources": [
+          "query",
+          "querytypes"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Writes append typed session events. The session is the source of truth and derived model history is reconstructed from those events. Persistence listeners can batch writes; callers that need a durability barrier must await flush. The API documentation says append is best-effort persistence and flush is the durability barrier.",
+        "sources": [
+          "sessiondoc",
+          "persistence",
+          "persistenceapi"
+        ]
+      },
+      {
+        "text": "There is no in-place rewrite of the event log in the documented model. Compaction appends summary and bookkeeping events, then appends a replacement surface message that shadows a selected prior span; the original log events remain for transcript/replay. This is a correction to active context rather than deletion of underlying history.",
+        "sources": [
+          "sessiondoc",
+          "surface",
+          "compaction"
+        ]
+      },
+      {
+        "text": "The inspected Session and SessionPersistence contracts expose append, create/open, stat/list, close and flush behavior, but no per-event or session-delete method. The inspected sources therefore do not establish physical erasure of stored session history.",
+        "sources": [
+          "sessiondoc",
+          "persistence",
+          "persistenceapi"
+        ]
+      },
+      {
+        "text": "Retrieval can derive the current model messages from the session log. The optional query service reads exact events or bounded neighboring windows, filters sessions by metadata such as cwd/parent/availability, classifies events as current, shadowed or log-only, and provides cross-session or per-session full-text search through a provider. Text extraction excludes reasoning blocks, blocked prompts, structural events and stream chunks.",
+        "sources": [
+          "sessiondoc",
+          "query",
+          "querytypes",
+          "surface"
+        ]
+      },
+      {
+        "text": "Scope metadata includes cwd, parent-session lineage, and agent preset. Query filters can restrict by cwd, lineage, event type, sequence, time, surface status, and availability. These are query predicates and session composition boundaries; the inspected persistence contract does not itself define a tenant ACL. Any caller-specific authorization depends on the mounted integration and deployment policy.",
+        "sources": [
+          "eventtypes",
+          "query",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Event records preserve message and tool activity, event ordering, raw model attempt streams, optional usage, message source attribution, and source-event references for projected or replaced content. Compaction metadata records the summary input span and source event sequence IDs. These fields support traceability but do not verify the truth of claims inside the conversation.",
+        "sources": [
+          "eventtypes",
+          "sessiondoc",
+          "compaction",
+          "surface"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency controls include incremental cached surface folds, metadata-first session listing, opaque persistence revisions for query cache invalidation, cursor-paginated search, optional SQLite FTS indexing, compressed persistence frames, and explicit flush barriers. The reviewed sources describe mechanisms, not measured latency or cost.",
+        "sources": [
+          "surface",
+          "query",
+          "persistence",
+          "persistenceapi"
+        ]
+      },
+      {
+        "text": "Operational observability includes event timestamps, request and attempt records, assistant usage when the adapter reports it, session persistence revisions, event traces, and optional telemetry/reporting seams. These records do not demonstrate end-to-end telemetry coverage or benchmark performance.",
+        "sources": [
+          "eventtypes",
+          "sessiondoc",
+          "persistence",
+          "query"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval accuracy and abstention — unmeasured. Session and full-text query APIs are visible, but no adjudicated answerability or retrieval workload was run.",
+        "sources": [
+          "query",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured. Compaction changes the model-visible surface while retaining raw history; no correction probes were run.",
+        "sources": [
+          "compaction",
+          "sessiondoc",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Deletion leak rate — unmeasured. The inspected contracts do not expose deletion; no deletion or residual-copy probes were run.",
+        "sources": [
+          "persistenceapi",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Scope isolation leak rate — unmeasured. Metadata filters and per-agent plugin scopes are source-visible, but no cross-scope workload was run.",
+        "sources": [
+          "query",
+          "architecture",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Evidence support precision and citation coverage — unmeasured. Logs preserve source references, not adjudicated answer citations; no evidence evaluation was run.",
+        "sources": [
+          "eventtypes",
+          "compaction",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Retrieval latency and write-to-recall delay — unmeasured. Caching, indexes, and persistence flush behavior are code observations only; no timings were collected.",
+        "sources": [
+          "query",
+          "persistence",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Tokens and cost — unmeasured. Assistant usage can be stored when reported by an adapter, but no provider-cost or token workload was collected.",
+        "sources": [
+          "eventtypes",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Storage efficiency — unmeasured. Compressed JSONL/SQLite formats are documented; no bytes-per-item measurement was collected.",
+        "sources": [
+          "persistence",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      "This review is bounded to the official README, architecture and session/persistence/query/compaction documentation, plus Session event/surface and persistence/query type sources at the verified master head.",
+      "DeepSeek Harness is a broad coding-agent runtime and is explicitly described as a developer preview. The reviewed session history is interaction continuity, not a normalized long-term user-fact store.",
+      "Persistence is a plugin seam; deployment configuration determines whether sessions are durable and which backend is active. The review did not inspect every backend implementation or every bundled profile.",
+      "The query service is optional and its SQLite provider is separate. A local query filter is not evidence of tenant or cross-process authorization.",
+      "No per-event or per-session deletion API appeared in the inspected contracts. Erasure from files, backups, exports, or other copies is not established.",
+      "No DeepSeek Harness runtime, tests, or benchmarks were run; retrieval quality, isolation behavior, reliability, latency, token use, cost, and storage efficiency remain unknown."
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No DeepSeek Harness runtime, tests, or benchmark workload was executed. Source observations are not benchmark results.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

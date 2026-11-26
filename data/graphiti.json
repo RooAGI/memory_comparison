@@ -1,0 +1,311 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "graphiti",
+    "name": "Graphiti",
+    "repository": "https://github.com/getzep/graphiti",
+    "branch": "main",
+    "revision": "a61333edfa14cc483365ed7dd1e287ae6096db6c",
+    "reviewed_at": "2026-11-23T23:51:46Z",
+    "review_timezone": "UTC (checked 2026-11-23 15:51:46 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Graphiti is an open-source Python framework for incrementally building and searching temporal context graphs. It stores source episodes alongside derived entities and time-bounded relationship facts; an application must supply and operate the surrounding service.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/getzep/graphiti"
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Graphiti upstream repository",
+        "path": "repository",
+        "symbol": "Canonical repository; main default branch and recent history",
+        "url": "https://github.com/getzep/graphiti"
+      },
+      {
+        "id": "head",
+        "label": "Main branch commit history",
+        "path": "main branch history",
+        "symbol": "Latest visible main commit at review: a61333e",
+        "url": "https://github.com/getzep/graphiti/commits/main"
+      },
+      {
+        "id": "pin",
+        "label": "Reviewed full commit",
+        "path": "commit",
+        "symbol": "Full SHA resolved from the commit patch",
+        "url": "https://github.com/getzep/graphiti/commit/a61333edfa14cc483365ed7dd1e287ae6096db6c.patch"
+      },
+      {
+        "id": "readme",
+        "label": "README at reviewed revision",
+        "path": "README.md",
+        "symbol": "Framework description, graph model, deployment limits and reference server security warning",
+        "url": "https://github.com/getzep/graphiti/blob/a61333edfa14cc483365ed7dd1e287ae6096db6c/README.md"
+      },
+      {
+        "id": "core",
+        "label": "Graphiti ingestion and search API",
+        "path": "graphiti_core/graphiti.py",
+        "symbol": "Graphiti.add_episode; add_episode_bulk; search; search_; remove_episode",
+        "url": "https://github.com/getzep/graphiti/blob/a61333edfa14cc483365ed7dd1e287ae6096db6c/graphiti_core/graphiti.py"
+      },
+      {
+        "id": "search",
+        "label": "Search configuration and results",
+        "path": "graphiti_core/search/search_config.py",
+        "symbol": "SearchConfig; EdgeSearchMethod; EdgeReranker; SearchResults",
+        "url": "https://github.com/getzep/graphiti/blob/a61333edfa14cc483365ed7dd1e287ae6096db6c/graphiti_core/search/search_config.py"
+      },
+      {
+        "id": "search_impl",
+        "label": "Search implementation",
+        "path": "graphiti_core/search/search.py",
+        "symbol": "search; filtering, retrieval phases, reranking, tracing",
+        "url": "https://github.com/getzep/graphiti/blob/a61333edfa14cc483365ed7dd1e287ae6096db6c/graphiti_core/search/search.py"
+      },
+      {
+        "id": "edge",
+        "label": "Temporal relationship and provenance model",
+        "path": "graphiti_core/edges.py",
+        "symbol": "EntityEdge validity fields and supporting episode references",
+        "url": "https://github.com/getzep/graphiti/blob/a61333edfa14cc483365ed7dd1e287ae6096db6c/graphiti_core/edges.py"
+      },
+      {
+        "id": "node",
+        "label": "Episode and entity graph model",
+        "path": "graphiti_core/nodes.py",
+        "symbol": "EpisodicNode; EntityNode; group_id",
+        "url": "https://github.com/getzep/graphiti/blob/a61333edfa14cc483365ed7dd1e287ae6096db6c/graphiti_core/nodes.py"
+      },
+      {
+        "id": "edge_ops",
+        "label": "Edge extraction and temporal resolution",
+        "path": "graphiti_core/utils/maintenance/edge_operations.py",
+        "symbol": "resolve_extracted_edge(s); timestamp application; deduplication",
+        "url": "https://github.com/getzep/graphiti/blob/a61333edfa14cc483365ed7dd1e287ae6096db6c/graphiti_core/utils/maintenance/edge_operations.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "./METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "./results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The repository describes Graphiti as an open-source Python framework for building and querying temporal context graphs. The README distinguishes it from Zep’s managed enterprise context service: Graphiti is a library for an application to operate, while the host supplies ingestion, tenancy, access control, and operations.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The graph stores episodic nodes containing ingested source material, entity nodes, and relationship edges. The README describes episodes as source lineage; code models attach episode references to derived relationships and timestamps for when a fact became valid and, when superseded, invalid.",
+        "sources": [
+          "readme",
+          "node",
+          "edge"
+        ]
+      },
+      {
+        "text": "`Graphiti` is configured with a graph driver plus language-model and embedder clients. The README names Neo4j, FalkorDB, Amazon Neptune, and Relate support. These are integration options, not evidence of equivalent behavior or performance across backends.",
+        "sources": [
+          "readme",
+          "core"
+        ]
+      },
+      {
+        "text": "Search recipes combine configurable semantic, BM25, or breadth-first graph searches with rerankers such as reciprocal-rank fusion, node distance, episode mentions, MMR, and cross-encoder ranking. The actual path depends on the supplied search configuration.",
+        "sources": [
+          "search",
+          "search_impl"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: `add_episode` accepts an episode and extracts or resolves graph entities and relationships; bulk ingestion has a separate API. This source path depends on configured model/embedder clients and graph backend. It does not measure successful storage or write-to-recall delay.",
+        "sources": [
+          "core",
+          "edge_ops"
+        ]
+      },
+      {
+        "text": "Retrieval: `search` returns ranked relationship results, while `search_` returns graph-shaped `SearchResults` containing edges, nodes, episodes, communities, and reranker scores. Group filters and search filters can constrain retrieval. This is retrieval of graph objects, not a generated answer.",
+        "sources": [
+          "core",
+          "search",
+          "search_impl"
+        ]
+      },
+      {
+        "text": "Unanswerable questions: the inspected search API contains no answerability classifier or explicit abstention decision. An empty result set is possible, but that alone does not establish that a downstream agent will abstain correctly. Abstention quality is unknown without captured answers and adjudication.",
+        "sources": [
+          "core",
+          "search",
+          "search_impl",
+          "record"
+        ]
+      },
+      {
+        "text": "Correction and staleness: ingestion resolves duplicate or related facts and applies extracted temporal timestamps; edges carry `valid_at` and `invalid_at`, allowing historical/current-time filtering. These mechanisms preserve temporal structure but do not prove that extraction detects every contradiction or that retrieval avoids stale answers.",
+        "sources": [
+          "edge",
+          "edge_ops",
+          "search_impl"
+        ]
+      },
+      {
+        "text": "Deletion: `remove_episode` removes the episode and its supporting associations, deletes edges left unsupported by that episode, removes entities mentioned only by it, and rebuilds summaries for surviving entities. The inspected method does not establish erasure from backups, logs, external exports, or downstream copies; broad deletion completeness remains unknown.",
+        "sources": [
+          "core",
+          "node",
+          "edge"
+        ]
+      },
+      {
+        "text": "Scope: nodes and edges carry `group_id`, and search accepts group filters. The README explicitly says the reference REST and MCP servers have no authentication or authorization and permit callers to access any group; production hosts must enforce tenant authorization and isolation.",
+        "sources": [
+          "node",
+          "edge",
+          "search_impl",
+          "readme"
+        ]
+      },
+      {
+        "text": "Evidence and provenance: raw episodes are retained as source records and derived graph records can link back to supporting episodes. That gives an application source lineage to expose. The inspected APIs do not guarantee claim-level citations, support judgments, or that a generated answer quotes the right episode.",
+        "sources": [
+          "readme",
+          "node",
+          "edge",
+          "search"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and unanswerable abstention",
+        "status": "unmeasured; abstention behavior unsupported by inspected search API",
+        "evidence": "The library returns graph search results and scores, not an adjudicated answer or explicit abstention. Correct recall and downstream abstention require workload outputs and scoring.",
+        "sources": [
+          "core",
+          "search",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "code mechanism observed; outcome unmeasured",
+        "evidence": "Temporal validity fields and edge-resolution paths are present. No correction probes or stale-answer adjudication were run.",
+        "sources": [
+          "edge",
+          "edge_ops",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage and completeness",
+        "status": "code cleanup observed; outcome and external erasure unknown",
+        "evidence": "Episode removal cleans associated graph records by code path. No post-delete probes or audit of backups, logs, exports, or downstream copies was performed.",
+        "sources": [
+          "core",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "group filtering observed; authorization guarantee unsupported for reference servers",
+        "evidence": "Graph records/search support group identifiers, but README states reference servers have no authorization and host deployments must enforce tenant isolation. No cross-scope probes were run.",
+        "sources": [
+          "readme",
+          "node",
+          "search_impl",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "provenance structures observed; answer quality unmeasured",
+        "evidence": "Episode-to-graph lineage is represented in the source model. Claim-level support precision and citation coverage require captured responses and human or rule-based adjudication.",
+        "sources": [
+          "readme",
+          "edge",
+          "node",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Efficiency and latency observations",
+        "status": "code observations only; runtime latency unmeasured",
+        "evidence": "Search code has configurable retrieval and reranking phases with tracing hooks; ingestion concurrency and provider/backend choices affect work. No Graphiti timing, throughput, write-to-recall delay, token use, API cost, or storage size was measured. README performance language is not a result from this review.",
+        "sources": [
+          "readme",
+          "core",
+          "search",
+          "search_impl",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "The project status record has no Graphiti execution observations or resource totals. Configuration and source structure cannot establish per-operation resource use.",
+        "sources": [
+          "readme",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "Unsupported by this inspection: a built-in answerability or abstention guarantee, production authorization in the reference REST/MCP servers, and a universal deletion-completeness guarantee.",
+        "sources": [
+          "readme",
+          "core",
+          "search"
+        ]
+      },
+      {
+        "text": "Unknown: answer quality, correction/stale-value rates, cross-tenant leak rate under a host deployment, deletion leakage, citation quality, latency distributions, write-to-recall delay, token/cost totals, and storage efficiency. No Graphiti system workload or benchmark was run.",
+        "sources": [
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Atlas was used only as the attributed curated roster and repository locator at revision 19199a4fc249e89c0793be06f0b166b358089ba0. The upstream repository, branch, commit, documentation, and code were independently checked for this review.",
+        "sources": [
+          "repo",
+          "head",
+          "pin"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Source inspection is not benchmark measurement. Project status is Benchmark not run: the execution record lists Graphiti’s 20 planned operations as `not_run`, with no measured denominators or metric values. Planned fixture counts are not results.",
+        "sources": [
+          "metrics",
+          "record"
+        ]
+      }
+    ]
+  }
+}

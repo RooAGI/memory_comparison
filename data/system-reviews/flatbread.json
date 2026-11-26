@@ -1,0 +1,348 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 241,
+    "slug": "flatbread",
+    "name": "Flatbread Proof",
+    "repository": "https://github.com/FlatbreadLabs/flatbread",
+    "listed_repository": "https://github.com/FlatbreadLabs/flatbread",
+    "branch": "main",
+    "revision": "afd50940308d30d868281bf8111c824707eac476",
+    "reviewed_at": "2026-11-25T20:31:01Z",
+    "review_timezone": "UTC (checked 2026-11-25 12:31:01 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Flatbread Proof is a Git-tracked project-memory graph in the Flatbread monorepo. It stores typed Markdown records under an Effort and provides a CLI for bounded reads and validated lifecycle mutations. This review is based on current documentation and source; runtime behavior and performance were not measured.",
+    "atlas_locator": {
+      "ordinal": 241,
+      "name": "Flatbread Proof",
+      "slug": "flatbread",
+      "listed_repository": "https://github.com/FlatbreadLabs/flatbread",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/flatbread.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/FlatbreadLabs/flatbread/blob/afd50940308d30d868281bf8111c824707eac476/README.md",
+      "checked_urls": [
+        "https://github.com/FlatbreadLabs/flatbread/blob/afd50940308d30d868281bf8111c824707eac476/README.md",
+        "https://github.com/FlatbreadLabs/flatbread/blob/afd50940308d30d868281bf8111c824707eac476/packages/proof/README.md"
+      ],
+      "note": "Checked the official pinned root README and Proof package README for a published contact email; none was present. No commit/profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/FlatbreadLabs/flatbread/blob/afd50940308d30d868281bf8111c824707eac476/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/FlatbreadLabs/flatbread/blob/afd50940308d30d868281bf8111c824707eac476/README.md",
+      "https://github.com/FlatbreadLabs/flatbread/blob/afd50940308d30d868281bf8111c824707eac476/packages/proof/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the checked official pinned root README or Proof package README. No commit/profile metadata, third-party directory, or inferred address was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[240], ordinal 241; identity, explicit listed repository locator, pinned Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/flatbread.md",
+        "symbol": "Pinned attribution source for curated identity and locator only; not used as assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/flatbread.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "",
+        "symbol": "Official GitHub repository page identifies FlatbreadLabs/flatbread and current default branch main",
+        "url": "https://github.com/FlatbreadLabs/flatbread"
+      },
+      {
+        "id": "head",
+        "label": "Official GitHub head commit",
+        "path": "",
+        "symbol": "Official GitHub API commit endpoint resolved main to the reviewed full current head SHA; commit page gives upstream commit identity and date",
+        "url": "https://api.github.com/repos/FlatbreadLabs/flatbread/commits/afd50940308d30d868281bf8111c824707eac476"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Flatbread product paths, Git/file graph architecture, Proof overview, setup and declared boundaries",
+        "url": "https://github.com/FlatbreadLabs/flatbread/blob/afd50940308d30d868281bf8111c824707eac476/README.md"
+      },
+      {
+        "id": "proof-readme",
+        "label": "Pinned Proof package README",
+        "path": "packages/proof/README.md",
+        "symbol": "Eight record kinds, CLI session loop, bounded reads, mutations, Effort scoping, retraction and recovery docs",
+        "url": "https://github.com/FlatbreadLabs/flatbread/blob/afd50940308d30d868281bf8111c824707eac476/packages/proof/README.md"
+      },
+      {
+        "id": "writer",
+        "label": "Pinned Proof writer source",
+        "path": "packages/proof/src/writer.ts",
+        "symbol": "Writer lock, recovery, snapshot planning, journal commit, generation publication and result envelope",
+        "url": "https://github.com/FlatbreadLabs/flatbread/blob/afd50940308d30d868281bf8111c824707eac476/packages/proof/src/writer.ts"
+      },
+      {
+        "id": "planner",
+        "label": "Pinned Proof mutation planner",
+        "path": "packages/proof/src/planner.ts",
+        "symbol": "Typed mutation planning, lifecycle checks, relation validation and Retract behavior",
+        "url": "https://github.com/FlatbreadLabs/flatbread/blob/afd50940308d30d868281bf8111c824707eac476/packages/proof/src/planner.ts"
+      },
+      {
+        "id": "journal",
+        "label": "Pinned Proof journal source",
+        "path": "packages/proof/src/journal.ts",
+        "symbol": "Durable multi-file transaction intent, fsync/rename, commit publication and recovery",
+        "url": "https://github.com/FlatbreadLabs/flatbread/blob/afd50940308d30d868281bf8111c824707eac476/packages/proof/src/journal.ts"
+      },
+      {
+        "id": "read",
+        "label": "Pinned Proof read source",
+        "path": "packages/proof/src/read.ts",
+        "symbol": "Read query types, strict generation consistency, relation errors and read-cache pruning",
+        "url": "https://github.com/FlatbreadLabs/flatbread/blob/afd50940308d30d868281bf8111c824707eac476/packages/proof/src/read.ts"
+      },
+      {
+        "id": "digest",
+        "label": "Pinned Proof digest source",
+        "path": "packages/proof/src/digest.ts",
+        "symbol": "Bounded Markdown digest output and completeness/page/cap metadata",
+        "url": "https://github.com/FlatbreadLabs/flatbread/blob/afd50940308d30d868281bf8111c824707eac476/packages/proof/src/digest.ts"
+      },
+      {
+        "id": "snapshot",
+        "label": "Pinned Proof snapshot source",
+        "path": "packages/proof/src/snapshot.ts",
+        "symbol": "Filesystem-backed record snapshot used for read/write planning",
+        "url": "https://github.com/FlatbreadLabs/flatbread/blob/afd50940308d30d868281bf8111c824707eac476/packages/proof/src/snapshot.ts"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Metric domains and reproducible benchmark definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned shared benchmark fixture, not Flatbread Proof results",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status, not Flatbread Proof result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents Flatbread as a project by FlatbreadLabs and describes Proof as the durable-memory path for coding agents; the repository is a software package and CLI, not a hosted memory service.",
+        "sources": [
+          "readme",
+          "proof-readme"
+        ]
+      },
+      {
+        "text": "The wider Flatbread monorepo also supports relational content for applications, but this review assesses the Proof memory path.",
+        "sources": [
+          "readme",
+          "proof-readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Proof builds on Flatbread's file-to-typed-graph engine. Its canonical records are Markdown files organized into eight kinds: Effort, Issue, Finding, Decision, Constraint, Risk, Citation, and Blob. An Effort groups a coherent work thread; records carry typed frontmatter and body content, while configured relations connect IDs.",
+        "sources": [
+          "readme",
+          "proof-readme"
+        ]
+      },
+      {
+        "text": "The documented default graph root is .flatbread-proof, with one directory per record kind. Record files are tracked in Git; a write journal and derived read cache are intended to be ignored. Git supplies branch, diff, review, history, and revert workflows.",
+        "sources": [
+          "proof-readme",
+          "readme"
+        ]
+      },
+      {
+        "text": "The source writer acquires a writer lock, recovers prior journal transactions, builds a filesystem snapshot, plans a mutation, commits writes through the journal, and returns touched artifacts plus a generation token. These are code observations, not runtime results.",
+        "sources": [
+          "writer",
+          "snapshot",
+          "journal"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Writes use one CLI mutation command and a fixed set of 17 typed operations. Creation and lifecycle mutations are planned against a snapshot; the planner checks record kinds, IDs, relation constraints, and Effort rules before producing file changes. The packaged agent skill also asks the agent to apply a four-part durability gate, which the README explicitly describes as agent policy rather than CLI enforcement.",
+        "sources": [
+          "proof-readme",
+          "planner"
+        ]
+      },
+      {
+        "text": "Updates include typed lifecycle transitions such as resolving Issues, accepting or reopening Decisions, changing Risk state, superseding or invalidating claims, and retracting records. A `Retract` keeps the Markdown file and body, marks it retracted with a reason and timestamp, removes it from browse reads, and strips inbound relations; it is not a hard delete. Efforts are abandoned rather than retracted.",
+        "sources": [
+          "proof-readme",
+          "planner"
+        ]
+      },
+      {
+        "text": "A write transaction records before/after images in a journal, writes files through temporary files and renames, publishes a generation only after the changes are committed, and can recover by rolling back an uncommitted transaction or finishing publication of a committed one. A README caveat says recovery runs on a later write or live-server start, not on a read alone.",
+        "sources": [
+          "journal",
+          "writer",
+          "proof-readme"
+        ]
+      },
+      {
+        "text": "Read operations include listing Efforts, reading records within one Effort, following selected relations, finding blocking Decisions, and getting a record by ID. Reads return bounded digests with paging and completeness metadata; the documentation caps primary records, relation hops, edges, and digest bytes. A strict minimum-generation option provides a read-your-write barrier with a finite wait.",
+        "sources": [
+          "proof-readme",
+          "read",
+          "digest"
+        ]
+      },
+      {
+        "text": "The model separates causal `derives_from` links from state-changing `supersedes` and `invalidates` links. Current documentation permits a live causal target in another Effort and renders it as a checkpoint; state-changing links and `cites` remain within one Effort. Citation records can reference a Blob, and epistemic records can cite Citation IDs; these links encode provenance but do not establish that claims are true.",
+        "sources": [
+          "proof-readme",
+          "planner",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Typed, bounded read paths exist; no answer cases or abstentions were scored.",
+        "sources": [
+          "proof-readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Supersession and lifecycle operations are represented in source; no correction sequence was exercised.",
+        "sources": [
+          "planner",
+          "proof-readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Retract removes records from browse reads but preserves the file and body; no leakage probes or Git-history analysis were run.",
+        "sources": [
+          "planner",
+          "proof-readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Effort-scoped reads and relation checks are documented; no adversarial or cross-Effort isolation workload was run.",
+        "sources": [
+          "proof-readme",
+          "read",
+          "planner",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Citation and Blob records provide typed source links; no generated claim/citation pairs were adjudicated.",
+        "sources": [
+          "proof-readme",
+          "planner",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No runtime timings or scheduled recall probes were collected.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "No model usage, charges, or persistent storage measurements were collected.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected the official README, Proof documentation, and selected current source files at the verified commit. It did not run Flatbread Proof, tests, or benchmarks; source presence does not demonstrate recall quality, good memory selection, or correct agent use.",
+        "sources": [
+          "readme",
+          "proof-readme",
+          "writer",
+          "planner"
+        ]
+      },
+      {
+        "text": "The storage model is ordinary Git-tracked files. Retract preserves the record body in the working tree and Git history, so this operation should not be treated as erasure. This review did not inspect retention, credential controls, branch protection, backup policy, or remote repository access controls.",
+        "sources": [
+          "proof-readme",
+          "planner"
+        ]
+      },
+      {
+        "text": "Effort scoping is an application-level organization and read constraint. The public repo describes cross-Effort causal links, global Effort discovery, and ID-based get; this review did not establish a principal/tenant authorization boundary or test hostile inputs against one.",
+        "sources": [
+          "proof-readme",
+          "read",
+          "planner"
+        ]
+      },
+      {
+        "text": "The read cache has explicit pruning and digest bounds, and journal operations expose a generation token and structured errors; no latency, reliability, storage, or operational telemetry measurements were made.",
+        "sources": [
+          "read",
+          "digest",
+          "journal",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Flatbread Proof runtime, tests, or benchmark workload were run. Source and documentation observations are not measurements."
+    }
+  }
+}

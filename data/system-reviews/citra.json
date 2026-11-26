@@ -1,0 +1,270 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 120,
+    "slug": "citra",
+    "name": "Citra Decision System",
+    "repository": "https://github.com/Trustedwear-Tech/citra-decision-system",
+    "branch": "main",
+    "revision": "6f200f2992291eda45c23d95c5e231b82e8f1cf3",
+    "reviewed_at": "2026-11-25T07:55:35Z",
+    "review_timezone": "UTC (2026-11-24 23:55:35 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": "contact@citra-ai.com",
+      "source_url": "https://github.com/Trustedwear-Tech/citra-decision-system/blob/6f200f2992291eda45c23d95c5e231b82e8f1cf3/README.md",
+      "checked_urls": [
+        "https://github.com/Trustedwear-Tech/citra-decision-system/blob/6f200f2992291eda45c23d95c5e231b82e8f1cf3/README.md"
+      ],
+      "note": "The official pinned README publishes contact@citra-ai.com in its contact/about sections."
+    },
+    "contact_email": "contact@citra-ai.com",
+    "contact_email_source_url": "https://github.com/Trustedwear-Tech/citra-decision-system/blob/6f200f2992291eda45c23d95c5e231b82e8f1cf3/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/Trustedwear-Tech/citra-decision-system/blob/6f200f2992291eda45c23d95c5e231b82e8f1cf3/README.md"
+    ],
+    "summary": "Citra records officer corrections in an evidence ledger, consolidates compatible evidence into scoped clauses, and retrieves those clauses to inform later decision recommendations. This is a source-based review, not a measured evaluation.",
+    "atlas_locator": {
+      "ordinal": 120,
+      "name": "Citra Decision System",
+      "slug": "citra",
+      "listed_repository": "https://github.com/Trustedwear-Tech/citra-decision-system",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/citra.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated roster",
+        "path": "data/memory-systems.json",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas attribution only",
+        "path": "content/systems/citra.md",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/citra.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official repository",
+        "path": "repository",
+        "url": "https://github.com/Trustedwear-Tech/citra-decision-system"
+      },
+      {
+        "id": "head",
+        "label": "Verified current main head",
+        "path": "commit",
+        "symbol": "6f200f2992291eda45c23d95c5e231b82e8f1cf3",
+        "url": "https://github.com/Trustedwear-Tech/citra-decision-system/commit/6f200f2992291eda45c23d95c5e231b82e8f1cf3"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "url": "https://github.com/Trustedwear-Tech/citra-decision-system/blob/6f200f2992291eda45c23d95c5e231b82e8f1cf3/README.md"
+      },
+      {
+        "id": "how",
+        "label": "How clause memory works",
+        "path": "docs/how-clause-memory-works.md",
+        "url": "https://github.com/Trustedwear-Tech/citra-decision-system/blob/6f200f2992291eda45c23d95c5e231b82e8f1cf3/docs/how-clause-memory-works.md"
+      },
+      {
+        "id": "corrections",
+        "label": "Correction evidence ledger",
+        "path": "smart-app-service/corrections.py",
+        "url": "https://github.com/Trustedwear-Tech/citra-decision-system/blob/6f200f2992291eda45c23d95c5e231b82e8f1cf3/smart-app-service/corrections.py"
+      },
+      {
+        "id": "clause",
+        "label": "Clause store",
+        "path": "smart-app-service/clause_store.py",
+        "url": "https://github.com/Trustedwear-Tech/citra-decision-system/blob/6f200f2992291eda45c23d95c5e231b82e8f1cf3/smart-app-service/clause_store.py"
+      },
+      {
+        "id": "consolidation",
+        "label": "Consolidation",
+        "path": "smart-app-service/consolidation.py",
+        "url": "https://github.com/Trustedwear-Tech/citra-decision-system/blob/6f200f2992291eda45c23d95c5e231b82e8f1cf3/smart-app-service/consolidation.py"
+      },
+      {
+        "id": "learned",
+        "label": "Learned-memory reader",
+        "path": "smart-app-service/learned_memory.py",
+        "url": "https://github.com/Trustedwear-Tech/citra-decision-system/blob/6f200f2992291eda45c23d95c5e231b82e8f1cf3/smart-app-service/learned_memory.py"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "Citra is a decision application platform whose learned-memory feature captures officer corrections as evidence-backed clauses used in later recommendations.",
+        "sources": [
+          "readme",
+          "how",
+          "learned"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Corrections are stored in a MongoDB-backed ledger as pending evidence. Consolidation clusters compatible corrections, authors a concise clause, and preserves correction IDs as provenance.",
+        "sources": [
+          "corrections",
+          "consolidation",
+          "clause"
+        ]
+      },
+      {
+        "text": "Clauses carry tenant, app, modality, task type, scope facets, text, support and dissent officers, provenance IDs, performance counters, status, version/history, and relation fields.",
+        "sources": [
+          "clause"
+        ]
+      },
+      {
+        "text": "The reader selects and formats clauses for analysis prompts and returns clause IDs for traceability. Documented design places SOP policy above learned judgement.",
+        "sources": [
+          "learned",
+          "how"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: corrections append to the evidence ledger. A background consolidation pass authors clauses from correction clusters; new clauses require provenance and default to candidate unless the distinct-officer promotion threshold is met.",
+        "sources": [
+          "corrections",
+          "consolidation",
+          "clause"
+        ]
+      },
+      {
+        "text": "Update and deletion: reinforcement adds support/provenance; set_status snapshots the previous clause state into history. Underperforming, challenged, quarantined, retired, superseded and other statuses can withhold clauses from retrieval. The reviewed source does not establish general hard-delete or erasure semantics.",
+        "sources": [
+          "clause",
+          "readme"
+        ]
+      },
+      {
+        "text": "Retrieval: the query selects by tenant/app/modality/task, live status, and scope-facet subset. Empty scope matches within the bucket; index-assisted candidate selection and a word budget constrain prompt injection.",
+        "sources": [
+          "clause",
+          "learned"
+        ]
+      },
+      {
+        "text": "Evidence: provenance lookup follows correction IDs to officer rationale, prior agent recommendation, facets, changed fields and, for supported records, decision-time context snapshots.",
+        "sources": [
+          "clause",
+          "corrections"
+        ]
+      },
+      {
+        "text": "Scope isolation: bucket keys and facet matching separate logical retrieval contexts. The review did not verify authorization across all call sites or run an isolation workload.",
+        "sources": [
+          "clause",
+          "learned"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Clause retrieval is source-visible, but no judged answerability or abstention workload was run.",
+        "sources": [
+          "clause",
+          "learned"
+        ]
+      },
+      {
+        "domain": "Correction and stale values",
+        "status": "unmeasured",
+        "evidence": "The source has correction consolidation and status lifecycles, but no correction accuracy sequence was measured.",
+        "sources": [
+          "corrections",
+          "consolidation",
+          "clause"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Status transitions can withhold clauses; no hard-delete, residual-copy, or post-delete retrieval workload was run.",
+        "sources": [
+          "clause",
+          "readme"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Tenant/app/task/modality and facet filters are present; no cross-tenant isolation workload was run.",
+        "sources": [
+          "clause",
+          "learned"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Clauses require provenance and can be traced to corrections, but no evidence adjudication workload was run.",
+        "sources": [
+          "clause",
+          "corrections"
+        ]
+      },
+      {
+        "domain": "Efficiency and observability",
+        "status": "unmeasured",
+        "evidence": "Indexes, bounded candidates, word budgets, counters and logs appear in source; no latency, token, cost, storage or telemetry coverage measurements were collected.",
+        "sources": [
+          "clause",
+          "learned",
+          "readme"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The README places officer erasure/re-fold and several memory lifecycle controls under Enterprise Memory+. Do not assume these are community capabilities.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "Status history is written by set_status, but record_dissent updates fields directly; the reviewed implementation does not show a single append-only audit path for every mutation.",
+        "sources": [
+          "clause"
+        ]
+      },
+      {
+        "text": "The inspected code does not establish universal hard deletion, backup erasure, all authorization boundaries, retention behavior, or concurrent consolidation guarantees.",
+        "sources": [
+          "clause",
+          "corrections",
+          "readme"
+        ]
+      },
+      {
+        "text": "This source inspection does not establish runtime quality, isolation, latency, costs, storage efficiency, or behavior under production workload.",
+        "sources": [
+          "repo",
+          "head",
+          "clause",
+          "learned"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is not_run. No Citra runtime, tests, or benchmark workloads were executed.",
+        "sources": [
+          "head",
+          "readme"
+        ]
+      }
+    ]
+  }
+}

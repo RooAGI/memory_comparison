@@ -1,0 +1,312 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 282,
+    "slug": "harness2",
+    "name": "Harness²",
+    "repository": "https://github.com/google-research/harness2",
+    "listed_repository": "https://github.com/google-research/harness2",
+    "branch": "main",
+    "revision": "6868817518876de8fd170c6a8354daca273b6191",
+    "reviewed_at": "2026-11-25T22:29:13Z",
+    "review_timezone": "UTC (checked 2026-11-25 14:29:13 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Harness² is a Python framework for recursively improving agent harnesses. Its filesystem experience library retains adopted harness trees and evidence-backed lessons per benchmark domain, run and mode. This source review does not execute the system or measure quality.",
+    "atlas_locator": {
+      "ordinal": 282,
+      "name": "Harness²",
+      "slug": "harness2",
+      "listed_repository": "https://github.com/google-research/harness2",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/harness2.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/google-research/harness2/blob/6868817518876de8fd170c6a8354daca273b6191/README.md",
+      "checked_urls": [
+        "https://github.com/google-research/harness2/blob/6868817518876de8fd170c6a8354daca273b6191/README.md"
+      ],
+      "note": "Checked only the official pinned README for a published contact email; none was present. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/google-research/harness2/blob/6868817518876de8fd170c6a8354daca273b6191/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/google-research/harness2/blob/6868817518876de8fd170c6a8354daca273b6191/README.md"
+    ],
+    "contact_email_note": "No email was published in the official pinned README; no address was inferred from commit/profile metadata or a third-party directory.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated roster entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[281], ordinal 282; identity, explicit repository locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/harness2.md",
+        "symbol": "Pinned attribution for curated identity and locator only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/harness2.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Public google-research/harness2; official page identifies main as default branch",
+        "url": "https://github.com/google-research/harness2"
+      },
+      {
+        "id": "head",
+        "label": "Official main commit feed and verified checkout",
+        "path": "commits/main.atom",
+        "symbol": "Feed reports full head 6868817518876de8fd170c6a8354daca273b6191; shallow checkout resolved main to the same SHA",
+        "url": "https://github.com/google-research/harness2/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project scope, two recursion levels, components, execution modes, benchmarks, results, limitations, and contact check",
+        "url": "https://github.com/google-research/harness2/blob/6868817518876de8fd170c6a8354daca273b6191/README.md"
+      },
+      {
+        "id": "library",
+        "label": "Pinned experience library implementation",
+        "path": "harness2/core/library.py",
+        "symbol": "Filesystem entry format, experience validation, add/forget/retain, index rebuild and root scoping",
+        "url": "https://github.com/google-research/harness2/blob/6868817518876de8fd170c6a8354daca273b6191/harness2/core/library.py"
+      },
+      {
+        "id": "context",
+        "label": "Pinned evidence context construction",
+        "path": "harness2/core/context.py",
+        "symbol": "Evidence tree layout, library exposure, trajectory construction and grader-verdict checks",
+        "url": "https://github.com/google-research/harness2/blob/6868817518876de8fd170c6a8354daca273b6191/harness2/core/context.py"
+      },
+      {
+        "id": "recursion",
+        "label": "Pinned task-level recursion",
+        "path": "harness2/core/recursion.py",
+        "symbol": "Propose–Probe–Compose stages, evidence creation, retries and recorded execution spend",
+        "url": "https://github.com/google-research/harness2/blob/6868817518876de8fd170c6a8354daca273b6191/harness2/core/recursion.py"
+      },
+      {
+        "id": "selection",
+        "label": "Pinned adoption and reflection",
+        "path": "harness2/core/selection.py",
+        "symbol": "Selection, reflection evidence bundle and experience distillation",
+        "url": "https://github.com/google-research/harness2/blob/6868817518876de8fd170c6a8354daca273b6191/harness2/core/selection.py"
+      },
+      {
+        "id": "schedule",
+        "label": "Pinned task-stream and library scheduling",
+        "path": "harness2/core/schedule.py",
+        "symbol": "Per-domain/per-mode library construction, adoption write, resume restoration and preceding-task retention",
+        "url": "https://github.com/google-research/harness2/blob/6868817518876de8fd170c6a8354daca273b6191/harness2/core/schedule.py"
+      },
+      {
+        "id": "tree",
+        "label": "Pinned editable harness tree model",
+        "path": "harness2/core/tree.py",
+        "symbol": "SurfaceSpec, editable component path validation and tree read/write behavior",
+        "url": "https://github.com/google-research/harness2/blob/6868817518876de8fd170c6a8354daca273b6191/harness2/core/tree.py"
+      },
+      {
+        "id": "ledger",
+        "label": "Pinned run budget ledger",
+        "path": "harness2/core/ledger.py",
+        "symbol": "Rollout/session counts, attempt counts, cache flags and executor-reported USD costs",
+        "url": "https://github.com/google-research/harness2/blob/6868817518876de8fd170c6a8354daca273b6191/harness2/core/ledger.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Benchmark domains and metric definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned benchmark fixture definition; not run for this assessment",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project-level execution status; not a Harness² result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents Harness² as an open-source research framework for recursive agent harnessing. The repository contains the framework and benchmark/experiment tooling; its README states that it is not an officially supported Google product.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Harness² separates task-level Propose–Probe–Compose refinement from harnessing-level persistence: after task results are selected, reflection distills evidence-backed experience to guide later task harness edits.",
+        "sources": [
+          "readme",
+          "recursion",
+          "selection"
+        ]
+      },
+      {
+        "text": "The persistent library is plain files: a per-run/per-mode/per-domain INDEX.md plus one directory per prior task containing the full adopted harness component tree and EXPERIENCE.md with selection rationale and transferable experience fields.",
+        "sources": [
+          "library",
+          "schedule"
+        ]
+      },
+      {
+        "text": "The editable harness is a SurfaceSpec-validated tree of framework-specific paths such as always-on prompts, skills, subagents, scripts and plugins. It is distinct from the task evidence tree used to show candidates and trajectories to improver sessions.",
+        "sources": [
+          "tree",
+          "context"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: after successful selection, reflection builds context from candidate trajectories, deliverables, harnesses and decisions; distillation returns experience. The scheduler stores an entry only when cue, lesson and evidence are nonempty, and the writer rejects grader-verdict markers before persisting the harness and experience.",
+        "sources": [
+          "selection",
+          "schedule",
+          "library",
+          "context"
+        ]
+      },
+      {
+        "text": "Update: adding the same task entry removes and rewrites its harness tree and EXPERIENCE.md. The inspected API does not provide a general semantic-fact correction interface or immutable experience revision history.",
+        "sources": [
+          "library"
+        ]
+      },
+      {
+        "text": "Delete: internal forget(task_ids) removes those task directories and rebuilds the index; retain(task_ids) drops entries outside the allow-list. The task stream uses retain to keep only preceding entries. This does not establish secure erasure from backups or an end-user deletion workflow.",
+        "sources": [
+          "library",
+          "schedule"
+        ]
+      },
+      {
+        "text": "Retrieval: a domain library directory is included as files in the improver context. The model is prompted to browse INDEX.md and open relevant entries; this is full-tree availability and model-directed browsing, rather than query-ranked recall. Selection and task execution do not receive the library through this context path.",
+        "sources": [
+          "library",
+          "context",
+          "recursion"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "The improver can browse prior harnesses and lessons by domain; no fixed answer/abstention workload was run.",
+        "sources": [
+          "library",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction and stale values",
+        "status": "unmeasured",
+        "evidence": "Same-task entries can be rewritten and stream retention prunes entries, but no correction sequence or stale-value probes were evaluated.",
+        "sources": [
+          "library",
+          "schedule",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Internal task-entry deletion exists; no post-delete query, backup or recovery probe was performed.",
+        "sources": [
+          "library",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Filesystem paths and task-stream scheduling separate domain, run and mode; no cross-scope isolation workload was run.",
+        "sources": [
+          "library",
+          "schedule",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citations",
+        "status": "unmeasured",
+        "evidence": "Experience records include evidence text and context guards against grader verdicts; claim-level citations were not adjudicated.",
+        "sources": [
+          "selection",
+          "context",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The run ledger counts execution sessions and rollouts but this review collected no timing observations.",
+        "sources": [
+          "ledger",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost and storage",
+        "status": "unmeasured",
+        "evidence": "Executor-supplied USD cost may be recorded; token totals and persistent library bytes were not measured.",
+        "sources": [
+          "ledger",
+          "library",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded review of selected current README, documentation and source files. Harness², its tests and benchmark workload were not run, so implementation presence does not establish runtime effectiveness or repeatability.",
+        "sources": [
+          "readme",
+          "library",
+          "recursion"
+        ]
+      },
+      {
+        "text": "The review cannot establish reflection accuracy, retrieval effectiveness as a library grows, isolation against adversarial access, secure deletion from backups, or deployment concurrency behavior. Not every adapter and execution configuration was inspected.",
+        "sources": [
+          "context",
+          "schedule",
+          "library"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Harness² runtime, tests or benchmark workload were run. Upstream README experimental claims were not independently reproduced and are not project results.",
+      "metric_definitions": "../METRICS.md",
+      "fixture": "../fixtures/memory-benchmark-v1.json",
+      "execution_status": "../results/initial-baselines-status.json"
+    }
+  }
+}

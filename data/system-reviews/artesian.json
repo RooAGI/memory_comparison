@@ -1,0 +1,391 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 71,
+    "slug": "artesian",
+    "name": "Artesian",
+    "repository": "https://github.com/aquifer-labs/artesian",
+    "listed_repository": "https://github.com/aquifer-labs/artesian",
+    "branch": "main",
+    "revision": "14e4f2d9494d396695f79350b9e42bacd82d953d",
+    "reviewed_at": "2026-11-24T21:39:38Z",
+    "review_timezone": "UTC (2026-11-24 13:39:38 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Artesian is a Rust memory and context-control system for agents. Its aquifer crate provides durable memory backends and retrieval; the optional headgate layer qualifies what enters a bounded working context. This review describes pinned source and documentation, not runtime behavior.",
+    "atlas_locator": {
+      "ordinal": 71,
+      "name": "Artesian",
+      "slug": "artesian",
+      "listed_repository": "https://github.com/aquifer-labs/artesian",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/artesian.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/aquifer-labs/artesian/blob/14e4f2d9494d396695f79350b9e42bacd82d953d/README.md",
+      "note": "No contact email is published in the official pinned README or SECURITY.md; those exact checked URLs are listed below."
+    },
+    "contact_email": null,
+    "contact_checked_sources": [
+      "https://github.com/aquifer-labs/artesian/blob/14e4f2d9494d396695f79350b9e42bacd82d953d/README.md",
+      "https://github.com/aquifer-labs/artesian/blob/14e4f2d9494d396695f79350b9e42bacd82d953d/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated roster entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[70], ordinal 71; name, slug, listed repository, and Atlas attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Curated Atlas attribution source",
+        "path": "content/systems/artesian.md",
+        "symbol": "Roster locator attribution only; no Atlas descriptions, marks, or layout used as review evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/artesian.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official repository metadata",
+        "path": "repository",
+        "symbol": "Canonical public aquifer-labs/artesian; default branch main",
+        "url": "https://github.com/aquifer-labs/artesian"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Current main head 14e4f2d9494d396695f79350b9e42bacd82d953d; feed updated 2026-08-21T13:01:05Z",
+        "url": "https://github.com/aquifer-labs/artesian/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream head commit",
+        "path": "commit",
+        "symbol": "Full current main SHA 14e4f2d9494d396695f79350b9e42bacd82d953d",
+        "url": "https://github.com/aquifer-labs/artesian/commit/14e4f2d9494d396695f79350b9e42bacd82d953d"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned project README",
+        "path": "README.md",
+        "symbol": "Product description, architecture, integration, source-reported benchmark claims, and project usage",
+        "url": "https://github.com/aquifer-labs/artesian/blob/14e4f2d9494d396695f79350b9e42bacd82d953d/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Architecture overview",
+        "path": "docs/architecture.md",
+        "symbol": "Crate responsibilities, backend seams, design invariants, integration",
+        "url": "https://github.com/aquifer-labs/artesian/blob/14e4f2d9494d396695f79350b9e42bacd82d953d/docs/architecture.md"
+      },
+      {
+        "id": "memory",
+        "label": "Memory architecture documentation",
+        "path": "docs/memory.md",
+        "symbol": "MemoryRecord, tiers, embeddings, hybrid retrieval, chunking, backends, headwater source of truth, self-repair, and limits",
+        "url": "https://github.com/aquifer-labs/artesian/blob/14e4f2d9494d396695f79350b9e42bacd82d953d/docs/memory.md"
+      },
+      {
+        "id": "concurrency",
+        "label": "Concurrency and multi-tenancy guide",
+        "path": "docs/concurrency.md",
+        "symbol": "Project collections, payload scope filters, backend concurrency and write-to-read policy",
+        "url": "https://github.com/aquifer-labs/artesian/blob/14e4f2d9494d396695f79350b9e42bacd82d953d/docs/concurrency.md"
+      },
+      {
+        "id": "types",
+        "label": "Memory types and lifecycle",
+        "path": "crates/aquifer/src/types.rs",
+        "symbol": "MemoryRecord, MemoryScope, MemoryState, MemoryQuery, SearchHit and telemetry types",
+        "url": "https://github.com/aquifer-labs/artesian/blob/14e4f2d9494d396695f79350b9e42bacd82d953d/crates/aquifer/src/types.rs"
+      },
+      {
+        "id": "identity",
+        "label": "Stable memory identifiers",
+        "path": "crates/aquifer/src/identity.rs",
+        "symbol": "stable_memory_id hashes content, tier, node, scope and owner fields",
+        "url": "https://github.com/aquifer-labs/artesian/blob/14e4f2d9494d396695f79350b9e42bacd82d953d/crates/aquifer/src/identity.rs"
+      },
+      {
+        "id": "backend",
+        "label": "Pluggable memory backend contract",
+        "path": "crates/aquifer/src/backend.rs",
+        "symbol": "find, store, hybrid_rrf, get_node, mark_used, retract, bulk_store",
+        "url": "https://github.com/aquifer-labs/artesian/blob/14e4f2d9494d396695f79350b9e42bacd82d953d/crates/aquifer/src/backend.rs"
+      },
+      {
+        "id": "vector_memory",
+        "label": "Vector memory implementation",
+        "path": "crates/aquifer/src/vector_memory.rs",
+        "symbol": "FastembedTextEmbedder, pinned model and vector memory backend; source page also documents lazy shared embedder and resource handling",
+        "url": "https://github.com/aquifer-labs/artesian/blob/14e4f2d9494d396695f79350b9e42bacd82d953d/crates/aquifer/src/vector_memory.rs"
+      },
+      {
+        "id": "files",
+        "label": "Headwater file backend",
+        "path": "crates/aquifer/src/files.rs",
+        "symbol": "FilesBackend, access tracking, project-union query filter, lexical search and Markdown storage",
+        "url": "https://github.com/aquifer-labs/artesian/blob/14e4f2d9494d396695f79350b9e42bacd82d953d/crates/aquifer/src/files.rs"
+      },
+      {
+        "id": "retrieval",
+        "label": "Reranking implementation",
+        "path": "crates/aquifer/src/retrieval.rs",
+        "symbol": "Reranker, deterministic lexical reranking and optional local cross-encoder seam",
+        "url": "https://github.com/aquifer-labs/artesian/blob/14e4f2d9494d396695f79350b9e42bacd82d953d/crates/aquifer/src/retrieval.rs"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Private vulnerability reporting instructions; no published contact email",
+        "url": "https://github.com/aquifer-labs/artesian/blob/14e4f2d9494d396695f79350b9e42bacd82d953d/SECURITY.md"
+      },
+      {
+        "id": "benchmarks",
+        "label": "Upstream benchmark methodology and committed report",
+        "path": "benchmarks/README.md",
+        "symbol": "Token-cost scaling, retrieval quality, large-source test methodology and scope",
+        "url": "https://github.com/aquifer-labs/artesian/blob/14e4f2d9494d396695f79350b9e42bacd82d953d/benchmarks/README.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Comparison formulas, denominators, efficiency measures and reporting protocol",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Versioned benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Synthetic benchmark cases and required observations; not a result record",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Initial benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project execution status record; no Artesian measurement claimed by this review",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The repository is published under the aquifer-labs GitHub organization and describes Artesian as a local-first, open-source Rust context governor for agent loops. It is a composable library, CLI/optional daemon, and MCP integration rather than a hosted memory service.",
+        "sources": [
+          "repo",
+          "readme",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The architecture is split across aquifer (durable memory and vector backends), headgate (bounded committed-context control), artesian-mcp (agent tools), CLI/daemon entry points, and gauge (evaluation harness). Components meet through traits so a backend or agent adapter can be replaced.",
+        "sources": [
+          "architecture"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The project distinguishes long-term memory from the bounded context currently held by an agent. Long-term records implement the MemoryBackend contract; the optional headgate layer maintains a bounded committed state and a qualify-gate. The architecture guide describes memory, orchestration, task tracking, and sandboxing as independently selectable modes.",
+        "sources": [
+          "architecture",
+          "memory"
+        ]
+      },
+      {
+        "text": "A MemoryRecord carries an id, node_id, content, tags, metadata, tier and creation time, with optional scope and agent/session/task identifiers. Further fields support user/project ownership, source and author attribution, confidence, lifecycle state, relations and access utility. The stable identifier hashes content, tier and supplied node/scope/owner values, supporting deduplication of same-identity writes.",
+        "sources": [
+          "types",
+          "identity"
+        ]
+      },
+      {
+        "text": "The documented default durable format is human-readable Markdown headwater files; vector/search stores are rebuildable projections. The vector path uses a pinned multilingual-e5-small embedder and supports Files, embedded sqlite-vec and Qdrant adapters; memory documentation describes 384-dimensional embeddings and hybrid retrieval.",
+        "sources": [
+          "memory",
+          "vector_memory",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The README and memory guide describe structural, zero-LLM chunking and small-to-big retrieval: match a chunk, then expand adjacent chunks of the same parent within a bounded context budget. Optional reranking, entity signals, temporal weighting, HyDE, multi-query and consolidation are documented as separate seams; LLM-costing options are opt-in.",
+        "sources": [
+          "memory",
+          "retrieval",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Writes go through MemoryBackend.store or bulk_store. Stable content-derived IDs make exact repeats idempotent; the backend contract's default bulk method loops over store, while implementations may batch. The concurrency guide describes append-mostly writes and backend-specific coordination rather than general read-modify-write.",
+        "sources": [
+          "backend",
+          "identity",
+          "concurrency"
+        ]
+      },
+      {
+        "text": "The type model includes Active, Archived and Retracted states. The backend contract exposes retract separately from hard delete and recommends retaining a retracted record plus an auditable supersession/retraction record. The memory guide describes explicit node drill-down and file/index rebuild; this review did not inspect every backend-specific hard-delete path.",
+        "sources": [
+          "types",
+          "backend",
+          "memory"
+        ]
+      },
+      {
+        "text": "Retrieval is exposed through find, hybrid_rrf and deterministic get_node drill-down. The documented vector path combines keyword and dense rankings with Reciprocal Rank Fusion (default rank constant 60), uses cosine similarity for the vector channel, and can return bounded parent context around a matching chunk.",
+        "sources": [
+          "backend",
+          "memory",
+          "retrieval"
+        ]
+      },
+      {
+        "text": "Short-term buffer and sliding-window modes are in-process and do not call an LLM by default. Self-repair documentation describes a session anchor plus targeted recall after compaction; opt-in summarization/consolidation can add model calls.",
+        "sources": [
+          "memory",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "The repository documents dense/keyword retrieval, fusion, ranking and a retrieval regression harness. No answerable or unanswerable probe was run for this review.",
+        "sources": [
+          "memory",
+          "benchmarks",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "The record model has lifecycle states and the memory guide describes opt-in temporal supersession, but this review did not adjudicate correction sequences or stale answers.",
+        "sources": [
+          "types",
+          "memory",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The backend contract documents retraction separately from hard deletion and the record type retains retracted state. No deletion request or post-deletion leakage probe was run.",
+        "sources": [
+          "backend",
+          "types",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "The concurrency guide describes per-project collections and payload filters for shared, agent, session, task and user scopes; the file backend code includes project-union filtering. No cross-scope isolation probes were run, and the guide's design description is not a security measurement.",
+        "sources": [
+          "concurrency",
+          "files",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Records can preserve source and author fields, node identifiers, metadata and relations for drill-down. This review found no adjudicated measure of factual support or claim-level citation coverage.",
+        "sources": [
+          "types",
+          "memory",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The code and docs expose backends, batch writes, local embedding, retrieval stages and backend-specific consistency options. No latency distribution or write-to-recall timings were collected.",
+        "sources": [
+          "backend",
+          "vector_memory",
+          "concurrency",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and persistent storage",
+        "status": "unmeasured",
+        "evidence": "Artesian exposes token/context controls and its repository reports context-token benchmarks; these are upstream reports, not measurements from this review. No token, cost or corpus-attributed storage measurements were made here.",
+        "sources": [
+          "readme",
+          "benchmarks",
+          "metrics"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded read-only inspection of selected documentation and code at the verified main commit. It does not establish deployment correctness, recall quality, calibration, durability, concurrency safety, deletion completeness, or security isolation.",
+        "sources": [
+          "architecture",
+          "memory",
+          "concurrency",
+          "types"
+        ]
+      },
+      {
+        "text": "Scope boundaries depend on deployment and filtering: the concurrency guide describes project collections as hard separation and payload tenancy as filtered separation, with per-user collections as an optional stricter setup. This review did not test adapter predicates, credentials, or caller identity enforcement.",
+        "sources": [
+          "concurrency",
+          "files",
+          "security"
+        ]
+      },
+      {
+        "text": "The README and benchmark guide contain reported results, but this task did not independently reproduce them. The guide itself says its retrieval comparison does not measure end-to-end answer quality and cannot establish behavior outside its fixtures and configuration.",
+        "sources": [
+          "readme",
+          "benchmarks",
+          "metrics"
+        ]
+      },
+      {
+        "text": "Local embedding and reranking are source-visible, but the selected-path review does not quantify installation footprint, peak memory, latency under concurrency, provider cost, or persistent storage per record. Optional model-backed judge, compression and consolidation settings may change the cost profile.",
+        "sources": [
+          "vector_memory",
+          "memory",
+          "readme"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run for this review. No Artesian runtime, benchmark workload, build or tests were run. This review records source observations only.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "The pinned upstream benchmark README reports roughly 876–1,046 context tokens/query across its 13k-to-1M token scaling tiers and 100% answer-document retrieval for those cases. These are upstream-reported benchmark results at the reviewed source revision, not results produced or checked by this review.",
+        "sources": [
+          "benchmarks",
+          "readme"
+        ]
+      },
+      {
+        "text": "The upstream benchmark documentation also reports lower retrieval success on its confusable large-tier test for some optional strategies and says the harness measures retrieval/token footprint, not end-to-end answer quality. The project's fixture and status file define work and reporting, not Artesian-specific outcomes.",
+        "sources": [
+          "benchmarks",
+          "fixture",
+          "status"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,352 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 211,
+    "slug": "elastic-atlas",
+    "name": "Elastic Atlas",
+    "repository": "https://github.com/noamschwartz/atlas-memory-demo",
+    "listed_repository": "https://github.com/noamschwartz/atlas-memory-demo",
+    "branch": "main",
+    "revision": "d84f9235a69d45a4fe326aaa691ad024699d0daa",
+    "reviewed_at": "2026-11-26T00:29:08Z",
+    "review_timezone": "UTC (2026-11-25 16:29:08 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Elastic Atlas is a research demo and agent memory layer on Elasticsearch. It stores episodic events, semantic facts, and procedural playbooks in separate indices and offers user-scoped hybrid retrieval with optional catalog federation. Source review describes implementation paths and limits; no system, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 211,
+      "name": "Elastic Atlas",
+      "slug": "elastic-atlas",
+      "listed_repository": "https://github.com/noamschwartz/atlas-memory-demo",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/elastic-atlas.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/noamschwartz/atlas-memory-demo/blob/d84f9235a69d45a4fe326aaa691ad024699d0daa/README.md",
+      "checked_urls": [
+        "https://github.com/noamschwartz/atlas-memory-demo/blob/d84f9235a69d45a4fe326aaa691ad024699d0daa/README.md"
+      ],
+      "note": "The official pinned README was checked for a published contact email; none was found. No commit or profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/noamschwartz/atlas-memory-demo/blob/d84f9235a69d45a4fe326aaa691ad024699d0daa/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/noamschwartz/atlas-memory-demo/blob/d84f9235a69d45a4fe326aaa691ad024699d0daa/README.md"
+    ],
+    "contact_email_note": "The official pinned README was checked for a published contact email; none was found. No commit or profile metadata, third-party directory, or inferred address was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Catalog identity and roster locator",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[210], ordinal 211; name, slug, listed repository and explicit status",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/elastic-atlas.md",
+        "symbol": "Pinned curated identity and locator source only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/elastic-atlas.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Public repository page; main is the default branch and shows latest commit prefix d84f923",
+        "url": "https://github.com/noamschwartz/atlas-memory-demo"
+      },
+      {
+        "id": "head",
+        "label": "Official current main head",
+        "path": "commits/main API response",
+        "symbol": "Full SHA d84f9235a69d45a4fe326aaa691ad024699d0daa from official GitHub API",
+        "url": "https://api.github.com/repos/noamschwartz/atlas-memory-demo/commits/main"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Research demo description, architecture, memory types, hybrid retrieval, optional DLS, MCP surface; checked for contact email",
+        "url": "https://github.com/noamschwartz/atlas-memory-demo/blob/d84f9235a69d45a4fe326aaa691ad024699d0daa/README.md"
+      },
+      {
+        "id": "guide",
+        "label": "Pinned official Atlas guide",
+        "path": "ATLAS.md",
+        "symbol": "Index architecture, write/recall/forget contract, development MCP authentication boundary, retrieval and evaluation instructions",
+        "url": "https://github.com/noamschwartz/atlas-memory-demo/blob/d84f9235a69d45a4fe326aaa691ad024699d0daa/ATLAS.md"
+      },
+      {
+        "id": "ops",
+        "label": "Pinned memory operations",
+        "path": "backend/app/atlas/memory/operations.py",
+        "symbol": "write_memory, _user_or_catalog_filter, hybrid/RRF retrieval, recall_memory, forget_memory, list_memories and core memory paths",
+        "url": "https://github.com/noamschwartz/atlas-memory-demo/blob/d84f9235a69d45a4fe326aaa691ad024699d0daa/backend/app/atlas/memory/operations.py"
+      },
+      {
+        "id": "constants",
+        "label": "Pinned memory constants and index configuration",
+        "path": "backend/app/atlas/memory/constants.py",
+        "symbol": "Index names, inference IDs, retrieval over-fetch, decay/use boost, consolidation limits",
+        "url": "https://github.com/noamschwartz/atlas-memory-demo/blob/d84f9235a69d45a4fe326aaa691ad024699d0daa/backend/app/atlas/memory/constants.py"
+      },
+      {
+        "id": "state",
+        "label": "Pinned consolidation watermark",
+        "path": "backend/app/atlas/memory/state.py",
+        "symbol": "Per-user watermark, episodes_since/episodes_before, recoverable fallback behavior",
+        "url": "https://github.com/noamschwartz/atlas-memory-demo/blob/d84f9235a69d45a4fe326aaa691ad024699d0daa/backend/app/atlas/memory/state.py"
+      },
+      {
+        "id": "agent",
+        "label": "Pinned agent loop",
+        "path": "backend/app/atlas/agent.py",
+        "symbol": "Chat tool loop, episode write and automatic post-response consolidation",
+        "url": "https://github.com/noamschwartz/atlas-memory-demo/blob/d84f9235a69d45a4fe326aaa691ad024699d0daa/backend/app/atlas/agent.py"
+      },
+      {
+        "id": "tools",
+        "label": "Pinned tool definitions and dispatch",
+        "path": "backend/app/atlas/tools.py",
+        "symbol": "recall_memory/write_memory/forget_memory schemas and call dispatch",
+        "url": "https://github.com/noamschwartz/atlas-memory-demo/blob/d84f9235a69d45a4fe326aaa691ad024699d0daa/backend/app/atlas/tools.py"
+      },
+      {
+        "id": "consolidate",
+        "label": "Pinned consolidation implementation",
+        "path": "backend/app/atlas/consolidate.py",
+        "symbol": "Customer-source restriction, support episode IDs, episodic-to-semantic/procedural consolidation, outcomes and watermark advancement",
+        "url": "https://github.com/noamschwartz/atlas-memory-demo/blob/d84f9235a69d45a4fe326aaa691ad024699d0daa/backend/app/atlas/consolidate.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation metric definitions; not a measurement",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Evaluation workload definition; not run for this review",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Execution status reference, not a result for this system",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README calls Atlas a research demo, identifies Noam Schwartz in the license line, and describes a FastAPI app, frontend, Elasticsearch/Elastic Inference Service backend, and MCP integration. This review does not infer a hosted service or production deployment.",
+        "sources": [
+          "readme",
+          "guide"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The memory layer uses separate Elasticsearch indices for episodic, semantic, and procedural records, plus an optional shared catalog index. Constants name the Jina v5 embedding inference endpoint; the README describes semantic_text server-side embedding and the frontend/backend/Elastic Stack arrangement.",
+        "sources": [
+          "constants",
+          "readme",
+          "guide"
+        ]
+      },
+      {
+        "text": "Episodic records preserve user, role, text, event type, timestamps, session/agent identifiers and metadata. Semantic records add fact type, confidence, supporting episode IDs, validity dates, pending-outcome state, use statistics and optional supersession/retraction fields. Procedural records store triggers, steps, version and success/failure counts.",
+        "sources": [
+          "ops",
+          "tools",
+          "consolidate"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: write_memory assigns an ID and inserts a document into the type-specific index. Semantic writes may carry source episode IDs, confidence, validity fields, and supersession metadata; procedural writes store playbook steps and counters.",
+        "sources": [
+          "ops",
+          "tools"
+        ]
+      },
+      {
+        "text": "Update/consolidation: the chat loop writes customer messages as episodes and consolidates after the assistant reply. The consolidation prompt treats customer statements as the factual source, requires supporting IDs from recent episodes, and updates a per-user watermark after successful writes. It may use earlier episodes only as synthesis context. When the watermark index is unavailable, the source describes fallback to recent-window behavior.",
+        "sources": [
+          "agent",
+          "consolidate",
+          "state"
+        ]
+      },
+      {
+        "text": "Correction: semantic supersession retains the old record with superseded_by and superseded_at; harsh contradiction may mark it retracted while natural changes preserve prior-state history. Validity dates distinguish when a fact held in the world from when it was recorded. These fields do not prove correction accuracy.",
+        "sources": [
+          "ops",
+          "consolidate"
+        ]
+      },
+      {
+        "text": "Delete: the documented forget_memory operation removes one memory by ID and type and its implementation docstring describes an episodic tombstone event for audit. End-to-end erase completeness across backups, logs, replicas and downstream copies was not established.",
+        "sources": [
+          "guide",
+          "ops",
+          "tools"
+        ]
+      },
+      {
+        "text": "Retrieval: recall_memory uses BM25 plus Jina semantic search with RRF fusion, over-fetches candidates, and reranks them with Jina before returning top-k. Callers can select types, federate the shared catalog, request superseded facts for retrospective questions, and optionally update use statistics.",
+        "sources": [
+          "ops",
+          "constants",
+          "guide"
+        ]
+      },
+      {
+        "text": "Scope: user filters and shared catalog inclusion are implemented in the retrieval query. The filter helper becomes match_all if user_id is omitted. The guide says development MCP has no authentication and relies on the path user_id plus Elasticsearch filter; README describes optional DLS API keys. No cross-user tests were run.",
+        "sources": [
+          "ops",
+          "guide",
+          "readme"
+        ]
+      },
+      {
+        "text": "Provenance: semantic facts retain source_episodes, and consolidation requires IDs from supporting customer episodes. This supports trace-back to stored events but does not itself produce claim-level citations or guarantee source support in generated answers.",
+        "sources": [
+          "ops",
+          "consolidate"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: source includes server-side embedding, candidate over-fetch/reranking, time decay, use-count boosting, a per-user consolidation watermark, bounded consolidation context, and optional recall-stat updates. README describes an inspector for retrieved and written records. No workload metrics were collected.",
+        "sources": [
+          "constants",
+          "ops",
+          "state",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "The source APIs return ranked records and do not establish correct answers or calibrated abstention. No fixture cases were run or adjudicated.",
+        "sources": [
+          "ops",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Supersession, retraction and validity-time fields are visible in source, but no post-correction probes were run.",
+        "sources": [
+          "ops",
+          "consolidate",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage and completeness",
+        "status": "unmeasured",
+        "evidence": "A single-record forget/tombstone path is documented; no post-delete probes or cross-store erasure audit were performed.",
+        "sources": [
+          "ops",
+          "guide",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "User filters and optional DLS are implementation/documentation evidence. Caller identity can be omitted in the helper and development MCP is unauthenticated; no cross-scope workload was run.",
+        "sources": [
+          "ops",
+          "guide",
+          "readme",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Stored source episode identifiers provide provenance, but claim-level answer support and citation coverage were not evaluated.",
+        "sources": [
+          "ops",
+          "consolidate",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency, write-to-recall delay, tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "No Atlas workload, benchmark, or resource measurement was performed.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a selected read-only source review at verified main head d84f9235a69d45a4fe326aaa691ad024699d0daa. It does not establish runtime retrieval quality, model abstention, correction reliability, deletion completeness, effective authorization, large-corpus behavior, or performance.",
+        "sources": [
+          "repo",
+          "head",
+          "readme",
+          "guide",
+          "ops",
+          "metrics"
+        ]
+      },
+      {
+        "text": "The development MCP path is documented without authentication and uses a caller-supplied user identifier; deployment authorization must be established by the host. The source review did not test adversarial cross-user access.",
+        "sources": [
+          "guide",
+          "ops",
+          "readme"
+        ]
+      },
+      {
+        "text": "The implementation links semantic records to episode IDs, but no claim-level citation contract or evidence-support guarantee was established.",
+        "sources": [
+          "ops",
+          "consolidate"
+        ]
+      },
+      {
+        "text": "The project guide documents evaluation procedures, but none were executed. Source descriptions, project examples, and code paths are not measured benchmark outcomes.",
+        "sources": [
+          "guide",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Project benchmark status: not_run. Metric definitions, fixture cases, and the baseline execution-status record are linked for context only. No system, test, or benchmark was executed for this review.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      }
+    ]
+  }
+}

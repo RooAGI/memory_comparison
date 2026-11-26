@@ -1,0 +1,356 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "daem0n-mcp",
+    "name": "Daem0nMCP",
+    "ordinal": 179,
+    "repository": "https://github.com/9thLevelSoftware/Daem0n-MCP",
+    "listed_repository": "https://github.com/9thLevelSoftware/Daem0n-MCP",
+    "repository_status": "explicit",
+    "branch": "main",
+    "revision": "572d58ca7ec2fe2600665b44d2996d74f393e1cd",
+    "reviewed_at": "2026-11-25T10:29:16Z",
+    "review_timezone": "UTC (2026-11-25 02:29:16 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Daem0nMCP is a self-hostable MCP memory and decision-governance server. Its current v7 API routes opaque workspace-scoped calls through admission and covenant policy, stores semantic events with SQLite-backed canonical projections, and returns retrieval evidence with citation metadata. The README says v7 is not yet published.",
+    "atlas_locator": {
+      "ordinal": 179,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/daem0n-mcp.md",
+      "listed_repository": "https://github.com/9thLevelSoftware/Daem0n-MCP"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/9thLevelSoftware/Daem0n-MCP/blob/572d58ca7ec2fe2600665b44d2996d74f393e1cd/README.md",
+      "note": "No contact email was found in the checked official README."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/9thLevelSoftware/Daem0n-MCP/blob/572d58ca7ec2fe2600665b44d2996d74f393e1cd/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/9thLevelSoftware/Daem0n-MCP/blob/572d58ca7ec2fe2600665b44d2996d74f393e1cd/README.md"
+    ],
+    "contact_email_note": "Checked the official README at the reviewed head; it does not publish a contact email. No email was inferred from commit or profile metadata.",
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "Public repository; default branch main",
+        "url": "https://github.com/9thLevelSoftware/Daem0n-MCP"
+      },
+      {
+        "id": "history",
+        "label": "Official main branch history",
+        "path": "commits/main.atom",
+        "symbol": "Current main head 572d58ca7ec2fe2600665b44d2996d74f393e1cd; updated 2026-11-19T23:01:16Z",
+        "url": "https://github.com/9thLevelSoftware/Daem0n-MCP/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified full-SHA head commit",
+        "path": "commit",
+        "symbol": "Current main head 572d58ca7ec2fe2600665b44d2996d74f393e1cd",
+        "url": "https://github.com/9thLevelSoftware/Daem0n-MCP/commit/572d58ca7ec2fe2600665b44d2996d74f393e1cd"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "v7 MCP protocol, workspace configuration, storage and release status; checked for contact email",
+        "url": "https://github.com/9thLevelSoftware/Daem0n-MCP/blob/572d58ca7ec2fe2600665b44d2996d74f393e1cd/README.md"
+      },
+      {
+        "id": "operations",
+        "label": "V7 operations guide",
+        "path": "docs/v7-operations.md",
+        "symbol": "v7 tool surface and operational behavior",
+        "url": "https://github.com/9thLevelSoftware/Daem0n-MCP/blob/572d58ca7ec2fe2600665b44d2996d74f393e1cd/docs/v7-operations.md"
+      },
+      {
+        "id": "wire",
+        "label": "V7 wire models",
+        "path": "daem0nmcp/api/v7/models.py",
+        "symbol": "Typed record, evidence, citation, retrieval, and response models",
+        "url": "https://github.com/9thLevelSoftware/Daem0n-MCP/blob/572d58ca7ec2fe2600665b44d2996d74f393e1cd/daem0nmcp/api/v7/models.py"
+      },
+      {
+        "id": "application",
+        "label": "V7 application router",
+        "path": "daem0nmcp/api/v7/application.py",
+        "symbol": "Workspace resolution, request admission, covenant-gated dispatch",
+        "url": "https://github.com/9thLevelSoftware/Daem0n-MCP/blob/572d58ca7ec2fe2600665b44d2996d74f393e1cd/daem0nmcp/api/v7/application.py"
+      },
+      {
+        "id": "records",
+        "label": "V7 record operations",
+        "path": "daem0nmcp/api/v7/record_operations.py",
+        "symbol": "Canonical batch store, text search, file recall, pin/archive, bounded work",
+        "url": "https://github.com/9thLevelSoftware/Daem0n-MCP/blob/572d58ca7ec2fe2600665b44d2996d74f393e1cd/daem0nmcp/api/v7/record_operations.py"
+      },
+      {
+        "id": "events",
+        "label": "V7 event store",
+        "path": "daem0nmcp/event_store.py",
+        "symbol": "Semantic event envelope, append result, stream and hash metadata",
+        "url": "https://github.com/9thLevelSoftware/Daem0n-MCP/blob/572d58ca7ec2fe2600665b44d2996d74f393e1cd/daem0nmcp/event_store.py"
+      },
+      {
+        "id": "database",
+        "label": "V7 database manager",
+        "path": "daem0nmcp/database.py",
+        "symbol": "SQLite workspace database and format-7 generation management",
+        "url": "https://github.com/9thLevelSoftware/Daem0n-MCP/blob/572d58ca7ec2fe2600665b44d2996d74f393e1cd/daem0nmcp/database.py"
+      },
+      {
+        "id": "runtime",
+        "label": "V7 runtime services",
+        "path": "daem0nmcp/api/v7/runtime_services.py",
+        "symbol": "Workspace validation, active storage and runtime service composition",
+        "url": "https://github.com/9thLevelSoftware/Daem0n-MCP/blob/572d58ca7ec2fe2600665b44d2996d74f393e1cd/daem0nmcp/api/v7/runtime_services.py"
+      },
+      {
+        "id": "federation",
+        "label": "V7 federated retrieval",
+        "path": "daem0nmcp/api/v7/federated_retrieval.py",
+        "symbol": "Evidence filtering, citation manifest, token accounting, diagnostics and abstention",
+        "url": "https://github.com/9thLevelSoftware/Daem0n-MCP/blob/572d58ca7ec2fe2600665b44d2996d74f393e1cd/daem0nmcp/api/v7/federated_retrieval.py"
+      },
+      {
+        "id": "maintenance",
+        "label": "V7 maintenance operations",
+        "path": "daem0nmcp/api/v7/maintenance_operations.py",
+        "symbol": "Destructive and cleanup operation implementation",
+        "url": "https://github.com/9thLevelSoftware/Daem0n-MCP/blob/572d58ca7ec2fe2600665b44d2996d74f393e1cd/daem0nmcp/api/v7/maintenance_operations.py"
+      },
+      {
+        "id": "registry",
+        "label": "V7 tool registry",
+        "path": "daem0nmcp/api/v7/registry.py",
+        "symbol": "Current public tool registry and operation classifications",
+        "url": "https://github.com/9thLevelSoftware/Daem0n-MCP/blob/572d58ca7ec2fe2600665b44d2996d74f393e1cd/daem0nmcp/api/v7/registry.py"
+      },
+      {
+        "id": "catalog",
+        "label": "Project catalog",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 179 identity, slug, listed locator, roster repository_status and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster attribution",
+        "path": "content/systems/daem0n-mcp.md",
+        "symbol": "Curated identity/locator context only; not used as assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/daem0n-mcp.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Benchmark metric definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Reference workload fixture; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Separate execution-status record",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The public project is hosted by the 9thLevelSoftware GitHub organization. The README describes Daem0nMCP as an AI-agent memory and decision-governance server with stdio and Streamable HTTP MCP transports.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      },
+      {
+        "text": "The README states v7 is not yet published; this review describes current v7 source paths at the pinned head and treats older v6 passages as migration history.",
+        "sources": [
+          "readme",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The v7 code separates strict wire models, application routing/admission, workspace runtime resolution, operation handlers, the event store, and retrieval composition.",
+        "sources": [
+          "wire",
+          "application",
+          "runtime",
+          "records",
+          "events",
+          "federation"
+        ]
+      },
+      {
+        "text": "The server maintains workspace-local SQLite storage. Record operations describe memory_records as a canonical projection: semantic writes append through EventStore rather than mutating that projection directly. Projected record fields include type/content/hash, rationale/context/tags, relative file path, pin/archive state, outcome/worked state, scores, source client/model, source event ID, stream version, and timestamps.",
+        "sources": [
+          "readme",
+          "database",
+          "records"
+        ]
+      },
+      {
+        "text": "Event commands carry workspace and stream identity, event type, occurred/recorded times, actor, payload, optional causation/correlation IDs, schema version and expected stream version. Append results include event/payload hashes, stream version and previous-event hash.",
+        "sources": [
+          "events"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The memory_store_batch operation authorizes the workspace and passes records plus an idempotency key to the canonical batch writer. Projection scheduling follows successful writes.",
+        "sources": [
+          "records",
+          "application"
+        ]
+      },
+      {
+        "text": "Pin and archive changes are separate authorized operations and append memory.pin_set or memory.archive_set events; post-commit projection work is scheduled. This review did not trace all correction semantics.",
+        "sources": [
+          "records",
+          "events"
+        ]
+      },
+      {
+        "text": "The inspected record-operation mapping contains no per-record delete handler. The public v7 registry has separate destructive maintenance operations, including pruning and duplicate cleanup, but their full physical-erasure semantics were not traced; hard deletion remains unknown.",
+        "sources": [
+          "records",
+          "maintenance",
+          "registry"
+        ]
+      },
+      {
+        "text": "The public interface documents memory_recall, memory_search_text and file recall. The lexical path uses a bounded SQLite retrieval provider; the shared composer applies a token budget, emits citation-manifest entries and provider diagnostics, counts token usage, and can abstain when no policy-valid evidence remains.",
+        "sources": [
+          "readme",
+          "records",
+          "federation",
+          "wire"
+        ]
+      },
+      {
+        "text": "V7 routing resolves an opaque workspace ID to a server-managed workspace and applies request admission/covenant policy before operation dispatch. The README documents workspace grants and linked-workspace behavior; explicitly federated retrieval can cross local workspace boundaries. Isolation quality was not tested.",
+        "sources": [
+          "readme",
+          "application",
+          "runtime",
+          "federation"
+        ]
+      },
+      {
+        "text": "Event records retain actor/time/stream/correlation and hash metadata; projected records retain source client/model and source event IDs. Retrieval evidence includes references, channels and applicability, while a citation manifest maps rendered citations to those references. This is lineage support, not a measured guarantee that generated claims are supported.",
+        "sources": [
+          "events",
+          "records",
+          "wire",
+          "federation"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention — unmeasured. Retrieval and a no-policy-valid-evidence abstention path are implemented; no answer or abstention cases were adjudicated.",
+        "sources": [
+          "readme",
+          "federation",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured. Event appends and state-change events are source-visible; no correction workload was run.",
+        "sources": [
+          "events",
+          "records",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Deletion leakage — unmeasured. A per-record deletion path and the full physical-erasure behavior of maintenance operations were not established.",
+        "sources": [
+          "records",
+          "maintenance",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Scope-isolation leakage — unmeasured. Workspace resolution and grants are documented; no paired allowed/forbidden workspace workload was run.",
+        "sources": [
+          "readme",
+          "application",
+          "runtime",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Evidence support precision and citation coverage — unmeasured. Evidence references and citation manifests are present; no generated claims were scored.",
+        "sources": [
+          "wire",
+          "federation",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Retrieval latency and write-to-recall delay — unmeasured. No runtime timings were collected.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Tokens and cost — unmeasured. Retrieval tracks rendered token-budget usage, but no provider usage or charges were collected.",
+        "sources": [
+          "federation",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Storage efficiency — unmeasured. No workload-attributed logical or physical storage bytes were collected.",
+        "sources": [
+          "database",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Source-visible controls include batched writes, idempotency, bounded workers/candidate counts, a SQLite search timeout, post-commit projection scheduling, token accounting and provider diagnostics. These are code observations, not benchmark results.",
+        "sources": [
+          "records",
+          "federation"
+        ]
+      }
+    ],
+    "limits": [
+      "The review covers selected v7 API, event, database, retrieval and operations-guide sources at one pinned head; it does not trace every provider, projection worker, migration, federation policy, client integration or maintenance path.",
+      "The README says v7 is not yet published; packaged release behavior may differ from the reviewed source.",
+      "The event append/projection design is visible, but complete correction semantics, transaction recovery, and physical deletion across maintenance paths are not established.",
+      "Workspace authorization and evidence models are source observations. Security outcomes, retrieval quality and answer grounding were not measured.",
+      "No Daem0nMCP runtime, tests, or benchmark workload was executed."
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Daem0nMCP runtime, tests, or benchmark workload was executed. Source observations are not measurements.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

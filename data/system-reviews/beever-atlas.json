@@ -1,0 +1,410 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 90,
+    "slug": "beever-atlas",
+    "name": "Beever Atlas",
+    "repository": "https://github.com/Beever-AI/beever-atlas",
+    "listed_repository": "https://github.com/Beever-AI/beever-atlas",
+    "branch": "main",
+    "revision": "7d791af27ef4aa19644cb385c7ca24619bc4f848",
+    "reviewed_at": "2026-11-24T23:30:44Z",
+    "review_timezone": "UTC (checked 2026-11-24 15:30:44 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":"tech@beever.ai","source_url":"https://github.com/Beever-AI/beever-atlas/blob/7d791af27ef4aa19644cb385c7ca24619bc4f848/README.md","note":"Published in the official README for support, partnership, and press inquiries."},
+    "summary": "Beever Atlas distills team conversations into channel-scoped facts and graph relationships, then serves them through hybrid retrieval, a cited Q&A agent, a maintained wiki, and MCP. The review records source observations only; no runtime or benchmark results were measured.",
+    "atlas_locator": {
+      "ordinal": 90,
+      "name": "Beever Atlas",
+      "slug": "beever-atlas",
+      "listed_repository": "https://github.com/Beever-AI/beever-atlas",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/beever-atlas.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/beever-atlas.md"
+    },
+    "contact_email": "tech@beever.ai",
+    "contact_email_source_url": "https://github.com/Beever-AI/beever-atlas/blob/7d791af27ef4aa19644cb385c7ca24619bc4f848/README.md#community--contact",
+    "contact_email_checked_sources": [
+      "https://github.com/Beever-AI/beever-atlas/blob/7d791af27ef4aa19644cb385c7ca24619bc4f848/README.md#community--contact",
+      "https://github.com/Beever-AI/beever-atlas/blob/7d791af27ef4aa19644cb385c7ca24619bc4f848/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[89], ordinal 90; name, slug, listed repository, Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas source attribution only",
+        "path": "content/systems/beever-atlas.md",
+        "symbol": "Roster attribution at revision 19199a4fc249e89c0793be06f0b166b358089ba0",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/beever-atlas.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "",
+        "symbol": "Listed path responds as Beever-AI/beever-atlas",
+        "url": "https://github.com/Beever-AI/beever-atlas"
+      },
+      {
+        "id": "head_feed",
+        "label": "Official main branch commit feed",
+        "path": "",
+        "symbol": "Newest entry and current main head at review time",
+        "url": "https://github.com/Beever-AI/beever-atlas/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream head",
+        "path": "",
+        "symbol": "7d791af27ef4aa19644cb385c7ca24619bc4f848",
+        "url": "https://github.com/Beever-AI/beever-atlas/commit/7d791af27ef4aa19644cb385c7ca24619bc4f848"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Architecture, supported sources, deployment shape, product and contact statements",
+        "url": "https://github.com/Beever-AI/beever-atlas/blob/7d791af27ef4aa19644cb385c7ca24619bc4f848/README.md"
+      },
+      {
+        "id": "package-map",
+        "label": "Backend package map",
+        "path": "src/beever_atlas/README.md",
+        "symbol": "Backend package responsibilities",
+        "url": "https://github.com/Beever-AI/beever-atlas/blob/7d791af27ef4aa19644cb385c7ca24619bc4f848/src/beever_atlas/README.md"
+      },
+      {
+        "id": "domain",
+        "label": "AtomicFact and WikiCitation domain models",
+        "path": "src/beever_atlas/models/domain.py",
+        "symbol": "Fact provenance, temporal/supersession fields, and wiki citation schema",
+        "url": "https://github.com/Beever-AI/beever-atlas/blob/7d791af27ef4aa19644cb385c7ca24619bc4f848/src/beever_atlas/models/domain.py"
+      },
+      {
+        "id": "pipeline",
+        "label": "Ingestion workflow",
+        "path": "src/beever_atlas/agents/ingestion/pipeline.py",
+        "symbol": "Extraction, enrichment, join, and persistence workflow",
+        "url": "https://github.com/Beever-AI/beever-atlas/blob/7d791af27ef4aa19644cb385c7ca24619bc4f848/src/beever_atlas/agents/ingestion/pipeline.py"
+      },
+      {
+        "id": "persister",
+        "label": "Fact persistence",
+        "path": "src/beever_atlas/agents/ingestion/persister.py",
+        "symbol": "Message attribution and batch fact upserts",
+        "url": "https://github.com/Beever-AI/beever-atlas/blob/7d791af27ef4aa19644cb385c7ca24619bc4f848/src/beever_atlas/agents/ingestion/persister.py"
+      },
+      {
+        "id": "weaviate",
+        "label": "Weaviate semantic store",
+        "path": "src/beever_atlas/stores/weaviate_store.py",
+        "symbol": "Fact conversion, replacement upserts, hybrid/BM25 retrieval, channel deletion",
+        "url": "https://github.com/Beever-AI/beever-atlas/blob/7d791af27ef4aa19644cb385c7ca24619bc4f848/src/beever_atlas/stores/weaviate_store.py"
+      },
+      {
+        "id": "memory",
+        "label": "Memory retrieval capability",
+        "path": "src/beever_atlas/capabilities/memory.py",
+        "symbol": "Hybrid/BM25 fallback, scope, result fields, and MMR reranking",
+        "url": "https://github.com/Beever-AI/beever-atlas/blob/7d791af27ef4aa19644cb385c7ca24619bc4f848/src/beever_atlas/capabilities/memory.py"
+      },
+      {
+        "id": "access",
+        "label": "Channel access guard",
+        "path": "src/beever_atlas/infra/channel_access.py",
+        "symbol": "Principal, ownership, channel selection, bridge, and single-tenant checks",
+        "url": "https://github.com/Beever-AI/beever-atlas/blob/7d791af27ef4aa19644cb385c7ca24619bc4f848/src/beever_atlas/infra/channel_access.py"
+      },
+      {
+        "id": "mcp",
+        "label": "MCP retrieval contract",
+        "path": "src/beever_atlas/api/mcp_server/_tools_retrieval.py",
+        "symbol": "ask_channel modes, authentication, channel checks, citations, timeout",
+        "url": "https://github.com/Beever-AI/beever-atlas/blob/7d791af27ef4aa19644cb385c7ca24619bc4f848/src/beever_atlas/api/mcp_server/_tools_retrieval.py"
+      },
+      {
+        "id": "channel-api",
+        "label": "Channel reset and purge API",
+        "path": "src/beever_atlas/api/channels.py",
+        "symbol": "Reset versus hard-purge routes, destructive authorization, response outcomes",
+        "url": "https://github.com/Beever-AI/beever-atlas/blob/7d791af27ef4aa19644cb385c7ca24619bc4f848/src/beever_atlas/api/channels.py"
+      },
+      {
+        "id": "deletion",
+        "label": "Cross-store deletion service",
+        "path": "src/beever_atlas/services/channel_deletion.py",
+        "symbol": "Ordered deletion fan-out, isolated errors, retry/reaper behavior",
+        "url": "https://github.com/Beever-AI/beever-atlas/blob/7d791af27ef4aa19644cb385c7ca24619bc4f848/src/beever_atlas/services/channel_deletion.py"
+      },
+      {
+        "id": "citation-types",
+        "label": "Citation schema",
+        "path": "src/beever_atlas/agents/citations/types.py",
+        "symbol": "Source, CitationRef, and CitationEnvelope fields",
+        "url": "https://github.com/Beever-AI/beever-atlas/blob/7d791af27ef4aa19644cb385c7ca24619bc4f848/src/beever_atlas/agents/citations/types.py"
+      },
+      {
+        "id": "citation-registry",
+        "label": "Citation registry",
+        "path": "src/beever_atlas/agents/citations/registry.py",
+        "symbol": "Stable IDs, references, excerpts, permalink resolution, and finalization",
+        "url": "https://github.com/Beever-AI/beever-atlas/blob/7d791af27ef4aa19644cb385c7ca24619bc4f848/src/beever_atlas/agents/citations/registry.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Comparison metrics and source-versus-measurement policy",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Synthetic workload definition; planned cases only",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "not_run; no benchmark observations",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy checked for contact",
+        "path": "SECURITY.md",
+        "symbol": "Vulnerability reporting instructions; contact check",
+        "url": "https://github.com/Beever-AI/beever-atlas/blob/7d791af27ef4aa19644cb385c7ca24619bc4f848/SECURITY.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The project is published under the Beever-AI GitHub organization. The README identifies Beever.ai as the builder and presents Beever Atlas as a self-hostable team knowledge application with backend, bot, web, and MCP surfaces; the reviewed sources do not confirm a maintainer's personal identity.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The root README describes conversation ingestion into a semantic memory store with channel, topic, and atomic-fact tiers, alongside a graph of entities and relationships. The wiki and QA agent consume those stores; dashboard and MCP provide access. It names Weaviate, Neo4j, MongoDB, and Redis as backing stores.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The ADK workflow preprocesses messages, extracts facts and entities in parallel, then runs embedding and deterministic cross-batch validation in parallel before one joined persistence step. AtomicFact includes fact text, score, channel/platform, author/time, source message ID, thread, tags, links/media, validity and supersession fields, and contradiction metadata.",
+        "sources": [
+          "pipeline",
+          "domain"
+        ]
+      },
+      {
+        "text": "The persistence agent resolves fact attribution from source messages and batch-upserts enriched facts. Weaviate uses replacement-style upserts keyed by fact UUID and records the fact properties needed by retrieval and provenance.",
+        "sources": [
+          "persister",
+          "weaviate",
+          "domain"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Ingestion batches facts after enrichment. The store exposes UUID-keyed upsert operations; temporal invalidation and supersession fields are represented in the model, and default hybrid search filters out facts with invalid_at set.",
+        "sources": [
+          "pipeline",
+          "persister",
+          "weaviate",
+          "domain"
+        ]
+      },
+      {
+        "text": "Channel fact retrieval uses an embedding and native Weaviate BM25-plus-vector hybrid search, over-fetches up to 3× requested results capped at 30, and applies lightweight MMR reranking. If hybrid retrieval or embedding raises, the capability tries BM25-only search. Results carry message-level source metadata and identifiers.",
+        "sources": [
+          "memory",
+          "weaviate"
+        ]
+      },
+      {
+        "text": "The MCP ask_channel tool accepts quick, deep, and summarize modes, requires a caller principal, checks channel authorization, returns an answer with citations, and imposes a 90-second timeout. Retrieval tools are read-only.",
+        "sources": [
+          "mcp",
+          "access"
+        ]
+      },
+      {
+        "text": "Channel reset removes synced data while keeping the channel addressable. Full hard purge uses stricter destructive authorization and fans out across graph, Weaviate, QA history, wiki pages/cache, chat history, MongoDB, and media. Per-store errors produce a partial result and are retained for retry.",
+        "sources": [
+          "channel-api",
+          "deletion",
+          "weaviate"
+        ]
+      },
+      {
+        "text": "Read capabilities use principal-aware channel checks against connection ownership and selected-channel state. Single-tenant compatibility mode has broader user/MCP paths; bridge principals do not use that fallback. This records source behavior only, not a measured isolation guarantee.",
+        "sources": [
+          "access",
+          "memory",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Atomic facts preserve source message ID, author, timestamp, channel, platform, and optional thread/media/link context. WikiCitation records fact ID, excerpt, permalink, author, channel, and timestamp. The citation registry adds stable source IDs, retrieved-by metadata, answer marker mappings, and permalink resolution.",
+        "sources": [
+          "domain",
+          "citation-types",
+          "citation-registry"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "Hybrid semantic/BM25 retrieval, MMR reranking, and cited QA surfaces are source-visible. No answer-quality or abstention fixture was run.",
+        "sources": [
+          "memory",
+          "weaviate",
+          "mcp",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "The model stores valid_at, invalid_at, supersedes, and superseded_by; default hybrid retrieval excludes invalidated facts. No correction probes were run.",
+        "sources": [
+          "domain",
+          "weaviate",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Reset and hard purge cover multiple stores and expose partial errors; no post-delete probes or external-copy audit was run.",
+        "sources": [
+          "channel-api",
+          "deletion",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Capabilities and MCP query paths check principal access to channels, with compatibility behavior controlled by deployment mode. No forbidden-scope workload was run.",
+        "sources": [
+          "access",
+          "mcp",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Fact/wiki source metadata and typed citation envelopes are present; claim-level support was not adjudicated.",
+        "sources": [
+          "domain",
+          "citation-types",
+          "citation-registry",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Source shows embedding, Weaviate retrieval, capped candidate expansion, MMR, async ingestion, fallback logs, and registry counters; no latency or delay measurements were made.",
+        "sources": [
+          "pipeline",
+          "memory",
+          "weaviate",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "Architecture and query caps are source-visible, but no corpus-level storage, token usage, or provider charges were measured.",
+        "sources": [
+          "readme",
+          "memory",
+          "mcp",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded review inspected the root README, package map, and selected current ingestion, fact store, retrieval, authorization, channel deletion, and citation code. It did not inspect every platform adapter, wiki-generation path, or deployment configuration.",
+        "sources": [
+          "readme",
+          "package-map",
+          "pipeline",
+          "persister",
+          "weaviate",
+          "memory",
+          "access",
+          "deletion"
+        ]
+      },
+      {
+        "text": "Source inspection cannot establish retrieval quality, correction behavior on a realistic corpus, isolation under every configured tenancy mode, complete removal of external-provider copies or platform originals, latency, token use, cost, or storage efficiency. The purge service itself records per-store failures and partial outcomes.",
+        "sources": [
+          "access",
+          "deletion",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "README statements about low latency, cheaper inference, and answer quality are product claims. This review contains no runtime observations, adjudicated quality results, or measurements.",
+        "sources": [
+          "readme",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No Beever Atlas runtime, benchmark workload, or tests were run for this review.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "The project metric definitions and fixture specify a comparison protocol and synthetic cases. They are not Beever Atlas scores or measured outcomes.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ]
+  }
+}

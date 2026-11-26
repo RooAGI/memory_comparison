@@ -1,0 +1,334 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 253,
+    "slug": "generative-agents",
+    "name": "Generative Agents",
+    "repository": "https://github.com/joonspk-research/generative_agents",
+    "listed_repository": "https://github.com/joonspk-research/generative_agents",
+    "branch": "main",
+    "revision": "fe05a71d3e4ed7d10bf68aa4eda6dd995ec070f4",
+    "reviewed_at": "2026-11-25T20:52:01Z",
+    "review_timezone": "UTC (checked 2026-11-25 12:52:01 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Generative Agents is a research simulation whose personas keep JSON-backed associative memory streams of events, chats, and derived thoughts. Perception appends observations, retrieval ranks event/thought nodes, and reflection stores thoughts with supporting node IDs. This review describes inspected source, not measured memory quality or performance.",
+    "atlas_locator": {
+      "ordinal": 253,
+      "name": "Generative Agents",
+      "slug": "generative-agents",
+      "listed_repository": "https://github.com/joonspk-research/generative_agents",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/generative-agents.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/joonspk-research/generative_agents/blob/fe05a71d3e4ed7d10bf68aa4eda6dd995ec070f4/README.md",
+      "checked_urls": [
+        "https://github.com/joonspk-research/generative_agents/blob/fe05a71d3e4ed7d10bf68aa4eda6dd995ec070f4/README.md"
+      ],
+      "note": "Checked the official pinned README for a published contact email; none was found. No commit/profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/joonspk-research/generative_agents/blob/fe05a71d3e4ed7d10bf68aa4eda6dd995ec070f4/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/joonspk-research/generative_agents/blob/fe05a71d3e4ed7d10bf68aa4eda6dd995ec070f4/README.md"
+    ],
+    "contact_email_note": "Checked only the official pinned repository README for a published contact email. None was found.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[252], ordinal 253; roster identity, explicit listed locator, Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/generative-agents.md",
+        "symbol": "Pinned roster attribution; identity and locator context only, not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/generative-agents.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "",
+        "symbol": "Repository page reports main branch and latest commit fe05a71",
+        "url": "https://github.com/joonspk-research/generative_agents"
+      },
+      {
+        "id": "head",
+        "label": "Official current head commit",
+        "path": "",
+        "symbol": "Commit page identifies full SHA fe05a71d3e4ed7d10bf68aa4eda6dd995ec070f4",
+        "url": "https://github.com/joonspk-research/generative_agents/commit/fe05a71d3e4ed7d10bf68aa4eda6dd995ec070f4"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Research simulation overview, setup, persona simulation and save/replay instructions, authors",
+        "url": "https://github.com/joonspk-research/generative_agents/blob/fe05a71d3e4ed7d10bf68aa4eda6dd995ec070f4/README.md"
+      },
+      {
+        "id": "memory",
+        "label": "Associative memory implementation",
+        "path": "reverie/backend_server/persona/memory_structures/associative_memory.py",
+        "symbol": "ConceptNode and AssociativeMemory; JSON load/save, typed node lists, keyword maps, event/thought/chat insertion and lookup",
+        "url": "https://github.com/joonspk-research/generative_agents/blob/fe05a71d3e4ed7d10bf68aa4eda6dd995ec070f4/reverie/backend_server/persona/memory_structures/associative_memory.py"
+      },
+      {
+        "id": "retrieve",
+        "label": "Retrieval implementation",
+        "path": "reverie/backend_server/persona/cognitive_modules/retrieve.py",
+        "symbol": "New retrieval, recency/relevance/importance scores, normalization and top-n selection",
+        "url": "https://github.com/joonspk-research/generative_agents/blob/fe05a71d3e4ed7d10bf68aa4eda6dd995ec070f4/reverie/backend_server/persona/cognitive_modules/retrieve.py"
+      },
+      {
+        "id": "perceive",
+        "label": "Perception implementation",
+        "path": "reverie/backend_server/persona/cognitive_modules/perceive.py",
+        "symbol": "Spatial perception, bounded nearby-event selection, retention deduplication, event and chat writes",
+        "url": "https://github.com/joonspk-research/generative_agents/blob/fe05a71d3e4ed7d10bf68aa4eda6dd995ec070f4/reverie/backend_server/persona/cognitive_modules/perceive.py"
+      },
+      {
+        "id": "reflect",
+        "label": "Reflection implementation",
+        "path": "reverie/backend_server/persona/cognitive_modules/reflect.py",
+        "symbol": "Focal-point retrieval, LLM insight and evidence generation, thought writes, evidence node IDs, expiry",
+        "url": "https://github.com/joonspk-research/generative_agents/blob/fe05a71d3e4ed7d10bf68aa4eda6dd995ec070f4/reverie/backend_server/persona/cognitive_modules/reflect.py"
+      },
+      {
+        "id": "persona",
+        "label": "Persona lifecycle implementation",
+        "path": "reverie/backend_server/persona/persona.py",
+        "symbol": "Per-persona memory initialization, save paths, and cognitive step order",
+        "url": "https://github.com/joonspk-research/generative_agents/blob/fe05a71d3e4ed7d10bf68aa4eda6dd995ec070f4/reverie/backend_server/persona/persona.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Metric domains and definitions; not measured findings",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Benchmark workload definition; not a result",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Initial baseline status; this task did not run a system benchmark",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes the repository as the code accompanying the Generative Agents research paper. It provides a Django game environment and a separate simulation server, plus setup, save, and replay instructions.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Each Persona loads separate scratch, spatial, and associative memory from persona-specific bootstrap paths, executes a perceive/retrieve/plan/reflect/execute cycle, and saves state under its save folder.",
+        "sources": [
+          "persona"
+        ]
+      },
+      {
+        "text": "Associative memory represents event, thought, and chat ConceptNodes with temporal fields, SPO fields, descriptions, embeddings, poignancy, keywords, and a filling field. It maintains typed sequences, ID maps, keyword indexes, and JSON-backed embeddings/nodes/keyword strength state.",
+        "sources": [
+          "memory"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Perception collects nearby events, sorts by distance, limits them by attention bandwidth, and deduplicates against recent SPO triples; it appends newly perceived event nodes and chat nodes where applicable.",
+        "sources": [
+          "perceive",
+          "memory"
+        ]
+      },
+      {
+        "text": "Reflection chooses focal points, retrieves context, asks the prompt layer for insights with evidence indices, maps those indices to node IDs, and appends thought nodes with the evidence IDs in filling and a 30-day expiry.",
+        "sources": [
+          "reflect",
+          "memory"
+        ]
+      },
+      {
+        "text": "Retrieval uses keyword lookup for the planning path and a focal-point path that scans event/thought sequences, normalizes recency, relevance and importance, ranks with weights, selects up to 30 nodes by default, and updates last_accessed.",
+        "sources": [
+          "retrieve"
+        ]
+      },
+      {
+        "text": "No general correction, overwrite, or delete API was found in the inspected associative-memory paths. Expiration is represented on nodes, but its enforcement was not established by this review.",
+        "sources": [
+          "memory",
+          "retrieve"
+        ]
+      },
+      {
+        "text": "The inspected memory store is per persona by its initialization and save paths. This is a data-organization boundary, not a demonstrated hostile-process or deployed tenant isolation guarantee.",
+        "sources": [
+          "persona",
+          "memory"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "The code ranks candidates but no answerability or abstention workload was run.",
+        "sources": [
+          "retrieve",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "No correction interface was found in inspected memory paths and no correction sequence was measured.",
+        "sources": [
+          "memory",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leak rate",
+        "status": "unmeasured",
+        "evidence": "Expiration fields exist, but enforcement and deletion leakage were not tested.",
+        "sources": [
+          "memory",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Persona-specific memory paths were inspected; no isolation probes were run.",
+        "sources": [
+          "persona",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Reflection stores supporting node IDs, but generated thought support was not evaluated.",
+        "sources": [
+          "reflect",
+          "memory",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "The full-scan candidate-ranking path was inspected; no timing was collected.",
+        "sources": [
+          "retrieve",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Capture and recall paths exist, but no delay was measured.",
+        "sources": [
+          "perceive",
+          "retrieve",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "README reports simulation cost can be material with many agents; task-specific token or cost data were not collected.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "JSON and embedding persistence were inspected; storage use and growth were not measured.",
+        "sources": [
+          "memory",
+          "persona",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded source review at the verified main head. Runtime behavior, benchmark quality, and test results were not evaluated.",
+        "sources": [
+          "head",
+          "memory",
+          "retrieve"
+        ]
+      },
+      {
+        "text": "The inspected source does not establish expiration enforcement, general deletion, malformed-state behavior, or concurrent-access guarantees.",
+        "sources": [
+          "memory",
+          "reflect"
+        ]
+      },
+      {
+        "text": "Persona-specific directories indicate data organization but do not prove security isolation. The quality of retrieval or evidence support remains unmeasured.",
+        "sources": [
+          "persona",
+          "reflect",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "The official README warns that API rate limits can interrupt simulation and that multi-agent simulations may be costly. These are upstream documentation statements, not measurements from this review.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Generative Agents runtime, tests, or benchmarks were run. Project metrics and fixture are definitions only, not results."
+    }
+  }
+}

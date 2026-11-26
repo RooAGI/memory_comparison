@@ -1,0 +1,389 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 139,
+    "slug": "cogz",
+    "name": "CogZ",
+    "repository": "https://github.com/balaianu/CogZ",
+    "listed_repository": "https://github.com/balaianu/CogZ",
+    "branch": "master",
+    "revision": "83a5a19aad58063ade3b16fcfc2b19a01643791e",
+    "reviewed_at": "2026-11-25T08:45:00Z",
+    "review_timezone": "UTC (2026-11-25 00:45:00 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "CogZ is a local-first Rust memory and code-context system for software repositories. It stores observations, rules, and knowledge as Markdown files, indexes them in per-repository SQLite, and combines lexical, vector, and graph retrieval into scoped context packs. This is a source review at the verified master head; this review ran no system, tests, or benchmarks.",
+    "atlas_locator": {
+      "ordinal": 139,
+      "name": "CogZ",
+      "slug": "cogz",
+      "listed_repository": "https://github.com/balaianu/CogZ",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cogz.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/balaianu/CogZ/blob/83a5a19aad58063ade3b16fcfc2b19a01643791e/README.md",
+      "checked_urls": [
+        "https://github.com/balaianu/CogZ/blob/83a5a19aad58063ade3b16fcfc2b19a01643791e/README.md",
+        "https://github.com/balaianu/CogZ/blob/83a5a19aad58063ade3b16fcfc2b19a01643791e/SECURITY.md"
+      ],
+      "note": "Checked only the official pinned README and SECURITY.md for a published contact email. No contact email was published; SECURITY.md directs vulnerability reports to GitHub Security Advisories."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/balaianu/CogZ/blob/83a5a19aad58063ade3b16fcfc2b19a01643791e/README.md",
+      "https://github.com/balaianu/CogZ/blob/83a5a19aad58063ade3b16fcfc2b19a01643791e/SECURITY.md"
+    ],
+    "contact_email_note": "No email was found in the official pinned README or SECURITY.md. SECURITY.md provides a GitHub Security Advisories reporting path; no profile, commit metadata, or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[138], ordinal 139: CogZ, slug cogz, explicit listed repository locator, pinned Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/cogz.md",
+        "symbol": "Pinned attribution used only for curated name, slug, and listed locator; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cogz.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Public balaianu/CogZ page identifies master as default branch",
+        "url": "https://github.com/balaianu/CogZ"
+      },
+      {
+        "id": "feed",
+        "label": "Official master branch commit feed",
+        "path": "commits/master.atom",
+        "symbol": "Full current master head 83a5a19aad58063ade3b16fcfc2b19a01643791e; feed updated 2026-11-22T21:54:44Z",
+        "url": "https://github.com/balaianu/CogZ/commits/master.atom"
+      },
+      {
+        "id": "commit",
+        "label": "Official reviewed head",
+        "path": "commit/83a5a19aad58063ade3b16fcfc2b19a01643791e",
+        "symbol": "Official commit page for the verified full current head",
+        "url": "https://github.com/balaianu/CogZ/commit/83a5a19aad58063ade3b16fcfc2b19a01643791e"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "System purpose, memory kinds, local files and SQLite index, integration, requirements, published benchmark claims",
+        "url": "https://github.com/balaianu/CogZ/blob/83a5a19aad58063ade3b16fcfc2b19a01643791e/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Architecture design",
+        "path": "docs/design/architecture.md",
+        "symbol": "Module map, file-first write path, context assembly, storage and concurrency",
+        "url": "https://github.com/balaianu/CogZ/blob/83a5a19aad58063ade3b16fcfc2b19a01643791e/docs/design/architecture.md"
+      },
+      {
+        "id": "entity_model",
+        "label": "Entity model",
+        "path": "docs/design/entity-model.md",
+        "symbol": "Frontmatter, lifecycle status, provenance, update and pruning rules",
+        "url": "https://github.com/balaianu/CogZ/blob/83a5a19aad58063ade3b16fcfc2b19a01643791e/docs/design/entity-model.md"
+      },
+      {
+        "id": "search",
+        "label": "Search design",
+        "path": "docs/design/search.md",
+        "symbol": "Hybrid retrieval, fusion, graph expansion, silence gate, known limits",
+        "url": "https://github.com/balaianu/CogZ/blob/83a5a19aad58063ade3b16fcfc2b19a01643791e/docs/design/search.md"
+      },
+      {
+        "id": "degradation",
+        "label": "Degradation guide",
+        "path": "docs/design/degradation.md",
+        "symbol": "FTS-only mode and fallback behavior",
+        "url": "https://github.com/balaianu/CogZ/blob/83a5a19aad58063ade3b16fcfc2b19a01643791e/docs/design/degradation.md"
+      },
+      {
+        "id": "consolidation",
+        "label": "Consolidation design",
+        "path": "docs/design/consolidation.md",
+        "symbol": "Deduplication, contradiction checks, observation promotion and merge",
+        "url": "https://github.com/balaianu/CogZ/blob/83a5a19aad58063ade3b16fcfc2b19a01643791e/docs/design/consolidation.md"
+      },
+      {
+        "id": "write_tool",
+        "label": "MCP write handlers",
+        "path": "src/mcp/tools_write.rs",
+        "symbol": "Observation/rule/knowledge creation dispatch and input validation",
+        "url": "https://github.com/balaianu/CogZ/blob/83a5a19aad58063ade3b16fcfc2b19a01643791e/src/mcp/tools_write.rs"
+      },
+      {
+        "id": "update_code",
+        "label": "Knowledge update implementation",
+        "path": "src/mcp/update_knowledge.rs",
+        "symbol": "File update, sync, rollback, re-embedding and event recording",
+        "url": "https://github.com/balaianu/CogZ/blob/83a5a19aad58063ade3b16fcfc2b19a01643791e/src/mcp/update_knowledge.rs"
+      },
+      {
+        "id": "helpers",
+        "label": "MCP write helpers",
+        "path": "src/mcp/helpers.rs",
+        "symbol": "Atomic file writes and query/context response helpers",
+        "url": "https://github.com/balaianu/CogZ/blob/83a5a19aad58063ade3b16fcfc2b19a01643791e/src/mcp/helpers.rs"
+      },
+      {
+        "id": "prune_code",
+        "label": "Observation pruning implementation",
+        "path": "src/doctor/prune.rs",
+        "symbol": "Tombstone conversion, FTS/vector removal and bounded tombstone retention",
+        "url": "https://github.com/balaianu/CogZ/blob/83a5a19aad58063ade3b16fcfc2b19a01643791e/src/doctor/prune.rs"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Private vulnerability reports through GitHub Security Advisories; no email published",
+        "url": "https://github.com/balaianu/CogZ/blob/83a5a19aad58063ade3b16fcfc2b19a01643791e/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation domains and metric definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned planned benchmark cases; not executed for this review",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Project initial benchmark status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Existing project result/status record; no CogZ result was produced by this review",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": "The official README presents CogZ as a local-first Rust binary/library and MCP server for repository-specific engineering memory and code-aware context. It describes support for Claude Code, Cursor, Codex, Gemini CLI, GitHub Copilot, Devin, and MCP-compatible agents. The README names balaianu as the repository account, but this review does not infer maintainer identity beyond the official repository attribution.",
+    "architecture": [
+      {
+        "text": "Canonical records are Markdown files under each repository's .cogz/ directory; .cogz/cogz.db is a disposable SQLite index in WAL mode. FTS5 and sqlite-vec share the database. Tree-sitter creates code entities and structural edges; file entities describe observations, rules, and knowledge.",
+        "sources": [
+          "readme",
+          "architecture",
+          "entity_model"
+        ]
+      },
+      {
+        "text": "The file-backed model uses Markdown plus constrained YAML frontmatter with UUID, title, type, status, timestamps, references, and optional provenance/state fields. Code entities use deterministic IDs from normalized source paths and qualified names; generated code relationships are stored in the derived index.",
+        "sources": [
+          "entity_model",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The architecture separates storage/files, embedding, hybrid search, context assembly, indexing, consolidation, hooks, and MCP. A stateless stdio MCP call must name its target repository; the server resolves/caches per-repository state.",
+        "sources": [
+          "architecture",
+          "readme",
+          "write_tool"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: create_entity dispatches to observation, rule, or knowledge creation after type-specific validation. MCP writes create a file first, scan for secrets, sync it to SQLite, optionally embed it, and check duplicates/contradictions. The repository documentation describes manual Markdown editing and indexing as another ingestion path.",
+        "sources": [
+          "write_tool",
+          "helpers",
+          "architecture",
+          "consolidation"
+        ]
+      },
+      {
+        "text": "Update and correction: knowledge is the only file-backed type with in-place content edits; update_knowledge reads the existing item, writes the revised file, syncs only that file, restores the previous content if sync fails, then re-embeds and records an event. Observations are append-only for content; rules are changed by superseding and creating a new rule. verify re-stamps code provenance and is an attestation, not a truth check.",
+        "sources": [
+          "entity_model",
+          "update_code"
+        ]
+      },
+      {
+        "text": "Delete and retention: rejected or superseded observations can be explicitly pruned after the configured retention age. Pruning empties the canonical file and removes its FTS entry and embedding while preserving graph edges; the tombstone remains until bounded-retention cleanup removes old tombstones. Active/stale observations and rules/knowledge are not pruned by this path. This is lifecycle deletion, not proof of erasure from backups, Git history, or external copies.",
+        "sources": [
+          "entity_model",
+          "prune_code"
+        ]
+      },
+      {
+        "text": "Retrieval: search combines FTS5, separate code/knowledge vector indexes, graph-first retrieval and post-fusion graph expansion using reciprocal-rank fusion and ranking adjustments. Context assembly orders rules and other sections, removes duplicates, compresses the tail, fits a token budget, and lists dropped entities as pointers. Search responses can carry graph paths and answer-coverage signals.",
+        "sources": [
+          "search",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Scope isolation: data and the SQLite index are per checkout/repository, and the MCP server requires an explicit repo argument for each tool call. The reviewed design does not describe user/tenant authorization within one repository database; host permissions and selecting the correct repository remain deployment responsibilities.",
+        "sources": [
+          "architecture",
+          "readme",
+          "write_tool"
+        ]
+      },
+      {
+        "text": "Provenance and evidence: file frontmatter can record source, supporting observations, references, derived-from relationships, and verified code hashes. Search exposes curated graph paths and provenance-related ranking; domain events and delivery/access tracking provide operational traces. These mechanisms preserve lineage and context, but do not guarantee claim-level citations or that a generated answer is supported by its sources.",
+        "sources": [
+          "entity_model",
+          "search",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: local storage avoids a separate database service, FTS works without models, and model inference can be optional/lazy. Search uses batched graph/embedding operations; context packs enforce a token budget. CLI status/doctor, usage counters, domain events, and structured logs expose operational state. The README's performance/evaluation numbers are upstream-reported claims and are not measurements from this review.",
+        "sources": [
+          "readme",
+          "architecture",
+          "search",
+          "metrics"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Search has a configurable answer-coverage silence gate and reports coverage signals, but this task ran no adjudicated answerable/unanswerable queries.",
+        "sources": [
+          "search",
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Source paths include knowledge updates and code-drift demotion; no correction probes or stale-retrieval workload was run.",
+        "sources": [
+          "entity_model",
+          "update_code",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The prune path tombstones content and removes FTS/vector data while preserving edges; no post-prune or replica/history leakage check was performed.",
+        "sources": [
+          "prune_code",
+          "entity_model",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Per-repository databases and explicit repo parameters are visible in source/docs; no cross-repository or hostile caller isolation workload was run.",
+        "sources": [
+          "architecture",
+          "write_tool",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Lineage, graph paths, and answer-coverage signals exist, but no generated answer was adjudicated for claim support or citation correctness.",
+        "sources": [
+          "entity_model",
+          "search",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No latency timings or distributions were collected in this review.",
+        "sources": [
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timed write-then-correct-recall workload was run.",
+        "sources": [
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No token/provider usage or cost accounting was performed.",
+        "sources": [
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The local file/index architecture is documented, but no corpus size or per-record storage measurement was collected.",
+        "sources": [
+          "architecture",
+          "metrics"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected selected official README/design docs and current pinned write, update, and pruning implementations. It does not establish behavior for every MCP tool, hook, platform, model combination, error path, or repository configuration.",
+        "sources": [
+          "readme",
+          "architecture",
+          "write_tool",
+          "update_code",
+          "prune_code"
+        ]
+      },
+      {
+        "text": "Search documentation reports benchmark findings and known precision/negative-query limitations, but those are upstream reports rather than measurements reproduced in this review. No CogZ runtime, benchmark, or test was run.",
+        "sources": [
+          "readme",
+          "search",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "text": "The coverage-based silence gate cannot establish semantic answerability for all queries; the docs describe residual false opens and false silences. Graph expansion can add related but irrelevant items, and code/knowledge embeddings use incompatible models.",
+        "sources": [
+          "search"
+        ]
+      },
+      {
+        "text": "File-backed storage and per-repository databases provide a local boundary, but no in-database tenant authorization was established by this source review. Pruning does not establish complete deletion from Git history, backups, or consumer copies.",
+        "sources": [
+          "architecture",
+          "entity_model",
+          "prune_code"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No CogZ runtime, benchmark, or tests were run for this assessment. Source observations and upstream README benchmark claims are not project benchmark results."
+    }
+  }
+}

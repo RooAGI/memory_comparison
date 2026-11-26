@@ -1,0 +1,328 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "codex-dev-mcp-suite",
+    "name": "Dev MCP Suite",
+    "ordinal": 189,
+    "repository": "https://github.com/MaximaLabs/dev-mcp-suite",
+    "listed_repository": "https://github.com/verrysimatupang99/codex-dev-mcp-suite",
+    "branch": "master",
+    "revision": "6b69c5b5bb2db80e70814efaa3e9a3308bc54d14",
+    "reviewed_at": "2026-11-25T11:09:19Z",
+    "review_timezone": "UTC (2026-11-25 03:09:19 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Dev MCP Suite is a local-first collection of MCP servers for project notes, session journals, checkpoints, and context tooling. Its project-memory component stores Markdown notes and an index per caller-selected project directory, with keyword retrieval and optional local or configured remote embeddings. The suite provides file-based context workflows, not a measured memory-quality guarantee.",
+    "atlas_locator": {
+      "ordinal": 189,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/codex-dev-mcp-suite.md",
+      "listed_repository": "https://github.com/verrysimatupang99/codex-dev-mcp-suite"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/MaximaLabs/dev-mcp-suite/blob/6b69c5b5bb2db80e70814efaa3e9a3308bc54d14/README.md",
+      "note": "Checked the official repository README at the reviewed revision; it publishes no contact email."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/MaximaLabs/dev-mcp-suite/blob/6b69c5b5bb2db80e70814efaa3e9a3308bc54d14/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/MaximaLabs/dev-mcp-suite/blob/6b69c5b5bb2db80e70814efaa3e9a3308bc54d14/README.md"
+    ],
+    "contact_email_note": "No email was published in the official README at the reviewed revision. No commit, profile, or third-party metadata was used to infer contact details.",
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official canonical GitHub repository",
+        "path": "repository page",
+        "symbol": "Listed locator redirects to the public MaximaLabs/dev-mcp-suite repository",
+        "url": "https://github.com/MaximaLabs/dev-mcp-suite"
+      },
+      {
+        "id": "branches",
+        "label": "Official GitHub branches page",
+        "path": "branches",
+        "symbol": "GitHub marks master as the default branch",
+        "url": "https://github.com/MaximaLabs/dev-mcp-suite/branches"
+      },
+      {
+        "id": "head",
+        "label": "Official master commit Atom feed",
+        "path": "commits/master.atom",
+        "symbol": "Current master head 6b69c5b5bb2db80e70814efaa3e9a3308bc54d14; feed updated 2026-11-22T07:35:45Z",
+        "url": "https://github.com/MaximaLabs/dev-mcp-suite/commits/master.atom"
+      },
+      {
+        "id": "commit",
+        "label": "Official current head commit page",
+        "path": "commit",
+        "symbol": "Full head 6b69c5b5bb2db80e70814efaa3e9a3308bc54d14",
+        "url": "https://github.com/MaximaLabs/dev-mcp-suite/commit/6b69c5b5bb2db80e70814efaa3e9a3308bc54d14"
+      },
+      {
+        "id": "readme",
+        "label": "Official repository README",
+        "path": "README.md",
+        "symbol": "Suite components, project-memory capabilities, retrieval modes and advertised use",
+        "url": "https://github.com/MaximaLabs/dev-mcp-suite/blob/6b69c5b5bb2db80e70814efaa3e9a3308bc54d14/README.md"
+      },
+      {
+        "id": "privacy",
+        "label": "Official privacy and data flow documentation",
+        "path": "docs/privacy.md",
+        "symbol": "Local storage, optional external model endpoints and deterministic no-network mode",
+        "url": "https://github.com/MaximaLabs/dev-mcp-suite/blob/6b69c5b5bb2db80e70814efaa3e9a3308bc54d14/docs/privacy.md"
+      },
+      {
+        "id": "server",
+        "label": "Project-memory MCP server",
+        "path": "project-memory/server.js",
+        "symbol": "Vault path, project slug, note tool declarations and MCP integration",
+        "url": "https://github.com/MaximaLabs/dev-mcp-suite/blob/6b69c5b5bb2db80e70814efaa3e9a3308bc54d14/project-memory/server.js"
+      },
+      {
+        "id": "autoindex",
+        "label": "Project-memory auto-indexer",
+        "path": "project-memory/auto-indexer.js",
+        "symbol": "Git/session scanning, heuristic transcript extraction and generated note metadata",
+        "url": "https://github.com/MaximaLabs/dev-mcp-suite/blob/6b69c5b5bb2db80e70814efaa3e9a3308bc54d14/project-memory/auto-indexer.js"
+      },
+      {
+        "id": "graph",
+        "label": "Project-memory wiki-link graph",
+        "path": "project-memory/graph.js",
+        "symbol": "Wikilink parsing, alias/title resolution and backlinks",
+        "url": "https://github.com/MaximaLabs/dev-mcp-suite/blob/6b69c5b5bb2db80e70814efaa3e9a3308bc54d14/project-memory/graph.js"
+      },
+      {
+        "id": "global",
+        "label": "Project-memory global index",
+        "path": "project-memory/global-index.js",
+        "symbol": "Cross-project note enumeration and current-project ordering",
+        "url": "https://github.com/MaximaLabs/dev-mcp-suite/blob/6b69c5b5bb2db80e70814efaa3e9a3308bc54d14/project-memory/global-index.js"
+      },
+      {
+        "id": "embedding",
+        "label": "Project-memory embedding helper",
+        "path": "project-memory/embedding.js",
+        "symbol": "Optional remote/local embedding selection, deterministic mode and keyword fallback",
+        "url": "https://github.com/MaximaLabs/dev-mcp-suite/blob/6b69c5b5bb2db80e70814efaa3e9a3308bc54d14/project-memory/embedding.js"
+      },
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 189, name, slug, listed repository and roster attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster entry",
+        "path": "content/systems/codex-dev-mcp-suite.md",
+        "symbol": "Curated identity and listed-locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/codex-dev-mcp-suite.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Workload only; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "No measured result is recorded for this system",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents the suite as four core local MCP servers—project-memory, devjournal, checkpoint, and context-pack—with an optional Armada server. This review focuses on project-memory because it is the component that stores and retrieves notes; the other components cover handoffs, file snapshots, and context utilities.",
+        "sources": [
+          "readme",
+          "server"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The project-memory server is a Node.js stdio MCP service. Its source describes a local Markdown vault with one notes directory and index.json per project slug; the default vault root is ~/.ai-shared-memory/vault, overridable through MEMORY_VAULT_DIR. The project slug combines a sanitized directory basename with a short hash of the resolved directory path.",
+        "sources": [
+          "server"
+        ]
+      },
+      {
+        "text": "A note is a Markdown file with YAML frontmatter, while index.json holds note metadata and keyword-search material. The MCP surface includes memory_save, memory_recall, memory_list, memory_get, memory_delete, memory_reindex, graph/link tools, memory_global_recall, deduplication, and auto-indexing. Wiki links are parsed into edges and backlinks; title and alias links can be resolved within a project.",
+        "sources": [
+          "server",
+          "graph",
+          "readme"
+        ]
+      },
+      {
+        "text": "Retrieval can use keyword scoring, a local 384-dimensional term-frequency/hash embedding mode when enabled, or configured OpenAI-compatible/Cloudflare embedding endpoints; optional reranking can involve a model endpoint. The helper falls back to keyword retrieval when embeddings are unavailable or fail, and deterministic mode disables embeddings.",
+        "sources": [
+          "readme",
+          "embedding",
+          "privacy"
+        ]
+      },
+      {
+        "text": "GitHub identifies master as the default branch. Its official master feed reports 6b69c5b5bb2db80e70814efaa3e9a3308bc54d14 as the current head, updated 2026-11-22T07:35:45Z. Review recorded 2026-11-25T11:09:19Z UTC.",
+        "sources": [
+          "repo",
+          "branches",
+          "head",
+          "commit"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "memory_save accepts a title and Markdown content plus optional project directory, tags, kind, aliases, and a backdated created timestamp. The declared memory_delete operation removes a note by ID from the vault and index. The inspected MCP declaration has no dedicated update or correction operation; users can also work with the Markdown vault directly, but index synchronization after external edits was not established by this review.",
+        "sources": [
+          "server",
+          "readme"
+        ]
+      },
+      {
+        "text": "memory_recall accepts a query, optional project directory, result limit, full-body toggle, and auto/semantic/keyword mode. The README describes keyword fallback, optional semantic search, and optional LLM reranking. The global recall implementation enumerates project indexes, filters title/keyword matches, and orders current-project matches first; global recall therefore intentionally crosses project boundaries.",
+        "sources": [
+          "server",
+          "global",
+          "readme",
+          "embedding"
+        ]
+      },
+      {
+        "text": "The auto-indexer can inspect recent Git commits and search selected local session/log directories. It scans at most five recently modified candidate files and selects up to ten lines matching a fixed decision/architecture keyword set, then emits digest notes containing snippets, role labels, and relative file paths. This is heuristic extraction, not a verified claim/source pipeline; incorrect matches can become persistent notes.",
+        "sources": [
+          "autoindex",
+          "server"
+        ]
+      },
+      {
+        "text": "The official privacy guide says data stays local by default and there is no built-in telemetry or hosted backend. If remote embedding or reranking endpoints are configured, query text and candidate snippets may be sent to them. The guide offers a deterministic no-network mode that disables embeddings and reranking.",
+        "sources": [
+          "privacy",
+          "embedding"
+        ]
+      },
+      {
+        "text": "GitHub’s current canonical repository is MaximaLabs/dev-mcp-suite; the catalog’s listed locator is the prior owner URL and redirects to this canonical repository. The catalog row and pinned Atlas entry are used here only to identify ordinal 189 and retain its roster attribution.",
+        "sources": [
+          "catalog",
+          "atlas",
+          "repo"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable recall and abstention — unmeasured. The repository advertises note retrieval modes, but no fixed answerable/unanswerable workload was run.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured. A dedicated update/correction operation was not established from the inspected MCP surface, and no correction workload was run.",
+        "sources": [
+          "server",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Deletion leakage — unmeasured. A note deletion tool is declared, but no post-deletion probe or residual-data inspection was run.",
+        "sources": [
+          "server",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Scope isolation — unmeasured. Per-directory project paths are represented in the vault, but global recall deliberately crosses projects; no isolation workload was run.",
+        "sources": [
+          "server",
+          "global",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Evidence support precision and citation coverage — unmeasured. Auto-indexed notes preserve snippets and paths, but no answer citation scoring or source-support evaluation was performed.",
+        "sources": [
+          "autoindex",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Retrieval latency and write-to-recall delay — unmeasured. The README’s sub-millisecond local-search wording is a project claim, not a measurement in this review; no timing probe was run.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Token use and cost — unmeasured. Optional model providers exist, but this review collected no token usage or charges.",
+        "sources": [
+          "privacy",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Storage efficiency — unmeasured. Markdown and JSON files are the documented storage form; no corpus size or per-item storage measurement was collected.",
+        "sources": [
+          "server",
+          "privacy",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency and observability include local files, a keyword index, optional embedding/reindex paths, stats tooling, and deterministic mode. These are implementation/configuration observations, not measured performance or reliability results.",
+        "sources": [
+          "server",
+          "readme",
+          "privacy"
+        ]
+      }
+    ],
+    "limits": [
+      "This is a bounded review of the official README, privacy, project-memory server, auto-indexer, graph, global-index, and embedding sources at one verified master SHA; it did not inspect every suite server, provider adapter, or deployment.",
+      "The project-memory project slug is derived from a caller-provided directory argument (defaulting to the process working directory); no authenticated tenant or principal boundary was established. Global recall intentionally spans project indexes.",
+      "The README and server source give different default storage descriptions: docs/privacy.md describes paths under ~/.codex/memories, while the inspected server constant defaults to ~/.ai-shared-memory/vault. Deployment-specific configuration and whether the privacy document is stale were not tested.",
+      "The presence of note files and an index does not establish durability, transactional consistency, backup behavior, or successful deletion from all copies. No runtime was inspected.",
+      "Auto-indexing uses keyword heuristics over Git and session transcripts and can persist snippets without independent verification or a structured claim-level citation chain.",
+      "No Dev MCP Suite runtime, tests, or benchmarks were run. All benchmark metric domains remain unmeasured."
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Dev MCP Suite runtime, tests, or benchmark workload was executed. Source and documentation observations are not measurements.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

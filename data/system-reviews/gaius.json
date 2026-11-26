@@ -1,0 +1,361 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 250,
+    "slug": "gaius",
+    "name": "gaius",
+    "repository": "https://github.com/jkubo/gaius",
+    "branch": "main",
+    "revision": "76ff7c5422bbeddcb7101c5802242989a583f3ac",
+    "reviewed_at": "2026-11-25T20:37:29Z",
+    "review_timezone": "UTC (2026-11-25 12:37:29 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "A self-hosted memory lifecycle manager for coding agents. It extracts and records facts into a local SQLite corpus, ranks facts for injection and search, and supports review, decay, and optional semantic retrieval.",
+    "atlas_locator": {
+      "ordinal": 250,
+      "name": "gaius",
+      "slug": "gaius",
+      "listed_repository": "https://github.com/jkubo/gaius",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/gaius.md",
+      "revision": "520c2eb12627e2c7eb886999b5377a20ee31a7b8"
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/jkubo/gaius/blob/76ff7c5422bbeddcb7101c5802242989a583f3ac/README.md"
+    ],
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/jkubo/gaius/blob/76ff7c5422bbeddcb7101c5802242989a583f3ac/README.md",
+      "note": "The official README at the reviewed commit was checked for a published contact email; none was found. No email was inferred from package metadata, commit data, or profiles."
+    },
+    "who_what": [
+      {
+        "text": "The public repository describes gaius as an ops memory lifecycle manager for AI coding agents. It is a self-hosted Python package and CLI, with optional MCP and semantic-search extras; the README describes an offline SQLite core and integrations for agent session capture and context injection. This review addresses the checked-in implementation and docs, not a hosted service or deployment.",
+        "sources": [
+          "repo",
+          "head",
+          "readme",
+          "arch"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The core store is a local SQLite facts database. The schema includes facts, sessions, domains, entity records, temporal subject-predicate-object triples, and fact-to-entity links. Fact rows carry text, domain, timestamps, confirmation count, agents, sessions, provenance, score, source, confidence, review state, outcome, verification metadata, and tombstone fields. When sqlite-vec is available, the code creates a vector table; otherwise semantic lookup is optional and keyword retrieval remains available.",
+        "sources": [
+          "readme",
+          "facts",
+          "arch"
+        ]
+      },
+      {
+        "text": "The module map separates extraction and session parsing, fact storage and deduplication, human review, scoring, injection, embeddings, knowledge-graph indexing, telemetry, and the MCP server. `gaius inject` builds context from the stored corpus alongside memory and skill files; `gaius_search` exposes fact retrieval through MCP.",
+        "sources": [
+          "arch",
+          "landscape",
+          "mcp"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: session-retirement and ingest paths extract candidate facts and promote them to the corpus; the MCP `gaius_fact_add` tool also writes a fact directly through the shared upsert path. Upsert creates a live row or corroborates an exact fact key by updating last-seen time, confirmation count, and provenance-related agent, session, principal, and model-family lists. If sqlite-vec is present, a sufficiently similar fact can be corroborated instead of inserted; low-confidence or contradictory new facts are marked pending.",
+        "sources": [
+          "readme",
+          "facts",
+          "review",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Update and correction: repeated facts with the same key are corroborated rather than replacing their text. The review commands can confirm, reject, or defer a fact; reject marks it rejected and keeps its row, while defer schedules review later. The inspected fact lifecycle does not establish a general edit-in-place or versioned correction history, so correcting changed content depends on the capture and review workflow rather than a documented revision chain.",
+        "sources": [
+          "facts",
+          "review",
+          "arch"
+        ]
+      },
+      {
+        "text": "Delete and expiry: the inspected store has soft tombstones for duplicate-row cleanup, and the decay command can tombstone stale `live` facts when its TTL option is enabled. Rejected facts are retained but excluded by relevant retrieval predicates. The inspected public CLI and MCP paths did not establish a general permanent-delete or user-forget operation; tombstoning and rejection should not be read as physical erasure.",
+        "sources": [
+          "facts",
+          "review",
+          "maturity",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Retrieval: injection ranks corpus facts against the task or prompt using term-based TF-IDF/BM25-style scores, semantic similarity when available, recency/decay, and review-state weighting, then applies context budgets and deduplication. MCP search combines keyword and optional vector scores and returns ranked fact text, domain, score, and first/last-seen dates. The README documents chunked embeddings for long facts; source-visible ranking does not establish answer correctness or calibrated abstention.",
+        "sources": [
+          "readme",
+          "landscape",
+          "mcp",
+          "embed",
+          "maturity"
+        ]
+      },
+      {
+        "text": "Scope isolation: facts have a topic `domain`, and inject/search accept optional domain filters. The default session injection path does not inherently select an authorization scope, and the inspected fact schema and retrieval paths do not enforce user, tenant, or project ACLs on fact rows. The `sessions` table has a project field, but that alone is not an access boundary. No cross-user or cross-project leakage probe was run.",
+        "sources": [
+          "facts",
+          "landscape",
+          "mcp",
+          "arch"
+        ]
+      },
+      {
+        "text": "Provenance and evidence: fact rows retain agent, session, principal, model-family, source, and provenance labels, plus confidence, review/outcome state, and optional verification command/expected-value metadata. The knowledge graph stores source session, source agent, source fact ID, extraction time, confidence, and validity windows on triples. These are lineage and review signals; the inspected retrieval output does not provide claim-level source quotations or establish that a stored fact is true.",
+        "sources": [
+          "facts",
+          "review",
+          "readme",
+          "arch",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: the README and code describe an offline SQLite design, optional 384-dimensional vector embeddings, chunked long-fact embeddings, and an optional warm embedding daemon. Injection telemetry can record prompt and session identifiers, skip reasons, injected counts, token use, budget, and top cosine score; per-fact injection events preserve score and priority. These mechanisms support diagnostics but this review collected no runtime measurements.",
+        "sources": [
+          "readme",
+          "facts",
+          "embed",
+          "telemetry",
+          "landscape"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Retrieval mechanisms are present, but no adjudicated answerable-query recall or calibrated abstention workload was run.",
+        "sources": [
+          "landscape",
+          "mcp",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Upsert, review, decay, and tombstone code are inspectable, but no post-correction current-value or stale-result probe was run.",
+        "sources": [
+          "facts",
+          "review",
+          "maturity",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Rejection and selected soft-tombstone paths are visible, but no delete/forget or post-delete leakage workload was run.",
+        "sources": [
+          "review",
+          "facts",
+          "maturity",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Domain filters exist; no project, user, tenant, or cross-scope leakage probes were run.",
+        "sources": [
+          "facts",
+          "landscape",
+          "mcp",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Stored provenance and graph lineage are visible, but no fact-support adjudication or citation-coverage workload was run.",
+        "sources": [
+          "facts",
+          "review",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No retrieval latency distribution or write-to-recall timing measurement was collected.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, provider cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Injection telemetry contains token and budget fields, but no token totals, provider-cost totals, or corpus storage measurement were collected.",
+        "sources": [
+          "telemetry",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code/documentation",
+        "evidence": "The local SQLite/vector design, optional embedding daemon, budgeted injection, and telemetry fields are implementation/documentation observations only; they do not quantify efficiency.",
+        "sources": [
+          "readme",
+          "facts",
+          "embed",
+          "telemetry",
+          "landscape"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded read-only inspection of the current official README, architecture notes, and selected storage, write, review, retrieval, embedding, and telemetry source files at the verified repository head. The full product was not run; the review does not establish retrieval quality, safe correction, physical deletion, access isolation, performance, or production behavior.",
+        "sources": [
+          "readme",
+          "arch",
+          "facts",
+          "review",
+          "landscape",
+          "metrics"
+        ]
+      },
+      {
+        "text": "The upstream README includes benchmark and performance statements, but they were not reproduced or treated as this review's measurements. Atlas was used only to identify ordinal, name, slug, listed repository locator, and roster attribution; its assessment text was excluded as evidence.",
+        "sources": [
+          "readme",
+          "roster",
+          "repo"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is not_run. No gaius runtime, tests, or benchmarks were run. Project metric definitions, fixture, and result-status record are protocol/status references, not gaius measurements.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "roster",
+        "label": "Curated catalog identity, locator, and Atlas attribution",
+        "path": "../data/memory-systems.json",
+        "symbol": "systems[249], ordinal 250",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "repo",
+        "label": "Official gaius GitHub repository",
+        "path": "repository",
+        "symbol": "jkubo/gaius",
+        "url": "https://github.com/jkubo/gaius"
+      },
+      {
+        "id": "head",
+        "label": "Official Git remote head and default branch verification",
+        "path": "refs/heads/main",
+        "symbol": "main at full SHA 76ff7c5422bbeddcb7101c5802242989a583f3ac",
+        "url": "https://github.com/jkubo/gaius/commit/76ff7c5422bbeddcb7101c5802242989a583f3ac"
+      },
+      {
+        "id": "readme",
+        "label": "Official README at reviewed full commit",
+        "path": "README.md",
+        "url": "https://github.com/jkubo/gaius/blob/76ff7c5422bbeddcb7101c5802242989a583f3ac/README.md"
+      },
+      {
+        "id": "arch",
+        "label": "Package module architecture",
+        "path": "gaius/ARCHITECTURE.md",
+        "url": "https://github.com/jkubo/gaius/blob/76ff7c5422bbeddcb7101c5802242989a583f3ac/gaius/ARCHITECTURE.md"
+      },
+      {
+        "id": "facts",
+        "label": "SQLite schema, upsert, deduplication, and provenance fields",
+        "path": "gaius/facts.py",
+        "symbol": "init_db; _dedup_live_fact_keys; upsert_fact",
+        "url": "https://github.com/jkubo/gaius/blob/76ff7c5422bbeddcb7101c5802242989a583f3ac/gaius/facts.py"
+      },
+      {
+        "id": "review",
+        "label": "Fact review and verdict lifecycle",
+        "path": "gaius/review.py",
+        "symbol": "cmd_confirm; cmd_reject; cmd_defer; cmd_agent_review",
+        "url": "https://github.com/jkubo/gaius/blob/76ff7c5422bbeddcb7101c5802242989a583f3ac/gaius/review.py"
+      },
+      {
+        "id": "landscape",
+        "label": "Context injection, ranking, scope filter, and injection telemetry calls",
+        "path": "gaius/landscape.py",
+        "symbol": "cmd_inject",
+        "url": "https://github.com/jkubo/gaius/blob/76ff7c5422bbeddcb7101c5802242989a583f3ac/gaius/landscape.py"
+      },
+      {
+        "id": "mcp",
+        "label": "MCP search and fact-add operations",
+        "path": "gaius/mcp_server.py",
+        "symbol": "gaius_search; gaius_fact_add",
+        "url": "https://github.com/jkubo/gaius/blob/76ff7c5422bbeddcb7101c5802242989a583f3ac/gaius/mcp_server.py"
+      },
+      {
+        "id": "embed",
+        "label": "Text chunking and embeddings",
+        "path": "gaius/embed.py",
+        "symbol": "_chunk_text; _embed_text",
+        "url": "https://github.com/jkubo/gaius/blob/76ff7c5422bbeddcb7101c5802242989a583f3ac/gaius/embed.py"
+      },
+      {
+        "id": "maturity",
+        "label": "Confidence/review weighting and optional live-fact TTL tombstoning",
+        "path": "gaius/maturity.py",
+        "symbol": "REVIEW_STATE_WEIGHT; cmd_decay",
+        "url": "https://github.com/jkubo/gaius/blob/76ff7c5422bbeddcb7101c5802242989a583f3ac/gaius/maturity.py"
+      },
+      {
+        "id": "telemetry",
+        "label": "Prompt, injection, and tool telemetry schema",
+        "path": "gaius/telemetry.py",
+        "symbol": "prompt_events; injection_facts",
+        "url": "https://github.com/jkubo/gaius/blob/76ff7c5422bbeddcb7101c5802242989a583f3ac/gaius/telemetry.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project benchmark metric definitions",
+        "path": "../METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture protocol",
+        "path": "../fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "../results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ]
+  }
+}

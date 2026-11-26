@@ -1,0 +1,437 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 99,
+    "slug": "brain-mcp",
+    "name": "brain-mcp",
+    "repository": "https://github.com/mordechaipotash/brain-mcp",
+    "listed_repository": "https://github.com/mordechaipotash/brain-mcp",
+    "branch": "main",
+    "revision": "db1a175237cedbd26bb233c40210662d1175fc24",
+    "reviewed_at": "2026-11-24T23:56:09Z",
+    "review_timezone": "UTC (checked 2026-11-24 15:56:09 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/mordechaipotash/brain-mcp/blob/db1a175237cedbd26bb233c40210662d1175fc24/README.md","checked_urls":["https://github.com/mordechaipotash/brain-mcp/blob/db1a175237cedbd26bb233c40210662d1175fc24/README.md","https://github.com/mordechaipotash/brain-mcp/blob/db1a175237cedbd26bb233c40210662d1175fc24/SECURITY.md","https://github.com/mordechaipotash/brain-mcp/blob/db1a175237cedbd26bb233c40210662d1175fc24/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "brain-mcp is a local transcript recorder and MCP server that keeps an append-only byte floor with a re-derivable DuckDB BM25 index, returning line-and-hash citations or a scoped abstention. Source review only; no runtime or benchmark results were measured.",
+    "atlas_locator": {
+      "ordinal": 99,
+      "name": "brain-mcp",
+      "slug": "brain-mcp",
+      "listed_repository": "https://github.com/mordechaipotash/brain-mcp",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/brain-mcp.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/brain-mcp.md"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/mordechaipotash/brain-mcp/blob/db1a175237cedbd26bb233c40210662d1175fc24/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/mordechaipotash/brain-mcp/blob/db1a175237cedbd26bb233c40210662d1175fc24/README.md",
+      "https://brainmcp.dev/",
+      "https://github.com/mordechaipotash/brain-mcp/blob/db1a175237cedbd26bb233c40210662d1175fc24/SECURITY.md",
+      "https://github.com/mordechaipotash/brain-mcp/blob/db1a175237cedbd26bb233c40210662d1175fc24/SUPPORT.md"
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[98], ordinal 99: name, slug, listed repository and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas source attribution only",
+        "path": "content/systems/brain-mcp.md",
+        "symbol": "Roster attribution at revision 19199a4fc249e89c0793be06f0b166b358089ba0",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/brain-mcp.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "",
+        "symbol": "Repository identity and default branch main",
+        "url": "https://github.com/mordechaipotash/brain-mcp"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream head",
+        "path": "",
+        "symbol": "db1a175237cedbd26bb233c40210662d1175fc24",
+        "url": "https://github.com/mordechaipotash/brain-mcp/commit/db1a175237cedbd26bb233c40210662d1175fc24"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "",
+        "symbol": "Newest main entry at review time",
+        "url": "https://github.com/mordechaipotash/brain-mcp/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Product, architecture, supported sources, MCP tools and contact information",
+        "url": "https://github.com/mordechaipotash/brain-mcp/blob/db1a175237cedbd26bb233c40210662d1175fc24/README.md"
+      },
+      {
+        "id": "website",
+        "label": "Official project website",
+        "path": "",
+        "symbol": "Product details and contact-list check",
+        "url": "https://brainmcp.dev/"
+      },
+      {
+        "id": "paths",
+        "label": "Storage path layout",
+        "path": "brain_mcp/recorder/paths.py",
+        "symbol": "BRAIN_HOME, lake, manifest, database and directory layout",
+        "url": "https://github.com/mordechaipotash/brain-mcp/blob/db1a175237cedbd26bb233c40210662d1175fc24/brain_mcp/recorder/paths.py"
+      },
+      {
+        "id": "floor",
+        "label": "DuckDB floor schema",
+        "path": "brain_mcp/recorder/floor_db.py",
+        "symbol": "Durable metadata, line rows, witnesses, ingest offsets and default lanes",
+        "url": "https://github.com/mordechaipotash/brain-mcp/blob/db1a175237cedbd26bb233c40210662d1175fc24/brain_mcp/recorder/floor_db.py"
+      },
+      {
+        "id": "manifest",
+        "label": "Append-only manifest writer",
+        "path": "brain_mcp/recorder/manifest.py",
+        "symbol": "Versioned JSONL event append",
+        "url": "https://github.com/mordechaipotash/brain-mcp/blob/db1a175237cedbd26bb233c40210662d1175fc24/brain_mcp/recorder/manifest.py"
+      },
+      {
+        "id": "visit",
+        "label": "Capture and generation handling",
+        "path": "brain_mcp/recorder/visit.py",
+        "symbol": "Append order, complete-line handling, hashes, rewrite generations and cap",
+        "url": "https://github.com/mordechaipotash/brain-mcp/blob/db1a175237cedbd26bb233c40210662d1175fc24/brain_mcp/recorder/visit.py"
+      },
+      {
+        "id": "scanner",
+        "label": "Poll scanner",
+        "path": "brain_mcp/recorder/scanner.py",
+        "symbol": "Lane scan, session keys, unchanged-file fast path and error census",
+        "url": "https://github.com/mordechaipotash/brain-mcp/blob/db1a175237cedbd26bb233c40210662d1175fc24/brain_mcp/recorder/scanner.py"
+      },
+      {
+        "id": "derived",
+        "label": "Derived views and FTS",
+        "path": "brain_mcp/recorder/derived.py",
+        "symbol": "Agent-specific parsing, scope filters, current-generation view and BM25 retrieval",
+        "url": "https://github.com/mordechaipotash/brain-mcp/blob/db1a175237cedbd26bb233c40210662d1175fc24/brain_mcp/recorder/derived.py"
+      },
+      {
+        "id": "api",
+        "label": "Recorder API",
+        "path": "brain_mcp/recorder/api.py",
+        "symbol": "Search, coverage, citations, health, receipt, restore and backup behavior",
+        "url": "https://github.com/mordechaipotash/brain-mcp/blob/db1a175237cedbd26bb233c40210662d1175fc24/brain_mcp/recorder/api.py"
+      },
+      {
+        "id": "server",
+        "label": "MCP server",
+        "path": "brain_mcp/recorder/server.py",
+        "symbol": "Seven read/backup tool interfaces and retrieval instructions",
+        "url": "https://github.com/mordechaipotash/brain-mcp/blob/db1a175237cedbd26bb233c40210662d1175fc24/brain_mcp/recorder/server.py"
+      },
+      {
+        "id": "cli",
+        "label": "CLI operations",
+        "path": "brain_mcp/recorder/cli.py",
+        "symbol": "Redaction, refresh and restore operations",
+        "url": "https://github.com/mordechaipotash/brain-mcp/blob/db1a175237cedbd26bb233c40210662d1175fc24/brain_mcp/recorder/cli.py"
+      },
+      {
+        "id": "hooks",
+        "label": "Claude Code hook configuration",
+        "path": "plugin/hooks/hooks.json",
+        "symbol": "Stop and SessionEnd event hooks",
+        "url": "https://github.com/mordechaipotash/brain-mcp/blob/db1a175237cedbd26bb233c40210662d1175fc24/plugin/hooks/hooks.json"
+      },
+      {
+        "id": "stream",
+        "label": "Claude Code hook stream script",
+        "path": "plugin/scripts/brain-stream-on-turn.sh",
+        "symbol": "Hook delta capture script",
+        "url": "https://github.com/mordechaipotash/brain-mcp/blob/db1a175237cedbd26bb233c40210662d1175fc24/plugin/scripts/brain-stream-on-turn.sh"
+      },
+      {
+        "id": "telemetry",
+        "label": "Telemetry shim",
+        "path": "brain_mcp/telemetry.py",
+        "symbol": "No-op telemetry functions in reviewed revision",
+        "url": "https://github.com/mordechaipotash/brain-mcp/blob/db1a175237cedbd26bb233c40210662d1175fc24/brain_mcp/telemetry.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Comparison metric domains; no system-specific results",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned benchmark protocol fixture; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Current shared execution status, not a brain-mcp result",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "security",
+        "label": "Official SECURITY.md contact check",
+        "path": "SECURITY.md",
+        "symbol": "Absent at reviewed revision; checked official URL",
+        "url": "https://github.com/mordechaipotash/brain-mcp/blob/db1a175237cedbd26bb233c40210662d1175fc24/SECURITY.md"
+      },
+      {
+        "id": "support",
+        "label": "Official SUPPORT.md contact check",
+        "path": "SUPPORT.md",
+        "symbol": "Absent at reviewed revision; checked official URL",
+        "url": "https://github.com/mordechaipotash/brain-mcp/blob/db1a175237cedbd26bb233c40210662d1175fc24/SUPPORT.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The repository is published under the GitHub account mordechaipotash. The README names brainmcp.dev and presents the project as a local-first Python recorder, CLI, scheduled capture process, and stdio MCP server for Claude Code, Codex, and Pi. The inspected official sources do not establish a separate maintainer identity.",
+        "sources": [
+          "repo",
+          "readme",
+          "website"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "BRAIN_HOME separates spool, lake files, a versioned JSONL manifest, offsets, health heartbeats, and brain.duckdb. Lake bytes and manifest are the durable record; DuckDB stores floor metadata and a derived search index. Raw-line rows keep file identity, generation, byte offset, line number, original-line SHA, capture time, event time, and lane.",
+        "sources": [
+          "paths",
+          "floor",
+          "manifest"
+        ]
+      },
+      {
+        "text": "Claude Code uses Stop and SessionEnd hooks with the scanner as backstop; Codex and Pi use polling, and a session-folder lane captures related transcripts and files. Capture appends complete lines to the lake before adding manifest provenance and updating DuckDB. Derived dialect views normalize messages into one searchable table.",
+        "sources": [
+          "readme",
+          "hooks",
+          "stream",
+          "scanner",
+          "visit",
+          "manifest",
+          "derived"
+        ]
+      },
+      {
+        "text": "The MCP wrapper exposes seven tools for search, get, recent, sessions, health, capture status, and backup. The API layer performs BM25 retrieval, renders abstentions and citations, checks freshness, and verifies lake spans.",
+        "sources": [
+          "server",
+          "api"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Capture appends complete transcript lines and leaves an incomplete trailing fragment for a later pass. It hashes each chunk and records origin path, lane, session, generation, source mechanism, and capture time. Changed or truncated origins start a new generation while older bytes remain; repeated rewrites are capped at five generations per 24 hours.",
+        "sources": [
+          "visit",
+          "manifest",
+          "floor"
+        ]
+      },
+      {
+        "text": "There is no MCP write, update, or delete tool. The CLI redact command replaces selected lake lines with markers and records the old span hash and reason; a later record pass rebuilds derived data. Earlier backups can retain original bytes, and retained generations are not erased.",
+        "sources": [
+          "server",
+          "cli",
+          "manifest",
+          "derived"
+        ]
+      },
+      {
+        "text": "Search uses DuckDB FTS BM25 with a rank threshold and optional agent, role, date, and order filters. Machine-injected user text and subagent transcripts are excluded by default, with opt-ins. Zero hits produce an abstention with searched coverage and explain that absence applies only to the searched scope.",
+        "sources": [
+          "derived",
+          "api",
+          "server"
+        ]
+      },
+      {
+        "text": "Each hit returns a lake file, line span, and SHA-256. brain_get reads the raw lines, recomputes the span hash, and reports a mismatch without repair. Recent activity and session listing are separate read tools.",
+        "sources": [
+          "api",
+          "server"
+        ]
+      },
+      {
+        "text": "The default store is one local BRAIN_HOME. Search filters can select agent, role, and event-time range, but the reviewed query contract has no project, tenant, or caller-identity constraint. These filters do not establish tenant isolation.",
+        "sources": [
+          "paths",
+          "floor",
+          "derived",
+          "server"
+        ]
+      },
+      {
+        "text": "Manifest entries preserve capture chunk byte and line ranges, source and origin path, generation, time, and SHA-256. Citations point to retained floor bytes that can be independently checked. This is a byte-level chain to captured text, not an assessment of truth or claim-level support.",
+        "sources": [
+          "visit",
+          "manifest",
+          "api"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "BM25 has rank thresholding and explicit zero-hit abstention with coverage. No answer-quality or abstention workload was measured.",
+        "sources": [
+          "derived",
+          "api",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and staleness",
+        "status": "unmeasured",
+        "evidence": "Changed origins open retained generations and derived views select current-generation rows. No stale-answer or correction probe was run.",
+        "sources": [
+          "visit",
+          "derived",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "CLI redaction rewrites floor lines; a later index rebuild is separate and old backups or generations may retain prior bytes. No post-redaction search or backup audit was run.",
+        "sources": [
+          "cli",
+          "visit",
+          "derived",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Agent, role, and time predicates are visible; no project or tenant predicate was found. No forbidden-scope workload was run.",
+        "sources": [
+          "derived",
+          "server",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Results carry file, line, and hash citations with a verification API. Claim-level support was not adjudicated.",
+        "sources": [
+          "api",
+          "server",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Hook capture, polling, index refresh, and FTS query paths are visible. No timings were collected.",
+        "sources": [
+          "hooks",
+          "scanner",
+          "derived",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "The local lake and DuckDB layout is source-visible. No token, provider charge, or corpus storage measurement was made.",
+        "sources": [
+          "paths",
+          "floor",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review covers selected storage, capture, search, health, citation, and redaction paths at one revision. It does not establish answer quality, abstention calibration, classification correctness, capture completeness, recovery under failures, manifest tamper resistance, or multi-user isolation.",
+        "sources": [
+          "readme",
+          "visit",
+          "api",
+          "manifest"
+        ]
+      },
+      {
+        "text": "The inspected implementation is local-first and supports selected transcript formats. No project or tenant isolation predicate was found. The README identifies Windows as out of scope.",
+        "sources": [
+          "readme",
+          "derived",
+          "server"
+        ]
+      },
+      {
+        "text": "Redaction is not complete erasure: the derived index refresh is separate, old generations are retained, and prior backups may contain original bytes. Operational purge of every copy was not verified.",
+        "sources": [
+          "cli",
+          "visit",
+          "derived"
+        ]
+      },
+      {
+        "text": "Official contact sources checked were the README, project website, and repository SECURITY.md and SUPPORT.md locations. No published email was found; the two policy files are absent at the reviewed revision.",
+        "sources": [
+          "readme",
+          "website",
+          "security",
+          "support"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No brain-mcp runtime, benchmark workload, or tests were run for this review.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "The project metric definitions and fixture define future measurement targets; they are protocol documents, not brain-mcp scores or results.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ]
+  }
+}

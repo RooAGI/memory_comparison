@@ -1,0 +1,333 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "aimaos",
+    "name": "AIMAOS",
+    "repository": "https://github.com/munch2u-a11y/AIMAOS",
+    "branch": "main",
+    "revision": "0d8c58c2bee5addc72a13c5c95839635d809b5b0",
+    "reviewed_at": "2026-11-24T20:09:46Z",
+    "review_timezone": "UTC (2026-11-24 12:09:46 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/munch2u-a11y/AIMAOS/blob/0d8c58c2bee5addc72a13c5c95839635d809b5b0/README.md","checked_urls":["https://github.com/munch2u-a11y/AIMAOS/blob/0d8c58c2bee5addc72a13c5c95839635d809b5b0/README.md","https://github.com/munch2u-a11y/AIMAOS/blob/0d8c58c2bee5addc72a13c5c95839635d809b5b0/SECURITY.md","https://github.com/munch2u-a11y/AIMAOS/blob/0d8c58c2bee5addc72a13c5c95839635d809b5b0/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "AIMAOS is a local-first, single-operator multi-agent office workstation. Its per-agent mRAG stores keep raw conversation chunks and derived categorized beliefs in local JSON files, then inject a bounded selection into the agent prompt. This review records pinned-source observations; no runtime or benchmark measurements were collected.",
+    "atlas_locator": {
+      "ordinal": 43,
+      "name": "AIMAOS",
+      "slug": "aimaos",
+      "listed_repository": "https://github.com/munch2u-a11y/AIMAOS",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/aimaos.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/munch2u-a11y/AIMAOS/blob/0d8c58c2bee5addc72a13c5c95839635d809b5b0/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/munch2u-a11y/AIMAOS/blob/0d8c58c2bee5addc72a13c5c95839635d809b5b0/README.md",
+      "https://github.com/munch2u-a11y/AIMAOS/blob/0d8c58c2bee5addc72a13c5c95839635d809b5b0/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical repository and default branch",
+        "path": "repository",
+        "symbol": "public repository; default branch main",
+        "url": "https://github.com/munch2u-a11y/AIMAOS"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed current main head",
+        "path": "commit",
+        "symbol": "full SHA 0d8c58c2bee5addc72a13c5c95839635d809b5b0",
+        "url": "https://github.com/munch2u-a11y/AIMAOS/commit/0d8c58c2bee5addc72a13c5c95839635d809b5b0"
+      },
+      {
+        "id": "feed",
+        "label": "Official current main commits feed",
+        "path": "commits/main.atom",
+        "symbol": "head commit and update timestamp",
+        "url": "https://github.com/munch2u-a11y/AIMAOS/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "url": "https://github.com/munch2u-a11y/AIMAOS/blob/0d8c58c2bee5addc72a13c5c95839635d809b5b0/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy; contact check",
+        "path": "SECURITY.md",
+        "symbol": "reporting policy; no published contact email",
+        "url": "https://github.com/munch2u-a11y/AIMAOS/blob/0d8c58c2bee5addc72a13c5c95839635d809b5b0/SECURITY.md"
+      },
+      {
+        "id": "agent",
+        "label": "OfficeAgent integration and private mRAG path",
+        "path": "core/office_agent.py",
+        "symbol": "per-agent workspace, prompt injection, experience, reflection",
+        "url": "https://github.com/munch2u-a11y/AIMAOS/blob/0d8c58c2bee5addc72a13c5c95839635d809b5b0/core/office_agent.py"
+      },
+      {
+        "id": "belief-snapshot",
+        "label": "Legacy/shared belief snapshot store",
+        "path": "core/mrag_beliefs.py",
+        "symbol": "AgentBeliefStore",
+        "url": "https://github.com/munch2u-a11y/AIMAOS/blob/0d8c58c2bee5addc72a13c5c95839635d809b5b0/core/mrag_beliefs.py"
+      },
+      {
+        "id": "belief-store",
+        "label": "Categorized belief persistence and mutations",
+        "path": "core/mrag/memory/belief_store.py",
+        "symbol": "BeliefStore; add_belief; merge_or_add_belief; remove_belief",
+        "url": "https://github.com/munch2u-a11y/AIMAOS/blob/0d8c58c2bee5addc72a13c5c95839635d809b5b0/core/mrag/memory/belief_store.py"
+      },
+      {
+        "id": "ingestor",
+        "label": "Raw conversation ingestion",
+        "path": "core/mrag/core/memory_ingestor.py",
+        "symbol": "chunk_text; MemoryIngestor.add_event",
+        "url": "https://github.com/munch2u-a11y/AIMAOS/blob/0d8c58c2bee5addc72a13c5c95839635d809b5b0/core/mrag/core/memory_ingestor.py"
+      },
+      {
+        "id": "injector",
+        "label": "Pre-generation retrieval and context injection",
+        "path": "core/mrag/core/pre_generative_injection.py",
+        "symbol": "PreGenerativeInjector._pull_relevant_beliefs",
+        "url": "https://github.com/munch2u-a11y/AIMAOS/blob/0d8c58c2bee5addc72a13c5c95839635d809b5b0/core/mrag/core/pre_generative_injection.py"
+      },
+      {
+        "id": "vectors",
+        "label": "Vector backend adapters",
+        "path": "core/mrag/core/vector_store.py",
+        "symbol": "DummyVectorStore; ChromaVectorStore; PineconeVectorStore",
+        "url": "https://github.com/munch2u-a11y/AIMAOS/blob/0d8c58c2bee5addc72a13c5c95839635d809b5b0/core/mrag/core/vector_store.py"
+      },
+      {
+        "id": "consolidator",
+        "label": "Belief extraction and consolidation",
+        "path": "core/mrag/core/belief_consolidator.py",
+        "symbol": "BeliefConsolidator; nightly review",
+        "url": "https://github.com/munch2u-a11y/AIMAOS/blob/0d8c58c2bee5addc72a13c5c95839635d809b5b0/core/mrag/core/belief_consolidator.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Versioned project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../../results/initial-baselines-status.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog ordinal, locator, and attribution only",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 43; AIMAOS / aimaos",
+        "url": "../../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository presents AIMAOS as a local-first office workstation for coordinating specialized agents, documents, and review tasks. It describes the public beta as a single-operator Linux deployment, not a hosted memory service. The repository documentation does not establish an individual maintainer identity for this review.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The shared OfficeAgent kernel gives each roster agent a workspace named from its agent identity and connects it to a private mRAG belief store. The agent prompt uses an identity belief and can append task-relevant recalled context before calling its model. A separate AgentBeliefStore keeps a compatibility snapshot in the office comms directory; it is a shared summary path, distinct from each agent's categorized belief data.",
+        "sources": [
+          "agent",
+          "belief-snapshot",
+          "readme"
+        ]
+      },
+      {
+        "text": "BeliefStore persists eight category files (including premises, propositions, preferences, people, skills, concepts, and raw memory) under the agent's data directory. A belief record includes an ID, text, confidence, source string, created/last-accessed timestamps, access and verification counters, stability, relations, memory references, and derived tags/relevance. Loading the store builds an in-memory ID cache, reverse-relation index, and phrasing-template index.",
+        "sources": [
+          "belief-store"
+        ]
+      },
+      {
+        "text": "MemoryIngestor chunks raw text into approximately 100-token pieces, keeps source type and session/turn metadata, and derives event/chunk identifiers from content. This write path is documented in its module as text-only ingestion without an LLM; a later consolidator interprets chunks into beliefs. JSON category files are the durable record; optional vector backends index embeddings for retrieval.",
+        "sources": [
+          "ingestor",
+          "consolidator",
+          "vectors",
+          "belief-store"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: `add_belief` rejects an existing ID within the category, timestamps a new row, normalizes confidence and stores relation and memory-reference fields, then persists the category JSON. Raw conversation ingestion uses chunking and deterministic IDs before adding rows to the `memory` category. The README also describes recording completed work and errors as redacted experiences and periodically reflecting over recent experiences.",
+        "sources": [
+          "belief-store",
+          "ingestor",
+          "agent",
+          "readme"
+        ]
+      },
+      {
+        "text": "Update and correction: `merge_or_add_belief` first checks the belief ID, then a phrasing skeleton for changed salient values, then an optional same-category vector match. A contradiction can replace the current content, retain the prior wording in `previous_content`, reset verification evidence and confidence to the new input, and reduce stability; a corroborating restatement raises confidence and verification counts. This is a mutable current record with a limited previous-content field, not an append-only change history.",
+        "sources": [
+          "belief-store"
+        ]
+      },
+      {
+        "text": "Delete: `remove_belief` removes a matching ID from the in-memory cache and relation/template indexes when loaded, filters it from the category file, and increments the store version. The reviewed removal method does not call a vector-backend delete operation. Retrieval only accepts vector-result IDs present in the belief cache, but this code inspection cannot establish deletion completeness across persistent vector indexes, backups, or other runtime copies.",
+        "sources": [
+          "belief-store",
+          "injector",
+          "vectors"
+        ]
+      },
+      {
+        "text": "Retrieval: before prompt generation the injector synchronizes its index, forms up to four query keywords/phrases, scores category-allowed beliefs using keyword and conceptual-tag matches, and unions those candidates with vector top-k results. It fuses cosine, keyword, and tag signals, prioritizes exact lexicon terms, suppresses some synthesis duplicates, then removes near duplicates and fits selected memories to a token budget. The implementation caps generated search heads and retrieval top-k; it can also reserve a portion of context for neighboring raw-memory turns. These are code-level mechanisms, not quality or latency measurements.",
+        "sources": [
+          "injector",
+          "vectors",
+          "agent"
+        ]
+      },
+      {
+        "text": "Consolidation: the consolidator reviews raw chunks and creates structured beliefs with references back to memory IDs; some paths use LLM calls, while raw ingestion does not. Category-specific confidence decay and pruning skip the raw `memory` category. The inspected code does not establish that every stored chunk is reviewed or that derived beliefs remain factually correct.",
+        "sources": [
+          "consolidator",
+          "belief-store",
+          "ingestor"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "not_measured",
+        "evidence": "Source shows keyword/tag/vector candidate union, ranking, deduplication, and prompt injection. No answerable or unanswerable fixture probes were run.",
+        "sources": [
+          "injector",
+          "vectors",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "not_measured",
+        "evidence": "Contradictory updates can replace the current wording while retaining one previous_content value. No correction history or post-correction probes were adjudicated.",
+        "sources": [
+          "belief-store",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "not_measured",
+        "evidence": "The category file and loaded indexes have a removal path; the reviewed method has no vector-backend delete call. No deletion probes or backup/index audit were performed.",
+        "sources": [
+          "belief-store",
+          "vectors",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "not_measured",
+        "evidence": "Source and README describe per-agent workspaces/private stores within a single-operator deployment. No cross-agent, cross-user, or adversarial isolation probes were run; the README explicitly says the beta lacks multi-user roles and tenant isolation.",
+        "sources": [
+          "agent",
+          "readme",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "not_measured",
+        "evidence": "Beliefs retain source strings and memory_refs, and ingested chunks carry event/session/turn metadata. These fields provide origin or lineage but do not constitute verified external citations or claim-level support adjudication.",
+        "sources": [
+          "belief-store",
+          "ingestor",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency, write-to-recall delay, tokens, cost, and storage",
+        "status": "not_measured",
+        "evidence": "Source exposes token-budget selection and optional vector adapters; ingestion is LLM-free, while consolidation can use an LLM. No benchmark timing, token, cost, or storage measurements were collected.",
+        "sources": [
+          "injector",
+          "ingestor",
+          "consolidator",
+          "vectors",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded source review at the verified main SHA, focused on the README, security policy, OfficeAgent integration, and mRAG storage, ingestion, consolidation, vector, and retrieval modules. It does not establish runtime reliability, output quality, correction effectiveness, deletion completeness, or isolation under adversarial use.",
+        "sources": [
+          "readme",
+          "agent",
+          "belief-store",
+          "injector",
+          "security"
+        ]
+      },
+      {
+        "text": "The public beta is documented as single-operator and without multi-user roles or tenant isolation. Per-agent workspace separation describes the application layout; it is not a tested security boundary between hostile agents or OS users.",
+        "sources": [
+          "readme",
+          "security",
+          "agent"
+        ]
+      },
+      {
+        "text": "Belief `source` and `memory_refs` and raw event metadata show provenance lineage in the store. The reviewed paths do not provide citation support adjudication for generated claims. The reviewed removal method does not establish erasure from vector backends, backups, or external copies.",
+        "sources": [
+          "belief-store",
+          "ingestor",
+          "vectors",
+          "security"
+        ]
+      },
+      {
+        "text": "Retrieval visibly walks the loaded belief set to score keyword/tag candidates, and optional embedding providers have different operational and privacy properties. The source does not establish corpus-specific ranking quality, runtime resource use, storage growth, or cost.",
+        "sources": [
+          "injector",
+          "vectors",
+          "readme",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No AIMAOS runtime, benchmark workload, or tests were executed. Project metric definitions, fixture, and execution-status record describe the separate protocol and are not AIMAOS results.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      }
+    ]
+  }
+}

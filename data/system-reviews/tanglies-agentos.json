@@ -1,0 +1,325 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "tanglies-agentos",
+    "name": "AgentOS (Tanglies)",
+    "repository": "https://github.com/Tanglies/AgentOS",
+    "branch": "main",
+    "revision": "5b2718165d9af11d84ab4eec74492ed21fe506d7",
+    "reviewed_at": "2026-11-24T19:09:17Z",
+    "review_timezone": "UTC (2026-11-24 11:09:17 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/Tanglies/AgentOS/blob/5b2718165d9af11d84ab4eec74492ed21fe506d7/README.md","checked_urls":["https://github.com/Tanglies/AgentOS/blob/5b2718165d9af11d84ab4eec74492ed21fe506d7/README.md","https://github.com/Tanglies/AgentOS/blob/5b2718165d9af11d84ab4eec74492ed21fe506d7/SECURITY.md","https://github.com/Tanglies/AgentOS/blob/5b2718165d9af11d84ab4eec74492ed21fe506d7/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "AgentOS combines an in-process, bounded session history with SQLite-backed long-term memory. Long-term recall uses weighted keyword matching over English tokens and Chinese character bigrams; this review records source observations and does not execute the service or benchmark.",
+    "atlas_locator": {
+      "ordinal": 26,
+      "name": "AgentOS (Tanglies)",
+      "slug": "tanglies-agentos",
+      "listed_repository": "https://github.com/Tanglies/AgentOS",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/tanglies-agentos.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/Tanglies/AgentOS/blob/5b2718165d9af11d84ab4eec74492ed21fe506d7/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/Tanglies/AgentOS/blob/5b2718165d9af11d84ab4eec74492ed21fe506d7/README.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository and default branch",
+        "path": "repository",
+        "symbol": "main branch",
+        "url": "https://github.com/Tanglies/AgentOS"
+      },
+      {
+        "id": "head",
+        "label": "Current main branch commit",
+        "path": "commit",
+        "symbol": "full SHA 5b2718165d9af11d84ab4eec74492ed21fe506d7",
+        "url": "https://github.com/Tanglies/AgentOS/commit/5b2718165d9af11d84ab4eec74492ed21fe506d7"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "full SHA for latest main commit",
+        "url": "https://github.com/Tanglies/AgentOS/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Official README: platform architecture and memory behavior",
+        "path": "README.md",
+        "url": "https://github.com/Tanglies/AgentOS/blob/5b2718165d9af11d84ab4eec74492ed21fe506d7/README.md"
+      },
+      {
+        "id": "short_memory",
+        "label": "Process-local session memory",
+        "path": "src/agentos/runtime/memory.py",
+        "symbol": "MemoryStore, SessionState, _trim_turns",
+        "url": "https://github.com/Tanglies/AgentOS/blob/5b2718165d9af11d84ab4eec74492ed21fe506d7/src/agentos/runtime/memory.py?plain=1"
+      },
+      {
+        "id": "long_memory",
+        "label": "Persistent long-term memory and retrieval",
+        "path": "src/agentos/runtime/long_term_memory.py",
+        "symbol": "LongTermMemory, MemoryContext, extract_terms, estimate_tokens",
+        "url": "https://github.com/Tanglies/AgentOS/blob/5b2718165d9af11d84ab4eec74492ed21fe506d7/src/agentos/runtime/long_term_memory.py?plain=1"
+      },
+      {
+        "id": "memory_tools",
+        "label": "Agent memory tool declarations",
+        "path": "src/agentos/runtime/memory_tools.py",
+        "symbol": "RememberTool, RecallTool",
+        "url": "https://github.com/Tanglies/AgentOS/blob/5b2718165d9af11d84ab4eec74492ed21fe506d7/src/agentos/runtime/memory_tools.py?plain=1"
+      },
+      {
+        "id": "repositories",
+        "label": "Memory row schema and repository layer",
+        "path": "src/agentos/runtime/repositories.py",
+        "symbol": "MEMORIES_SCHEMA, MemoryRecord, MemoryRepository",
+        "url": "https://github.com/Tanglies/AgentOS/blob/5b2718165d9af11d84ab4eec74492ed21fe506d7/src/agentos/runtime/repositories.py?plain=1"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project memory benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated identity and source attribution only",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 26",
+        "url": "../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents AgentOS as a Python agent platform that includes memory, runtime/tool orchestration, evaluation, and observability. The memory implementation is part of the platform rather than a separately described standalone memory service.",
+        "sources": [
+          "readme",
+          "long_memory",
+          "memory_tools"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "AgentOS maintains two distinct memory stores. `MemoryStore` holds recent session messages in a process-local ordered map. `LongTermMemory` persists cross-session records through a SQLite `Database` and `MemoryRepository`; the memory table has an integer ID, workspace and optional user IDs, scope, content, optional session ID, and creation timestamp.",
+        "sources": [
+          "short_memory",
+          "long_memory",
+          "repositories"
+        ]
+      },
+      {
+        "text": "Session entries are keyed by workspace, user, and session ID. Session state records message history and timestamps. Long-term rows use workspace/user ownership plus a `user` or `workspace` visibility scope. Long-term content is plain text capped by a source constant of 4,000 characters; the inspected row schema does not show embeddings, event-time validity, source citations, or version/supersession fields.",
+        "sources": [
+          "short_memory",
+          "long_memory",
+          "repositories",
+          "memory_tools"
+        ]
+      },
+      {
+        "text": "The official README places memory inside the Agent runtime and describes SQLite-backed long-term memory alongside session memory and context budgets. The dedicated memory tool exposes `remember` and `recall`; code inspection found keyword matching rather than vector or semantic retrieval.",
+        "sources": [
+          "readme",
+          "long_memory",
+          "memory_tools"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Session writes append messages, trim to the configured per-session limit at a user-turn boundary, and update the session timestamp. The ordered map moves touched sessions to the newest position and evicts its oldest entries when the configured session-count cap is exceeded. `clear` removes the scoped session entry; this state is lost when the process exits.",
+        "sources": [
+          "short_memory"
+        ]
+      },
+      {
+        "text": "Long-term `remember` accepts content, optional session ID, and a scope (workspace by default); its storage is delegated to the memory repository. `forget`, `forget_many`, and `clear` remove visible records through repository methods. The inspected code establishes the APIs and scoped selection, but this review did not inspect all SQL mutation bodies and therefore does not characterize transaction, audit, backup, or physical erasure guarantees.",
+        "sources": [
+          "long_memory",
+          "repositories"
+        ]
+      },
+      {
+        "text": "Recall extracts lowercase ASCII tokens of at least two characters and Chinese runs plus overlapping two-character bigrams, then uses weighted substring matching and returns bounded results. The implementation documentation explicitly distinguishes this from semantic retrieval; paraphrase, synonym, and cross-language recall quality is not established. Context construction reports recall count, characters, and an estimated token count; the estimator uses four ASCII characters per token and counts each non-ASCII character separately, not a provider tokenizer.",
+        "sources": [
+          "long_memory",
+          "readme"
+        ]
+      },
+      {
+        "text": "The `remember` tool lets the agent choose what stable information to save and allows `user` or `workspace` scope; the `recall` tool accepts a query and optional scope. The tool docs advise against storing temporary content or sensitive credentials. No correction/update method was established in the inspected long-term memory API; changing a fact therefore cannot be assumed to supersede prior content.",
+        "sources": [
+          "memory_tools",
+          "long_memory"
+        ]
+      },
+      {
+        "text": "Scope resolution defaults to the active workspace and user context (or configured default IDs). Session keys include both workspace and user. Long-term operations pass resolved workspace/user IDs to repository methods, and visibility may be further limited to user-only or workspace-shared scope. This is source-visible filtering; this review did not run cross-tenant probes or audit every API authorization path.",
+        "sources": [
+          "short_memory",
+          "long_memory",
+          "repositories",
+          "readme"
+        ]
+      },
+      {
+        "text": "The long-term memory row retains content, scope, session ID, and creation time, but the inspected model does not carry source document IDs, quoted evidence, claim-level citations, or a mutation history. The tool reports stored memory IDs, which supports record addressing but does not establish evidence provenance for answers.",
+        "sources": [
+          "repositories",
+          "memory_tools",
+          "long_memory"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency and observability: long-term retrieval avoids embedding/model calls and operates on a capped result/context budget; ASCII/CJK term extraction and simple substring scoring are explicit. Session memory uses configured message/session caps and LRU eviction. Memory context exposes count/character/token estimates; the README describes broader runtime memory context metrics. No latency, cost, storage, or retrieval-quality measurements were collected.",
+        "sources": [
+          "long_memory",
+          "short_memory",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "The system exposes keyword recall and empty-result behavior; no answerability or abstention probes were run.",
+        "sources": [
+          "long_memory",
+          "memory_tools",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "No update or supersession API was established in the inspected long-term memory surface; no correction workload was run.",
+        "sources": [
+          "long_memory",
+          "repositories",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Forget and clear operations are present and scoped in code; no post-delete probes or storage-erasure checks were run.",
+        "sources": [
+          "long_memory",
+          "repositories",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Workspace/user keys and scope predicates are visible in source; no forbidden cross-scope queries were executed.",
+        "sources": [
+          "short_memory",
+          "long_memory",
+          "repositories",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Memory rows provide no inspected source-evidence or citation fields; answer support and citation coverage were not adjudicated.",
+        "sources": [
+          "repositories",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No latency samples or scheduled write-to-recall probes were collected.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "A source token estimate and context budget exist, but no provider token counts, cost, or storage measurements were collected.",
+        "sources": [
+          "long_memory",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code and documentation",
+        "evidence": "Keyword matching without embeddings, bounded context/count settings, session caps and LRU eviction are visible source mechanisms, not measured performance results.",
+        "sources": [
+          "long_memory",
+          "short_memory",
+          "readme"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded review of the official README and selected memory source files at the verified repository head. The application, tests, and benchmarks were not run. Runtime isolation, retrieval quality, durability under failure, concurrency behavior, deletion completeness, latency, cost, and storage use remain unverified.",
+        "sources": [
+          "readme",
+          "short_memory",
+          "long_memory",
+          "repositories"
+        ]
+      },
+      {
+        "text": "The current long-term memory interface reviewed here is keyword-based and does not establish correction semantics, durable provenance, or semantic matching. Absence from the inspected files does not prove that no other application layer can supply related behavior.",
+        "sources": [
+          "long_memory",
+          "repositories",
+          "memory_tools"
+        ]
+      },
+      {
+        "text": "The official repository README was checked for a published contact email. It publishes no contact email; the JSON records null and the exact pinned README URL that was checked.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No AgentOS execution, project fixture, benchmark, or test suite was performed. The project metric definitions, fixture, and status record describe the evaluation protocol and current execution status; they are not results for AgentOS.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      }
+    ]
+  }
+}

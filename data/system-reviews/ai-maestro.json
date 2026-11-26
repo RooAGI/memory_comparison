@@ -1,0 +1,356 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "ai-maestro",
+    "name": "AI Maestro",
+    "repository": "https://github.com/23blocks-OS/ai-maestro",
+    "branch": "main",
+    "revision": "ead48472b0ff7d966c62eba6cd90a5c413951482",
+    "reviewed_at": "2026-11-24T19:44:45Z",
+    "review_timezone": "UTC (2026-11-24 11:44:45 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":"support@23blocks.com","source_url":"https://github.com/23blocks-OS/ai-maestro/blob/ead48472b0ff7d966c62eba6cd90a5c413951482/SECURITY.md","note":"Published as an alternative contact in the official security policy."},
+    "summary": "AI Maestro is a self-hosted agent orchestration platform with an optional per-agent long-term memory skill. It indexes conversation messages, consolidates selected passages into memory cards and an entity graph, and injects relevant context into later prompts. This is a source review; outcome quality and performance were not measured.",
+    "atlas_locator": {
+      "ordinal": 38,
+      "name": "AI Maestro",
+      "slug": "ai-maestro",
+      "listed_repository": "https://github.com/23blocks-OS/ai-maestro",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/ai-maestro.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": "support@23blocks.com",
+    "contact_email_source_url": "https://github.com/23blocks-OS/ai-maestro/blob/ead48472b0ff7d966c62eba6cd90a5c413951482/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/23blocks-OS/ai-maestro/blob/ead48472b0ff7d966c62eba6cd90a5c413951482/README.md",
+      "https://github.com/23blocks-OS/ai-maestro/blob/ead48472b0ff7d966c62eba6cd90a5c413951482/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository page and default branch",
+        "path": "repository",
+        "symbol": "canonical repository 23blocks-OS/ai-maestro; default branch main",
+        "url": "https://github.com/23blocks-OS/ai-maestro"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "current head ead48472b0ff7d966c62eba6cd90a5c413951482; feed updated 2026-11-24T17:46:05Z",
+        "url": "https://github.com/23blocks-OS/ai-maestro/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed full upstream commit",
+        "path": "commit",
+        "symbol": "ead48472b0ff7d966c62eba6cd90a5c413951482",
+        "url": "https://github.com/23blocks-OS/ai-maestro/commit/ead48472b0ff7d966c62eba6cd90a5c413951482"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "long-term memory overview and feature framing",
+        "url": "https://github.com/23blocks-OS/ai-maestro/blob/ead48472b0ff7d966c62eba6cd90a5c413951482/README.md"
+      },
+      {
+        "id": "guide",
+        "label": "Official long-term memory design and operation guide",
+        "path": "docs/LONG-TERM-MEMORY.md",
+        "symbol": "cards, entities, consolidation, retrieval, operations, known limits and per-agent storage",
+        "url": "https://github.com/23blocks-OS/ai-maestro/blob/ead48472b0ff7d966c62eba6cd90a5c413951482/docs/LONG-TERM-MEMORY.md"
+      },
+      {
+        "id": "schema",
+        "label": "CozoDB long-term memory schema",
+        "path": "lib/cozo-schema-memory.ts",
+        "symbol": "memory, vector, evidence, relation and run records; stats",
+        "url": "https://github.com/23blocks-OS/ai-maestro/blob/ead48472b0ff7d966c62eba6cd90a5c413951482/lib/cozo-schema-memory.ts"
+      },
+      {
+        "id": "consolidate",
+        "label": "Memory consolidation implementation",
+        "path": "lib/memory/consolidate.ts",
+        "symbol": "provider selection, duplicate search, reinforcement and writes",
+        "url": "https://github.com/23blocks-OS/ai-maestro/blob/ead48472b0ff7d966c62eba6cd90a5c413951482/lib/memory/consolidate.ts"
+      },
+      {
+        "id": "cards",
+        "label": "Memory card and entity graph implementation",
+        "path": "lib/memory/cards.ts",
+        "symbol": "card extraction, evidence checks, entity resolution, graph and entity lookup",
+        "url": "https://github.com/23blocks-OS/ai-maestro/blob/ead48472b0ff7d966c62eba6cd90a5c413951482/lib/memory/cards.ts"
+      },
+      {
+        "id": "relations",
+        "label": "Entity relation implementation",
+        "path": "lib/memory/relations.ts",
+        "symbol": "directed relations with dated current/ended statements",
+        "url": "https://github.com/23blocks-OS/ai-maestro/blob/ead48472b0ff7d966c62eba6cd90a5c413951482/lib/memory/relations.ts"
+      },
+      {
+        "id": "search",
+        "label": "Long-term memory search implementation",
+        "path": "lib/memory/search.ts",
+        "symbol": "semantic embedding retrieval, filters, related memories and memory lookup",
+        "url": "https://github.com/23blocks-OS/ai-maestro/blob/ead48472b0ff7d966c62eba6cd90a5c413951482/lib/memory/search.ts"
+      },
+      {
+        "id": "service",
+        "label": "Agent memory service implementation",
+        "path": "services/agents-memory-service.ts",
+        "symbol": "per-agent memory APIs, transcript handling, indexing, consolidation and metrics",
+        "url": "https://github.com/23blocks-OS/ai-maestro/blob/ead48472b0ff7d966c62eba6cd90a5c413951482/services/agents-memory-service.ts"
+      },
+      {
+        "id": "api",
+        "label": "Long-term memory API route",
+        "path": "app/api/agents/[id]/memory/long-term/route.ts",
+        "symbol": "GET query, DELETE by memory ID, PATCH content/category/context",
+        "url": "https://github.com/23blocks-OS/ai-maestro/blob/ead48472b0ff7d966c62eba6cd90a5c413951482/app/api/agents/[id]/memory/long-term/route.ts"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy; published contact email",
+        "path": "SECURITY.md",
+        "symbol": "security report email support@23blocks.com",
+        "url": "https://github.com/23blocks-OS/ai-maestro/blob/ead48472b0ff7d966c62eba6cd90a5c413951482/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog identity and attribution only",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 38",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Roster attribution source (identity only)",
+        "path": "content/systems/ai-maestro.md",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/ai-maestro.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents AI Maestro as an operating system for teams of AI agents, with persistent memory among its features. Long-term memory is an optional per-agent skill in the broader orchestration product, not a standalone memory service.",
+        "sources": [
+          "readme",
+          "guide"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The official guide describes each agent's CozoDB at `~/.aimaestro/agents/<id>/agent.db`. The same database stores the retained message index, memory cards and vectors, evidence passages, entities, entity relations and dated relation statements. The schema models memory tier (`warm`, `recurring`, `faded`), system/category, content/context, source conversations and message IDs, confidence, timestamps, reinforcement/access counts, and optional promotion time; memory vectors use 384-dimensional float vectors with a cosine HNSW index.",
+        "sources": [
+          "guide",
+          "schema"
+        ]
+      },
+      {
+        "text": "The guide separates episodic history (indexed messages), semantic memory (cards and entity graph), and procedural memory (skills, not captured automatically). A card is a concise statement tied to supporting passages. Entity relations are directed typed edges; relation statements retain the conversation time and whether the relation still holds. This provides memory-level context and temporal status, not a general source-document citation graph.",
+        "sources": [
+          "guide",
+          "cards",
+          "relations",
+          "schema"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "**Write and consolidation.** The guide says indexing runs hourly and when an agent becomes idle; the scheduled consolidation runs nightly, with a separate 2–8 AM backlog window. Consolidation redacts candidate passages, classifies and summarizes them, checks generated cards against their evidence, deduplicates by embedding plus classifier, reinforces matching memories, then links entities and relations. The implementation chooses among the Jev classifier, Ollama, and Claude according to configuration/availability; new memories are created in the agent database, and near-duplicates reinforce an existing record.",
+        "sources": [
+          "guide",
+          "consolidate",
+          "cards"
+        ]
+      },
+      {
+        "text": "**Update and correction.** Consolidation can reinforce repeated knowledge and the guide documents user corrections as high-priority candidates. The API also exposes PATCH for a memory's content, category, or context. The inspected material does not establish whether manual patching rebuilds every derived embedding/card/graph artifact, nor does it establish correction accuracy.",
+        "sources": [
+          "guide",
+          "api",
+          "service"
+        ]
+      },
+      {
+        "text": "**Delete and forgetting.** The API exposes DELETE for one memory ID. The guide describes one-off unused memories aging to a `faded` tier: retained but not recalled, and revived if encountered again. This review did not trace DELETE through every dependent vector, evidence, relation, raw message index, backup, or host copy, so complete erasure is unknown.",
+        "sources": [
+          "api",
+          "guide",
+          "schema"
+        ]
+      },
+      {
+        "text": "**Retrieval.** The code embeds the query and performs per-agent semantic similarity search, with optional category, confidence, and tier filters; callers may include related memories. The API also offers paged/list and special views, while the guide describes prompt injection for memories near the prompt and relations for named entities, plus a session-start injection of recurring decisions and preferences. The guide also documents an on-demand memory-search skill that searches cards before raw history.",
+        "sources": [
+          "search",
+          "api",
+          "guide"
+        ]
+      },
+      {
+        "text": "**Scope isolation.** The guide states that memories belong to one agent, with an individual database under that agent's directory; the search function also takes an agent ID and calls agent-scoped schema queries. This documents a per-agent data boundary in these paths. It does not establish operating-system isolation between agents running under one user, or authorization and storage behavior for every API caller and deployment.",
+        "sources": [
+          "guide",
+          "search",
+          "service"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Source observation: semantic search and prompt injection paths exist. The guide explicitly says whether recall changes agent behavior is still an open question; no answerability or abstention workload was run.",
+        "sources": [
+          "guide",
+          "search",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Source observation: user-correction classification, reinforcement, relation end states, and a manual PATCH route are present. No correction or stale-value cases were adjudicated.",
+        "sources": [
+          "guide",
+          "consolidate",
+          "relations",
+          "api",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Source observation: a memory-by-ID DELETE route and faded lifecycle exist. No post-deletion leak probes or end-to-end erasure audit were performed.",
+        "sources": [
+          "api",
+          "guide",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Source observation: per-agent databases and agent-scoped search queries are visible. No cross-agent or cross-project isolation workload was run.",
+        "sources": [
+          "guide",
+          "search",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source observation: generated cards are checked against retained evidence passages, and cards can carry multiple passages. No answer-support or citation-coverage adjudication was run.",
+        "sources": [
+          "cards",
+          "guide",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The docs and code describe indexing, nightly consolidation, query embedding, and prompt injection. No latency distribution or write-to-recall timing was collected.",
+        "sources": [
+          "guide",
+          "search",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The guide documents approximate per-run passage/call budgets and provider options; these are documentation claims, not measured results from this review. No token, spend, or corpus-storage measurements were collected.",
+        "sources": [
+          "guide",
+          "consolidate",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code/documentation",
+        "evidence": "Code observations: similarity lookup with a limited candidate list for deduplication, approximate-nearest-neighbor vector retrieval, per-consolidation counters and run records, recall logs, and indexing/consolidation status endpoints. The guide documents batching/budget limits and persistent progress. None of these observations establishes runtime speed or service reliability.",
+        "sources": [
+          "consolidate",
+          "schema",
+          "search",
+          "service",
+          "guide"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded review inspected the official README and long-term-memory guide plus memory schema, consolidation, card/entity, relation, search, agent-memory service, and long-term API route source at the verified commit. It did not inspect every caller, adapter, database migration, backup, or all deletion and authorization paths.",
+        "sources": [
+          "readme",
+          "guide",
+          "schema",
+          "consolidate",
+          "cards",
+          "relations",
+          "search",
+          "service",
+          "api"
+        ]
+      },
+      {
+        "text": "The guide says raw message-index content is not redacted even though secrets are removed before memory is stored. It also says procedural knowledge is not captured automatically and that the relation graph depends on what appears in conversations. The guide's per-run capacity and cost statements are project documentation, not measurements produced by this review.",
+        "sources": [
+          "guide"
+        ]
+      },
+      {
+        "text": "No source inspection establishes answer accuracy, abstention behavior, correction freshness, deletion completeness, cross-agent security, latency, token spend, or storage efficiency. No system, benchmark, or test suite was run.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is not_run. No AI Maestro system execution, tests, or benchmark workload was run. Project metric definitions, fixture, and execution-status records describe the evaluation protocol only; they are not AI Maestro results.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      }
+    ]
+  }
+}

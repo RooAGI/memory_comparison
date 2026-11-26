@@ -1,0 +1,368 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "dsh-engram",
+    "name": "dsh-engram",
+    "ordinal": 199,
+    "repository": "https://github.com/kenz1117/dsh-engram",
+    "listed_repository": "https://github.com/kenz1117/dsh-engram",
+    "repository_status": "explicit",
+    "branch": "main",
+    "revision": "a0f8f2d95b7a5443c9067ecb5a7720ab728e2090",
+    "reviewed_at": "2026-11-25T11:31:45Z",
+    "review_timezone": "UTC (2026-11-25 03:31:45 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "dsh-engram is a local-first DeepSeek Harness plugin that stores cross-session agent memories in separate user, project and shared SQLite stores. It combines FTS5 and local-vector retrieval with relationship expansion, per-session evidence checks, and profile injection. This is a source review; no runtime, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 199,
+      "name": "dsh-engram",
+      "slug": "dsh-engram",
+      "listed_repository": "https://github.com/kenz1117/dsh-engram",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dsh-engram.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": null,
+      "checked_urls": [
+        "https://github.com/kenz1117/dsh-engram/blob/a0f8f2d95b7a5443c9067ecb5a7720ab728e2090/README.md",
+        "https://github.com/kenz1117/dsh-engram/blob/a0f8f2d95b7a5443c9067ecb5a7720ab728e2090/SECURITY.md"
+      ],
+      "note": "The official pinned README publishes no contact email; SECURITY.md directs security reports to GitHub private vulnerability reporting. No profile or commit metadata was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/kenz1117/dsh-engram/blob/a0f8f2d95b7a5443c9067ecb5a7720ab728e2090/README.md",
+      "https://github.com/kenz1117/dsh-engram/blob/a0f8f2d95b7a5443c9067ecb5a7720ab728e2090/SECURITY.md"
+    ],
+    "contact_email_note": "No contact email was published in the official pinned README or SECURITY.md; the security policy directs reports to GitHub private vulnerability reporting.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated memory-system roster",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 199 identity, slug, explicit listed repository and Atlas locator attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster entry (identity/locator attribution only)",
+        "path": "content/systems/dsh-engram.md",
+        "symbol": "Curated roster attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dsh-engram.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "Repository page",
+        "symbol": "Public kenz1117/dsh-engram; main is default branch",
+        "url": "https://github.com/kenz1117/dsh-engram"
+      },
+      {
+        "id": "head_feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Full head a0f8f2d95b7a5443c9067ecb5a7720ab728e2090; feed updated 2026-11-24T08:54:02Z",
+        "url": "https://github.com/kenz1117/dsh-engram/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream commit",
+        "path": "commit",
+        "symbol": "Full current main head a0f8f2d95b7a5443c9067ecb5a7720ab728e2090",
+        "url": "https://github.com/kenz1117/dsh-engram/commit/a0f8f2d95b7a5443c9067ecb5a7720ab728e2090"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project description, architecture, scopes, retrieval, evidence gate, runtime, contact check",
+        "url": "https://github.com/kenz1117/dsh-engram/blob/a0f8f2d95b7a5443c9067ecb5a7720ab728e2090/README.md"
+      },
+      {
+        "id": "types",
+        "label": "Pinned memory and scope types",
+        "path": "src/types.ts",
+        "symbol": "Scope/kind/status types, record and provenance fields, revisions, forgotten tombstone",
+        "url": "https://github.com/kenz1117/dsh-engram/blob/a0f8f2d95b7a5443c9067ecb5a7720ab728e2090/src/types.ts"
+      },
+      {
+        "id": "sqlite",
+        "label": "Pinned SQLite store",
+        "path": "src/store/sqlite.ts",
+        "symbol": "Schema, migrations, revisions, operation log and persistent memory structures",
+        "url": "https://github.com/kenz1117/dsh-engram/blob/a0f8f2d95b7a5443c9067ecb5a7720ab728e2090/src/store/sqlite.ts"
+      },
+      {
+        "id": "tools",
+        "label": "Pinned tool definitions and execution",
+        "path": "src/tools/create.ts",
+        "symbol": "Tool scope resolution, explicit writes, search, lifecycle and host integrations",
+        "url": "https://github.com/kenz1117/dsh-engram/blob/a0f8f2d95b7a5443c9067ecb5a7720ab728e2090/src/tools/create.ts"
+      },
+      {
+        "id": "evidence",
+        "label": "Pinned retrieval evidence gate",
+        "path": "src/retrieve/evidence.ts",
+        "symbol": "Session-scoped batches, evidence refs and code-enforced sufficient verdict",
+        "url": "https://github.com/kenz1117/dsh-engram/blob/a0f8f2d95b7a5443c9067ecb5a7720ab728e2090/src/retrieve/evidence.ts"
+      },
+      {
+        "id": "security",
+        "label": "Pinned official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Security contact procedure and data-handling notes; no email published",
+        "url": "https://github.com/kenz1117/dsh-engram/blob/a0f8f2d95b7a5443c9067ecb5a7720ab728e2090/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Benchmark-domain definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Workload specification only; not run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project-wide status not_run; no dsh-engram result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes dsh-engram as a local-first cross-session long-term memory plugin for DeepSeek Harness, with SQLite storage, a management panel and agent-facing tools. It is a host plugin with its own memory store, not a hosted memory service.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The catalog resolves ordinal 199 to dsh-engram, slug dsh-engram, listed repository https://github.com/kenz1117/dsh-engram, with explicit repository attribution. The pinned Atlas entry is retained for curated identity/locator attribution only and is not assessment evidence.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The official repository page identifies main as default branch. Its main feed reports current full head a0f8f2d95b7a5443c9067ecb5a7720ab728e2090 at 2026-11-24T08:54:02Z. Review timestamp: 2026-11-25T11:31:45Z (UTC; 2026-11-25 03:31:45 PST, America/Los_Angeles).",
+        "sources": [
+          "repo",
+          "head_feed",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The host plugin registers memory tools and routes work to a scope-specific store; it also provides a React panel through loopback management routes. The README's flow places writes/capture into three SQLite stores, then sends retrieval across keyword, vector, and relation paths.",
+        "sources": [
+          "readme",
+          "tools",
+          "sqlite"
+        ]
+      },
+      {
+        "text": "The scope vocabulary is user, project, and shared. Project storage follows the session working directory and Git-origin normalization when available; shared is an explicit exchange space rather than a destination for automatic capture.",
+        "sources": [
+          "readme",
+          "tools",
+          "types"
+        ]
+      },
+      {
+        "text": "MemoryRecord distinguishes a stable logical memoryId from the per-revision id. It includes scope, kind, content, importance, confidence, status, timestamps, session/round/sequence provenance, and optional palace slot and review schedule. The SQLite schema also includes revisions, edges, operation log, facts, entities, observations, profile versions, injection snapshots, embeddings and FTS indexes.",
+        "sources": [
+          "types",
+          "sqlite"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Explicit engram_save writes memory; optional capture reads session content and returns one of accept, merge, defer or drop. Tool dependencies include store selection by session cwd, embedder, optional auxiliary LLM, judge, query rewriting, redaction, and tool availability; automatic capture can be disabled.",
+        "sources": [
+          "readme",
+          "tools"
+        ]
+      },
+      {
+        "text": "An update records a new revision under the existing logical memoryId and preserves the earlier revision with a supersession relationship. The typed status model marks archived rows as out of retrieval but recoverable; forgotten rows are soft-deleted and remain available to audit or restoration paths.",
+        "sources": [
+          "types",
+          "sqlite",
+          "tools"
+        ]
+      },
+      {
+        "text": "The README describes FTS5 plus local vectors fused by reciprocal-rank fusion, relation-edge expansion, recency and usage boosts, optional room routing and query rewriting. Search results are grouped into in-memory evidence batches by session; the evidence gate only accepts references from that batch and only permits an answer verdict when at least one valid reference is included.",
+        "sources": [
+          "readme",
+          "evidence",
+          "tools"
+        ]
+      },
+      {
+        "text": "The evidence registry is bounded: at most 20 recent batches per session, up to 8 references per assessment, and it is cleared at session disposal. A restart or expiry therefore requires new search evidence; accepted refs show which stored rows supported the model's decision but do not verify their underlying truth.",
+        "sources": [
+          "evidence"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Search and a code-enforced batch evidence gate exist, but no answerability workload was run.",
+        "sources": [
+          "readme",
+          "evidence",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Revision and supersession paths are visible; no correction sequence was evaluated.",
+        "sources": [
+          "types",
+          "sqlite",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Forgetting is a recoverable soft-delete state; no residual-data probe was run.",
+        "sources": [
+          "types",
+          "sqlite",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "User, project and shared routing are documented and represented in code; no cross-scope workload was run.",
+        "sources": [
+          "readme",
+          "tools",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Evidence refs are constrained to search results from a live batch; no evidence-quality adjudication was performed.",
+        "sources": [
+          "evidence",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "SQLite, FTS and vector paths were inspected; no timing probe was run.",
+        "sources": [
+          "sqlite",
+          "readme",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Explicit and optional queued capture paths are described; no capture-to-recall timing was measured.",
+        "sources": [
+          "tools",
+          "readme",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "The README documents persistent tool-schema cost and optional auxiliary model calls, but no token or provider-cost data was collected.",
+        "sources": [
+          "readme",
+          "tools",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "SQLite, FTS, and vector structures are inspectable; no corpus-attributed storage measurement was made.",
+        "sources": [
+          "sqlite",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "A valid evidence reference identifies a returned memory row and search batch; it does not establish truth, completeness, freshness, or retrieval accuracy.",
+        "sources": [
+          "evidence",
+          "types"
+        ]
+      },
+      {
+        "text": "Archived and forgotten records can remain recoverable in local storage. This review did not probe database files, backups, exports, or filesystem copies for residual data.",
+        "sources": [
+          "types",
+          "sqlite"
+        ]
+      },
+      {
+        "text": "Optional automatic capture and auxiliary models make behavior dependent on host configuration and model output. Source inspection cannot establish extraction quality or correct runtime scope selection.",
+        "sources": [
+          "readme",
+          "tools"
+        ]
+      },
+      {
+        "text": "This bounded review inspected selected official README, memory types, SQLite store, tool and evidence code at the verified main head. It did not audit every tool, UI route, host version, or configuration.",
+        "sources": [
+          "readme",
+          "types",
+          "sqlite",
+          "tools",
+          "evidence"
+        ]
+      },
+      {
+        "text": "No dsh-engram runtime, tests, or benchmarks were run; every project metric domain remains unmeasured.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No dsh-engram runtime, tests, or benchmarks were run. Source observations are not benchmark results."
+    }
+  }
+}

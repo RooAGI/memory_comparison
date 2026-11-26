@@ -1,0 +1,427 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "aura-chetto1983",
+    "name": "Aura (chetto1983)",
+    "repository": "https://github.com/chetto1983/Aura",
+    "branch": "master",
+    "revision": "ecc3d78c6cea6eeafb7396fd38859d8fda3eb483",
+    "reviewed_at": "2026-11-24T21:59:03Z",
+    "review_timezone": "UTC (2026-11-24 13:59:03 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":"dvdmarchetto@gmail.com","source_url":"https://github.com/chetto1983/Aura/blob/ecc3d78c6cea6eeafb7396fd38859d8fda3eb483/SECURITY.md","note":"Published in the official security policy."},
+    "summary": "Aura is a self-hosted Go agent platform whose memory subsystem stores bitemporal facts as graph edges in ArcadeDB, alongside derived conversation recall. It combines named-entity traversal with hybrid lexical and vector retrieval, and exposes correction, forgetting, and provenance-aware writes. This is a pinned source review; no runtime or benchmark results were produced.",
+    "atlas_locator": {
+      "ordinal": 77,
+      "name": "Aura (chetto1983)",
+      "slug": "aura-chetto1983",
+      "listed_repository": "https://github.com/chetto1983/Aura",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/aura-chetto1983.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": "dvdmarchetto@gmail.com",
+    "contact_email_source_url": "https://github.com/chetto1983/Aura/blob/ecc3d78c6cea6eeafb7396fd38859d8fda3eb483/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/chetto1983/Aura/blob/ecc3d78c6cea6eeafb7396fd38859d8fda3eb483/README.md",
+      "https://github.com/chetto1983/Aura/blob/ecc3d78c6cea6eeafb7396fd38859d8fda3eb483/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository metadata and README",
+        "path": "repository",
+        "symbol": "canonical public repository chetto1983/Aura; default branch master",
+        "url": "https://github.com/chetto1983/Aura"
+      },
+      {
+        "id": "feed",
+        "label": "Official master branch commit feed",
+        "path": "commits/master.atom",
+        "symbol": "current head ecc3d78c6cea6eeafb7396fd38859d8fda3eb483; feed updated 2026-11-24T10:55:55Z",
+        "url": "https://github.com/chetto1983/Aura/commits/master.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed full head commit",
+        "path": "commit",
+        "symbol": "ecc3d78c6cea6eeafb7396fd38859d8fda3eb483",
+        "url": "https://github.com/chetto1983/Aura/commit/ecc3d78c6cea6eeafb7396fd38859d8fda3eb483.patch"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "product overview, memory architecture, deployment and claimed integrations",
+        "url": "https://github.com/chetto1983/Aura/blob/ecc3d78c6cea6eeafb7396fd38859d8fda3eb483/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Architecture documentation",
+        "path": "docs/ARCHITECTURE.md",
+        "symbol": "memory ownership, runtime integration, identity and storage boundaries",
+        "url": "https://github.com/chetto1983/Aura/blob/ecc3d78c6cea6eeafb7396fd38859d8fda3eb483/docs/ARCHITECTURE.md"
+      },
+      {
+        "id": "schema",
+        "label": "Memory fact schema and bootstrap",
+        "path": "internal/arcadedb/memory.go",
+        "symbol": "bitemporal FACT edges, entities, provenance, indexes and schema initialization",
+        "url": "https://github.com/chetto1983/Aura/blob/ecc3d78c6cea6eeafb7396fd38859d8fda3eb483/internal/arcadedb/memory.go"
+      },
+      {
+        "id": "recall",
+        "label": "Unified memory recall implementation",
+        "path": "internal/arcadedb/memory_recall.go",
+        "symbol": "semantic, recent, period, open, scroll and reasoning modes; temporal filters and latency field",
+        "url": "https://github.com/chetto1983/Aura/blob/ecc3d78c6cea6eeafb7396fd38859d8fda3eb483/internal/arcadedb/memory_recall.go"
+      },
+      {
+        "id": "facts",
+        "label": "Direct fact lookup implementation",
+        "path": "internal/arcadedb/memory_facts_about.go",
+        "symbol": "entity endpoint traversal, predicate filter, as_of and bounded results",
+        "url": "https://github.com/chetto1983/Aura/blob/ecc3d78c6cea6eeafb7396fd38859d8fda3eb483/internal/arcadedb/memory_facts_about.go"
+      },
+      {
+        "id": "vector",
+        "label": "Hybrid vector and lexical retrieval",
+        "path": "internal/arcadedb/memory_vector.go",
+        "symbol": "EmbeddingGemma vectors, lexical fallback, RRF, reranking, relevance floor and bounded hydration",
+        "url": "https://github.com/chetto1983/Aura/blob/ecc3d78c6cea6eeafb7396fd38859d8fda3eb483/internal/arcadedb/memory_vector.go"
+      },
+      {
+        "id": "capture",
+        "label": "Accepted direct-evidence capture",
+        "path": "internal/arcadedb/memory_capture.go",
+        "symbol": "host-authenticated capture envelope, source validation, idempotency and provenance persistence",
+        "url": "https://github.com/chetto1983/Aura/blob/ecc3d78c6cea6eeafb7396fd38859d8fda3eb483/internal/arcadedb/memory_capture.go"
+      },
+      {
+        "id": "supersede",
+        "label": "Fact correction and superseding",
+        "path": "internal/arcadedb/memory_supersede.go",
+        "symbol": "bitemporal closure; exact fact-key correction and ambiguity refusal",
+        "url": "https://github.com/chetto1983/Aura/blob/ecc3d78c6cea6eeafb7396fd38859d8fda3eb483/internal/arcadedb/memory_supersede.go"
+      },
+      {
+        "id": "forget",
+        "label": "Source-aware deletion",
+        "path": "internal/arcadedb/forget.go",
+        "symbol": "source detachment, hard removal, dry run and orphan pruning",
+        "url": "https://github.com/chetto1983/Aura/blob/ecc3d78c6cea6eeafb7396fd38859d8fda3eb483/internal/arcadedb/forget.go"
+      },
+      {
+        "id": "tenant",
+        "label": "Per-identity ArcadeDB tenant boundary",
+        "path": "internal/arcadedb/tenant.go",
+        "symbol": "UUID validation, one database and server credential per identity",
+        "url": "https://github.com/chetto1983/Aura/blob/ecc3d78c6cea6eeafb7396fd38859d8fda3eb483/internal/arcadedb/tenant.go"
+      },
+      {
+        "id": "tools",
+        "label": "Official memory MCP tool schemas",
+        "path": "docs/arcadedb-mcp-live-tools.json",
+        "symbol": "published request/response contracts and tool descriptions for memory API",
+        "url": "https://github.com/chetto1983/Aura/blob/ecc3d78c6cea6eeafb7396fd38859d8fda3eb483/docs/arcadedb-mcp-live-tools.json"
+      },
+      {
+        "id": "delete_validation",
+        "label": "Deletion validation note",
+        "path": "docs/memory-concurrent-delete-validation.md",
+        "symbol": "upstream-reported concurrent reasoning-deletion validation, distinct from this review's measurements",
+        "url": "https://github.com/chetto1983/Aura/blob/ecc3d78c6cea6eeafb7396fd38859d8fda3eb483/docs/memory-concurrent-delete-validation.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "published security contact dvdmarchetto@gmail.com",
+        "url": "https://github.com/chetto1983/Aura/blob/ecc3d78c6cea6eeafb7396fd38859d8fda3eb483/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated roster identity and locator",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 77; identity/locator/attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Roster source attribution, identity only",
+        "path": "content/systems/aura-chetto1983.md",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/aura-chetto1983.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents Aura as a self-hosted, multi-user Go agent application with a web cockpit, CLI, Telegram channel, tools, and a Compose service stack. Memory is a subsystem of the application, exposed through its first-party authenticated ArcadeDB MCP interface, rather than a standalone memory library.",
+        "sources": [
+          "readme",
+          "architecture",
+          "tools"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Aura's Go runtime connects to ArcadeDB for graph memory, PostgreSQL for authoritative conversations and identity data, and Garage for object storage. The README describes an ArcadeDB memory service and an independent ingestion service; this review focuses on the fact and conversation-recall implementation in internal/arcadedb and the MCP contract.",
+        "sources": [
+          "readme",
+          "architecture",
+          "schema",
+          "tools"
+        ]
+      },
+      {
+        "text": "A memory fact is a directed FACT edge between named Entity vertices. The edge stores subject/predicate/object through endpoints and properties including statement, valid_from/valid_to, created_at/expired_at, fact_key, and a list of source maps. Entity names have a unique index; FACT statements have a Lucene English full-text index. A separate 768-dimension cosine LSM vector index supports dense recall.",
+        "sources": [
+          "schema",
+          "vector"
+        ]
+      },
+      {
+        "text": "The fact model has two time axes: valid_from/valid_to describe when an assertion holds in the world; created_at/expired_at describe when the system recorded and closed it. The architecture describes MENTIONS edges as retained links to historical fact records and a derived conversation projection backed by PostgreSQL-authoritative turns.",
+        "sources": [
+          "schema",
+          "architecture",
+          "recall"
+        ]
+      },
+      {
+        "text": "Memory search can return either facts or conversation turns, with bounded conversation windows around matched turns. The MCP contract includes graph path/diagnostic tools as well as write, recall, and forget operations. Graph topology is documented as structural evidence, not causality or personal importance.",
+        "sources": [
+          "recall",
+          "tools"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write. The MCP memory_upsert_fact contract accepts a structured fact, validity information, provenance and optional supersession targeting. The host can also queue an AcceptedCapture envelope for explicit facts or allowlisted durable artifacts; the capture path normalizes and validates its identity, actor, source references, conversation/tool call, confidence and idempotency key before applying it through the memory batch path. This establishes inspected write mechanisms, not ingestion quality.",
+        "sources": [
+          "tools",
+          "capture",
+          "schema"
+        ]
+      },
+      {
+        "text": "Update and correction. Facts are not overwritten in place for a correction: superseding closes the old fact's validity window and stamps its record expiry, retaining the historic edge for as_of queries. The caller can name an exact target fact_key; the legacy subject/predicate route resolves candidates and refuses both zero matches and ambiguous multiple matches rather than guessing. Exact replay can add support from another source to an existing fact.",
+        "sources": [
+          "supersede",
+          "schema",
+          "tools"
+        ]
+      },
+      {
+        "text": "Delete and retirement. memory_forget can select by source run, entity or subject/predicate/object; an empty filter is rejected. A source-specific forget removes only that source's support when other sources remain, otherwise it hard-deletes the fact edge and can prune orphan entities. A dry-run mode reports candidate counts. The inspected method does not establish whole-identity purge or erasure completeness across backups and derived stores.",
+        "sources": [
+          "forget",
+          "tools",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Retrieval. Unified recall offers semantic, recent, period, open, scroll, and reasoning modes. Semantic recall uses an exact entity edge walk when an entity is named; otherwise it fuses Lucene candidates with dense EmbeddingGemma vector neighbors using reciprocal rank fusion, then reranks and applies a relevance floor. If embedding retrieval is unavailable, it reports a lexical fallback. A bounded follow-up hydration retrieves the winning facts and their source and validity fields. Direct FactsAbout queries traverse both incoming and outgoing entity edges with an optional predicate, valid-time instant, and bounded limit.",
+        "sources": [
+          "recall",
+          "vector",
+          "facts",
+          "tools"
+        ]
+      },
+      {
+        "text": "Scope isolation. Aura maps a required valid identity UUID to one ArcadeDB database and derives a corresponding server user whose credentials cannot access other tenant databases. Empty identity input fails closed; the tenant credential requires a server secret, and the code rejects a missing/short secret rather than using a shared account. Architecture documentation also describes identity-bound PostgreSQL RLS and storage. This supports a code-level isolation design, not an isolation measurement or proof covering every deployment configuration.",
+        "sources": [
+          "tenant",
+          "architecture",
+          "readme"
+        ]
+      },
+      {
+        "text": "Provenance and evidence. Facts carry one or more source records, including run ID, referenced memory IDs, writer role, and accepted capture records with source kind/refs, conversation and tool-call IDs, observed time, and confidence. Host-side capture supplies actor identity/role; these records give recalled facts inspectable support metadata. Provenance fields do not establish that source material is true or that a generated answer correctly cites it.",
+        "sources": [
+          "schema",
+          "capture",
+          "vector",
+          "tools"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency and observability. The code declares a 768-dimensional vector index, lexical full-text index, bounded candidate/result limits, a hybrid path with batched fact hydration, and an indexed exact-entity path. Recall records backend elapsed time in its result. The project documentation describes bounded context contribution and runtime logs/metrics, while graph diagnostics bound returned node detail. These are implementation/documentation observations; they are not measured performance results from this review.",
+        "sources": [
+          "vector",
+          "facts",
+          "recall",
+          "tools",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The repository contains historical author-reported experiments and validation notes in source comments/docs (including live retrieval tuning and concurrent deletion checks). They were not reproduced here, do not describe the project's shared benchmark fixture, and are not results of this review.",
+        "sources": [
+          "vector",
+          "delete_validation"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Hybrid retrieval, exact entity lookup, relevance gating, and an explicit reasoning-mode abstention are visible in code. No benchmark probes or adjudicated answer-quality results were run for this review.",
+        "sources": [
+          "recall",
+          "vector",
+          "facts",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Bitemporal validity and explicit supersede targeting are source-visible. No correction or stale-value workload was run.",
+        "sources": [
+          "schema",
+          "supersede",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Forget can detach sources or hard-delete matching facts, but no deletion-leak workload or backup/derived-store erasure audit was performed.",
+        "sources": [
+          "forget",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Per-identity databases and server credentials with fail-closed identity validation are implemented. No cross-identity probes were run in this review.",
+        "sources": [
+          "tenant",
+          "architecture",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Fact source and capture provenance are visible, but no generated answer was adjudicated against source evidence.",
+        "sources": [
+          "schema",
+          "capture",
+          "vector",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "The recall result contains backend latency and source shows indexes, candidate limits, and bounded hydration. No timing distribution was collected here.",
+        "sources": [
+          "recall",
+          "vector",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Write and recall interfaces are present, but no ordered write-and-recall probes were executed.",
+        "sources": [
+          "capture",
+          "tools",
+          "recall",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No token or cost totals were measured for this review.",
+        "sources": [
+          "readme",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The graph schema and indexes are source-visible, but stored bytes and bytes per accepted fact were not measured.",
+        "sources": [
+          "schema",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded review inspected the official README and architecture, current fact schema, recall and vector paths, direct fact lookup, source capture, superseding, forgetting, tenant mapping, MCP schemas, and official security policy at the verified full SHA. It did not execute Aura, tests, benchmarks, or the bundled services.",
+        "sources": [
+          "readme",
+          "architecture",
+          "schema",
+          "recall",
+          "vector",
+          "facts",
+          "capture",
+          "supersede",
+          "forget",
+          "tenant",
+          "tools",
+          "security"
+        ]
+      },
+      {
+        "text": "Source inspection cannot establish answer quality, calibrated abstention, concurrent correctness, tenant isolation under all configured deployments, or complete deletion from backups and derived data. The MCP schema and README document interfaces and behavior but are not independent runtime verification.",
+        "sources": [
+          "readme",
+          "architecture",
+          "tools",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "text": "Benchmark not run. No Aura system execution, benchmark workload, or tests were run. All metric domains remain unmeasured. Project metric definitions, fixture and execution-status record describe the separate evaluation protocol and its status; fixture operation counts are not observations.",
+      "sources": [
+        "metrics",
+        "record",
+        "fixture"
+      ]
+    }
+  }
+}

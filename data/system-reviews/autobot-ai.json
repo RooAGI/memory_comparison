@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 81,
+    "slug": "autobot-ai",
+    "name": "AutoBot",
+    "repository": "https://github.com/mrveiss/AutoBot-AI",
+    "listed_repository": "https://github.com/mrveiss/AutoBot-AI",
+    "branch": "main",
+    "revision": "cb66dab5f250803c98b334ea318e27a8e119ec48",
+    "reviewed_at": "2026-11-24T23:03:34Z",
+    "review_timezone": "UTC (2026-11-24 15:03:34 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "AutoBot is a self-hosted AI platform whose memory is split across general SQLite memory, durable PostgreSQL knowledge facts and their Redis/vector projections, a Redis-backed graph, and conversation-derived trajectory and verbatim stores. This is a pinned source review, not a runtime or benchmark evaluation.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/autobot-ai.md"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/mrveiss/AutoBot-AI/blob/cb66dab5f250803c98b334ea318e27a8e119ec48/FUNDING.md",
+      "note": "Official README.md and FUNDING.md were checked. Neither publishes a contact email; FUNDING.md says the production-support contact path is pending."
+    },
+    "contact_email": null,
+    "contact_checked_sources": [
+      "https://github.com/mrveiss/AutoBot-AI/blob/cb66dab5f250803c98b334ea318e27a8e119ec48/README.md",
+      "https://github.com/mrveiss/AutoBot-AI/blob/cb66dab5f250803c98b334ea318e27a8e119ec48/FUNDING.md"
+    ],
+    "sources": [
+      {"id":"catalog","label":"Curated catalog identity and ordinal","path":"data/memory-systems.json","symbol":"systems[80], position 81; name, slug, listed repository and Atlas source attribution","url":"../data/memory-systems.json"},
+      {"id":"atlas","label":"Atlas attribution only","path":"content/systems/autobot-ai.md","symbol":"Roster source URL pinned at Atlas revision 19199a4fc249e89c0793be06f0b166b358089ba0","url":"https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/autobot-ai.md"},
+      {"id":"repo","label":"Official canonical GitHub repository","path":"","symbol":"Canonical repository mrveiss/AutoBot-AI; default branch main","url":"https://github.com/mrveiss/AutoBot-AI"},
+      {"id":"head-feed","label":"Official main branch commit feed","path":"","symbol":"Full main head reported by fresh git ls-remote and matching shallow checkout","url":"https://github.com/mrveiss/AutoBot-AI/commits/main.atom"},
+      {"id":"head","label":"Reviewed upstream head","path":"","symbol":"Full reviewed commit SHA cb66dab5f250803c98b334ea318e27a8e119ec48","url":"https://github.com/mrveiss/AutoBot-AI/commit/cb66dab5f250803c98b334ea318e27a8e119ec48"},
+      {"id":"readme","label":"Pinned official README","path":"README.md","symbol":"Project description, platform model and support entry points","url":"https://github.com/mrveiss/AutoBot-AI/blob/cb66dab5f250803c98b334ea318e27a8e119ec48/README.md"},
+      {"id":"funding","label":"Pinned official support and funding documentation","path":"FUNDING.md","symbol":"Production-support contact path and support tiers","url":"https://github.com/mrveiss/AutoBot-AI/blob/cb66dab5f250803c98b334ea318e27a8e119ec48/FUNDING.md"},
+      {"id":"general","label":"General SQLite memory storage","path":"autobot-backend/memory/storage/general_storage.py","symbol":"Owner validation, SQLite schema, owner/category retrieval and delete","url":"https://github.com/mrveiss/AutoBot-AI/blob/cb66dab5f250803c98b334ea318e27a8e119ec48/autobot-backend/memory/storage/general_storage.py"},
+      {"id":"models","label":"Memory and task data models","path":"autobot-backend/memory/models.py","symbol":"MemoryEntry and TaskExecutionRecord fields","url":"https://github.com/mrveiss/AutoBot-AI/blob/cb66dab5f250803c98b334ea318e27a8e119ec48/autobot-backend/memory/models.py"},
+      {"id":"task-store","label":"Task storage","path":"autobot-backend/memory/storage/task_storage.py","symbol":"Task execution history persistence","url":"https://github.com/mrveiss/AutoBot-AI/blob/cb66dab5f250803c98b334ea318e27a8e119ec48/autobot-backend/memory/storage/task_storage.py"},
+      {"id":"facts","label":"Knowledge fact management","path":"autobot-backend/knowledge/facts.py","symbol":"Fact metadata/provenance, writes, updates, deletion, vectorization status and failure handling","url":"https://github.com/mrveiss/AutoBot-AI/blob/cb66dab5f250803c98b334ea318e27a8e119ec48/autobot-backend/knowledge/facts.py"},
+      {"id":"projection","label":"Durable fact store and projections","path":"autobot-backend/knowledge/fact_projection.py","symbol":"PostgreSQL authoritative facts and rebuildable Redis/vector projections","url":"https://github.com/mrveiss/AutoBot-AI/blob/cb66dab5f250803c98b334ea318e27a8e119ec48/autobot-backend/knowledge/fact_projection.py"},
+      {"id":"search","label":"Knowledge search","path":"autobot-backend/knowledge/search.py","symbol":"Knowledge retrieval and composed search strategies","url":"https://github.com/mrveiss/AutoBot-AI/blob/cb66dab5f250803c98b334ea318e27a8e119ec48/autobot-backend/knowledge/search.py"},
+      {"id":"filters","label":"Knowledge permissions and principal filters","path":"autobot-backend/knowledge/search_filters.py","symbol":"Owner, visibility, organization, group and shared-access filtering","url":"https://github.com/mrveiss/AutoBot-AI/blob/cb66dab5f250803c98b334ea318e27a8e119ec48/autobot-backend/knowledge/search_filters.py"},
+      {"id":"essential","label":"Essential Story retrieval","path":"autobot-backend/memory/essential_story.py","symbol":"Bounded fact scan, principal filtering, quality/reinforcement ranking and prompt token budget","url":"https://github.com/mrveiss/AutoBot-AI/blob/cb66dab5f250803c98b334ea318e27a8e119ec48/autobot-backend/memory/essential_story.py"},
+      {"id":"quarantine","label":"Research quarantine","path":"autobot-backend/knowledge/quarantine.py","symbol":"Quarantine helper and privileged-read audit boundary","url":"https://github.com/mrveiss/AutoBot-AI/blob/cb66dab5f250803c98b334ea318e27a8e119ec48/autobot-backend/knowledge/quarantine.py"},
+      {"id":"trajectory","label":"Trajectory memory store","path":"autobot-backend/memory/trajectory_store.py","symbol":"Trajectory model, writes, similarity retrieval, scope predicates and query timing","url":"https://github.com/mrveiss/AutoBot-AI/blob/cb66dab5f250803c98b334ea318e27a8e119ec48/autobot-backend/memory/trajectory_store.py"},
+      {"id":"verbatim","label":"Verbatim conversation store","path":"autobot-backend/memory/verbatim_store.py","symbol":"Append-only conversation chunks, search scope and retention design","url":"https://github.com/mrveiss/AutoBot-AI/blob/cb66dab5f250803c98b334ea318e27a8e119ec48/autobot-backend/memory/verbatim_store.py"},
+      {"id":"stop-hook","label":"Chat turn completion hook","path":"autobot-backend/chat_workflow/stop_hook.py","symbol":"Background task enqueue for verbatim writes and fact extraction; trajectory capture","url":"https://github.com/mrveiss/AutoBot-AI/blob/cb66dab5f250803c98b334ea318e27a8e119ec48/autobot-backend/chat_workflow/stop_hook.py"},
+      {"id":"chat-handler","label":"Chat LLM handler","path":"autobot-backend/chat_workflow/llm_handler.py","symbol":"Knowledge, Essential Story and trajectory context retrieval paths","url":"https://github.com/mrveiss/AutoBot-AI/blob/cb66dab5f250803c98b334ea318e27a8e119ec48/autobot-backend/chat_workflow/llm_handler.py"},
+      {"id":"transparency","label":"Memory privacy and transparency operations","path":"autobot-backend/memory/transparency.py","symbol":"Six-store list/export/forget operation set","url":"https://github.com/mrveiss/AutoBot-AI/blob/cb66dab5f250803c98b334ea318e27a8e119ec48/autobot-backend/memory/transparency.py"},
+      {"id":"graph-scope","label":"Memory graph owner scope","path":"autobot-backend/autobot_memory_graph/owner_scope.py","symbol":"Required OwnerScope and explicit cross-owner system sentinel","url":"https://github.com/mrveiss/AutoBot-AI/blob/cb66dab5f250803c98b334ea318e27a8e119ec48/autobot-backend/autobot_memory_graph/owner_scope.py"},
+      {"id":"monitor","label":"Memory monitoring","path":"autobot-backend/memory/monitor.py","symbol":"Memory/storage monitoring surface","url":"https://github.com/mrveiss/AutoBot-AI/blob/cb66dab5f250803c98b334ea318e27a8e119ec48/autobot-backend/memory/monitor.py"},
+      {"id":"metrics","label":"Project metric definitions","path":"METRICS.md","symbol":"Proposed recall, correction, deletion, scope, evidence, latency, token, cost and storage metrics","url":"../METRICS.md"},
+      {"id":"fixture","label":"Project benchmark fixture","path":"fixtures/memory-benchmark-v1.json","symbol":"Versioned planned workload cases, not results","url":"../fixtures/memory-benchmark-v1.json"},
+      {"id":"status","label":"Initial benchmark execution status","path":"results/initial-baselines-status.json","symbol":"Project benchmark execution status; not an AutoBot result","url":"../results/initial-baselines-status.json"}
+    ],
+    "who_what": [
+      {"text":"The public repository is under GitHub account mrveiss. Its README describes AutoBot as a self-hosted AI platform with chat, a RAG knowledge base, knowledge graph, LLM gateway, management layer and installable modules; it is a platform and service stack rather than a standalone memory library.","sources":["repo","readme"]}
+    ],
+    "architecture": [
+      {"text":"General memory uses a SQLite memory_entries table with category, content, JSON metadata, timestamp, reference path, embedding and required user_id. Task history is a distinct record with lifecycle, timing, agent, input/output, error and relationship fields.","sources":["general","models","task-store"]},
+      {"text":"Knowledge facts are persisted through the fact store before Redis and ChromaDB projections. The source identifies the PostgreSQL knowledge_facts row as authoritative; vectorization status and reconciliation state are tracked separately from the durable fact.","sources":["facts","projection"]},
+      {"text":"Conversation turns feed background verbatim and fact-extraction tasks, with a separate trajectory-capture path. Graph entities/relations, Redis working memory, vector trajectories and verbatim chunks are separate lanes with separate interfaces and scope rules.","sources":["stop-hook","trajectory","verbatim","graph-scope"]}
+    ],
+    "behavior": [
+      {"text":"General-memory writes require a nonblank user_id and reject the reserved legacy owner for new writes; reads and deletes use owner-scoped predicates. Fact writes sanitize content/metadata, attach provenance defaults and identifiers, persist the durable row, then update Redis and ChromaDB projections.","sources":["general","facts","projection"]},
+      {"text":"Fact updates merge sanitized metadata and changed content into the durable row before refreshing projections. Fact deletion removes the durable row first and then cleans Redis mappings and the Chroma vector; vector-store deletion errors are logged. Chat turn completion enqueues verbatim writes and fact extraction asynchronously.","sources":["facts","projection","stop-hook"]},
+      {"text":"Retrieval is multi-lane: general-memory search; knowledge search with vector/lexical/hybrid components and permission-aware filters; an Essential Story scan capped at 200 facts with principal filtering and a model token budget; trajectory similarity search with reward filtering and optional tenant/user predicates; and separate verbatim retrieval.","sources":["search","filters","essential","trajectory","verbatim"]},
+      {"text":"The memory privacy API enumerates verbatim, trajectory, working-memory, graph, retrieval-learner and general stores. The knowledge-fact store is not in that set, so this operation is not a single complete erase across every memory lane.","sources":["transparency","facts"]}
+    ],
+    "metrics": [
+      {"domain":"Answerable retrieval and abstention","status":"unmeasured","evidence":"Multiple retrieval lanes and a bounded essential-fact prompt context are visible in source. No answerability or abstention workload was run.","sources":["search","essential","trajectory"]},
+      {"domain":"Correction accuracy and staleness","status":"unmeasured","evidence":"Fact update and verification/quarantine paths are present. No correction accuracy or stale-value probes were run.","sources":["facts","quarantine"]},
+      {"domain":"Deletion leakage","status":"unmeasured","evidence":"Fact deletion and six-store privacy handling are visible, but the latter omits knowledge facts; no residual-copy probes were run.","sources":["facts","transparency"]},
+      {"domain":"Scope isolation","status":"unmeasured","evidence":"Required owner/principal filters exist in multiple lanes; no cross-user or cross-tenant isolation workload was run.","sources":["general","filters","graph-scope","trajectory"]},
+      {"domain":"Evidence support and citation coverage","status":"unmeasured","evidence":"Facts carry provenance fields and chat can return citations; no source-support adjudication was performed.","sources":["facts","chat-handler"]},
+      {"domain":"Latency and write-to-recall delay","status":"unmeasured","evidence":"Background enqueues, trajectory query timing and vectorization status are source-visible; no latency or delay measurements were collected.","sources":["stop-hook","trajectory","facts"]},
+      {"domain":"Tokens, cost and storage","status":"unmeasured","evidence":"Essential-story token budgets and memory monitoring/counters exist in source; no memory-attributed token, cost or storage measurements were collected.","sources":["essential","monitor","facts"]}
+    ],
+    "limits": [
+      {"text":"This is a bounded inspection of selected documentation and code at one verified head. It does not establish end-to-end correctness, citation quality, complete deletion across backups or every store, partial-projection behavior in production, cross-tenant isolation across every route, latency, or reliability under load.","sources":["readme","projection","transparency","filters"]},
+      {"text":"Each lane has distinct mutation, retention, scope and provenance behavior. In particular, the privacy forget-everywhere operation covers six listed stores and not the knowledge-fact store.","sources":["transparency","facts","general","trajectory","verbatim"]},
+      {"text":"The benchmark and runtime outcomes remain unknown because AutoBot, benchmark workloads and tests were not run for this review.","sources":["metrics","fixture","status"]}
+    ],
+    "benchmark": [
+      {"text":"Benchmark not run. This review did not execute AutoBot, benchmark workloads, or tests.","sources":["metrics","fixture","status"]},
+      {"text":"Project metric definitions and versioned fixture are proposed measurement procedures, not measured results for AutoBot.","sources":["metrics","fixture","status"]}
+    ]
+  }
+}

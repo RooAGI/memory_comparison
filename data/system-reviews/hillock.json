@@ -1,0 +1,343 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 295,
+    "slug": "hillock",
+    "name": "Hillock",
+    "repository": "https://github.com/roandejager/Hillock",
+    "listed_repository": "https://github.com/roandejager/Hillock",
+    "branch": "master",
+    "revision": "b5e2569ab3aafe1a076c6787c82f6d7d65b82431",
+    "reviewed_at": "2026-11-25T22:58:46Z",
+    "review_timezone": "UTC (checked 2026-11-25 14:58:46 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Hillock is a local neuro-symbolic memory engine combining a SQLite fact graph, Hebbian associations, and hyperdimensional retrieval gating. This source-based review does not claim runtime or benchmark results.",
+    "atlas_locator": {
+      "ordinal": 295,
+      "name": "Hillock",
+      "slug": "hillock",
+      "listed_repository": "https://github.com/roandejager/Hillock",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hillock.md",
+      "revision": "92eebfb9caf42a75ec89a678c26e67c3c94c0845"
+    },
+    "contact": {
+      "email": "contact.roandejager@gmail.com",
+      "source_url": "https://github.com/roandejager/Hillock/blob/b5e2569ab3aafe1a076c6787c82f6d7d65b82431/README.md",
+      "checked_urls": [
+        "https://github.com/roandejager/Hillock/blob/b5e2569ab3aafe1a076c6787c82f6d7d65b82431/README.md"
+      ],
+      "note": "The official pinned README publishes this address for enterprise licensing inquiries. No commit/profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": "contact.roandejager@gmail.com",
+    "contact_email_source_url": "https://github.com/roandejager/Hillock/blob/b5e2569ab3aafe1a076c6787c82f6d7d65b82431/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/roandejager/Hillock/blob/b5e2569ab3aafe1a076c6787c82f6d7d65b82431/README.md"
+    ],
+    "contact_email_note": "Official pinned README lists contact.roandejager@gmail.com for enterprise licensing inquiries.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[294], ordinal 295; identity, explicit listed locator, Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/hillock.md",
+        "symbol": "Pinned roster attribution for identity and locator only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hillock.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "GitHub repository page",
+        "symbol": "Canonical repository roandejager/Hillock; default branch master",
+        "url": "https://github.com/roandejager/Hillock"
+      },
+      {
+        "id": "head",
+        "label": "Official current branch commit",
+        "path": "GitHub commits API",
+        "symbol": "Current master head b5e2569ab3aafe1a076c6787c82f6d7d65b82431; commit timestamp 2026-11-05T13:44:31Z",
+        "url": "https://api.github.com/repos/roandejager/Hillock/commits/master"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product overview, architecture, integrations, benchmark descriptions, and enterprise licensing contact",
+        "url": "https://github.com/roandejager/Hillock/blob/b5e2569ab3aafe1a076c6787c82f6d7d65b82431/README.md"
+      },
+      {
+        "id": "database",
+        "label": "Pinned SQLite graph store",
+        "path": "database.py",
+        "symbol": "SQLite schema, triple writes and reads, deletion/reset, aliases, merge, reservoir persistence",
+        "url": "https://github.com/roandejager/Hillock/blob/b5e2569ab3aafe1a076c6787c82f6d7d65b82431/database.py"
+      },
+      {
+        "id": "engine",
+        "label": "Pinned memory engine",
+        "path": "engine.py",
+        "symbol": "Query processing, entity resolution, verified fact selection, mutation, orchestration and rendering",
+        "url": "https://github.com/roandejager/Hillock/blob/b5e2569ab3aafe1a076c6787c82f6d7d65b82431/engine.py"
+      },
+      {
+        "id": "ingestor",
+        "label": "Pinned document ingestor",
+        "path": "ingestor.py",
+        "symbol": "Path checks, document extraction, triple writes, reservoir creation, timing instrumentation",
+        "url": "https://github.com/roandejager/Hillock/blob/b5e2569ab3aafe1a076c6787c82f6d7d65b82431/ingestor.py"
+      },
+      {
+        "id": "plasticity",
+        "label": "Pinned Hebbian association engine",
+        "path": "plasticity.py",
+        "symbol": "Co-activation update, decay, and association retrieval",
+        "url": "https://github.com/roandejager/Hillock/blob/b5e2569ab3aafe1a076c6787c82f6d7d65b82431/plasticity.py"
+      },
+      {
+        "id": "reservoir",
+        "label": "Pinned hyperdimensional reservoir",
+        "path": "reservoir.py",
+        "symbol": "Packed vector representation, similarity functions and path binding",
+        "url": "https://github.com/roandejager/Hillock/blob/b5e2569ab3aafe1a076c6787c82f6d7d65b82431/reservoir.py"
+      },
+      {
+        "id": "api",
+        "label": "Pinned FastAPI surface",
+        "path": "api.py",
+        "symbol": "Health/model endpoints, chat completion, streaming, one engine instance and loopback binding",
+        "url": "https://github.com/roandejager/Hillock/blob/b5e2569ab3aafe1a076c6787c82f6d7d65b82431/api.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Assessment metric domains and measurement protocol",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Synthetic benchmark cases and expected outcomes; not Hillock results",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared benchmark status; not a Hillock result",
+        "url": "../../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents Hillock as a local memory engine with Python, CLI, and OpenAI-compatible FastAPI interfaces; local Ollama rendering is optional.",
+        "sources": [
+          "readme",
+          "api"
+        ]
+      },
+      {
+        "text": "The reviewed code combines a SQLite graph, Hebbian association storage, and a hyperdimensional reservoir in IntegratedHillock.",
+        "sources": [
+          "engine",
+          "database",
+          "plasticity",
+          "reservoir"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "SQLite stores entity records, subject-predicate-object relations, Hebbian weights, aliases, and compact document reservoir blobs; relations carry source-document labels, confidence, and creation time.",
+        "sources": [
+          "database"
+        ]
+      },
+      {
+        "text": "IntegratedHillock links query entities, fetches candidate triples, applies hypervector and predicate checks, and renders passing facts; the graph store, plasticity engine, and reservoir are composed as separate modules.",
+        "sources": [
+          "engine",
+          "database",
+          "plasticity",
+          "reservoir"
+        ]
+      },
+      {
+        "text": "Document ingestion reads text or PDF within the project directory, routes text through TALON, writes extracted relations, and stores bound multi-hop path vectors keyed by document basename.",
+        "sources": [
+          "ingestor",
+          "database"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The relation batch writer ensures endpoint entities exist and performs inserts/replacements transactionally. Configured single-valued predicates remove an existing subject-predicate value before inserting its replacement.",
+        "sources": [
+          "database"
+        ]
+      },
+      {
+        "text": "Correction paths include explicit relation replacement, pronoun-fact removal followed by human-disambiguated insertion, entity merge with relation/association migration, and whole-database reset. These do not establish backup or replica erasure.",
+        "sources": [
+          "engine",
+          "database"
+        ]
+      },
+      {
+        "text": "Recall links query strings to entity identifiers, fetches relations touching them, then scores candidates by hypervector similarity and predicate alignment before choosing facts for response rendering.",
+        "sources": [
+          "engine",
+          "database",
+          "reservoir"
+        ]
+      },
+      {
+        "text": "Hebbian updates strengthen co-active entity pairs and decay inactive pairs; association lookup can prime related concepts during answering.",
+        "sources": [
+          "plasticity",
+          "engine"
+        ]
+      },
+      {
+        "text": "The inspected API initializes one engine/database instance, exposes OpenAI-style chat responses and streaming, and returns zero-valued token usage fields rather than measured usage.",
+        "sources": [
+          "api"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval, abstention, and negative controls",
+        "status": "unmeasured",
+        "evidence": "The fact gate and refusal paths were inspected; no answerable or unanswerable queries were run or scored.",
+        "sources": [
+          "engine",
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Overwrite, disambiguation, alias, and merge paths were inspected; no correction probes were run.",
+        "sources": [
+          "database",
+          "engine",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Targeted row/entity deletion and reset paths exist; no post-deletion probes or backup/copy checks were run.",
+        "sources": [
+          "database",
+          "engine",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "The inspected schema has no tenant or project key and the API creates one engine instance; no cross-scope workload was executed.",
+        "sources": [
+          "database",
+          "api",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source labels and renderer prompts were inspected; no output claims were adjudicated against stored source passages.",
+        "sources": [
+          "database",
+          "engine",
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Source includes timing instrumentation and upstream timing claims; this review collected no runtime timing samples.",
+        "sources": [
+          "ingestor",
+          "engine",
+          "readme",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "API token usage is hard-coded to zero and no provider charge or persistent storage measurement was collected.",
+        "sources": [
+          "api",
+          "database",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The relation schema records a source label, confidence, and timestamp but does not retain evidence spans, a trust state, or a mutation history.",
+        "sources": [
+          "database",
+          "ingestor"
+        ]
+      },
+      {
+        "text": "Relation correction and entity merge are implemented, but full erasure from backups, external copies, or downstream consumers was not established.",
+        "sources": [
+          "database",
+          "engine"
+        ]
+      },
+      {
+        "text": "No tenant, project, or user key appears in the inspected schema, and no authentication layer appears in the inspected API source; multi-user isolation is not established.",
+        "sources": [
+          "database",
+          "api"
+        ]
+      },
+      {
+        "text": "The README describes extraction throughput, memory footprint, similarity latency, and refusal behavior; those statements are upstream claims and were not reproduced.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "Extraction quality, retrieval accuracy, abstention, citation support, and model behavior remain unknown because no runtime workload was run.",
+        "sources": [
+          "engine",
+          "ingestor",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Hillock runtime, tests, or benchmark workload was run. Source observations and upstream README claims are not Hillock benchmark results."
+    }
+  }
+}

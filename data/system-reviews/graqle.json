@@ -1,0 +1,368 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 274,
+    "slug": "graqle",
+    "name": "GraQle",
+    "repository": "https://github.com/quantamixsol/graqle",
+    "listed_repository": "https://github.com/quantamixsol/graqle",
+    "branch": "master",
+    "revision": "434ca7a4bcb71c56058db565e3d7aeb87fdbb30c",
+    "reviewed_at": "2026-11-25T22:00:28Z",
+    "review_timezone": "UTC (checked 2026-11-25 14:00:28 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "GraQle is a Python knowledge-graph and agent reasoning framework. Its durable project graph and separate in-process reasoning-round memory have distinct storage and scope models. This review is based on pinned public source and documentation; no runtime or benchmark result is claimed.",
+    "atlas_locator": {
+      "ordinal": 274,
+      "name": "GraQle",
+      "slug": "graqle",
+      "listed_repository": "https://github.com/quantamixsol/graqle",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/graqle.md",
+      "revision": "04f05a60c8b8d2a887c6d0fbb465e83be883888c"
+    },
+    "contact": {
+      "email": "security@quantamixsolutions.com",
+      "source_url": "https://github.com/quantamixsol/graqle/blob/434ca7a4bcb71c56058db565e3d7aeb87fdbb30c/README.md",
+      "checked_urls": [
+        "https://github.com/quantamixsol/graqle/blob/434ca7a4bcb71c56058db565e3d7aeb87fdbb30c/README.md"
+      ],
+      "note": "The official pinned README publishes this address for vulnerability reports. No commit/profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": "security@quantamixsolutions.com",
+    "contact_email_source_url": "https://github.com/quantamixsol/graqle/blob/434ca7a4bcb71c56058db565e3d7aeb87fdbb30c/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/quantamixsol/graqle/blob/434ca7a4bcb71c56058db565e3d7aeb87fdbb30c/README.md"
+    ],
+    "contact_email_note": "Official pinned README lists security@quantamixsolutions.com for vulnerability reports.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[273], ordinal 274; identity, explicit listed repository locator, Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/graqle.md",
+        "symbol": "Pinned attribution for roster identity and locator only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/graqle.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "GitHub repository page",
+        "symbol": "Canonical repository quantamixsol/graqle; default branch master",
+        "url": "https://github.com/quantamixsol/graqle"
+      },
+      {
+        "id": "head",
+        "label": "Official current branch commit",
+        "path": "GitHub commits API",
+        "symbol": "Official master head 434ca7a4bcb71c56058db565e3d7aeb87fdbb30c; commit date 2026-11-19T16:38:29Z; independently matched shallow checkout",
+        "url": "https://api.github.com/repos/quantamixsol/graqle/commits/master"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product and architecture overview, memory workflow, MCP deployment, upstream-reported memory figures, and published security email",
+        "url": "https://github.com/quantamixsol/graqle/blob/434ca7a4bcb71c56058db565e3d7aeb87fdbb30c/README.md"
+      },
+      {
+        "id": "graph",
+        "label": "Pinned core graph source",
+        "path": "graqle/core/graph.py",
+        "symbol": "Graph representation, load/save, backend tiers, graph operations, activation, reasoning, and metrics",
+        "url": "https://github.com/quantamixsol/graqle/blob/434ca7a4bcb71c56058db565e3d7aeb87fdbb30c/graqle/core/graph.py"
+      },
+      {
+        "id": "node",
+        "label": "Pinned graph node source",
+        "path": "graqle/core/node.py",
+        "symbol": "Node data fields, properties and chunks used for context and evidence",
+        "url": "https://github.com/quantamixsol/graqle/blob/434ca7a4bcb71c56058db565e3d7aeb87fdbb30c/graqle/core/node.py"
+      },
+      {
+        "id": "learn",
+        "label": "Pinned learning commands",
+        "path": "graqle/cli/commands/learn.py",
+        "symbol": "Node, entity, file, and knowledge writes and metadata",
+        "url": "https://github.com/quantamixsol/graqle/blob/434ca7a4bcb71c56058db565e3d7aeb87fdbb30c/graqle/cli/commands/learn.py"
+      },
+      {
+        "id": "memory",
+        "label": "Pinned reasoning memory",
+        "path": "graqle/reasoning/memory.py",
+        "symbol": "Tenant-bound round memory, writes, contradiction detection, decay, summaries, retrieval and snapshots",
+        "url": "https://github.com/quantamixsol/graqle/blob/434ca7a4bcb71c56058db565e3d7aeb87fdbb30c/graqle/reasoning/memory.py"
+      },
+      {
+        "id": "memory-types",
+        "label": "Pinned provenance entry model",
+        "path": "graqle/core/memory_types.py",
+        "symbol": "ProvenanceEntry, TRACE scores, confidence decay and clearance redaction",
+        "url": "https://github.com/quantamixsol/graqle/blob/434ca7a4bcb71c56058db565e3d7aeb87fdbb30c/graqle/core/memory_types.py"
+      },
+      {
+        "id": "tenant",
+        "label": "Pinned tenant validation",
+        "path": "graqle/core/tenant.py",
+        "symbol": "Tenant ID normalization, accepted forms, and explicit existence/authorization boundary",
+        "url": "https://github.com/quantamixsol/graqle/blob/434ca7a4bcb71c56058db565e3d7aeb87fdbb30c/graqle/core/tenant.py"
+      },
+      {
+        "id": "memory-service",
+        "label": "Pinned memory service factory",
+        "path": "graqle/reasoning/memory_service.py",
+        "symbol": "Per-tenant instance registry and configuration boundaries",
+        "url": "https://github.com/quantamixsol/graqle/blob/434ca7a4bcb71c56058db565e3d7aeb87fdbb30c/graqle/reasoning/memory_service.py"
+      },
+      {
+        "id": "tiers",
+        "label": "Pinned storage tier facade",
+        "path": "graqle/storage/tiers.py",
+        "symbol": "Local JSON primary store and optional Neo4j/Neptune projections",
+        "url": "https://github.com/quantamixsol/graqle/blob/434ca7a4bcb71c56058db565e3d7aeb87fdbb30c/graqle/storage/tiers.py"
+      },
+      {
+        "id": "multi-agent",
+        "label": "Pinned shared-server guide",
+        "path": "docs/run-many-agents-on-one-graph.md",
+        "symbol": "Workspace roots, per-session gates, multi-project graph separation and upstream fixture-specific RSS figures",
+        "url": "https://github.com/quantamixsol/graqle/blob/434ca7a4bcb71c56058db565e3d7aeb87fdbb30c/docs/run-many-agents-on-one-graph.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Assessment metric domains and measurement protocol",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Synthetic benchmark cases and expected outcomes; not GraQle results",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared benchmark status; not a GraQle result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README identifies Quantamix Solutions as the builder and presents GraQle as a persistent knowledge graph and reasoning framework for agents.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The reviewed product has CLI, Python, MCP, and server surfaces; local project graph persistence and in-process reasoning-round memory are separate components.",
+        "sources": [
+          "readme",
+          "graph",
+          "memory"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Graqle stores typed CogniNode records and CogniEdge relations in a NetworkX graph, with graph JSON as the primary persistence tier and optional Neo4j and Neptune projections.",
+        "sources": [
+          "graph",
+          "node",
+          "tiers"
+        ]
+      },
+      {
+        "text": "The learn commands create knowledge, entity, node, and file records with domain, tag, source, path, or timestamp properties and can add inferred semantic or keyword connections.",
+        "sources": [
+          "learn"
+        ]
+      },
+      {
+        "text": "ReasoningMemory is a separate in-process store keyed by agent, round, and node, with tenant-bound entry dictionaries and a bounded per-tenant snapshot history.",
+        "sources": [
+          "memory",
+          "memory-service"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Learning commands add or replace graph nodes and add edges; the inspected CLI read/modify/write path uses a file lock, while serialization validates graph structure and writes the node-link JSON representation under a cross-platform lock.",
+        "sources": [
+          "learn",
+          "graph"
+        ]
+      },
+      {
+        "text": "The inspected core graph operations expose node and edge additions but no first-class delete/forget operation was located in those operations or the learn commands. Erasure from replicas or backups was not established.",
+        "sources": [
+          "graph",
+          "learn",
+          "tiers"
+        ]
+      },
+      {
+        "text": "Reasoning activates a selected subgraph through a configured ranking and backend, then sends it to an orchestrator. The path supports direct filename lookup, semantic activation memory boosts, and other activator strategies.",
+        "sources": [
+          "graph"
+        ]
+      },
+      {
+        "text": "Round memory stores result values with agent, round, node, confidence, clearance, and TRACE metadata; it counts differing agent findings on the same node as contradictions and applies configurable confidence decay.",
+        "sources": [
+          "memory",
+          "memory-types"
+        ]
+      },
+      {
+        "text": "Memory summaries decay and confidence-filter entries, rank by confidence, redact values above viewer clearance, and cap output at 8,000 characters. Snapshots and rollback are scoped to the bound tenant slice.",
+        "sources": [
+          "memory",
+          "memory-types"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Graph activation and reasoning paths were inspected; no benchmark answers were generated or scored.",
+        "sources": [
+          "graph",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Confidence decay, contradiction tracking, and graph update behavior were inspected; no correction probes were run.",
+        "sources": [
+          "learn",
+          "memory",
+          "memory-types",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No first-class graph delete path was located in the inspected operations; no post-delete probes were run.",
+        "sources": [
+          "graph",
+          "learn",
+          "tiers",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Tenant validation and binding plus documented project separation were inspected; no cross-tenant or cross-project workload was executed.",
+        "sources": [
+          "tenant",
+          "memory",
+          "memory-service",
+          "multi-agent",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Provenance fields and citation instructions were inspected; no returned claim was adjudicated against source text.",
+        "sources": [
+          "node",
+          "memory-types",
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No runtime timing samples were collected.",
+        "sources": [
+          "graph",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "The code includes result/graph metrics and the README reports a fixture-specific RSS comparison; no GraQle token, cost, or persistent-storage measurements were collected in this review.",
+        "sources": [
+          "graph",
+          "readme",
+          "multi-agent",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The persistent project graph and in-memory reasoning-round store have distinct persistence, lifecycle, and scope behavior; neither component's properties should be generalized to every product surface.",
+        "sources": [
+          "graph",
+          "memory",
+          "memory-service"
+        ]
+      },
+      {
+        "text": "Tenant IDs are normalized and instances bind to one tenant, but validation does not assert tenant existence and the code delegates authorization to callers. Non-default scope is gated by an environment variable.",
+        "sources": [
+          "tenant",
+          "memory",
+          "memory-service"
+        ]
+      },
+      {
+        "text": "Clearance redaction replaces the protected value while retaining source-agent identity, confidence, and TRACE metadata; metadata exposure may matter to a deployment's threat model.",
+        "sources": [
+          "memory-types"
+        ]
+      },
+      {
+        "text": "The inspected graph operations and learn commands did not expose a first-class delete path. Deletion, replica cleanup, and backup erasure remain unknown.",
+        "sources": [
+          "graph",
+          "learn",
+          "tiers"
+        ]
+      },
+      {
+        "text": "Source and provenance fields and citation prompts do not establish factual correctness or evidence entailment. The upstream RSS comparison is tied to its documented fixture and was not reproduced.",
+        "sources": [
+          "readme",
+          "node",
+          "memory-types",
+          "multi-agent"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No GraQle runtime, tests, or benchmark workload was run. Source observations, upstream-reported RSS figures, and project evaluation definitions are not GraQle benchmark results."
+    }
+  }
+}

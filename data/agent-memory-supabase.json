@@ -1,0 +1,300 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "agent-memory-supabase",
+    "name": "Agent Memory on Supabase",
+    "repository": "https://github.com/reescalder/agent-memory-supabase",
+    "branch": "main",
+    "revision": "a67f2bb3bc7f0b2084fc63531acbc99b7c259f2e",
+    "reviewed_at": "2026-11-23T23:56:04Z",
+    "review_timezone": "UTC (checked 2026-11-23 15:56:04 America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "A JavaScript client and MCP server over a Supabase Postgres memory table, combining vector, full-text, and entity retrieval with explicit validity and soft-retirement fields. This is a pinned source review; it does not establish runtime quality, isolation, deletion completeness, or performance.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/reescalder/agent-memory-supabase"
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical repository and reviewed head",
+        "path": "repository",
+        "symbol": "default branch main; head a67f2bb3bc7f0b2084fc63531acbc99b7c259f2e",
+        "url": "https://github.com/reescalder/agent-memory-supabase/tree/a67f2bb3bc7f0b2084fc63531acbc99b7c259f2e"
+      },
+      {
+        "id": "readme",
+        "label": "README",
+        "path": "README.md",
+        "symbol": "project description; API; retrieval flow; design boundaries",
+        "url": "https://github.com/reescalder/agent-memory-supabase/blob/a67f2bb3bc7f0b2084fc63531acbc99b7c259f2e/README.md"
+      },
+      {
+        "id": "package",
+        "label": "Package metadata",
+        "path": "package.json",
+        "symbol": "name; author; package entry; MCP command",
+        "url": "https://github.com/reescalder/agent-memory-supabase/blob/a67f2bb3bc7f0b2084fc63531acbc99b7c259f2e/package.json"
+      },
+      {
+        "id": "client",
+        "label": "JavaScript memory client",
+        "path": "src/client.js",
+        "symbol": "MemoryStore.embed; extractEntities; store; recall; timeline; forget; history",
+        "url": "https://github.com/reescalder/agent-memory-supabase/blob/a67f2bb3bc7f0b2084fc63531acbc99b7c259f2e/src/client.js"
+      },
+      {
+        "id": "mcp",
+        "label": "MCP tools",
+        "path": "src/mcp-tools.js",
+        "symbol": "registerMemoryTools; recall/store/timeline/history/forget result formatting",
+        "url": "https://github.com/reescalder/agent-memory-supabase/blob/a67f2bb3bc7f0b2084fc63531acbc99b7c259f2e/src/mcp-tools.js"
+      },
+      {
+        "id": "schema",
+        "label": "Postgres schema and functions",
+        "path": "sql/schema.sql",
+        "symbol": "memories; indexes; update_memories_updated_at; search_memories; dedup; memory_timeline; memory_history",
+        "url": "https://github.com/reescalder/agent-memory-supabase/blob/a67f2bb3bc7f0b2084fc63531acbc99b7c259f2e/sql/schema.sql"
+      },
+      {
+        "id": "rls",
+        "label": "Optional row-level security policies",
+        "path": "sql/rls.sql",
+        "symbol": "per-user and public-read-only example postures",
+        "url": "https://github.com/reescalder/agent-memory-supabase/blob/a67f2bb3bc7f0b2084fc63531acbc99b7c259f2e/sql/rls.sql"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "./METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "./results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "./fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Ordinal roster and locator snapshot",
+        "path": "data/memory-systems.json",
+        "url": "./data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The repository README presents a small JavaScript MemoryStore over a Supabase Postgres schema, with an MCP server exposing the store to compatible agents. package.json names Rees Calder as package author. These source descriptions do not establish a hosted product or runtime deployment.",
+        "sources": [
+          "repo",
+          "readme",
+          "package",
+          "client",
+          "mcp"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Code observation: sql/schema.sql defines one memories table with content, a 1536-dimensional embedding, nine-valued memory_type, nullable project namespace, tags, importance, source, JSONB entities and metadata, record timestamps, valid_from/valid_until, expires_at, superseded_by, active, and retrieval access counters. It creates HNSW cosine, full-text GIN, trigram, entity, project/type, active and temporal indexes.",
+        "sources": [
+          "schema"
+        ]
+      },
+      {
+        "text": "Code observation: MemoryStore embeds through OpenAI text-embedding-3-small. Optional named-entity extraction uses gpt-4o-mini; it is skipped for short text and transcripts and catches failures so extraction does not block storage. The repository also exposes recall, store, timeline, history and forget MCP tools that format returned memory identifiers and selected metadata.",
+        "sources": [
+          "client",
+          "mcp",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write and duplicate handling: store embeds the new content and checks an active semantic near-duplicate using same project/type and a default cosine threshold of 0.95. A match updates content, importance, metadata and tags in place; otherwise the client may extract entities, insert a row and optionally link a superseded row. SQL also defines find_snapshot_duplicate for long recent fact/pattern rows, but the inspected store path does not call it. The in-place dedup update does not refresh the existing embedding, so content/vector alignment is not guaranteed on that path.",
+        "sources": [
+          "client",
+          "schema"
+        ]
+      },
+      {
+        "text": "Correction and history: callers can explicitly pass supersedes; the client closes the old row's validity window, marks it inactive, inserts the new row and then writes superseded_by. memory_history returns text-matched rows and validity/supersession fields. This does not establish automatic correction detection, transaction-wide atomicity, or measured correction/stale-answer accuracy.",
+        "sources": [
+          "client",
+          "schema",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Deletion: forget is a soft retirement that sets active=false and valid_until while retaining the row. The inspected recall, timeline, dedup and entity-search SQL excludes inactive rows. This does not establish physical erasure from backups or downstream copies; the inspected client has no expiry cleanup method for expires_at.",
+        "sources": [
+          "client",
+          "schema",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Retrieval: recall embeds the query and calls search_memories. SQL uses vector candidates, OR-combined full-text candidates (excluding transcripts), and optional named-entity candidates, then reciprocal-rank fusion with k=60 and optional bounded recency, importance, access and entity boosts. It returns cosine similarity separately from its ordering score. The client enables track_access by default, incrementing counters for returned rows.",
+        "sources": [
+          "client",
+          "schema"
+        ]
+      },
+      {
+        "text": "Scope isolation: project is an optional namespace filter, and SQL interprets a null filter as unrestricted. Default schema RLS is enabled with no policies, leaving the documented default server-only for anon/authenticated roles while the service-role client bypasses RLS. sql/rls.sql provides commented per-user auth.uid() and public-read-only examples; neither is activated by the default schema. A project string alone is not an authenticated tenant boundary. No scope workload or authorization test was run.",
+        "sources": [
+          "client",
+          "schema",
+          "rls",
+          "readme"
+        ]
+      },
+      {
+        "text": "Provenance/evidence: returned rows expose ID, content, type, project, tags, importance, source, creation time, metadata and cosine similarity; MCP formatting includes ID/date/project/type/similarity. Source and metadata fields plus history links can carry context, but the inspected interface does not automatically attach source-session pointers or claim-level citations to generated answers. Evidence support remains unknown.",
+        "sources": [
+          "schema",
+          "mcp",
+          "client"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Hybrid candidate and ranking paths are visible in source, but no outputs were captured or adjudicated against gold cases; recall and abstention rates are unknown.",
+        "sources": [
+          "schema",
+          "client",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "code_observation; unmeasured",
+        "evidence": "An explicit supersedes path and history query are present. No target-system correction probes or adjudication were run.",
+        "sources": [
+          "client",
+          "schema",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "code_observation; unmeasured",
+        "evidence": "forget retires rows from inspected query paths but preserves row data; no deletion workload or post-delete probes ran, and broader erasure remains unknown.",
+        "sources": [
+          "client",
+          "schema",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "code_observation; unmeasured",
+        "evidence": "Project filtering and optional RLS templates exist, but the default project filter is unrestricted when omitted and no cross-scope tests were run.",
+        "sources": [
+          "client",
+          "schema",
+          "rls",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Results include memory identifiers and source/metadata fields, but no responses were captured and adjudicated for claim support or resolvable citations.",
+        "sources": [
+          "schema",
+          "mcp",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Indexes and bounded candidate counts are code structure, not timing evidence. The inspected client, MCP server and SQL contain no request-duration metric or latency distribution; no workload timings exist.",
+        "sources": [
+          "schema",
+          "client",
+          "mcp",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "Source names embedding and entity-extraction model calls but this review produced no usage or price observations for a common workload.",
+        "sources": [
+          "client",
+          "readme",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The table and indexes are inspectable, but no persistent-byte measurement or bytes-per-memory result was collected.",
+        "sources": [
+          "schema",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded source inspection at the pinned revision. No Supabase or OpenAI calls, SQL execution, MCP server, system workload, benchmark, or tests were run. Deployed configuration and runtime correctness are therefore unknown.",
+        "sources": [
+          "repo",
+          "client",
+          "schema",
+          "rls"
+        ]
+      },
+      {
+        "text": "The source review does not establish security isolation, physical deletion completeness, claim-level citation support, latency, token/cost totals, or storage efficiency. SQL examples and source-level mechanisms are not benchmark results.",
+        "sources": [
+          "schema",
+          "rls",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run for Agent Memory on Supabase. The project execution-status record is not_run and has no observations; fixture case counts are planned probes, not system results or denominators. Metric definitions, status record and fixture are linked for context.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

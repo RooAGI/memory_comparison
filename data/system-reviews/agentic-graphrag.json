@@ -1,0 +1,265 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "agentic-graphrag",
+    "name": "Agentic GraphRAG",
+    "repository": "https://github.com/ontogr/agentic-graphrag",
+    "branch": "main",
+    "revision": "ab33b3a6dd85aaf579d8ae90a15b64e072980fdd",
+    "reviewed_at": "2026-11-24T18:45:37Z",
+    "review_timezone": "UTC (2026-11-24 10:45:37 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/ontogr/agentic-graphrag/blob/ab33b3a6dd85aaf579d8ae90a15b64e072980fdd/README.md","checked_urls":["https://github.com/ontogr/agentic-graphrag/blob/ab33b3a6dd85aaf579d8ae90a15b64e072980fdd/README.md","https://github.com/ontogr/agentic-graphrag/blob/ab33b3a6dd85aaf579d8ae90a15b64e072980fdd/SECURITY.md","https://github.com/ontogr/agentic-graphrag/blob/ab33b3a6dd85aaf579d8ae90a15b64e072980fdd/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "A Python framework that joins structured document evidence with task histories and versioned decisions in a graph. This review describes selected code and official documentation, not measured quality.",
+    "atlas_locator": {
+      "ordinal": 18,
+      "name": "Agentic GraphRAG",
+      "slug": "agentic-graphrag",
+      "listed_repository": "https://github.com/ontogr/agentic-graphrag",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agentic-graphrag.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/ontogr/agentic-graphrag/blob/ab33b3a6dd85aaf579d8ae90a15b64e072980fdd/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/ontogr/agentic-graphrag/blob/ab33b3a6dd85aaf579d8ae90a15b64e072980fdd/README.md",
+      "https://github.com/ontogr/agentic-graphrag/blob/ab33b3a6dd85aaf579d8ae90a15b64e072980fdd/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical GitHub repository and default branch",
+        "path": "repository",
+        "url": "https://github.com/ontogr/agentic-graphrag"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed current main head commit patch",
+        "path": "commit patch",
+        "symbol": "ab33b3a6dd85aaf579d8ae90a15b64e072980fdd",
+        "url": "https://github.com/ontogr/agentic-graphrag/commit/ab33b3a6dd85aaf579d8ae90a15b64e072980fdd.patch"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "url": "https://github.com/ontogr/agentic-graphrag/blob/ab33b3a6dd85aaf579d8ae90a15b64e072980fdd/README.md"
+      },
+      {
+        "id": "decisions",
+        "label": "Decision traces implementation",
+        "path": "agrag/decisions.py",
+        "symbol": "DecisionTraces.record_decision, _record, _consulted_sources",
+        "url": "https://github.com/ontogr/agentic-graphrag/blob/ab33b3a6dd85aaf579d8ae90a15b64e072980fdd/agrag/decisions.py"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "url": "https://github.com/ontogr/agentic-graphrag/blob/ab33b3a6dd85aaf579d8ae90a15b64e072980fdd/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog locator and source attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 18 and Atlas source revision",
+        "url": "../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes a Python framework with document ingestion and evidence search, durable task and decision traces, a built-in agent, and an MCP server; graph backends include Neo4j and FalkorDB.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Document structure is represented through nested sections, chunks, tables and figures. A schema/ontology constrains typed entity and relation extraction, graph creation and retrieval; uncertain extraction candidates retain source passage links and remain outside search pending review.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "Tasks store ordered events and named steps. Decisions retain conclusions, rationale, assumptions and open questions with typed supports to passages, events or earlier decisions. DecisionTraces binds history operations to a configured project and author.",
+        "sources": [
+          "readme",
+          "decisions"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The documented Graph.add pipeline loads files, preserves structure through chunking, extracts typed entities and relations, resolves entities and persists graph/vector data. Hybrid extraction can use local GLiNER and send uncertain chunks to an LLM within a configured budget.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The README describes versioned evidence and review flags when cited sources change or are removed. At the reviewed head, decision recording also tracks text-bearing consulted but uncited documents and flags changed references; reaffirmation clears those consulted references. Inspection did not establish physical erasure from all stores or derived systems.",
+        "sources": [
+          "readme",
+          "decisions",
+          "head"
+        ]
+      },
+      {
+        "text": "Retrieval documents lexical, semantic and hybrid passage search, optional reranking, typed entity/relation search, theme search, and document navigation. Exact fetched passage text retains its source version; only fetched evidence is citation-eligible, and incomplete or failed results are signaled separately from empty results.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "Configured document scope constrains evidence reads, while task and decision history are bound to a project. MCP starts read-only and can be configured for writes. The bounded review does not establish tenant authorization or isolation for every deployment path.",
+        "sources": [
+          "readme",
+          "decisions"
+        ]
+      },
+      {
+        "text": "Source locations, document versions, typed decision supports and citation checks provide provenance signals. They establish traceability mechanisms, not that cited text entails an answer claim.",
+        "sources": [
+          "readme",
+          "decisions"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency and observability: entity resolution proceeds from cheaper exact/name/fuzzy/embedding/cluster signals to LLM decisions for remaining ambiguity; hybrid extraction can cap LLM review. Opt-in OpenTelemetry spans are documented for ingestion, retrieval and model calls, including attempts, token counts, and failures. This is not measured performance.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Search, fetch and run-status interfaces are documented; answerable recall and calibrated abstention were not measured.",
+        "sources": [
+          "readme",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Versioned passages and decision review are documented; no correction or stale-value probes were run.",
+        "sources": [
+          "readme",
+          "decisions",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Source removal is documented as triggering decision review; no deletion completeness or post-delete leakage workload was run.",
+        "sources": [
+          "readme",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Configured evidence scope and project-bound decision records are documented; no cross-scope probes were run.",
+        "sources": [
+          "readme",
+          "decisions",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Versioned passage fetch and citation validation exist; support entailment and citation coverage were not adjudicated.",
+        "sources": [
+          "readme",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Optional tracing is documented; no latency distribution or scheduled post-write recall measurements were collected.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The README describes source-visible LLM budgeting and spans with token counts; no corpus workload token, cost, or storage measurements were collected.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code and documentation",
+        "evidence": "Resolution tries cheaper matching stages before LLM calls; hybrid extraction can budget LLM review; opt-in OpenTelemetry spans include pipeline stages, token counts and failure references. These are design observations, not measurements.",
+        "sources": [
+          "readme",
+          "head"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded review covered the official README, selected decision implementation, latest commit patch, and security policy at the verified SHA. The system, tests and benchmarks were not run. Physical deletion completeness, deployed tenant authorization, answer quality and runtime performance remain unverified.",
+        "sources": [
+          "readme",
+          "decisions",
+          "security"
+        ]
+      },
+      {
+        "text": "The sources do not establish that a citation's passage entails a generated claim, that an LLM review outcome is accurate, or that observability traces exclude sensitive text; the README explicitly notes traces may contain full prompts and evidence.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No Agentic GraphRAG execution, tests, or benchmark workload was run. Project metrics, fixture and status are protocol artifacts, not system results.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,436 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "cortex-engine",
+    "name": "cortex-engine",
+    "ordinal": 162,
+    "repository": "https://github.com/Fozikio/cortex-engine",
+    "listed_repository": "https://github.com/fozikio/cortex-engine",
+    "branch": "master",
+    "revision": "158c372b6c8ba60406ae84a2de6c143833ccdfd6",
+    "reviewed_at": "2026-11-25T09:44:25Z",
+    "review_timezone": "UTC (2026-11-25 01:44:25 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "cortex-engine is a TypeScript cognitive memory engine for AI agents. It records observations, forms searchable memories, tracks belief revisions, and consolidates knowledge through scheduled or explicit dream cycles. SQLite is the local default, with Firestore and JSON backends. This is a pinned source review, not a runtime or benchmark assessment.",
+    "atlas_locator": {
+      "ordinal": 162,
+      "name": "cortex-engine",
+      "slug": "cortex-engine",
+      "listed_repository": "https://github.com/fozikio/cortex-engine",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cortex-engine.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": null,
+      "checked_urls": [
+        "https://github.com/Fozikio/cortex-engine/blob/158c372b6c8ba60406ae84a2de6c143833ccdfd6/README.md",
+        "https://github.com/Fozikio/cortex-engine/blob/158c372b6c8ba60406ae84a2de6c143833ccdfd6/SECURITY.md"
+      ],
+      "note": "No email was published in the official pinned README or SECURITY.md."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/Fozikio/cortex-engine/blob/158c372b6c8ba60406ae84a2de6c143833ccdfd6/README.md",
+      "https://github.com/Fozikio/cortex-engine/blob/158c372b6c8ba60406ae84a2de6c143833ccdfd6/SECURITY.md"
+    ],
+    "contact_email_note": "Checked only the official pinned README and SECURITY.md. Neither publishes an email; no commit/profile metadata or third-party directories were used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[161] (ordinal 162): cortex-engine, explicit listed locator",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/cortex-engine.md",
+        "symbol": "Pinned roster entry used only for curated identity and locator attribution",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cortex-engine.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository metadata",
+        "path": "GitHub repository API",
+        "symbol": "Canonical public non-fork repository; default branch master",
+        "url": "https://api.github.com/repos/Fozikio/cortex-engine"
+      },
+      {
+        "id": "head",
+        "label": "Official default-branch head commit",
+        "path": "commits/master",
+        "symbol": "Current master head 158c372b6c8ba60406ae84a2de6c143833ccdfd6; commit timestamp 2026-11-23T17:18:04Z",
+        "url": "https://api.github.com/repos/Fozikio/cortex-engine/commits/master"
+      },
+      {
+        "id": "commit_page",
+        "label": "Pinned full-SHA commit page",
+        "path": "commit",
+        "symbol": "Official GitHub commit page for the reviewed full SHA",
+        "url": "https://github.com/Fozikio/cortex-engine/commit/158c372b6c8ba60406ae84a2de6c143833ccdfd6"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "System overview, memory features, architecture, backend options, agent namespaces and tool catalogue",
+        "url": "https://github.com/Fozikio/cortex-engine/blob/158c372b6c8ba60406ae84a2de6c143833ccdfd6/README.md"
+      },
+      {
+        "id": "types",
+        "label": "Pinned core memory types",
+        "path": "src/core/types.ts",
+        "symbol": "Memory, Edge, Observation, BeliefEntry, provenance and origin data models",
+        "url": "https://github.com/Fozikio/cortex-engine/blob/158c372b6c8ba60406ae84a2de6c143833ccdfd6/src/core/types.ts"
+      },
+      {
+        "id": "store_contract",
+        "label": "Pinned storage contract",
+        "path": "src/core/store.ts",
+        "symbol": "Typed CRUD/search contract, generic collection deletion and transaction interface",
+        "url": "https://github.com/Fozikio/cortex-engine/blob/158c372b6c8ba60406ae84a2de6c143833ccdfd6/src/core/store.ts"
+      },
+      {
+        "id": "observe",
+        "label": "Pinned observe tool",
+        "path": "src/tools/observe.ts",
+        "symbol": "Prediction-error gating, contradiction handling, observation capture and direct memory creation",
+        "url": "https://github.com/Fozikio/cortex-engine/blob/158c372b6c8ba60406ae84a2de6c143833ccdfd6/src/tools/observe.ts"
+      },
+      {
+        "id": "query",
+        "label": "Pinned query tool",
+        "path": "src/tools/query.ts",
+        "symbol": "HyDE, vector and lexical candidates, graph spread activation, retrievability scoring and feedback fields",
+        "url": "https://github.com/Fozikio/cortex-engine/blob/158c372b6c8ba60406ae84a2de6c143833ccdfd6/src/tools/query.ts"
+      },
+      {
+        "id": "believe",
+        "label": "Pinned belief revision tool",
+        "path": "src/tools/believe.ts",
+        "symbol": "Atomic belief-history write and live-memory update with reason and optional valid_from",
+        "url": "https://github.com/Fozikio/cortex-engine/blob/158c372b6c8ba60406ae84a2de6c143833ccdfd6/src/tools/believe.ts"
+      },
+      {
+        "id": "forget",
+        "label": "Pinned forget tool",
+        "path": "src/tools/forget.ts",
+        "symbol": "Fade and FSRS rescheduling; explicitly not deletion",
+        "url": "https://github.com/Fozikio/cortex-engine/blob/158c372b6c8ba60406ae84a2de6c143833ccdfd6/src/tools/forget.ts"
+      },
+      {
+        "id": "sqlite",
+        "label": "Pinned SQLite store",
+        "path": "src/stores/sqlite.ts",
+        "symbol": "Local SQLite persistence and vector-search implementation",
+        "url": "https://github.com/Fozikio/cortex-engine/blob/158c372b6c8ba60406ae84a2de6c143833ccdfd6/src/stores/sqlite.ts"
+      },
+      {
+        "id": "namespace",
+        "label": "Pinned namespace manager",
+        "path": "src/namespace/manager.ts",
+        "symbol": "Per-namespace stores, configuration and explicitly queryable namespaces",
+        "url": "https://github.com/Fozikio/cortex-engine/blob/158c372b6c8ba60406ae84a2de6c143833ccdfd6/src/namespace/manager.ts"
+      },
+      {
+        "id": "scoped",
+        "label": "Pinned scoped store",
+        "path": "src/namespace/scoped-store.ts",
+        "symbol": "Delegates typed records to namespace store and prefixes generic collection names",
+        "url": "https://github.com/Fozikio/cortex-engine/blob/158c372b6c8ba60406ae84a2de6c143833ccdfd6/src/namespace/scoped-store.ts"
+      },
+      {
+        "id": "dream",
+        "label": "Pinned dream tool",
+        "path": "src/tools/dream.ts",
+        "symbol": "Seven-phase consolidation entry point and persisted run statistics",
+        "url": "https://github.com/Fozikio/cortex-engine/blob/158c372b6c8ba60406ae84a2de6c143833ccdfd6/src/tools/dream.ts"
+      },
+      {
+        "id": "auto",
+        "label": "Pinned automatic consolidation",
+        "path": "src/engines/auto-consolidate.ts",
+        "symbol": "Threshold-triggered asynchronous Phase A, flush behavior and best-effort failures",
+        "url": "https://github.com/Fozikio/cortex-engine/blob/158c372b6c8ba60406ae84a2de6c143833ccdfd6/src/engines/auto-consolidate.ts"
+      },
+      {
+        "id": "feedback",
+        "label": "Pinned retrieval feedback tool",
+        "path": "src/tools/feedback.ts",
+        "symbol": "Confidence adjustment and feedback log for retrieval auditing",
+        "url": "https://github.com/Fozikio/cortex-engine/blob/158c372b6c8ba60406ae84a2de6c143833ccdfd6/src/tools/feedback.ts"
+      },
+      {
+        "id": "storage_docs",
+        "label": "Pinned storage backend documentation",
+        "path": "docs/storage-backends.md",
+        "symbol": "Backend deployment characteristics and documented vector-search limits",
+        "url": "https://github.com/Fozikio/cortex-engine/blob/158c372b6c8ba60406ae84a2de6c143833ccdfd6/docs/storage-backends.md"
+      },
+      {
+        "id": "concurrency",
+        "label": "Pinned concurrency documentation",
+        "path": "docs/concurrency.md",
+        "symbol": "Single-process SQLite constraint and atomic transaction semantics",
+        "url": "https://github.com/Fozikio/cortex-engine/blob/158c372b6c8ba60406ae84a2de6c143833ccdfd6/docs/concurrency.md"
+      },
+      {
+        "id": "multi_agent",
+        "label": "Pinned multi-agent design",
+        "path": "docs/multi-agent-design.md",
+        "symbol": "Namespace defaults, explicit namespace selection and cross-namespace query behavior",
+        "url": "https://github.com/Fozikio/cortex-engine/blob/158c372b6c8ba60406ae84a2de6c143833ccdfd6/docs/multi-agent-design.md"
+      },
+      {
+        "id": "tools",
+        "label": "Pinned tools reference",
+        "path": "docs/tools-reference.md",
+        "symbol": "Tool descriptions including query_cross, feedback, observe and dream",
+        "url": "https://github.com/Fozikio/cortex-engine/blob/158c372b6c8ba60406ae84a2de6c143833ccdfd6/docs/tools-reference.md"
+      },
+      {
+        "id": "retrieve",
+        "label": "Pinned direct retrieval tool",
+        "path": "src/tools/retrieve.ts",
+        "symbol": "Direct memory lookup and plain vector-search behavior",
+        "url": "https://github.com/Fozikio/cortex-engine/blob/158c372b6c8ba60406ae84a2de6c143833ccdfd6/src/tools/retrieve.ts"
+      },
+      {
+        "id": "security",
+        "label": "Pinned security policy checked for contact",
+        "path": "SECURITY.md",
+        "symbol": "Security reporting instructions; no email is published",
+        "url": "https://github.com/Fozikio/cortex-engine/blob/158c372b6c8ba60406ae84a2de6c143833ccdfd6/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Definitions of benchmark metric domains",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Benchmark workload specification; not run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project result status record; this review adds no measurements",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official GitHub repository identifies Fozikio/cortex-engine as a public, non-fork repository. The README describes it as an open-source, LLM-agnostic persistent-memory engine and MCP server for AI agents; it names SQLite as the default backend and Firestore and JSON as alternatives.",
+        "sources": [
+          "repo",
+          "readme",
+          "storage_docs"
+        ]
+      },
+      {
+        "text": "The README attributes the project to the Fozikio repository/organization but does not identify an individual maintainer in the reviewed material.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "Catalog ordinal 162 is cortex-engine with an explicit listed repository locator; the pinned Atlas entry is used only to attribute this roster identity.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The official master commit endpoint and full-SHA commit page identify the reviewed head 158c372b6c8ba60406ae84a2de6c143833ccdfd6.",
+        "sources": [
+          "head",
+          "commit_page"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The TypeScript package separates core types and store contracts, cognitive engines, backend stores, MCP tools, namespace management, providers, REST serving, and triggers. Its memory model includes named definitions with category, salience, confidence, source files, tags, embeddings, FSRS scheduling and optional model provenance; observations are separate pending records; belief revisions and relation edges are separate records.",
+        "sources": [
+          "readme",
+          "types",
+          "store_contract"
+        ]
+      },
+      {
+        "text": "The README describes observations, beliefs, questions and hypotheses as interconnected nodes. The typed model also represents graph edges with relation, weight and evidence, and marks memories by origin as caller-written, dream-promoted, abstracted, or mirrored source material.",
+        "sources": [
+          "readme",
+          "types"
+        ]
+      },
+      {
+        "text": "SQLite is the default persistent store; Firestore supports cloud and multi-process deployment, while JSON is intended for backup, migration, and inspection rather than live hosting. The SQLite implementation uses brute-force cosine search; the storage document says it is intended for stores under roughly 10,000 memories, which is documentation guidance rather than an independent measurement.",
+        "sources": [
+          "readme",
+          "storage_docs",
+          "sqlite"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: observe embeds the input, scores salience, compares it with nearby memories using namespace thresholds, and can check a nearby candidate for contradiction when an NLI provider is configured. Contradictory or superseding evidence is retained as an observation and signal. Novel high-salience items can become memories immediately; other observations are queued for consolidation. Source file and section may be supplied as provenance.",
+        "sources": [
+          "observe",
+          "types"
+        ]
+      },
+      {
+        "text": "Update: believe reads the existing memory, embeds the replacement definition, then atomically logs the old and new definitions, reason, system timestamp and optional valid_from date while updating the live definition and embedding. This preserves a revision record, but the reviewed tool updates a selected concept rather than performing general automatic conflict resolution.",
+        "sources": [
+          "believe",
+          "types",
+          "concurrency"
+        ]
+      },
+      {
+        "text": "Delete: the public forget tool deliberately reduces salience, marks the record faded and updates FSRS scheduling; it is not deletion. The typed memory-store contract has no delete-memory method, though its generic collection API can delete documents. The inspected public memory tools do not establish a full memory-erasure path.",
+        "sources": [
+          "forget",
+          "store_contract",
+          "tools"
+        ]
+      },
+      {
+        "text": "Retrieval: query can use HyDE-expanded embeddings, nearest-vector search, lexical full-text candidates, graph spread activation, FSRS retrievability, salience and a minimum score. It returns a bounded ranked list and touches returned records. retrieve supports direct ID fetch or plain semantic search; recall is a separate chronological observation listing. query_cross is documented to read namespaces configured as queryable.",
+        "sources": [
+          "query",
+          "retrieve",
+          "store_contract",
+          "tools",
+          "multi_agent"
+        ]
+      },
+      {
+        "text": "Consolidation: dream runs seven phases covering clustering, refinement, memory creation, edge discovery, FSRS scoring, abstraction and reporting. An automatic consolidator can run the lighter Phase A when unprocessed observations reach ten; that work is asynchronous and best-effort. The full dream tool records phase counts, duration, integration rate and failures.",
+        "sources": [
+          "dream",
+          "auto"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention — unmeasured. Retrieval methods are implemented, but no adjudicated answerability or abstention workload was run.",
+        "sources": [
+          "query",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured. Belief revisions and feedback exist; no correction probes or stale-answer adjudication were run.",
+        "sources": [
+          "believe",
+          "feedback",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Deletion leakage — unmeasured. The reviewed public forget operation fades records; no deletion probes or storage-erasure checks were run.",
+        "sources": [
+          "forget",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Scope isolation — unmeasured. Namespace-specific stores and opt-in cross-namespace reads are implemented; no cross-scope leakage workload was run.",
+        "sources": [
+          "namespace",
+          "scoped",
+          "multi_agent",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Evidence support and citation coverage — unmeasured. Records can carry source paths, model provenance and edge evidence, but no claim-level citation scoring was run.",
+        "sources": [
+          "types",
+          "observe",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Latency, write-to-recall delay, tokens, cost and storage efficiency — unmeasured. Documentation describes backend behavior and dream reports duration, but no benchmark workload or resource measurement was run.",
+        "sources": [
+          "storage_docs",
+          "dream",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected the official README, core data and store contracts, observe/query/believe/forget/dream/feedback tools, SQLite implementation, namespace code, backend/concurrency/multi-agent documentation, tool reference and security policy. It did not inspect every cognitive engine, backend implementation, REST/MCP authorization path, provider, migration or deployment configuration.",
+        "sources": [
+          "readme",
+          "types",
+          "store_contract",
+          "sqlite",
+          "namespace",
+          "query",
+          "dream",
+          "security"
+        ]
+      },
+      {
+        "text": "NamespaceManager creates a store per configured namespace and supports explicitly queryable namespaces. Tool callers can pass namespace parameters, and the README describes isolated memories by namespace; the reviewed evidence does not establish identity authentication or prevent an authorized caller from selecting another namespace. SQLite is documented for one process per database file; cross-process coordination is not provided.",
+        "sources": [
+          "namespace",
+          "scoped",
+          "multi_agent",
+          "concurrency",
+          "security"
+        ]
+      },
+      {
+        "text": "Observation source_file/source_section, model provenance, belief reasons and edge evidence provide some origin context, but the reviewed contracts do not establish an immutable source-document lineage or a claim-level citation chain. The `forget` path is a fade operation, so hard deletion completeness cannot be inferred.",
+        "sources": [
+          "types",
+          "observe",
+          "believe",
+          "forget"
+        ]
+      },
+      {
+        "text": "Source and documentation inspection do not establish runtime correctness, recall or correction quality, deletion completeness, deployed isolation, latency, write-to-recall delay, token/cost totals or storage efficiency. No cortex-engine runtime, tests or benchmarks were run.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No cortex-engine runtime, tests, or benchmark workload was executed. Source and documentation observations are not measurements.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

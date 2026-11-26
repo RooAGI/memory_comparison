@@ -1,0 +1,324 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 275,
+    "slug": "graymatter",
+    "name": "GrayMatter",
+    "repository": "https://github.com/angelnicolasc/graymatter",
+    "listed_repository": "https://github.com/angelnicolasc/graymatter",
+    "branch": "main",
+    "revision": "b7d1b0c78779fddd6f5db6fd1f7fea0d3af61b54",
+    "reviewed_at": "2026-11-25T22:02:06Z",
+    "review_timezone": "UTC (checked 2026-11-25 14:02:06 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "GrayMatter is a local-first Go memory store and MCP server for agent facts, with hybrid retrieval, revision/tombstone handling, optional citation and subject-aware tools, and optional knowledge-graph extraction. This review is pinned to current upstream source and does not measure runtime quality or performance.",
+    "atlas_locator": {
+      "ordinal": 275,
+      "name": "GrayMatter",
+      "slug": "graymatter",
+      "listed_repository": "https://github.com/angelnicolasc/graymatter",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/graymatter.md",
+      "revision": "d03c408e22c935d232d3c9456ed03188300eff28"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/angelnicolasc/graymatter/blob/b7d1b0c78779fddd6f5db6fd1f7fea0d3af61b54/README.md",
+      "checked_urls": [
+        "https://github.com/angelnicolasc/graymatter/blob/b7d1b0c78779fddd6f5db6fd1f7fea0d3af61b54/README.md"
+      ],
+      "note": "Checked the official pinned README for a published contact email; none was present. No commit/profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/angelnicolasc/graymatter/blob/b7d1b0c78779fddd6f5db6fd1f7fea0d3af61b54/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/angelnicolasc/graymatter/blob/b7d1b0c78779fddd6f5db6fd1f7fea0d3af61b54/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the checked official pinned README. No address was inferred from commit/profile metadata or obtained from a third-party directory.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[274], ordinal 275; identity, explicit listed repository locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/graymatter.md",
+        "symbol": "Pinned attribution source for curated locator only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/graymatter.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "",
+        "symbol": "Repository page identifies angelnicolasc/graymatter and default branch main",
+        "url": "https://github.com/angelnicolasc/graymatter"
+      },
+      {
+        "id": "head",
+        "label": "Official current head commit",
+        "path": "",
+        "symbol": "Official GitHub main commit Atom feed reports the full head SHA and committer timestamp",
+        "url": "https://github.com/angelnicolasc/graymatter/commit/b7d1b0c78779fddd6f5db6fd1f7fea0d3af61b54"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product description, storage overview, integrations, lifecycle, benchmarks, observability, and published contact check",
+        "url": "https://github.com/angelnicolasc/graymatter/blob/b7d1b0c78779fddd6f5db6fd1f7fea0d3af61b54/README.md"
+      },
+      {
+        "id": "integration",
+        "label": "Pinned integration guide",
+        "path": "docs/integrations.md",
+        "symbol": "MCP profiles, project routing, shared scope, write/search schemas, deployment and runtime boundaries",
+        "url": "https://github.com/angelnicolasc/graymatter/blob/b7d1b0c78779fddd6f5db6fd1f7fea0d3af61b54/docs/integrations.md"
+      },
+      {
+        "id": "fact",
+        "label": "Pinned fact data model",
+        "path": "pkg/memory/fact.go",
+        "symbol": "Fact fields, retirement, confidence, aliases, pins, injectable predicate and ranking projection",
+        "url": "https://github.com/angelnicolasc/graymatter/blob/b7d1b0c78779fddd6f5db6fd1f7fea0d3af61b54/pkg/memory/fact.go"
+      },
+      {
+        "id": "store",
+        "label": "Pinned store implementation",
+        "path": "pkg/memory/store.go",
+        "symbol": "bbolt buckets, shared namespace, vector backend, store configuration, background reconciliation and locking",
+        "url": "https://github.com/angelnicolasc/graymatter/blob/b7d1b0c78779fddd6f5db6fd1f7fea0d3af61b54/pkg/memory/store.go"
+      },
+      {
+        "id": "recall",
+        "label": "Pinned recall implementation",
+        "path": "pkg/memory/recall.go",
+        "symbol": "Hybrid retrieval pipeline and default vector/keyword/recency RRF weights",
+        "url": "https://github.com/angelnicolasc/graymatter/blob/b7d1b0c78779fddd6f5db6fd1f7fea0d3af61b54/pkg/memory/recall.go"
+      },
+      {
+        "id": "revise",
+        "label": "Pinned revision implementation",
+        "path": "pkg/memory/revise.go",
+        "symbol": "Atomic replacement and source retirement; explicit Retire semantics",
+        "url": "https://github.com/angelnicolasc/graymatter/blob/b7d1b0c78779fddd6f5db6fd1f7fea0d3af61b54/pkg/memory/revise.go"
+      },
+      {
+        "id": "citation",
+        "label": "Pinned citation implementation",
+        "path": "pkg/memory/citation.go",
+        "symbol": "Writer-declared citation evidence structure, validation and storage contract",
+        "url": "https://github.com/angelnicolasc/graymatter/blob/b7d1b0c78779fddd6f5db6fd1f7fea0d3af61b54/pkg/memory/citation.go"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation domains and metric definitions",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned benchmark fixture",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project baseline execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status record; no GrayMatter result is asserted here",
+        "url": "../../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents GrayMatter as a persistent memory layer for Go agents, packaged as a local binary that can run as an MCP server or be embedded as a Go library. It describes integrations including Claude Code, Codex, Cursor and other MCP clients.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The `Fact` record stores agent namespace, text, ULID, creation/access metadata, decaying weight, optional embedding, supersession marker, confidence declaration, kind/pin fields, and lineage projection. Citation evidence and subject projections are hydrated from versioned side stores rather than persisted in the fact row itself.",
+        "sources": [
+          "fact",
+          "citation"
+        ]
+      },
+      {
+        "text": "The store uses bbolt for facts, sessions, metadata, agent namespaces, pending-vector work and related indexes; the default persistent chromem-go index lives under the data directory, while a `VectorStore` interface allows other backends. A reserved `__shared__` agent ID holds shared facts. bbolt serializes concurrent writers with its file lock; the store can fall back to read-only on lock contention unless strict-write behavior is selected.",
+        "sources": [
+          "store",
+          "readme"
+        ]
+      },
+      {
+        "text": "The README documents a lifecycle of recall, prompt injection, agent writes, then asynchronous consolidation. Current release documentation says consolidation performs maintenance such as decay/pruning and configured graph extraction; generative compaction is disabled. MCP `full` is the default profile, while `core` opts into citations and subject-based writes and adds combined project/shared search behavior.",
+        "sources": [
+          "readme",
+          "integration"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Writes create facts with a generated ULID and initial weight. The README exposes `remember`, MCP `memory_add`, and Go `Store.Put` paths. In the `core` MCP profile, a write may include a source, literal quote, subject, or replacement target; those fields are opt-in and the legacy `full` profile retains legacy input semantics.",
+        "sources": [
+          "readme",
+          "integration",
+          "fact"
+        ]
+      },
+      {
+        "text": "Revisions can atomically add replacement text and tombstone selected source facts in one bbolt transaction. A nonempty `SupersededBy` immediately excludes the old fact from recall while leaving a tombstone available to list/export/TUI; explicit deletion removes a fact record. `Retire` marks selected facts as removed without a replacement. Unpinned tombstones can later decay and be pruned.",
+        "sources": [
+          "fact",
+          "revise",
+          "readme"
+        ]
+      },
+      {
+        "text": "Recall fuses vector similarity, keyword relevance and recency using reciprocal-rank fusion; configured default weights are vector 1.0, keyword 1.0, recency 0.5. It returns top-k injectable fact text. The README documents an optional relevance floor, confidence filtering/weighting, aliases for query expansion, and `--explain` ranking receipts. Alias facts are excluded from injectable ranked results.",
+        "sources": [
+          "recall",
+          "fact",
+          "readme"
+        ]
+      },
+      {
+        "text": "The integration guide says core search reads project and `__shared__` memory together and can fetch an omitted citation by fact ID. The legacy full profile keeps single-namespace search behavior. The default MCP catalog exposes seven tools; core is an explicit profile choice.",
+        "sources": [
+          "integration"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "The implementation has hybrid top-k retrieval and optional relevance filtering, but this review did not score answer-bearing retrieval or abstention.",
+        "sources": [
+          "recall",
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Explicit revisions atomically tombstone selected prior facts; no correction sequence or stale-value probe was run.",
+        "sources": [
+          "revise",
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Retirement excludes facts from recall and explicit deletion can remove a row; no deletion, backup, restore, or leakage probe was run.",
+        "sources": [
+          "fact",
+          "revise",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Facts are stored by agent namespace and a shared namespace is intentionally readable across agents. No cross-namespace or deployment authorization workload was run.",
+        "sources": [
+          "store",
+          "integration",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "The optional citation profile stores writer-declared source and quote snapshots tied to fact identity/content; the code calls this evidence untrusted and captured time is receipt time, not verification. No answer was adjudicated against a source.",
+        "sources": [
+          "citation",
+          "integration",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The README describes upstream benchmark methodology and latency gates, but this review ran no system or benchmark and collected no timings.",
+        "sources": [
+          "readme",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The README reports upstream token and inference-cost comparisons; those are source-reported claims only and were not reproduced here. No token, cost, or storage workload was measured for this review.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded inspection of the official README, integration guide and selected Go implementation files at the verified current head. The system, tests, and benchmarks were not run.",
+        "sources": [
+          "readme",
+          "integration",
+          "fact",
+          "store",
+          "recall",
+          "revise",
+          "citation"
+        ]
+      },
+      {
+        "text": "The fact `Confidence` label is the writer's declaration rather than calibrated probability or independent verification. Citation source and quote strings are writer-declared untrusted evidence; captured time records receipt, not verification. These fields do not establish that an answer is supported.",
+        "sources": [
+          "fact",
+          "citation"
+        ]
+      },
+      {
+        "text": "Namespace separation and the `__shared__` convention are code-level storage and retrieval scopes. This review did not test authorization, deployment configuration, filesystem boundaries, or cross-process access control.",
+        "sources": [
+          "store",
+          "integration"
+        ]
+      },
+      {
+        "text": "The reviewed paths do not establish real-world recall quality, whether users reliably correct or forget facts, whether optional providers are configured securely, or the operational behavior of every custom vector backend.",
+        "sources": [
+          "store",
+          "recall",
+          "integration"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No GrayMatter runtime, tests, or benchmarks were run. Source observations and upstream-reported figures are not results from this project review."
+    }
+  }
+}

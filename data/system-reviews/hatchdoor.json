@@ -1,0 +1,376 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 283,
+    "slug": "hatchdoor",
+    "name": "Hatchdoor",
+    "repository": "https://github.com/BatterWorks/Hatchdoor",
+    "listed_repository": "https://github.com/BatterWorks/Hatchdoor",
+    "branch": "main",
+    "revision": "7268fdab2024bf04e2dff7cd8febb17ec97e1092",
+    "reviewed_at": "2026-11-25T22:31:33Z",
+    "review_timezone": "UTC (checked 2026-11-25 14:31:33 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Hatchdoor is a self-hosted Markdown vault server with browser and MCP interfaces. Markdown files are canonical and a disposable SQLite cache supports browsing, links, metadata, keyword search, and semantic search. The review describes inspected source mechanisms; no runtime quality or benchmark result was measured.",
+    "atlas_locator": {
+      "ordinal": 283,
+      "name": "Hatchdoor",
+      "slug": "hatchdoor",
+      "listed_repository": "https://github.com/BatterWorks/Hatchdoor",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hatchdoor.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "catalog_revision": "c2b9861a3aac6c9dd1c20d3bc6fbea0f14db4e5d",
+      "note": "Catalog and Atlas are retained only for curated identity and locator attribution, not assessment evidence."
+    },
+    "contact": {
+      "email": null,
+      "source_url": null,
+      "checked_urls": [
+        "https://github.com/BatterWorks/Hatchdoor/blob/7268fdab2024bf04e2dff7cd8febb17ec97e1092/README.md",
+        "https://github.com/BatterWorks/Hatchdoor/blob/7268fdab2024bf04e2dff7cd8febb17ec97e1092/SECURITY.md"
+      ],
+      "note": "The official pinned README and SECURITY.md were checked; neither publishes a contact email. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/BatterWorks/Hatchdoor/blob/7268fdab2024bf04e2dff7cd8febb17ec97e1092/README.md",
+      "https://github.com/BatterWorks/Hatchdoor/blob/7268fdab2024bf04e2dff7cd8febb17ec97e1092/SECURITY.md"
+    ],
+    "contact_email_note": "No email was published in the official pinned README or SECURITY.md.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[282], ordinal 283: Hatchdoor, slug hatchdoor, explicit listed repository locator and catalog revision",
+        "url": "../memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/hatchdoor.md",
+        "symbol": "Pinned attribution for curated identity and locator context only; not implementation evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hatchdoor.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository page",
+        "path": "",
+        "symbol": "Repository page identifies BatterWorks/Hatchdoor as public and main as default branch",
+        "url": "https://github.com/BatterWorks/Hatchdoor"
+      },
+      {
+        "id": "head",
+        "label": "Official GitHub current main commit API",
+        "path": "commits/main",
+        "symbol": "Official endpoint returned full current head 7268fdab2024bf04e2dff7cd8febb17ec97e1092",
+        "url": "https://api.github.com/repos/BatterWorks/Hatchdoor/commits/main"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project purpose, Markdown source of truth, SQLite cache, APIs, Vault scope, deployment/security and feature descriptions",
+        "url": "https://github.com/BatterWorks/Hatchdoor/blob/7268fdab2024bf04e2dff7cd8febb17ec97e1092/README.md"
+      },
+      {
+        "id": "module-map",
+        "label": "Pinned architecture module map",
+        "path": "docs/architecture/module-map.md",
+        "symbol": "Runtime composition, shared cores, Vault lifecycle, indexing and observability boundaries",
+        "url": "https://github.com/BatterWorks/Hatchdoor/blob/7268fdab2024bf04e2dff7cd8febb17ec97e1092/docs/architecture/module-map.md"
+      },
+      {
+        "id": "vault",
+        "label": "Pinned Vault module exports",
+        "path": "src/vault.rs",
+        "symbol": "Note/index data types and exported write primitives including create, edit, delete, move, archive and attachment operations",
+        "url": "https://github.com/BatterWorks/Hatchdoor/blob/7268fdab2024bf04e2dff7cd8febb17ec97e1092/src/vault.rs"
+      },
+      {
+        "id": "mutation-core",
+        "label": "Pinned shared mutation core",
+        "path": "src/vault_mutation.rs",
+        "symbol": "Vault-qualified mutation checks, per-Vault lock, content-hash checks, origin records, and mutation APIs",
+        "url": "https://github.com/BatterWorks/Hatchdoor/blob/7268fdab2024bf04e2dff7cd8febb17ec97e1092/src/vault_mutation.rs"
+      },
+      {
+        "id": "read-core",
+        "label": "Pinned shared read core",
+        "path": "src/vault_read.rs",
+        "symbol": "VaultScope (one Vault or all), read APIs, limits, and shared snapshot projection",
+        "url": "https://github.com/BatterWorks/Hatchdoor/blob/7268fdab2024bf04e2dff7cd8febb17ec97e1092/src/vault_read.rs"
+      },
+      {
+        "id": "search",
+        "label": "Pinned scoped search implementation",
+        "path": "src/search/vault_scoped.rs",
+        "symbol": "Keyword/semantic request modes, Vault-qualified snapshot queries, result shape and bounded candidate ranking",
+        "url": "https://github.com/BatterWorks/Hatchdoor/blob/7268fdab2024bf04e2dff7cd8febb17ec97e1092/src/search/vault_scoped.rs"
+      },
+      {
+        "id": "snapshots",
+        "label": "Pinned SQLite snapshot storage",
+        "path": "src/cache/vault_snapshots.rs",
+        "symbol": "Disposable Vault snapshots, freshness/searchability, structural rows and selected body/property reads",
+        "url": "https://github.com/BatterWorks/Hatchdoor/blob/7268fdab2024bf04e2dff7cd8febb17ec97e1092/src/cache/vault_snapshots.rs"
+      },
+      {
+        "id": "git-origin",
+        "label": "Pinned Git write-origin message implementation",
+        "path": "src/git/message.rs",
+        "symbol": "Hatchdoor-Origin commit trailers, origin types, client-name label and unknown changed paths",
+        "url": "https://github.com/BatterWorks/Hatchdoor/blob/7268fdab2024bf04e2dff7cd8febb17ec97e1092/src/git/message.rs"
+      },
+      {
+        "id": "security",
+        "label": "Pinned official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Deployment/authentication warnings and Git-backed Vault network/security caveats",
+        "url": "https://github.com/BatterWorks/Hatchdoor/blob/7268fdab2024bf04e2dff7cd8febb17ec97e1092/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation domains; not a Hatchdoor result",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned fixture, not run for this task",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project execution status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared benchmark execution status; no Hatchdoor result claimed",
+        "url": "../../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository presents Hatchdoor as a self-hosted Markdown/Obsidian-vault server with browser and MCP interfaces. The README describes it as a private single-trusted-user deployment rather than a multi-user collaboration service.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The official repository page identifies BatterWorks/Hatchdoor and default branch main; the official commits/main API identifies the reviewed full head.",
+        "sources": [
+          "repo",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The runtime combines HTTP, MCP, and browser surfaces over shared Vault read and mutation cores. A Vault registry identifies each Markdown source folder and its optional Git configuration; the source tree is authoritative and the shared SQLite cache is disposable.",
+        "sources": [
+          "readme",
+          "module-map",
+          "mutation-core",
+          "read-core"
+        ]
+      },
+      {
+        "text": "A published Vault snapshot holds note structure, links, tags, metadata, and searchable chunks. Snapshot freshness, participation, and vector searchability are modeled independently; structural browsing can be available before embeddings are ready.",
+        "sources": [
+          "snapshots",
+          "module-map"
+        ]
+      },
+      {
+        "text": "The shared search implementation exposes keyword and semantic modes. Search results retain Vault and note identity, path, heading, content, score, layer, links, and metadata.",
+        "sources": [
+          "search",
+          "read-core"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The mutation core resolves a single Vault, checks lifecycle and write capability, serializes mutations with that Vault's lock, builds an index for path/layer validation, and executes filesystem work off the async runtime. The exported APIs cover note creation, append/edit/update/frontmatter/section changes, move/rename, archive, deletion, tags, and attachments.",
+        "sources": [
+          "mutation-core",
+          "vault"
+        ]
+      },
+      {
+        "text": "Writes carry an expected content hash to refuse stale edits. Atomic compare-and-swap is available where the filesystem supports it; otherwise the documented code path uses a weaker check-then-rename flow that may race an outside editor. An intent log supports recovery after interrupted multi-file writes.",
+        "sources": [
+          "mutation-core",
+          "vault"
+        ]
+      },
+      {
+        "text": "Delete moves a note and its folder assets into .hatchdoor-trash, which indexing excludes; archive moves the note under a configured prefix. These moves do not establish physical or remote-copy erasure.",
+        "sources": [
+          "readme",
+          "vault"
+        ]
+      },
+      {
+        "text": "Read APIs include exact note reads, outlines/sections, browse views, and search. Keyword and semantic search are selected as separate modes, and search bounds candidate ranking and results per note.",
+        "sources": [
+          "read-core",
+          "search",
+          "snapshots"
+        ]
+      },
+      {
+        "text": "VaultScope accepts one canonical Vault ID or all. The read projection excludes nonparticipating Vault snapshots and search carries selected Vault IDs into its cache queries; writes target one Vault.",
+        "sources": [
+          "read-core",
+          "search",
+          "mutation-core"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Keyword/semantic search and exact reads are present in source; answer correctness and abstention were not evaluated.",
+        "sources": [
+          "search",
+          "read-core",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale retrieval",
+        "status": "unmeasured",
+        "evidence": "Hash-checked updates and fresh/stale snapshot state exist; correction accuracy and stale-answer rate were not measured.",
+        "sources": [
+          "mutation-core",
+          "snapshots",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Delete moves notes into excluded trash; no post-delete retrieval, remote-copy, or Git-history probe was run.",
+        "sources": [
+          "readme",
+          "vault",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Vault-qualified scopes and cache filters are implemented; no isolation workload was run, and the documented shared-user model is not per-user authorization.",
+        "sources": [
+          "readme",
+          "read-core",
+          "search",
+          "security",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "The system exposes note paths, links, metadata, and optional Git origin labels; answer evidence support was not adjudicated.",
+        "sources": [
+          "readme",
+          "git-origin",
+          "snapshots",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Search bounds and index progress exist, but no latency or end-to-end freshness timing was collected.",
+        "sources": [
+          "search",
+          "module-map",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "Compact result shapes and local embedding options are documented; no token/cost workload was run.",
+        "sources": [
+          "readme",
+          "search",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "SQLite is a rebuildable read model over Markdown; no size or rebuild-cost comparison was made.",
+        "sources": [
+          "readme",
+          "snapshots",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The README documents a single trusted-user deployment: whoever can reach the instance can access its served Vaults. One shared MCP bearer token and caller-supplied client names do not establish individual identity or per-Vault authorization.",
+        "sources": [
+          "readme",
+          "security",
+          "git-origin"
+        ]
+      },
+      {
+        "text": "Delete moves content into trash and optional Git history/remotes may retain other copies. The reviewed sources and this inspection do not establish secure erasure across backups or remotes.",
+        "sources": [
+          "readme",
+          "vault",
+          "security"
+        ]
+      },
+      {
+        "text": "This bounded review inspected the README, module map, shared mutation/read cores, scoped search, snapshot storage, Git origin messages and security policy. It did not inspect every adapter, helper, cache migration or model path. No runtime, tests, benchmarks, or isolation probes were run.",
+        "sources": [
+          "readme",
+          "module-map",
+          "mutation-core",
+          "read-core",
+          "search",
+          "snapshots",
+          "git-origin",
+          "security"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Hatchdoor runtime, tests, or benchmark workload was run; no metric is claimed.",
+      "metric_definitions": "../../METRICS.md",
+      "fixture": "../../fixtures/memory-benchmark-v1.json",
+      "execution_status": "../../results/initial-baselines-status.json"
+    }
+  }
+}

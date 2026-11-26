@@ -1,0 +1,404 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "beevibe",
+    "name": "Beevibe",
+    "repository": "https://github.com/beevibe-ai/beevibe",
+    "branch": "main",
+    "revision": "81530ccae3519738b16a2b5d4aa81a61989a4ce8",
+    "reviewed_at": "2026-11-24T23:31:19Z",
+    "review_timezone": "UTC (2026-11-24 15:31:19 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/beevibe-ai/beevibe/blob/81530ccae3519738b16a2b5d4aa81a61989a4ce8/README.md","checked_urls":["https://github.com/beevibe-ai/beevibe/blob/81530ccae3519738b16a2b5d4aa81a61989a4ce8/README.md","https://github.com/beevibe-ai/beevibe/blob/81530ccae3519738b16a2b5d4aa81a61989a4ce8/SECURITY.md","https://github.com/beevibe-ai/beevibe/blob/81530ccae3519738b16a2b5d4aa81a61989a4ce8/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "Beevibe is a self-hosted team workspace whose memory combines stable per-agent prompt blocks with vector-searchable archival facts in Postgres/pgvector. This review describes selected code at a verified repository revision; it does not run the service or measure memory quality or performance.",
+    "atlas_locator": {
+      "ordinal": 91,
+      "name": "Beevibe",
+      "slug": "beevibe",
+      "listed_repository": "https://github.com/beevibe-ai/beevibe",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/beevibe.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/beevibe-ai/beevibe/blob/81530ccae3519738b16a2b5d4aa81a61989a4ce8/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/beevibe-ai/beevibe/blob/81530ccae3519738b16a2b5d4aa81a61989a4ce8/README.md",
+      "https://github.com/beevibe-ai/beevibe/blob/81530ccae3519738b16a2b5d4aa81a61989a4ce8/SECURITY.md",
+      "https://github.com/beevibe-ai/beevibe/blob/81530ccae3519738b16a2b5d4aa81a61989a4ce8/SUPPORT.md",
+      "https://github.com/beevibe-ai/beevibe/blob/81530ccae3519738b16a2b5d4aa81a61989a4ce8/.github/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical Beevibe repository and repository identity",
+        "path": "repository",
+        "symbol": "beevibe-ai/beevibe",
+        "url": "https://github.com/beevibe-ai/beevibe"
+      },
+      {
+        "id": "head",
+        "label": "Verified current main branch head",
+        "path": "commit",
+        "symbol": "full SHA 81530ccae3519738b16a2b5d4aa81a61989a4ce8",
+        "url": "https://github.com/beevibe-ai/beevibe/commit/81530ccae3519738b16a2b5d4aa81a61989a4ce8"
+      },
+      {
+        "id": "readme",
+        "label": "Official repository README and contact check",
+        "path": "README.md",
+        "url": "https://github.com/beevibe-ai/beevibe/blob/81530ccae3519738b16a2b5d4aa81a61989a4ce8/README.md"
+      },
+      {
+        "id": "core-readme",
+        "label": "Core package architecture and service map",
+        "path": "packages/core/README.md",
+        "url": "https://github.com/beevibe-ai/beevibe/blob/81530ccae3519738b16a2b5d4aa81a61989a4ce8/packages/core/README.md"
+      },
+      {
+        "id": "api-readme",
+        "label": "API package tool and endpoint contract",
+        "path": "packages/api/README.md",
+        "url": "https://github.com/beevibe-ai/beevibe/blob/81530ccae3519738b16a2b5d4aa81a61989a4ce8/packages/api/README.md"
+      },
+      {
+        "id": "domain",
+        "label": "Archival fact model and scopes",
+        "path": "packages/core/src/domain/memory.ts",
+        "symbol": "MemoryFact, MemoryScope, FactType",
+        "url": "https://github.com/beevibe-ai/beevibe/blob/81530ccae3519738b16a2b5d4aa81a61989a4ce8/packages/core/src/domain/memory.ts"
+      },
+      {
+        "id": "core-domain",
+        "label": "Stable core-memory block model and templates",
+        "path": "packages/core/src/domain/core-memory.ts",
+        "symbol": "CoreMemoryBlock, DEFAULT_BLOCK_TEMPLATES",
+        "url": "https://github.com/beevibe-ai/beevibe/blob/81530ccae3519738b16a2b5d4aa81a61989a4ce8/packages/core/src/domain/core-memory.ts"
+      },
+      {
+        "id": "schema",
+        "label": "Postgres schema and memory indexes",
+        "path": "migrations/1776391747576_initial-schema.sql",
+        "symbol": "core_memory_block and memory_fact tables",
+        "url": "https://github.com/beevibe-ai/beevibe/blob/81530ccae3519738b16a2b5d4aa81a61989a4ce8/migrations/1776391747576_initial-schema.sql"
+      },
+      {
+        "id": "fact-store",
+        "label": "Fact write, merge, update and search service",
+        "path": "packages/core/src/services/memory/fact-store.ts",
+        "symbol": "FactStore.addOrMerge, updateScope",
+        "url": "https://github.com/beevibe-ai/beevibe/blob/81530ccae3519738b16a2b5d4aa81a61989a4ce8/packages/core/src/services/memory/fact-store.ts"
+      },
+      {
+        "id": "memory-agent",
+        "label": "Briefing retrieval and post-session promotion orchestration",
+        "path": "packages/core/src/services/memory/memory-agent.ts",
+        "symbol": "createMemoryAgent, prepareBriefing, searchArchival, onTaskComplete",
+        "url": "https://github.com/beevibe-ai/beevibe/blob/81530ccae3519738b16a2b5d4aa81a61989a4ce8/packages/core/src/services/memory/memory-agent.ts"
+      },
+      {
+        "id": "promoter",
+        "label": "LLM scope-promotion decision logic",
+        "path": "packages/core/src/services/memory/fact-promoter.ts",
+        "symbol": "FactPromoter.evaluate",
+        "url": "https://github.com/beevibe-ai/beevibe/blob/81530ccae3519738b16a2b5d4aa81a61989a4ce8/packages/core/src/services/memory/fact-promoter.ts"
+      },
+      {
+        "id": "fact-repo",
+        "label": "Postgres fact CRUD and vector retrieval predicates",
+        "path": "packages/core/src/adapters/postgres/memory-fact-repo.ts",
+        "symbol": "PostgresMemoryFactRepository",
+        "url": "https://github.com/beevibe-ai/beevibe/blob/81530ccae3519738b16a2b5d4aa81a61989a4ce8/packages/core/src/adapters/postgres/memory-fact-repo.ts"
+      },
+      {
+        "id": "core-memory",
+        "label": "Stable block read, append, replacement, and overwrite",
+        "path": "packages/core/src/services/memory/core-memory.ts",
+        "symbol": "CoreMemory.applyUpdate and setContent",
+        "url": "https://github.com/beevibe-ai/beevibe/blob/81530ccae3519738b16a2b5d4aa81a61989a4ce8/packages/core/src/services/memory/core-memory.ts"
+      },
+      {
+        "id": "core-repo",
+        "label": "Per-agent core block repository operations",
+        "path": "packages/core/src/adapters/postgres/core-memory-repo.ts",
+        "symbol": "findByAgent, updateContent, delete",
+        "url": "https://github.com/beevibe-ai/beevibe/blob/81530ccae3519738b16a2b5d4aa81a61989a4ce8/packages/core/src/adapters/postgres/core-memory-repo.ts"
+      },
+      {
+        "id": "save-tool",
+        "label": "MCP archival save tool and caller-derived scope",
+        "path": "packages/api/src/tools/save-memory.ts",
+        "symbol": "createSaveMemoryTool",
+        "url": "https://github.com/beevibe-ai/beevibe/blob/81530ccae3519738b16a2b5d4aa81a61989a4ce8/packages/api/src/tools/save-memory.ts"
+      },
+      {
+        "id": "update-tool",
+        "label": "MCP core-memory update tool",
+        "path": "packages/api/src/tools/update-core-memory.ts",
+        "symbol": "createUpdateCoreMemoryTool",
+        "url": "https://github.com/beevibe-ai/beevibe/blob/81530ccae3519738b16a2b5d4aa81a61989a4ce8/packages/api/src/tools/update-core-memory.ts"
+      },
+      {
+        "id": "activity",
+        "label": "Memory activity and KPI queries",
+        "path": "packages/api/src/views/memory-activity.ts",
+        "symbol": "getMemoryActivity",
+        "url": "https://github.com/beevibe-ai/beevibe/blob/81530ccae3519738b16a2b5d4aa81a61989a4ce8/packages/api/src/views/memory-activity.ts"
+      },
+      {
+        "id": "events",
+        "label": "Postgres memory event notifications",
+        "path": "migrations/1779300000000_add-bv-event-triggers-extension.sql",
+        "symbol": "memory fact and promotion notifications",
+        "url": "https://github.com/beevibe-ai/beevibe/blob/81530ccae3519738b16a2b5d4aa81a61989a4ce8/migrations/1779300000000_add-bv-event-triggers-extension.sql"
+      },
+      {
+        "id": "roster",
+        "label": "Curated ordinal, listed locator, and attribution only",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 91",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas-entry",
+        "label": "Atlas attribution target from the roster; identity only",
+        "path": "content/systems/beevibe.md",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/beevibe.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture; protocol only",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Beevibe as a self-hosted agent workspace for teams, where agents have persistent roles and bounded domain memory. The repository is a TypeScript monorepo with API, core, daemon, scheduler, and web packages; this review does not infer an individual maintainer identity.",
+        "sources": [
+          "readme",
+          "core-readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The core package separates memory domain types, repository ports, services, and Postgres adapters. MemoryAgent composes briefings, FactStore handles archival writes and vector search, and CoreMemory manages stable blocks. The API exposes MCP tools including save_memory and update_core_memory.",
+        "sources": [
+          "core-readme",
+          "domain",
+          "memory-agent",
+          "fact-store",
+          "core-memory",
+          "save-tool",
+          "update-tool"
+        ]
+      },
+      {
+        "text": "The schema stores stable core_memory_block rows by agent and block name, with content, character limit, and timestamps. Archival memory_fact rows contain agent ID, scope (ic/team/org), fact type, content, a 1536-dimensional embedding, source session IDs, and creation time. Indexes cover (agent_id, scope) and vector cosine search with HNSW.",
+        "sources": [
+          "schema",
+          "domain"
+        ]
+      },
+      {
+        "text": "Fact provenance consists of session IDs for sessions that created, updated, or merged into a fact. Promotion audit events retain the fact ID, origin agent, from/to scope, reason, source session IDs, and whether promotion was rejected.",
+        "sources": [
+          "domain",
+          "fact-store",
+          "memory-agent"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: save_memory derives scope from the saving agent's hierarchy and supplies agent and session IDs. FactStore embeds the content and searches for a same-agent, same-scope, same-type neighbor at or above cosine similarity 0.88. A match is LLM-merged, re-embedded, and updated with the union of source session IDs; otherwise a new row is inserted. The configured threshold is not a measured quality boundary.",
+        "sources": [
+          "save-tool",
+          "fact-store"
+        ]
+      },
+      {
+        "text": "Update and correction: archival near-duplicate writes update the chosen row's content and embedding; post-session promotion may move a fact's scope and records a justification. Core blocks support append or exact-substring replacement, both with a per-block character cap, plus owner full-block overwrite. This inspection found no archival correction history contract.",
+        "sources": [
+          "fact-store",
+          "promoter",
+          "memory-agent",
+          "core-memory",
+          "core-repo",
+          "update-tool"
+        ]
+      },
+      {
+        "text": "Delete: the fact repository deletes a fact by ID, and the API README documents owner-only deletion. CoreMemoryRepository deletes by agent and block name. No unified erasure workflow across archival facts, blocks, session history, backups, or external systems was established in this bounded inspection.",
+        "sources": [
+          "fact-repo",
+          "api-readme",
+          "core-repo"
+        ]
+      },
+      {
+        "text": "Retrieval: session briefing and search_context embed the query and use the same vector path, with a 0.35 minimum similarity and default top-10 cap. The caller requests all three scope values. The result is rendered as an archival-memory prompt envelope, separate from stable core-memory blocks.",
+        "sources": [
+          "memory-agent",
+          "fact-repo"
+        ]
+      },
+      {
+        "text": "Scope observation: the vector SQL predicate always binds agent_id and scope. Promotion updates only scope; the fact's agent_id is retained. Therefore source shows tier labels and filters within an agent's records, but does not show promoted facts becoming readable by a different agent ID. This is a code observation, not a cross-agent isolation test.",
+        "sources": [
+          "fact-repo",
+          "memory-agent",
+          "fact-store",
+          "promoter"
+        ]
+      },
+      {
+        "text": "Evidence and observability: facts retain source session IDs; promotion decisions can be logged with a reason and source-session IDs. Memory activity views report counts and trends, and database notifications cover memory fact create/delete and promotion events. The activity view notes that core block write churn is undercounted because blocks have only current-row timestamps, not a write-event log.",
+        "sources": [
+          "domain",
+          "memory-agent",
+          "activity",
+          "events"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency: PostgreSQL stores fixed-dimension embeddings and declares HNSW plus agent/scope indexes; recall is capped at 10 by default. No latency, token, cost, or storage measurement was collected.",
+        "sources": [
+          "schema",
+          "memory-agent",
+          "metrics"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Vector search has a similarity floor and top-k cap; this review ran no answerable or unanswerable probes.",
+        "sources": [
+          "memory-agent",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "The source supports merge and scope update paths, but no corrected-value adjudication or stale-value probes were run.",
+        "sources": [
+          "fact-store",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Fact and block delete methods are visible; no post-delete probes were run.",
+        "sources": [
+          "fact-repo",
+          "core-repo",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Vector search predicates require agent_id and scope. No cross-agent or cross-tenant isolation probes were run.",
+        "sources": [
+          "fact-repo",
+          "memory-agent",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Fact source-session IDs and promotion audit details provide provenance signals; answer claims were not adjudicated for support or citation coverage.",
+        "sources": [
+          "domain",
+          "memory-agent",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No retrieval timing distributions or scheduled write-to-recall observations were collected.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No model usage or price accounting was collected for this system.",
+        "sources": [
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The schema and indexes are source-visible, but no corpus storage size or bytes-per-item measurement was collected.",
+        "sources": [
+          "schema",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded source review at one verified commit. The service and tests were not run; behavior of deployments, authorization boundaries, memory quality, deletion completeness, and operational performance remain unverified.",
+        "sources": [
+          "readme",
+          "api-readme",
+          "metrics"
+        ]
+      },
+      {
+        "text": "The inspected retrieval query requires agent_id even when scope is promoted. This review therefore does not treat the scope name as proof of sharing across agents; runtime policy and other uninspected code paths may affect system behavior.",
+        "sources": [
+          "fact-repo",
+          "memory-agent",
+          "promoter"
+        ]
+      },
+      {
+        "text": "The official README, root SECURITY.md, SUPPORT.md, and .github/SECURITY.md were checked for a published email. The README contains no published address and the other three files are absent at the reviewed revision; contact_email is null with the exact checked README URL.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status: not_run. No Beevibe runtime, benchmark workload, fixture, or tests were run. Project metric definitions, fixture, and status record are protocol/status artifacts, not Beevibe measurements.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

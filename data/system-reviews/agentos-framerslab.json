@@ -1,0 +1,338 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "agentos-framerslab",
+    "name": "AgentOS",
+    "repository": "https://github.com/framerslab/agentos",
+    "branch": "master",
+    "revision": "2ce57e171eb0af6eaa729307b41908f8e230b7d2",
+    "reviewed_at": "2026-11-24T19:03:34Z",
+    "review_timezone": "UTC (2026-11-24 11:03:34 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "AgentOS is a TypeScript agent framework whose cognitive-memory layer encodes scoped traces, retrieves and assembles context, and can connect memory to working, graph, archive, and SQL-backed stores. This is a source review, not an execution or performance assessment.",
+    "atlas_locator": {
+      "ordinal": 25,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agentos-framerslab.md",
+      "listed_repository": "https://github.com/framerslab/agentos"
+    },
+    "contact": {
+      "email": "team@frame.dev",
+      "source_url": "https://github.com/framerslab/agentos/blob/2ce57e171eb0af6eaa729307b41908f8e230b7d2/SUPPORT.md",
+      "note": "Published on official SUPPORT.md for commercial, partnership, or sponsorship inquiries; also published by the official README and security policy."
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical AgentOS GitHub repository",
+        "path": "repository",
+        "symbol": "framerslab/agentos; default branch master",
+        "url": "https://github.com/framerslab/agentos"
+      },
+      {
+        "id": "head",
+        "label": "Verified current head commit",
+        "path": "commit",
+        "symbol": "current master head 2ce57e171eb0af6eaa729307b41908f8e230b7d2",
+        "url": "https://github.com/framerslab/agentos/commit/2ce57e171eb0af6eaa729307b41908f8e230b7d2"
+      },
+      {
+        "id": "readme",
+        "label": "Official AgentOS README",
+        "path": "README.md",
+        "symbol": "runtime and project overview; published contact address",
+        "url": "https://github.com/framerslab/agentos/blob/2ce57e171eb0af6eaa729307b41908f8e230b7d2/README.md"
+      },
+      {
+        "id": "support",
+        "label": "Official support information",
+        "path": "SUPPORT.md",
+        "symbol": "published team contact email",
+        "url": "https://github.com/framerslab/agentos/blob/2ce57e171eb0af6eaa729307b41908f8e230b7d2/SUPPORT.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": ".github/SECURITY.md",
+        "symbol": "published security contact email",
+        "url": "https://github.com/framerslab/agentos/blob/2ce57e171eb0af6eaa729307b41908f8e230b7d2/.github/SECURITY.md"
+      },
+      {
+        "id": "overview",
+        "label": "Memory system overview",
+        "path": "docs/MEMORY_SYSTEM_OVERVIEW.md",
+        "symbol": "documented memory architecture and storage options",
+        "url": "https://github.com/framerslab/agentos/blob/2ce57e171eb0af6eaa729307b41908f8e230b7d2/docs/MEMORY_SYSTEM_OVERVIEW.md"
+      },
+      {
+        "id": "manager",
+        "label": "CognitiveMemoryManager",
+        "path": "src/cognition/memory/CognitiveMemoryManager.ts",
+        "symbol": "encode/retrieve/assemble/health/delete operations",
+        "url": "https://github.com/framerslab/agentos/blob/2ce57e171eb0af6eaa729307b41908f8e230b7d2/src/cognition/memory/CognitiveMemoryManager.ts"
+      },
+      {
+        "id": "types",
+        "label": "Memory trace and trust types",
+        "path": "src/cognition/memory/core/types.ts",
+        "symbol": "trace fields, provenance and capability trust policy",
+        "url": "https://github.com/framerslab/agentos/blob/2ce57e171eb0af6eaa729307b41908f8e230b7d2/src/cognition/memory/core/types.ts"
+      },
+      {
+        "id": "recall",
+        "label": "Recall pipeline",
+        "path": "src/cognition/memory/retrieval/recall/pipeline.ts",
+        "symbol": "dense/hybrid retrieval, RRF fusion, dedupe and rerank",
+        "url": "https://github.com/framerslab/agentos/blob/2ce57e171eb0af6eaa729307b41908f8e230b7d2/src/cognition/memory/retrieval/recall/pipeline.ts"
+      },
+      {
+        "id": "scope",
+        "label": "Conversation scope key",
+        "path": "src/cognition/memory/retrieval/store/conversationScopeKey.ts",
+        "symbol": "agent/user/session/operator scope key construction",
+        "url": "https://github.com/framerslab/agentos/blob/2ce57e171eb0af6eaa729307b41908f8e230b7d2/src/cognition/memory/retrieval/store/conversationScopeKey.ts"
+      },
+      {
+        "id": "gmi",
+        "label": "GMI runtime",
+        "path": "src/api/gmi.ts",
+        "symbol": "per-session memory bridge and caller scope behavior",
+        "url": "https://github.com/framerslab/agentos/blob/2ce57e171eb0af6eaa729307b41908f8e230b7d2/src/api/gmi.ts"
+      },
+      {
+        "id": "adapter",
+        "label": "GMI cognitive-memory construction",
+        "path": "src/api/runtime/agentCognitiveMemory.ts",
+        "symbol": "manager/store/embedding wiring",
+        "url": "https://github.com/framerslab/agentos/blob/2ce57e171eb0af6eaa729307b41908f8e230b7d2/src/api/runtime/agentCognitiveMemory.ts"
+      },
+      {
+        "id": "forget",
+        "label": "Subject memory deletion",
+        "path": "src/cognition/memory/io/forgetUserMemory.ts",
+        "symbol": "tombstone, deletion report and reached/missed stores",
+        "url": "https://github.com/framerslab/agentos/blob/2ce57e171eb0af6eaa729307b41908f8e230b7d2/src/cognition/memory/io/forgetUserMemory.ts"
+      },
+      {
+        "id": "store",
+        "label": "Persistent Memory facade",
+        "path": "src/cognition/memory/io/facade/Memory.ts",
+        "symbol": "trace deletion and index cleanup",
+        "url": "https://github.com/framerslab/agentos/blob/2ce57e171eb0af6eaa729307b41908f8e230b7d2/src/cognition/memory/io/facade/Memory.ts"
+      },
+      {
+        "id": "recall-log",
+        "label": "Recall event logger",
+        "path": "src/cognition/memory/retrieval/recall/log.ts",
+        "symbol": "structured recall event logging",
+        "url": "https://github.com/framerslab/agentos/blob/2ce57e171eb0af6eaa729307b41908f8e230b7d2/src/cognition/memory/retrieval/recall/log.ts"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog entry and attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 25 identity, listed repository locator, Atlas source attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas-entry",
+        "label": "Atlas report attribution from curated roster",
+        "path": "content/systems/agentos-framerslab.md",
+        "symbol": "identity/locator attribution only; no assessment content used",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agentos-framerslab.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "shared status record; no AgentOS measurement",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned workload only; not run for this review",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository describes AgentOS as a TypeScript AI agent framework; its README identifies `@framers/agentos` as the core runtime and includes cognitive memory. The repository is under the framerslab GitHub organization; this review makes no claim about an individual maintainer.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "`CognitiveMemoryManager` coordinates trace encoding, retrieval, prompt assembly, working memory, optional graph and typed-network components, health reporting, and deletion. The GMI runtime builds cognitive memory from agent options and connects it to each session; `agentCognitiveMemory.ts` wires embeddings, an in-memory vector store, a knowledge graph, and optionally a persistent Brain/archive.",
+        "sources": [
+          "manager",
+          "adapter",
+          "gmi"
+        ]
+      },
+      {
+        "text": "A `MemoryTrace` stores content, type, scope and scope ID, timestamps, tags/entities, encoding and access fields, emotional context, provenance, and a source-derived trust policy. Provenance records source type/time, confidence, verification count and optional source/contradiction references. The policy separately gates authorization, personalization and factual-claim use.",
+        "sources": [
+          "types",
+          "manager"
+        ]
+      },
+      {
+        "text": "The documented storage layer uses the `@framers/sql-storage-adapter` abstraction and supports SQLite, Postgres and other runtime adapters; memory overview describes traces, indexes, graph data, retrieval feedback, consolidation records and optional verbatim archives. These are architecture statements from documentation, not measurements of capacity or portability.",
+        "sources": [
+          "overview",
+          "adapter"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: `encode()` creates an episodic trace by default (or uses caller-provided type/scope), defaults provenance to `user_statement`, applies the source-type trust policy, stores the trace and focuses it in working memory. Optional mechanisms, graph registration and typed-network extraction are separate configured paths; typed-network extraction is off by default.",
+        "sources": [
+          "manager",
+          "types"
+        ]
+      },
+      {
+        "text": "Update/correction: traces have `updatedAt` and provenance fields, but this inspection did not establish a general in-place correction history contract for `encode()`. AgentOS also exposes correction and memory lifecycle APIs elsewhere; their guarantees depend on which facade and configuration the host uses. Do not infer current-value accuracy from the presence of these fields.",
+        "sources": [
+          "manager",
+          "types",
+          "overview"
+        ]
+      },
+      {
+        "text": "Delete: manager deletion removes named traces or a scope and invokes cleanup for graph, archive and typed facts. The persistent facade removes graph copies before rows and updates indexes; higher-level subject erasure writes a tombstone, attempts the mind/store/pages/sessions, and reports which parts were reached or missed. The report explicitly leaves the host's own conversation history, out-of-scope ingested documents and organization-scope memory outside that subject deletion path.",
+        "sources": [
+          "manager",
+          "store",
+          "forget"
+        ]
+      },
+      {
+        "text": "Retrieval: dense retrieval is the default. Optional hybrid mode runs dense, exact-word and recency legs, fuses ranks, deduplicates and cuts to top K; a configured reranker may reorder candidates. Prompt assembly applies a token budget. Capture mode can retain per-leg ranks, timings and reranker data; these source-visible fields do not establish measured quality or latency.",
+        "sources": [
+          "recall",
+          "manager"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Source inspection describes retrieval and confidence-policy hooks but no eligible adjudicated answerable or unsupported probe results for this review.",
+        "sources": [
+          "manager",
+          "recall",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "No current-value adjudication or post-correction probes were run; trace metadata and correction APIs alone do not establish stale-value rates.",
+        "sources": [
+          "types",
+          "manager",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Deletion code has explicit cleanup paths and reached/missed reporting, but no post-delete probes or runtime erasure were run here.",
+        "sources": [
+          "forget",
+          "store",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Conversation scope keys encode agent plus user, anonymous-session, or operator identity, and GMI documents session/user scoping. This source review did not exercise authorization boundaries or cross-scope leak probes.",
+        "sources": [
+          "scope",
+          "gmi",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Trace provenance and trust policy can constrain whether traces support factual claims. No answer captures were adjudicated for support precision or resolvable citation coverage.",
+        "sources": [
+          "types",
+          "manager",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency, write-to-recall delay, tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "Code exposes optional recall leg timings and capture data, but this review ran no workload and measured none of these resource or delay domains.",
+        "sources": [
+          "recall",
+          "manager",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected selected documentation and source files at one verified repository revision. It does not establish runtime correctness, adapter-specific behavior, security isolation, deletion completeness, quality, operational reliability or performance.",
+        "sources": [
+          "repo",
+          "manager",
+          "gmi",
+          "store",
+          "metrics"
+        ]
+      },
+      {
+        "text": "AgentOS has multiple memory facades and configuration paths. A host's actual behavior depends on selected runtime, stores, enabled mechanisms, retrieval policy, providers and deletion wiring; this bounded review does not audit every path.",
+        "sources": [
+          "readme",
+          "overview",
+          "adapter",
+          "gmi"
+        ]
+      },
+      {
+        "text": "The roster supplied ordinal identity, repository locator and Atlas attribution only. Atlas descriptions, feature marks and layout were not used as assessment evidence.",
+        "sources": [
+          "roster",
+          "atlas-entry"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status: not run for AgentOS in this task. The project metric definitions are in [METRICS.md](../METRICS.md); [the status record](../results/initial-baselines-status.json) is not a measured AgentOS result, and the [fixture](../fixtures/memory-benchmark-v1.json) is planned workload data only. Source observations above must not be read as measurements.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

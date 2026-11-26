@@ -1,0 +1,344 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "cortex-hypermnesia",
+    "name": "Cortex (Hypermnesia)",
+    "ordinal": 159,
+    "repository": "https://github.com/cdeust/Cortex",
+    "listed_repository": "https://github.com/cdeust/Cortex",
+    "branch": "main",
+    "revision": "b9e9c36f24abfa779282ce8accba0695306a3e77",
+    "reviewed_at": "2026-11-25T09:30:30Z",
+    "review_timezone": "UTC (2026-11-25 01:30:30 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Cortex is a local-first persistent memory MCP server for coding agents. It stores memory in SQLite by default or PostgreSQL with pgvector, exposes explicit MCP tools, and supports automatic lifecycle hooks through native Claude Code and Codex plugins.",
+    "atlas_locator": {
+      "ordinal": 159,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cortex-hypermnesia.md",
+      "listed_repository": "https://github.com/cdeust/Cortex"
+    },
+    "contact": {
+      "email": "admin@ai-architect.tools",
+      "source_url": "https://github.com/cdeust/Cortex/blob/b9e9c36f24abfa779282ce8accba0695306a3e77/README.md",
+      "note": "Published in the official pinned README contact section."
+    },
+    "contact_email": "admin@ai-architect.tools",
+    "contact_email_source_url": "https://github.com/cdeust/Cortex/blob/b9e9c36f24abfa779282ce8accba0695306a3e77/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/cdeust/Cortex/blob/b9e9c36f24abfa779282ce8accba0695306a3e77/README.md"
+    ],
+    "contact_email_note": "The official pinned README lists admin@ai-architect.tools in its contact section.",
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "Current canonical repository; default branch main",
+        "url": "https://github.com/cdeust/Cortex"
+      },
+      {
+        "id": "history",
+        "label": "Official main branch history",
+        "path": "commits/main.atom",
+        "symbol": "Main head b9e9c36f24abfa779282ce8accba0695306a3e77; updated 2026-11-24T01:10:56Z",
+        "url": "https://github.com/cdeust/Cortex/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified full-SHA head commit",
+        "path": "commit",
+        "symbol": "Current main head b9e9c36f24abfa779282ce8accba0695306a3e77",
+        "url": "https://github.com/cdeust/Cortex/commit/b9e9c36f24abfa779282ce8accba0695306a3e77"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Product model, storage, retrieval, limits, maintainer statement and published contact",
+        "url": "https://github.com/cdeust/Cortex/blob/b9e9c36f24abfa779282ce8accba0695306a3e77/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Architecture documentation",
+        "path": "docs/architecture.md",
+        "symbol": "Layer boundaries and architecture overview",
+        "url": "https://github.com/cdeust/Cortex/blob/b9e9c36f24abfa779282ce8accba0695306a3e77/docs/architecture.md"
+      },
+      {
+        "id": "api",
+        "label": "API reference",
+        "path": "docs/api-reference.md",
+        "symbol": "Tool contracts and exact replay/supersession behavior",
+        "url": "https://github.com/cdeust/Cortex/blob/b9e9c36f24abfa779282ce8accba0695306a3e77/docs/api-reference.md"
+      },
+      {
+        "id": "tools",
+        "label": "MCP tool catalogue",
+        "path": "docs/mcp-tools.md",
+        "symbol": "Memory tools, integrations and target latency classes",
+        "url": "https://github.com/cdeust/Cortex/blob/b9e9c36f24abfa779282ce8accba0695306a3e77/docs/mcp-tools.md"
+      },
+      {
+        "id": "schema",
+        "label": "PostgreSQL schema",
+        "path": "mcp_server/infrastructure/pg_schema.py",
+        "symbol": "Memory columns and database extensions/indexed storage",
+        "url": "https://github.com/cdeust/Cortex/blob/b9e9c36f24abfa779282ce8accba0695306a3e77/mcp_server/infrastructure/pg_schema.py"
+      },
+      {
+        "id": "remember",
+        "label": "Remember handler",
+        "path": "mcp_server/handlers/remember.py",
+        "symbol": "Write inputs, scope context, domain resolution, gates and store path",
+        "url": "https://github.com/cdeust/Cortex/blob/b9e9c36f24abfa779282ce8accba0695306a3e77/mcp_server/handlers/remember.py"
+      },
+      {
+        "id": "recall",
+        "label": "Recall handler",
+        "path": "mcp_server/handlers/recall.py",
+        "symbol": "Ranked retrieval, enrichment, provenance annotation and response budget",
+        "url": "https://github.com/cdeust/Cortex/blob/b9e9c36f24abfa779282ce8accba0695306a3e77/mcp_server/handlers/recall.py"
+      },
+      {
+        "id": "forget",
+        "label": "Forget handler",
+        "path": "mcp_server/handlers/forget.py",
+        "symbol": "Soft/hard deletion and reports of derived data/residue",
+        "url": "https://github.com/cdeust/Cortex/blob/b9e9c36f24abfa779282ce8accba0695306a3e77/mcp_server/handlers/forget.py"
+      },
+      {
+        "id": "scope",
+        "label": "Project scope predicate",
+        "path": "mcp_server/infrastructure/pg_scope_clause.py",
+        "symbol": "Directory ancestor filtering; omission means no project restriction",
+        "url": "https://github.com/cdeust/Cortex/blob/b9e9c36f24abfa779282ce8accba0695306a3e77/mcp_server/infrastructure/pg_scope_clause.py"
+      },
+      {
+        "id": "search",
+        "label": "PostgreSQL search implementation",
+        "path": "mcp_server/infrastructure/pg_store_search.py",
+        "symbol": "PostgreSQL full-text and vector retrieval methods",
+        "url": "https://github.com/cdeust/Cortex/blob/b9e9c36f24abfa779282ce8accba0695306a3e77/mcp_server/infrastructure/pg_store_search.py"
+      },
+      {
+        "id": "erasure",
+        "label": "PostgreSQL erasure implementation",
+        "path": "mcp_server/infrastructure/pg_store_erasure.py",
+        "symbol": "Transactional hard erasure and vacuum reclamation limitation",
+        "url": "https://github.com/cdeust/Cortex/blob/b9e9c36f24abfa779282ce8accba0695306a3e77/mcp_server/infrastructure/pg_store_erasure.py"
+      },
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 159, system name, slug, explicit locator and pinned roster attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster locator",
+        "path": "content/systems/cortex-hypermnesia.md",
+        "symbol": "Curated identity/locator context only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cortex-hypermnesia.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Definitions of the comparison metric domains",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned workload only; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status; no Cortex result asserted",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Cortex as the independent work of Clément Deust and presents it as a local-first open-source memory system rather than a hosted service.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The Python project separates core logic, infrastructure, handlers, server and transport layers; lifecycle hooks use core and infrastructure modules. The MCP surface includes memory, profiling, consolidation, search, telemetry and project wiki operations.",
+        "sources": [
+          "architecture",
+          "tools"
+        ]
+      },
+      {
+        "text": "The PostgreSQL memory schema stores content and embeddings with tags, source, domain, directory context, timestamps, heat and decay fields, confidence, access counters and capture origin. SQLite is the documented local default backend.",
+        "sources": [
+          "schema",
+          "readme"
+        ]
+      },
+      {
+        "text": "GitHub identifies main as the default branch; its official main Atom feed reports full head b9e9c36f24abfa779282ce8accba0695306a3e77, updated 2026-11-24T01:10:56Z, and the repository page displays the matching head prefix. Review timestamp: 2026-11-25T09:30:30Z (UTC; 2026-11-25 01:30:30 PST; America/Los_Angeles).",
+        "sources": [
+          "repo",
+          "history",
+          "head"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The remember handler accepts content, tags, directory, source, agent topic, global status, event time and write class, resolves origin/domain, and delegates through configured write gates and storage. The API documents exact-replay rejection within a write scope and an explicit atomic supersession path.",
+        "sources": [
+          "remember",
+          "api"
+        ]
+      },
+      {
+        "text": "Consolidation can supersede retained duplicate rows. The inspected documentation describes decay-based consolidation, but this review did not trace every maintenance path or establish each correction type across both backends.",
+        "sources": [
+          "api",
+          "tools"
+        ]
+      },
+      {
+        "text": "Soft forget marks a memory stale and sets heat to zero; the handler says it remains recoverable through SQL. Hard forget invokes store erasure and reports derived claims, artifacts, pages and possible residue. PostgreSQL erasure is transactional, while dead tuples remain until vacuum reclaims them.",
+        "sources": [
+          "forget",
+          "erasure"
+        ]
+      },
+      {
+        "text": "Recall returns ranked memories and may enrich the capped set with triggered/co-activated memories and related neighbors. It annotates source attribution, bounds response payloads, and uses PostgreSQL vector/full-text search; the README describes hybrid vector, full-text, trigram, heat and recency fusion with cross-encoder reranking.",
+        "sources": [
+          "recall",
+          "search",
+          "readme"
+        ]
+      },
+      {
+        "text": "Directory context can be filtered by project ancestors inside SQL before ranking and limiting. Omitted project scope means no project restriction; scoped searches admit matching project paths and global memories. This is a code-observed filter, not evidence of mandatory isolation for every tool or auxiliary store.",
+        "sources": [
+          "remember",
+          "scope",
+          "search"
+        ]
+      },
+      {
+        "text": "Memory rows retain source, capture origin and reference-related state; recall exposes stored source attribution and a confabulation-risk annotation. The README says provenance grading checks local reference resolution, not truth, and this inspection found no general claim-level citation contract for arbitrary generated answers.",
+        "sources": [
+          "schema",
+          "recall",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention — unmeasured. Hybrid retrieval and a source-visible abstention gate exist; no answer or abstention workload was run.",
+        "sources": [
+          "readme",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured. Explicit supersession and consolidation paths are documented; no correction probes were adjudicated.",
+        "sources": [
+          "api",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Deletion leakage — unmeasured. Soft and hard deletion paths exist; no post-deletion recall or physical-storage checks were run.",
+        "sources": [
+          "forget",
+          "erasure",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Scope isolation — unmeasured. Project-directory filtering and global-memory behavior are visible in code; no cross-project leakage workload was run.",
+        "sources": [
+          "scope",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Evidence support and citation coverage — unmeasured. Reference resolvability and source attribution are implemented; no generated claims or citations were scored.",
+        "sources": [
+          "readme",
+          "recall",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Retrieval latency — unmeasured. Tool documentation gives target classes but no timing samples were collected.",
+        "sources": [
+          "tools",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Write-to-recall delay — unmeasured. No timed write/recall probes were run.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Tokens and cost — unmeasured. No provider usage or charges were collected.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Storage efficiency — unmeasured. No corpus-attributed logical or physical storage size was collected.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency controls include PostgreSQL vector/full-text search, response budgets and tool telemetry; the README describes SQLite fusion as in-process and unindexed, and optional OTLP telemetry. These are code/documentation observations, not measurements.",
+        "sources": [
+          "schema",
+          "search",
+          "recall",
+          "tools",
+          "readme"
+        ]
+      }
+    ],
+    "limits": [
+      "This is a bounded source review of the README, architecture/API documentation, MCP catalogue, PostgreSQL schema, selected memory handlers, scope predicate, PostgreSQL search, and erasure implementation. It did not trace every store operation, backend-specific divergence, hook, model adapter, or auxiliary subsystem.",
+      "No Cortex runtime, tests, or benchmarks were run. This review does not establish runtime correctness, retrieval/abstention quality, scope isolation across every tool, complete physical erasure, latency, write-to-recall delay, token/cost totals, or storage efficiency.",
+      "PostgreSQL hard deletion removes logical rows transactionally, but physical page reclamation is deferred to vacuum. The README describes SQLite fusion as unindexed and potentially slower at very large scale.",
+      "Upstream retrieval results are reported by the README for their named evaluation setup. They were not independently rerun and are not project benchmark results."
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Cortex runtime, tests, or benchmark workload was executed. Source observations and upstream-reported evaluations are not project measurements.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

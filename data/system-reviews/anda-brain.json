@@ -1,0 +1,369 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "anda-brain",
+    "name": "Anda Brain",
+    "repository": "https://github.com/ldclabs/anda-brain",
+    "branch": "main",
+    "revision": "a139642f1eeb2bd2079f4d8aea0dc7365e299546",
+    "reviewed_at": "2026-11-24T20:45:17Z",
+    "review_timezone": "UTC (2026-11-24 12:45:17 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/ldclabs/anda-brain/blob/a139642f1eeb2bd2079f4d8aea0dc7365e299546/README.md","checked_urls":["https://github.com/ldclabs/anda-brain/blob/a139642f1eeb2bd2079f4d8aea0dc7365e299546/README.md","https://github.com/ldclabs/anda-brain/blob/a139642f1eeb2bd2079f4d8aea0dc7365e299546/SECURITY.md","https://github.com/ldclabs/anda-brain/blob/a139642f1eeb2bd2079f4d8aea0dc7365e299546/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "Anda Brain is a self-hosted memory service for agents. Formation turns interactions into a versioned knowledge graph, Recall answers from that graph, and Maintenance consolidates and reviews it. This review reports current source and documentation observations, not benchmark measurements.",
+    "atlas_locator": {
+      "ordinal": 55,
+      "name": "Anda Brain",
+      "slug": "anda-brain",
+      "listed_repository": "https://github.com/ldclabs/anda-brain",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/anda-brain.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/ldclabs/anda-brain/blob/a139642f1eeb2bd2079f4d8aea0dc7365e299546/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/ldclabs/anda-brain/blob/a139642f1eeb2bd2079f4d8aea0dc7365e299546/README.md",
+      "https://anda.ai/"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Current canonical upstream GitHub repository",
+        "path": "repository",
+        "symbol": "canonical ldclabs/anda-brain; default branch main",
+        "url": "https://github.com/ldclabs/anda-brain"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed current main head patch",
+        "path": "commit patch",
+        "symbol": "full current head a139642f1eeb2bd2079f4d8aea0dc7365e299546",
+        "url": "https://github.com/ldclabs/anda-brain/commit/a139642f1eeb2bd2079f4d8aea0dc7365e299546.patch"
+      },
+      {
+        "id": "overview",
+        "label": "Official repository README",
+        "path": "README.md",
+        "symbol": "system overview, architecture, memory model, operations, limits",
+        "url": "https://github.com/ldclabs/anda-brain/blob/a139642f1eeb2bd2079f4d8aea0dc7365e299546/README.md"
+      },
+      {
+        "id": "technical",
+        "label": "Anda Brain technical reference",
+        "path": "anda_brain/README.md",
+        "symbol": "architecture, agent lifecycle, Memory Interface, API and known limits",
+        "url": "https://github.com/ldclabs/anda-brain/blob/a139642f1eeb2bd2079f4d8aea0dc7365e299546/anda_brain/README.md"
+      },
+      {
+        "id": "formation",
+        "label": "Formation agent implementation",
+        "path": "anda_brain/src/agents/formation.rs",
+        "symbol": "input Evidence, queued processing, bounded history and retry behavior",
+        "url": "https://github.com/ldclabs/anda-brain/blob/a139642f1eeb2bd2079f4d8aea0dc7365e299546/anda_brain/src/agents/formation.rs"
+      },
+      {
+        "id": "recall",
+        "label": "Recall agent implementation",
+        "path": "anda_brain/src/agents/recall.rs",
+        "symbol": "read-only Recall tools, hard budgets, timeouts and model-turn bound",
+        "url": "https://github.com/ldclabs/anda-brain/blob/a139642f1eeb2bd2079f4d8aea0dc7365e299546/anda_brain/src/agents/recall.rs"
+      },
+      {
+        "id": "space",
+        "label": "Space and host implementation",
+        "path": "anda_brain/src/space.rs",
+        "symbol": "per-Space storage and runtime, background maintenance and concurrency",
+        "url": "https://github.com/ldclabs/anda-brain/blob/a139642f1eeb2bd2079f4d8aea0dc7365e299546/anda_brain/src/space.rs"
+      },
+      {
+        "id": "memory_interface",
+        "label": "Memory Interface implementation",
+        "path": "anda_brain/src/memory_interface/mod.rs",
+        "symbol": "scope handles, receipt progress and operation validation",
+        "url": "https://github.com/ldclabs/anda-brain/blob/a139642f1eeb2bd2079f4d8aea0dc7365e299546/anda_brain/src/memory_interface/mod.rs"
+      },
+      {
+        "id": "authz",
+        "label": "Authorization implementation",
+        "path": "anda_brain/src/authz.rs",
+        "symbol": "CWT and Space-token identity, label-restricted access guards",
+        "url": "https://github.com/ldclabs/anda-brain/blob/a139642f1eeb2bd2079f4d8aea0dc7365e299546/anda_brain/src/authz.rs"
+      },
+      {
+        "id": "ledger",
+        "label": "Usage ledger implementation",
+        "path": "anda_brain/src/ledger.rs",
+        "symbol": "indexed recall, self-test and correction counters",
+        "url": "https://github.com/ldclabs/anda-brain/blob/a139642f1eeb2bd2079f4d8aea0dc7365e299546/anda_brain/src/ledger.rs"
+      },
+      {
+        "id": "site",
+        "label": "Official Anda organization website",
+        "path": "official organization site",
+        "symbol": "LDC Labs and ICPanda DAO stewardship; no published contact email found",
+        "url": "https://anda.ai/"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog identity and source attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 55, name, slug, listed repository locator and Atlas attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "measurement domains and scoring protocol",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "synthetic workload definition, not a run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "status not_run; no result values",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "Anda Brain is a self-hosted Rust library and service for agent memory. The official site identifies Anda as developed openly by LDC Labs and ICPanda DAO; the repository describes Brain as a service backed by a Cognitive Nexus graph. The main review covers the Rust service; the repository also documents a separate Cloudflare Worker edition.",
+        "sources": [
+          "overview",
+          "technical",
+          "site"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The service has three layers: HTTP/MCP and Memory Interface clients; Brain's Formation, Recall and Maintenance agents plus host gates; and a Cognitive Nexus graph stored in AndaDB, with one database per Space. The Rust service supports local filesystem, S3, or in-memory storage.",
+        "sources": [
+          "overview",
+          "technical",
+          "space"
+        ]
+      },
+      {
+        "text": "The graph separates Concepts (referable entities), Propositions (truth-neutral subject/predicate/object statements), Assertions (an actor's stance, confidence, validity and evidence), Evidence (observed artifacts), and Activities (process provenance). Belief is projected at read time under a named policy rather than stored as a fact row.",
+        "sources": [
+          "overview",
+          "technical"
+        ]
+      },
+      {
+        "text": "Formation captures input messages as Evidence and runs asynchronously through a per-Space queue. The inspected Formation source includes bounded conversation history and bounded failed-round retries; its source comments describe message Evidence bindings for inputs.",
+        "sources": [
+          "technical",
+          "formation",
+          "space"
+        ]
+      },
+      {
+        "text": "Recall plans and executes read-only KQL/META graph queries, while Maintenance runs deterministic settlement before model-led consolidation and review. A separate settlement implementation tracks revision effects, due commitments, retention, and background reports.",
+        "sources": [
+          "technical",
+          "recall",
+          "space"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: REST Formation and Memory Interface observe/revise/feedback paths enqueue conversations and return before encoding completes. Formation grounds new claims against existing graph state and writes through KIP; the host blocks bulk administration commands from an untrusted conversation. The Memory Interface stages sources, supports idempotency keys and returns receipts whose progress moves from recorded to available or failed; a recall may wait on earlier receipts.",
+        "sources": [
+          "technical",
+          "formation",
+          "memory_interface"
+        ]
+      },
+      {
+        "text": "Update/correction: the model is append-oriented. A changed world is represented by a time-bounded successor Assertion; a wrong claim is superseded by a new Assertion from the same actor; a recording error invalidates the extraction. Different actors' disagreement can coexist, and existing Assertions are not rewritten.",
+        "sources": [
+          "overview",
+          "technical",
+          "memory_interface"
+        ]
+      },
+      {
+        "text": "Delete/forget: explicit forget supports dry-run planning and physical purge of selected graph IDs, subject to reference checks and legal holds. The technical reference says the service also scrubs its own saved previews, while external originals, backups, provider copies, and separate conversation/wiki lifecycles remain outside that guarantee.",
+        "sources": [
+          "technical",
+          "overview"
+        ]
+      },
+      {
+        "text": "Retrieval: Recall grounds names to graph nodes, uses BELIEF projection for belief questions, and can report contested or insufficient support. Structured Recall adds trace-derived citations and a found flag. Optional budgeted Recall returns a host-packed packet with explicit coverage and a pinned tokenizer. Reads do not reinforce memory.",
+        "sources": [
+          "technical",
+          "recall"
+        ]
+      },
+      {
+        "text": "Scope: each Space has its own database, history, tokens and policy; the inspected authorization code handles signed CWT and Space tokens and derives a stable caller identity. The same code blocks label-restricted tokens from agentic Recall and stored conversations because those surfaces can span wiki labels.",
+        "sources": [
+          "overview",
+          "technical",
+          "space",
+          "authz",
+          "memory_interface"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "The code and documentation define graph-based Recall and an insufficient answer state; no fixture probes or adjudicated answers were collected.",
+        "sources": [
+          "technical",
+          "recall",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "The model records correction, temporal succession and misrecording as distinct histories; no post-correction retrieval probes were run.",
+        "sources": [
+          "technical",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Forget and purge paths are documented, but no accepted-delete workflow or post-delete probes were executed.",
+        "sources": [
+          "technical",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Spaces and authorization guards are visible in documentation and code; no cross-Space or cross-principal probes were run.",
+        "sources": [
+          "technical",
+          "authz",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Structured Recall can return citations, but no claims were captured and adjudicated for evidence support or citation coverage.",
+        "sources": [
+          "technical",
+          "recall",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "Source exposes timeouts and concurrency caps, but this review collected no request latency observations.",
+        "sources": [
+          "technical",
+          "recall",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Formation is asynchronous and documentation warns fresh memories may take a minute or more to become searchable; no delay probes were measured.",
+        "sources": [
+          "technical",
+          "formation",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "Budgeted Recall uses a pinned tokenizer and model calls are concurrency-limited; this review collected no provider token or charge records.",
+        "sources": [
+          "technical",
+          "recall",
+          "space",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Persistent storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Storage backends are documented, but no corpus-attributable byte measurement was made.",
+        "sources": [
+          "technical",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The technical reference documents a 65,536-solution engine ceiling for correction discovery and self-test full scans; those operations fail loudly beyond the limit. A Space also has a single-writer deployment constraint because several coordination controls are in-process.",
+        "sources": [
+          "technical",
+          "space"
+        ]
+      },
+      {
+        "text": "Formation has an asynchronous write-to-search delay; the Recall tool description warns that newly submitted material may need a minute or more to become searchable. The default recall model-turn cap is seven; budgeted mode has explicit token bounds.",
+        "sources": [
+          "technical",
+          "formation",
+          "recall"
+        ]
+      },
+      {
+        "text": "Forgetting does not erase an application's source data, backups, or provider copies. A no-leak result cannot be inferred without probing those boundaries, and none were probed in this review.",
+        "sources": [
+          "technical",
+          "metrics"
+        ]
+      },
+      {
+        "text": "This review inspected selected documentation and source pages at the pinned SHA. It did not inspect every module, the separate Worker implementation, or deployment configuration; runtime behavior and model quality are not established here.",
+        "sources": [
+          "overview",
+          "technical"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is not_run. No system, benchmark workload, tests, or runtime were executed. Project metrics and fixture define a protocol; the execution-status record is status metadata, not a system result.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      }
+    ]
+  }
+}

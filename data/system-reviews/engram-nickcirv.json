@@ -1,0 +1,326 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 222,
+    "slug": "engram-nickcirv",
+    "name": "engram (NickCirv)",
+    "repository": "https://github.com/NickCirv/engram",
+    "listed_repository": "https://github.com/NickCirv/engram",
+    "branch": "main",
+    "revision": "df445d3132583100e6d5106af4b4c91c01a2ba15",
+    "reviewed_at": "2026-11-25T19:20:58Z",
+    "review_timezone": "UTC (checked 2026-11-25 11:20:58 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Engram is a local code graph and context tool for coding agents. It indexes source entities and relationships, selected Git and session information, and optional skills into project-local SQLite, then exposes graph retrieval through CLI, hooks, MCP, and a local authenticated HTTP interface.",
+    "atlas_locator": {
+      "ordinal": 222,
+      "name": "engram (NickCirv)",
+      "slug": "engram-nickcirv",
+      "listed_repository": "https://github.com/NickCirv/engram",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/engram-nickcirv.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/NickCirv/engram/blob/df445d3132583100e6d5106af4b4c91c01a2ba15/README.md",
+      "checked_urls": [
+        "https://github.com/NickCirv/engram/blob/df445d3132583100e6d5106af4b4c91c01a2ba15/README.md"
+      ],
+      "note": "Checked only the official pinned repository README for a published contact email; none was found. No commit/profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/NickCirv/engram/blob/df445d3132583100e6d5106af4b4c91c01a2ba15/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/NickCirv/engram/blob/df445d3132583100e6d5106af4b4c91c01a2ba15/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the checked official pinned README. No commit/profile metadata, third-party directory, or inferred address was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[221], ordinal 222; identity and explicitly listed repository locator",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/engram-nickcirv.md",
+        "symbol": "Pinned roster source; identity and locator context only, not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/engram-nickcirv.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "GitHub repository page",
+        "symbol": "Canonical repository NickCirv/engram, public repository, default branch main",
+        "url": "https://github.com/NickCirv/engram"
+      },
+      {
+        "id": "head",
+        "label": "Official current head",
+        "path": "GitHub commits/main page and commit patch",
+        "symbol": "Latest main commit full SHA df445d3132583100e6d5106af4b4c91c01a2ba15; patch header gives commit date 2026-09-22",
+        "url": "https://github.com/NickCirv/engram/commit/df445d3132583100e6d5106af4b4c91c01a2ba15"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Current product scope, memory and integration surfaces, privacy boundary, limits and contact check",
+        "url": "https://github.com/NickCirv/engram/blob/df445d3132583100e6d5106af4b4c91c01a2ba15/README.md"
+      },
+      {
+        "id": "core",
+        "label": "Pinned core orchestration",
+        "path": "src/core.ts",
+        "symbol": "Project graph path, index lock, source/Git/revert/bug-fix/session mining, optional skills and incremental indexing",
+        "url": "https://github.com/NickCirv/engram/blob/df445d3132583100e6d5106af4b4c91c01a2ba15/src/core.ts"
+      },
+      {
+        "id": "store",
+        "label": "Pinned SQLite graph store",
+        "path": "src/graph/store.ts",
+        "symbol": "sql.js persistence, node/edge/stat/cache tables, upsert operations and source/confidence/temporal fields",
+        "url": "https://github.com/NickCirv/engram/blob/df445d3132583100e6d5106af4b4c91c01a2ba15/src/graph/store.ts"
+      },
+      {
+        "id": "schema",
+        "label": "Pinned graph types",
+        "path": "src/graph/schema.ts",
+        "symbol": "Node and edge graph model, confidence and memory fields",
+        "url": "https://github.com/NickCirv/engram/blob/df445d3132583100e6d5106af4b4c91c01a2ba15/src/graph/schema.ts"
+      },
+      {
+        "id": "query",
+        "label": "Pinned graph retrieval",
+        "path": "src/graph/query.ts",
+        "symbol": "Term scoring, bounded node search, BFS/DFS traversal, mistake weighting, token budget and rendering",
+        "url": "https://github.com/NickCirv/engram/blob/df445d3132583100e6d5106af4b4c91c01a2ba15/src/graph/query.ts"
+      },
+      {
+        "id": "guide",
+        "label": "Pinned architecture and integration guide",
+        "path": "docs/PORTFOLIO-GUIDE.md",
+        "symbol": "Project-root isolation description, CLI/API surface, optional providers, loopback HTTP authentication and estimates caveat",
+        "url": "https://github.com/NickCirv/engram/blob/df445d3132583100e6d5106af4b4c91c01a2ba15/docs/PORTFOLIO-GUIDE.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository presents Engram as a TypeScript/Node project and source-backed CLI/library for local code-graph context, with agent integrations. This review does not infer maintainer identity from account or commit metadata.",
+        "sources": [
+          "readme",
+          "guide",
+          "core"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The initializer derives .engram/graph.db from a project root and acquires an exclusive init lock. It mines source structure, Git history, reverts, bug-fix commits and session history; optional skills mining and incremental file-mtime skipping are also present.",
+        "sources": [
+          "core",
+          "guide"
+        ]
+      },
+      {
+        "text": "The sql.js store persists nodes, edges, stats and provider cache. Nodes retain labels, kinds, source file/location, confidence, timestamps, query counts, metadata and optional temporal mistake fields; edges retain relation and source provenance. Save/close exports the in-memory SQLite database.",
+        "sources": [
+          "store",
+          "schema"
+        ]
+      },
+      {
+        "text": "The repository exposes retrieval through a CLI and library, hooks, MCP and a loopback HTTP interface. Optional providers and integrations can add external processes or network access, so local SQLite does not guarantee every configured workflow stays offline.",
+        "sources": [
+          "readme",
+          "guide"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Writes use node and edge upserts in SQLite. The core initializer mines graph structure and selected project memory, and the documented public surface includes learn, reindex, watch and mistakes. Upsert replacement is not a complete version history or an auditable correction protocol.",
+        "sources": [
+          "core",
+          "store",
+          "guide"
+        ]
+      },
+      {
+        "text": "The reviewed README and command reference do not document a general user-facing per-memory delete operation. Low-level SQL availability does not establish a supported targeted deletion workflow; deletion guarantees and post-delete behavior remain unknown.",
+        "sources": [
+          "readme",
+          "guide",
+          "store"
+        ]
+      },
+      {
+        "text": "Retrieval scores text matches on node labels and source files, gives mistake nodes extra weight, searches bounded seed sets and neighbors, starts from the highest-ranked three seeds, then traverses relations and renders within a token budget. The default is BFS depth 3 and 2,000 estimated tokens; rendered character count divided by four is an estimate, not provider token telemetry.",
+        "sources": [
+          "query",
+          "guide"
+        ]
+      },
+      {
+        "text": "Each project root maps to its own graph path. This separates normal project data locations, but graph rows do not carry a tenant or user access key; no cross-project authorization or hostile local user guarantee was verified. Protected HTTP routes are documented as loopback-bound and authenticated.",
+        "sources": [
+          "core",
+          "store",
+          "guide",
+          "readme"
+        ]
+      },
+      {
+        "text": "Nodes and edges preserve source files/locations, confidence labels/scores, identifiers and timestamps; Git-derived mistakes may retain invalidating-commit and temporal text fields. These are provenance cues, not exact passage citations or independent truth verification.",
+        "sources": [
+          "store",
+          "schema",
+          "core"
+        ]
+      },
+      {
+        "text": "SQL indexes, per-term search caps, a small seed count, bounded query rendering and cached provider content are implementation controls. Query counters and graph statistics support inspection, but no latency, throughput, token, cost or storage workload was measured.",
+        "sources": [
+          "store",
+          "query",
+          "guide",
+          "metrics"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Graph term matching and bounded traversal are implemented; no answer set was scored.",
+        "sources": [
+          "query",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Replacement upserts and temporal mistake fields exist; no correction or stale-value probes were run.",
+        "sources": [
+          "store",
+          "schema",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No supported general delete workflow was verified, and no delete or post-delete probe was run.",
+        "sources": [
+          "readme",
+          "guide",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Per-project paths are implemented; no cross-project isolation workload was run.",
+        "sources": [
+          "core",
+          "guide",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source location and confidence fields exist; no generated claims were adjudicated.",
+        "sources": [
+          "store",
+          "schema",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No runtime timing samples were collected.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "The query budget is estimated; no resource measurements were collected.",
+        "sources": [
+          "query",
+          "readme",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a source review at the verified current main head. No install, build, runtime, tests, or benchmark execution was performed. Graph retrieval can omit supported-source gaps or return incomplete context; upstream directs users to inspect the original source before relying on a query.",
+        "sources": [
+          "repo",
+          "head",
+          "readme",
+          "query"
+        ]
+      },
+      {
+        "text": "Project-root separation is not a demonstrated security boundary. The documented HTTP interface has authentication controls, while optional integrations may execute processes or access networks. Actual isolation, retrieval correctness, and deletion behavior remain unverified.",
+        "sources": [
+          "core",
+          "store",
+          "guide",
+          "readme"
+        ]
+      },
+      {
+        "text": "Structural context estimates do not establish answer quality or invoice savings. Performance, resource use, and correction/deletion outcomes remain unknown without a versioned measured evaluation.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Engram runtime, tests, or benchmark workload were run. All evaluation domains remain unmeasured."
+    }
+  }
+}

@@ -1,0 +1,309 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 273,
+    "slug": "graphnosis",
+    "name": "Graphnosis",
+    "repository": "https://github.com/nehloo-interactive/graphnosis-app",
+    "listed_repository": "https://github.com/nehloo-interactive/graphnosis-app",
+    "branch": "not verified",
+    "revision": "not verified",
+    "reviewed_at": "2026-11-25T21:53:42Z",
+    "review_timezone": "UTC (2026-11-25 13:53:42 PST; America/Los_Angeles)",
+    "source_status": "not_reviewed",
+    "benchmark_status": "not_run",
+    "summary": "The catalog identifies Graphnosis at ordinal 273 and lists nehloo-interactive/graphnosis-app, but the official repository page and checked source pages return Page not found, the repository API returns 404, and the main commit feed returns Not Found. The current upstream, branch, head, implementation, and contact remain unverified; no source assessment is claimed.",
+    "atlas_locator": {
+      "ordinal": 273,
+      "name": "Graphnosis",
+      "slug": "graphnosis",
+      "listed_repository": "https://github.com/nehloo-interactive/graphnosis-app",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/graphnosis.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "catalog_revision": "b79be25df98d1dd47eb9a01d0da37f9881ab7b85",
+      "note": "Catalog and Atlas are retained only for curated identity and locator attribution, not assessment evidence."
+    },
+    "contact": {
+      "email": null,
+      "source_url": null,
+      "checked_urls": [
+        "https://github.com/nehloo-interactive/graphnosis-app/blob/b79be25df98d1dd47eb9a01d0da37f9881ab7b85/README.md",
+        "https://github.com/nehloo-interactive/graphnosis-app/blob/main/README.md"
+      ],
+      "note": "The official pinned README and current main README were unavailable as GitHub Page not found; no email was inferred."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/nehloo-interactive/graphnosis-app/blob/b79be25df98d1dd47eb9a01d0da37f9881ab7b85/README.md",
+      "https://github.com/nehloo-interactive/graphnosis-app/blob/main/README.md"
+    ],
+    "contact_email_note": "Official README pages were unavailable and could not be inspected; no email was inferred.",
+    "blocker": {
+      "reason": "Official upstream could not be verified or checked out: the listed repository page, catalog-pinned commit, pinned README and SECURITY.md, main README, and main commit feed returned GitHub Page not found or Not Found, and the official repository API returned HTTP 404 with Not Found.",
+      "checked_at": "2026-11-25T21:53:42Z",
+      "evidence": [
+        "https://github.com/nehloo-interactive/graphnosis-app",
+        "https://api.github.com/repos/nehloo-interactive/graphnosis-app",
+        "https://github.com/nehloo-interactive/graphnosis-app/commit/b79be25df98d1dd47eb9a01d0da37f9881ab7b85",
+        "https://github.com/nehloo-interactive/graphnosis-app/blob/b79be25df98d1dd47eb9a01d0da37f9881ab7b85/README.md",
+        "https://github.com/nehloo-interactive/graphnosis-app/blob/b79be25df98d1dd47eb9a01d0da37f9881ab7b85/SECURITY.md",
+        "https://github.com/nehloo-interactive/graphnosis-app/blob/main/README.md",
+        "https://github.com/nehloo-interactive/graphnosis-app/commits/main.atom"
+      ],
+      "consequence": "Current canonical upstream, default branch, full head, implementation behavior, and official contact remain unverified. No implementation assessment is asserted."
+    },
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[272], ordinal 273: Graphnosis, slug graphnosis, explicit listed locator, catalog revision b79be25df98d1dd47eb9a01d0da37f9881ab7b85",
+        "url": "../memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/graphnosis.md",
+        "symbol": "Pinned Atlas entry used only for curated identity and locator attribution, not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/graphnosis.md"
+      },
+      {
+        "id": "repo",
+        "label": "Listed official GitHub repository page",
+        "path": "repository page",
+        "symbol": "Opened 2026-11-25; page title was Page not found · GitHub · GitHub",
+        "url": "https://github.com/nehloo-interactive/graphnosis-app"
+      },
+      {
+        "id": "api",
+        "label": "Official GitHub repository API",
+        "path": "GitHub REST repository endpoint",
+        "symbol": "Returned HTTP 404 with message Not Found",
+        "url": "https://api.github.com/repos/nehloo-interactive/graphnosis-app"
+      },
+      {
+        "id": "pinned_commit",
+        "label": "Catalog-pinned commit check",
+        "path": "commit b79be25df98d1dd47eb9a01d0da37f9881ab7b85",
+        "symbol": "Official GitHub page rendered Page not found; catalog revision is not verified as current head",
+        "url": "https://github.com/nehloo-interactive/graphnosis-app/commit/b79be25df98d1dd47eb9a01d0da37f9881ab7b85"
+      },
+      {
+        "id": "readme",
+        "label": "Catalog-pinned official README check",
+        "path": "README.md",
+        "symbol": "Official GitHub page rendered Page not found; contents and contact could not be inspected",
+        "url": "https://github.com/nehloo-interactive/graphnosis-app/blob/b79be25df98d1dd47eb9a01d0da37f9881ab7b85/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Catalog-pinned official security policy check",
+        "path": "SECURITY.md",
+        "symbol": "Official GitHub page rendered Page not found; content could not be inspected",
+        "url": "https://github.com/nehloo-interactive/graphnosis-app/blob/b79be25df98d1dd47eb9a01d0da37f9881ab7b85/SECURITY.md"
+      },
+      {
+        "id": "main_readme",
+        "label": "Default branch README check",
+        "path": "README.md on main",
+        "symbol": "Official GitHub page rendered Page not found; default branch and content were not verified",
+        "url": "https://github.com/nehloo-interactive/graphnosis-app/blob/main/README.md"
+      },
+      {
+        "id": "feed",
+        "label": "Default branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Official GitHub feed returned Not Found",
+        "url": "https://github.com/nehloo-interactive/graphnosis-app/commits/main.atom"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Metric domains listed for reporting; none evaluated",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Fixture not run",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "No Graphnosis benchmark result created or claimed",
+        "url": "../../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The curated catalog lists ordinal 273, name Graphnosis, slug graphnosis, an explicit repository locator, and catalog revision b79be25df98d1dd47eb9a01d0da37f9881ab7b85. That pin is roster metadata only and was not verified as current upstream.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The official repository page and checked current/pinned pages returned Page not found, the repository API returned 404, and the main commit feed returned Not Found. Current upstream identity, default branch, and full head SHA remain unverified.",
+        "sources": [
+          "repo",
+          "api",
+          "pinned_commit",
+          "readme",
+          "main_readme",
+          "feed"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Architecture and data model were not assessed because no official current upstream source or documentation could be inspected; Atlas descriptions are excluded as implementation evidence.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write, update, delete, retrieval, and scope-isolation behavior remain unknown because no official implementation or documentation was accessible.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      },
+      {
+        "text": "Provenance, evidence handling, efficiency, and observability are not assessed because no current source or official documentation was accessible.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "No upstream review or benchmark workload was possible.",
+        "sources": [
+          "repo",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale retrieval",
+        "status": "unmeasured",
+        "evidence": "No upstream review or benchmark workload was possible.",
+        "sources": [
+          "repo",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No upstream review or benchmark workload was possible.",
+        "sources": [
+          "repo",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "No upstream review or benchmark workload was possible.",
+        "sources": [
+          "repo",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "No upstream review or benchmark workload was possible.",
+        "sources": [
+          "repo",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No upstream review or benchmark workload was possible.",
+        "sources": [
+          "repo",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No upstream review or benchmark workload was possible.",
+        "sources": [
+          "repo",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No upstream review or benchmark workload was possible.",
+        "sources": [
+          "repo",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The listed repository and catalog-pinned commit, README, and SECURITY.md returned GitHub Page not found; the repository API returned HTTP 404; the main README and main commit feed returned Not Found. These observations do not establish whether the project was removed, renamed, private, or temporarily inaccessible.",
+        "sources": [
+          "repo",
+          "api",
+          "pinned_commit",
+          "readme",
+          "security",
+          "main_readme",
+          "feed"
+        ]
+      },
+      {
+        "text": "The current canonical upstream, default branch, full head SHA, source behavior, and official contact remain unverified; no implementation review is claimed.",
+        "sources": [
+          "repo",
+          "api",
+          "feed",
+          "readme"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "metrics_document": "../../METRICS.md",
+      "result_record": "../../results/initial-baselines-status.json",
+      "fixture": "../../fixtures/memory-benchmark-v1.json",
+      "note": "No Graphnosis runtime, tests, or benchmarks were run. Source verification was blocked."
+    }
+  }
+}

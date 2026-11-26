@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "article": {
+    "ordinal": 287,
+    "slug": "helix-agi",
+    "name": "Helix AGI",
+    "repository": "https://github.com/munch2u-a11y/Helix-AGI",
+    "listed_repository": "https://github.com/munch2u-a11y/Helix-AGI",
+    "branch": "main",
+    "revision": "5aca6b4439efe5432cac9a2b4771902d6d49c700",
+    "reviewed_at": "2026-11-25T22:38:23Z",
+    "review_timezone": "UTC (checked 2026-11-25 14:38:23 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Helix AGI is a locally operated, persistent agent runtime that combines a filesystem home and ongoing sense/thinking/action loop with several memory stores. At the reviewed head, canonical journal records are append-only JSONL, categorized beliefs are JSON files, and semantic recall uses a separate vector index; retrieval/context assembly combines these distinct surfaces. This is a source review, not a runtime quality assessment.",
+    "atlas_locator": {
+      "ordinal": 287,
+      "name": "Helix AGI",
+      "slug": "helix-agi",
+      "listed_repository": "https://github.com/munch2u-a11y/Helix-AGI",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/helix-agi.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/munch2u-a11y/Helix-AGI/blob/5aca6b4439efe5432cac9a2b4771902d6d49c700/README.md",
+      "checked_urls": [
+        "https://github.com/munch2u-a11y/Helix-AGI/blob/5aca6b4439efe5432cac9a2b4771902d6d49c700/README.md",
+        "https://github.com/munch2u-a11y/Helix-AGI/blob/5aca6b4439efe5432cac9a2b4771902d6d49c700/SYSTEM_MANUAL.md"
+      ],
+      "note": "Checked the official pinned README and SYSTEM_MANUAL.md for a published contact email; neither page showed one. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/munch2u-a11y/Helix-AGI/blob/5aca6b4439efe5432cac9a2b4771902d6d49c700/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/munch2u-a11y/Helix-AGI/blob/5aca6b4439efe5432cac9a2b4771902d6d49c700/README.md",
+      "https://github.com/munch2u-a11y/Helix-AGI/blob/5aca6b4439efe5432cac9a2b4771902d6d49c700/SYSTEM_MANUAL.md"
+    ],
+    "contact_email_note": "No published contact email found in the official pinned README or SYSTEM_MANUAL.md.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[286], ordinal 287; name, slug, explicit repository locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/helix-agi.md",
+        "symbol": "Catalog-pinned attribution for curated identity and locator context only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/helix-agi.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "",
+        "symbol": "Official repository page identifies munch2u-a11y/Helix-AGI and default branch main",
+        "url": "https://github.com/munch2u-a11y/Helix-AGI"
+      },
+      {
+        "id": "head",
+        "label": "Official main commit feed",
+        "path": "",
+        "symbol": "main.atom reports current full head 5aca6b4439efe5432cac9a2b4771902d6d49c700, updated 2026-10-21T04:40:10Z",
+        "url": "https://github.com/munch2u-a11y/Helix-AGI/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product description, home layout, persistent memory paths, operating interfaces and published capability limits",
+        "url": "https://github.com/munch2u-a11y/Helix-AGI/blob/5aca6b4439efe5432cac9a2b4771902d6d49c700/README.md"
+      },
+      {
+        "id": "manual",
+        "label": "Pinned official system manual",
+        "path": "SYSTEM_MANUAL.md",
+        "symbol": "Current composition, named-home and data_dir configuration, memory/context architecture, health and receipt surfaces, operational limits",
+        "url": "https://github.com/munch2u-a11y/Helix-AGI/blob/5aca6b4439efe5432cac9a2b4771902d6d49c700/SYSTEM_MANUAL.md"
+      },
+      {
+        "id": "manager",
+        "label": "Pinned MemoryManager source",
+        "path": "memory/memory_manager.py",
+        "symbol": "Journal-backed memory API, serialized writes, runtime semantic recall and stats",
+        "url": "https://github.com/munch2u-a11y/Helix-AGI/blob/5aca6b4439efe5432cac9a2b4771902d6d49c700/memory/memory_manager.py"
+      },
+      {
+        "id": "journal",
+        "label": "Pinned CognitiveJournal source",
+        "path": "memory/cognitive_journal.py",
+        "symbol": "JSONL record schema, append/checksum/read behavior and documented compaction model",
+        "url": "https://github.com/munch2u-a11y/Helix-AGI/blob/5aca6b4439efe5432cac9a2b4771902d6d49c700/memory/cognitive_journal.py"
+      },
+      {
+        "id": "beliefs",
+        "label": "Pinned BeliefStore source",
+        "path": "memory/belief_store.py",
+        "symbol": "Seven category belief files, normalization, confidence/mass maintenance and attrition pruning",
+        "url": "https://github.com/munch2u-a11y/Helix-AGI/blob/5aca6b4439efe5432cac9a2b4771902d6d49c700/memory/belief_store.py"
+      },
+      {
+        "id": "envelope",
+        "label": "Pinned record envelope source",
+        "path": "memory/record_envelope.py",
+        "symbol": "Typed record kinds, visibility, actor, evidence scopes, action status and retrieval text inference",
+        "url": "https://github.com/munch2u-a11y/Helix-AGI/blob/5aca6b4439efe5432cac9a2b4771902d6d49c700/memory/record_envelope.py"
+      },
+      {
+        "id": "index",
+        "label": "Pinned semantic index source",
+        "path": "memory/semantic_index.py",
+        "symbol": "Normalized 1024D vector index, exact/FAISS search paths, persistence and diagnostics",
+        "url": "https://github.com/munch2u-a11y/Helix-AGI/blob/5aca6b4439efe5432cac9a2b4771902d6d49c700/memory/semantic_index.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Metric domains and definitions; no Helix result is implied",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned workload definition, not a result",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project execution status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status; not a Helix result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes a local Dual RWKV agent with persistent identity/home, continuous filesystem sensing, private thought, outward communication, and a digital body for file operations and isolated Python experiments. The inspected memory subsystem is part of a larger agent runtime, rather than a standalone hosted memory service.",
+        "sources": [
+          "readme",
+          "manual"
+        ]
+      },
+      {
+        "text": "The README identifies the home as per-agent directories under data/homes/<name> and data/agents/<name>, with memory, beliefs, spatial indexes, and mindscape state among the persistent areas. The system manual says the configured selected agent data_dir and named home are distinct and must be provisioned consistently.",
+        "sources": [
+          "readme",
+          "manual"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The current code separates canonical event/memory/thought journal records from categorized beliefs and semantic retrieval. CognitiveJournal stores JSON Lines under the selected data directory; BeliefStore maintains seven category JSON files (premises, propositions, preferences, people, skills, desires, concepts); MemoryManager wires the journal and the physics-backed semantic recall path.",
+        "sources": [
+          "journal",
+          "beliefs",
+          "manager",
+          "manual"
+        ]
+      },
+      {
+        "text": "Journal records include an ID, type, exact content, 8D position, pulse ID, Lagrangian snapshot, metadata, timestamp, optional 384D embedding and a SHA-256 checksum. Belief rows carry fields such as confidence, mass, stability, relations, memory references, 8D position, source and access information; these fields express the model's internal weighting, not independently validated truth.",
+        "sources": [
+          "journal",
+          "beliefs"
+        ]
+      },
+      {
+        "text": "The source-level design has separate context lanes: a 1024D semantic index for explicit recall and 8D spatial/cognitive fields for ambient context, with the system manual also describing exact-term and multi-head retrieval plus context briefs. These mechanisms should not be collapsed into a single ranking or evidence score.",
+        "sources": [
+          "index",
+          "manual",
+          "manager"
+        ]
+      },
+      {
+        "text": "RecordEnvelope adds deterministic type and evidence-oriented views over persisted records, including inbound/outbound communication, thought, tool/action observations, actor, visibility, evidence scopes, caused-by tags, and action status. Legacy rows can be classified from saved metadata and content; this is typed provenance metadata, not external adjudication.",
+        "sources": [
+          "envelope",
+          "manual"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The memory manager serializes store calls with a re-entrant lock and appends records through CognitiveJournal. The journal flushes and fsyncs each appended line and validates its checksum when loading; malformed or checksum-invalid lines are skipped. The journal's docstring describes updates as appending a newer entry with the same ID and nightly compaction, but the inspected file exposes append/load helpers and no compact method, so that maintenance behavior was not verified as implemented at this revision.",
+        "sources": [
+          "manager",
+          "journal"
+        ]
+      },
+      {
+        "text": "Belief writes and maintenance operate on category JSON lists. The store normalizes confidence, stability, verification counts, relations, memory references and tags, and includes confidence/mass recomputation and attrition pruning. The reviewed sources do not establish a transaction spanning category-file state, journal snapshots, and all derived indexes.",
+        "sources": [
+          "beliefs",
+          "journal"
+        ]
+      },
+      {
+        "text": "No general journal-memory delete or correction API was present in the inspected CognitiveJournal interface. Belief attrition can remove a belief from the surviving category list and ask the attached physics engine to remove its belief point, but this does not establish erasure from journal history, backups or every derived surface. Deletion durability and leak rates remain unknown.",
+        "sources": [
+          "journal",
+          "beliefs",
+          "manager"
+        ]
+      },
+      {
+        "text": "Explicit recall is exposed through MemoryManager and the semantic index. The index L2-normalizes embeddings so cosine similarity uses inner product, supports ID upserts, applies optional metadata filters, and uses NumPy exact search or FAISS FlatIP by default, with optional IVF mode. The MemoryManager also exposes contextual search and may update access signals; the system manual describes additional retrieval/context lanes.",
+        "sources": [
+          "manager",
+          "index",
+          "manual"
+        ]
+      },
+      {
+        "text": "The source evidence establishes a configured per-agent data directory/home model, not adversarial tenant isolation. The manual says data_dir selects persistent state and the filesystem home is separate; no multi-tenant authorization or cross-agent isolation guarantee was established by this bounded source review.",
+        "sources": [
+          "manual",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention: semantic, exact-term and context-lane mechanisms exist in source/docs; answer accuracy and abstention were not measured.",
+        "sources": [
+          "index",
+          "manual",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Correction and staleness: journal records can be superseded by later same-ID entries per documentation and beliefs are maintained/pruned; correction correctness, stale-value rate and compaction behavior were not tested.",
+        "sources": [
+          "journal",
+          "beliefs",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Deletion leakage: no general journal deletion path was found in the inspected interface; no deletion probe, backup review or leak denominator was run.",
+        "sources": [
+          "journal",
+          "beliefs",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Scope isolation: selected-agent data_dir and named home provide configuration boundaries; no cross-agent isolation workload was performed.",
+        "sources": [
+          "manual",
+          "readme",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Evidence support and citations: record envelopes distinguish evidence scopes and tool/action status, and the manual describes source-linked briefs and receipts; no answer-to-source adjudication or citation precision measurement was done.",
+        "sources": [
+          "envelope",
+          "manual",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Latency and write-to-recall delay: writes and search paths are implemented; no latency, freshness, or write-to-recall timings were collected.",
+        "sources": [
+          "manager",
+          "journal",
+          "index",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Tokens, cost and storage: journal, category JSON and vector index storage are visible in source; model/provider and index options imply configurable resource use, but tokens, cost and storage efficiency were not measured.",
+        "sources": [
+          "journal",
+          "beliefs",
+          "index",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected the pinned README and system manual plus the journal, memory manager, belief store, record envelope and semantic index. It did not inspect every context lane, mRAG query path, native runtime integration, persistence migration, backup/restore path or external MightyMem dependency.",
+        "sources": [
+          "readme",
+          "manual",
+          "journal",
+          "manager",
+          "beliefs",
+          "envelope",
+          "index"
+        ]
+      },
+      {
+        "text": "The journal source's documentation describes nightly compaction, but the inspected file does not expose a compaction implementation. This may be supplied elsewhere or represent stale documentation; this review does not claim compaction runs.",
+        "sources": [
+          "journal"
+        ]
+      },
+      {
+        "text": "No Helix runtime, tests or benchmark workload was executed. Internal confidence, mass, typed action status and source-reported trial statements are not independent performance, answer quality, reliability, deletion or safety measurements.",
+        "sources": [
+          "readme",
+          "manual",
+          "beliefs",
+          "envelope",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Helix AGI runtime, tests or benchmark workload was run. No quality or performance measurement is claimed; project fixture counts and shared execution status are not Helix results.",
+      "metric_definitions": "../METRICS.md",
+      "fixture": "../fixtures/memory-benchmark-v1.json",
+      "execution_status": "../results/initial-baselines-status.json"
+    }
+  }
+}

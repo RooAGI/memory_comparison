@@ -1,0 +1,337 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 216,
+    "slug": "emem",
+    "name": "eMEM",
+    "repository": "https://github.com/automatika-robotics/emem",
+    "listed_repository": "https://github.com/automatika-robotics/emem",
+    "branch": "main",
+    "revision": "82e3da61cf710c4379e0cd7bf7a6a21710caaa96",
+    "reviewed_at": "2026-11-25T19:05:02Z",
+    "review_timezone": "UTC (2026-11-25 11:05:02 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "eMEM is an embedded Python memory library for embodied agents. It combines SQLite graph records, HNSW, FTS5, and spatial indexing for semantic and spatiotemporal retrieval. The public API has no explicit memory edit or delete operation, and the reviewed library does not implement tenant isolation. Runtime quality and performance were not measured.",
+    "atlas_locator": {
+      "ordinal": 216,
+      "name": "eMEM",
+      "slug": "emem",
+      "listed_repository": "https://github.com/automatika-robotics/emem",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/emem.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/automatika-robotics/emem/blob/82e3da61cf710c4379e0cd7bf7a6a21710caaa96/README.md",
+      "checked_urls": [
+        "https://github.com/automatika-robotics/emem/blob/82e3da61cf710c4379e0cd7bf7a6a21710caaa96/README.md"
+      ],
+      "note": "Checked the official pinned README for a published contact email. None was found; no commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/automatika-robotics/emem/blob/82e3da61cf710c4379e0cd7bf7a6a21710caaa96/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/automatika-robotics/emem/blob/82e3da61cf710c4379e0cd7bf7a6a21710caaa96/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the official pinned README.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated memory systems roster",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[215], ordinal 216; identity, slug, explicit listed repository, pinned Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/emem.md",
+        "symbol": "Pinned roster entry for identity/locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/emem.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository metadata",
+        "symbol": "Repository identity and default branch main",
+        "url": "https://api.github.com/repos/automatika-robotics/emem"
+      },
+      {
+        "id": "head",
+        "label": "Verified current main head",
+        "path": "commit API and shallow checkout",
+        "symbol": "Full main head 82e3da61cf710c4379e0cd7bf7a6a21710caaa96; GitHub commit API and git ls-remote cross-checked",
+        "url": "https://github.com/automatika-robotics/emem/commit/82e3da61cf710c4379e0cd7bf7a6a21710caaa96"
+      },
+      {
+        "id": "readme",
+        "label": "Official pinned README",
+        "path": "README.md",
+        "symbol": "Project description, architecture overview, APIs, and official contact email check",
+        "url": "https://github.com/automatika-robotics/emem/blob/82e3da61cf710c4379e0cd7bf7a6a21710caaa96/README.md"
+      },
+      {
+        "id": "facade",
+        "label": "High-level memory facade",
+        "path": "emem/memory.py",
+        "symbol": "Observation ingestion, episode API, consolidation orchestration, save/close",
+        "url": "https://github.com/automatika-robotics/emem/blob/82e3da61cf710c4379e0cd7bf7a6a21710caaa96/emem/memory.py"
+      },
+      {
+        "id": "working",
+        "label": "Working memory buffer",
+        "path": "emem/working_memory.py",
+        "symbol": "Buffered writes, batch/time flush, active episode assignment",
+        "url": "https://github.com/automatika-robotics/emem/blob/82e3da61cf710c4379e0cd7bf7a6a21710caaa96/emem/working_memory.py"
+      },
+      {
+        "id": "store",
+        "label": "SQLite, HNSW, FTS, and retrieval store",
+        "path": "emem/store.py",
+        "symbol": "Storage schema, indexes, write operations, semantic candidate fusion and filtering",
+        "url": "https://github.com/automatika-robotics/emem/blob/82e3da61cf710c4379e0cd7bf7a6a21710caaa96/emem/store.py"
+      },
+      {
+        "id": "spatial",
+        "label": "Spatial index",
+        "path": "emem/spatial.py",
+        "symbol": "Spatial index interface and coordinate search",
+        "url": "https://github.com/automatika-robotics/emem/blob/82e3da61cf710c4379e0cd7bf7a6a21710caaa96/emem/spatial.py"
+      },
+      {
+        "id": "types",
+        "label": "Memory data types",
+        "path": "emem/types.py",
+        "symbol": "Observation, episode, gist, entity, edge record definitions",
+        "url": "https://github.com/automatika-robotics/emem/blob/82e3da61cf710c4379e0cd7bf7a6a21710caaa96/emem/types.py"
+      },
+      {
+        "id": "tools",
+        "label": "LLM memory tools",
+        "path": "emem/tools.py",
+        "symbol": "Read-only semantic/spatial/temporal and related tool surface",
+        "url": "https://github.com/automatika-robotics/emem/blob/82e3da61cf710c4379e0cd7bf7a6a21710caaa96/emem/tools.py"
+      },
+      {
+        "id": "consolidation",
+        "label": "Consolidation and archival",
+        "path": "emem/consolidation.py",
+        "symbol": "Gist generation, entity extraction, promotion, and archival behavior",
+        "url": "https://github.com/automatika-robotics/emem/blob/82e3da61cf710c4379e0cd7bf7a6a21710caaa96/emem/consolidation.py"
+      },
+      {
+        "id": "config",
+        "label": "Memory configuration",
+        "path": "emem/config.py",
+        "symbol": "Configured database/index paths, buffer and retrieval settings",
+        "url": "https://github.com/automatika-robotics/emem/blob/82e3da61cf710c4379e0cd7bf7a6a21710caaa96/emem/config.py"
+      },
+      {
+        "id": "embeddings",
+        "label": "Embedding interfaces",
+        "path": "emem/embeddings.py",
+        "symbol": "Embedding provider interface and null default",
+        "url": "https://github.com/automatika-robotics/emem/blob/82e3da61cf710c4379e0cd7bf7a6a21710caaa96/emem/embeddings.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Shared benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes eMEM as a Python memory library for embodied agents in the EMOS ecosystem. It combines embedded storage and multiple retrieval indexes and exposes read-only LLM tools; host code supplies observations.",
+        "sources": [
+          "readme",
+          "facade",
+          "tools"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The facade coordinates an in-process working buffer, SQLite-backed MemoryStore, consolidation engine, and MemoryTools. SQLite stores graph records and FTS5 content, HNSW holds vectors and mappings, and the spatial index is rebuilt from SQLite at startup.",
+        "sources": [
+          "readme",
+          "facade",
+          "store",
+          "spatial"
+        ]
+      },
+      {
+        "text": "Observations preserve text, coordinates, timestamp, layer, source type, confidence, optional episode, metadata, and embedding state. Episodes group observations; gists store summaries and source observation IDs; entities and typed edges represent persistent objects and relations.",
+        "sources": [
+          "types",
+          "store",
+          "consolidation"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The add API constructs an observation and sends it to WorkingMemory. The buffer flushes on configured batch size or interval, assigns the active episode, and stores observations in batches. Embeddings are generated only with a configured non-null provider or supplied vector.",
+        "sources": [
+          "facade",
+          "working",
+          "store",
+          "config",
+          "embeddings"
+        ]
+      },
+      {
+        "text": "Ending an episode flushes pending observations and may consolidate them into gist records, extract entities, and promote observations. Archival later drops raw observation text and updates searchable indexes; no public user-directed edit/delete API was found, and archival is not a complete deletion guarantee.",
+        "sources": [
+          "facade",
+          "consolidation",
+          "tools"
+        ]
+      },
+      {
+        "text": "Semantic retrieval obtains vector candidates and can combine them with FTS5 BM25 candidates using reciprocal-rank fusion. The library also offers spatial, temporal, entity, gist, episode, concept-location, context, and body-state tools with query filters.",
+        "sources": [
+          "store",
+          "tools",
+          "readme"
+        ]
+      },
+      {
+        "text": "The reviewed API has no tenant/user/project/session authorization boundary. Database path, episode, layer, time, and spatial arguments configure storage or filter queries but do not establish isolation between callers.",
+        "sources": [
+          "config",
+          "store",
+          "facade"
+        ]
+      },
+      {
+        "text": "Source type, timestamps, confidence, metadata, episode identifiers, and gist-to-observation IDs preserve lineage hints. The inspected model has no required source quotation or citation validation; confidence does not establish truth.",
+        "sources": [
+          "types",
+          "consolidation"
+        ]
+      },
+      {
+        "text": "Batch writes and multiple indexes are implementation mechanisms, not measured efficiency. HNSW persistence occurs on explicit save/close, and spatial state is rebuilt at startup; durability implications under failure were not evaluated. No operational measurements or benchmark observations were collected.",
+        "sources": [
+          "working",
+          "store",
+          "facade"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Retrieval source paths were inspected; no answerability or abstention workload was run.",
+        "sources": [
+          "store",
+          "tools",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "No public correction API was found and no correction probes were run.",
+        "sources": [
+          "facade",
+          "tools",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Archival code was inspected, but no deletion request, residual read, or storage probe was run.",
+        "sources": [
+          "consolidation",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Query filters were inspected; no tenant boundary or cross-scope workload was run.",
+        "sources": [
+          "config",
+          "store",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Record lineage fields were inspected; no output claims were scored for evidence support or citation coverage.",
+        "sources": [
+          "types",
+          "consolidation",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No runtime timing samples were collected.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No token, cost, or storage measurements were collected.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected the public repository source at the verified main head. No runtime, tests, or benchmark commands were run.",
+        "sources": [
+          "repo",
+          "head",
+          "readme"
+        ]
+      },
+      {
+        "text": "Quality, isolation, correctness under crash, complete archival/deletion behavior, latency, throughput, token use, cost, and storage efficiency remain unknown from this review.",
+        "sources": [
+          "store",
+          "consolidation",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No eMEM runtime, tests, or benchmarks were run. Project metric definitions and fixtures are not eMEM results."
+    }
+  }
+}

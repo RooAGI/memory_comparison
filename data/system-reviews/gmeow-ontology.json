@@ -1,0 +1,270 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 261,
+    "slug": "gmeow-ontology",
+    "name": "GMEOW",
+    "repository": "https://github.com/Blackcat-Informatics/gmeow-ontology",
+    "listed_repository": "https://github.com/Blackcat-Informatics/gmeow-ontology",
+    "branch": "main",
+    "revision": "c0139e0018f5b64b2f81a32e2dfe542522b26f4f",
+    "reviewed_at": "2026-11-25T21:11:44Z",
+    "review_timezone": "UTC (checked 2026-11-25 13:11:44 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "GMEOW is a Rust-first ontology and MCP project whose grounded-memory tools store attributed, revisable claims in a portable GTS ai-package. The documented triad supports explicit claim writes, recall, and suppression-based belief revision; this review did not run the software or measure retrieval quality or efficiency.",
+    "atlas_locator": {
+      "ordinal": 261,
+      "name": "GMEOW",
+      "slug": "gmeow-ontology",
+      "listed_repository": "https://github.com/Blackcat-Informatics/gmeow-ontology",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/gmeow-ontology.md",
+      "revision": "38f568b04a5f6509e98ccb5e3b387623f1974b58"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/Blackcat-Informatics/gmeow-ontology/blob/c0139e0018f5b64b2f81a32e2dfe542522b26f4f/docs/mcp-server.md",
+      "checked_urls": [
+        "https://github.com/Blackcat-Informatics/gmeow-ontology/blob/c0139e0018f5b64b2f81a32e2dfe542522b26f4f/docs/mcp-server.md"
+      ],
+      "note": "Checked the official pinned MCP server guide for a published contact email; none was present. No commit/profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/Blackcat-Informatics/gmeow-ontology/blob/c0139e0018f5b64b2f81a32e2dfe542522b26f4f/docs/mcp-server.md",
+    "contact_email_checked_sources": [
+      "https://github.com/Blackcat-Informatics/gmeow-ontology/blob/c0139e0018f5b64b2f81a32e2dfe542522b26f4f/docs/mcp-server.md"
+    ],
+    "contact_email_note": "No contact email was published in the checked official pinned MCP server guide. No commit/profile metadata, third-party directory, or inferred address was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[260], ordinal 261; identity, explicit listed repository locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/gmeow-ontology.md",
+        "symbol": "Pinned catalog attribution retained for identity and locator context only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/gmeow-ontology.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "",
+        "symbol": "Official GitHub repository page identifies Blackcat-Informatics/gmeow-ontology and default branch main",
+        "url": "https://github.com/Blackcat-Informatics/gmeow-ontology"
+      },
+      {
+        "id": "head",
+        "label": "Official current main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Official feed identifies the current full main head c0139e0018f5b64b2f81a32e2dfe542522b26f4f, updated 2026-11-25T20:11:52Z",
+        "url": "https://github.com/Blackcat-Informatics/gmeow-ontology/commits/main.atom"
+      },
+      {
+        "id": "mcp-guide",
+        "label": "Pinned official MCP server guide",
+        "path": "docs/mcp-server.md",
+        "symbol": "Memory tool contract, claim fields, recall behavior, suppression-based revision, transaction gate, persistence path and audit context",
+        "url": "https://github.com/Blackcat-Informatics/gmeow-ontology/blob/c0139e0018f5b64b2f81a32e2dfe542522b26f4f/docs/mcp-server.md"
+      },
+      {
+        "id": "storage",
+        "label": "Pinned MCP storage source",
+        "path": "crates/mcp/src/storage.rs",
+        "symbol": "ClaimStore abstraction, purrdf agent_memory delegation, native filesystem and browser in-memory storage boundaries",
+        "url": "https://github.com/Blackcat-Informatics/gmeow-ontology/blob/c0139e0018f5b64b2f81a32e2dfe542522b26f4f/crates/mcp/src/storage.rs"
+      },
+      {
+        "id": "mcp-source",
+        "label": "Pinned MCP implementation source",
+        "path": "crates/mcp/src/lib.rs",
+        "symbol": "MCP server boundary and dependency declaration for GTS, claim persistence and Transaction-Logic write gate",
+        "url": "https://github.com/Blackcat-Informatics/gmeow-ontology/blob/c0139e0018f5b64b2f81a32e2dfe542522b26f4f/crates/mcp/src/lib.rs"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Project assessment domains and definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned evaluation fixture definition, not a GMEOW result",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared project execution status, not a GMEOW measurement",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository presents GMEOW as an ontology project with a Rust-first CLI and MCP server. The MCP server exposes grounded-memory tools alongside ontology lookup; this review is about that memory surface, not an assessment of the ontology's full reasoning or projection toolchain.",
+        "sources": [
+          "repo",
+          "mcp-guide",
+          "mcp-source"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The MCP guide documents `gmeow mcp` as a stdio server configured with `GMEOW_MEMORY_PATH`, defaulting to `~/.gmeow/memory.gts`. It describes that file as a content-addressed, append-only GTS ai-package intended to persist across sessions, models, and vendors. The guide separately says ontology lookup reads the bundled `gmeow.gts` snapshot; the memory file and ontology bundle have different roles.",
+        "sources": [
+          "mcp-guide",
+          "mcp-source"
+        ]
+      },
+      {
+        "text": "The memory unit is a reified RDF 1.2 claim with text plus optional source, confidence, and `according_to` standpoint metadata, and a generated claim identifier and creation time in the documented response. The storage source defines a `ClaimStore` seam for store, recall, and revision, and delegates native claims and revisions to `purrdf::gts::examples::agent_memory::Memory`; the detailed lower-level claim encoding is owned by that dependency.",
+        "sources": [
+          "mcp-guide",
+          "storage",
+          "mcp-source"
+        ]
+      },
+      {
+        "text": "The same storage module documents a separate browser backend that keeps claims in process memory and implements recall and revision, while the native backend persists to files. Browser process-memory state is not equivalent to the cross-session native file path.",
+        "sources": [
+          "storage"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "**Write.** `store_claim` appends one claim after validating it as well formed; optional confidence is constrained to [0, 1], and callers may supply a source label and `according_to` standpoint. Contradictory claims can coexist: the guide directs callers to store both and does not describe automatic truth adjudication or deduplication.",
+        "sources": [
+          "mcp-guide",
+          "storage"
+        ]
+      },
+      {
+        "text": "**Update and delete.** `revise_belief` requires an existing claim identifier and records suppression, optionally linking a successor claim. The guide explicitly describes revision as suppression rather than deletion, retaining the prior belief for audit. The documented grounded-memory tool set has no hard-delete operation; physical erasure behavior outside these tools was not established.",
+        "sources": [
+          "mcp-guide",
+          "mcp-source"
+        ]
+      },
+      {
+        "text": "**Retrieval.** `recall` returns recent claims for an empty query and otherwise ranks by case-insensitive token overlap. It supports an optional confidence floor and result limit; the documented default limit is 10. Suppressed claims are excluded by default, while `include_suppressed=true` exposes the audit view with suppression flags. These are documented semantics, not tested relevance or abstention results.",
+        "sources": [
+          "mcp-guide"
+        ]
+      },
+      {
+        "text": "Writes run through the native Transaction-Logic engine: the action precondition gates commit, `store_claim` requires a well-formed claim, and revision requires the target claim to exist. The guide documents `dry_run` as evaluating the operation while discarding the effect. This review did not execute either path.",
+        "sources": [
+          "mcp-guide",
+          "mcp-source"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "evidence": "Token-overlap retrieval and the empty-query path are documented; no recall workload or abstention behavior was evaluated.",
+        "status": "unmeasured",
+        "sources": [
+          "mcp-guide",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "evidence": "Suppression and optional successor linkage are documented; no correction sequence was evaluated.",
+        "status": "unmeasured",
+        "sources": [
+          "mcp-guide",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "evidence": "The memory API documents suppression rather than deletion; no deletion or post-deletion probes were run.",
+        "status": "unmeasured",
+        "sources": [
+          "mcp-guide",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "evidence": "The documented memory path is selected by GMEOW_MEMORY_PATH and `according_to` is stored as claim metadata; no user, project, or tenant isolation workload was inspected or run.",
+        "status": "unmeasured",
+        "sources": [
+          "mcp-guide",
+          "storage",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "evidence": "Claims can carry a source label and audit records capture tool-call context; no evidence-support or generated-answer citations were adjudicated.",
+        "status": "unmeasured",
+        "sources": [
+          "mcp-guide",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "evidence": "No runtime timings were collected.",
+        "status": "unmeasured",
+        "sources": [
+          "mcp-guide",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "evidence": "The GTS file and memory payload are documented; no token, cost, or storage-efficiency measurements were collected.",
+        "status": "unmeasured",
+        "sources": [
+          "mcp-guide",
+          "metrics"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a source review pinned to the official repository head, not a runtime, security, or benchmark assessment. The MCP guide describes the public behavior; the storage source shows the claim-store boundary but delegates core claim behavior to the purrdf agent-memory implementation, which was not inspected here.",
+        "sources": [
+          "mcp-guide",
+          "storage",
+          "mcp-source"
+        ]
+      },
+      {
+        "text": "The stored source and standpoint fields provide attribution metadata, but this review does not establish that source material is verified, that confidence is calibrated, or that retrieved claims are factually correct. `according_to` is not documented as an access-control filter.",
+        "sources": [
+          "mcp-guide",
+          "storage"
+        ]
+      },
+      {
+        "text": "The native file's concurrency, backup, signing configuration, key custody, physical erasure, and recovery behavior were not established by the inspected material. The browser backend is in-process and therefore has a different persistence lifetime.",
+        "sources": [
+          "mcp-guide",
+          "storage"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No GMEOW runtime, tests, or benchmarks were run. Source and documentation observations are not benchmark results."
+    }
+  }
+}

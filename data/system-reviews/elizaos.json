@@ -1,0 +1,401 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 214,
+    "slug": "elizaos",
+    "name": "elizaOS",
+    "repository": "https://github.com/elizaOS/eliza",
+    "branch": "develop",
+    "revision": "16ecc03e23ce338c6d8fab2a08e544813c0a1ca3",
+    "reviewed_at": "2026-11-25T19:03:25Z",
+    "review_timezone": "UTC (2026-11-25 11:03:25 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact_email": "hello@elizaresearch.ai",
+    "contact_source_url": "https://elizaresearch.ai/",
+    "contact": {
+      "email": "hello@elizaresearch.ai",
+      "source_url": "https://elizaresearch.ai/",
+      "note": "The official project website linked by the GitHub repository publishes this address as a contact email."
+    },
+    "summary": "A TypeScript/VibeLang agent framework whose current core defines scoped message and long-term memory types, ranked retrieval, adapter-owned persistence, and source-aware embedding writes. The current branch is a specification-led rewrite; runtime conformance and performance were not measured.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/elizaOS/eliza"
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official canonical repository metadata",
+        "path": "repository metadata",
+        "symbol": "full_name, html_url, default_branch",
+        "url": "https://api.github.com/repos/elizaOS/eliza"
+      },
+      {
+        "id": "head",
+        "label": "Official default branch head metadata",
+        "path": "develop branch endpoint",
+        "symbol": "full SHA 16ecc03e23ce338c6d8fab2a08e544813c0a1ca3",
+        "url": "https://api.github.com/repos/elizaOS/eliza/branches/develop"
+      },
+      {
+        "id": "tree",
+        "label": "Reviewed upstream tree",
+        "path": "repository tree",
+        "symbol": "commit 16ecc03e23ce338c6d8fab2a08e544813c0a1ca3",
+        "url": "https://github.com/elizaOS/eliza/tree/16ecc03e23ce338c6d8fab2a08e544813c0a1ca3"
+      },
+      {
+        "id": "readme",
+        "label": "Current project README",
+        "path": "README.md",
+        "symbol": "v4/Vibestack scope and spec-led rewrite",
+        "url": "https://github.com/elizaOS/eliza/blob/16ecc03e23ce338c6d8fab2a08e544813c0a1ca3/README.md"
+      },
+      {
+        "id": "core-index",
+        "label": "Core specification index",
+        "path": "spec/core/index.md",
+        "symbol": "kernel, adapters, boundaries, current package specification",
+        "url": "https://github.com/elizaOS/eliza/blob/16ecc03e23ce338c6d8fab2a08e544813c0a1ca3/spec/core/index.md"
+      },
+      {
+        "id": "memory-types",
+        "label": "Memory type definitions",
+        "path": "packages/core/src/types/memory.vibe",
+        "symbol": "MemoryType, MemoryScope, MessageMemory, metadata",
+        "url": "https://github.com/elizaOS/eliza/blob/16ecc03e23ce338c6d8fab2a08e544813c0a1ca3/packages/core/src/types/memory.vibe"
+      },
+      {
+        "id": "ltm-type",
+        "label": "Long-term memory type definitions",
+        "path": "packages/core/src/types/long-term-memory.vibe",
+        "symbol": "categories, confidence, source, timestamps, counters",
+        "url": "https://github.com/elizaOS/eliza/blob/16ecc03e23ce338c6d8fab2a08e544813c0a1ca3/packages/core/src/types/long-term-memory.vibe"
+      },
+      {
+        "id": "memory",
+        "label": "Memory helpers",
+        "path": "packages/core/src/memory.vibe",
+        "symbol": "construction, default scope, provenance, persistence skip flags",
+        "url": "https://github.com/elizaOS/eliza/blob/16ecc03e23ce338c6d8fab2a08e544813c0a1ca3/packages/core/src/memory.vibe"
+      },
+      {
+        "id": "scope",
+        "label": "Memory scope helper",
+        "path": "packages/core/src/access-control/memory-scope.vibe",
+        "symbol": "scope validation and scoped entity resolution",
+        "url": "https://github.com/elizaOS/eliza/blob/16ecc03e23ce338c6d8fab2a08e544813c0a1ca3/packages/core/src/access-control/memory-scope.vibe"
+      },
+      {
+        "id": "retrieval-source",
+        "label": "Retrieval implementation",
+        "path": "packages/core/src/retrieval.vibe",
+        "symbol": "BM25 corpus, scoring, phrase and message ranking",
+        "url": "https://github.com/elizaOS/eliza/blob/16ecc03e23ce338c6d8fab2a08e544813c0a1ca3/packages/core/src/retrieval.vibe"
+      },
+      {
+        "id": "retrieval-spec",
+        "label": "Ranked retrieval specification",
+        "path": "spec/core/retrieval.md",
+        "symbol": "ranking, limits, pre-ranking scope filter",
+        "url": "https://github.com/elizaOS/eliza/blob/16ecc03e23ce338c6d8fab2a08e544813c0a1ca3/spec/core/retrieval.md"
+      },
+      {
+        "id": "storage",
+        "label": "Persistence specification",
+        "path": "spec/core/storage.md",
+        "symbol": "adapter-owned durable CRUD and storage boundary",
+        "url": "https://github.com/elizaOS/eliza/blob/16ecc03e23ce338c6d8fab2a08e544813c0a1ca3/spec/core/storage.md"
+      },
+      {
+        "id": "entities",
+        "label": "Entity and memory mutation specification",
+        "path": "spec/core/entities.md",
+        "symbol": "memory mutation results, cache invalidation, redaction, CAS",
+        "url": "https://github.com/elizaOS/eliza/blob/16ecc03e23ce338c6d8fab2a08e544813c0a1ca3/spec/core/entities.md"
+      },
+      {
+        "id": "fact-writes",
+        "label": "Serialized fact evidence write specification",
+        "path": "spec/core/factWrites.md",
+        "symbol": "natural-key read/merge/commit serialization",
+        "url": "https://github.com/elizaOS/eliza/blob/16ecc03e23ce338c6d8fab2a08e544813c0a1ca3/spec/core/factWrites.md"
+      },
+      {
+        "id": "embedding-write",
+        "label": "Embedding write specification",
+        "path": "spec/core/embeddingWrite.md",
+        "symbol": "captured source revision, retry, stale receipt",
+        "url": "https://github.com/elizaOS/eliza/blob/16ecc03e23ce338c6d8fab2a08e544813c0a1ca3/spec/core/embeddingWrite.md"
+      },
+      {
+        "id": "embedding-service",
+        "label": "Embedding service specification",
+        "path": "spec/core/embeddingService.md",
+        "symbol": "queue, batching, retries",
+        "url": "https://github.com/elizaOS/eliza/blob/16ecc03e23ce338c6d8fab2a08e544813c0a1ca3/spec/core/embeddingService.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog identity and locator attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 214, slug elizaos; Atlas revision 19199a4fc249e89c0793be06f0b166b358089ba0 used for locator attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "contact",
+        "label": "Official project website contact page",
+        "path": "homepage linked by GitHub repository",
+        "symbol": "hello@elizaresearch.ai",
+        "url": "https://elizaresearch.ai/"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The curated roster places elizaOS at ordinal 214, with slug elizaos and the listed repository locator. Atlas attribution is used only to identify the roster locator, not as implementation assessment evidence.",
+        "sources": [
+          "roster"
+        ]
+      },
+      {
+        "text": "GitHub identifies elizaOS/eliza as the canonical public repository and names develop as its default branch. The reviewed current head is 16ecc03e23ce338c6d8fab2a08e544813c0a1ca3.",
+        "sources": [
+          "repo",
+          "head"
+        ]
+      },
+      {
+        "text": "The current README presents Eliza on Vibestack as a specification-led rewrite. It describes an on-device agent with cloud identity, billing, and model services; it also says the rewrite is not a descendant of the older source baseline.",
+        "sources": [
+          "readme",
+          "core-index"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Memory types include messages, documents, fragments, descriptions, and custom records. Message memories carry entity, optional agent, room, content, optional embedding, timestamps, and metadata including scope and source fields. LongTermMemory separately models episodic, semantic, and procedural content with confidence, source, timestamps, and access counters.",
+        "sources": [
+          "memory-types",
+          "ltm-type"
+        ]
+      },
+      {
+        "text": "The kernel owns memory contracts and retrieval policy while concrete storage adapters own durable I/O and transactions. The current core source includes VibeLang memory constructors and retrieval modules; the repo README and core index characterize this as a rewrite whose spec-to-runtime conformance is not established by this review.",
+        "sources": [
+          "readme",
+          "core-index",
+          "memory",
+          "storage"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: message constructors stamp creation time and default scope to private when agentId exists, otherwise shared. App provenance fills provider, account, platform-message, and source identifiers when missing. Explicit transient/do-not-persist flags can skip response-memory persistence. Durable writes are host-adapter operations; fact writes are specified as serialized canonical-key read/merge/commit operations.",
+        "sources": [
+          "memory",
+          "storage",
+          "fact-writes"
+        ]
+      },
+      {
+        "text": "Update and delete: the storage contract includes memory CRUD and runtime mutation wrappers preserve adapter outcomes and invalidate affected caches after successful writes. Single-memory publication performs secret redaction; embedding-only updates use compare-and-swap. The reviewed sources do not define one end-to-end erase policy across memory kinds, derived facts, vectors, and backups.",
+        "sources": [
+          "entities",
+          "storage"
+        ]
+      },
+      {
+        "text": "Retrieval: source and specification cover BM25 lexical scoring, phrase matching, trigram/vector similarity and recency ranking, with stable identity tie-breaking. Caller-authorized room/world scopes are filtered before ranking and pagination; non-positive memory limits return no candidates. No recall-quality result is implied.",
+        "sources": [
+          "retrieval-source",
+          "retrieval-spec"
+        ]
+      },
+      {
+        "text": "Provenance: messages can retain source IDs and platform message IDs; facts preserve merged writer contributions in the write model; embedding writes are tied to the captured source revision. These fields and contracts do not establish generated-answer citations or independently verified factual support.",
+        "sources": [
+          "memory",
+          "fact-writes",
+          "embedding-write"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: BM25 maintains corpus term/document frequencies and uses top-K selection; embedding writes use queued retries and source receipts. No memory-specific performance or operational telemetry was measured in this review.",
+        "sources": [
+          "retrieval-source",
+          "embedding-service",
+          "embedding-write"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Retrieval code and contracts exist, but no answerability probes or result adjudication were performed.",
+        "sources": [
+          "retrieval-source",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Mutation and source revision mechanisms are described, but no correction sequence was executed or assessed.",
+        "sources": [
+          "entities",
+          "embedding-write",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The inspected contract includes CRUD but no complete erasure evaluation or post-delete probe was run.",
+        "sources": [
+          "storage",
+          "entities",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Retrieval specifies pre-ranking scope filtering; no runtime cross-room or cross-user probes were run.",
+        "sources": [
+          "retrieval-spec",
+          "scope",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source identifiers and serialized fact contributions exist, but no answer claim was adjudicated against original evidence.",
+        "sources": [
+          "memory",
+          "fact-writes",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No retrieval latency distribution was measured.",
+        "sources": [
+          "retrieval-source",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No scheduled post-write recall probes were performed.",
+        "sources": [
+          "storage",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No provider token totals or usage charges were collected.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No attributable persistent storage measurements were collected.",
+        "sources": [
+          "storage",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Source-visible retrieval and write structures",
+        "status": "available in code/specification",
+        "evidence": "BM25 ranking, batching/retries, scope filtering, and source-revision receipts are visible in current source or specifications; these are not runtime measurements.",
+        "sources": [
+          "retrieval-source",
+          "retrieval-spec",
+          "embedding-service",
+          "embedding-write"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded inspection of the official README, current VibeLang memory types/helpers and retrieval code, and core storage, retrieval, scope, fact-write, and embedding-write specifications at the verified develop head. The system, test suite, and benchmarks were not run.",
+        "sources": [
+          "readme",
+          "memory-types",
+          "memory",
+          "scope",
+          "retrieval-source",
+          "storage",
+          "retrieval-spec",
+          "fact-writes",
+          "embedding-write"
+        ]
+      },
+      {
+        "text": "The README characterizes the current tree as a spec-led rewrite and states that the rewrite is not a descendant of its older source baseline. This review did not establish host-specific persistence, full spec-to-runtime conformance, deployment authorization, extraction quality, complete deletion, or production behavior.",
+        "sources": [
+          "readme",
+          "core-index",
+          "storage"
+        ]
+      },
+      {
+        "text": "The official project website linked in repository metadata publishes hello@elizaresearch.ai as a contact address; no profile, commit metadata, or third-party directory was used.",
+        "sources": [
+          "repo",
+          "contact"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No system runtime, benchmark workload, or test suite was run. Project metric definitions, fixture, and execution status record describe the project protocol and status, not measurements for elizaOS.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      }
+    ]
+  }
+}

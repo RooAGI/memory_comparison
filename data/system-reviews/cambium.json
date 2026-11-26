@@ -1,0 +1,287 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "cambium",
+    "name": "Cambium",
+    "repository": "https://github.com/KimGLee/Cambium",
+    "branch": "main",
+    "revision": "6ed60b8cbacf121fa11f6b0753746e4b6d9b7216",
+    "reviewed_at": "2026-11-25T01:20:35Z",
+    "review_timezone": "UTC (2026-11-24 17:20:35 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/KimGLee/Cambium/blob/6ed60b8cbacf121fa11f6b0753746e4b6d9b7216/README.md",
+      "checked_urls": [
+        "https://github.com/KimGLee/Cambium/blob/6ed60b8cbacf121fa11f6b0753746e4b6d9b7216/README.md"
+      ],
+      "note": "The official README was checked and publishes no contact email. The repository root listing contains no SECURITY.md or SUPPORT.md. No address was inferred."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/KimGLee/Cambium/blob/6ed60b8cbacf121fa11f6b0753746e4b6d9b7216/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/KimGLee/Cambium/blob/6ed60b8cbacf121fa11f6b0753746e4b6d9b7216/README.md"
+    ],
+    "summary": "Cambium is a governance standard and reference toolset for LLM-maintained knowledge repositories. It provides policies, controlled mutation tools, evidence ledgers, recovery state, and agent-host interfaces; adopters own the corpus and selected profile. This is a source review, not a benchmark.",
+    "atlas_locator": {
+      "ordinal": 110,
+      "name": "Cambium",
+      "slug": "cambium",
+      "listed_repository": "https://github.com/KimGLee/Cambium",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cambium.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository",
+        "path": "repository",
+        "url": "https://github.com/KimGLee/Cambium"
+      },
+      {
+        "id": "head",
+        "label": "Verified main head",
+        "path": "commit",
+        "symbol": "6ed60b8cbacf121fa11f6b0753746e4b6d9b7216",
+        "url": "https://github.com/KimGLee/Cambium/commit/6ed60b8cbacf121fa11f6b0753746e4b6d9b7216"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "url": "https://github.com/KimGLee/Cambium/blob/6ed60b8cbacf121fa11f6b0753746e4b6d9b7216/README.md"
+      },
+      {
+        "id": "delta",
+        "label": "Coverage Delta transaction",
+        "path": "Tools/execution/task_runtime/apply_delta.py",
+        "url": "https://github.com/KimGLee/Cambium/blob/6ed60b8cbacf121fa11f6b0753746e4b6d9b7216/Tools/execution/task_runtime/apply_delta.py"
+      },
+      {
+        "id": "profile",
+        "label": "Profile validation and snapshot-bound editing",
+        "path": "Tools/governance/profile/check_profile.py; Tools/governance/profile/profile_candidate.py",
+        "url": "https://github.com/KimGLee/Cambium/blob/6ed60b8cbacf121fa11f6b0753746e4b6d9b7216/Tools/governance/profile/check_profile.py"
+      },
+      {
+        "id": "readset",
+        "label": "Read Set contract",
+        "path": "Tools/execution/context_delivery/read_set_contract.py; Read Set/read-set.schema.yaml",
+        "url": "https://github.com/KimGLee/Cambium/blob/6ed60b8cbacf121fa11f6b0753746e4b6d9b7216/Tools/execution/context_delivery/read_set_contract.py"
+      },
+      {
+        "id": "mcp",
+        "label": "MCP interface implementation",
+        "path": "Tools/platform/agent_interface/mcp_server.py",
+        "url": "https://github.com/KimGLee/Cambium/blob/6ed60b8cbacf121fa11f6b0753746e4b6d9b7216/Tools/platform/agent_interface/mcp_server.py"
+      },
+      {
+        "id": "receipts",
+        "label": "Receipt creation and publication",
+        "path": "Tools/platform/common/receipts.py; Tools/platform/common/reporting.py",
+        "url": "https://github.com/KimGLee/Cambium/blob/6ed60b8cbacf121fa11f6b0753746e4b6d9b7216/Tools/platform/common/receipts.py"
+      },
+      {
+        "id": "receipt_schema",
+        "label": "Receipt schema",
+        "path": "Tools/schemas/receipt.template.jsonl",
+        "url": "https://github.com/KimGLee/Cambium/blob/6ed60b8cbacf121fa11f6b0753746e4b6d9b7216/Tools/schemas/receipt.template.jsonl"
+      },
+      {
+        "id": "metrics",
+        "label": "Metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated identity and attribution entry",
+        "path": "data/memory-systems.json",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas discovery attribution only",
+        "path": "content/systems/cambium.md",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cambium.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Cambium as a governance standard and reference toolset for knowledge repositories maintained with LLM agents. It expressly says Cambium is not a knowledge base or RAG engine and does not provide the corpus or decide its meaning.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The governed corpus, selected profile, and runtime state belong to each adopting repository. Cambium supplies a normative kernel, Cards, Read Sets, deterministic Tools, schemas, and host projections; this checkout intentionally selects no adopter profile and contains no governed corpus.",
+        "sources": [
+          "readme",
+          "profile"
+        ]
+      },
+      {
+        "text": "Read Sets declare canonical material for an already selected route or phase. Cards are checklists; canonical material resolved through a paired Read Set takes precedence when the Card is insufficient or disputed. This is bounded context loading, not semantic memory search.",
+        "sources": [
+          "readme",
+          "readset"
+        ]
+      },
+      {
+        "text": "The stable CLI declarations and closed agent-interface policy compile into MCP and host configuration projections. The typed runner invokes registered capabilities and stops at semantic boundaries; the README says it is not a scheduler.",
+        "sources": [
+          "readme",
+          "mcp"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write/update — code observation. Coverage Deltas go through controlled writers that validate current state and task/batch identity before applying typed transitions. Profile edits use snapshot preconditions and validation; the README says canonical state must not be hand-edited.",
+        "sources": [
+          "delta",
+          "profile",
+          "readme"
+        ]
+      },
+      {
+        "text": "Delete/supersession — code observation. The documented model uses lifecycle transitions and retained history. No general memory-claim deletion operation or end-to-end erasure guarantee is established by these sources.",
+        "sources": [
+          "delta",
+          "readme"
+        ]
+      },
+      {
+        "text": "Retrieval — code observation. Cambium supplies no retrieval engine. Read Sets bound which canonical sources an already selected route may load; deterministic CLI/MCP tools do not rank memories or choose routes autonomously.",
+        "sources": [
+          "readme",
+          "readset",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Provenance/evidence — code observation. Receipts capture tool/check/target/result/sequence and queue identity and are published append-only. The README distinguishes evidence that content was sent from proof it entered model context or was read by an agent. Local hashes detect drift, not signatures or external trust.",
+        "sources": [
+          "readme",
+          "receipts",
+          "receipt_schema"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Route-bound source declarations are visible; no judged answer-quality probes were run.",
+        "sources": [
+          "readset",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Controlled delta transitions exist; no correction workload was run.",
+        "sources": [
+          "delta",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No post-delete or corpus-erasure probe was measured.",
+        "sources": [
+          "readme",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Writer identity and batch checks are source-visible; no cross-adopter isolation workload was run.",
+        "sources": [
+          "delta",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Receipt and proof mechanisms are documented; no claim-support evaluation was run.",
+        "sources": [
+          "receipts",
+          "receipt_schema",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Efficiency, observability, tokens, cost, storage, and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Tool and receipt mechanisms are source-visible; no workload measurements were collected.",
+        "sources": [
+          "readme",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The repository is uninstantiated: it selects no adopter profile and ships no governed corpus. Profile fit, freshness, and ongoing corpus maintenance are not exercised here.",
+        "sources": [
+          "readme",
+          "profile"
+        ]
+      },
+      {
+        "text": "The README lists scheduling, isolated worker workspaces, a complete single-writer integrator loop, authenticated actor/reviewer identity, and protected whole-workspace execution as capabilities that do not ship yet. Hashes alone do not authenticate history.",
+        "sources": [
+          "readme",
+          "receipts"
+        ]
+      },
+      {
+        "text": "This is read-only source inspection at the verified main head. Cambium and its tests were not executed; source structure does not establish runtime behavior or deployed host enforcement.",
+        "sources": [
+          "repo",
+          "head",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is not_run. Metric definitions, fixtures, and execution status describe the evaluation protocol, not Cambium results. No system, benchmarks, or tests were run.",
+        "sources": [
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

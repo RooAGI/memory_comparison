@@ -1,0 +1,453 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "billion-context",
+    "name": "billion-context",
+    "repository": "https://github.com/ranxianglei/billion-context",
+    "branch": "master",
+    "revision": "85afa7b212ce20981d66c9e6ecb1e944751cb3c4",
+    "reviewed_at": "2026-11-24T23:38:56Z",
+    "review_timezone": "UTC (2026-11-24 15:38:56 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/ranxianglei/billion-context/blob/85afa7b212ce20981d66c9e6ecb1e944751cb3c4/README.md","checked_urls":["https://github.com/ranxianglei/billion-context/blob/85afa7b212ce20981d66c9e6ecb1e944751cb3c4/README.md","https://github.com/ranxianglei/billion-context/blob/85afa7b212ce20981d66c9e6ecb1e944751cb3c4/SECURITY.md","https://github.com/ranxianglei/billion-context/blob/85afa7b212ce20981d66c9e6ecb1e944751cb3c4/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "billion-context is a context-compression proxy and host plugin. It lets agents fold conversation ranges into summaries, then search or restore the retained history by session and message references.",
+    "atlas_locator": {
+      "ordinal": 93,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/billion-context.md",
+      "listed_repository": "https://github.com/ranxianglei/billion-context"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/ranxianglei/billion-context/blob/85afa7b212ce20981d66c9e6ecb1e944751cb3c4/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/ranxianglei/billion-context/blob/85afa7b212ce20981d66c9e6ecb1e944751cb3c4/README.md",
+      "https://github.com/ranxianglei/billion-context/blob/85afa7b212ce20981d66c9e6ecb1e944751cb3c4/SECURITY.md",
+      "https://github.com/ranxianglei/billion-context/blob/85afa7b212ce20981d66c9e6ecb1e944751cb3c4/SUPPORT.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository",
+        "path": "repository page",
+        "symbol": "canonical ranxianglei/billion-context; default branch master",
+        "url": "https://github.com/ranxianglei/billion-context"
+      },
+      {
+        "id": "head",
+        "label": "Verified master head",
+        "path": "commit",
+        "symbol": "master HEAD 85afa7b212ce20981d66c9e6ecb1e944751cb3c4",
+        "url": "https://github.com/ranxianglei/billion-context/commit/85afa7b212ce20981d66c9e6ecb1e944751cb3c4"
+      },
+      {
+        "id": "feed",
+        "label": "Official master commits feed",
+        "path": "commits/master.atom",
+        "symbol": "current commit identity and update time",
+        "url": "https://github.com/ranxianglei/billion-context/commits/master.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "project role, context-management tools, session claims and published contact check",
+        "url": "https://github.com/ranxianglei/billion-context/blob/85afa7b212ce20981d66c9e6ecb1e944751cb3c4/README.md"
+      },
+      {
+        "id": "storage-doc",
+        "label": "Unified storage architecture",
+        "path": "docs/architecture/storage.md",
+        "symbol": "SQLite persistence, JSON session envelope, WAL, content and block state, deletion and retention boundaries",
+        "url": "https://github.com/ranxianglei/billion-context/blob/85afa7b212ce20981d66c9e6ecb1e944751cb3c4/docs/architecture/storage.md"
+      },
+      {
+        "id": "identity-doc",
+        "label": "Session and message identity architecture",
+        "path": "docs/architecture/identity.md",
+        "symbol": "session identity, canonical message ids and reconciliation",
+        "url": "https://github.com/ranxianglei/billion-context/blob/85afa7b212ce20981d66c9e6ecb1e944751cb3c4/docs/architecture/identity.md"
+      },
+      {
+        "id": "types",
+        "label": "Kernel data model",
+        "path": "kernel/src/types.ts",
+        "symbol": "CompressionBlock, message references, session statistics",
+        "url": "https://github.com/ranxianglei/billion-context/blob/85afa7b212ce20981d66c9e6ecb1e944751cb3c4/kernel/src/types.ts"
+      },
+      {
+        "id": "compress",
+        "label": "Compression implementation",
+        "path": "kernel/src/compress.ts",
+        "symbol": "range application, block creation, summary and covered-message relationships",
+        "url": "https://github.com/ranxianglei/billion-context/blob/85afa7b212ce20981d66c9e6ecb1e944751cb3c4/kernel/src/compress.ts"
+      },
+      {
+        "id": "content-store",
+        "label": "Content-addressed message store",
+        "path": "kernel/src/content-store.ts",
+        "symbol": "stored originals, ref aliases, retrieval and deduplication",
+        "url": "https://github.com/ranxianglei/billion-context/blob/85afa7b212ce20981d66c9e6ecb1e944751cb3c4/kernel/src/content-store.ts"
+      },
+      {
+        "id": "search",
+        "label": "Kernel search",
+        "path": "kernel/src/search/index.ts",
+        "symbol": "block documents, ranking surface, result limits and previews",
+        "url": "https://github.com/ranxianglei/billion-context/blob/85afa7b212ce20981d66c9e6ecb1e944751cb3c4/kernel/src/search/index.ts"
+      },
+      {
+        "id": "search-host",
+        "label": "Host search and retrieval routing",
+        "path": "src/decompress-shared.ts",
+        "symbol": "summary/original search, session target handling, derived-session reads",
+        "url": "https://github.com/ranxianglei/billion-context/blob/85afa7b212ce20981d66c9e6ecb1e944751cb3c4/src/decompress-shared.ts"
+      },
+      {
+        "id": "tools",
+        "label": "Kernel tool contracts",
+        "path": "kernel/src/compress-tools.ts",
+        "symbol": "compress, decompress, search_context and status tools",
+        "url": "https://github.com/ranxianglei/billion-context/blob/85afa7b212ce20981d66c9e6ecb1e944751cb3c4/kernel/src/compress-tools.ts"
+      },
+      {
+        "id": "block-ops",
+        "label": "Block lifecycle operations",
+        "path": "kernel/src/block-ops.ts",
+        "symbol": "retire, restore and rewrite behavior",
+        "url": "https://github.com/ranxianglei/billion-context/blob/85afa7b212ce20981d66c9e6ecb1e944751cb3c4/kernel/src/block-ops.ts"
+      },
+      {
+        "id": "persist",
+        "label": "Persistence layer",
+        "path": "src/persist.ts",
+        "symbol": "session envelope, atomic file persistence, compression, encryption and limitations",
+        "url": "https://github.com/ranxianglei/billion-context/blob/85afa7b212ce20981d66c9e6ecb1e944751cb3c4/src/persist.ts"
+      },
+      {
+        "id": "session",
+        "label": "Session runtime",
+        "path": "src/session.ts",
+        "symbol": "session state, block-content snapshots, lazy loading and residency bounds",
+        "url": "https://github.com/ranxianglei/billion-context/blob/85afa7b212ce20981d66c9e6ecb1e944751cb3c4/src/session.ts"
+      },
+      {
+        "id": "mcp",
+        "label": "MCP integration",
+        "path": "src/mcp.ts",
+        "symbol": "MCP tool calls and session context routing",
+        "url": "https://github.com/ranxianglei/billion-context/blob/85afa7b212ce20981d66c9e6ecb1e944751cb3c4/src/mcp.ts"
+      },
+      {
+        "id": "cli",
+        "label": "Session management commands",
+        "path": "src/storage-maintenance.ts",
+        "symbol": "session listing, removal, archive and restore",
+        "url": "https://github.com/ranxianglei/billion-context/blob/85afa7b212ce20981d66c9e6ecb1e944751cb3c4/src/storage-maintenance.ts"
+      },
+      {
+        "id": "store",
+        "label": "Unified storage store",
+        "path": "src/storage/store.ts",
+        "symbol": "session deletion cascade, content reference release and pinned checkpoint retention",
+        "url": "https://github.com/ranxianglei/billion-context/blob/85afa7b212ce20981d66c9e6ecb1e944751cb3c4/src/storage/store.ts"
+      },
+      {
+        "id": "report",
+        "label": "Status report implementation",
+        "path": "kernel/src/report.ts",
+        "symbol": "context breakdown, block count, tier and token estimates",
+        "url": "https://github.com/ranxianglei/billion-context/blob/85afa7b212ce20981d66c9e6ecb1e944751cb3c4/kernel/src/report.ts"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "comparison metric formulas and measurement boundaries",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "global not_run status; no billion-context benchmark result",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned comparison workload, not a measurement",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated roster entry",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 93, name, slug, listed locator and source attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas-attribution",
+        "label": "Atlas attribution source (identity only)",
+        "path": "content/systems/billion-context.md",
+        "symbol": "roster discovery/source attribution; not used as assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/billion-context.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The repository describes billion-context as a context-compression proxy/plugin between coding agents and model APIs, with native, launcher, and URL-routing integrations. The checked sources identify the repository account but do not confirm a legal owner or maintainer identity.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The transport-independent acp-kernel owns compression state and tool contracts. Blocks retain tier, summary/topic, session message IDs and nested block relationships; the model supplies the summary text.",
+        "sources": [
+          "types",
+          "compress",
+          "tools"
+        ]
+      },
+      {
+        "text": "The proxy persists session envelopes through an atomic file writer and can use unified SQLite tables for messages, blocks, references, content and session state. The storage architecture documents one WAL writer, batch ingest and a parallel serialized compression-state field.",
+        "sources": [
+          "persist",
+          "storage-doc"
+        ]
+      },
+      {
+        "text": "Original folded content is retained in block snapshots. The content-addressed store deduplicates original text by SHA-256 and maps a message ref to metadata and stored text; lazy session maps can re-materialize block content from persistence.",
+        "sources": [
+          "content-store",
+          "session"
+        ]
+      },
+      {
+        "text": "The default session identifier partitions compression state, references and persisted contents; canonical message identity is maintained across host resend/re-encoding paths. Explicit foreign-session search and derived-parent reads are separate read-only paths.",
+        "sources": [
+          "identity-doc",
+          "session",
+          "search-host",
+          "mcp"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "**Write.** The agent calls compress with message-reference bounds and a summary. The kernel resolves and filters the range, creates a tiered block with direct/effective message IDs and metadata, and deactivates consumed child blocks. This describes source behavior; no fold was performed.",
+        "sources": [
+          "compress",
+          "tools"
+        ]
+      },
+      {
+        "text": "**Update.** There is no general memory-record editor. Refolding can update an eligible restored block in place. Optional acp_rewrite changes an active block summary and keeps one prior summary for rollback; another rewrite replaces that one-step predecessor.",
+        "sources": [
+          "types",
+          "block-ops",
+          "tools"
+        ]
+      },
+      {
+        "text": "**Delete and retirement.** acp_retire hides a block summary from the resident prompt but keeps coverage and search/decompress access; acp_restore reverses that visibility change. `bili sessions rm` removes session files/rows and releases content references, while pinned checkpoint replicas may remain. Backups and external client history are outside the verified deletion boundary.",
+        "sources": [
+          "block-ops",
+          "cli",
+          "store"
+        ]
+      },
+      {
+        "text": "**Retrieval.** search_context searches block summaries and, when retained, original folded text, returning ranked previews and refs. decompress restores a block or range; acp_retrieve resolves a stored original message by ref, exporting very large results. Derived sessions may search recorded parents read-only.",
+        "sources": [
+          "search",
+          "search-host",
+          "content-store",
+          "tools",
+          "mcp"
+        ]
+      },
+      {
+        "text": "**Scope.** State and persistence are keyed by session ID. The host has explicit cross-session lookup and derived-session parent paths; these do not mutate the foreign session. This review did not test authentication or cross-session isolation adversarially.",
+        "sources": [
+          "identity-doc",
+          "session",
+          "search-host",
+          "mcp"
+        ]
+      },
+      {
+        "text": "**Provenance.** Blocks retain message identifiers, ref bounds, run IDs and compression call IDs; content entries retain a raw message ID and content hash. These link records to history, but summaries are model-authored and no inspected path adjudicates their factual support.",
+        "sources": [
+          "types",
+          "content-store",
+          "compress",
+          "tools"
+        ]
+      },
+      {
+        "text": "**Source-visible efficiency and observability.** The state tracks compression and retrieval counters; status reports token composition and tiers; the proxy stores request/cache usage. Session content can be evicted from resident memory and reloaded, and saves are debounced. These do not establish runtime performance.",
+        "sources": [
+          "types",
+          "report",
+          "session",
+          "persist",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Lexical block/original search and bounded previews are visible; answer quality and abstention were not scored.",
+        "sources": [
+          "search",
+          "search-host",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Refold and optional summary rewrite paths exist; no correction or stale-value workload was measured.",
+        "sources": [
+          "block-ops",
+          "compress",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Session removal cascades through indexed content and releases unshared blobs, but pinned checkpoints may persist; no deletion-leak workload was run.",
+        "sources": [
+          "store",
+          "cli",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Session-keyed state and read-only foreign/derived lookup paths are source-visible; no cross-session adversarial workload was run.",
+        "sources": [
+          "identity-doc",
+          "search-host",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "References link blocks and stored content to history; summary faithfulness and answer-level support were not adjudicated.",
+        "sources": [
+          "types",
+          "content-store",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Search and persistence operations are visible in source; no latency distribution or write-to-recall delay was measured.",
+        "sources": [
+          "search-host",
+          "persist",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Counters and cache reporting exist, but no current-head token, cost, or storage result was collected.",
+        "sources": [
+          "report",
+          "persist",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code and documentation",
+        "evidence": "Counters, token/context status, storage footprint commands and cache reports are visible; they are instrumentation, not measured outcomes.",
+        "sources": [
+          "report",
+          "persist",
+          "cli",
+          "readme"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "Compression quality depends on model-written summaries. Message references and retained content provide a recovery route but do not prove the summary is complete or true.",
+        "sources": [
+          "types",
+          "content-store",
+          "readme"
+        ]
+      },
+      {
+        "text": "Session IDs are the main scope key, while explicit foreign-session and parent-chain search paths exist. This review did not establish endpoint authorization or test tenant isolation.",
+        "sources": [
+          "identity-doc",
+          "search-host",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Session deletion retains pinned checkpoints in the inspected store path; the review did not establish deletion from external client histories or backups.",
+        "sources": [
+          "store",
+          "cli",
+          "storage-doc"
+        ]
+      },
+      {
+        "text": "This is a bounded code/documentation inspection at one revision. No system, benchmark workload, or tests were run; performance, recall quality, and deployment behavior remain unknown.",
+        "sources": [
+          "head",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No billion-context runtime, benchmark workload, or tests were run for this review.",
+        "sources": [
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "text": "The README publishes results for named historical versions and workloads; they remain upstream-reported measurements and are not results for this current-head review.",
+        "sources": [
+          "readme",
+          "metrics",
+          "status"
+        ]
+      }
+    ]
+  }
+}

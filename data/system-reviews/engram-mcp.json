@@ -1,0 +1,364 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 226,
+    "slug": "engram-mcp",
+    "name": "Engram MCP (edg-l)",
+    "repository": "https://github.com/edg-l/engram-mcp",
+    "listed_repository": "https://github.com/edg-l/engram-mcp",
+    "branch": "master",
+    "revision": "0303bc4e052f64755d99b2247bc6d2acc38d7a1f",
+    "reviewed_at": "2026-11-25T19:27:05Z",
+    "review_timezone": "UTC (2026-11-25 11:27:05 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Engram MCP is a local Rust MCP server and CLI for coding-agent memory. It stores typed memories, branch-linked handoffs, todos, and ADRs in SQLite, with local ONNX embeddings and FTS5 hybrid retrieval. Scope is project and branch aware, with optional cross-project global memories. This is a source review; no runtime, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 226,
+      "name": "Engram MCP (edg-l)",
+      "slug": "engram-mcp",
+      "listed_repository": "https://github.com/edg-l/engram-mcp",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/engram-mcp.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/edg-l/engram-mcp/blob/0303bc4e052f64755d99b2247bc6d2acc38d7a1f/README.md",
+      "checked_urls": [
+        "https://github.com/edg-l/engram-mcp/blob/0303bc4e052f64755d99b2247bc6d2acc38d7a1f/README.md"
+      ],
+      "note": "Checked the official pinned repository README for a published contact email; none was found. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/edg-l/engram-mcp/blob/0303bc4e052f64755d99b2247bc6d2acc38d7a1f/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/edg-l/engram-mcp/blob/0303bc4e052f64755d99b2247bc6d2acc38d7a1f/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the official pinned README.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated memory systems roster",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[225], ordinal 226; name, slug, explicit listed repository, Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/engram-mcp.md",
+        "symbol": "Pinned identity/locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/engram-mcp.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository metadata and Git remote",
+        "symbol": "Canonical repository edg-l/engram-mcp; official GitHub page names default branch master",
+        "url": "https://github.com/edg-l/engram-mcp"
+      },
+      {
+        "id": "head",
+        "label": "Verified current master head",
+        "path": "official Git smart transport and shallow checkout",
+        "symbol": "git ls-remote --symref reported HEAD -> refs/heads/master at 0303bc4e052f64755d99b2247bc6d2acc38d7a1f; shallow checkout HEAD agreed. GitHub REST API returned a rate-limit response.",
+        "url": "https://github.com/edg-l/engram-mcp/commit/0303bc4e052f64755d99b2247bc6d2acc38d7a1f"
+      },
+      {
+        "id": "tree",
+        "label": "Reviewed upstream tree",
+        "path": "repository tree",
+        "symbol": "Shallow checkout at verified current master head",
+        "url": "https://github.com/edg-l/engram-mcp/tree/0303bc4e052f64755d99b2247bc6d2acc38d7a1f"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Product, local deployment, data location, feature summary and limitations; contact-email check",
+        "url": "https://github.com/edg-l/engram-mcp/blob/0303bc4e052f64755d99b2247bc6d2acc38d7a1f/README.md"
+      },
+      {
+        "id": "how",
+        "label": "How it works documentation",
+        "path": "docs/how-it-works.md",
+        "symbol": "Retrieval, decay, deduplication, supersession, trash, project identity, sync and project-reported benchmark",
+        "url": "https://github.com/edg-l/engram-mcp/blob/0303bc4e052f64755d99b2247bc6d2acc38d7a1f/docs/how-it-works.md"
+      },
+      {
+        "id": "tools",
+        "label": "MCP tools reference",
+        "path": "docs/tools.md",
+        "symbol": "Tool operations and project/branch scope semantics",
+        "url": "https://github.com/edg-l/engram-mcp/blob/0303bc4e052f64755d99b2247bc6d2acc38d7a1f/docs/tools.md"
+      },
+      {
+        "id": "setup",
+        "label": "Setup documentation",
+        "path": "docs/setup.md",
+        "symbol": "Local SQLite location, MCP/CLI and Claude Code hooks",
+        "url": "https://github.com/edg-l/engram-mcp/blob/0303bc4e052f64755d99b2247bc6d2acc38d7a1f/docs/setup.md"
+      },
+      {
+        "id": "memory",
+        "label": "Memory data types",
+        "path": "src/memory.rs",
+        "symbol": "Memory, handoff section, todo, relationship and retrieval score structures",
+        "url": "https://github.com/edg-l/engram-mcp/blob/0303bc4e052f64755d99b2247bc6d2acc38d7a1f/src/memory.rs"
+      },
+      {
+        "id": "project",
+        "label": "Project identity source",
+        "path": "src/project.rs",
+        "symbol": "Remote/path project identity and worktree resolution",
+        "url": "https://github.com/edg-l/engram-mcp/blob/0303bc4e052f64755d99b2247bc6d2acc38d7a1f/src/project.rs"
+      },
+      {
+        "id": "handler",
+        "label": "MCP tool handlers",
+        "path": "src/tools/handler.rs",
+        "symbol": "Memory store/query/context/update/delete, curation and handoff flows",
+        "url": "https://github.com/edg-l/engram-mcp/blob/0303bc4e052f64755d99b2247bc6d2acc38d7a1f/src/tools/handler.rs"
+      },
+      {
+        "id": "curation",
+        "label": "Curation and supersession",
+        "path": "src/tools/curation.rs",
+        "symbol": "Dead-memory drops and successor redirects for candidate results",
+        "url": "https://github.com/edg-l/engram-mcp/blob/0303bc4e052f64755d99b2247bc6d2acc38d7a1f/src/tools/curation.rs"
+      },
+      {
+        "id": "embeddings",
+        "label": "Embedding and keyword retrieval",
+        "path": "src/db/embeddings.rs",
+        "symbol": "Local embeddings, project/global filtered vectors and FTS5 BM25 search",
+        "url": "https://github.com/edg-l/engram-mcp/blob/0303bc4e052f64755d99b2247bc6d2acc38d7a1f/src/db/embeddings.rs"
+      },
+      {
+        "id": "memories-db",
+        "label": "Memory persistence",
+        "path": "src/db/memories.rs",
+        "symbol": "Memory writes, update/access tracking, search and prune persistence",
+        "url": "https://github.com/edg-l/engram-mcp/blob/0303bc4e052f64755d99b2247bc6d2acc38d7a1f/src/db/memories.rs"
+      },
+      {
+        "id": "trash",
+        "label": "Trash and restore implementation",
+        "path": "src/db/trash.rs",
+        "symbol": "Recoverable snapshots, restore, and retention sweep",
+        "url": "https://github.com/edg-l/engram-mcp/blob/0303bc4e052f64755d99b2247bc6d2acc38d7a1f/src/db/trash.rs"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Comparison metric definitions; not Engram results",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Shared benchmark status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Current shared execution status; no Engram measurement claimed",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned comparison fixture; not an Engram result",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Engram as a local MCP server and CLI for coding-agent session memory, implemented in Rust and backed by SQLite and a local embedding model. It calls the project single-user and unauthenticated. No maintainer identity is asserted here.",
+        "sources": [
+          "readme",
+          "setup"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The default store is one local SQLite database. A memory has a type, content and optional summary, tags, importance/relevance, access counters and timestamps, project and branch scope, pin/global flags, merged-source metadata, and external artifact references. Relationships connect records; handoffs keep structured sections and per-section embeddings, while todos and ADRs have lifecycle sidecars.",
+        "sources": [
+          "readme",
+          "memory",
+          "tools"
+        ]
+      },
+      {
+        "text": "Retrieval combines SQLite FTS5 BM25 and cosine similarity from a quantized local ONNX embedding model using reciprocal-rank fusion. Broad context retrieval can first select clusters; handoff resume ranks sections along a branch chain. A shared per-user embedding process reduces repeated model loads according to project documentation; no resource measurement was made in this review.",
+        "sources": [
+          "how",
+          "embeddings",
+          "memory"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Writes use memory_store or batch store, embed locally, and can attach related or superseded memory edges. Similar same-type candidates at cosine ≥0.88 are reported for caller review; store does not merge automatically. Handoffs have structured sections, chain by branch, and can link to relevant memories; todos are maintained separately.",
+        "sources": [
+          "handler",
+          "tools",
+          "how"
+        ]
+      },
+      {
+        "text": "memory_update can change content and metadata or mark a record dead; replacing content snapshots the previous version. memory_delete, pruning, merge, and overwrite operations use recoverable trash snapshots, normally retained for 30 days, with restore support. Dead records are excluded from ordinary retrieval; superseded matches redirect to their successor. Trash is local and is not included in sync.",
+        "sources": [
+          "handler",
+          "curation",
+          "trash",
+          "how"
+        ]
+      },
+      {
+        "text": "memory_query searches specific facts and memory_context gathers task context with project, branch, type and relevance filters. Results include semantic, keyword, fused, and final scores. Handoff resume ranks sections across at most five recent handoffs and also returns open todos and blockers. The docs describe project-reported LongMemEval results at crate version 0.4.0; these are not measurements from this review and are not treated as current benchmark results.",
+        "sources": [
+          "tools",
+          "how",
+          "memory"
+        ]
+      },
+      {
+        "text": "Project identity uses a normalized Git remote, or a home-relative path when no remote exists; worktrees of a repository resolve to their main checkout. Tools default to the server's project but accept an explicit project. Branch mode can limit results to current/global, all branches, or a named branch. Global memories deliberately cross project boundaries. The README describes the MCP server as single-user, local, and without authentication; project routing is not a multi-tenant security boundary.",
+        "sources": [
+          "project",
+          "tools",
+          "readme"
+        ]
+      },
+      {
+        "text": "Evidence and provenance include memory IDs, relationships such as supersedes/derived_from, merged_from records, optional external artifact pointers, and access/creation/update metadata. Hooks can capture session data and apply common-secret redaction. These fields provide traceability but do not verify the truth of stored claims, and the inspected core does not establish a general mutation audit trail or citation enforcement.",
+        "sources": [
+          "memory",
+          "handler",
+          "setup",
+          "tools"
+        ]
+      },
+      {
+        "text": "Efficiency mechanisms visible in source include FTS indexing, bounded search candidates, clustering for diversity, local embeddings, and a shared embedding process. Stored access counts and last-access timestamps support relevance scoring; MCP/CLI and optional Claude Code hooks provide integration. No latency, token, cost, storage, or operational telemetry was collected.",
+        "sources": [
+          "how",
+          "embeddings",
+          "setup",
+          "memories-db"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Hybrid retrieval and scoring are source-inspected; no answerability or abstention workload was run.",
+        "sources": [
+          "how",
+          "handler",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Update, dead status, supersession, and activity-based decay are source-inspected; no correction or staleness probes were run.",
+        "sources": [
+          "handler",
+          "curation",
+          "how",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Delete-to-trash and restore paths were inspected; no residual-read or secure-erasure probe was run.",
+        "sources": [
+          "trash",
+          "handler",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Project, branch, and global visibility paths were inspected; no cross-project isolation workload was run.",
+        "sources": [
+          "project",
+          "tools",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Artifact references and relationship provenance were inspected; no adjudicated support or citation score was collected.",
+        "sources": [
+          "memory",
+          "tools",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No runtime timings were collected.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No token, provider billing, or storage measurements were collected.",
+        "sources": [
+          "how",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review covers source at the verified current master head. Engram, its tests, and benchmarks were not run.",
+        "sources": [
+          "repo",
+          "head",
+          "tree"
+        ]
+      },
+      {
+        "text": "The project documentation reports a small LongMemEval slice at version 0.4.0, but it does not establish current quality or transfer to other workloads; this review did not independently reproduce it.",
+        "sources": [
+          "how"
+        ]
+      },
+      {
+        "text": "Single-user local deployment has no authentication. Global records cross projects by design; secure erasure, multi-user isolation, adversarial hook input, retrieval quality, current latency/cost, and sync behavior under real conflicts remain unverified here.",
+        "sources": [
+          "readme",
+          "tools",
+          "setup",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Engram runtime, tests, or benchmarks were run. Project metric definitions and fixtures are not Engram results."
+    }
+  }
+}

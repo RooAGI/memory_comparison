@@ -1,0 +1,289 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "edda",
+    "name": "Edda",
+    "ordinal": 208,
+    "repository": "https://github.com/fagemx/edda",
+    "listed_repository": "https://github.com/fagemx/edda",
+    "repository_status": "explicit",
+    "branch": "main",
+    "revision": "46bf30ec215546912a1833b3c3b808e53f9e0025",
+    "reviewed_at": "2026-11-25T12:01:54Z",
+    "review_timezone": "UTC (2026-11-25 04:01:54 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Edda is a local-first coding-agent memory and coordination system built around a SQLite event ledger with hash-chained records and separate coordination, blob, and search stores. The source review covers event writes, decision supersession, retrieval, scope, provenance, and operator inspection surfaces; no Edda runtime, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 208,
+      "name": "Edda",
+      "slug": "edda",
+      "listed_repository": "https://github.com/fagemx/edda",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/edda.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": null,
+      "checked_urls": [
+        "https://github.com/fagemx/edda/blob/46bf30ec215546912a1833b3c3b808e53f9e0025/README.md",
+        "https://github.com/fagemx/edda/blob/46bf30ec215546912a1833b3c3b808e53f9e0025/CONTRIBUTING.md",
+        "https://edda.sh/"
+      ],
+      "note": "No contact email was published in the official README or CONTRIBUTING guide. The official website URL was checked but the managed browser returned ERR_CONNECTION_CLOSED. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/fagemx/edda/blob/46bf30ec215546912a1833b3c3b808e53f9e0025/README.md",
+      "https://github.com/fagemx/edda/blob/46bf30ec215546912a1833b3c3b808e53f9e0025/CONTRIBUTING.md",
+      "https://edda.sh/"
+    ],
+    "contact_email_note": "The official pinned README and CONTRIBUTING guide contain no published contact email. The official website https://edda.sh/ could not be read because the managed browser returned ERR_CONNECTION_CLOSED. No commit/profile metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated memory-system roster",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 208 identity, slug, explicit repository locator and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster entry (identity/locator attribution only)",
+        "path": "content/systems/edda.md",
+        "symbol": "Curated roster identity/locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/edda.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository metadata",
+        "path": "GitHub repository API",
+        "symbol": "Public canonical non-fork repository fagemx/edda; default branch main",
+        "url": "https://api.github.com/repos/fagemx/edda"
+      },
+      {
+        "id": "head",
+        "label": "Official current main head",
+        "path": "commits/main API",
+        "symbol": "Current main head 46bf30ec215546912a1833b3c3b808e53f9e0025; matched git ls-remote and shallow checkout",
+        "url": "https://api.github.com/repos/fagemx/edda/commits/main"
+      },
+      {
+        "id": "commit",
+        "label": "Verified reviewed full-SHA commit",
+        "path": "commit",
+        "symbol": "Official commit page for 46bf30ec215546912a1833b3c3b808e53f9e0025",
+        "url": "https://github.com/fagemx/edda/commit/46bf30ec215546912a1833b3c3b808e53f9e0025"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Product layers, local-first ledger, coordination stores, integrations and maturity notes",
+        "url": "https://github.com/fagemx/edda/blob/46bf30ec215546912a1833b3c3b808e53f9e0025/README.md"
+      },
+      {
+        "id": "spec",
+        "label": "Ledger event specification",
+        "path": "docs/reference/ledger-event-spec.md",
+        "symbol": "Envelope, references, canonical hash, chain verification, unsigned format and persistence boundaries",
+        "url": "https://github.com/fagemx/edda/blob/46bf30ec215546912a1833b3c3b808e53f9e0025/docs/reference/ledger-event-spec.md"
+      },
+      {
+        "id": "schema",
+        "label": "SQLite ledger schema",
+        "path": "crates/edda-ledger/src/sqlite_store/schema.rs",
+        "symbol": "SQLite WAL events table, indexes and materialized projection schema",
+        "url": "https://github.com/fagemx/edda/blob/46bf30ec215546912a1833b3c3b808e53f9e0025/crates/edda-ledger/src/sqlite_store/schema.rs"
+      },
+      {
+        "id": "events",
+        "label": "Event append and verification implementation",
+        "path": "crates/edda-ledger/src/sqlite_store/events.rs",
+        "symbol": "Transactional append validation, decision projection, and full chain/hash verification",
+        "url": "https://github.com/fagemx/edda/blob/46bf30ec215546912a1833b3c3b808e53f9e0025/crates/edda-ledger/src/sqlite_store/events.rs"
+      },
+      {
+        "id": "decision",
+        "label": "Decision bridge",
+        "path": "crates/edda-cli/src/cmd_bridge/decide.rs",
+        "symbol": "Decision write path, secret redaction, actor role and supersession references",
+        "url": "https://github.com/fagemx/edda/blob/46bf30ec215546912a1833b3c3b808e53f9e0025/crates/edda-cli/src/cmd_bridge/decide.rs"
+      },
+      {
+        "id": "ratify",
+        "label": "Ratification command",
+        "path": "crates/edda-cli/src/cmd_ratify/mod.rs",
+        "symbol": "Separate append-only ratification event and caller-supplied ratifier identity",
+        "url": "https://github.com/fagemx/edda/blob/46bf30ec215546912a1833b3c3b808e53f9e0025/crates/edda-cli/src/cmd_ratify/mod.rs"
+      },
+      {
+        "id": "ask",
+        "label": "Decision retrieval implementation",
+        "path": "crates/edda-ask/src/lib.rs",
+        "symbol": "Exact/domain/keyword and semantic/lexical decision queries with related evidence surfaces",
+        "url": "https://github.com/fagemx/edda/blob/46bf30ec215546912a1833b3c3b808e53f9e0025/crates/edda-ask/src/lib.rs"
+      },
+      {
+        "id": "fts",
+        "label": "Tantivy full-text search",
+        "path": "crates/edda-search-fts/src/search.rs",
+        "symbol": "Full-text query, fuzzy/exact/regex behavior and project/session/type filters",
+        "url": "https://github.com/fagemx/edda/blob/46bf30ec215546912a1833b3c3b808e53f9e0025/crates/edda-search-fts/src/search.rs"
+      },
+      {
+        "id": "searchcmd",
+        "label": "Search command and index lifecycle",
+        "path": "crates/edda-cli/src/cmd_search.rs",
+        "symbol": "Index build/rebuild, query limits, project filtering and operator messages",
+        "url": "https://github.com/fagemx/edda/blob/46bf30ec215546912a1833b3c3b808e53f9e0025/crates/edda-cli/src/cmd_search.rs"
+      },
+      {
+        "id": "paths",
+        "label": "Workspace path handling",
+        "path": "crates/edda-ledger/src/paths.rs",
+        "symbol": "Repository-root .edda workspace layout and validated branch paths",
+        "url": "https://github.com/fagemx/edda/blob/46bf30ec215546912a1833b3c3b808e53f9e0025/crates/edda-ledger/src/paths.rs"
+      },
+      {
+        "id": "tombstone",
+        "label": "Blob tombstone records",
+        "path": "crates/edda-ledger/src/tombstone.rs",
+        "symbol": "Append-only JSONL blob deletion records with reason/class/pin/size metadata",
+        "url": "https://github.com/fagemx/edda/blob/46bf30ec215546912a1833b3c3b808e53f9e0025/crates/edda-ledger/src/tombstone.rs"
+      },
+      {
+        "id": "blobcmd",
+        "label": "Blob management commands",
+        "path": "crates/edda-cli/src/cmd_blob.rs",
+        "symbol": "Blob classify, pin, stats and tombstone inspection commands",
+        "url": "https://github.com/fagemx/edda/blob/46bf30ec215546912a1833b3c3b808e53f9e0025/crates/edda-cli/src/cmd_blob.rs"
+      },
+      {
+        "id": "authority",
+        "label": "Control authority threat model",
+        "path": "crates/edda-ledger/src/control_authority.rs",
+        "symbol": "Specific controlled-operation authority requires actor/session, RBAC and local sealed capability",
+        "url": "https://github.com/fagemx/edda/blob/46bf30ec215546912a1833b3c3b808e53f9e0025/crates/edda-ledger/src/control_authority.rs"
+      },
+      {
+        "id": "types",
+        "label": "Core event types",
+        "path": "crates/edda-core/src/types.rs",
+        "symbol": "Event envelope and taxonomy types referenced by the assessment",
+        "url": "https://github.com/fagemx/edda/blob/46bf30ec215546912a1833b3c3b808e53f9e0025/crates/edda-core/src/types.rs"
+      },
+      {
+        "id": "contributing",
+        "label": "Official contribution guide",
+        "path": "CONTRIBUTING.md",
+        "symbol": "Official project guidance checked for a published contact email",
+        "url": "https://github.com/fagemx/edda/blob/46bf30ec215546912a1833b3c3b808e53f9e0025/CONTRIBUTING.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Common benchmark metric domains",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Evaluation workload specification only; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "No Edda result recorded from this review",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Edda as a local-first system for cross-session agent memory and coordination. It organizes capabilities as memory, fleet coordination, and an evolving control layer; the durable ledger is only one of several local persistence planes.",
+        "sources": ["readme", "spec", "paths", "types"]
+      },
+      {
+        "text": "Ordinal 208 in the curated roster is Edda, slug edda, with explicit listed repository https://github.com/fagemx/edda. The pinned Atlas entry is retained only as identity/locator attribution. GitHub metadata identifies the public non-fork repository and default branch main; GitHub main metadata, read-only git ls-remote, and the shallow checkout agree on the reviewed full head.",
+        "sources": ["catalog", "atlas", "repo", "head", "commit"]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The SQLite ledger at .edda/ledger.db stores append-only event rows with timestamps, logical branches, payloads, references, taxonomy, parent hashes and SHA-256 event hashes. Appends validate the current global tail and event integrity in a transaction; branch labels do not create independent hash chains.",
+        "sources": ["readme", "schema", "events", "spec"]
+      },
+      {
+        "text": "Decision notes, session digests and tasks use the event envelope, while live claims, session heartbeats, conduct state, blobs, materialized projections and Tantivy indexes occupy separate stores. The event references include blob/event/provenance relations; SQLite and derived human/search views have different persistence roles.",
+        "sources": ["readme", "spec", "paths", "schema"]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Decision bridge writes redact recognized secret patterns, append a structured note/decision event and preserve prior decisions in the ledger. A later same-key decision on the same branch deactivates the previous decision projection and may reference it as superseded; it does not overwrite the event history.",
+        "sources": ["decision", "events"]
+      },
+      {
+        "text": "Ratification appends a separate decision_ratify event, but the README describes ordinary ratifier identity as a workflow convention rather than cryptographically enforced identity. The local control-authority subsystem has stronger actor/session/RBAC/capability checks for specific controlled operations, which does not cover all memory writes.",
+        "sources": ["ratify", "readme", "authority"]
+      },
+      {
+        "text": "Ledger events are append-only. Blob cleanup is a separate lifecycle that can remove content-addressed files and write tombstone records with hash, time, reason, previous class, pin state and size. The tombstone command lists these records; this review did not verify erasure from backups or derived copies.",
+        "sources": ["spec", "tombstone", "blobcmd"]
+      },
+      {
+        "text": "edda ask supports exact-key, domain, keyword and overview queries; keyword retrieval combines semantic candidates with lexical active-decision fallback and can add related notes, commits, tasks and transcript hits. Separate edda search uses a Tantivy index for events and transcript turns, with project/session/type filters and exact/fuzzy/regex modes. Indexes are separately built or rebuilt when absent or outdated.",
+        "sources": ["ask", "fts", "searchcmd"]
+      },
+      {
+        "text": "The default .edda workspace is derived from a repository root, and project identity/fleet operations can span repositories. Branch and project query filters are useful scoping controls, but branches share one global chain. Ordinary local ledger events are unsigned; file access and deployment configuration remain part of the isolation boundary.",
+        "sources": ["paths", "ask", "spec", "authority"]
+      },
+      {
+        "text": "Event references can record blobs, other events and provenance relations such as based_on, supersedes or reviews. Tasks and review/control flows add receipts and verdict evidence. Hash verification detects changes relative to the chain but the event spec says v1 is unsigned and does not establish author identity, truth, or existence of referenced objects.",
+        "sources": ["spec", "events"]
+      },
+      {
+        "text": "SQLite indexes, capped search results, Tantivy indexing, chain verification, logs, status and blob inspection provide efficiency and operator visibility mechanisms. They were inspected as source surfaces only; no latency, scale, reliability, token, cost, or storage outcomes were measured.",
+        "sources": ["schema", "fts", "searchcmd", "blobcmd", "metrics", "status"]
+      }
+    ],
+    "metrics": [
+      {"text": "Answerable retrieval and abstention — unmeasured. Exact/domain/keyword search and empty results exist; no answerability cases were scored.", "sources": ["ask", "fts", "metrics", "status"]},
+      {"text": "Correction accuracy and stale-value rate — unmeasured. Same-key decisions supersede earlier projections; no correction workload was run.", "sources": ["decision", "events", "metrics", "status"]},
+      {"text": "Deletion leakage — unmeasured. Blob cleanup and tombstones exist; no post-delete probes or backup checks were made.", "sources": ["tombstone", "blobcmd", "metrics", "status"]},
+      {"text": "Scope isolation — unmeasured. Workspace paths, project filters and control authority are source-visible; no isolation workload was run.", "sources": ["paths", "ask", "authority", "metrics", "status"]},
+      {"text": "Evidence support precision and citation coverage — unmeasured. Event references and receipts exist; no claim-level evidence cases were adjudicated.", "sources": ["spec", "metrics", "status"]},
+      {"text": "Retrieval latency and write-to-recall delay — unmeasured. Indexed lookup paths exist; no timed probes were collected.", "sources": ["schema", "fts", "metrics", "status"]},
+      {"text": "Tokens and cost — unmeasured. Optional LLM assistance and telemetry components exist; no runtime token or cost totals were collected.", "sources": ["readme", "metrics", "status"]},
+      {"text": "Storage efficiency — unmeasured. SQLite, blob and Tantivy stores are identifiable; no corpus-attributed storage measurement was made.", "sources": ["schema", "paths", "metrics", "status"]}
+    ],
+    "limits": [
+      {
+        "text": "This bounded review inspected the README, event specification, ledger schema and append/verification code, decision and ratification paths, ask and Tantivy retrieval, workspace paths, blob tombstones and the control-authority threat model. It did not inspect every bridge, migration, coordination protocol, deployment configuration or export/import path.",
+        "sources": ["readme", "spec", "schema", "events", "decision", "ratify", "ask", "fts", "paths", "tombstone", "authority"]
+      },
+      {
+        "text": "The unsigned hash chain establishes internal integrity checks, not identity or truth. The review did not measure runtime correctness, retrieval quality, deletion leakage, cross-project isolation, efficiency, cost, storage, or backup behavior; no system runtime, tests or benchmarks were run.",
+        "sources": ["spec", "metrics", "fixture", "status"]
+      },
+      {
+        "text": "The official contact check found no email in the pinned README or CONTRIBUTING guide. The official website could not be read because the browser returned ERR_CONNECTION_CLOSED; contact_email is therefore null with the checked URLs retained.",
+        "sources": ["readme", "contributing"]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Edda runtime, tests, or benchmark workload was executed. Source observations and upstream documentation are not measurements from this review.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

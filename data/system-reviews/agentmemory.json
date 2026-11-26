@@ -1,0 +1,349 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "agentmemory",
+    "name": "agentmemory",
+    "repository": "https://github.com/rohitg00/agentmemory",
+    "branch": "main",
+    "revision": "5c9e2e698bda138dcb7de50ee4dd3260ee4fb8eb",
+    "reviewed_at": "2026-11-24T18:55:42Z",
+    "review_timezone": "UTC (2026-11-24 10:55:42 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":"ghumare64@gmail.com","source_url":"https://github.com/rohitg00/agentmemory/blob/5c9e2e698bda138dcb7de50ee4dd3260ee4fb8eb/SECURITY.md","note":"Published as the maintainer fallback email in the official security policy."},
+    "summary": "A local-first persistence server and agent integrations that capture coding activity, store observations and memories, and retrieve scoped context through keyword search with optional vector and graph signals. This review records source observations, not measured quality or performance.",
+    "atlas_locator": {
+      "ordinal": 22,
+      "name": "agentmemory",
+      "slug": "agentmemory",
+      "listed_repository": "https://github.com/rohitg00/agentmemory",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agentmemory.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": "ghumare64@gmail.com",
+    "contact_email_source_url": "https://github.com/rohitg00/agentmemory/blob/5c9e2e698bda138dcb7de50ee4dd3260ee4fb8eb/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/rohitg00/agentmemory/blob/5c9e2e698bda138dcb7de50ee4dd3260ee4fb8eb/README.md",
+      "https://github.com/rohitg00/agentmemory/blob/5c9e2e698bda138dcb7de50ee4dd3260ee4fb8eb/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical public repository and default branch",
+        "path": "repository",
+        "symbol": "default branch main",
+        "url": "https://github.com/rohitg00/agentmemory"
+      },
+      {
+        "id": "head",
+        "label": "Current main branch head",
+        "path": "commit",
+        "symbol": "full SHA 5c9e2e698bda138dcb7de50ee4dd3260ee4fb8eb",
+        "url": "https://github.com/rohitg00/agentmemory/commit/5c9e2e698bda138dcb7de50ee4dd3260ee4fb8eb"
+      },
+      {
+        "id": "feed",
+        "label": "Official current main commits feed",
+        "path": "commits/main.atom",
+        "symbol": "head commit SHA and update time",
+        "url": "https://github.com/rohitg00/agentmemory/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Official project README",
+        "path": "README.md",
+        "url": "https://github.com/rohitg00/agentmemory/blob/5c9e2e698bda138dcb7de50ee4dd3260ee4fb8eb/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy; published contact email",
+        "path": "SECURITY.md",
+        "symbol": "encrypted email fallback",
+        "url": "https://github.com/rohitg00/agentmemory/blob/5c9e2e698bda138dcb7de50ee4dd3260ee4fb8eb/SECURITY.md"
+      },
+      {
+        "id": "types",
+        "label": "Observation, memory, session, origin and provenance types",
+        "path": "src/types.ts",
+        "url": "https://github.com/rohitg00/agentmemory/blob/5c9e2e698bda138dcb7de50ee4dd3260ee4fb8eb/src/types.ts"
+      },
+      {
+        "id": "schema",
+        "label": "State scopes and keys",
+        "path": "src/state/schema.ts",
+        "url": "https://github.com/rohitg00/agentmemory/blob/5c9e2e698bda138dcb7de50ee4dd3260ee4fb8eb/src/state/schema.ts"
+      },
+      {
+        "id": "kv",
+        "label": "KV state access layer",
+        "path": "src/state/kv.ts",
+        "url": "https://github.com/rohitg00/agentmemory/blob/5c9e2e698bda138dcb7de50ee4dd3260ee4fb8eb/src/state/kv.ts"
+      },
+      {
+        "id": "observe",
+        "label": "Observation capture and persistence",
+        "path": "src/functions/observe.ts",
+        "url": "https://github.com/rohitg00/agentmemory/blob/5c9e2e698bda138dcb7de50ee4dd3260ee4fb8eb/src/functions/observe.ts"
+      },
+      {
+        "id": "remember",
+        "label": "Memory write, supersession, indexing, forgetting",
+        "path": "src/functions/remember.ts",
+        "symbol": "mem::remember and mem::forget",
+        "url": "https://github.com/rohitg00/agentmemory/blob/5c9e2e698bda138dcb7de50ee4dd3260ee4fb8eb/src/functions/remember.ts"
+      },
+      {
+        "id": "search",
+        "label": "Keyword, vector and hybrid retrieval",
+        "path": "src/functions/search.ts",
+        "symbol": "rankMemoryIds and scoped retrieval",
+        "url": "https://github.com/rohitg00/agentmemory/blob/5c9e2e698bda138dcb7de50ee4dd3260ee4fb8eb/src/functions/search.ts"
+      },
+      {
+        "id": "governance",
+        "label": "Governance and destructive lifecycle operations",
+        "path": "src/functions/governance.ts",
+        "url": "https://github.com/rohitg00/agentmemory/blob/5c9e2e698bda138dcb7de50ee4dd3260ee4fb8eb/src/functions/governance.ts"
+      },
+      {
+        "id": "autoforget",
+        "label": "Automatic expiry and retention",
+        "path": "src/functions/auto-forget.ts",
+        "url": "https://github.com/rohitg00/agentmemory/blob/5c9e2e698bda138dcb7de50ee4dd3260ee4fb8eb/src/functions/auto-forget.ts"
+      },
+      {
+        "id": "audit",
+        "label": "Audit entry storage and listeners",
+        "path": "src/functions/audit.ts",
+        "url": "https://github.com/rohitg00/agentmemory/blob/5c9e2e698bda138dcb7de50ee4dd3260ee4fb8eb/src/functions/audit.ts"
+      },
+      {
+        "id": "metrics",
+        "label": "Project benchmark metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status record",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated ordinal, listed locator, and source attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 22",
+        "url": "../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The project README describes agentmemory as persistent shared memory for coding agents, exposed through a local server, CLI, viewer, hooks/plugins, MCP, and REST. This report treats those statements as documentation; operational behavior is based on selected source inspection.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The project documents working observations, episodic summaries, semantic memories, and procedural workflows. Its TypeScript model separates sessions, raw and compressed observations, and saved memories; records can carry project/agent scope, timestamps, origin channel, source references, compression state, and version history.",
+        "sources": [
+          "readme",
+          "types"
+        ]
+      },
+      {
+        "text": "State scopes and keys are centralized behind the KV layer. The README documents local persistent state and optional Redis deployment; this source review did not inspect deployment configuration deeply enough to compare durability guarantees across backends.",
+        "sources": [
+          "readme",
+          "schema",
+          "kv"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Capture: supported agent integrations submit hook events; the README describes durable inbox/spool capture, privacy filtering, observation storage and optional compression. Session-end paths can create summaries, while graph extraction and vector embeddings are configuration-dependent.",
+        "sources": [
+          "readme",
+          "observe"
+        ]
+      },
+      {
+        "text": "Remember/update: mem::remember validates content, normalizes scope, serializes writes, searches candidate memories, and supersedes a sufficiently similar latest memory only within its scope. It retains a version chain and reports near matches as hints; no measured correction accuracy follows from this implementation.",
+        "sources": [
+          "remember",
+          "types"
+        ]
+      },
+      {
+        "text": "Delete: the memory functions include a forget path that removes selected records and performs related index, access, facet and audit cleanup. The README also documents TTL expiry and retention eviction. The review did not establish full erasure from every backup, spool, exported copy or external backend.",
+        "sources": [
+          "remember",
+          "autoforget",
+          "governance",
+          "readme",
+          "audit"
+        ]
+      },
+      {
+        "text": "Retrieval: BM25 is the keyword path; configured embeddings add vector rank fusion, and smart search may use graph matches. Project, working-directory, agent and result-layer filters constrain candidates; retrieval expands its candidate window to a fixed maximum when filters reduce hits.",
+        "sources": [
+          "readme",
+          "search"
+        ]
+      },
+      {
+        "text": "Scope controls are represented by project and agent identifiers in records and filters in the recall path. The README documents shared or isolated agent modes. No cross-agent or cross-project leakage workload or deployment authorization review was performed.",
+        "sources": [
+          "readme",
+          "remember",
+          "search"
+        ]
+      },
+      {
+        "text": "Provenance includes immutable origin channels and source observation identifiers; lifecycle actions can create audit records. These mechanisms make some origins and mutations inspectable, but do not establish claim-level citation coverage or entailment support.",
+        "sources": [
+          "types",
+          "remember",
+          "audit"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency includes BM25 candidate narrowing for memory supersession, hybrid rank fusion, batched hydration, a bounded filtered candidate window, and optional bounded vector backfill. The README describes status and viewer indicators for health, capture recovery and indexing. No runtime measurement was collected.",
+        "sources": [
+          "remember",
+          "search",
+          "readme",
+          "head"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Recall paths are present in code and documentation; no adjudicated answerable-question or abstention workload was run.",
+        "sources": [
+          "search",
+          "readme",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Versioning and similarity-based supersession are visible in code; no post-correction current-value or stale-value probes were run.",
+        "sources": [
+          "remember",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Forget, expiry and cleanup paths exist, but no post-delete leak workload or all-backend erasure audit was run.",
+        "sources": [
+          "remember",
+          "autoforget",
+          "governance",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Project and agent filters are visible in code; no cross-project or cross-agent probes were run.",
+        "sources": [
+          "remember",
+          "search",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Origin and source-observation links are represented, but answer support and resolvable claim citation coverage were not adjudicated.",
+        "sources": [
+          "types",
+          "remember",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The source includes search and indexing paths, but no latency distribution or scheduled recall-delay measurement was collected.",
+        "sources": [
+          "search",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Optional embedding and compression paths are documented; no token, provider-cost, or corpus storage measurements were collected.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code/documentation",
+        "evidence": "Candidate narrowing, rank fusion, batching, bounded search expansion, health/status output and indexing/recovery state are source-visible design features. They are observations, not measurements.",
+        "sources": [
+          "remember",
+          "search",
+          "readme"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded read-only inspection of the official README, selected TypeScript types and memory/search/lifecycle functions at the verified SHA. The system, tests, and benchmarks were not run. Reliability, answer support, cross-tenant isolation, full deletion from backups/replicas, and runtime performance remain unknown.",
+        "sources": [
+          "readme",
+          "types",
+          "remember",
+          "search",
+          "governance"
+        ]
+      },
+      {
+        "text": "The curated catalog was used only for ordinal, listed locator, and attribution. Atlas descriptions, marks, prose, and layout were excluded as assessment evidence.",
+        "sources": [
+          "roster",
+          "repo"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is not_run. No system execution, tests, or benchmark workload was run. Project metric definitions and fixtures are protocol artifacts, not agentmemory results.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

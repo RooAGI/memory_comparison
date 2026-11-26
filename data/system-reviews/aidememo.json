@@ -1,0 +1,361 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "aidememo",
+    "name": "AideMemo",
+    "repository": "https://github.com/taeyun16/aidememo",
+    "branch": "main",
+    "revision": "60ad69a6dc679b628e27abc91591af1e2afb8be2",
+    "reviewed_at": "2026-11-24T19:51:37Z",
+    "review_timezone": "UTC (2026-11-24 11:51:37 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":"taeyun16@pm.me","source_url":"https://github.com/taeyun16/aidememo/blob/60ad69a6dc679b628e27abc91591af1e2afb8be2/SECURITY.md","note":"Published for vulnerability reports in the official security policy."},
+    "summary": "AideMemo is a local-first Rust memory library and agent integration toolkit. It stores explicit typed facts connected to entities and relations, supports temporal history and retrieval, and exposes its store through MCP, a CLI, SDKs, and language bindings. This is a source review; outcome quality and performance were not measured.",
+    "atlas_locator": {
+      "ordinal": 41,
+      "name": "AideMemo",
+      "slug": "aidememo",
+      "listed_repository": "https://github.com/taeyun16/aidememo",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/aidememo.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": "taeyun16@pm.me",
+    "contact_email_source_url": "https://github.com/taeyun16/aidememo/blob/60ad69a6dc679b628e27abc91591af1e2afb8be2/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/taeyun16/aidememo/blob/60ad69a6dc679b628e27abc91591af1e2afb8be2/README.md",
+      "https://github.com/taeyun16/aidememo/blob/60ad69a6dc679b628e27abc91591af1e2afb8be2/SUPPORT.md",
+      "https://github.com/taeyun16/aidememo/blob/60ad69a6dc679b628e27abc91591af1e2afb8be2/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository page and default branch",
+        "path": "repository",
+        "symbol": "canonical repository taeyun16/aidememo; default branch main",
+        "url": "https://github.com/taeyun16/aidememo"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "full head 60ad69a6dc679b628e27abc91591af1e2afb8be2; feed updated 2026-11-23T02:10:45Z",
+        "url": "https://github.com/taeyun16/aidememo/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed full upstream commit",
+        "path": "commit",
+        "symbol": "60ad69a6dc679b628e27abc91591af1e2afb8be2",
+        "url": "https://github.com/taeyun16/aidememo/commit/60ad69a6dc679b628e27abc91591af1e2afb8be2.patch"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "architecture, interface, storage, integrations, and documented retrieval behavior",
+        "url": "https://github.com/taeyun16/aidememo/blob/60ad69a6dc679b628e27abc91591af1e2afb8be2/README.md"
+      },
+      {
+        "id": "types",
+        "label": "Core record and input types",
+        "path": "crates/aidememo-core/src/types.rs",
+        "symbol": "FactRecord, EntityRecord, RelationRecord, FactInput, FactUpdate; timestamps and provenance fields",
+        "url": "https://github.com/taeyun16/aidememo/blob/60ad69a6dc679b628e27abc91591af1e2afb8be2/crates/aidememo-core/src/types.rs"
+      },
+      {
+        "id": "ingest",
+        "label": "Markdown wiki ingestion",
+        "path": "crates/aidememo-core/src/ingest.rs",
+        "symbol": "ingest_wiki, frontmatter, wikilinks, headings, write path; incremental flag currently full ingest",
+        "url": "https://github.com/taeyun16/aidememo/blob/60ad69a6dc679b628e27abc91591af1e2afb8be2/crates/aidememo-core/src/ingest.rs"
+      },
+      {
+        "id": "relations",
+        "label": "Typed relation extraction",
+        "path": "crates/aidememo-core/src/relations.rs",
+        "symbol": "pattern-based wikilink relation extraction, bounded gap, literal evidence",
+        "url": "https://github.com/taeyun16/aidememo/blob/60ad69a6dc679b628e27abc91591af1e2afb8be2/crates/aidememo-core/src/relations.rs"
+      },
+      {
+        "id": "search",
+        "label": "Core search implementation",
+        "path": "crates/aidememo-core/src/search.rs",
+        "symbol": "cached BM25 index; confidence, entity, namespace, temporal and current-only filters",
+        "url": "https://github.com/taeyun16/aidememo/blob/60ad69a6dc679b628e27abc91591af1e2afb8be2/crates/aidememo-core/src/search.rs"
+      },
+      {
+        "id": "store",
+        "label": "Embedded redb store implementation",
+        "path": "crates/aidememo-core/src/store.rs",
+        "symbol": "schema tables, exact-content hash index and configured transaction durability",
+        "url": "https://github.com/taeyun16/aidememo/blob/60ad69a6dc679b628e27abc91591af1e2afb8be2/crates/aidememo-core/src/store.rs"
+      },
+      {
+        "id": "graph",
+        "label": "Graph traversal and path operations",
+        "path": "crates/aidememo-core/src/graph.rs",
+        "symbol": "namespace-filtered traversal and path search",
+        "url": "https://github.com/taeyun16/aidememo/blob/60ad69a6dc679b628e27abc91591af1e2afb8be2/crates/aidememo-core/src/graph.rs"
+      },
+      {
+        "id": "mcp",
+        "label": "MCP tool interfaces",
+        "path": "crates/aidememo-cli/src/cmd/mcp_tools.rs",
+        "symbol": "MCP read/write tools and source_id inputs",
+        "url": "https://github.com/taeyun16/aidememo/blob/60ad69a6dc679b628e27abc91591af1e2afb8be2/crates/aidememo-cli/src/cmd/mcp_tools.rs"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy; published contact email",
+        "path": "SECURITY.md",
+        "symbol": "published vulnerability-report email taeyun16@pm.me",
+        "url": "https://github.com/taeyun16/aidememo/blob/60ad69a6dc679b628e27abc91591af1e2afb8be2/SECURITY.md"
+      },
+      {
+        "id": "support",
+        "label": "Official support instructions; contact check",
+        "path": "SUPPORT.md",
+        "symbol": "directs support requests to GitHub Discussions and issues; no email published",
+        "url": "https://github.com/taeyun16/aidememo/blob/60ad69a6dc679b628e27abc91591af1e2afb8be2/SUPPORT.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog identity and attribution only",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 41",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Roster attribution source (identity only)",
+        "path": "content/systems/aidememo.md",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/aidememo.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes AideMemo as a portable working-memory library and SDK for coding agents and orchestrators, rather than a hosted memory service or complete agent runtime. It presents one Rust core with CLI, MCP, Python agent SDK, and native language bindings.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README describes a local-first default path with an embedded store. The Rust core exposes a storage-backend abstraction; the inspected redb implementation maintains entity, relation, fact, and metadata tables, with secondary indexes for entity names, fact-by-entity lookup, and source-aware exact-content hashes. Current README identifies SQLite as the default backend and redb as an optional Cargo feature.",
+        "sources": [
+          "readme",
+          "store"
+        ]
+      },
+      {
+        "text": "The shared types model facts with typed content, entity links, tags, optional source and confidence, created/updated times, optional observed time, access information, and supersession state. Entities have canonical ULID identifiers with names and aliases as lookup indexes. Relations are typed directed edges between entities and can include namespace, weight, and evidence. This combines a typed fact store with a lightweight knowledge graph and temporal fields.",
+        "sources": [
+          "types",
+          "relations"
+        ]
+      },
+      {
+        "text": "The Markdown wiki ingest path walks .md files, reads frontmatter, extracts wikilinks and heading-based facts, and persists entities, relations, and facts. Typed relation extraction is deterministic phrase matching between adjacent wikilinks; retained relation evidence is the source line and literal phrase. The ingest function’s incremental argument currently performs a full ingest.",
+        "sources": [
+          "ingest",
+          "relations"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "**Write.** The README documents explicit typed fact writes through MCP, CLI, SDK, and bindings, plus Markdown wiki ingestion. The core input types allow content, fact type, entity IDs, tags, source namespace, confidence, and observation time. The README describes exact-content deduplication within a source namespace; optional privacy filtering and model-assisted extraction or embedding are separate opt-ins.",
+        "sources": [
+          "readme",
+          "types",
+          "store",
+          "ingest"
+        ]
+      },
+      {
+        "text": "**Update and correction.** The documented CLI exposes fact supersession and editing. Fact records carry updated and observed timestamps and a superseded-at marker, while search can restrict to current facts or apply an as-of time. These fields support temporal corrections; this review did not establish that every caller uses those filters correctly.",
+        "sources": [
+          "readme",
+          "types",
+          "search"
+        ]
+      },
+      {
+        "text": "**Delete.** The README lists a fact-delete command. The inspected evidence does not establish physical erasure from backups, cold/archive files, replicas, prior exports, or derived indexes after deletion; deletion leakage was not tested.",
+        "sources": [
+          "readme",
+          "store"
+        ]
+      },
+      {
+        "text": "**Retrieval.** The README describes BM25-first retrieval with optional semantic/hybrid paths. The inspected search engine reuses a caller-owned BM25 index cache and rebuilds it when marked dirty; it applies confidence, entity, source namespace, time-window, as-of, and current-only filters before ordering results. Graph traversal and path operations expose graph context, with source-aware variants.",
+        "sources": [
+          "readme",
+          "search",
+          "graph"
+        ]
+      },
+      {
+        "text": "**Scope isolation.** Local APIs and MCP tools accept a source_id namespace. The README says an installed MCP default source is a convenience, not authentication: callers may override it. For shared HTTP MCP, the README recommends bound bearer tokens that inject source and actor identities and reject overrides. Entity names/types are shared across source partitions, so the documentation recommends separate stores for mutually untrusted tenants. This is a caller/deployment boundary, not an automatic guarantee for every local interface.",
+        "sources": [
+          "readme",
+          "mcp",
+          "graph"
+        ]
+      },
+      {
+        "text": "**Provenance and evidence.** Facts can retain source, source confidence, observation and record timestamps, entity links, and session context; graph relations may retain evidence text. Actor and source identifiers can be set at integration boundaries. These fields provide traceability, but do not prove that a retrieved fact is correct or that evidence supports a generated claim.",
+        "sources": [
+          "types",
+          "relations",
+          "readme"
+        ]
+      },
+      {
+        "text": "**Source-visible efficiency and observability.** The BM25 engine caches its inverted index and rebuilds only when dirty; search over-fetches a bounded candidate set before applying filters. The README presents daemon mode as a way to keep the store and optional models warm and documents stats/doctor/bench commands. Source instrumentation includes debug tracing around store opening. These are implementation and documentation observations, not measured performance results.",
+        "sources": [
+          "search",
+          "store",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "BM25 and optional semantic retrieval are available in source and documentation; answer accuracy and calibrated abstention were not measured.",
+        "sources": [
+          "readme",
+          "search",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Supersession, observed time, as-of, and current-only mechanisms are visible in source; no correction or stale-value workload was run.",
+        "sources": [
+          "types",
+          "search",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "A fact-delete command is documented; deletion completeness and post-delete leakage were not verified.",
+        "sources": [
+          "readme",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Source filtering and documented token-bound HTTP MCP controls are present; no cross-source probes were run.",
+        "sources": [
+          "readme",
+          "mcp",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Facts and relations can store provenance/evidence fields; support precision and citation coverage were not adjudicated.",
+        "sources": [
+          "types",
+          "relations",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Index cache and daemon options are source-visible; no latency distribution or delayed-recall measurements were collected.",
+        "sources": [
+          "search",
+          "readme",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The default path is documented as local and no external LLM API is required; no token, cost, or storage efficiency measurements were collected.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code and documentation",
+        "evidence": "The BM25 cache, bounded candidate over-fetch, store-open tracing, stats/doctor commands, and optional warm daemon are visible. This does not establish runtime throughput or resource use.",
+        "sources": [
+          "search",
+          "store",
+          "readme"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded review inspected the official README and selected core types, ingest, relation, search, storage, graph, and MCP source at the verified full SHA. The system, tests, and benchmark workloads were not run. Answer quality, physical deletion completeness, deployed authorization, and performance remain unverified.",
+        "sources": [
+          "readme",
+          "types",
+          "search",
+          "mcp"
+        ]
+      },
+      {
+        "text": "The listed repository has local and shared-service paths with different scope guarantees. This review did not inspect every integration, storage backend, archive/replica path, or operation. Unknown means not established by this inspection, not necessarily absent.",
+        "sources": [
+          "readme",
+          "store",
+          "mcp"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No AideMemo system execution, test suite, or benchmark workload was run. Project metric definitions, fixture, and status record describe the separate protocol; they are not AideMemo results.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,315 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 115,
+    "slug": "chitta-field",
+    "name": "Chitta Field",
+    "repository": "https://github.com/genomewalker/chitta-field",
+    "listed_repository": "https://github.com/genomewalker/chitta-field",
+    "branch": "main",
+    "revision": "5e8b30ed755aa62409ce413385f58edd04039131",
+    "reviewed_at": "2026-11-25T07:49:10Z",
+    "review_timezone": "UTC (2026-11-24 23:49:10 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Chitta Field is a local Rust memory library and C FFI with an append-only log, snapshots, and in-memory retrieval indexes. This pinned source review records implementation structure and documented limitations, not runtime or benchmark results.",
+    "atlas_locator": {
+      "ordinal": 115,
+      "name": "Chitta Field",
+      "slug": "chitta-field",
+      "listed_repository": "https://github.com/genomewalker/chitta-field",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/chitta-field.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/genomewalker/chitta-field/blob/5e8b30ed755aa62409ce413385f58edd04039131/README.md",
+      "note": "No contact email is published in the official pinned README."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/genomewalker/chitta-field/blob/5e8b30ed755aa62409ce413385f58edd04039131/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/genomewalker/chitta-field/blob/5e8b30ed755aa62409ce413385f58edd04039131/README.md"
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[114], ordinal 115; name, slug, listed repository locator, repository_status explicit, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/chitta-field.md",
+        "symbol": "Catalog source attribution at revision 19199a4fc249e89c0793be06f0b166b358089ba0; identity and locator context only",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/chitta-field.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository",
+        "symbol": "Public repository and displayed default branch main",
+        "url": "https://github.com/genomewalker/chitta-field"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Current main branch head verification",
+        "url": "https://github.com/genomewalker/chitta-field/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream head",
+        "path": "commit",
+        "symbol": "Full current main head SHA 5e8b30ed755aa62409ce413385f58edd04039131; also resolved by read-only shallow checkout and git ls-remote",
+        "url": "https://github.com/genomewalker/chitta-field/commit/5e8b30ed755aa62409ce413385f58edd04039131"
+      },
+      {
+        "id": "readme",
+        "label": "Official project README",
+        "path": "README.md",
+        "symbol": "Overview, architecture, memory model, APIs, and published performance descriptions; checked for contact email",
+        "url": "https://github.com/genomewalker/chitta-field/blob/5e8b30ed755aa62409ce413385f58edd04039131/README.md"
+      },
+      {
+        "id": "payload",
+        "label": "Memory payload data model",
+        "path": "src/payload.rs",
+        "symbol": "MemoryPayload fields and provenance initialization",
+        "url": "https://github.com/genomewalker/chitta-field/blob/5e8b30ed755aa62409ce413385f58edd04039131/src/payload.rs"
+      },
+      {
+        "id": "state",
+        "label": "Mutable memory state",
+        "path": "src/state.rs",
+        "symbol": "Deletion, confidence, decay, lifecycle, epistemic status, and retrieval history fields",
+        "url": "https://github.com/genomewalker/chitta-field/blob/5e8b30ed755aa62409ce413385f58edd04039131/src/state.rs"
+      },
+      {
+        "id": "ops",
+        "label": "Write and lifecycle operation schemas",
+        "path": "src/ops.rs",
+        "symbol": "PutPayloadOp, StateDeltaOp, and DeleteMemoryOp",
+        "url": "https://github.com/genomewalker/chitta-field/blob/5e8b30ed755aa62409ce413385f58edd04039131/src/ops.rs"
+      },
+      {
+        "id": "store",
+        "label": "Memory write, update, and forget implementation",
+        "path": "src/store.rs",
+        "symbol": "ChittaField::put_memory, update_state, and forget",
+        "url": "https://github.com/genomewalker/chitta-field/blob/5e8b30ed755aa62409ce413385f58edd04039131/src/store.rs"
+      },
+      {
+        "id": "recall",
+        "label": "Retrieval implementation",
+        "path": "src/store/recall.rs",
+        "symbol": "recall_semantic, recall_temporal, recall_keyword, recall_hdc and realm filters",
+        "url": "https://github.com/genomewalker/chitta-field/blob/5e8b30ed755aa62409ce413385f58edd04039131/src/store/recall.rs"
+      },
+      {
+        "id": "ffi",
+        "label": "C FFI retrieval APIs",
+        "path": "src/ffi/recall.rs",
+        "symbol": "cf_recall_semantic and cf_recall_with_fallback",
+        "url": "https://github.com/genomewalker/chitta-field/blob/5e8b30ed755aa62409ce413385f58edd04039131/src/ffi/recall.rs"
+      },
+      {
+        "id": "log",
+        "label": "Write-ahead log and recovery",
+        "path": "src/log.rs",
+        "symbol": "Segment headers, CRC and hash chaining, replay and recovery diagnostics",
+        "url": "https://github.com/genomewalker/chitta-field/blob/5e8b30ed755aa62409ce413385f58edd04039131/src/log.rs"
+      },
+      {
+        "id": "snapshot",
+        "label": "Snapshot and manifest persistence",
+        "path": "src/snapshot.rs",
+        "symbol": "Versioned full snapshot and sidecar serialization",
+        "url": "https://github.com/genomewalker/chitta-field/blob/5e8b30ed755aa62409ce413385f58edd04039131/src/snapshot.rs"
+      },
+      {
+        "id": "theory",
+        "label": "Upstream consistency design notes",
+        "path": "THEORY.md",
+        "symbol": "Documented non-commutative operations and concurrent manifest conflict risks",
+        "url": "https://github.com/genomewalker/chitta-field/blob/5e8b30ed755aa62409ce413385f58edd04039131/THEORY.md"
+      },
+      {
+        "id": "locking",
+        "label": "Upstream operational locking notes",
+        "path": "docs/LOCKING.md",
+        "symbol": "Documented lock ordering, observed contention and slow filesystem calls",
+        "url": "https://github.com/genomewalker/chitta-field/blob/5e8b30ed755aa62409ce413385f58edd04039131/docs/LOCKING.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project initial benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The README describes Chitta Field as a Rust backing-store library for the cc-soul daemon with a C FFI. This review covers the library source and documentation, not a live service or deployed authorization layer.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README presents an append-only operation log, in-memory retrieval indexes, and periodic binary snapshots. The payload and mutable state are separate records: payloads hold content, realm, embedding and source fields, while state holds deletion, strength, confidence, decay and lifecycle fields.",
+        "sources": [
+          "readme",
+          "payload",
+          "state"
+        ]
+      },
+      {
+        "text": "The log source defines per-writer segment formats, CRC-protected records, a SHA-256 previous-record chain, and a vector-space stamp in V3 headers. Snapshot code stores versioned state and sidecars; these persistence mechanisms were inspected but not exercised.",
+        "sources": [
+          "log",
+          "snapshot"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "put_memory validates embedding dimensions, computes a content identity hash, checks exact duplicates and may reinforce a near-duplicate within the same realm when embeddings are available. New payloads are logged before in-memory insertion. source_session and source_tool are optional recorded fields.",
+        "sources": [
+          "store",
+          "ops"
+        ]
+      },
+      {
+        "text": "The inspected update_state method logs and applies state deltas for confidence, strength, decay, pinning, and access. This review did not trace all content-replacement operations end to end.",
+        "sources": [
+          "store",
+          "ops"
+        ]
+      },
+      {
+        "text": "forget is a soft delete: it synchronizes a delete operation, marks state deleted, removes active index entries, and invalidates sourced triplets. The source path does not show physical erasure from every prior WAL segment, snapshot, replica, or backup.",
+        "sources": [
+          "store",
+          "ops"
+        ]
+      },
+      {
+        "text": "Semantic recall queries the ANN index with an optional realm filter and scores hits using memory state. Separate keyword, temporal, HDC, and other retrieval lanes exist; the C FFI also exposes a hybrid fallback endpoint. No retrieval quality was measured.",
+        "sources": [
+          "recall",
+          "ffi",
+          "readme"
+        ]
+      }
+    ],
+    "scope": [
+      {
+        "text": "Memory payloads carry a realm and retrieval APIs can filter by it; an absent realm is unscoped. The inspected library calls do not establish authenticated tenant isolation or authorization enforcement, and no cross-scope probes were run.",
+        "sources": [
+          "payload",
+          "recall",
+          "readme"
+        ]
+      }
+    ],
+    "provenance": [
+      {
+        "text": "Payloads can retain source session and tool, and the payload type includes a provenance field. In the inspected PutPayloadOp conversion, provenance is initialized to the literal human, independently of source_session/source_tool. Ordinary recall claim-level citation behavior and provenance completeness across all write paths remain unknown.",
+        "sources": [
+          "payload",
+          "ops",
+          "readme"
+        ]
+      }
+    ],
+    "efficiency": [
+      {
+        "text": "The source includes bounded candidate retrieval and multiple index structures; the README describes sub-millisecond cortical recall and HNSW/LSH/product-quantized retrieval. These remain documentation and implementation claims, not measurements in this review.",
+        "sources": [
+          "readme",
+          "recall"
+        ]
+      },
+      {
+        "text": "WAL recovery emits diagnostic logs, and the locking notes describe lock contention and slow filesystem calls. No system execution, test, benchmark, profile, or telemetry session was run.",
+        "sources": [
+          "log",
+          "locking"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "source_evidence": "Multiple recall APIs and score fields exist.",
+        "status": "unmeasured"
+      },
+      {
+        "domain": "Correction and stale values",
+        "source_evidence": "State/status and update operations exist; end-to-end correction quality was not checked.",
+        "status": "unmeasured"
+      },
+      {
+        "domain": "Deletion leakage",
+        "source_evidence": "Soft-delete path marks state and removes active indexes.",
+        "status": "unmeasured"
+      },
+      {
+        "domain": "Scope isolation",
+        "source_evidence": "Optional realm filters are visible in retrieval APIs.",
+        "status": "unmeasured"
+      },
+      {
+        "domain": "Evidence support and citations",
+        "source_evidence": "Session/tool lineage fields exist; claim-level citation behavior was not established.",
+        "status": "unmeasured"
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "source_evidence": "README describes performance goals; no timing samples were collected.",
+        "status": "unmeasured"
+      },
+      {
+        "domain": "Tokens and cost",
+        "source_evidence": "No token or provider-cost observations were collected.",
+        "status": "unmeasured"
+      },
+      {
+        "domain": "Storage efficiency",
+        "source_evidence": "WAL, snapshots, and sidecars exist; no bytes-per-memory measurement was collected.",
+        "status": "unmeasured"
+      }
+    ],
+    "limits": [
+      "No system commands, tests, benchmarks, or runtime workloads were run.",
+      "The review cannot establish retrieval accuracy, abstention calibration, correction behavior, deletion completeness, cross-tenant security, crash recovery correctness, multi-writer convergence, provider behavior, latency, token/cost usage, or storage efficiency.",
+      "THEORY.md documents non-commutative updates and snapshot manifest conflict risks in the multi-writer model; README-level NFS-safety claims are not runtime guarantees established by this review."
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Chitta Field system command, test, or workload was executed. Project metrics, fixture, and initial execution-status record are protocol references and contain no measured Chitta Field result.",
+      "sources": [
+        "metrics",
+        "fixture",
+        "status"
+      ]
+    }
+  }
+}

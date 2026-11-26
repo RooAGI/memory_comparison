@@ -1,0 +1,348 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "crystalline",
+    "name": "Crystalline",
+    "ordinal": 172,
+    "repository": "https://github.com/jordiboehme/crystalline",
+    "listed_repository": "https://github.com/jordiboehme/crystalline",
+    "branch": "main",
+    "revision": "a3114b5965f67380d590090e7aecffb158c3ba8a",
+    "reviewed_at": "2026-11-25T10:11:12Z",
+    "review_timezone": "UTC (2026-11-25 02:11:12 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Crystalline is a local-first, single-binary Rust memory system that stores knowledge as Markdown Engrams in Domains and builds a disposable search index. Its source documents text and semantic search, graph relations, temporal metadata, agent and human editing, and optional GitHub-backed collaboration. This is a source review pinned to the current main head, not a runtime or benchmark assessment.",
+    "atlas_locator": {
+      "ordinal": 172,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/crystalline.md",
+      "listed_repository": "https://github.com/jordiboehme/crystalline"
+    },
+    "contact": {
+      "email": "jordi@boehme-lopez.de",
+      "source_url": "https://github.com/jordiboehme/crystalline/blob/a3114b5965f67380d590090e7aecffb158c3ba8a/README.md",
+      "checked_urls": [
+        "https://github.com/jordiboehme/crystalline/blob/a3114b5965f67380d590090e7aecffb158c3ba8a/README.md"
+      ],
+      "note": "Contact email is published in the official pinned README."
+    },
+    "contact_email": "jordi@boehme-lopez.de",
+    "contact_email_source_url": "https://github.com/jordiboehme/crystalline/blob/a3114b5965f67380d590090e7aecffb158c3ba8a/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/jordiboehme/crystalline/blob/a3114b5965f67380d590090e7aecffb158c3ba8a/README.md"
+    ],
+    "contact_email_note": "Published in the official pinned README; no profile metadata or third-party directories were used.",
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official GitHub repository metadata",
+        "path": "GitHub repository API",
+        "symbol": "Public non-fork canonical repository; default branch main",
+        "url": "https://api.github.com/repos/jordiboehme/crystalline"
+      },
+      {
+        "id": "history",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Current main head a3114b5965f67380d590090e7aecffb158c3ba8a; feed updated 2026-11-24T20:22:08Z",
+        "url": "https://github.com/jordiboehme/crystalline/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified full-SHA head commit",
+        "path": "commit",
+        "symbol": "Reviewed main head a3114b5965f67380d590090e7aecffb158c3ba8a",
+        "url": "https://github.com/jordiboehme/crystalline/commit/a3114b5965f67380d590090e7aecffb158c3ba8a"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Product documentation, Engram format, search and sharing claims, privacy and contact",
+        "url": "https://github.com/jordiboehme/crystalline/blob/a3114b5965f67380d590090e7aecffb158c3ba8a/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Architecture documentation",
+        "path": "docs/architecture.md",
+        "symbol": "Crates, daemon, source-of-truth and derived-index design",
+        "url": "https://github.com/jordiboehme/crystalline/blob/a3114b5965f67380d590090e7aecffb158c3ba8a/docs/architecture.md"
+      },
+      {
+        "id": "engram",
+        "label": "Engram model",
+        "path": "crates/core/src/engram.rs",
+        "symbol": "Markdown Engram data model, frontmatter, lifecycle and provenance fields",
+        "url": "https://github.com/jordiboehme/crystalline/blob/a3114b5965f67380d590090e7aecffb158c3ba8a/crates/core/src/engram.rs"
+      },
+      {
+        "id": "store",
+        "label": "Index storage contract",
+        "path": "crates/index/src/store.rs",
+        "symbol": "Backend-neutral index contract, validity/status and reference resolution",
+        "url": "https://github.com/jordiboehme/crystalline/blob/a3114b5965f67380d590090e7aecffb158c3ba8a/crates/index/src/store.rs"
+      },
+      {
+        "id": "search",
+        "label": "Engine search and scope",
+        "path": "crates/engine/src/engine/search.rs",
+        "symbol": "Domain visibility, actor draft view, query mode selection, filters and bounded result page",
+        "url": "https://github.com/jordiboehme/crystalline/blob/a3114b5965f67380d590090e7aecffb158c3ba8a/crates/engine/src/engine/search.rs"
+      },
+      {
+        "id": "turso_search",
+        "label": "Turso search implementation",
+        "path": "crates/index/src/turso/search.rs",
+        "symbol": "Lexical candidate prefilter/scoring, filters and graph retrieval implementation",
+        "url": "https://github.com/jordiboehme/crystalline/blob/a3114b5965f67380d590090e7aecffb158c3ba8a/crates/index/src/turso/search.rs"
+      },
+      {
+        "id": "edit",
+        "label": "Engram edit implementation",
+        "path": "crates/engine/src/engine/edit.rs",
+        "symbol": "File/virtual edits, reindexing and stale-edit conflict protection",
+        "url": "https://github.com/jordiboehme/crystalline/blob/a3114b5965f67380d590090e7aecffb158c3ba8a/crates/engine/src/engine/edit.rs"
+      },
+      {
+        "id": "delete",
+        "label": "Engram deletion implementation",
+        "path": "crates/engine/src/engine/delete.rs",
+        "symbol": "File and virtual deletion, review-mode tombstone behavior",
+        "url": "https://github.com/jordiboehme/crystalline/blob/a3114b5965f67380d590090e7aecffb158c3ba8a/crates/engine/src/engine/delete.rs"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Benchmark metric domains and definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Workload specification only; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Execution-status record; no Crystalline measurement from this review",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster entry (identity/locator attribution only)",
+        "path": "content/systems/crystalline.md",
+        "symbol": "Curated identity and listed locator only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/crystalline.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Crystalline as one Rust binary for agent memory, with agents connecting over MCP and a person-facing Fluid web UI/CLI. Knowledge is organized into Markdown Domains and Engrams, with optional GitHub sharing.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The explicit catalog locator is the public, non-fork repository jordiboehme/crystalline. GitHub repository metadata identifies main as the default branch, and the official main commit feed identifies a3114b5965f67380d590090e7aecffb158c3ba8a as its current full head.",
+        "sources": [
+          "repo",
+          "history",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The architecture separates a format/core crate, index, identity, engine, REST, service daemon, and CLI. One daemon process holds the database; other clients connect to it over a local socket or MCP/HTTP surfaces.",
+        "sources": [
+          "architecture",
+          "readme"
+        ]
+      },
+      {
+        "text": "An Engram is a Markdown file with YAML frontmatter and body content. The core model includes type, title, permalink, tags, free-form status, recorded and valid-time dates, generated write provenance, description, and structured observations, relations, links, and headings. Domains can also be virtual and database-backed.",
+        "sources": [
+          "engram",
+          "architecture",
+          "readme"
+        ]
+      },
+      {
+        "text": "For file domains, Markdown is the source of truth and the index is derived and disposable; a full reindex rebuilds it. The README describes local index storage by default and an optional PostgreSQL backend for accounts, settings, domain registry, secrets, and index.",
+        "sources": [
+          "architecture",
+          "readme",
+          "store"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Agents and people can add and edit Engrams through the product's MCP, CLI, and Fluid surfaces. An edit to a file domain updates the Markdown file and reindexes it; a virtual-domain edit applies the change to stored content with compare-and-swap protection so stale writes are refused instead of silently overwriting concurrent edits.",
+        "sources": [
+          "readme",
+          "edit"
+        ]
+      },
+      {
+        "text": "Knowledge that stops being current can be retired or superseded while remaining addressable by date; statuses and valid_from/valid_to represent lifecycle and temporal windows. A normal deletion removes the Engram file and index rows in file domains, or database rows in virtual domains. In review mode deletion is recorded as the acting author's tombstone draft until reviewed.",
+        "sources": [
+          "readme",
+          "engram",
+          "store",
+          "delete"
+        ]
+      },
+      {
+        "text": "Search supports lexical, semantic, and hybrid modes, with filters for domain, type, status, tags, dates and metadata; semantic/hybrid modes fall back to text when query text, provider, or active-model embeddings are unavailable. The Turso text path uses a LIKE candidate prefilter and weighted term score, while context-building can use typed relations and links to traverse a neighborhood.",
+        "sources": [
+          "readme",
+          "search",
+          "turso_search"
+        ]
+      },
+      {
+        "text": "Search scope is resolved before the store query: domains the caller cannot see are omitted, and an inaccessible named domain returns no hits rather than disclosing its existence. Review-mode searches include the caller's own draft rows while screening other actors' drafts. These source-visible controls are not an isolation test.",
+        "sources": [
+          "search",
+          "store"
+        ]
+      },
+      {
+        "text": "The Engram model and README provide authorship/time and verification-trail concepts, and optional review mode keeps an author's drafts separate until a proposal is merged. Markdown files and Git/GitHub history provide inspectable source artifacts; the reviewed search result format does not by itself establish that claims are true or independently verified.",
+        "sources": [
+          "engram",
+          "readme",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The local-first configuration documents no developer telemetry or analytics; local CLI/daemon surfaces and the index expose operational behavior. The README claims sub-half-second search at ten thousand Engrams, but this review did not reproduce that claim. The index has bounded lexical candidate processing and indexed filters, and semantic/hybrid search needs embeddings for the active model.",
+        "sources": [
+          "readme",
+          "turso_search",
+          "search",
+          "store"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval accuracy and abstention — unmeasured; the system has retrieval modes and empty-result behavior, but no benchmark cases were scored.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status",
+          "search"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured; edit and retirement/supersession mechanisms exist, but no correction workload was run.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status",
+          "edit",
+          "engram"
+        ]
+      },
+      {
+        "text": "Deletion leakage — unmeasured; source files or virtual rows are removed by the delete path, but no post-delete probes, storage inspection, or backup checks were made.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status",
+          "delete"
+        ]
+      },
+      {
+        "text": "Scope isolation leakage — unmeasured; visibility and per-actor draft filters appear in the query path, but no adversarial cross-scope workload was executed.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status",
+          "search"
+        ]
+      },
+      {
+        "text": "Evidence support precision and citation coverage — unmeasured; provenance and verification metadata are present, but no generated claims were independently adjudicated.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status",
+          "engram",
+          "readme"
+        ]
+      },
+      {
+        "text": "Retrieval latency and write-to-recall delay — unmeasured; the README reports a latency claim, but this review collected no timings.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status",
+          "readme"
+        ]
+      },
+      {
+        "text": "Tokens and cost — unmeasured; no runtime token or provider billing measurements were collected.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Storage efficiency — unmeasured; no corpus-attributed file, index, or database size was measured.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status",
+          "architecture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded review inspected the official README, architecture documentation, Engram model, storage contract, search engine and Turso search implementation, and edit/deletion paths. It did not inspect every provider, backend, API route, hook, or collaboration workflow.",
+        "sources": [
+          "readme",
+          "architecture",
+          "engram",
+          "store",
+          "search",
+          "turso_search",
+          "edit",
+          "delete"
+        ]
+      },
+      {
+        "text": "Source inspection does not establish deployed configuration, retrieval quality, effective access control, correctness of evidence, physical erasure from backups, latency, token cost, or storage efficiency. Crystalline itself, its tests, and benchmark workloads were not run.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "The README's performance and multilingual retrieval statements are upstream documentation claims and were not independently measured here. Optional remote embedding providers, PostgreSQL, GitHub, and connected servers change data-flow and deployment boundaries; those deployments were not evaluated.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Crystalline runtime, tests, or benchmark workload was executed. Upstream README performance statements are not project benchmark results.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

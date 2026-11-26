@@ -1,0 +1,387 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 153,
+    "slug": "corbell",
+    "name": "Corbell",
+    "repository": "https://github.com/Corbell-AI/Corbell",
+    "branch": "main",
+    "revision": "75c7b20ac95292185b5fef6a4680e3e10de9da66",
+    "reviewed_at": "2026-11-25T09:14:37Z",
+    "review_timezone": "UTC (2026-11-25 01:14:37 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/Corbell-AI/Corbell/blob/75c7b20ac95292185b5fef6a4680e3e10de9da66/README.md",
+      "note": "No contact email was published in the official pinned README; the official SECURITY.md and SUPPORT.md paths were also checked and are absent at this revision."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/Corbell-AI/Corbell/blob/75c7b20ac95292185b5fef6a4680e3e10de9da66/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/Corbell-AI/Corbell/blob/75c7b20ac95292185b5fef6a4680e3e10de9da66/README.md",
+      "https://github.com/Corbell-AI/Corbell/blob/75c7b20ac95292185b5fef6a4680e3e10de9da66/SECURITY.md",
+      "https://github.com/Corbell-AI/Corbell/blob/75c7b20ac95292185b5fef6a4680e3e10de9da66/SUPPORT.md"
+    ],
+    "summary": "Corbell builds a local architecture graph and learns patterns and decisions from design documents, then retrieves code and design context for LLM-assisted specification work. This review records source observations, not measured memory quality or performance.",
+    "atlas_locator": {
+      "ordinal": 153,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/corbell.md",
+      "listed_repository": "https://github.com/Corbell-AI/Corbell"
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical public GitHub repository and default branch",
+        "path": "repository page",
+        "symbol": "Corbell-AI/Corbell; default branch main",
+        "url": "https://github.com/Corbell-AI/Corbell"
+      },
+      {
+        "id": "feed",
+        "label": "Official current main commits feed",
+        "path": "commits/main.atom",
+        "symbol": "main head 75c7b20ac95292185b5fef6a4680e3e10de9da66; updated 2026-05-23T20:32:59Z",
+        "url": "https://github.com/Corbell-AI/Corbell/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified full-SHA head commit",
+        "path": "commit",
+        "symbol": "current main head 75c7b20ac95292185b5fef6a4680e3e10de9da66",
+        "url": "https://github.com/Corbell-AI/Corbell/commit/75c7b20ac95292185b5fef6a4680e3e10de9da66"
+      },
+      {
+        "id": "readme",
+        "label": "Official project README",
+        "path": "README.md",
+        "symbol": "local architecture graph, document learning, spec generation, stated local operation",
+        "url": "https://github.com/Corbell-AI/Corbell/blob/75c7b20ac95292185b5fef6a4680e3e10de9da66/README.md"
+      },
+      {
+        "id": "graph-schema",
+        "label": "Graph node, edge, and store interface",
+        "path": "corbell/core/graph/schema.py",
+        "symbol": "service, datastore, queue, method and flow models; graph store operations",
+        "url": "https://github.com/Corbell-AI/Corbell/blob/75c7b20ac95292185b5fef6a4680e3e10de9da66/corbell/core/graph/schema.py"
+      },
+      {
+        "id": "graph-store",
+        "label": "SQLite graph persistence",
+        "path": "corbell/core/graph/sqlite_store.py",
+        "symbol": "JSON node rows, typed edges, upsert and clear",
+        "url": "https://github.com/Corbell-AI/Corbell/blob/75c7b20ac95292185b5fef6a4680e3e10de9da66/corbell/core/graph/sqlite_store.py"
+      },
+      {
+        "id": "graph-builder",
+        "label": "Repository graph construction",
+        "path": "corbell/core/graph/builder.py",
+        "symbol": "local repo scanning and dependency extraction into GraphStore",
+        "url": "https://github.com/Corbell-AI/Corbell/blob/75c7b20ac95292185b5fef6a4680e3e10de9da66/corbell/core/graph/builder.py"
+      },
+      {
+        "id": "doc-scanner",
+        "label": "Candidate design document discovery",
+        "path": "corbell/core/docs/scanner.py",
+        "symbol": "Markdown candidate detection; unconfirmed result model",
+        "url": "https://github.com/Corbell-AI/Corbell/blob/75c7b20ac95292185b5fef6a4680e3e10de9da66/corbell/core/docs/scanner.py"
+      },
+      {
+        "id": "doc-learner",
+        "label": "Design document pattern and decision extraction",
+        "path": "corbell/core/docs/learner.py",
+        "symbol": "confirmed-doc gate; regex/optional LLM extraction",
+        "url": "https://github.com/Corbell-AI/Corbell/blob/75c7b20ac95292185b5fef6a4680e3e10de9da66/corbell/core/docs/learner.py"
+      },
+      {
+        "id": "doc-models",
+        "label": "Document pattern and candidate models",
+        "path": "corbell/core/docs/models.py",
+        "symbol": "Decision, DocPattern, CandidateDoc fields",
+        "url": "https://github.com/Corbell-AI/Corbell/blob/75c7b20ac95292185b5fef6a4680e3e10de9da66/corbell/core/docs/models.py"
+      },
+      {
+        "id": "doc-store",
+        "label": "Document pattern and candidate persistence",
+        "path": "corbell/core/docs/store.py",
+        "symbol": "JSON list overwrite and candidate sidecar",
+        "url": "https://github.com/Corbell-AI/Corbell/blob/75c7b20ac95292185b5fef6a4680e3e10de9da66/corbell/core/docs/store.py"
+      },
+      {
+        "id": "embedding-store",
+        "label": "SQLite code-chunk embeddings, retrieval and deletion",
+        "path": "corbell/core/embeddings/sqlite_store.py",
+        "symbol": "service-scoped optional filter, cosine ranking, float32 blobs and clear",
+        "url": "https://github.com/Corbell-AI/Corbell/blob/75c7b20ac95292185b5fef6a4680e3e10de9da66/corbell/core/embeddings/sqlite_store.py"
+      },
+      {
+        "id": "embedding-model",
+        "label": "Embedding model interface and implementation",
+        "path": "corbell/core/embeddings/model.py",
+        "symbol": "lazy SentenceTransformer model and vector encoding",
+        "url": "https://github.com/Corbell-AI/Corbell/blob/75c7b20ac95292185b5fef6a4680e3e10de9da66/corbell/core/embeddings/model.py"
+      },
+      {
+        "id": "prd",
+        "label": "PRD query generation and service auto-discovery",
+        "path": "corbell/core/prd_processor.py",
+        "symbol": "LLM or sentence fallback; embedding query discovery",
+        "url": "https://github.com/Corbell-AI/Corbell/blob/75c7b20ac95292185b5fef6a4680e3e10de9da66/corbell/core/prd_processor.py"
+      },
+      {
+        "id": "generator",
+        "label": "Specification context assembly and generation",
+        "path": "corbell/core/spec/generator.py",
+        "symbol": "graph/code/doc context, pattern filtering and context pruning",
+        "url": "https://github.com/Corbell-AI/Corbell/blob/75c7b20ac95292185b5fef6a4680e3e10de9da66/corbell/core/spec/generator.py"
+      },
+      {
+        "id": "token",
+        "label": "LLM token usage and estimated cost tracking",
+        "path": "corbell/core/token_tracker.py",
+        "symbol": "per-call token counts, local pricing table and context pruning helpers",
+        "url": "https://github.com/Corbell-AI/Corbell/blob/75c7b20ac95292185b5fef6a4680e3e10de9da66/corbell/core/token_tracker.py"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy path checked for contact",
+        "path": "SECURITY.md",
+        "symbol": "GitHub reports path absent at reviewed revision",
+        "url": "https://github.com/Corbell-AI/Corbell/blob/75c7b20ac95292185b5fef6a4680e3e10de9da66/SECURITY.md"
+      },
+      {
+        "id": "support",
+        "label": "Official support path checked for contact",
+        "path": "SUPPORT.md",
+        "symbol": "GitHub reports path absent at reviewed revision",
+        "url": "https://github.com/Corbell-AI/Corbell/blob/75c7b20ac95292185b5fef6a4680e3e10de9da66/SUPPORT.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned workload only; not run for Corbell",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "shared execution status lists Graphiti, Mem0, Letta and Memori only; no Corbell measurement",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated ordinal, listed locator and attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 153; identity/locator context only",
+        "url": "../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents Corbell as a local Python tool that builds code architecture graphs and learns patterns from design documents for specification generation, review, decomposition, and issue export. This source review covers selected public repository code, not a hosted service or every integration.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The code graph models service, datastore, queue, method, and flow nodes, with typed dependency/call edges. Method records include repository and file location, signature, optional docstring, and line range. SQLite persists node JSON and edge metadata in separate tables with source/target edge indexes.",
+        "sources": [
+          "graph-schema",
+          "graph-store"
+        ]
+      },
+      {
+        "text": "A separate SQLite embedding table stores source chunks, repository/service identity, file and line coordinates, language, chunk type, symbol, and optional float32 vectors. A document-learning path stores patterns and decisions as JSON, including headings, terminology, a document excerpt, and source-file paths.",
+        "sources": [
+          "embedding-store",
+          "doc-models",
+          "doc-store"
+        ]
+      },
+      {
+        "text": "The official main feed reports full current head 75c7b20ac95292185b5fef6a4680e3e10de9da66, updated 2026-05-23T20:32:59Z; GitHub identifies main as the default branch. Reviewed 2026-11-25 09:14:37 UTC (01:14:37 PST; America/Los_Angeles). The curated roster and Atlas URL are recorded only for identity and attribution.",
+        "sources": [
+          "repo",
+          "feed",
+          "head",
+          "roster"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The graph builder scans configured local repositories and infers service boundaries and dependency edges, then writes nodes and edges through upsert operations. Graph storage exposes a whole-graph clear operation; no per-record delete or mutation history is exposed by the inspected store interface.",
+        "sources": [
+          "graph-builder",
+          "graph-schema",
+          "graph-store"
+        ]
+      },
+      {
+        "text": "The document scanner returns candidate Markdown files, and the learner skips candidates unless confirmed. It extracts headings, frontmatter field names, terminology, and decisions using regex or an optional LLM. Saving patterns overwrites the JSON list; candidate files are kept separately. No pattern-level correction, history, or deletion interface was found in the inspected files.",
+        "sources": [
+          "doc-scanner",
+          "doc-learner",
+          "doc-models",
+          "doc-store"
+        ]
+      },
+      {
+        "text": "Embedding writes support individual and batch upsert; service-level or whole-store clear is available. Similarity search optionally filters by service IDs and returns top K cosine matches. If no filter is passed, all embedded rows are candidates. The inspected code loads rows and scores vectors in Python.",
+        "sources": [
+          "embedding-store"
+        ]
+      },
+      {
+        "text": "The PRD processor forms several natural-language code-search queries, with a sentence-based fallback; it scores services by the number of matching chunks. The specification generator combines graph, code, and learned-document context, ranks patterns by overlap with the PRD, prunes context to a token budget, and calls the configured LLM. These are source paths, not measured retrieval or generation outcomes.",
+        "sources": [
+          "prd",
+          "generator",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Code and document retrieval paths are present, but no answerable recall or abstention workload was run or adjudicated.",
+        "sources": [
+          "embedding-store",
+          "prd",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Graph and embedding upserts replace current rows and learned pattern saving overwrites a list; no post-correction current-value or stale-value probes were run.",
+        "sources": [
+          "graph-store",
+          "embedding-store",
+          "doc-store",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Whole graph clear and embedding clear paths exist, but no post-delete retrieval test or full data-erasure audit was performed.",
+        "sources": [
+          "graph-store",
+          "embedding-store",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Service ID filters and workspace-local pattern storage are source-visible, but no cross-service or cross-workspace probes were run.",
+        "sources": [
+          "embedding-store",
+          "doc-store",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source paths and line coordinates are represented in code and decision records; generated claim support and resolvable citation coverage were not adjudicated.",
+        "sources": [
+          "graph-schema",
+          "embedding-store",
+          "doc-models",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No retrieval latency distribution or scheduled write-to-recall observation was collected.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The code tracks LLM input/output counts and estimates cost using configured price values; no benchmark token, measured-charge, or persistent-storage observations were collected.",
+        "sources": [
+          "token",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code",
+        "evidence": "SQLite indexes and batch embedding writes, bounded top-K vector return, context pruning, and per-call token tracking are present. These mechanisms do not establish performance or actual cost.",
+        "sources": [
+          "graph-store",
+          "embedding-store",
+          "generator",
+          "token"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded inspection of the official README and selected graph, embedding, document-learning, query, generation, and token-tracking source at the verified main SHA. Corbell, its tests, and the benchmark were not run; reliability, answer quality, scope isolation, end-to-end deletion, and runtime performance remain unknown.",
+        "sources": [
+          "readme",
+          "graph-builder",
+          "embedding-store",
+          "generator",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "The curated catalog and pinned Atlas locator were used only to resolve ordinal, name, slug, listed repository, and attribution. Atlas descriptions and capability marks were not used as assessment evidence.",
+        "sources": [
+          "roster",
+          "repo"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is not_run. No Corbell runtime, tests, or workload was executed. The project metrics, fixture, and shared execution-status record describe protocol and other systems' status, not Corbell results.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      }
+    ],
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "No Corbell execution or adjudicated benchmark result was produced in this review."
+    }
+  }
+}

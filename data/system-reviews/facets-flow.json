@@ -1,0 +1,391 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 242,
+    "slug": "facets-flow",
+    "name": "flow",
+    "repository": "https://github.com/Facets-cloud/flow",
+    "listed_repository": "https://github.com/Facets-cloud/flow",
+    "branch": "main",
+    "revision": "9ee3c405bf3d99b08f5ca204d7d1482c85513867",
+    "reviewed_at": "2026-11-25T20:35:23Z",
+    "review_timezone": "UTC (2026-11-25 12:35:23 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "flow is a local CLI for tracking work across agent sessions. It keeps task and project metadata in SQLite and briefs, progress notes, and a small shared knowledge base as Markdown files. Retrieval is directed through task context and agent file reads rather than a dedicated memory search engine. This is a source review; no system behavior or performance was measured.",
+    "atlas_locator": {
+      "ordinal": 242,
+      "name": "flow",
+      "slug": "facets-flow",
+      "listed_repository": "https://github.com/Facets-cloud/flow",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/facets-flow.md",
+      "revision": "99efdaef0a41e8acffa9e4e0f55dbecf7727a67a"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/Facets-cloud/flow/blob/9ee3c405bf3d99b08f5ca204d7d1482c85513867/README.md",
+      "checked_urls": [
+        "https://github.com/Facets-cloud/flow/blob/9ee3c405bf3d99b08f5ca204d7d1482c85513867/README.md",
+        "https://github.com/Facets-cloud/flow/blob/9ee3c405bf3d99b08f5ca204d7d1482c85513867/SECURITY.md",
+        "https://github.com/Facets-cloud/flow/blob/9ee3c405bf3d99b08f5ca204d7d1482c85513867/CONTRIBUTING.md",
+        "https://facets-cloud.github.io/flow/"
+      ],
+      "note": "No contact email was found in the checked official README, SECURITY.md, CONTRIBUTING.md, or official project website. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/Facets-cloud/flow/blob/9ee3c405bf3d99b08f5ca204d7d1482c85513867/README.md",
+      "https://github.com/Facets-cloud/flow/blob/9ee3c405bf3d99b08f5ca204d7d1482c85513867/SECURITY.md",
+      "https://github.com/Facets-cloud/flow/blob/9ee3c405bf3d99b08f5ca204d7d1482c85513867/CONTRIBUTING.md",
+      "https://facets-cloud.github.io/flow/"
+    ],
+    "contact_email_note": "No contact email was published in the checked official repository documentation or project website. No commit/profile metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[241], ordinal 242; system name, slug, listed repository locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/facets-flow.md",
+        "symbol": "Pinned attribution retained only for curated identity and locator context; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/facets-flow.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "",
+        "symbol": "Official GitHub repository page identifies Facets-cloud/flow and default branch main",
+        "url": "https://github.com/Facets-cloud/flow"
+      },
+      {
+        "id": "head",
+        "label": "Verified current main head",
+        "path": "",
+        "symbol": "GitHub commit page and fresh git ls-remote confirm main at 9ee3c405bf3d99b08f5ca204d7d1482c85513867; shallow checkout matched",
+        "url": "https://github.com/Facets-cloud/flow/commit/9ee3c405bf3d99b08f5ca204d7d1482c85513867"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project purpose, architecture overview, session/task continuity, self-described boundaries, token and reliability limitations",
+        "url": "https://github.com/Facets-cloud/flow/blob/9ee3c405bf3d99b08f5ca204d7d1482c85513867/README.md"
+      },
+      {
+        "id": "schema",
+        "label": "Pinned SQLite schema",
+        "path": "internal/flowdb/db.go",
+        "symbol": "Projects, tasks, playbooks, sessions, owners, workdirs, status fields, and archive timestamps",
+        "url": "https://github.com/Facets-cloud/flow/blob/9ee3c405bf3d99b08f5ca204d7d1482c85513867/internal/flowdb/db.go"
+      },
+      {
+        "id": "skill",
+        "label": "Pinned flow agent skill",
+        "path": "internal/app/skill/SKILL.md",
+        "symbol": "Data model, markdown notes, KB buckets, scoop rules, read/write behavior, scope, archive persistence, and context loading",
+        "url": "https://github.com/Facets-cloud/flow/blob/9ee3c405bf3d99b08f5ca204d7d1482c85513867/internal/app/skill/SKILL.md"
+      },
+      {
+        "id": "show",
+        "label": "Pinned show implementation",
+        "path": "internal/app/show.go",
+        "symbol": "Task display enumerates task metadata, brief/update files, and knowledge-base file paths",
+        "url": "https://github.com/Facets-cloud/flow/blob/9ee3c405bf3d99b08f5ca204d7d1482c85513867/internal/app/show.go"
+      },
+      {
+        "id": "done",
+        "label": "Pinned close-out implementation",
+        "path": "internal/app/done.go",
+        "symbol": "flow done flips task status and launches best-effort transcript-based close-out sweep; LLM is instructed to append KB/project updates",
+        "url": "https://github.com/Facets-cloud/flow/blob/9ee3c405bf3d99b08f5ca204d7d1482c85513867/internal/app/done.go"
+      },
+      {
+        "id": "archive",
+        "label": "Pinned archive implementation",
+        "path": "internal/app/archive.go",
+        "symbol": "Archive and unarchive update archived_at; task archive cleans message-bus rows, not markdown files",
+        "url": "https://github.com/Facets-cloud/flow/blob/9ee3c405bf3d99b08f5ca204d7d1482c85513867/internal/app/archive.go"
+      },
+      {
+        "id": "stats",
+        "label": "Pinned usage statistics implementation",
+        "path": "internal/stats/scan.go",
+        "symbol": "Claude transcript scan classifies tool-read paths as KB/task/project lookups and sums transcript token usage",
+        "url": "https://github.com/Facets-cloud/flow/blob/9ee3c405bf3d99b08f5ca204d7d1482c85513867/internal/stats/scan.go"
+      },
+      {
+        "id": "security",
+        "label": "Pinned official security documentation",
+        "path": "SECURITY.md",
+        "symbol": "Official documentation checked for contact email; none published",
+        "url": "https://github.com/Facets-cloud/flow/blob/9ee3c405bf3d99b08f5ca204d7d1482c85513867/SECURITY.md"
+      },
+      {
+        "id": "contributing",
+        "label": "Pinned official contributing documentation",
+        "path": "CONTRIBUTING.md",
+        "symbol": "Official documentation checked for contact email; none published",
+        "url": "https://github.com/Facets-cloud/flow/blob/9ee3c405bf3d99b08f5ca204d7d1482c85513867/CONTRIBUTING.md"
+      },
+      {
+        "id": "website",
+        "label": "Official project website",
+        "path": "",
+        "symbol": "Official Facets project site checked for a contact email; none published",
+        "url": "https://facets-cloud.github.io/flow/"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Project benchmark metric domains; definitions only",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Evaluation protocol fixture; not a Flow result",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project run status; not a Flow result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes flow as a local CLI that gives work named tasks, briefs, dated notes, resumable Claude Code or Codex sessions, and messaging between sessions. It presents the tool as a personal workflow manager rather than a team task board or a standalone semantic-memory service.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The project is open source under Facets-cloud. The README names Rohit Raveendran and Anshul Sao as maintainers; this review does not infer a broader maintainer roster.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The SQLite schema stores projects, tasks, playbooks, owners, workdirs, status, priority, work directory, session identifiers and timestamps, parent-task relations, and archival timestamps. Task/project briefs and dated updates are separate Markdown files under the flow root; task updates and project updates live beside their respective entity directories.",
+        "sources": [
+          "schema",
+          "skill"
+        ]
+      },
+      {
+        "text": "The five knowledge-base buckets are `user.md`, `org.md`, `products.md`, `processes.md`, and `business.md` under the flow root's `kb/` directory. The agent skill defines what each bucket holds and instructs sessions to append dated bullets. The binary manages task metadata and orchestration; the skill directs the model to read and write Markdown.",
+        "sources": [
+          "skill",
+          "done"
+        ]
+      },
+      {
+        "text": "A task binds to a harness session and its transcript; `flow show task` displays task fields and paths to the brief, updates, and KB files. The shown KB values are file paths, not indexed or ranked memory results.",
+        "sources": [
+          "show",
+          "schema"
+        ]
+      },
+      {
+        "text": "The agent skill is embedded and installed into Claude Code or Codex with a session-start hook. Session instructions carry the task brief and direct the model to recover context from files. The README also describes child sessions and background tasks; these extend orchestration beyond memory storage.",
+        "sources": [
+          "readme",
+          "skill"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "**Write.** Task/project/playbook creation stores structured metadata in SQLite and creates a brief file. During ordinary sessions the skill directs the model to capture a durable user fact by reading the matching KB bucket, deduplicating, and appending a dated bullet without asking. Thus knowledge-base writes are model-mediated file edits rather than typed database facts.",
+        "sources": [
+          "schema",
+          "skill"
+        ]
+      },
+      {
+        "text": "**Update and correction.** Task state and metadata are edited through CLI operations; task progress notes are dated Markdown files. The KB rule is append-only: a changed fact should become a new dated entry, not an edit to an old bullet. This is a convention instructed to the model and is not an enforced versioned fact/supersession structure.",
+        "sources": [
+          "skill",
+          "schema"
+        ]
+      },
+      {
+        "text": "**Close-out capture.** `flow done` marks a task done, then asks the task's configured harness to run a headless sweep over its transcript. That sweep may append durable KB facts and, for project-attached tasks, a project update. Status completion remains successful when the optional sweep fails; the implementation describes it as best effort.",
+        "sources": [
+          "done"
+        ]
+      },
+      {
+        "text": "**Delete and archive.** Task, project, and playbook archive operations set `archived_at`; unarchive clears it. Task archival also cleans task message-bus data. The skill and README state that archive does not remove briefs or progress updates. The inspected archive path does not provide a content-level deletion or erasure procedure for KB entries.",
+        "sources": [
+          "archive",
+          "skill",
+          "readme"
+        ]
+      },
+      {
+        "text": "**Retrieval.** There is no dedicated semantic, lexical, or vector retrieval layer in the inspected design. `flow show` surfaces task/project/playbook metadata and relevant file paths; the skill says to read task briefs and recent updates for continuity and consult KB files on demand. What enters the model context depends on the agent following those instructions and selecting files.",
+        "sources": [
+          "show",
+          "skill",
+          "readme"
+        ]
+      },
+      {
+        "text": "**Scope isolation.** Task and project notes are physically separated by entity directories, and task records carry project and work-directory references. The five KB files are global to the flow root and listed to task sessions without per-task, project, or user access checks in the inspected code. This is local single-user storage, not a tenant-isolated memory service; process/filesystem access controls were not evaluated.",
+        "sources": [
+          "schema",
+          "show",
+          "skill",
+          "security"
+        ]
+      },
+      {
+        "text": "**Provenance and evidence.** KB bullets contain a date and a short quote or paraphrase, but the KB format has no structured originating session, source span, confidence, trust state, or review status. Task records include session identifiers and timestamps, and close-out reads a transcript, but the resulting KB bullet is not linked back to transcript evidence by the reviewed data model. The append-only instruction reduces silent overwrites by convention, not by enforcement.",
+        "sources": [
+          "skill",
+          "schema",
+          "done"
+        ]
+      },
+      {
+        "text": "**Efficiency and observability.** Context lookup is file-based and model-directed, avoiding a separate embedding service, vector database, or ranking stage. That design also places file reading and selection in the agent context window. `flow stats` parses Claude Code transcript events for file reads under default `~/.flow` paths and reports KB/task/project lookups and tokens; source matching is path-string based, and this source review does not establish equivalent coverage for Codex sessions or relocated roots.",
+        "sources": [
+          "stats",
+          "skill",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "The inspected design exposes files and relies on agent-directed reading; no answer retrieval or abstention workload was scored.",
+        "sources": [
+          "show",
+          "skill",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "KB corrections are append-only by instruction, but no competing-fact sequence or stale-value probe was run.",
+        "sources": [
+          "skill",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Archive is a soft state change and no KB erasure behavior was found in the inspected paths; no post-delete retrieval or filesystem deletion probe was run.",
+        "sources": [
+          "archive",
+          "skill",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Source shows a root-level shared KB without per-task partitioning; no isolation workload or OS-level permission review was performed.",
+        "sources": [
+          "show",
+          "skill",
+          "schema",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Dated bullets and task transcripts exist, but no answer claims were adjudicated against originating evidence.",
+        "sources": [
+          "skill",
+          "done",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timings or write-to-recall measurements were collected.",
+        "sources": [
+          "show",
+          "skill",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The code can parse token usage from Claude session transcripts; this review collected no token, cost, corpus-size, or storage measurements for Flow.",
+        "sources": [
+          "stats",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded review inspected the current README, task model/schema, installed agent skill, task-show path, close-out sweep, archive behavior, and transcript-based stats scanner at the verified main SHA. Flow, tests, and benchmarks were not run.",
+        "sources": [
+          "readme",
+          "schema",
+          "skill",
+          "show",
+          "done",
+          "archive",
+          "stats"
+        ]
+      },
+      {
+        "text": "The README reports its authors' experience and describes reliability and context costs; those statements are upstream-reported and were not independently measured here. This review does not validate README figures or user experience claims.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "No answer quality, abstention calibration, correction quality, deletion leakage, filesystem access-control boundary, concurrency behavior, latency, tokens per workload, monetary cost, or storage efficiency was measured. Whether a shared root-level KB is appropriate depends on the local installation's trust and filesystem boundary.",
+        "sources": [
+          "skill",
+          "schema",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Flow runtime, tests, or benchmarks were run. Source observations and upstream-published experience statements are not results from this project's benchmark."
+    }
+  }
+}

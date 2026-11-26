@@ -1,0 +1,366 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 288,
+    "slug": "helm",
+    "name": "Helm",
+    "repository": "https://github.com/GOODMAN-PRO/helm",
+    "listed_repository": "https://github.com/GOODMAN-PRO/helm",
+    "branch": "main",
+    "revision": "f453eaa9683ea0a66b45c76275cb6576bcf14f73",
+    "reviewed_at": "2026-11-25T22:43:47Z",
+    "review_timezone": "UTC (checked local time: 2026-11-25 14:43:47 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Helm is a self-hosted personal agent with structured memory in a local SQLite database. Its facts and conversation episodes are written through a CLI and tool wrappers, recalled using BM25 fused with TF-IDF cosine or cached local MiniLM embeddings, and maintained through periodic reflection and consolidation. This is a source review, not a runtime or benchmark result.",
+    "atlas_locator": {
+      "ordinal": 288,
+      "name": "Helm",
+      "slug": "helm",
+      "listed_repository": "https://github.com/GOODMAN-PRO/helm",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/helm.md",
+      "revision": "f453eaa9683ea0a66b45c76275cb6576bcf14f73"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/GOODMAN-PRO/helm/blob/f453eaa9683ea0a66b45c76275cb6576bcf14f73/README.md",
+      "checked_urls": [
+        "https://github.com/GOODMAN-PRO/helm/blob/f453eaa9683ea0a66b45c76275cb6576bcf14f73/README.md",
+        "https://goodman-pro.github.io/helm/"
+      ],
+      "note": "The official pinned README and official website were checked; neither publishes a contact email. No commit/profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/GOODMAN-PRO/helm/blob/f453eaa9683ea0a66b45c76275cb6576bcf14f73/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/GOODMAN-PRO/helm/blob/f453eaa9683ea0a66b45c76275cb6576bcf14f73/README.md",
+      "https://goodman-pro.github.io/helm/"
+    ],
+    "contact_email_note": "Neither the official pinned README nor linked official website publishes a contact email.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[287], ordinal 288; system name, slug, explicit locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/helm.md",
+        "symbol": "Curated identity/locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/helm.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository page",
+        "path": "Repository page",
+        "symbol": "Canonical repository GOODMAN-PRO/helm; default branch main",
+        "url": "https://github.com/GOODMAN-PRO/helm"
+      },
+      {
+        "id": "head",
+        "label": "Official current main commit",
+        "path": "GitHub commits API",
+        "symbol": "Full main head f453eaa9683ea0a66b45c76275cb6576bcf14f73; commit timestamp 2026-06-05T13:58:12Z; matched shallow checkout",
+        "url": "https://api.github.com/repos/GOODMAN-PRO/helm/commits/main"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product overview, memory claims, separate Helm Mind reference, installation and product-level owner/privacy claims; checked for contact email",
+        "url": "https://github.com/GOODMAN-PRO/helm/blob/f453eaa9683ea0a66b45c76275cb6576bcf14f73/README.md"
+      },
+      {
+        "id": "memory",
+        "label": "Pinned structured memory implementation",
+        "path": "workspace/memory/memory.mjs",
+        "symbol": "SQLite facts/episodes/links schema; remember, recall, unsure, forget, dump, history and episode operations",
+        "url": "https://github.com/GOODMAN-PRO/helm/blob/f453eaa9683ea0a66b45c76275cb6576bcf14f73/workspace/memory/memory.mjs"
+      },
+      {
+        "id": "tools",
+        "label": "Pinned memory remember tool wrapper",
+        "path": "workspace/tools/impl/memory.remember.mjs",
+        "symbol": "memory.remember delegates its structured write to the memory CLI",
+        "url": "https://github.com/GOODMAN-PRO/helm/blob/f453eaa9683ea0a66b45c76275cb6576bcf14f73/workspace/tools/impl/memory.remember.mjs"
+      },
+      {
+        "id": "tool-recall",
+        "label": "Pinned memory recall tool wrapper",
+        "path": "workspace/tools/impl/memory.recall.mjs",
+        "symbol": "memory.recall delegates its query to the memory CLI",
+        "url": "https://github.com/GOODMAN-PRO/helm/blob/f453eaa9683ea0a66b45c76275cb6576bcf14f73/workspace/tools/impl/memory.recall.mjs"
+      },
+      {
+        "id": "registry",
+        "label": "Pinned tool registry",
+        "path": "workspace/tools/registry.json",
+        "symbol": "Registered memory tool names, argument schemas, and side-effect labels",
+        "url": "https://github.com/GOODMAN-PRO/helm/blob/f453eaa9683ea0a66b45c76275cb6576bcf14f73/workspace/tools/registry.json"
+      },
+      {
+        "id": "embed",
+        "label": "Pinned local embedding implementation",
+        "path": "workspace/memory/embed.mjs",
+        "symbol": "Optional cached all-MiniLM-L6-v2 embedding pipeline, vector tables, and vector caching",
+        "url": "https://github.com/GOODMAN-PRO/helm/blob/f453eaa9683ea0a66b45c76275cb6576bcf14f73/workspace/memory/embed.mjs"
+      },
+      {
+        "id": "consolidate",
+        "label": "Pinned fact consolidation implementation",
+        "path": "workspace/memory/consolidate.mjs",
+        "symbol": "Episode-term distillation, confidence decay, pruning, and active-row deduplication",
+        "url": "https://github.com/GOODMAN-PRO/helm/blob/f453eaa9683ea0a66b45c76275cb6576bcf14f73/workspace/memory/consolidate.mjs"
+      },
+      {
+        "id": "index",
+        "label": "Pinned generated memory index implementation",
+        "path": "workspace/memory/refresh-index.mjs",
+        "symbol": "Regenerates Markdown index of current facts and latest episodes",
+        "url": "https://github.com/GOODMAN-PRO/helm/blob/f453eaa9683ea0a66b45c76275cb6576bcf14f73/workspace/memory/refresh-index.mjs"
+      },
+      {
+        "id": "claude",
+        "label": "Pinned workspace memory guidance",
+        "path": "workspace/CLAUDE.md",
+        "symbol": "Agent instructions for fact writes, active-learning preference gate, episodic writes, indexing and consolidation schedule; distinguishes Helm Mind",
+        "url": "https://github.com/GOODMAN-PRO/helm/blob/f453eaa9683ea0a66b45c76275cb6576bcf14f73/workspace/CLAUDE.md"
+      },
+      {
+        "id": "think",
+        "label": "Pinned background reflection implementation",
+        "path": "workspace/think/think.mjs",
+        "symbol": "Periodic reflection, weekly-review scheduling, execution logging and consolidation invocation",
+        "url": "https://github.com/GOODMAN-PRO/helm/blob/f453eaa9683ea0a66b45c76275cb6576bcf14f73/workspace/think/think.mjs"
+      },
+      {
+        "id": "gateway",
+        "label": "Pinned Discord owner gate",
+        "path": "index.js",
+        "symbol": "Discord messages are filtered against configured OWNER_ID before agent dispatch",
+        "url": "https://github.com/GOODMAN-PRO/helm/blob/f453eaa9683ea0a66b45c76275cb6576bcf14f73/index.js"
+      },
+      {
+        "id": "website",
+        "label": "Official Helm website",
+        "path": "Helm product website",
+        "symbol": "Product information; checked for a published contact email",
+        "url": "https://goodman-pro.github.io/helm/"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation metric domains and measurement protocol",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Synthetic benchmark cases and expected outcomes; not Helm results",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared benchmark execution state; not Helm results",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents Helm as an open-source personal agent that runs on the user's hardware and connects to Discord, with optional iMessage and terminal surfaces.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      },
+      {
+        "text": "The reviewed structured memory component is a Node workspace module backed by SQLite; the README also describes a separate Helm Mind Markdown knowledge base whose implementation was outside this review.",
+        "sources": [
+          "readme",
+          "memory",
+          "claude"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The structured memory database has facts, episodes, and links tables. Active facts are unique by (kind, key); facts carry confidence and lifecycle timestamps, episodes carry channel and raw_ref, and optional vectors are stored in separate tables.",
+        "sources": [
+          "memory",
+          "embed"
+        ]
+      },
+      {
+        "text": "CLI operations are wrapped by registered remember and recall tools. A generated Markdown index exposes selected facts and recent episodes to the agent context, while periodic think runs can invoke weekly consolidation.",
+        "sources": [
+          "tools",
+          "tool-recall",
+          "registry",
+          "index",
+          "think",
+          "consolidate"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "remember inserts a fact, reinforces an identical value in place, or expires the old row and inserts a replacement when the value changes. Observed preferences receive a capped first confidence and repeated observations can raise the cap; this is bookkeeping, not independent verification.",
+        "sources": [
+          "memory",
+          "claude"
+        ]
+      },
+      {
+        "text": "Episodes append timestamped summaries with optional channel and raw_ref. Weekly consolidation derives learned terms from recurrent episode vocabulary, decays stale single-evidence facts, prunes below-floor rows except CLAUDE.md-sourced facts, and deduplicates active rows.",
+        "sources": [
+          "memory",
+          "consolidate",
+          "think"
+        ]
+      },
+      {
+        "text": "forget hard-deletes an individual fact and attempts to remove its fact vector; it does not expose episode deletion. Changed values remain in expired history, and erasure from side files, journals, or backups was not established.",
+        "sources": [
+          "memory",
+          "consolidate",
+          "index"
+        ]
+      },
+      {
+        "text": "Recall ranks up to 500 recently updated active facts with BM25 and cosine similarity, fusing ranks with reciprocal-rank fusion plus confidence and key-match boosts. Cosine uses cached MiniLM vectors only when the model is already available; otherwise the code uses TF-IDF, and embedding failures are silently caught.",
+        "sources": [
+          "memory",
+          "embed"
+        ]
+      },
+      {
+        "text": "Optional episode recall separately ranks up to 500 recent episodes by lexical and optional embedding similarity, weighted by recency. There is no explicit fact-answer abstention threshold in the inspected recall path.",
+        "sources": [
+          "memory",
+          "embed"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Fact and optional episode ranking were inspected; no answerability or abstention workload was scored.",
+        "sources": [
+          "memory",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Value supersession and history retention were inspected; no correction probes were run.",
+        "sources": [
+          "memory",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "A fact delete path exists but episode deletion and complete-copy erasure were not established; no post-delete probes were run.",
+        "sources": [
+          "memory",
+          "index",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "The database schema has no principal/project key and the Discord owner gate is outside the store; no cross-scope workload was run.",
+        "sources": [
+          "memory",
+          "gateway",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source labels and evidence counters were inspected; no response claims were adjudicated against stored passages.",
+        "sources": [
+          "memory",
+          "claude",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No runtime timings were collected.",
+        "sources": [
+          "memory",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "SQLite and optional local embeddings were inspected; no token, cost, or persistent storage measurements were collected.",
+        "sources": [
+          "memory",
+          "embed",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The structured memory CLI has facts, episodes and lifecycle metadata, but the inspected API does not establish per-user, project, or tenant isolation inside the store.",
+        "sources": [
+          "memory",
+          "gateway"
+        ]
+      },
+      {
+        "text": "The confidence and evidence counters are application-maintained signals; observed repeats are not checked for independence or truth, and arbitrary confidence input is not range-validated in the inspected remember path.",
+        "sources": [
+          "memory",
+          "claude"
+        ]
+      },
+      {
+        "text": "Fact deletion is available, but episode deletion and complete erasure from database journals, indexes, backups, or other copies remain unknown from the reviewed paths.",
+        "sources": [
+          "memory",
+          "index",
+          "consolidate"
+        ]
+      },
+      {
+        "text": "The reviewed product README's privacy and capability statements are upstream claims; this source review did not test them. Helm Mind details and measured runtime behavior were not examined.",
+        "sources": [
+          "readme",
+          "claude"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Helm runtime, tests, or benchmark workload was run. Code observations and project evaluation definitions are not Helm benchmark results."
+    }
+  }
+}

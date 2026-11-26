@@ -1,0 +1,363 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 127,
+    "slug": "claudinio-brain",
+    "name": "Claudinio Brain",
+    "repository": "https://github.com/claudin-io/claudinio-brain",
+    "listed_repository": "https://github.com/claudin-io/claudinio-brain",
+    "branch": "main",
+    "revision": "6b6e57413aa38bb7cba24183c21bb41510d2d72c",
+    "reviewed_at": "2026-11-25T08:13:43Z",
+    "review_timezone": "UTC (2026-11-25 00:13:43 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Claudinio Brain is a local SQLite knowledge graph whose facts are stored on valid-time and transaction-time timelines. Writes close, correct, or reassert facts; retrieval fuses lexical, alias, static-semantic, graph, and kinship channels after temporal filtering. This source review does not measure runtime quality or performance.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/claudinio-brain.md"
+    },
+    "contact": {
+      "email": "security@claudin.io",
+      "source_url": "https://github.com/claudin-io/claudinio-brain/blob/6b6e57413aa38bb7cba24183c21bb41510d2d72c/SECURITY.md",
+      "note": "The pinned official security policy publishes this address for private vulnerability reports."
+    },
+    "contact_email": "security@claudin.io",
+    "contact_email_source_url": "https://github.com/claudin-io/claudinio-brain/blob/6b6e57413aa38bb7cba24183c21bb41510d2d72c/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/claudin-io/claudinio-brain/blob/6b6e57413aa38bb7cba24183c21bb41510d2d72c/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[126], ordinal 127; name, slug, listed repository, explicit repository status, and Atlas locator only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/claudinio-brain.md",
+        "symbol": "Pinned roster attribution; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/claudinio-brain.md"
+      },
+      {
+        "id": "tree",
+        "label": "Reviewed official repository tree",
+        "path": "repository tree",
+        "symbol": "Official tree at the reviewed full SHA",
+        "url": "https://github.com/claudin-io/claudinio-brain/tree/6b6e57413aa38bb7cba24183c21bb41510d2d72c"
+      },
+      {
+        "id": "repository",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "Public claudin-io/claudinio-brain; main is default branch and repository page shows latest short SHA 6b6e574",
+        "url": "https://github.com/claudin-io/claudinio-brain"
+      },
+      {
+        "id": "head",
+        "label": "Official GitHub commits Atom feed",
+        "path": "commits/main.atom",
+        "symbol": "Current main head 6b6e57413aa38bb7cba24183c21bb41510d2d72c; feed updated 2026-09-01T10:04:19Z",
+        "url": "https://github.com/claudin-io/claudinio-brain/commits/main.atom"
+      },
+      {
+        "id": "revision",
+        "label": "Reviewed upstream commit",
+        "path": "commit",
+        "symbol": "Reviewed full commit SHA 6b6e57413aa38bb7cba24183c21bb41510d2d72c",
+        "url": "https://github.com/claudin-io/claudinio-brain/commit/6b6e57413aa38bb7cba24183c21bb41510d2d72c"
+      },
+      {
+        "id": "readme",
+        "label": "Official README at reviewed head",
+        "path": "README.md",
+        "symbol": "Bitemporal fact model, commands, storage, retrieval channels, hooks, model and lifecycle claims, limitations and pre-1.0 status",
+        "url": "https://github.com/claudin-io/claudinio-brain/blob/6b6e57413aa38bb7cba24183c21bb41510d2d72c/README.md"
+      },
+      {
+        "id": "schema",
+        "label": "SQLite schema",
+        "path": "src/store/schema.sql",
+        "symbol": "Entity, alias, predicate and fact tables; bitemporal, scope, source, locator, indexes and FTS5/vector structures",
+        "url": "https://github.com/claudin-io/claudinio-brain/blob/6b6e57413aa38bb7cba24183c21bb41510d2d72c/src/store/schema.sql"
+      },
+      {
+        "id": "store",
+        "label": "Store opening and isolation implementation",
+        "path": "src/store/mod.rs",
+        "symbol": "Single-file store, brain identity marker, schema version and ATTACH restriction",
+        "url": "https://github.com/claudin-io/claudinio-brain/blob/6b6e57413aa38bb7cba24183c21bb41510d2d72c/src/store/mod.rs"
+      },
+      {
+        "id": "brain",
+        "label": "Bitemporal write and fact implementation",
+        "path": "src/brain/mod.rs",
+        "symbol": "Fact write outcomes, relation object resolution, updates and retractions",
+        "url": "https://github.com/claudin-io/claudinio-brain/blob/6b6e57413aa38bb7cba24183c21bb41510d2d72c/src/brain/mod.rs"
+      },
+      {
+        "id": "recall",
+        "label": "Recall implementation",
+        "path": "src/recall.rs",
+        "symbol": "Five retrieval channels, temporal and scope query options, channel contribution and explain output",
+        "url": "https://github.com/claudin-io/claudinio-brain/blob/6b6e57413aa38bb7cba24183c21bb41510d2d72c/src/recall.rs"
+      },
+      {
+        "id": "graph",
+        "label": "Graph traversal implementation",
+        "path": "src/graph.rs",
+        "symbol": "Shared temporal filter, two-hop traversal, hub blocking, result cap and path provenance",
+        "url": "https://github.com/claudin-io/claudinio-brain/blob/6b6e57413aa38bb7cba24183c21bb41510d2d72c/src/graph.rs"
+      },
+      {
+        "id": "embed",
+        "label": "Static embedder implementation",
+        "path": "src/embed/mod.rs",
+        "symbol": "Bundled Model2Vec table, 256 dimensions, local-only model and upstream-stated size/speed/quality tradeoffs",
+        "url": "https://github.com/claudin-io/claudinio-brain/blob/6b6e57413aa38bb7cba24183c21bb41510d2d72c/src/embed/mod.rs"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Published security contact, local threat model, file protection, untrusted stored content and limits",
+        "url": "https://github.com/claudin-io/claudinio-brain/blob/6b6e57413aa38bb7cba24183c21bb41510d2d72c/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Project evaluation domains; not Claudinio Brain measurements",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned benchmark workload, not a system result",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Initial benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project-wide execution status only, not a Claudinio Brain result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "Claudinio Brain is a local-first agent memory CLI, Rust library, MCP server, and optional browser studio, backed by one SQLite file per brain. The README describes no server, no model on the write or recall path, and a bundled static embedding table; optional lifecycle hooks read context and can capture literal session activity.",
+        "sources": [
+          "readme",
+          "store",
+          "embed"
+        ]
+      },
+      {
+        "text": "The catalog identifies ordinal 127 as Claudinio Brain, slug claudinio-brain, with an explicit listed repository locator. Its pinned Atlas URL is recorded only as roster attribution; Atlas descriptions and capability assessments are not used as evidence here.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The schema represents entities and aliases separately from facts. A fact has an entity subject, predicate, text/number/entity object, optional unit, natural-language statement and search text. A relation is a fact whose object_entity_id points to another entity, so temporal rules apply to graph edges as well as ordinary claims.",
+        "sources": [
+          "schema",
+          "readme"
+        ]
+      },
+      {
+        "text": "The fact row records valid_from/valid_to for when a claim held in the world and recorded_at/retracted_at/superseded_by for when the brain learned or later rejected it. Facts can also carry confidence, reassert_count, scope, a source string, and an optional locator field documented as JSON with file/line/URL/SHA. Predicate rows hold single-or-multi cardinality and whether an object denotes an entity; normalized entity keys and aliases preserve identity and alternate names.",
+        "sources": [
+          "schema",
+          "brain"
+        ]
+      },
+      {
+        "text": "A single SQLite file contains the facts, metadata, FTS5 index and stored embeddings, with sqlite-vec's vec0 table as a derived vector index. FTS5 triggers keep its index in the fact transaction; the vector table can be rebuilt with reindex. The store requires a brain_id marker, applies a schema version, and disables ATTACH to keep one connection inside one brain file.",
+        "sources": [
+          "schema",
+          "store",
+          "security"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write paths include remember, relation/link writes, JSONL or JSON batch input, library calls and MCP tools. The writer normalizes identities, uses predicate metadata to resolve relational text into an entity when appropriate, and can store literal text, numeric values or entity objects. The README describes batch parsing as all-or-nothing before writes.",
+        "sources": [
+          "readme",
+          "brain",
+          "schema"
+        ]
+      },
+      {
+        "text": "For a single-valued predicate, a changed assertion closes the previous fact's valid interval and records the replacement; the prior row and its recorded time remain. A same-value reassertion reinforces rather than duplicates. A same-instant correction marks the prior claim as retracted (never true) and creates the replacement, leaving the affected interval unknown. The public correction path is retraction, not a documented secure physical-erasure workflow.",
+        "sources": [
+          "readme",
+          "brain",
+          "schema"
+        ]
+      },
+      {
+        "text": "Retrieval includes exact subject/predicate get, historical get, history, record lookup, set-oriented which, and natural-language recall. Recall fuses five ranked channels: FTS5 BM25 text, normalized entity/alias matches, a semantic vector channel, graph traversal, and kinship over shared properties. The code returns the channels that found a result and offers explain output for ranking contributions.",
+        "sources": [
+          "readme",
+          "recall"
+        ]
+      },
+      {
+        "text": "Temporal filtering is applied before ranking; current, as-of, and history modes share a temporal predicate, and retracted claims are excluded from all modes. Graph traversal walks relation facts in both directions up to two hops, blocks expansion through high-degree hubs, and caps reached entities. The README also documents deterministic set queries and substring/text find for tasks recall does not promise to answer exhaustively.",
+        "sources": [
+          "readme",
+          "recall",
+          "graph"
+        ]
+      },
+      {
+        "text": "Scope is an optional fact field and query filter; recall and set queries default to no scope restriction. A caller can include a scope or exclude one, but an omitted filter can search across scopes within the selected brain. The file boundary is enforced by the store, while the reviewed sources do not establish authenticated per-user or tenant authorization.",
+        "sources": [
+          "schema",
+          "recall",
+          "store",
+          "security"
+        ]
+      },
+      {
+        "text": "Provenance is represented by source and locator fields, plus the fact's bitemporal closure/retraction links and the graph path used to reach graph-derived results. The why command is documented for inspecting where a fact came from and what became of it. These are useful lineage hooks, but the reviewed schema does not require a source, quote, evidence span, or independent verification for every assertion.",
+        "sources": [
+          "schema",
+          "readme",
+          "graph"
+        ]
+      },
+      {
+        "text": "The embedder is a bundled static token-to-vector table with 256-dimensional int8 storage and no transformer inference or model download at query time. The module comments report approximately 7.7 MB of weights and 8,000 embeddings per second on one core, and report lower MTEB retrieval quality than MiniLM; those are upstream statements, not measurements reproduced for this review. Explain output, stats, lint, repair and the local studio expose diagnostics; the security policy says the project has no telemetry.",
+        "sources": [
+          "embed",
+          "readme",
+          "security"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Five retrieval channels and ranking/explain paths are source-visible; no labeled recall or abstention probes were run.",
+        "sources": [
+          "recall",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Correction and stale-value handling",
+        "status": "unmeasured",
+        "evidence": "Supersession, reassertion and retraction are implemented as distinct states; no correction sequences were scored.",
+        "sources": [
+          "brain",
+          "schema",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The documented retract path hides a claim from retrieval; no physical erasure, backup-copy, or post-retraction leakage probe was run.",
+        "sources": [
+          "brain",
+          "readme",
+          "security",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Optional scope inclusion/exclusion filters and a single-file brain boundary are visible in source; no multi-user or cross-scope workload was run.",
+        "sources": [
+          "schema",
+          "recall",
+          "store",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Optional source/locator lineage exists, but no claim-level evidence coverage or support adjudication was performed.",
+        "sources": [
+          "schema",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The embedder source comments make a throughput claim; this review collected no write, retrieval, or hook timing.",
+        "sources": [
+          "embed",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "code_observation",
+        "evidence": "The core uses a local bundled embedder and SQLite; the reviewed security/README sources describe no network request on the brain path. No resource usage was measured.",
+        "sources": [
+          "readme",
+          "embed",
+          "security",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Source-visible observability",
+        "status": "code_observation",
+        "evidence": "Per-result channel attribution, explain mode, provenance lookup, stats, structural lint/repair and a local graph studio are documented or implemented. No live telemetry was collected.",
+        "sources": [
+          "readme",
+          "recall",
+          "graph",
+          "security"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The README labels the project pre-1.0, says its on-disk format is not stable, and says no migration path exists between schema versions. Static embeddings trade contextual expressiveness for a small, deterministic local model; graph expansion is bounded, so relevant facts beyond the walk cap may not be reached.",
+        "sources": [
+          "readme",
+          "embed",
+          "graph",
+          "store"
+        ]
+      },
+      {
+        "text": "A scope filter is optional, and the official threat model treats a brain file as readable by anyone who can read the file. The policy also warns that retrieved fact text is untrusted input and can carry prompt injection; the system stores and ranks content rather than sanitizing its meaning. The source review does not establish end-to-end hard deletion or tenant isolation.",
+        "sources": [
+          "recall",
+          "security",
+          "schema"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status: not_run. No Claudinio Brain runtime, tests, or benchmarks were executed. Project metrics, the benchmark fixture and project status file define evaluation context only; they are not system results.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ]
+  }
+}

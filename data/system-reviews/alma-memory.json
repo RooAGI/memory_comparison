@@ -1,0 +1,318 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "alma-memory",
+    "name": "ALMA",
+    "repository": "https://github.com/RBKunnela/ALMA-memory",
+    "branch": "main",
+    "revision": "4365767478b42f1f4bb79b4a2835d91ea1b4fb41",
+    "reviewed_at": "2026-11-24T20:28:28Z",
+    "review_timezone": "UTC (2026-11-24 12:28:28 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":"dev@friendlyai.fi","source_url":"https://github.com/RBKunnela/ALMA-memory/blob/4365767478b42f1f4bb79b4a2835d91ea1b4fb41/README.md","note":"Published in the official README."},
+    "summary": "ALMA is a local-first agent memory and learning library with typed records for outcomes, heuristics, anti-patterns, domain knowledge, and user preferences. Its Python retrieval engine combines embedding search, configurable scoring, optional feedback reranking, and caching over selectable storage backends. This review describes selected sources at the pinned head and reports no ALMA measurements.",
+    "atlas_locator": {
+      "ordinal": 49,
+      "name": "ALMA",
+      "slug": "alma-memory",
+      "listed_repository": "https://github.com/RBKunnela/ALMA-memory",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/alma-memory.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": "dev@friendlyai.fi",
+    "contact_email_source_url": "https://github.com/RBKunnela/ALMA-memory/blob/4365767478b42f1f4bb79b4a2835d91ea1b4fb41/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/RBKunnela/ALMA-memory/blob/4365767478b42f1f4bb79b4a2835d91ea1b4fb41/README.md"
+    ],
+    "contact_email_note": "The official pinned README lists dev@friendlyai.fi under its Questions support line.",
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository page and default branch",
+        "path": "repository",
+        "symbol": "canonical public repository RBKunnela/ALMA-memory; default branch main",
+        "url": "https://github.com/RBKunnela/ALMA-memory"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "current feed head 4365767478b42f1f4bb79b4a2835d91ea1b4fb41; updated 2026-10-21T09:02:40Z",
+        "url": "https://github.com/RBKunnela/ALMA-memory/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed full commit",
+        "path": "commit",
+        "symbol": "4365767478b42f1f4bb79b4a2835d91ea1b4fb41",
+        "url": "https://github.com/RBKunnela/ALMA-memory/commit/4365767478b42f1f4bb79b4a2835d91ea1b4fb41"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "library overview, memory categories, APIs, lifecycle claims, and published contact",
+        "url": "https://github.com/RBKunnela/ALMA-memory/blob/4365767478b42f1f4bb79b4a2835d91ea1b4fb41/README.md"
+      },
+      {
+        "id": "types",
+        "label": "Memory record and scope types",
+        "path": "alma/types.py",
+        "symbol": "Heuristic, Outcome, UserPreference, DomainKnowledge, AntiPattern, MemoryScope, ScopeFilter",
+        "url": "https://github.com/RBKunnela/ALMA-memory/blob/4365767478b42f1f4bb79b4a2835d91ea1b4fb41/alma/types.py"
+      },
+      {
+        "id": "storage",
+        "label": "Storage backend interface",
+        "path": "alma/storage/base.py",
+        "symbol": "save and query contracts across core memory types",
+        "url": "https://github.com/RBKunnela/ALMA-memory/blob/4365767478b42f1f4bb79b4a2835d91ea1b4fb41/alma/storage/base.py"
+      },
+      {
+        "id": "sqlite",
+        "label": "SQLite and FAISS backend",
+        "path": "alma/storage/sqlite_local.py",
+        "symbol": "typed relational tables, separate embeddings table, FAISS index lifecycle and fallback description",
+        "url": "https://github.com/RBKunnela/ALMA-memory/blob/4365767478b42f1f4bb79b4a2835d91ea1b4fb41/alma/storage/sqlite_local.py"
+      },
+      {
+        "id": "retrieval",
+        "label": "Retrieval engine",
+        "path": "alma/retrieval/engine.py",
+        "symbol": "scope-aware retrieval, embeddings, scoring, caching, timing and metrics hooks",
+        "url": "https://github.com/RBKunnela/ALMA-memory/blob/4365767478b42f1f4bb79b4a2835d91ea1b4fb41/alma/retrieval/engine.py"
+      },
+      {
+        "id": "verification",
+        "label": "Verification model",
+        "path": "alma/retrieval/verification.py",
+        "symbol": "status, method, confidence, reason, contradiction source and timing fields",
+        "url": "https://github.com/RBKunnela/ALMA-memory/blob/4365767478b42f1f4bb79b4a2835d91ea1b4fb41/alma/retrieval/verification.py"
+      },
+      {
+        "id": "observability",
+        "label": "Observability metrics",
+        "path": "alma/observability/metrics.py",
+        "symbol": "instrumentation collectors and session/retrieval metrics",
+        "url": "https://github.com/RBKunnela/ALMA-memory/blob/4365767478b42f1f4bb79b4a2835d91ea1b4fb41/alma/observability/metrics.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "comparison metric domains and protocols; not ALMA results",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "versioned workload definition; not executed for ALMA",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project execution status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "project-wide status is not a measured result and is not ALMA-specific",
+        "url": "../../results/initial-baselines-status.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 49 identity, listed locator and source attribution only",
+        "url": "../../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas attribution source",
+        "path": "content/systems/alma-memory.md",
+        "symbol": "identity/source attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/alma-memory.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes ALMA as a local-first agent learning and memory library rather than a hosted service, credits the project to @RBKunnela, and presents Python, JavaScript, MCP, and configurable storage integration.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README describes a retrieve-work-record cycle and five typed memory categories: heuristics, outcomes, anti-patterns, domain knowledge, and user preferences. It says repeated outcomes can consolidate into reusable heuristics and repeated failures into anti-patterns; this review treats those thresholds as documentation claims, not measured behavior.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The record dataclasses distinguish strategies from raw task outcomes, facts, constraints, and failure patterns. Heuristic and outcome records include agent/project identity and optional embeddings; domain knowledge carries source, confidence, and last-verified fields; preferences carry source and confidence. The selected source inspection does not establish a single universal record schema.",
+        "sources": [
+          "types"
+        ]
+      },
+      {
+        "text": "The inspected SQLite backend describes SQLite tables for typed records and a separate embeddings table, with FAISS indexes per memory type and a NumPy cosine fallback when FAISS is unavailable. The storage base class exposes save/read contracts and names multiple backend implementations; this review did not trace parity across all adapters.",
+        "sources": [
+          "sqlite",
+          "storage"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The README documents learn(agent, task, outcome, strategy_used) and retrieve(task, agent). The typed records preserve outcomes and strategy/reinforcement fields, while the storage interface defines save operations and queries for core memory types. Consolidation details are README-described; the full learning/consolidation pipeline was not inspected.",
+        "sources": [
+          "readme",
+          "types",
+          "storage"
+        ]
+      },
+      {
+        "text": "A uniform update/delete contract was not established in the selected storage interface. The README describes lifecycle management including decay, compression, consolidation, and archival, but those descriptions do not establish cross-backend update semantics or complete physical erasure.",
+        "sources": [
+          "storage",
+          "readme"
+        ]
+      },
+      {
+        "text": "The retrieval engine accepts query, project and agent identity, optional user, top-k, a sharing scope, and a workflow ScopeFilter. It sanitizes the query, creates an embedding, reads from storage, applies configurable similarity/recency/success/confidence scoring, and may use an optional feedback-aware reranker. Retrieval quality and behavior across all adapters remain unmeasured.",
+        "sources": [
+          "retrieval",
+          "types"
+        ]
+      },
+      {
+        "text": "The engine provides cache controls, returns retrieval timing, and records embedding latency through the project metrics layer. Source-visible instrumentation does not establish actual latency or resource use.",
+        "sources": [
+          "retrieval",
+          "observability"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Embedding-based retrieval and ranking are visible in source. No answerability or abstention probes were run.",
+        "sources": [
+          "retrieval",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Typed records and the README describe a learning cycle, but no explicit correction workload or stale-value probes were run.",
+        "sources": [
+          "types",
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The README describes archival and lifecycle operations, but the selected storage interface did not establish a uniform deletion contract. No post-deletion probes were run.",
+        "sources": [
+          "readme",
+          "storage",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Project, agent, inherited-agent and workflow scope inputs are visible. No forbidden cross-scope probes were run and all backend enforcement paths were not inspected.",
+        "sources": [
+          "types",
+          "retrieval",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Verification statuses and record-level source fields exist, but claim-level source citations were not established or adjudicated.",
+        "sources": [
+          "types",
+          "verification",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The engine contains timing and embedding metric hooks. No end-to-end latency or delayed write-visibility measurements were collected.",
+        "sources": [
+          "retrieval",
+          "observability",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No provider usage, cost, database-size, or bytes-per-record measurements were collected.",
+        "sources": [
+          "sqlite",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code and documentation",
+        "evidence": "SQLite/FAISS organization, NumPy fallback, query caching, configurable ranking, cache statistics, embedding timing, and metrics/tracing/logging hooks are visible in source. They are not performance results.",
+        "sources": [
+          "sqlite",
+          "retrieval",
+          "observability"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded review inspected the official README and selected current source for record types, the storage interface and SQLite backend, retrieval, verification, and observability. It did not inspect every learning/consolidation path, adapter, migration, MCP operation, or database policy.",
+        "sources": [
+          "readme",
+          "types",
+          "storage",
+          "sqlite",
+          "retrieval",
+          "verification",
+          "observability"
+        ]
+      },
+      {
+        "text": "The selected evidence cannot establish extraction accuracy, retrieval quality, consistent correction and deletion semantics, isolation across all backends, claim-level evidence support, runtime latency, token use, cost, or storage efficiency. No runtime, benchmark workload, or tests were run.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status",
+          "retrieval",
+          "storage"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No ALMA runtime, benchmark workload, or tests were executed. Project metric definitions, fixture, and execution status are protocol/status references only; they are not ALMA results.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ]
+  }
+}

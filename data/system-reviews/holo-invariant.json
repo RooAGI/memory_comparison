@@ -1,0 +1,333 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 304,
+    "slug": "holo-invariant",
+    "name": "HOLO-Invariant",
+    "repository": "https://github.com/Deathburgerz013/HOLO-Invariant",
+    "listed_repository": "https://github.com/Deathburgerz013/HOLO-Invariant",
+    "branch": "main",
+    "revision": "88e54be7b7764f2ee6d318f97e3bfd946ccad4a2",
+    "reviewed_at": "2026-11-25T23:23:23Z",
+    "review_timezone": "UTC (checked 2026-11-25 15:23:23 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "HOLO-Invariant is a Python continuity framework whose core memory path is a local append-only, hash-linked JSONL chain with replay and search. Separate receipts represent corrections, and a service facade gates appends with target-bound authorization. This is a source review, not a runtime or benchmark result.",
+    "atlas_locator": {
+      "ordinal": 304,
+      "name": "HOLO-Invariant",
+      "slug": "holo-invariant",
+      "listed_repository": "https://github.com/Deathburgerz013/HOLO-Invariant",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/holo-invariant.md",
+      "revision": "1dd96b3a3ec8f8491a77c411b1848fe76f0e8bab"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/Deathburgerz013/HOLO-Invariant/blob/88e54be7b7764f2ee6d318f97e3bfd946ccad4a2/README.md",
+      "checked_urls": [
+        "https://github.com/Deathburgerz013/HOLO-Invariant/blob/88e54be7b7764f2ee6d318f97e3bfd946ccad4a2/README.md"
+      ],
+      "note": "Checked the official README at the reviewed commit; it publishes no contact email. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/Deathburgerz013/HOLO-Invariant/blob/88e54be7b7764f2ee6d318f97e3bfd946ccad4a2/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/Deathburgerz013/HOLO-Invariant/blob/88e54be7b7764f2ee6d318f97e3bfd946ccad4a2/README.md"
+    ],
+    "contact_email_note": "The official pinned README was checked and publishes no contact email.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[303], ordinal 304; identity, explicit locator, Atlas attribution",
+        "url": "../memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/holo-invariant.md",
+        "symbol": "Pinned roster attribution for identity and locator only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/holo-invariant.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository page",
+        "path": "GitHub repository",
+        "symbol": "Canonical Deathburgerz013/HOLO-Invariant; default branch main",
+        "url": "https://github.com/Deathburgerz013/HOLO-Invariant"
+      },
+      {
+        "id": "head",
+        "label": "Official current branch commit",
+        "path": "GitHub commits API",
+        "symbol": "Current main head 88e54be7b7764f2ee6d318f97e3bfd946ccad4a2; commit timestamp 2026-11-25T21:43:51Z",
+        "url": "https://api.github.com/repos/Deathburgerz013/HOLO-Invariant/commits/main"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project scope, architectural boundary, memory/continuity claims, limitations, CLI and integrations",
+        "url": "https://github.com/Deathburgerz013/HOLO-Invariant/blob/88e54be7b7764f2ee6d318f97e3bfd946ccad4a2/README.md"
+      },
+      {
+        "id": "core",
+        "label": "Pinned HoloChain implementation",
+        "path": "holosim/core.py",
+        "symbol": "Canonical hash, full-chain verification, append transaction, state/review/health and prune-suggestion behavior",
+        "url": "https://github.com/Deathburgerz013/HOLO-Invariant/blob/88e54be7b7764f2ee6d318f97e3bfd946ccad4a2/holosim/core.py"
+      },
+      {
+        "id": "replay",
+        "label": "Pinned replay and search engine",
+        "path": "holosim/replay.py",
+        "symbol": "Verified replay, range/latest/timeline and bounded decoded substring search",
+        "url": "https://github.com/Deathburgerz013/HOLO-Invariant/blob/88e54be7b7764f2ee6d318f97e3bfd946ccad4a2/holosim/replay.py"
+      },
+      {
+        "id": "service",
+        "label": "Pinned service facade",
+        "path": "holosim/service.py",
+        "symbol": "Service append authorization bound to action and content digest; replay, search, status, optional SQLite slot mirror",
+        "url": "https://github.com/Deathburgerz013/HOLO-Invariant/blob/88e54be7b7764f2ee6d318f97e3bfd946ccad4a2/holosim/service.py"
+      },
+      {
+        "id": "correction",
+        "label": "Pinned correction receipt builder",
+        "path": "holosim/correction.py",
+        "symbol": "Version-bound correction receipt, required reason and unique evidence receipt hashes; no truth or write authority",
+        "url": "https://github.com/Deathburgerz013/HOLO-Invariant/blob/88e54be7b7764f2ee6d318f97e3bfd946ccad4a2/holosim/correction.py"
+      },
+      {
+        "id": "implementation_map",
+        "label": "Pinned implementation map",
+        "path": "docs/HOLO_Invariant_Implementation_Map.md",
+        "symbol": "Descriptive comparison of design claims to selected repository implementation and gaps",
+        "url": "https://github.com/Deathburgerz013/HOLO-Invariant/blob/88e54be7b7764f2ee6d318f97e3bfd946ccad4a2/docs/HOLO_Invariant_Implementation_Map.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Definitions and measurement protocol for memory comparison domains",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "System-neutral cases and expected outcomes; not HOLO-Invariant results",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared benchmark status; not a HOLO-Invariant result",
+        "url": "../../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository describes HOLO-Invariant as a Python framework for continuity, verification, and bounded software work, rather than a hosted memory service or model. The README also presents HoloChain as its local append-only continuity primitive.",
+        "sources": [
+          "repo",
+          "readme",
+          "core"
+        ]
+      },
+      {
+        "text": "The reviewed memory path comprises HoloChain persistence, ReplayEngine read/reconstruction/search, correction receipts, and a HoloService facade with an optional SQLite slot mirror.",
+        "sources": [
+          "core",
+          "replay",
+          "correction",
+          "service"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "HoloChain stores JSONL entries with index, timestamp, content, and SHA-256 hash. The digest covers canonical JSON and the previous hash; load and state methods verify the chain from its configured genesis hash. Append uses a file lock around read, verify, and write.",
+        "sources": [
+          "core"
+        ]
+      },
+      {
+        "text": "ReplayEngine exposes verified entries, reconstructed state, ranges, latest entry, timeline, and substring search. HoloService composes replay, chain, status/operator and provenance helpers, and optionally mirrors an accepted service append into a SQLite slot database.",
+        "sources": [
+          "replay",
+          "service"
+        ]
+      },
+      {
+        "text": "The README separates executable invariant checks, continuity artifacts, and research experiments, and says identity/lineage hashes do not independently establish truth, authorship, relevance, or permission. The inspected review covers the chain/replay path and selected service boundary, not every module in the broad repository.",
+        "sources": [
+          "readme",
+          "implementation_map"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: HoloChain.append appends to the local chain and supports optional compression; the service facade checks a typed operational authorization against the service-append action and canonical content digest before committing. The direct low-level chain API is a separate path from the service authorization gate.",
+        "sources": [
+          "core",
+          "service",
+          "readme"
+        ]
+      },
+      {
+        "text": "Update/correction: correction.py constructs a receipt binding previous, proposed, and resulting hashes to a non-empty reason and one or more unique evidence receipt hashes. It returns a receipt marked not accepted, not claiming truth, and with no write authority; this constructor does not by itself persist or apply a memory correction.",
+        "sources": [
+          "correction"
+        ]
+      },
+      {
+        "text": "Delete: the inspected HoloChain is append-only and has no delete API. Health/relevance helpers produce age-based review or prune suggestions, explicitly without automatic deletion. Full erasure from optional slot stores, backups, exports, and copies was not established.",
+        "sources": [
+          "core",
+          "service"
+        ]
+      },
+      {
+        "text": "Retrieval: ReplayEngine verifies and reads the chain, reconstructs state, and provides a case-insensitive substring search over entries in chain order. Compressed search decoding is bounded per record and rejects malformed, incomplete, or oversized payloads; the inspected search path is not semantic or ranked retrieval.",
+        "sources": [
+          "replay",
+          "core"
+        ]
+      },
+      {
+        "text": "The optional service slot mirror is a separate SQLite persistence path. The inspected code does not establish transactional atomicity across the chain append and slot append.",
+        "sources": [
+          "service"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval, abstention, and negative controls",
+        "status": "unmeasured",
+        "evidence": "Verified chain replay and substring search were inspected; no query set or answerability probes were run.",
+        "sources": [
+          "replay",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "The correction receipt constructor and lineage fields were inspected; no correction workload was run or adjudicated.",
+        "sources": [
+          "correction",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The core is append-only and no deletion probes or copy/backup erasure checks were run.",
+        "sources": [
+          "core",
+          "service",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "The core uses a configured filesystem path and exposes no scope filter; no multi-principal or cross-scope probes were run.",
+        "sources": [
+          "core",
+          "replay",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Correction receipts require evidence receipt hashes, but no output claims were evaluated against retained evidence.",
+        "sources": [
+          "correction",
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No runtime timing or scheduled post-write retrieval probes were collected.",
+        "sources": [
+          "core",
+          "replay",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No model usage, provider cost, or storage measurement was collected for this review.",
+        "sources": [
+          "service",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "A valid hash chain establishes integrity relative to the supplied genesis and retained sequence, but the README says an independently retained checkpoint is needed to compare the current file against an external reference; a truncated tail is not ruled out by an internally valid prefix.",
+        "sources": [
+          "core",
+          "readme"
+        ]
+      },
+      {
+        "text": "The core chain is append-only, and prune_suggestions proposes human review without deleting. Erasure across the optional slot store and external copies is not established.",
+        "sources": [
+          "core",
+          "service"
+        ]
+      },
+      {
+        "text": "Storage is selected by filesystem path; the inspected chain and replay interfaces contain no tenant/user/project key or caller-level read authorization. Cross-user isolation is not established.",
+        "sources": [
+          "core",
+          "replay",
+          "service"
+        ]
+      },
+      {
+        "text": "Correction receipt creation is separate from persistence and application, so the inspected function does not guarantee a complete correction workflow across all configured stores.",
+        "sources": [
+          "correction",
+          "service"
+        ]
+      },
+      {
+        "text": "The reviewed substring search, hashes, and receipts do not establish semantic retrieval quality, truth, evidence sufficiency, or correctness of downstream model output. The repository is broad, and this is not an exhaustive audit.",
+        "sources": [
+          "replay",
+          "correction",
+          "readme",
+          "implementation_map"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No HOLO-Invariant runtime, tests, or benchmark workloads were run. Project metric definitions and fixtures are protocols, not system results."
+    }
+  }
+}

@@ -1,0 +1,290 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 65,
+    "slug": "archiver-rag",
+    "name": "Archiver RAG",
+    "repository": "https://github.com/FernandoJRR/archiver-rag",
+    "listed_repository": "https://github.com/FernandoJRR/archiver-rag",
+    "branch": "main",
+    "revision": "72e6d82bb4d5ec2e978f109d5e8ffba13ba33e1e",
+    "reviewed_at": "2026-11-24T21:16:57Z",
+    "review_timezone": "UTC (2026-11-24 13:16:57 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Archiver RAG is a local memory layer built around an Obsidian Markdown vault, a persistent Chroma vector index, a file watcher, and MCP tools for search and vault operations. This is a pinned source review, not a runtime or benchmark evaluation.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/archiver-rag.md"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/FernandoJRR/archiver-rag/blob/72e6d82bb4d5ec2e978f109d5e8ffba13ba33e1e/README.md",
+      "note": "No contact email is published in the official pinned README or SECURITY.md."
+    },
+    "contact_email": null,
+    "contact_checked_sources": [
+      "https://github.com/FernandoJRR/archiver-rag/blob/72e6d82bb4d5ec2e978f109d5e8ffba13ba33e1e/README.md",
+      "https://github.com/FernandoJRR/archiver-rag/blob/72e6d82bb4d5ec2e978f109d5e8ffba13ba33e1e/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[64], ordinal 65; name, slug, listed repository, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Curated Atlas source attribution only",
+        "path": "content/systems/archiver-rag.md",
+        "symbol": "Roster attribution at revision 19199a4fc249e89c0793be06f0b166b358089ba0",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/archiver-rag.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "",
+        "symbol": "Canonical public repository and default branch main",
+        "url": "https://github.com/FernandoJRR/archiver-rag"
+      },
+      {
+        "id": "head-feed",
+        "label": "Official main branch commit feed",
+        "path": "",
+        "symbol": "Current main head 72e6d82bb4d5ec2e978f109d5e8ffba13ba33e1e",
+        "url": "https://github.com/FernandoJRR/archiver-rag/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream head",
+        "path": "",
+        "symbol": "Full reviewed commit SHA",
+        "url": "https://github.com/FernandoJRR/archiver-rag/commit/72e6d82bb4d5ec2e978f109d5e8ffba13ba33e1e"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned README",
+        "path": "README.md",
+        "symbol": "Product description, architecture, setup, feature behavior, limits, security, tools, and source-reported timing/install sizes",
+        "url": "https://github.com/FernandoJRR/archiver-rag/blob/72e6d82bb4d5ec2e978f109d5e8ffba13ba33e1e/README.md"
+      },
+      {
+        "id": "ingest",
+        "label": "Ingest and synchronization",
+        "path": "archiver_rag/core/ingest.py",
+        "symbol": "Frontmatter parsing, contextual prefixes, Chroma writes, sync, and pruning",
+        "url": "https://github.com/FernandoJRR/archiver-rag/blob/72e6d82bb4d5ec2e978f109d5e8ffba13ba33e1e/archiver_rag/core/ingest.py"
+      },
+      {
+        "id": "search",
+        "label": "Search implementation",
+        "path": "archiver_rag/core/search.py",
+        "symbol": "Semantic query, type prefilter, tag postfilter, threshold, and result count",
+        "url": "https://github.com/FernandoJRR/archiver-rag/blob/72e6d82bb4d5ec2e978f109d5e8ffba13ba33e1e/archiver_rag/core/search.py"
+      },
+      {
+        "id": "rerank",
+        "label": "Graph reranker",
+        "path": "archiver_rag/graph/rerank.py",
+        "symbol": "Cosine-derived score floor, link proximity boost, and hub boost",
+        "url": "https://github.com/FernandoJRR/archiver-rag/blob/72e6d82bb4d5ec2e978f109d5e8ffba13ba33e1e/archiver_rag/graph/rerank.py"
+      },
+      {
+        "id": "db",
+        "label": "Persistent Chroma wrapper",
+        "path": "archiver_rag/core/db.py",
+        "symbol": "Cosine collection, lazy connection, and file-signature reconnect check",
+        "url": "https://github.com/FernandoJRR/archiver-rag/blob/72e6d82bb4d5ec2e978f109d5e8ffba13ba33e1e/archiver_rag/core/db.py"
+      },
+      {
+        "id": "chunker",
+        "label": "Chunker",
+        "path": "archiver_rag/core/chunker.py",
+        "symbol": "500-word chunks with 50-word overlap",
+        "url": "https://github.com/FernandoJRR/archiver-rag/blob/72e6d82bb4d5ec2e978f109d5e8ffba13ba33e1e/archiver_rag/core/chunker.py"
+      },
+      {
+        "id": "embedder",
+        "label": "Embedding model loader",
+        "path": "archiver_rag/core/embedder.py",
+        "symbol": "Lazy sentence-transformers all-MiniLM-L6-v2 embedding model",
+        "url": "https://github.com/FernandoJRR/archiver-rag/blob/72e6d82bb4d5ec2e978f109d5e8ffba13ba33e1e/archiver_rag/core/embedder.py"
+      },
+      {
+        "id": "watcher",
+        "label": "Vault filesystem watcher",
+        "path": "archiver_rag/watcher.py",
+        "symbol": "Filesystem updates/deletes, indexing and auto-linking orchestration",
+        "url": "https://github.com/FernandoJRR/archiver-rag/blob/72e6d82bb4d5ec2e978f109d5e8ffba13ba33e1e/archiver_rag/watcher.py"
+      },
+      {
+        "id": "notes",
+        "label": "Note creation and deletion",
+        "path": "archiver_rag/vault/notes.py",
+        "symbol": "Slugged Markdown creation, metadata, collision behavior, recoverable trash, link sweep, and index prune",
+        "url": "https://github.com/FernandoJRR/archiver-rag/blob/72e6d82bb4d5ec2e978f109d5e8ffba13ba33e1e/archiver_rag/vault/notes.py"
+      },
+      {
+        "id": "mcp",
+        "label": "MCP server and tool contract",
+        "path": "archiver_rag/mcp/server.py",
+        "symbol": "Search result payload, logging, move, health, connections, and note-write tools",
+        "url": "https://github.com/FernandoJRR/archiver-rag/blob/72e6d82bb4d5ec2e978f109d5e8ffba13ba33e1e/archiver_rag/mcp/server.py"
+      },
+      {
+        "id": "linker",
+        "label": "Wikilink graph linker",
+        "path": "archiver_rag/graph/linker.py",
+        "symbol": "Related-section generation, graph edges, pruning and link selection",
+        "url": "https://github.com/FernandoJRR/archiver-rag/blob/72e6d82bb4d5ec2e978f109d5e8ffba13ba33e1e/archiver_rag/graph/linker.py"
+      },
+      {
+        "id": "index-stats",
+        "label": "Index statistics and drift report",
+        "path": "archiver_rag/core/index_stats.py",
+        "symbol": "Counts and missing, orphaned, and stale index source diagnostics",
+        "url": "https://github.com/FernandoJRR/archiver-rag/blob/72e6d82bb4d5ec2e978f109d5e8ffba13ba33e1e/archiver_rag/core/index_stats.py"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Private vulnerability reporting route and unauthenticated HTTP transport boundary",
+        "url": "https://github.com/FernandoJRR/archiver-rag/blob/72e6d82bb4d5ec2e978f109d5e8ffba13ba33e1e/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Proposed recall, abstention, correction, deletion, scope, evidence, latency, tokens, cost, and storage metrics",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Version 1.0.0 synthetic workload; planned cases, not results",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "not_run; no system execution observations or metric values",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The repository is maintained under GitHub account FernandoJRR and presents Archiver RAG as a beta self-hosted Python application that connects an Obsidian vault with MCP-compatible clients. The README says it records information selected by a person or agent, not every conversation automatically.",
+        "sources": ["readme", "repo"]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Markdown files are the readable source of record; Chroma is a persistent derived vector index. Ingest stores source path and note metadata with each chunk, prepends a title/folder/tag/link context prefix, and strips the managed Related section before chunking.",
+        "sources": ["readme", "ingest"]
+      },
+      {
+        "text": "The chunker uses 500-word windows with 50-word overlap. The embedder lazily loads all-MiniLM-L6-v2, and the persistent collection obsidian_vault uses cosine distance.",
+        "sources": ["chunker", "embedder", "db"]
+      },
+      {
+        "text": "Wikilinks are graph edges. An auto-linker maintains a managed Related section; optional folder descriptions and type metadata can guide placement, while automatic placement, folder description refresh, and inbox routing are disabled by default.",
+        "sources": ["linker", "readme"]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "log_note creates a dated Markdown file under a type folder, slugifies the title, and chooses a numeric suffix on collision rather than overwriting. Agent-written and person-written notes share the same file representation.",
+        "sources": ["notes", "readme"]
+      },
+      {
+        "text": "The watcher indexes creates and edits by removing existing chunks for the source path and adding new chunks. Sync uses integer modification times to decide whether a file is newer than the indexed version; same-second edits may therefore be missed by that comparison.",
+        "sources": ["watcher", "ingest"]
+      },
+      {
+        "text": "The CLI deletion path moves notes to .trash, sweeps inbound managed links, and prunes orphaned chunks. The source note remains recoverable, so this is soft deletion rather than verified erasure.",
+        "sources": ["notes", "ingest"]
+      },
+      {
+        "text": "Search embeds the query, retrieves nearest Chroma chunks, filters by optional type before querying and tags after querying, discards candidates below a 0.35 default score floor, and reranks by direct wikilinks and inbound-link hub count. Results include chunk text, source path, metadata, and score components.",
+        "sources": ["search", "rerank", "mcp"]
+      },
+      {
+        "text": "The documented HTTP MCP transport has no built-in authentication or TLS. It binds to loopback by default; an exposed instance relies on a proxy, tunnel, or private network to add access control.",
+        "sources": ["readme", "security"]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "The search path includes a semantic score floor and graph reranking. No answer-quality or abstention probes were run.",
+        "sources": ["search", "rerank"]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Markdown edits reindex a note, but the inspected design has no semantic correction history. No correction probes were run.",
+        "sources": ["notes", "ingest"]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The CLI moves notes to recoverable .trash and prunes their active index chunks. No post-delete probes or copy audits were run.",
+        "sources": ["notes", "ingest"]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "The reviewed path scopes to a configured vault and optional type/tag filters; it has no principal or tenant access predicate. No isolation probes were run.",
+        "sources": ["search", "security"]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Results include retrieved text and source path, but the MCP response has no claim-level citation contract. No response adjudication was run.",
+        "sources": ["mcp", "search"]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Embedding, Chroma retrieval, reranking, and watcher indexing are source-visible. No timings were collected for this review.",
+        "sources": ["embedder", "search", "rerank", "watcher"]
+      },
+      {
+        "domain": "Tokens, cost, and persistent storage",
+        "status": "unmeasured",
+        "evidence": "The project documents local model/install sizes and persistent Chroma storage, but no token, cost, or corpus-attributed storage measurements were collected for this review.",
+        "sources": ["readme", "db"]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded source review does not measure retrieval quality, threshold calibration, watcher behavior under live edits, deletion completeness, access isolation, latency, cost, or storage efficiency.",
+        "sources": ["search", "watcher", "notes", "metrics", "status"]
+      },
+      {
+        "text": "The repository describes the product as beta and lists macOS/Linux support, with Windows unsupported. The MCP HTTP transport has no authentication; deployment safety depends on keeping it local or adding an external access-control layer.",
+        "sources": ["readme", "security"]
+      },
+      {
+        "text": "The inspected note/index pipeline is Markdown-oriented. PDF and other document ingestion is described as future work in the README, not as current behavior.",
+        "sources": ["readme"]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No Archiver RAG runtime, benchmark workload, build, or tests were run for this review. The review records source observations only.",
+        "sources": ["metrics", "fixture", "status"]
+      },
+      {
+        "text": "The project metric definitions and fixture describe planned workload cases; they are not measurements or results for Archiver RAG.",
+        "sources": ["metrics", "fixture", "status"]
+      }
+    ]
+  }
+}

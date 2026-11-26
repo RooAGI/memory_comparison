@@ -1,0 +1,255 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 252,
+    "slug": "gbrain",
+    "name": "GBrain",
+    "repository": "https://github.com/garrytan/gbrain",
+    "listed_repository": "https://github.com/garrytan/gbrain",
+    "branch": "master",
+    "revision": "cab1738a937be08f646db31306796e49dccc83b2",
+    "reviewed_at": "2026-11-25T20:50:57Z",
+    "review_timezone": "UTC (checked local time: 2026-11-25 12:50:57 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "GBrain is a self-hostable memory service and agent integration around canonical Markdown pages, a Postgres-compatible database engine, hybrid search, graph retrieval, optional synthesis, and background maintenance. These documented features are not measured quality results.",
+    "atlas_locator": [
+      "ordinal",
+      "name",
+      "slug",
+      "listed_repository",
+      "repository_status",
+      "source_url",
+      "revision"
+    ],
+    "contact": [
+      "email",
+      "source_url",
+      "checked_urls",
+      "note"
+    ],
+    "contact_email": "support@gbrain.io",
+    "contact_email_source_url": "https://github.com/garrytan/gbrain/blob/cab1738a937be08f646db31306796e49dccc83b2/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/garrytan/gbrain/blob/cab1738a937be08f646db31306796e49dccc83b2/README.md"
+    ],
+    "contact_email_note": "Published in the official pinned README as hosted GBrain support. No commit/profile metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated roster entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[251], ordinal 252; name, slug, explicit repository locator and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/gbrain.md",
+        "symbol": "Curated identity and locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/gbrain.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "Canonical upstream garrytan/gbrain; page identifies master as default branch",
+        "url": "https://github.com/garrytan/gbrain"
+      },
+      {
+        "id": "head",
+        "label": "Official current master commit feed and patch",
+        "path": "master.atom / commit patch",
+        "symbol": "Official feed identifies full current head cab1738a937be08f646db31306796e49dccc83b2; matching official commit patch",
+        "url": "https://github.com/garrytan/gbrain/commit/cab1738a937be08f646db31306796e49dccc83b2"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Architecture, canonical files, engines, memory workflow, search, synthesis, provider boundary, limitations and contact email",
+        "url": "https://github.com/garrytan/gbrain/blob/cab1738a937be08f646db31306796e49dccc83b2/README.md"
+      },
+      {
+        "id": "engine",
+        "label": "Pinned engine interface",
+        "path": "src/core/engine.ts",
+        "symbol": "Shared BrainEngine persistence/search/graph contract; inspected current source at reviewed SHA",
+        "url": "https://github.com/garrytan/gbrain/blob/cab1738a937be08f646db31306796e49dccc83b2/src/core/engine.ts"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation domains and metric definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned evaluation fixture definition",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Initial benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project-level execution status; not a GBrain measurement",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README identifies Garry Tan as the builder and describes GBrain as the production brain behind his agent deployments. The repository provides a CLI/server and MCP integration around a brain database and canonical Markdown content; this review does not infer other maintainer identities.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README describes PGLite as the zero-configuration Postgres-compatible personal engine and Postgres with pgvector for shared, larger, or multi-machine brains. Both implement a shared BrainEngine contract. The Rust engine is experimental and requires explicit configuration; the README notes some SQL-dependent operations are unavailable on it.",
+        "sources": [
+          "readme",
+          "engine"
+        ]
+      },
+      {
+        "text": "Markdown files are canonical for file-backed knowledge, with the database serving as a rebuildable index. Database-only content, unresolved facts, history, and operational state require database backup. A brain is a database; sources are repositories mounted within it.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "**Write and import.** The README documents explicit memory writes, Markdown import/sync, and optional signal capture after opt-in. It distinguishes source ingestion from scheduled maintenance and says Git-backed sync reads committed files, while ordinary folders can be imported without Git. The engine interface establishes the shared persistence abstraction but this review did not trace every operation through both engine implementations.",
+        "sources": [
+          "readme",
+          "engine"
+        ]
+      },
+      {
+        "text": "**Update and deletion.** The README says deleting canonical files results in soft deletion in the database index. It distinguishes file-backed content from database-only state such as unresolved facts and history, and does not establish physical erasure from backups, embeddings, caches, or every derived copy.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "**Retrieval.** The README distinguishes raw search from think: search returns ranked source pages without generation; think synthesizes a cited response with a gap statement. It documents hybrid keyword/vector scoring, reciprocal-rank fusion, source-tier boosting, and reranking. It warns that rebuilding indexes and bounded vector scans can make results incomplete. Configured embedding and reranking providers may receive text; keyless mode is keyword-only, and synthesis needs a configured chat capability.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "**Scope.** The README describes brain/source separation, source routing, and personal or shared deployments. The engine interface and documentation are not an adversarial isolation test; this review did not exercise remote roles or cross-source reads.",
+        "sources": [
+          "readme",
+          "engine"
+        ]
+      },
+      {
+        "text": "**Provenance.** The README documents citations to source pages in synthesized answers and says extracted graph edges are evidence to inspect rather than proof. This review did not adjudicate generated answers against their cited sources.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "evidence": "Search and synthesis paths are documented; no query workload was scored.",
+        "status": "unmeasured",
+        "sources": [
+          "readme",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "evidence": "Page and source update paths are documented; no correction workload was run.",
+        "status": "unmeasured",
+        "sources": [
+          "readme",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "evidence": "File deletion is documented as a soft delete; no post-delete probes were run.",
+        "status": "unmeasured",
+        "sources": [
+          "readme",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "evidence": "Brain/source organization is documented; no cross-scope workload was run.",
+        "status": "unmeasured",
+        "sources": [
+          "readme",
+          "engine",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "evidence": "Synthesis is documented to cite pages and report gaps; no answers were adjudicated.",
+        "status": "unmeasured",
+        "sources": [
+          "readme",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "evidence": "Search, indexing, and maintenance are documented; no timings were collected.",
+        "status": "unmeasured",
+        "sources": [
+          "readme",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "evidence": "Optional providers and storage modes are documented; no resource measurements were collected.",
+        "status": "unmeasured",
+        "sources": [
+          "readme",
+          "metrics"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a pinned README and interface review, not a runtime, security, or quality assessment. The repository changes rapidly; the engine contract confirms a shared interface but not backend parity or runtime semantics for every operation.",
+        "sources": [
+          "readme",
+          "engine"
+        ]
+      },
+      {
+        "text": "The README itself warns that indexing readiness and bounded vector scans affect search completeness. Provider configuration changes whether retrieval uses only local keyword search or external embeddings, reranking, and synthesis.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "Physical deletion across backups and derived data, answer correctness, citation support, and adversarial scope isolation remain unknown without targeted tracing and execution.",
+        "sources": [
+          "readme",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json",
+      "note": "No GBrain runtime, tests, or benchmark workload was executed for this review."
+    }
+  }
+}

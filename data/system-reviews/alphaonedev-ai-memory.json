@@ -1,0 +1,361 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "alphaonedev-ai-memory",
+    "name": "AlphaOne ai-memory",
+    "repository": "https://github.com/alphaonedev/ai-memory-mcp",
+    "branch": "main",
+    "revision": "0f111b36908c8e5dbc7ff21a241aa497837cb4d0",
+    "reviewed_at": "2026-11-24T20:22:39Z",
+    "review_timezone": "UTC (2026-11-24 12:22:39 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":"security@alpha-one.mobi","source_url":"https://github.com/alphaonedev/ai-memory-mcp/blob/0f111b36908c8e5dbc7ff21a241aa497837cb4d0/SECURITY.md","note":"Published in the official security policy."},
+    "summary": "A self-hosted Rust agent-memory library and daemon with MCP, HTTP, and CLI surfaces, using SQLite or PostgreSQL plus Apache AGE and optional vector retrieval. This is a bounded source review, not a runtime evaluation.",
+    "atlas_locator": {
+      "ordinal": 50,
+      "name": "AlphaOne ai-memory",
+      "slug": "alphaonedev-ai-memory",
+      "listed_repository": "https://github.com/alphaonedev/ai-memory-mcp",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/alphaonedev-ai-memory.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": "security@alpha-one.mobi",
+    "contact_email_source_url": "https://github.com/alphaonedev/ai-memory-mcp/blob/0f111b36908c8e5dbc7ff21a241aa497837cb4d0/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/alphaonedev/ai-memory-mcp/blob/0f111b36908c8e5dbc7ff21a241aa497837cb4d0/SECURITY.md"
+    ],
+    "contact_email_note": "The official SECURITY.md publishes this email for vulnerability reports.",
+    "sources": [
+      {
+        "id": "repository",
+        "label": "Official repository metadata",
+        "path": "repository",
+        "symbol": "canonical alphaonedev/ai-memory-mcp; default branch main",
+        "url": "https://api.github.com/repos/alphaonedev/ai-memory-mcp"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed full commit",
+        "path": "commit",
+        "symbol": "0f111b36908c8e5dbc7ff21a241aa497837cb4d0",
+        "url": "https://github.com/alphaonedev/ai-memory-mcp/commit/0f111b36908c8e5dbc7ff21a241aa497837cb4d0"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "project architecture, memory APIs, attestation scope, recall behavior, source-published benchmark claims",
+        "url": "https://github.com/alphaonedev/ai-memory-mcp/blob/0f111b36908c8e5dbc7ff21a241aa497837cb4d0/README.md"
+      },
+      {
+        "id": "limits",
+        "label": "Architecture limits",
+        "path": "docs/ARCHITECTURAL_LIMITS.md",
+        "symbol": "documented system boundaries",
+        "url": "https://github.com/alphaonedev/ai-memory-mcp/blob/0f111b36908c8e5dbc7ff21a241aa497837cb4d0/docs/ARCHITECTURAL_LIMITS.md"
+      },
+      {
+        "id": "model",
+        "label": "Memory model",
+        "path": "src/models/memory.rs",
+        "symbol": "record shape, kinds, evidence/provenance fields",
+        "url": "https://github.com/alphaonedev/ai-memory-mcp/blob/0f111b36908c8e5dbc7ff21a241aa497837cb4d0/src/models/memory.rs"
+      },
+      {
+        "id": "sqlite",
+        "label": "SQLite migrations",
+        "path": "src/storage/migrations.rs",
+        "symbol": "SQLite schema and indexes",
+        "url": "https://github.com/alphaonedev/ai-memory-mcp/blob/0f111b36908c8e5dbc7ff21a241aa497837cb4d0/src/storage/migrations.rs"
+      },
+      {
+        "id": "pgschema",
+        "label": "PostgreSQL schema",
+        "path": "src/store/postgres_schema.sql",
+        "symbol": "PostgreSQL schema",
+        "url": "https://github.com/alphaonedev/ai-memory-mcp/blob/0f111b36908c8e5dbc7ff21a241aa497837cb4d0/src/store/postgres_schema.sql"
+      },
+      {
+        "id": "store",
+        "label": "MCP store handler",
+        "path": "src/mcp/tools/store/mod.rs",
+        "symbol": "store request contract and staged write pipeline",
+        "url": "https://github.com/alphaonedev/ai-memory-mcp/blob/0f111b36908c8e5dbc7ff21a241aa497837cb4d0/src/mcp/tools/store/mod.rs"
+      },
+      {
+        "id": "update",
+        "label": "MCP update handler",
+        "path": "src/mcp/tools/update.rs",
+        "symbol": "partial update, expected version and edit source",
+        "url": "https://github.com/alphaonedev/ai-memory-mcp/blob/0f111b36908c8e5dbc7ff21a241aa497837cb4d0/src/mcp/tools/update.rs"
+      },
+      {
+        "id": "delete",
+        "label": "MCP delete handler",
+        "path": "src/mcp/tools/delete.rs",
+        "symbol": "hard delete contract and permission/audit handling",
+        "url": "https://github.com/alphaonedev/ai-memory-mcp/blob/0f111b36908c8e5dbc7ff21a241aa497837cb4d0/src/mcp/tools/delete.rs"
+      },
+      {
+        "id": "forget",
+        "label": "MCP forget handler",
+        "path": "src/mcp/tools/forget.rs",
+        "symbol": "bulk forget behavior",
+        "url": "https://github.com/alphaonedev/ai-memory-mcp/blob/0f111b36908c8e5dbc7ff21a241aa497837cb4d0/src/mcp/tools/forget.rs"
+      },
+      {
+        "id": "recall",
+        "label": "MCP recall handler",
+        "path": "src/mcp/tools/recall.rs",
+        "symbol": "ranked retrieval, filters, visibility, budget and response metadata",
+        "url": "https://github.com/alphaonedev/ai-memory-mcp/blob/0f111b36908c8e5dbc7ff21a241aa497837cb4d0/src/mcp/tools/recall.rs"
+      },
+      {
+        "id": "search",
+        "label": "MCP search handler",
+        "path": "src/mcp/tools/search.rs",
+        "symbol": "exact keyword search and scope filtering",
+        "url": "https://github.com/alphaonedev/ai-memory-mcp/blob/0f111b36908c8e5dbc7ff21a241aa497837cb4d0/src/mcp/tools/search.rs"
+      },
+      {
+        "id": "visibility",
+        "label": "Visibility policy",
+        "path": "src/visibility.rs",
+        "symbol": "caller and private-row visibility",
+        "url": "https://github.com/alphaonedev/ai-memory-mcp/blob/0f111b36908c8e5dbc7ff21a241aa497837cb4d0/src/visibility.rs"
+      },
+      {
+        "id": "observations",
+        "label": "Recall observations handler",
+        "path": "src/mcp/tools/recall_observations.rs",
+        "symbol": "retrieval feedback surface",
+        "url": "https://github.com/alphaonedev/ai-memory-mcp/blob/0f111b36908c8e5dbc7ff21a241aa497837cb4d0/src/mcp/tools/recall_observations.rs"
+      },
+      {
+        "id": "toon",
+        "label": "TOON serializer",
+        "path": "src/toon.rs",
+        "symbol": "compact response serialization",
+        "url": "https://github.com/alphaonedev/ai-memory-mcp/blob/0f111b36908c8e5dbc7ff21a241aa497837cb4d0/src/toon.rs"
+      },
+      {
+        "id": "provenance",
+        "label": "Provenance guide",
+        "path": "docs/provenance.md",
+        "symbol": "source citations, URI, span evidence",
+        "url": "https://github.com/alphaonedev/ai-memory-mcp/blob/0f111b36908c8e5dbc7ff21a241aa497837cb4d0/docs/provenance.md"
+      },
+      {
+        "id": "attestation",
+        "label": "Attestation guide",
+        "path": "docs/attestation.md",
+        "symbol": "agent identity and attestation documentation",
+        "url": "https://github.com/alphaonedev/ai-memory-mcp/blob/0f111b36908c8e5dbc7ff21a241aa497837cb4d0/docs/attestation.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "published vulnerability reporting contact security@alpha-one.mobi",
+        "url": "https://github.com/alphaonedev/ai-memory-mcp/blob/0f111b36908c8e5dbc7ff21a241aa497837cb4d0/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "benchmark domains; no review run",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Project execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "shared execution status; no AlphaOne measurement",
+        "url": "../../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned evaluation workload; not run",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated system roster",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 50 identity, slug, locator, attribution only",
+        "url": "../memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas attribution source",
+        "path": "content/systems/alphaonedev-ai-memory.md",
+        "symbol": "identity attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/alphaonedev-ai-memory.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository identifies AlphaOne LLC. The project is a self-hosted memory library/daemon with MCP, HTTP, and CLI interfaces, not an agent runtime.",
+        "sources": [
+          "readme",
+          "security"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README documents embedded SQLite and PostgreSQL plus Apache AGE backends behind the memory API. The inspected Memory model carries namespace, content, lifecycle and typed-memory fields along with optional identity and evidence metadata; both backend schemas are represented in source.",
+        "sources": [
+          "readme",
+          "model",
+          "sqlite",
+          "pgschema"
+        ]
+      },
+      {
+        "text": "The MCP store path is split across validation, transport, synthesis/classification and embedding modules; reads are exposed through recall and exact-keyword search tools.",
+        "sources": [
+          "store",
+          "recall",
+          "search"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "memory_store accepts content and namespace plus typed metadata, source and evidence fields. The README documents HTTP attestation as required by default while MCP and CLI writes remain operator-as-actor paths unless strict mode is enabled.",
+        "sources": [
+          "store",
+          "readme",
+          "security"
+        ]
+      },
+      {
+        "text": "memory_update supports partial changes and an expected-version precondition. The tool contract states omitted fields are preserved and tier movement is monotone-only; all storage conflict paths were not traced.",
+        "sources": [
+          "update"
+        ]
+      },
+      {
+        "text": "memory_delete is documented as a hard delete of the row and related embedding, FTS entry and links; bulk forget archives first. Complete cleanup across replicas and backups was not established.",
+        "sources": [
+          "delete",
+          "forget"
+        ]
+      },
+      {
+        "text": "memory_recall ranks context matches and exposes candidate/reranker metadata, while memory_search is deterministic exact keyword AND search. A documented backend difference remains for tier filtering on one legacy SQLite path.",
+        "sources": [
+          "recall",
+          "search"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Retrieval paths are visible in code. No answerable or unsupported-query set was run.",
+        "sources": [
+          "recall",
+          "search",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Partial update and version preconditions exist; no correction or stale-value probes were run.",
+        "sources": [
+          "update",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The delete contract names row and index cleanup, but no deletion leakage checks were run across stores, backups, or exports.",
+        "sources": [
+          "delete",
+          "forget",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Namespace and caller-visibility predicates are source-visible; no cross-scope probes were run.",
+        "sources": [
+          "visibility",
+          "recall",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Citation, URI, and source-span fields are available, but no factual claim support adjudication was performed.",
+        "sources": [
+          "model",
+          "provenance",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Recall returns candidate and reranker metadata; no runtime latency or write-to-recall timing was measured.",
+        "sources": [
+          "recall",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Compact serialization and backend choices are source-visible; no token, cost, or storage measurements were collected.",
+        "sources": [
+          "toon",
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code and documentation",
+        "evidence": "The code exposes FTS/HNSW candidate counts, retrieval mode, reranker state, token-budget controls, compact serialization, and recall feedback. These are design observations, not performance results.",
+        "sources": [
+          "recall",
+          "toon",
+          "observations"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This was a bounded source inspection. It did not exhaustively inspect backend parity, route authorization, federation, hooks, archive/restore, or daemon policy. No system, tests, or benchmark workloads were run.",
+        "sources": [
+          "limits",
+          "readme",
+          "security"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "metrics_document": "../../METRICS.md",
+      "result_record": "../../results/initial-baselines-status.json",
+      "fixture": "../../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

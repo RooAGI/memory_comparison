@@ -1,0 +1,333 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 257,
+    "slug": "gini-agent",
+    "name": "Gini Agent",
+    "repository": "https://github.com/Open-Curiosity/gini-agent",
+    "listed_repository": "https://github.com/Open-Curiosity/gini-agent",
+    "branch": "main",
+    "revision": "6c5d85ed0ecd7fe8567124bd4890b16c329970d8",
+    "reviewed_at": "2026-11-25T21:01:10Z",
+    "review_timezone": "UTC (checked local time: 2026-11-25 13:01:10 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Gini Agent's Hindsight memory subsystem stores structured units in per-instance SQLite and retrieves them through semantic, lexical, graph, and temporal channels. This is a source review, not a measured quality result.",
+    "atlas_locator": [
+      "ordinal",
+      "name",
+      "slug",
+      "listed_repository",
+      "repository_status",
+      "source_url",
+      "revision"
+    ],
+    "contact": [
+      "email",
+      "source_url",
+      "checked_urls",
+      "note"
+    ],
+    "contact_email": "security@lilaclabs.ai",
+    "contact_email_source_url": "https://github.com/Open-Curiosity/gini-agent/blob/6c5d85ed0ecd7fe8567124bd4890b16c329970d8/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/Open-Curiosity/gini-agent/blob/6c5d85ed0ecd7fe8567124bd4890b16c329970d8/SECURITY.md"
+    ],
+    "contact_email_note": "Published in the official pinned SECURITY.md for vulnerability reports; no commit/profile metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated roster entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[256], ordinal 257; name, slug, explicit repository locator and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/gini-agent.md",
+        "symbol": "Curated identity and locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/gini-agent.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "Canonical Open-Curiosity/gini-agent; page identifies main as default branch",
+        "url": "https://github.com/Open-Curiosity/gini-agent"
+      },
+      {
+        "id": "head",
+        "label": "Official latest commit patch",
+        "path": "commit patch",
+        "symbol": "Repository page's latest commit patch resolves full head SHA 6c5d85ed0ecd7fe8567124bd4890b16c329970d8",
+        "url": "https://github.com/Open-Curiosity/gini-agent/commit/6c5d85ed0ecd7fe8567124bd4890b16c329970d8"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project/runtime description, current documentation index and memory surfaces",
+        "url": "https://github.com/Open-Curiosity/gini-agent/blob/6c5d85ed0ecd7fe8567124bd4890b16c329970d8/README.md"
+      },
+      {
+        "id": "memorydoc",
+        "label": "Pinned memory guide",
+        "path": "docs/memory.md",
+        "symbol": "Hindsight model, storage, scope, operations, provenance, providers and surfaces",
+        "url": "https://github.com/Open-Curiosity/gini-agent/blob/6c5d85ed0ecd7fe8567124bd4890b16c329970d8/docs/memory.md"
+      },
+      {
+        "id": "retain",
+        "label": "Pinned retain implementation",
+        "path": "packages/runtime/src/memory/retain.ts",
+        "symbol": "Agent requirement, extraction, temporal normalization, embeddings, insertion, audit/trace and best-effort failure path",
+        "url": "https://github.com/Open-Curiosity/gini-agent/blob/6c5d85ed0ecd7fe8567124bd4890b16c329970d8/packages/runtime/src/memory/retain.ts"
+      },
+      {
+        "id": "recall",
+        "label": "Pinned recall implementation",
+        "path": "packages/runtime/src/memory/recall.ts",
+        "symbol": "Required agent scope, four channels, RRF, top-N reranking, token packing and channel diagnostics",
+        "url": "https://github.com/Open-Curiosity/gini-agent/blob/6c5d85ed0ecd7fe8567124bd4890b16c329970d8/packages/runtime/src/memory/recall.ts"
+      },
+      {
+        "id": "db",
+        "label": "Pinned memory database implementation",
+        "path": "packages/runtime/src/state/memory-db.ts",
+        "symbol": "SQLite memory schema, memory bank/unit fields, networks, links and state probe",
+        "url": "https://github.com/Open-Curiosity/gini-agent/blob/6c5d85ed0ecd7fe8567124bd4890b16c329970d8/packages/runtime/src/state/memory-db.ts"
+      },
+      {
+        "id": "reflect",
+        "label": "Pinned reflection implementation",
+        "path": "packages/runtime/src/memory/reflect.ts",
+        "symbol": "Recall-conditioned response and opinion extraction/storage",
+        "url": "https://github.com/Open-Curiosity/gini-agent/blob/6c5d85ed0ecd7fe8567124bd4890b16c329970d8/packages/runtime/src/memory/reflect.ts"
+      },
+      {
+        "id": "reinforce",
+        "label": "Pinned reinforcement implementation",
+        "path": "packages/runtime/src/memory/reinforce.ts",
+        "symbol": "Candidate selection and confidence updates from structured verdicts",
+        "url": "https://github.com/Open-Curiosity/gini-agent/blob/6c5d85ed0ecd7fe8567124bd4890b16c329970d8/packages/runtime/src/memory/reinforce.ts"
+      },
+      {
+        "id": "embedding",
+        "label": "Pinned embedding status and re-embedding implementation",
+        "path": "packages/runtime/src/memory/embedding.ts",
+        "symbol": "Provider/cache/model-mismatch status and re-embed batching/audit",
+        "url": "https://github.com/Open-Curiosity/gini-agent/blob/6c5d85ed0ecd7fe8567124bd4890b16c329970d8/packages/runtime/src/memory/embedding.ts"
+      },
+      {
+        "id": "temporal",
+        "label": "Pinned temporal parser",
+        "path": "packages/runtime/src/memory/temporal.ts",
+        "symbol": "Supported absolute/relative patterns and null-on-unrecognized behavior",
+        "url": "https://github.com/Open-Curiosity/gini-agent/blob/6c5d85ed0ecd7fe8567124bd4890b16c329970d8/packages/runtime/src/memory/temporal.ts"
+      },
+      {
+        "id": "security",
+        "label": "Pinned official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Published vulnerability contact security@lilaclabs.ai",
+        "url": "https://github.com/Open-Curiosity/gini-agent/blob/6c5d85ed0ecd7fe8567124bd4890b16c329970d8/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation domains and metric definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned evaluation fixture definition",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Initial benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project-level execution status; not a Gini Agent measurement",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents Gini Agent as a personal agent runtime with a Bun gateway and multiple clients. Its memory guide distinguishes Hindsight from always-injected USER.md and SOUL.md identity surfaces; this review focuses on Hindsight.",
+        "sources": [
+          "readme",
+          "memorydoc"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The memory guide places Hindsight in a per-instance SQLite database and model cache in the instance/models directories. The state module defines banks and memory units with world, experience, opinion, and observation networks; temporal, semantic, entity, and causal links; agent/bank scope; provenance and embedding fields.",
+        "sources": [
+          "memorydoc",
+          "db"
+        ]
+      },
+      {
+        "text": "Retain extracts structured facts, normalizes supported temporal expressions, embeds narratives, inserts units, resolves entities, and creates links. Reflection reuses recall to generate responses and can store opinions; reinforcement updates opinion confidence using structured assessments.",
+        "sources": [
+          "retain",
+          "reflect",
+          "reinforce"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "**Writes.** Automatic retain runs at the end of chat tasks; CLI and API surfaces are documented. The implementation requires agentId, uses a structured extraction step, and stores source task/session and embedding metadata when supplied. Extraction quality was not assessed.",
+        "sources": [
+          "memorydoc",
+          "retain"
+        ]
+      },
+      {
+        "text": "**Updates and correction.** The inspected retain path inserts extracted units. Reflection can store opinions, and reinforcement can change opinion confidence; the reviewed documentation/source does not establish a general fact replacement or stale-value correction workflow.",
+        "sources": [
+          "retain",
+          "reflect",
+          "reinforce"
+        ]
+      },
+      {
+        "text": "**Deletion.** The memory guide says the Memory page permits pruning individual units. The reviewed documentation/source did not establish physical erasure, tombstones, or cleanup of derived copies and backups.",
+        "sources": [
+          "memorydoc"
+        ]
+      },
+      {
+        "text": "**Retrieval.** Recall combines semantic vector search, SQLite FTS5 BM25, graph spreading activation, and temporal range matching, fuses rankings, reranks top candidates, and applies a default token budget. Semantic search filters vectors by active model; the guide documents re-embedding after provider changes.",
+        "sources": [
+          "recall",
+          "memorydoc",
+          "embedding"
+        ]
+      },
+      {
+        "text": "**Scope.** Retain and recall require an agentId. Recall filters each channel by active agent, while the guide describes one bank per agent. This is code evidence, not an adversarial isolation measurement.",
+        "sources": [
+          "memorydoc",
+          "retain",
+          "recall"
+        ]
+      },
+      {
+        "text": "**Provenance.** The guide documents source task, trace, and embedding metadata; retain emits audit/trace records. Recall reports channel names and subscores for surfaced units. Citation support was not adjudicated.",
+        "sources": [
+          "memorydoc",
+          "retain",
+          "recall"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "evidence": "Four retrieval channels are implemented; no query workload was scored.",
+        "status": "unmeasured",
+        "sources": [
+          "recall",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "evidence": "Opinion confidence reinforcement exists; no fact correction workload was run.",
+        "status": "unmeasured",
+        "sources": [
+          "reinforce",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "evidence": "Individual-unit pruning is documented; no deletion probes were run.",
+        "status": "unmeasured",
+        "sources": [
+          "memorydoc",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "evidence": "Agent IDs are required and filtered in recall; no cross-scope workload was run.",
+        "status": "unmeasured",
+        "sources": [
+          "retain",
+          "recall",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "evidence": "Provenance metadata and recall diagnostics are documented; no claims were adjudicated.",
+        "status": "unmeasured",
+        "sources": [
+          "memorydoc",
+          "retain",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "evidence": "Candidate limits, reranking and automatic retain/recall are documented; no timings were collected.",
+        "status": "unmeasured",
+        "sources": [
+          "recall",
+          "memorydoc",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "evidence": "Token packing and local model cache status are implemented; no resource measurements were collected.",
+        "status": "unmeasured",
+        "sources": [
+          "recall",
+          "embedding",
+          "metrics"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a pinned documentation and source review, not a runtime, security, or quality assessment. Extraction accuracy, contradiction resolution, full authorization behavior, and the semantics of Memory-page pruning were not tested.",
+        "sources": [
+          "memorydoc",
+          "retain",
+          "recall"
+        ]
+      },
+      {
+        "text": "The temporal parser supports a bounded list of absolute and relative expressions and returns null for unrecognized input. Provider/model configuration can affect extraction and semantic recall.",
+        "sources": [
+          "temporal",
+          "memorydoc"
+        ]
+      },
+      {
+        "text": "No Gini Agent runtime, tests, or benchmark workload was run. No measured metric values are available from this review.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Gini Agent runtime, tests, or benchmark workload was executed for this review. Project metric definitions, fixture, and status files are not Gini Agent measurements.",
+      "metric_definitions": "../METRICS.md",
+      "fixture": "../fixtures/memory-benchmark-v1.json",
+      "result_record": "../results/initial-baselines-status.json"
+    }
+  }
+}

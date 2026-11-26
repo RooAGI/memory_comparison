@@ -1,0 +1,343 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "aoci-code",
+    "name": "AOCI-CODE",
+    "repository": "https://github.com/aoci-spec/aoci-code",
+    "branch": "main",
+    "revision": "d28c856699fec9724b7824ac8cec421f4de0cc00",
+    "reviewed_at": "2026-11-24T21:06:38Z",
+    "review_timezone": "UTC (2026-11-24 13:06:38 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "AOCI-CODE is a local Go CLI and stdio MCP server that helps a coding agent maintain a Git-versioned, plain-text map of a repository. Its current Cognition Volumes workflow serves selected index contents, validates model-authored updates against repository state, and publishes formal index changes through guarded transactions; this review did not measure runtime quality or performance.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/aoci-code.md"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/aoci-spec/aoci-code/blob/d28c856699fec9724b7824ac8cec421f4de0cc00/SECURITY.md",
+      "checked_urls": [
+        "https://github.com/aoci-spec/aoci-code/blob/d28c856699fec9724b7824ac8cec421f4de0cc00/README.md",
+        "https://github.com/aoci-spec/aoci-code/blob/d28c856699fec9724b7824ac8cec421f4de0cc00/SECURITY.md"
+      ],
+      "note": "No published contact email was found in the official pinned README or security policy. The security policy directs vulnerability reports to GitHub private vulnerability reporting."
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical AOCI-CODE repository",
+        "path": "repository",
+        "symbol": "Public repository page; canonical owner/repository and default branch main",
+        "url": "https://github.com/aoci-spec/aoci-code"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed main head commit",
+        "path": "main head",
+        "symbol": "Full current main SHA d28c856699fec9724b7824ac8cec421f4de0cc00",
+        "url": "https://github.com/aoci-spec/aoci-code/commit/d28c856699fec9724b7824ac8cec421f4de0cc00"
+      },
+      {
+        "id": "readme",
+        "label": "README at reviewed revision",
+        "path": "README.md",
+        "symbol": "Project purpose, local MCP architecture, data assets, operating model and limits",
+        "url": "https://github.com/aoci-spec/aoci-code/blob/d28c856699fec9724b7824ac8cec421f4de0cc00/README.md"
+      },
+      {
+        "id": "volumes",
+        "label": "Cognition Volumes documentation",
+        "path": "docs/cognition-volumes.md",
+        "symbol": "Volume data model, retrieval scopes, write lifecycle, batch limits and known unsupported lifecycle operations",
+        "url": "https://github.com/aoci-spec/aoci-code/blob/d28c856699fec9724b7824ac8cec421f4de0cc00/docs/cognition-volumes.md"
+      },
+      {
+        "id": "overview_code",
+        "label": "Volume Overview handler",
+        "path": "internal/mcptools/tools_read_volumes.go",
+        "symbol": "Scope selection, coherent delivery, chunked Overview body and delivery reliability checks",
+        "url": "https://github.com/aoci-spec/aoci-code/blob/d28c856699fec9724b7824ac8cec421f4de0cc00/internal/mcptools/tools_read_volumes.go"
+      },
+      {
+        "id": "search_code",
+        "label": "Search handler",
+        "path": "internal/mcptools/tools_read_search.go",
+        "symbol": "Keyword/tag search over selected objects, bounded result output and optional ledger timing",
+        "url": "https://github.com/aoci-spec/aoci-code/blob/d28c856699fec9724b7824ac8cec421f4de0cc00/internal/mcptools/tools_read_search.go"
+      },
+      {
+        "id": "write_code",
+        "label": "Atomic batch write path",
+        "path": "internal/mcptools/tools_write_batch.go",
+        "symbol": "Whole-batch planning, validation and atomic formal index write boundary",
+        "url": "https://github.com/aoci-spec/aoci-code/blob/d28c856699fec9724b7824ac8cec421f4de0cc00/internal/mcptools/tools_write_batch.go"
+      },
+      {
+        "id": "remove_code",
+        "label": "Entry removal path",
+        "path": "internal/mcptools/tools_remove.go",
+        "symbol": "Orphan entry removal planning and guarded commit/recovery flow",
+        "url": "https://github.com/aoci-spec/aoci-code/blob/d28c856699fec9724b7824ac8cec421f4de0cc00/internal/mcptools/tools_remove.go"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Security boundaries and private vulnerability reporting; no published email",
+        "url": "https://github.com/aoci-spec/aoci-code/blob/d28c856699fec9724b7824ac8cec421f4de0cc00/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated roster identity and attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 61 name, slug, listed repository locator and Atlas source attribution only; Atlas assessment fields excluded",
+        "url": "../../data/memory-systems.json"
+      },
+      {
+        "id": "atlas_attribution",
+        "label": "Roster-listed Atlas report source",
+        "path": "curated source attribution",
+        "symbol": "Identity/locator attribution only, not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/aoci-code.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The GitHub organization aoci-spec owns the public repository. Its README describes AOCI-CODE as the concrete CLI, local MCP server, and index-maintenance project implementing the broader AOCI method; it is a developer tool used alongside a coding agent, not a hosted memory service. The README also says the model/agent authors semantic entries while the program validates, binds, and governs their application.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The current fresh-init layout has a Root asset (aoci.txt) for repository identity, overview, boundaries, layout, and dependencies; Meta (aoci.meta.txt) for the shared FRAS and tag-authoring protocol; a Code Volume (aoci.code.txt) containing model-authored file entries; and an optional Database Volume (aoci.database.txt) with table entries. Entries are compact text records describing an object's Function, Relations, API, constraints, and tag. The formal text assets are Git-versioned; a Baseline under .aoci binds their managed objects and source digests.",
+        "sources": [
+          "readme",
+          "volumes"
+        ]
+      },
+      {
+        "text": "AOCI-CODE distinguishes the AOCI method/protocol from the Go implementation. In the current Volumes layout, Root and Meta define the dependency closure for each requested scope, while Code and Database are independently selectable object Volumes. The read handler constructs the selected Overview from the Volume bytes and object sequence; an incomplete, stale, or partial delivery is not marked reliable.",
+        "sources": [
+          "volumes",
+          "overview_code"
+        ]
+      },
+      {
+        "text": "The program supplies deterministic scanning, parsing, validation, scope accounting, and transaction handling. The coding agent reads actual source and writes the semantic entry text; the README explicitly describes the tool as not an AST or RAG replacement. The README supports older Legacy indices, but says new initialization uses Cognition Volumes and the Legacy authoring surface is retired in the current release.",
+        "sources": [
+          "readme",
+          "volumes"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write and update: Maintain issues a machine-defined set of objects for the host model to inspect and author. The host submits a complete batch through the update tool. The atomic batch path validates and plans every item on in-memory index text before publication; a failing target means no formal index write, and a successful batch is published under a lock with compare-and-swap and an atomic file write. The batch is bound to machine-issued candidate identities and current source hashes; source drift is refused rather than silently applied.",
+        "sources": [
+          "volumes",
+          "write_code"
+        ]
+      },
+      {
+        "text": "Correction is an authored Entry replacement in the governed index, not a measured claim that an agent will choose the right current meaning. The documentation describes exact target bindings and re-authoring after source or semantic change. The reviewed surface does not establish a temporal fact history or a universal correction/rollback API; general Root/Meta editing and several Volume lifecycle changes are explicitly unsupported.",
+        "sources": [
+          "volumes",
+          "write_code"
+        ]
+      },
+      {
+        "text": "Removal is restricted by the documented and inspected path to an orphan index Entry whose source object is absent (or an explicitly identified ownership repair). It removes the index record through a guarded, recoverable transaction; it does not delete the source file. The docs describe orphan removal in a governed update batch or through the dedicated removal operation. This is not a general memory-forget API for arbitrary current files.",
+        "sources": [
+          "volumes",
+          "remove_code"
+        ]
+      },
+      {
+        "text": "Retrieval: the MCP Overview tool returns the complete requested scope when a coherent snapshot is available, and emits continuation cursors for a chunked delivery. The Volume handler binds continuation to the host session, requested scope, scope identity, and configured chunk size, and fails closed if the cursor or snapshot is invalid. The docs give a default chunk size of 7,000 tokens, configurable from 4,000 to 24,000; a compact check-only response is distinct from a full index delivery.",
+        "sources": [
+          "volumes",
+          "overview_code"
+        ]
+      },
+      {
+        "text": "The Search handler applies keyword and tag filters to the selected Legacy index or Volume objects, labels Volume results with their object references, and caps displayed matches. Get-entries and Overview provide additional MCP read paths. Search is local index lookup, not evidence that the system retrieved the right fact or that an agent used a result correctly.",
+        "sources": [
+          "readme",
+          "search_code",
+          "volumes"
+        ]
+      },
+      {
+        "text": "Scope is repository-oriented: callers select all, project, meta, code, or database, and Root/Meta dependencies are included where required. The repository path is selected by CLI discovery or an explicit --repo. The reviewed code and docs show no per-user or tenant identity in this index scope model; effective access also depends on the local operating-system account and MCP host configuration.",
+        "sources": [
+          "readme",
+          "volumes",
+          "overview_code",
+          "search_code"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Overview and Search provide access to authored repository entries, but no answerable/unanswerable outputs were captured or adjudicated.",
+        "sources": [
+          "overview_code",
+          "search_code",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "The governed update path and source binding are visible; no post-update probes assessed whether an agent answers with a corrected entry or avoids stale content.",
+        "sources": [
+          "write_code",
+          "volumes",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Orphan removal is implemented as a guarded index update; no deletion workflow or post-removal leakage probes were run, and broader copies/backups were not audited.",
+        "sources": [
+          "remove_code",
+          "volumes",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Scope selection and dependencies are visible in source; no forbidden cross-project or cross-Volume probes were performed. Local scope selection does not itself prove an authorization boundary.",
+        "sources": [
+          "overview_code",
+          "search_code",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Entries bind to object identities and source digests and may record relations, but no generated response claims or citations were adjudicated for support or coverage.",
+        "sources": [
+          "write_code",
+          "volumes",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Search code can append operation duration and counts to the optional local Ledger; this is instrumentation, not a timing result. No timed run or write-to-recall probes were performed.",
+        "sources": [
+          "search_code",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "Overview chunk settings expose delivery sizing, but no model token usage or provider cost was collected.",
+        "sources": [
+          "overview_code",
+          "volumes",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The index and Baseline structures are inspectable, but no persistent storage boundary or byte count was measured.",
+        "sources": [
+          "volumes",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a read-only source review at one main-branch SHA. It does not establish runtime correctness, answer quality, security under deployment, reliability, or measured performance. In particular, index-level source hashes and guarded writes do not prove that the prose is semantically correct or that later generated answers cite supporting source passages.",
+        "sources": [
+          "readme",
+          "volumes",
+          "write_code",
+          "metrics"
+        ]
+      },
+      {
+        "text": "The design relies on the host model to read source and author the compact semantic entries. The program checks structure, bindings, governance, and publication; this review did not inspect every authoring and migration path or validate all documented contracts against execution. Search matches an index, and a successful update proves a write path completed, not that the whole index is semantically current.",
+        "sources": [
+          "readme",
+          "volumes",
+          "search_code"
+        ]
+      },
+      {
+        "text": "The current scope model is repository and Volume selection, not a demonstrated multi-tenant authorization system. The project describes a local-only boundary and a local database-catalog evidence route; the security policy says database collection is read-only metadata access. Those statements do not replace a deployment-specific filesystem, host, or database review.",
+        "sources": [
+          "readme",
+          "security"
+        ]
+      },
+      {
+        "text": "The README reports approximate first-index time and large-repository examples, but these are project-published descriptions, not measurements from this review or the shared benchmark. Historical Legacy behavior, Database Cognition, and platform-specific host integration add separate constraints beyond the inspected core read/write paths.",
+        "sources": [
+          "readme",
+          "volumes"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. The project execution-status record is not_run, and its fixture operation counts are planned workload metadata rather than results. This review did not execute AOCI-CODE, tests, or benchmark workloads and reports no metric values.",
+        "sources": [
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

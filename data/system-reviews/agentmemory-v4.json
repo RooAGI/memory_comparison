@@ -1,0 +1,376 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "agentmemory-v4",
+    "name": "agentmemory V4",
+    "repository": "https://github.com/JordanMcCann/agentmemory",
+    "branch": "main",
+    "revision": "3aa3b8389896f81dd813fdf9176ef3ca122d809e",
+    "reviewed_at": "2026-11-24T19:04:35Z",
+    "review_timezone": "UTC (2026-11-24 11:04:35 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/JordanMcCann/agentmemory/blob/3aa3b8389896f81dd813fdf9176ef3ca122d809e/README.md","checked_urls":["https://github.com/JordanMcCann/agentmemory/blob/3aa3b8389896f81dd813fdf9176ef3ca122d809e/README.md","https://github.com/JordanMcCann/agentmemory/blob/3aa3b8389896f81dd813fdf9176ef3ca122d809e/SECURITY.md","https://github.com/JordanMcCann/agentmemory/blob/3aa3b8389896f81dd813fdf9176ef3ca122d809e/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "An async-first Python memory library with a persistent store, hybrid retrieval, a relationship graph, consolidation, and REST and MCP interfaces. This review records selected source and documentation observations; it does not run agentmemory or reproduce upstream benchmark claims.",
+    "atlas_locator": {
+      "ordinal": 24,
+      "name": "agentmemory V4",
+      "slug": "agentmemory-v4",
+      "listed_repository": "https://github.com/JordanMcCann/agentmemory",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agentmemory-v4.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/JordanMcCann/agentmemory/blob/3aa3b8389896f81dd813fdf9176ef3ca122d809e/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/JordanMcCann/agentmemory/blob/3aa3b8389896f81dd813fdf9176ef3ca122d809e/README.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical public repository and default branch",
+        "path": "repository",
+        "symbol": "main branch",
+        "url": "https://github.com/JordanMcCann/agentmemory"
+      },
+      {
+        "id": "head",
+        "label": "Current main branch head commit",
+        "path": "commit",
+        "symbol": "full SHA 3aa3b8389896f81dd813fdf9176ef3ca122d809e",
+        "url": "https://github.com/JordanMcCann/agentmemory/commit/3aa3b8389896f81dd813fdf9176ef3ca122d809e"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "url": "https://github.com/JordanMcCann/agentmemory/blob/3aa3b8389896f81dd813fdf9176ef3ca122d809e/README.md"
+      },
+      {
+        "id": "models",
+        "label": "Memory data model, namespace, and provenance",
+        "path": "agentmemory/models.py",
+        "symbol": "MemoryNode, Namespace, Provenance",
+        "url": "https://github.com/JordanMcCann/agentmemory/blob/3aa3b8389896f81dd813fdf9176ef3ca122d809e/agentmemory/models.py?plain=1"
+      },
+      {
+        "id": "core",
+        "label": "MemoryStore API and component wiring",
+        "path": "agentmemory/core.py",
+        "symbol": "MemoryStore",
+        "url": "https://github.com/JordanMcCann/agentmemory/blob/3aa3b8389896f81dd813fdf9176ef3ca122d809e/agentmemory/core.py?plain=1"
+      },
+      {
+        "id": "retrieval",
+        "label": "Retrieval query filters and hybrid ranker",
+        "path": "agentmemory/retrieval.py",
+        "symbol": "RetrievalQuery, RetrievalEngine",
+        "url": "https://github.com/JordanMcCann/agentmemory/blob/3aa3b8389896f81dd813fdf9176ef3ca122d809e/agentmemory/retrieval.py?plain=1"
+      },
+      {
+        "id": "server",
+        "label": "REST write, update, delete, and retrieval routes",
+        "path": "agentmemory/server.py",
+        "symbol": "create_app routes",
+        "url": "https://github.com/JordanMcCann/agentmemory/blob/3aa3b8389896f81dd813fdf9176ef3ca122d809e/agentmemory/server.py?plain=1"
+      },
+      {
+        "id": "mcp",
+        "label": "MCP tools and handlers",
+        "path": "agentmemory/mcp.py",
+        "symbol": "MCP_TOOLS, MCPServer",
+        "url": "https://github.com/JordanMcCann/agentmemory/blob/3aa3b8389896f81dd813fdf9176ef3ca122d809e/agentmemory/mcp.py?plain=1"
+      },
+      {
+        "id": "sqlite",
+        "label": "SQLite persistence and query backend",
+        "path": "agentmemory/storage/sqlite_backend.py",
+        "symbol": "SQLiteBackend",
+        "url": "https://github.com/JordanMcCann/agentmemory/blob/3aa3b8389896f81dd813fdf9176ef3ca122d809e/agentmemory/storage/sqlite_backend.py?plain=1"
+      },
+      {
+        "id": "graph",
+        "label": "Relationship graph and spreading activation",
+        "path": "agentmemory/graph.py",
+        "symbol": "MemoryGraph.spreading_activation",
+        "url": "https://github.com/JordanMcCann/agentmemory/blob/3aa3b8389896f81dd813fdf9176ef3ca122d809e/agentmemory/graph.py?plain=1"
+      },
+      {
+        "id": "consolidation",
+        "label": "Memory consolidation and supersession",
+        "path": "agentmemory/consolidation.py",
+        "symbol": "ConsolidationEngine",
+        "url": "https://github.com/JordanMcCann/agentmemory/blob/3aa3b8389896f81dd813fdf9176ef3ca122d809e/agentmemory/consolidation.py?plain=1"
+      },
+      {
+        "id": "gdpr",
+        "label": "User-scoped deletion and deletion receipt",
+        "path": "agentmemory/gdpr.py",
+        "symbol": "GDPRPipeline.delete_user",
+        "url": "https://github.com/JordanMcCann/agentmemory/blob/3aa3b8389896f81dd813fdf9176ef3ca122d809e/agentmemory/gdpr.py?plain=1"
+      },
+      {
+        "id": "ann",
+        "label": "Approximate nearest-neighbor index",
+        "path": "agentmemory/ann_index.py",
+        "symbol": "HNSWIndex",
+        "url": "https://github.com/JordanMcCann/agentmemory/blob/3aa3b8389896f81dd813fdf9176ef3ca122d809e/agentmemory/ann_index.py?plain=1"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated identity and source attribution only",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 24",
+        "url": "../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents agentmemory V4 as a Python memory library and operating system for agents, with a `MemoryStore` API, REST service, MCP server, examples, and SQLite/PostgreSQL storage options. The README names Jordan McCann as the author; this is a repository attribution.",
+        "sources": [
+          "readme",
+          "core",
+          "server",
+          "mcp",
+          "sqlite"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "`MemoryStore` is async-first and adds synchronous wrappers. Its constructor wires storage, embedding, ANN search, graph, extraction, consolidation, validation, importance, calibration, feedback, and lineage components. SQLite is the default backend; a custom backend can be supplied, and the README documents PostgreSQL as an alternative.",
+        "sources": [
+          "core",
+          "readme",
+          "sqlite"
+        ]
+      },
+      {
+        "text": "`MemoryNode` records content and kind/tier, identifiers, creation/access and event times, importance and confidence, embedding, metadata, provenance, namespace, parent/supersession links, tags, version and validity bounds, plus media fields. `Namespace` has org/team/agent/session components. `Provenance` can retain source, session, turn, agent, tool call, document, parent role, and extraction method.",
+        "sources": [
+          "models"
+        ]
+      },
+      {
+        "text": "The documented default stack uses a SQLite store, an embedding abstraction (dense embeddings when available, with a TF-IDF fallback), HNSW ANN candidates, a graph, and a cross-encoder reranker when enabled. The README documents per-case in-memory SQLite in its published evaluation setup; that is not assumed to be the default deployment.",
+        "sources": [
+          "readme",
+          "core",
+          "ann",
+          "sqlite"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The library and REST/MCP surfaces expose direct add, conversation ingestion, and document ingestion. The README describes automatic extraction/classification, graph construction and optional streaming consolidation. In the REST API, update accepts a field map and delete addresses a memory ID; MCP exposes add, ingest, recall, context, feedback, lineage, consolidation, statistics, health and delete tools.",
+        "sources": [
+          "readme",
+          "core",
+          "server",
+          "mcp"
+        ]
+      },
+      {
+        "text": "The REST API also exposes user deletion. The inspected GDPR pipeline selects node IDs by source identifier, removes linked edges and graph/ANN entries, deletes stored nodes and redacts related audit entries, then returns a receipt. The inspected path does not establish erasure from external backups or systems outside these indexes.",
+        "sources": [
+          "server",
+          "gdpr",
+          "sqlite"
+        ]
+      },
+      {
+        "text": "Retrieval supports semantic, BM25 lexical, activation, graph spreading, importance/confidence and temporal scoring. Query filters include kinds, tiers, tags, source, session, namespace, confidence, importance, supersession and time bounds; the API can build a token-budgeted context and return scores/explanations. These are source-visible mechanisms, not retrieval-quality measurements.",
+        "sources": [
+          "readme",
+          "retrieval",
+          "graph",
+          "server",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Consolidation includes duplicate merging and supersession, and the README describes episodic-to-semantic promotion, contradiction handling, confidence decay, and importance evolution. A superseded node is marked and excluded by default retrieval; the bounded review did not verify behavior for every contradictory or corrected-fact case.",
+        "sources": [
+          "readme",
+          "consolidation",
+          "retrieval"
+        ]
+      },
+      {
+        "text": "Scope controls include hierarchical namespace fields and namespace filtering during retrieval. REST and MCP request shapes inspected here do not demonstrate authenticated tenant isolation; no cross-scope tests or deployment authorization review were performed.",
+        "sources": [
+          "models",
+          "retrieval",
+          "server",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Provenance fields and lineage, audit, and deletion-receipt APIs provide traceability signals. They do not establish that retrieved evidence entails a generated answer or that every answer includes claim-level citations.",
+        "sources": [
+          "models",
+          "core",
+          "server",
+          "mcp",
+          "gdpr"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency and observability: candidate retrieval uses HNSW with a configurable candidate bound; query caching and batched persistence are present, and graph spreading has depth and activation bounds. The project exposes stats, health, history, calibration and lineage surfaces. These source features do not establish latency, cost, storage efficiency or operational coverage.",
+        "sources": [
+          "readme",
+          "retrieval",
+          "ann",
+          "graph",
+          "sqlite",
+          "server",
+          "mcp"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Recall/context APIs and optional abstention calibration are documented; this review ran no answerability or abstention probes.",
+        "sources": [
+          "readme",
+          "core",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Supersession, temporal validity and consolidation paths are present; no correction or stale-value workload was run.",
+        "sources": [
+          "models",
+          "consolidation",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "A user deletion path removes listed store/index records and redacts audit entries; no post-delete leakage probes were run.",
+        "sources": [
+          "gdpr",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Namespace fields and retrieval filters are visible in source; no cross-scope probes were run.",
+        "sources": [
+          "models",
+          "retrieval",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Provenance and lineage structures exist; answer-claim support and citation coverage were not adjudicated.",
+        "sources": [
+          "models",
+          "core",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The source includes ANN and caching mechanisms; no latency distributions or scheduled recall-delay measurements were collected.",
+        "sources": [
+          "retrieval",
+          "ann",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The README describes token budgets and backend choices; no project workload token, cost or storage measurements were collected.",
+        "sources": [
+          "readme",
+          "sqlite",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code and documentation",
+        "evidence": "Bounded ANN candidates, query caching, batched persistence and health/stats surfaces are visible in code. These observations are not runtime measurements.",
+        "sources": [
+          "retrieval",
+          "ann",
+          "sqlite",
+          "server"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded inspection of the official README and selected current source files at the verified head. The system and its tests were not run. Production reliability, answer quality, authorization across tenants, deletion completeness beyond inspected stores/indexes, latency, cost and storage remain unverified.",
+        "sources": [
+          "readme",
+          "core",
+          "server",
+          "gdpr"
+        ]
+      },
+      {
+        "text": "The repository README publishes its own LongMemEval evaluation report, but this review did not execute or independently reproduce it. The project benchmark record remains `not_run`; upstream claims are not project benchmark results.",
+        "sources": [
+          "readme",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "The official repository README was checked for a published contact email. It links a personal profile but publishes no email address; the JSON records null with the exact checked README URL.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No agentmemory execution, project fixture run, benchmark, or tests were performed. Project metric definitions, fixture and status record describe the evaluation protocol and are not results for this system.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

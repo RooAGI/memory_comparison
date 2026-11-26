@@ -1,0 +1,312 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 220,
+    "slug": "emulo",
+    "name": "Emulo",
+    "repository": "https://github.com/ohad6k/emulo",
+    "listed_repository": "https://github.com/ohad6k/emulo",
+    "branch": "main",
+    "revision": "5b6745f0ecbb11027d5dfdc3c97778b0fbd273fe",
+    "reviewed_at": "2026-11-25T19:14:26Z",
+    "review_timezone": "UTC (2026-11-25 11:14:26 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Emulo mines user-authored coding-agent session logs into dated, quote-backed Markdown instruction profiles. It provides a local extractor and a plugin/bootstrap workflow with report validation and versioned profile activation. Retrieval loads whole domain profiles rather than performing ranked memory search; runtime quality and efficiency were not measured.",
+    "atlas_locator": {
+      "ordinal": 220,
+      "name": "Emulo",
+      "slug": "emulo",
+      "listed_repository": "https://github.com/ohad6k/emulo",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/emulo.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/ohad6k/emulo/blob/5b6745f0ecbb11027d5dfdc3c97778b0fbd273fe/README.md",
+      "checked_urls": [
+        "https://github.com/ohad6k/emulo/blob/5b6745f0ecbb11027d5dfdc3c97778b0fbd273fe/README.md"
+      ],
+      "note": "Checked the official pinned repository README for a published contact email; none was found. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/ohad6k/emulo/blob/5b6745f0ecbb11027d5dfdc3c97778b0fbd273fe/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/ohad6k/emulo/blob/5b6745f0ecbb11027d5dfdc3c97778b0fbd273fe/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the official pinned README.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated memory systems roster",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[219], ordinal 220; name, slug, explicit listed repository, Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/emulo.md",
+        "symbol": "Pinned identity/locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/emulo.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository metadata and Git remote",
+        "symbol": "Canonical repository ohad6k/emulo; remote https://github.com/ohad6k/emulo.git",
+        "url": "https://github.com/ohad6k/emulo"
+      },
+      {
+        "id": "head",
+        "label": "Verified current main head",
+        "path": "GitHub Git smart transport and shallow checkout",
+        "symbol": "git ls-remote --symref reported HEAD -> refs/heads/main and full SHA 5b6745f0ecbb11027d5dfdc3c97778b0fbd273fe; checkout HEAD agreed",
+        "url": "https://github.com/ohad6k/emulo/commit/5b6745f0ecbb11027d5dfdc3c97778b0fbd273fe"
+      },
+      {
+        "id": "tree",
+        "label": "Reviewed upstream tree",
+        "path": "repository tree",
+        "symbol": "source snapshot at verified current main head",
+        "url": "https://github.com/ohad6k/emulo/tree/5b6745f0ecbb11027d5dfdc3c97778b0fbd273fe"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Scope, workflow, source list, trust and limitations; contact-email check",
+        "url": "https://github.com/ohad6k/emulo/blob/5b6745f0ecbb11027d5dfdc3c97778b0fbd273fe/README.md"
+      },
+      {
+        "id": "extractor",
+        "label": "Extractor, profile storage, activation and MCP source",
+        "path": "emulo.py",
+        "symbol": "Source discovery, human-message extraction, redaction, write outputs, pack validation, activation, profile loading and quote verification",
+        "url": "https://github.com/ohad6k/emulo/blob/5b6745f0ecbb11027d5dfdc3c97778b0fbd273fe/emulo.py"
+      },
+      {
+        "id": "mine-skill",
+        "label": "Agent mining workflow skill",
+        "path": "skills/mine/SKILL.md",
+        "symbol": "Preflight, approval hash, worker validation, cache and activation procedure",
+        "url": "https://github.com/ohad6k/emulo/blob/5b6745f0ecbb11027d5dfdc3c97778b0fbd273fe/skills/mine/SKILL.md"
+      },
+      {
+        "id": "profile-flow",
+        "label": "Profile flow documentation",
+        "path": "docs/PROFILE-FLOW.md",
+        "symbol": "Storage layout, removal instructions, supported data paths and privacy boundary",
+        "url": "https://github.com/ohad6k/emulo/blob/5b6745f0ecbb11027d5dfdc3c97778b0fbd273fe/docs/PROFILE-FLOW.md"
+      },
+      {
+        "id": "security",
+        "label": "Security and redaction documentation",
+        "path": "SECURITY.md",
+        "symbol": "Documented redaction coverage and explicit gaps",
+        "url": "https://github.com/ohad6k/emulo/blob/5b6745f0ecbb11027d5dfdc3c97778b0fbd273fe/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Comparison metric definitions; not Emulo results",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Shared benchmark status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Current shared execution status; no Emulo measurement claimed",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned comparison fixture; not an Emulo result",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Emulo as a local Python tool and agent integration that mines supported coding-agent logs into personal instruction profiles. It names Ohad Krispin as maintainer. The two documented profile-generation paths are a manual chunk export and an agent plugin/bootstrap flow.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The Python extractor selects user-authored messages from supported source formats, filters injected content and pasted logs, redacts common sensitive values, deduplicates long repeated messages, and writes session/date-labeled text. Redaction is documented as best-effort.",
+        "sources": [
+          "extractor",
+          "profile-flow",
+          "security"
+        ]
+      },
+      {
+        "text": "The manual path writes corpus chunks, stats, and RUN_ME.md for a separate agent to author a profile. The plugin path stages segments, reports, reductions, and validated domain profiles under a local Emulo home, then activates a versioned profile through a manifest-checked current pointer.",
+        "sources": [
+          "readme",
+          "extractor",
+          "mine-skill",
+          "profile-flow"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Writes begin with local extraction of recognized human-authored turns, filtering and redaction. The manual flow leaves profile authoring to the agent; the plugin flow documents preflight planning, explicit plan approval before model work, validated worker reports, reduction, and activation. No mining run was performed in this review.",
+        "sources": [
+          "extractor",
+          "mine-skill",
+          "readme"
+        ]
+      },
+      {
+        "text": "A manual Markdown profile can be reviewed/edited and installed to a supported host. Plugin-managed active files are hash-checked against their manifest, so direct edits are refused by loaders; the documented update path is to mine again. Documentation describes deleting emulo-out or the complete local ~/.emulo store. No per-rule delete API, tombstone, or remote deletion protocol was found.",
+        "sources": [
+          "profile-flow",
+          "extractor"
+        ]
+      },
+      {
+        "text": "Retrieval loads whole instruction files: the work profile and optionally the design, writing, or video domain profile. The MCP tool load_emulo_profile returns selected profile text. There is no source-inspected relevance-ranked retrieval index or query-based memory search.",
+        "sources": [
+          "readme",
+          "extractor",
+          "profile-flow"
+        ]
+      },
+      {
+        "text": "Data is organized by one user's local home/configured EMULO_HOME and by profile domain. I found no tenant, project, or session authorization boundary on profile reads; local paths and domain selection do not themselves establish access control.",
+        "sources": [
+          "profile-flow",
+          "extractor"
+        ]
+      },
+      {
+        "text": "Dated quotes and session identifiers provide traceability to captured messages. The plugin workflow documents checks for quote presence, distinct-session support, contradictions, and generic rules; standalone verify searches quoted spans in the corpus and flags single-session support. These checks do not establish that a rule is true, current, or useful.",
+        "sources": [
+          "readme",
+          "extractor",
+          "mine-skill",
+          "profile-flow"
+        ]
+      },
+      {
+        "text": "Content hashes and caches support reuse of unchanged segment/report work; README describes identical plugin updates as planning zero additional Emulo mining calls. Planned source tokens and worker/reducer counts are not actual provider billing. The usage report prints counts and message examples; no operational telemetry or performance data was gathered.",
+        "sources": [
+          "readme",
+          "extractor",
+          "profile-flow"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Profile loading was inspected; no answerability, ranking, or abstention workload was run.",
+        "sources": [
+          "readme",
+          "extractor",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Regeneration is documented, but no per-rule correction or stale-value probes were run.",
+        "sources": [
+          "profile-flow",
+          "extractor",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Local removal instructions were inspected; no residual-read or secure-erasure probe was run.",
+        "sources": [
+          "profile-flow",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Local path and domain organization were inspected; no cross-user or cross-project isolation workload was run.",
+        "sources": [
+          "profile-flow",
+          "extractor",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Quote/session lineage and validation source were inspected; no adjudicated output-claim support or citation coverage was scored.",
+        "sources": [
+          "readme",
+          "extractor",
+          "mine-skill",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No runtime timings were collected.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No token, provider billing, or storage measurements were collected.",
+        "sources": [
+          "readme",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a source review at the verified main head. Emulo, its tests, and benchmarks were not run.",
+        "sources": [
+          "repo",
+          "head",
+          "readme"
+        ]
+      },
+      {
+        "text": "Rule quality, retrieval usefulness, malformed/adversarial log robustness, hosted-model retention, tenant safety, secure deletion, latency, actual provider cost, and scaling remain unknown from this review.",
+        "sources": [
+          "readme",
+          "profile-flow",
+          "security",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Emulo runtime, tests, or benchmarks were run. Project metric definitions and comparison fixtures are not Emulo results."
+    }
+  }
+}

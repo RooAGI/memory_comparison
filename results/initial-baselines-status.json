@@ -1,0 +1,204 @@
+{
+  "record_schema_version": "1.0.0",
+  "data_kind": "benchmark_execution_status_record",
+  "created_at": "2026-11-23",
+  "status": "not_run",
+  "note": "This is an execution-status record, not a measured benchmark result. No metric values or execution observations were produced.",
+  "provenance": {
+    "fixture": {
+      "path": "fixtures/memory-benchmark-v1.json",
+      "id": "memory-recall-core",
+      "version": "1.0.0",
+      "sha256": "2c9ed8c1e0de3ae8fb10f581d92a9f6ffea74779636ccdf4439154ae918c0785",
+      "cases": 6,
+      "operations": 20
+    },
+    "harness": {
+      "path": "scripts/benchmark_runner.py",
+      "version": "1.0.0",
+      "sha256": "13a35fed16c42c90469f09da0ceb39a09dad29e46fbe560a53f6d5d8a97f0b63",
+      "project_commit": "unavailable: project has no commit yet"
+    },
+    "adapter_contract": {
+      "path": "BENCHMARK_ADAPTER.md",
+      "version": "1.0.0"
+    },
+    "atlas_checkout": {
+      "path": "references/agent-memory-atlas",
+      "commit": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "execution_environment": {
+      "python": "3.9.6"
+    }
+  },
+  "evaluation_setup": {
+    "model": "not pinned",
+    "prompt": "not pinned",
+    "retrieval_settings": "not pinned",
+    "hardware_region_cache_timeout_retry_and_background_job_policy": "not pinned",
+    "reason": "The project contains no common run configuration; choosing these values would create an unreviewed evaluation setup."
+  },
+  "metric_status": [
+    {
+      "metric": "answerable_retrieval_accuracy",
+      "fixture_probe_count": 2,
+      "status": "not_run",
+      "numerator": null,
+      "denominator": null
+    },
+    {
+      "metric": "unanswerable_abstention",
+      "fixture_probe_count": 2,
+      "status": "not_run",
+      "numerator": null,
+      "denominator": null
+    },
+    {
+      "metric": "correction_accuracy",
+      "fixture_probe_count": 3,
+      "status": "not_run",
+      "numerator": null,
+      "denominator": null
+    },
+    {
+      "metric": "stale_value_rate",
+      "fixture_probe_count": 3,
+      "status": "not_run",
+      "numerator": null,
+      "denominator": null
+    },
+    {
+      "metric": "deletion_leak_rate",
+      "fixture_probe_count": 2,
+      "status": "not_run",
+      "numerator": null,
+      "denominator": null,
+      "note": "Runtime-eligible denominator requires an acknowledged delete; none was run."
+    },
+    {
+      "metric": "scope_isolation_leak_rate",
+      "fixture_probe_count": 2,
+      "status": "not_run",
+      "numerator": null,
+      "denominator": null
+    },
+    {
+      "metric": "evidence_support_precision",
+      "fixture_probe_count": 2,
+      "status": "not_run",
+      "numerator": null,
+      "denominator": null,
+      "note": "Claim denominator requires captured and adjudicated responses."
+    },
+    {
+      "metric": "citation_coverage",
+      "fixture_probe_count": 2,
+      "status": "not_run",
+      "numerator": null,
+      "denominator": null,
+      "note": "Factual-claim denominator requires captured responses."
+    },
+    {
+      "metric": "retrieval_latency_ms",
+      "fixture_probe_count": 13,
+      "status": "not_run",
+      "observations": 0,
+      "n": null,
+      "p50": null,
+      "p95": null,
+      "p99": null
+    },
+    {
+      "metric": "write_to_recall_delay_ms",
+      "status": "not_run",
+      "observations": 0,
+      "value": null
+    },
+    {
+      "metric": "tokens_cost_storage",
+      "status": "not_run",
+      "observations": 0,
+      "value": null
+    }
+  ],
+  "systems": [
+    {
+      "name": "Graphiti",
+      "repository": "https://github.com/getzep/graphiti",
+      "atlas_analyzed_revision": "c035afb7990b6077331a81e98b04efcfd9bf8184",
+      "adapter": "unavailable",
+      "system_checkout": "unavailable",
+      "status": "not_run",
+      "operation_count": 20,
+      "operation_status_counts": {
+        "completed": 0,
+        "unsupported": 0,
+        "failed": 0,
+        "not_run": 20
+      },
+      "blockers": [
+        "No Graphiti checkout or system-specific benchmark adapter exists in the project.",
+        "No common frozen model, prompt, retrieval, or execution-environment config exists."
+      ]
+    },
+    {
+      "name": "Mem0",
+      "repository": "https://github.com/mem0ai/mem0",
+      "atlas_analyzed_revision": "c7ee362aff94a369af70f13f2b4f853f6793ff4c",
+      "adapter": "unavailable",
+      "system_checkout": "unavailable",
+      "status": "not_run",
+      "operation_count": 20,
+      "operation_status_counts": {
+        "completed": 0,
+        "unsupported": 0,
+        "failed": 0,
+        "not_run": 20
+      },
+      "blockers": [
+        "No Mem0 checkout or system-specific benchmark adapter exists in the project.",
+        "No common frozen model, prompt, retrieval, or execution-environment config exists."
+      ]
+    },
+    {
+      "name": "Letta",
+      "repository": "https://github.com/letta-ai/letta",
+      "atlas_analyzed_revision": "5bcdd177d70fa2b31a754cfcd801e77b2e1ab16a",
+      "adapter": "unavailable",
+      "system_checkout": "unavailable",
+      "status": "not_run",
+      "operation_count": 20,
+      "operation_status_counts": {
+        "completed": 0,
+        "unsupported": 0,
+        "failed": 0,
+        "not_run": 20
+      },
+      "blockers": [
+        "No Letta checkout or system-specific benchmark adapter exists in the project.",
+        "The Atlas report identifies this pin as the archived V1 server; runnable compatibility with the fixture was not established.",
+        "No common frozen model, prompt, retrieval, or execution-environment config exists."
+      ]
+    },
+    {
+      "name": "Memori",
+      "repository": "https://github.com/MemoriLabs/Memori",
+      "atlas_analyzed_revision": "10d65015007131a69b2597fa5130da58da24a0c2",
+      "adapter": "unavailable",
+      "system_checkout": "unavailable",
+      "status": "not_run",
+      "operation_count": 20,
+      "operation_status_counts": {
+        "completed": 0,
+        "unsupported": 0,
+        "failed": 0,
+        "not_run": 20
+      },
+      "blockers": [
+        "No Memori checkout or system-specific benchmark adapter exists in the project.",
+        "No common frozen model, prompt, retrieval, or execution-environment config exists."
+      ]
+    }
+  ],
+  "measurement_policy": "All score numerators and runtime denominators are null because no system operation executed. fixture_probe_count is only the planned fixture count, not a measured denominator. Atlas feature checks and descriptions were not converted into metrics."
+}

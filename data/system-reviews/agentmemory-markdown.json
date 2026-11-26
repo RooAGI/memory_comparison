@@ -1,0 +1,315 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "agentmemory-markdown",
+    "name": "AgentMemory",
+    "repository": "https://github.com/jayzeng/agentmemory",
+    "branch": "main",
+    "revision": "a6c256bf3eb0ef63c6bab78f528136a882d45f10",
+    "reviewed_at": "2026-11-24T18:52:11Z",
+    "review_timezone": "UTC (2026-11-24 10:52:11 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/jayzeng/agentmemory/blob/a6c256bf3eb0ef63c6bab78f528136a882d45f10/README.md","checked_urls":["https://github.com/jayzeng/agentmemory/blob/a6c256bf3eb0ef63c6bab78f528136a882d45f10/README.md","https://github.com/jayzeng/agentmemory/blob/a6c256bf3eb0ef63c6bab78f528136a882d45f10/SECURITY.md","https://github.com/jayzeng/agentmemory/blob/a6c256bf3eb0ef63c6bab78f528136a882d45f10/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "A local-first TypeScript memory layer for coding agents using Markdown files, with an optional qmd search helper and CLI/MCP interfaces. This is a source review, not a measured evaluation.",
+    "atlas_locator": {
+      "ordinal": 21,
+      "name": "AgentMemory",
+      "slug": "agentmemory-markdown",
+      "listed_repository": "https://github.com/jayzeng/agentmemory",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agentmemory-markdown.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/jayzeng/agentmemory/security/policy",
+    "contact_email_checked_sources": [
+      "https://github.com/jayzeng/agentmemory/blob/a6c256bf3eb0ef63c6bab78f528136a882d45f10/README.md",
+      "https://github.com/jayzeng/agentmemory/security/policy",
+      "https://jayzeng.github.io/agentmemory/"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official GitHub repository and default branch",
+        "path": "repository page",
+        "url": "https://github.com/jayzeng/agentmemory"
+      },
+      {
+        "id": "head",
+        "label": "Current main history",
+        "path": "main commit history",
+        "symbol": "latest entry a6c256b; full SHA checked against official commit patch",
+        "url": "https://github.com/jayzeng/agentmemory/commits/main"
+      },
+      {
+        "id": "head_patch",
+        "label": "Reviewed full head commit patch",
+        "path": "commit patch",
+        "symbol": "a6c256bf3eb0ef63c6bab78f528136a882d45f10",
+        "url": "https://github.com/jayzeng/agentmemory/commit/a6c256bf3eb0ef63c6bab78f528136a882d45f10.patch"
+      },
+      {
+        "id": "readme",
+        "label": "Official README at reviewed head",
+        "path": "README.md",
+        "url": "https://github.com/jayzeng/agentmemory/blob/a6c256bf3eb0ef63c6bab78f528136a882d45f10/README.md"
+      },
+      {
+        "id": "core",
+        "label": "Core memory paths, writes, redaction, search and qmd functions",
+        "path": "src/core.ts",
+        "symbol": "memoryWrite, scratchpadAction, getMemoryDir, search and qmd helpers",
+        "url": "https://github.com/jayzeng/agentmemory/blob/a6c256bf3eb0ef63c6bab78f528136a882d45f10/src/core.ts"
+      },
+      {
+        "id": "mcp",
+        "label": "MCP JSON-RPC stdio server and tool surface",
+        "path": "src/mcp-server.ts",
+        "symbol": "five tools delegate to shared core operations",
+        "url": "https://github.com/jayzeng/agentmemory/blob/a6c256bf3eb0ef63c6bab78f528136a882d45f10/src/mcp-server.ts"
+      },
+      {
+        "id": "cli",
+        "label": "CLI command implementations",
+        "path": "src/cli.ts",
+        "symbol": "write/read/search/context/uninstall operations",
+        "url": "https://github.com/jayzeng/agentmemory/blob/a6c256bf3eb0ef63c6bab78f528136a882d45f10/src/cli.ts"
+      },
+      {
+        "id": "security",
+        "label": "Official repository security policy page checked for contact email",
+        "path": "repository security policy",
+        "url": "https://github.com/jayzeng/agentmemory/security/policy"
+      },
+      {
+        "id": "website",
+        "label": "Official project site checked for contact email",
+        "path": "GitHub Pages project site",
+        "url": "https://jayzeng.github.io/agentmemory/"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated ordinal/name/slug/repository locator attribution only",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 21; Atlas descriptions and marks excluded from assessment",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas_entry",
+        "label": "Catalog source attribution locator",
+        "path": "content/systems/agentmemory-markdown.md",
+        "symbol": "identity and listed repository locator attribution only",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agentmemory-markdown.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes AgentMemory as a local-first, MIT-licensed memory layer for coding agents. The public GitHub repository is owned by jayzeng; this review did not confirm a wider maintainer group.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Code observation: the default user-local directory contains MEMORY.md, SCRATCHPAD.md, dated daily files, and topic files. AGENT_MEMORY_DIR can redirect the store. Markdown is the documented source of truth; qmd search is optional.",
+        "sources": [
+          "core",
+          "readme"
+        ]
+      },
+      {
+        "text": "The README documents a CLI and an MCP server over newline-delimited JSON-RPC stdio. The MCP server exposes five tools and delegates to the same core logic as corresponding CLI commands, rather than providing a separate memory implementation.",
+        "sources": [
+          "readme",
+          "mcp"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: core writes append timestamped daily and topic entries and append or overwrite MEMORY.md. Entries can include a shortened session identifier and source URI. Credential-pattern redaction is applied before storing entry content.",
+        "sources": [
+          "core"
+        ]
+      },
+      {
+        "text": "Update and deletion: long-term memory supports overwrite; the scratchpad supports marking items done/undoing and clearing completed items. The inspected MCP tools and core write surface did not expose per-entry deletion. The README describes direct file edits/deletion, and the CLI can remove the full memory directory when explicitly asked to uninstall with data.",
+        "sources": [
+          "core",
+          "mcp",
+          "readme",
+          "cli"
+        ]
+      },
+      {
+        "text": "Retrieval: documented operations read a target, build context, and search. Keyword mode is available; qmd is optional for local search. This inspection does not establish ranking quality, recall, or abstention.",
+        "sources": [
+          "readme",
+          "core"
+        ]
+      },
+      {
+        "text": "Scope: memory is stored in a user-local directory, with AGENT_MEMORY_DIR as a path override. The inspected surfaces do not establish tenant authentication, project authorization, or enforced cross-user isolation.",
+        "sources": [
+          "readme",
+          "core"
+        ]
+      },
+      {
+        "text": "Provenance: entries can retain a timestamp, shortened session identifier, and optional source URI. These fields support traceability but do not establish structured claim-level evidence, source trust, or entailment.",
+        "sources": [
+          "core"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency and observability: plain Markdown is inspectable without a database service; qmd indexing/search is optional; writes schedule qmd updates; and the MCP transport reuses core logic. No runtime performance or operational metric was measured.",
+        "sources": [
+          "readme",
+          "core",
+          "mcp"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Read/context/search interfaces are documented and implemented; answerable recall and calibrated abstention were not measured.",
+        "sources": [
+          "readme",
+          "core",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Overwrite and append operations are source-visible; no correction or stale-value workload was run.",
+        "sources": [
+          "core",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Manual file deletion and whole-directory removal are documented, but no deletion completeness or leakage workload was run.",
+        "sources": [
+          "readme",
+          "cli",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "A configurable local storage path is visible in code; no cross-user or cross-project isolation probes were run.",
+        "sources": [
+          "core",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Optional source URIs can be stored; no claim-support precision or citation-coverage workload was run.",
+        "sources": [
+          "core",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Latency",
+        "status": "unmeasured",
+        "evidence": "No retrieval latency measurements were collected.",
+        "sources": [
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Writes schedule qmd update work, but no delay from write to successful retrieval was measured.",
+        "sources": [
+          "core",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No token or cost measurements were collected.",
+        "sources": [
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The source of truth is Markdown with optional qmd indexing, but no storage-efficiency measurements were collected.",
+        "sources": [
+          "readme",
+          "core",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded code/documentation review at the verified main head. The system, tests, and benchmarks were not run; implementation structure does not establish runtime behavior or quality.",
+        "sources": [
+          "head_patch",
+          "readme",
+          "core",
+          "mcp"
+        ]
+      },
+      {
+        "text": "The inspected sources do not establish exact qmd failure recovery, concurrent writer safety, cleanup of separately configured derived indexes, retrieval quality, or security-redaction coverage.",
+        "sources": [
+          "core",
+          "readme"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. Source observations are not measurements; the project metric definition, fixture, and status record are protocol references only.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      }
+    ]
+  }
+}

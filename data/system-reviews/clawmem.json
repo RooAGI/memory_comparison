@@ -1,0 +1,339 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 128,
+    "slug": "clawmem",
+    "name": "ClawMem",
+    "repository": "https://github.com/yoloshii/clawmem",
+    "listed_repository": "https://github.com/yoloshii/clawmem",
+    "branch": "main",
+    "revision": "3c23948c306fcbca44fba6f3ba671944977c7140",
+    "reviewed_at": "2026-11-25T08:14:44Z",
+    "review_timezone": "UTC (2026-11-25 00:14:44 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "ClawMem is a local-first agent memory vault that indexes Markdown into SQLite and combines hooks, MCP tools, and agent plugins for automatic and explicit recall. Retrieval uses lexical, vector, graph, temporal, and optional reranking paths; maintenance includes feedback, enrichment, contradiction handling, and reversible lifecycle states. This is a source-based review, not a runtime or benchmark evaluation.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/clawmem.md"
+    },
+    "contact": {
+      "email": "sciros@lazyvibecoder.com",
+      "source_url": "https://github.com/yoloshii/clawmem/blob/3c23948c306fcbca44fba6f3ba671944977c7140/SECURITY.md",
+      "note": "The official SECURITY.md publishes this address for reporting vulnerabilities."
+    },
+    "contact_email": "sciros@lazyvibecoder.com",
+    "contact_checked_sources": [
+      "https://github.com/yoloshii/clawmem/blob/3c23948c306fcbca44fba6f3ba671944977c7140/README.md",
+      "https://github.com/yoloshii/clawmem/blob/3c23948c306fcbca44fba6f3ba671944977c7140/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[127], position 128: name, slug, listed repository and pinned Atlas attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/clawmem.md",
+        "symbol": "Pinned curated roster attribution; not used as assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/clawmem.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "",
+        "symbol": "Public canonical yoloshii/clawmem repository; repository page identifies main as default branch",
+        "url": "https://github.com/yoloshii/clawmem"
+      },
+      {
+        "id": "head",
+        "label": "Official GitHub main commits feed",
+        "path": "",
+        "symbol": "Current main full head 3c23948c306fcbca44fba6f3ba671944977c7140; feed updated 2026-11-25T08:05:13Z",
+        "url": "https://github.com/yoloshii/clawmem/commits/main.atom"
+      },
+      {
+        "id": "revision",
+        "label": "Reviewed upstream head",
+        "path": "",
+        "symbol": "Checked-out current main commit 3c23948c306fcbca44fba6f3ba671944977c7140",
+        "url": "https://github.com/yoloshii/clawmem/commit/3c23948c306fcbca44fba6f3ba671944977c7140"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product and runtime architecture, integrations, vaults, retrieval, lifecycle, model dependencies, status/doctor and stated evaluation features",
+        "url": "https://github.com/yoloshii/clawmem/blob/3c23948c306fcbca44fba6f3ba671944977c7140/README.md"
+      },
+      {
+        "id": "store",
+        "label": "SQLite store and retrieval implementation",
+        "path": "src/store.ts",
+        "symbol": "Document/content schema, metadata and lifecycle columns, FTS/vector stores, lifecycle mutation, scoring, provenance and audit tables",
+        "url": "https://github.com/yoloshii/clawmem/blob/3c23948c306fcbca44fba6f3ba671944977c7140/src/store.ts"
+      },
+      {
+        "id": "indexer",
+        "label": "Filesystem indexer",
+        "path": "src/indexer.ts",
+        "symbol": "Document ingestion, file-change updates, removal reconciliation, metadata and authored_at handling",
+        "url": "https://github.com/yoloshii/clawmem/blob/3c23948c306fcbca44fba6f3ba671944977c7140/src/indexer.ts"
+      },
+      {
+        "id": "mcp",
+        "label": "MCP server implementation",
+        "path": "src/mcp.ts",
+        "symbol": "Retrieval routes and filters, memory_forget, lifecycle/archive and restore operations",
+        "url": "https://github.com/yoloshii/clawmem/blob/3c23948c306fcbca44fba6f3ba671944977c7140/src/mcp.ts"
+      },
+      {
+        "id": "causal",
+        "label": "Causal retrieval implementation",
+        "path": "src/causal-retrieval.ts",
+        "symbol": "Intent-aware ranked retrieval and bounded graph traversal",
+        "url": "https://github.com/yoloshii/clawmem/blob/3c23948c306fcbca44fba6f3ba671944977c7140/src/causal-retrieval.ts"
+      },
+      {
+        "id": "context",
+        "label": "Automatic context surfacing hook",
+        "path": "src/hooks/context-surfacing.ts",
+        "symbol": "Hook retrieval pipeline, query admission, ranked lanes and bounded context injection",
+        "url": "https://github.com/yoloshii/clawmem/blob/3c23948c306fcbca44fba6f3ba671944977c7140/src/hooks/context-surfacing.ts"
+      },
+      {
+        "id": "audit",
+        "label": "Judge and causal audit schema",
+        "path": "src/store.ts",
+        "symbol": "causal_runs/events and judge_runs/events schema and durable audit data",
+        "url": "https://github.com/yoloshii/clawmem/blob/3c23948c306fcbca44fba6f3ba671944977c7140/src/store.ts"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Local-first/security architecture and published vulnerability-report contact email",
+        "url": "https://github.com/yoloshii/clawmem/blob/3c23948c306fcbca44fba6f3ba671944977c7140/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project evaluation metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Definitions for project measurement domains; definitions only, not ClawMem results",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned benchmark workload, not system results",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Initial benchmark status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project-wide execution status only; not ClawMem results",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The curated roster identifies ordinal 128 as ClawMem, slug clawmem, with the listed repository yoloshii/clawmem and pinned Atlas attribution. Atlas is used for roster context only. GitHub identifies main as the default branch; its official main commits feed reported full head 3c23948c306fcbca44fba6f3ba671944977c7140 at 2026-11-25T08:05:13Z, and a shallow checkout resolved to the same SHA. Review time was 2026-11-25T08:14:44Z (UTC; 2026-11-25 00:14:44 PST, America/Los_Angeles).",
+        "sources": [
+          "catalog",
+          "repo",
+          "head",
+          "revision"
+        ]
+      },
+      {
+        "text": "ClawMem is a local-first memory layer for Claude Code, OpenClaw, Hermes, and MCP clients. Its documented modes share a SQLite vault; hooks surface context and capture session observations, while MCP exposes targeted retrieval and lifecycle operations.",
+        "sources": [
+          "readme",
+          "security"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The main document store separates document metadata from content: documents have a collection/path identity and point to content-addressed rows. Document metadata includes title, timestamps, active state, content type, domain, workstream, tags, confidence, access counts, origin, authored time, invalidation and lifecycle fields. FTS5 supports lexical search; content vectors and an optional sqlite-vec table support vector retrieval. Additional tables represent relations, entity mentions/triples, temporal/semantic structure, and session/usage data.",
+        "sources": [
+          "store",
+          "readme"
+        ]
+      },
+      {
+        "text": "A vault is the unit of storage and sharing. The default is one local SQLite file; configuration can define named vault files, and tools can select a configured vault. Collections partition indexed content within a vault. Internal `_clawmem` documents hold generated observations, handoffs, and deductions; visibility is route-dependent, with several general retrieval routes excluding the internal collection by default.",
+        "sources": [
+          "readme",
+          "mcp",
+          "store"
+        ]
+      },
+      {
+        "text": "Integrations include Claude Code lifecycle hooks, an MCP server, an OpenClaw memory plugin, and a Hermes MemoryProvider. The README describes automatic prompt-time surfacing and session-end extraction/handoff/feedback alongside explicit tool calls; their coverage and reliability were not measured in this review.",
+        "sources": [
+          "readme",
+          "context"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Writes come from filesystem indexing, conversation imports, MCP/API operations, and agent hooks. The indexer maps collection/path to document rows, stores content separately, updates changed content, and reconciles files absent from a completed collection scan. Hooks can create structured observation, handoff, and deduction documents; optional enrichment adds extracted entities, links, and metadata. The README says imported conversations can preserve authored time so historical content is not ranked as newly written.",
+        "sources": [
+          "indexer",
+          "store",
+          "readme"
+        ]
+      },
+      {
+        "text": "Updates can replace a file-backed document's content and metadata while retaining its collection/path identity. Forget and lifecycle archival deactivate documents with reason metadata; archive is restorable. The current README and code describe no physical document-row deletion path: `memory_forget` deactivates its selected match, and the lifecycle sweep archives rather than deletes. Contradiction handling may reduce confidence or invalidate eligible observations, subject to judge/configuration gates; these are distinct from a general hard-delete API.",
+        "sources": [
+          "indexer",
+          "mcp",
+          "store",
+          "readme"
+        ]
+      },
+      {
+        "text": "Retrieval offers BM25 keyword search, vector search, hybrid query with reciprocal-rank fusion and optional reranking, intent-aware graph/causal routes, timeline, entity-triple queries, and auto-routing through `memory_retrieve`. Hook surfacing combines retrieval lanes, applies gates and relevance admission, and limits injected context. Candidate eligibility and collection/date policies are applied in the relevant routes; internal collection visibility differs by route, so there is no single uniform filter contract.",
+        "sources": [
+          "readme",
+          "mcp",
+          "store",
+          "causal",
+          "context"
+        ]
+      },
+      {
+        "text": "Named vaults provide separate SQLite storage files when configured, while collections and optional filters divide content inside a vault. This supports operational separation, but reviewed code/docs do not establish per-user authorization for principals sharing a vault. MCP and local integrations are trusted access surfaces; the REST server has a token requirement and origin/host checks documented by the project.",
+        "sources": [
+          "readme",
+          "mcp",
+          "security"
+        ]
+      },
+      {
+        "text": "File path, collection, timestamps, document origin, authored time and content type provide document-level lineage. Entity triples can retain source-document/fact provenance, and causal/judge runs record model/prompt hashes, outcomes, counts and mutation events. The documents schema does not require a source URL, quoted support span, author/trust label, or adjudication for every stored fact; lineage and audit support therefore vary by write path and memory type.",
+        "sources": [
+          "store",
+          "indexer",
+          "audit",
+          "readme"
+        ]
+      },
+      {
+        "text": "Source-described efficiency mechanisms include SQLite FTS/vector indexes, cached query/model operations, work-capped background tasks, bounded candidate and graph traversal stages, hook context budgets, and local inference options. Operators can use status/doctor checks, lifecycle and recall statistics, retrieval diagnostics, audit tables, and logs; optional cloud embedding/reranking/judge services add network and key dependencies and may receive query/content snippets as documented. No latency, resource, token, or cost measurements were collected.",
+        "sources": [
+          "readme",
+          "store",
+          "mcp",
+          "security"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable recall, abstention, correction accuracy, and stale-value rate were not evaluated. Source code exposes multiple retrieval channels and correction/contradiction paths, but no benchmark workload was run.",
+        "sources": [
+          "readme",
+          "mcp",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "text": "Deletion leakage and scope isolation were not evaluated. The reviewed lifecycle path deactivates or archives rows, while named vaults offer file-level separation; no residual-copy or cross-principal probe was run.",
+        "sources": [
+          "readme",
+          "mcp",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "text": "Evidence support precision and citation coverage were not evaluated. Some entity and causal records preserve source-level lineage, but the review did not adjudicate retrieved claims against evidence.",
+        "sources": [
+          "store",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "text": "Retrieval latency, write-to-recall delay, tokens, cost, and storage efficiency were not measured. Architecture mechanisms and project metric definitions are not measurements of this system.",
+        "sources": [
+          "readme",
+          "store",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a source-based review of the checked-out main head, focused on README, store, indexer, MCP, causal retrieval, context surfacing, and security policy. It did not run ClawMem, tests, or benchmarks, and it did not trace every integration, schema migration, provider, or background worker.",
+        "sources": [
+          "revision",
+          "readme",
+          "store",
+          "indexer",
+          "mcp",
+          "causal",
+          "context"
+        ]
+      },
+      {
+        "text": "Physical deletion is not the documented current lifecycle contract; forgetting and archival leave inactive rows, and archival is reversible. This protects reversibility but does not by itself establish secure erasure from SQLite pages, backups, or copied vaults. A configured multi-vault layout can isolate data files, but no shared-vault authorization model was established.",
+        "sources": [
+          "readme",
+          "mcp",
+          "store"
+        ]
+      },
+      {
+        "text": "Retrieval behavior is multi-stage and route-dependent; results depend on indexed corpus, configured models/providers, query classification and gates. Local inference avoids default cloud requirements but has host/model resource costs; optional cloud endpoints introduce provider and data-egress considerations. Upstream-described rankings or evaluation results are not reproduced here.",
+        "sources": [
+          "readme",
+          "security",
+          "context",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Unresolved from the reviewed sources: measured end-to-end retrieval quality and latency on an independent corpus; complete write-path coverage for provenance; authorization guarantees when multiple principals share a vault; and residual-data behavior across file backups and copied databases.",
+        "sources": [
+          "readme",
+          "store",
+          "security",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is not_run. No ClawMem runtime, benchmark, or test command was executed for this review. All quality and efficiency domains remain unmeasured here.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "contact_notes": [
+      {
+        "text": "Checked the official pinned README and SECURITY.md only for a published project contact email. README did not publish a contact email; SECURITY.md lists sciros@lazyvibecoder.com for vulnerability reports. The exact SECURITY.md URL is stored as contact.source_url. No commit/profile metadata or third-party directory was used.",
+        "sources": [
+          "readme",
+          "security"
+        ]
+      }
+    ]
+  }
+}

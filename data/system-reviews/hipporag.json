@@ -1,0 +1,315 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 299,
+    "slug": "hipporag",
+    "name": "HippoRAG",
+    "repository": "https://github.com/OSU-NLP-Group/HippoRAG",
+    "listed_repository": "https://github.com/OSU-NLP-Group/HippoRAG",
+    "branch": "main",
+    "revision": "d5c8329422e0a0b834a15874545cb6a74b4f9b26",
+    "reviewed_at": "2026-11-25T23:09:10Z",
+    "review_timezone": "UTC (checked 2026-11-25 15:09:10 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "HippoRAG is a Python framework for indexing documents into passage, entity, and fact embeddings plus a knowledge graph, then retrieving passages through fact scoring and graph propagation with dense-retrieval fallback. It also exposes persistent indexes through MCP. This source review does not measure runtime quality or performance.",
+    "atlas_locator": {
+      "ordinal": 299,
+      "name": "HippoRAG",
+      "slug": "hipporag",
+      "listed_repository": "https://github.com/OSU-NLP-Group/HippoRAG",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hipporag.md",
+      "revision": "1438aba3fc44ff10573e5a5e1e7cc3c7f9794aff"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/OSU-NLP-Group/HippoRAG/blob/d5c8329422e0a0b834a15874545cb6a74b4f9b26/README.md",
+      "checked_urls": [
+        "https://github.com/OSU-NLP-Group/HippoRAG/blob/d5c8329422e0a0b834a15874545cb6a74b4f9b26/README.md"
+      ],
+      "note": "Checked only the official pinned README for a published contact email. It lists authors and suggests filing an issue but publishes no email. No commit/profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/OSU-NLP-Group/HippoRAG/blob/d5c8329422e0a0b834a15874545cb6a74b4f9b26/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/OSU-NLP-Group/HippoRAG/blob/d5c8329422e0a0b834a15874545cb6a74b4f9b26/README.md"
+    ],
+    "contact_email_note": "No email was published in the checked official pinned README; no profile metadata or inferred address was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated roster identity and locator",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[298], ordinal 299; name, slug, explicit listed locator and Atlas attribution",
+        "url": "../memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/hipporag.md",
+        "symbol": "Used for curated identity/locator context only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hipporag.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "Public OSU-NLP-Group/HippoRAG; default branch main",
+        "url": "https://github.com/OSU-NLP-Group/HippoRAG"
+      },
+      {
+        "id": "head",
+        "label": "Official Git head",
+        "path": "main / Git transport",
+        "symbol": "git ls-remote reports HEAD -> refs/heads/main at full SHA d5c8329422e0a0b834a15874545cb6a74b4f9b26; shallow checkout HEAD matches",
+        "url": "https://github.com/OSU-NLP-Group/HippoRAG/commit/d5c8329422e0a0b834a15874545cb6a74b4f9b26"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "HippoRAG 2 architecture, API, MCP, storage, model compatibility, monitoring/testing and published contact check",
+        "url": "https://github.com/OSU-NLP-Group/HippoRAG/blob/d5c8329422e0a0b834a15874545cb6a74b4f9b26/README.md"
+      },
+      {
+        "id": "core",
+        "label": "Pinned HippoRAG implementation",
+        "path": "src/hipporag/HippoRAG.py",
+        "symbol": "Indexing/OpenIE, graph creation, deletion with source references, retrieval, PPR and result metadata",
+        "url": "https://github.com/OSU-NLP-Group/HippoRAG/blob/d5c8329422e0a0b834a15874545cb6a74b4f9b26/src/hipporag/HippoRAG.py"
+      },
+      {
+        "id": "mcp",
+        "label": "Pinned MCP server",
+        "path": "src/hipporag/mcp_server.py",
+        "symbol": "Document inputs, source_id deletion, retrieval/QA, index statistics and serialized worker",
+        "url": "https://github.com/OSU-NLP-Group/HippoRAG/blob/d5c8329422e0a0b834a15874545cb6a74b4f9b26/src/hipporag/mcp_server.py"
+      },
+      {
+        "id": "embedding",
+        "label": "Pinned embedding stores",
+        "path": "src/hipporag/embedding_store.py",
+        "symbol": "Passage/entity/fact embedding persistence and pluggable backends",
+        "url": "https://github.com/OSU-NLP-Group/HippoRAG/blob/d5c8329422e0a0b834a15874545cb6a74b4f9b26/src/hipporag/embedding_store.py"
+      },
+      {
+        "id": "config",
+        "label": "Pinned configuration",
+        "path": "src/hipporag/utils/config_utils.py",
+        "symbol": "Model, storage, retrieval and endpoint configuration",
+        "url": "https://github.com/OSU-NLP-Group/HippoRAG/blob/d5c8329422e0a0b834a15874545cb6a74b4f9b26/src/hipporag/utils/config_utils.py"
+      },
+      {
+        "id": "state",
+        "label": "Pinned index state utilities",
+        "path": "src/hipporag/utils/state_utils.py",
+        "symbol": "Index identity and manifest compatibility validation",
+        "url": "https://github.com/OSU-NLP-Group/HippoRAG/blob/d5c8329422e0a0b834a15874545cb6a74b4f9b26/src/hipporag/utils/state_utils.py"
+      },
+      {
+        "id": "misc",
+        "label": "Pinned chunk and result data types",
+        "path": "src/hipporag/utils/misc_utils.py",
+        "symbol": "Chunk carries content, optional source_id and arbitrary metadata; results return metadata",
+        "url": "https://github.com/OSU-NLP-Group/HippoRAG/blob/d5c8329422e0a0b834a15874545cb6a74b4f9b26/src/hipporag/utils/misc_utils.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned shared fixture; not executed for HippoRAG",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status, not a HippoRAG measurement",
+        "url": "../../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository describes HippoRAG 2 as a memory framework for LLMs and provides a Python library, evaluation entry point, persistent MCP server, and Claude Code plugin. README states current work builds on its NeurIPS 2024 and ICML 2025 papers; project claims about relative quality and efficiency are upstream reports, not independently reproduced here.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "`HippoRAG.index` preprocesses documents into content-addressed chunks, embeds passages, extracts entities and triples with OpenIE, embeds entities and facts separately, and builds an igraph connecting passage/entity nodes and fact or synonymy edges. Default vector persistence uses local Parquet files; optional Qdrant, ChromaDB, and Milvus adapters are selected by configuration.",
+        "sources": [
+          "core",
+          "embedding",
+          "config",
+          "readme"
+        ]
+      },
+      {
+        "text": "The index also persists chunk metadata, OpenIE state, graph state, and an `index_manifest.json` describing embedding, extractor, preprocessing, graph, and explicit index identity. Loading rejects incompatible model/component identity rather than silently mixing derived state. A logical index is rooted at a configured save directory; no tenant identity is intrinsic to the shared graph.",
+        "sources": [
+          "core",
+          "state"
+        ]
+      },
+      {
+        "text": "The framework offers `retrieve`, `rag_qa`, and evaluation flows directly; the optional MCP service exposes `index`, `retrieve`, `rag_qa`, `delete`, and `index_stats`. The HTTP transport documented in README has no authentication and should be kept on loopback or placed behind an authenticating proxy.",
+        "sources": [
+          "core",
+          "mcp",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: callers pass strings or `Chunk` values. Text is preprocessed and content-hashed; new chunks are embedded, OpenIE extracts named entities and triples, and the graph joins passages to entities and entities through facts. Duplicate chunk text maps to the same chunk ID; supplied source metadata may be replaced for that duplicate. OpenIE can run online or in a staged offline extraction mode.",
+        "sources": [
+          "core",
+          "misc"
+        ]
+      },
+      {
+        "text": "Update: the inspected public lifecycle provides insertion and deletion, but no distinct in-place semantic update or fact-correction method. Re-indexing changed text creates a different content hash; model, extraction, or preprocessing changes can invalidate the manifest and may require a fresh index/rebuild. Metadata for identical text is replaced rather than versioned.",
+        "sources": [
+          "core",
+          "state"
+        ]
+      },
+      {
+        "text": "Delete: `HippoRAG.delete` removes exact matching documents/chunks from embedding stores, persisted OpenIE rows, metadata, and graph. Source-aware fact/entity references allow shared triples/entities to remain while other chunks support them; unreferenced items and edge contributions are removed. The MCP wrapper additionally accepts source IDs and resolves them to matching chunk texts. This is source-observed behavior, not a tested erasure guarantee for copied backups or external services.",
+        "sources": [
+          "core",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Retrieval: queries score facts, rerank candidate facts, then use graph search with Personalized PageRank to spread evidence across connected passages. If no facts survive reranking, the implementation falls back to dense passage retrieval. Returned passages include scores and source metadata; `rag_qa` asks the configured LLM to answer from retrieved passages. The MCP tool serializes operations on one worker thread because the instance is not thread-safe.",
+        "sources": [
+          "core",
+          "mcp",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Fact retrieval, reranking, graph propagation and dense fallback are present; no answerability or abstention workload was scored.",
+        "sources": [
+          "core",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction and stale values",
+        "status": "unmeasured",
+        "evidence": "No dedicated fact correction API was found; no correction sequence or stale-value probe was run.",
+        "sources": [
+          "core",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Source-aware deletion removes graph/store contributions in inspected code; no post-delete retrieval, backup, or external-store leakage probe was run.",
+        "sources": [
+          "core",
+          "mcp",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "A save directory and optional vector namespace identify an index; no user/tenant authorization boundary was established for the graph or MCP HTTP server, and no isolation probe was run.",
+        "sources": [
+          "core",
+          "embedding",
+          "readme",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Passage metadata and source IDs can be returned to callers; no claim-support or citation-quality adjudication was performed.",
+        "sources": [
+          "misc",
+          "mcp",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The code logs retrieval and component timings; this review collected no latency or freshness measurements.",
+        "sources": [
+          "core",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Model calls, token usage, multiple vector backends and Parquet persistence are configurable; no token, cost, or storage workload was measured.",
+        "sources": [
+          "readme",
+          "embedding",
+          "config",
+          "metrics"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspects the current README and selected API, graph, persistence, configuration, and MCP implementation at the verified head. It does not establish answer quality, extraction correctness, runtime reliability, or behavior of every optional backend.",
+        "sources": [
+          "readme",
+          "core",
+          "mcp",
+          "embedding"
+        ]
+      },
+      {
+        "text": "Chunk metadata can carry source IDs and arbitrary metadata but does not itself establish claim truth. Scope separation depends on deployment and index selection; the documented HTTP MCP transport has no built-in authentication. Complete erasure across backups and remote vector services is not established by the inspected code.",
+        "sources": [
+          "misc",
+          "mcp",
+          "readme"
+        ]
+      },
+      {
+        "text": "Upstream README reports research results and efficiency comparisons. They remain upstream-reported claims; no HippoRAG runtime, tests, or benchmarks were run for this review.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No HippoRAG runtime, tests, or benchmark workload was executed for this review. Upstream paper/README results and code observations are not measurements produced here."
+    }
+  }
+}

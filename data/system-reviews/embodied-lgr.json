@@ -1,0 +1,265 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 215,
+    "slug": "embodied-lgr",
+    "name": "EmbodiedLGR",
+    "repository": "https://github.com/paolorv/lgr-agent",
+    "listed_repository": "https://github.com/paolorv/lgr-agent",
+    "branch": "not verified",
+    "revision": "not verified",
+    "reviewed_at": "2026-11-26T00:33:41Z",
+    "review_timezone": "UTC (2026-11-25 16:33:41 PST; America/Los_Angeles)",
+    "source_status": "not_reviewed",
+    "benchmark_status": "not_run",
+    "summary": "The catalog identifies EmbodiedLGR at ordinal 215 and lists paolorv/lgr-agent. Fresh official GitHub checks on 2026-11-26T00:33Z rendered Page not found for the listed repository, catalog-pinned commit, and pinned README; the repository API returned 404. No canonical current upstream, default branch, head SHA, source review, or implementation assessment could be verified.",
+    "atlas_locator": {
+      "ordinal": 215,
+      "name": "EmbodiedLGR",
+      "slug": "embodied-lgr",
+      "listed_repository": "https://github.com/paolorv/lgr-agent",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/embodied-lgr.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "catalog_revision": "3593e6a459e5099704b4e5577e4d4339dd2bf8dc",
+      "note": "Catalog and Atlas are retained only for curated identity, locator, and attribution context. Atlas descriptions and capability evidence are not assessment evidence."
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/paolorv/lgr-agent/blob/3593e6a459e5099704b4e5577e4d4339dd2bf8dc/README.md",
+      "checked_urls": [
+        "https://github.com/paolorv/lgr-agent",
+        "https://github.com/paolorv/lgr-agent/blob/3593e6a459e5099704b4e5577e4d4339dd2bf8dc/README.md"
+      ],
+      "note": "The official repository page and pinned README both rendered Page not found, so no official contact email could be verified. No address was inferred or taken from commit/profile metadata or third-party directories."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/paolorv/lgr-agent/blob/3593e6a459e5099704b4e5577e4d4339dd2bf8dc/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/paolorv/lgr-agent",
+      "https://github.com/paolorv/lgr-agent/blob/3593e6a459e5099704b4e5577e4d4339dd2bf8dc/README.md"
+    ],
+    "contact_email_note": "No contact email was verified because the official repository and its catalog-pinned README rendered Page not found. No email was inferred or obtained from commit/profile metadata or a third-party directory.",
+    "blocker": {
+      "reason": "Fresh official GitHub checks on 2026-11-26 at 00:33 UTC could not verify or check out the listed upstream: the repository page, catalog-pinned commit, and pinned README rendered Page not found, while the official repository API returned 404 Not Found.",
+      "checked_at": "2026-11-26T00:33:41Z",
+      "evidence": [
+        "https://github.com/paolorv/lgr-agent",
+        "https://api.github.com/repos/paolorv/lgr-agent",
+        "https://github.com/paolorv/lgr-agent/commit/3593e6a459e5099704b4e5577e4d4339dd2bf8dc",
+        "https://github.com/paolorv/lgr-agent/blob/3593e6a459e5099704b4e5577e4d4339dd2bf8dc/README.md"
+      ],
+      "consequence": "Canonical current upstream, default branch, full current head SHA, source behavior, and official contact remain unverified. A separate search result is not evidence of lineage, and no implementation review is asserted."
+    },
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[214], ordinal 215: EmbodiedLGR, slug embodied-lgr, explicit listed repository locator, pinned Atlas attribution, catalog revision 3593e6a459e5099704b4e5577e4d4339dd2bf8dc",
+        "url": "../memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/embodied-lgr.md",
+        "symbol": "Pinned Atlas source retained for curated identity/locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/embodied-lgr.md"
+      },
+      {
+        "id": "repo",
+        "label": "Listed official GitHub repository page",
+        "path": "repository page",
+        "symbol": "Opened 2026-11-26; title was Page not found · GitHub · GitHub",
+        "url": "https://github.com/paolorv/lgr-agent"
+      },
+      {
+        "id": "api",
+        "label": "Official GitHub repository API check",
+        "path": "GitHub REST repository endpoint",
+        "symbol": "Checked 2026-11-26; returned JSON message Not Found and status 404",
+        "url": "https://api.github.com/repos/paolorv/lgr-agent"
+      },
+      {
+        "id": "catalog_revision",
+        "label": "Catalog-pinned commit page check",
+        "path": "commit 3593e6a459e5099704b4e5577e4d4339dd2bf8dc",
+        "symbol": "Checked 2026-11-26; official GitHub page rendered Page not found; catalog revision is not verified as current head",
+        "url": "https://github.com/paolorv/lgr-agent/commit/3593e6a459e5099704b4e5577e4d4339dd2bf8dc"
+      },
+      {
+        "id": "readme",
+        "label": "Catalog-pinned official README and contact check",
+        "path": "README.md",
+        "symbol": "Checked 2026-11-26; official GitHub page rendered Page not found; source contents and contact could not be inspected",
+        "url": "https://github.com/paolorv/lgr-agent/blob/3593e6a459e5099704b4e5577e4d4339dd2bf8dc/README.md"
+      },
+      {
+        "id": "search",
+        "label": "Official GitHub repository search",
+        "path": "GitHub REST repository search",
+        "symbol": "Query lgr-agent returned three repository results; one distinct census-paolorv-lgr-agent candidate does not establish canonical identity or lineage",
+        "url": "https://api.github.com/search/repositories?q=lgr-agent"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Benchmark domains; none measured",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Fixture not run",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "No EmbodiedLGR execution result created or claimed",
+        "url": "../../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The catalog lists EmbodiedLGR at ordinal 215, slug embodied-lgr, with the explicit repository locator https://github.com/paolorv/lgr-agent and a pinned Atlas attribution. These are roster identity and attribution facts only.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "Fresh official GitHub checks on 2026-11-26 at 00:33 UTC returned Page not found for the listed repository, catalog-pinned commit, and README, and 404 Not Found from the repository API. Canonical current upstream, default branch, and head SHA remain unverified.",
+        "sources": [
+          "repo",
+          "api",
+          "catalog_revision",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Architecture and data model were not assessed because no verifiable official upstream source or documentation was accessible. Atlas descriptions were excluded from assessment evidence.",
+        "sources": [
+          "repo",
+          "api",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write, update, delete, retrieval, scope isolation, provenance/evidence, efficiency, observability, and limitations remain unknown because current upstream source and documentation could not be inspected.",
+        "sources": [
+          "repo",
+          "api",
+          "readme"
+        ]
+      },
+      {
+        "text": "Official GitHub repository search surfaced a distinct census-paolorv-lgr-agent result, but did not establish it as canonical upstream or as a continuation of the catalog-listed locator; it was not reviewed as implementation evidence.",
+        "sources": [
+          "search",
+          "repo"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "No current upstream source was accessible and no workload was run.",
+        "sources": [
+          "repo",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale retrieval",
+        "status": "unmeasured",
+        "evidence": "No source review or correction workload was possible.",
+        "sources": [
+          "repo",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No source review or deletion workload was possible.",
+        "sources": [
+          "repo",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "No source review or cross-scope workload was possible.",
+        "sources": [
+          "repo",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "No source review or output adjudication was possible.",
+        "sources": [
+          "repo",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No runtime timing samples were collected.",
+        "sources": [
+          "repo",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No usage or storage measurements were collected.",
+        "sources": [
+          "repo",
+          "metrics"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review is blocked at upstream verification. GitHub rendered Page not found for the repository, catalog-pinned commit, and pinned README; its repository API returned 404 Not Found. These observations do not prove deletion, rename, private status, or temporary unavailability.",
+        "sources": [
+          "repo",
+          "api",
+          "catalog_revision",
+          "readme"
+        ]
+      },
+      {
+        "text": "No current branch, full head SHA, implementation behavior, scope boundary, provenance mechanism, limitation, or observability behavior can be asserted. Search results for a separate repository do not establish lineage.",
+        "sources": [
+          "catalog",
+          "catalog_revision",
+          "search",
+          "repo"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "metrics_document": "../../METRICS.md",
+      "result_record": "../../results/initial-baselines-status.json",
+      "fixture": "../../fixtures/memory-benchmark-v1.json",
+      "note": "No EmbodiedLGR runtime, tests, or benchmarks were run. Source inspection was blocked by the inaccessible listed upstream."
+    }
+  }
+}

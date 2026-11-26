@@ -1,0 +1,346 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "agora",
+    "name": "Agora",
+    "repository": "https://github.com/CaffeinatedSoftwareLLC/agora",
+    "branch": "main",
+    "revision": "100810d9096896d5be1bf25dd0f546647c575bca",
+    "reviewed_at": "2026-11-24T19:32:41Z",
+    "review_timezone": "UTC (2026-11-24 11:32:41 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/CaffeinatedSoftwareLLC/agora/blob/100810d9096896d5be1bf25dd0f546647c575bca/README.md","checked_urls":["https://github.com/CaffeinatedSoftwareLLC/agora/blob/100810d9096896d5be1bf25dd0f546647c575bca/README.md","https://github.com/CaffeinatedSoftwareLLC/agora/blob/100810d9096896d5be1bf25dd0f546647c575bca/SECURITY.md","https://github.com/CaffeinatedSoftwareLLC/agora/blob/100810d9096896d5be1bf25dd0f546647c575bca/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "Agora is a self-hosted agent collaboration platform. Its hosted-session subsystem stores an agent-authored final-turn summary and injects it into a later wake when a native CLI session cannot be resumed. The summary is a bounded text fallback, not a searchable fact store.",
+    "atlas_locator": {
+      "ordinal": 34,
+      "name": "Agora",
+      "slug": "agora",
+      "listed_repository": "https://github.com/CaffeinatedSoftwareLLC/agora",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agora.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/CaffeinatedSoftwareLLC/agora/blob/100810d9096896d5be1bf25dd0f546647c575bca/SECURITY.md?plain=1",
+    "contact_email_checked_sources": [
+      "https://github.com/CaffeinatedSoftwareLLC/agora/blob/100810d9096896d5be1bf25dd0f546647c575bca/README.md?plain=1",
+      "https://github.com/CaffeinatedSoftwareLLC/agora/blob/100810d9096896d5be1bf25dd0f546647c575bca/SECURITY.md?plain=1"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository and default branch",
+        "path": "repository",
+        "symbol": "main is default branch; canonical repository CaffeinatedSoftwareLLC/agora",
+        "url": "https://github.com/CaffeinatedSoftwareLLC/agora"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "head 100810d9096896d5be1bf25dd0f546647c575bca",
+        "url": "https://github.com/CaffeinatedSoftwareLLC/agora/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified current repository head",
+        "path": "commit",
+        "symbol": "full SHA 100810d9096896d5be1bf25dd0f546647c575bca; git ls-remote and shallow clone agree",
+        "url": "https://github.com/CaffeinatedSoftwareLLC/agora/commit/100810d9096896d5be1bf25dd0f546647c575bca"
+      },
+      {
+        "id": "readme",
+        "label": "Official README: project overview and email check",
+        "path": "README.md",
+        "url": "https://github.com/CaffeinatedSoftwareLLC/agora/blob/100810d9096896d5be1bf25dd0f546647c575bca/README.md?plain=1"
+      },
+      {
+        "id": "sessions",
+        "label": "Official hosted agent session documentation",
+        "path": "docs/agent-sessions.md",
+        "symbol": "session scope and native-session fallback",
+        "url": "https://github.com/CaffeinatedSoftwareLLC/agora/blob/100810d9096896d5be1bf25dd0f546647c575bca/docs/agent-sessions.md?plain=1"
+      },
+      {
+        "id": "schema",
+        "label": "Agent session database schema",
+        "path": "src/db/migrations/037_agent_sessions.sql",
+        "symbol": "agent_sessions.summary and native_session_id",
+        "url": "https://github.com/CaffeinatedSoftwareLLC/agora/blob/100810d9096896d5be1bf25dd0f546647c575bca/src/db/migrations/037_agent_sessions.sql?plain=1"
+      },
+      {
+        "id": "prompt",
+        "label": "Host wake prompt and prior-summary handling",
+        "path": "agora-host/src/prompt.ts",
+        "symbol": "wakePrompt",
+        "url": "https://github.com/CaffeinatedSoftwareLLC/agora/blob/100810d9096896d5be1bf25dd0f546647c575bca/agora-host/src/prompt.ts?plain=1"
+      },
+      {
+        "id": "runs",
+        "label": "Claim, summary read, and completion persistence",
+        "path": "src/lib/agent-runs.ts",
+        "symbol": "claim response includes session summary; complete uses COALESCE for session summary",
+        "url": "https://github.com/CaffeinatedSoftwareLLC/agora/blob/100810d9096896d5be1bf25dd0f546647c575bca/src/lib/agent-runs.ts?plain=1"
+      },
+      {
+        "id": "scheduler",
+        "label": "Host run completion report",
+        "path": "agora-host/src/scheduler.ts",
+        "symbol": "scheduler reports result.summary and native session ID",
+        "url": "https://github.com/CaffeinatedSoftwareLLC/agora/blob/100810d9096896d5be1bf25dd0f546647c575bca/agora-host/src/scheduler.ts?plain=1"
+      },
+      {
+        "id": "adapters",
+        "label": "CLI output summary parsing",
+        "path": "agora-host/src/adapters.ts",
+        "symbol": "summary and parseOutput",
+        "url": "https://github.com/CaffeinatedSoftwareLLC/agora/blob/100810d9096896d5be1bf25dd0f546647c575bca/agora-host/src/adapters.ts?plain=1"
+      },
+      {
+        "id": "acp",
+        "label": "ACP final-message summary parsing",
+        "path": "agora-host/src/acp/session.ts",
+        "symbol": "summaryOf",
+        "url": "https://github.com/CaffeinatedSoftwareLLC/agora/blob/100810d9096896d5be1bf25dd0f546647c575bca/agora-host/src/acp/session.ts?plain=1"
+      },
+      {
+        "id": "restore",
+        "label": "Workspace restore summary replacement",
+        "path": "src/routes/workspace-review.ts",
+        "symbol": "restore resets native session ID and writes fixed summary",
+        "url": "https://github.com/CaffeinatedSoftwareLLC/agora/blob/100810d9096896d5be1bf25dd0f546647c575bca/src/routes/workspace-review.ts?plain=1"
+      },
+      {
+        "id": "commands",
+        "label": "Clear command summary replacement",
+        "path": "src/lib/session-commands.ts",
+        "symbol": "clear command resets native session ID and writes fixed summary",
+        "url": "https://github.com/CaffeinatedSoftwareLLC/agora/blob/100810d9096896d5be1bf25dd0f546647c575bca/src/lib/session-commands.ts?plain=1"
+      },
+      {
+        "id": "security",
+        "label": "Official SECURITY.md, checked for email contact",
+        "path": "SECURITY.md",
+        "url": "https://github.com/CaffeinatedSoftwareLLC/agora/blob/100810d9096896d5be1bf25dd0f546647c575bca/SECURITY.md?plain=1"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated identity and attribution only",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 34",
+        "url": "../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Agora as a provider-agnostic agent collaboration platform. Its hosted-session subsystem includes a server, host process, and agent CLI integration; this review concerns the session-summary fallback rather than a standalone memory library or service.",
+        "sources": [
+          "readme",
+          "sessions"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The agent_sessions row is associated with a server, channel, bot, and profile and stores one current summary text field plus a native_session_id. The schema does not model the summary as separate facts or indexed memory items.",
+        "sources": [
+          "schema"
+        ]
+      },
+      {
+        "text": "The claim path returns the session summary to the host. The host wake prompt injects that summary only when native_session_id is absent, labels it untrusted, and quotes its lines. Documentation describes resuming the native CLI session when possible and using the summary when starting fresh.",
+        "sources": [
+          "runs",
+          "prompt",
+          "sessions"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "After a successful run, the host sends the parsed summary and native session ID with the completion report. The server writes the per-run summary to agent_runs and sets the session summary to COALESCE(new_summary, old_summary), so a non-null summary replaces the old value while a null summary preserves it.",
+        "sources": [
+          "scheduler",
+          "runs"
+        ]
+      },
+      {
+        "text": "The CLI adapter parses structured summary output and caps it at 16,000 characters. The ACP parser also accepts a final text fallback, bounded to 16,000 characters. These paths record a returned string; they do not establish that it is a faithful or complete account.",
+        "sources": [
+          "adapters",
+          "acp"
+        ]
+      },
+      {
+        "text": "The reviewed summary path has no item-level search or editing API. Workspace restore and the clear command reset native_session_id and replace the summary with a fixed instruction to read channel history. The session schema's server, channel, bot, and profile references cascade on deletion; a dedicated summary-only deletion route was not found in this bounded inspection.",
+        "sources": [
+          "restore",
+          "commands",
+          "schema"
+        ]
+      },
+      {
+        "text": "A channel session is one agent in one channel; task-card and subtask sessions are scoped to their own thread. The summary is read by the claim for that session. These boundaries are visible in docs and code, but this review did not test cross-session isolation or inspect every access-control policy.",
+        "sources": [
+          "sessions",
+          "schema",
+          "runs"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Source observation: when a native session ID is absent, one prior summary is placed in the prompt. No answerability detector, retrieval scoring, or runtime recall probes were inspected or run.",
+        "sources": [
+          "prompt",
+          "sessions",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Source observation: non-null new summaries replace the previous value; null preserves it. No correction history or stale-value adjudication is represented in the inspected field. No correction workload was run.",
+        "sources": [
+          "runs",
+          "schema",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Restore and clear replace the summary with a fixed context instruction, and parent entity deletion cascades to the session. No post-deletion retrieval, backup, or erasure probes were run.",
+        "sources": [
+          "restore",
+          "commands",
+          "schema",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "The session schema and claim path associate the summary with a single session and its server/channel/bot/profile. Effective cross-scope isolation was not tested.",
+        "sources": [
+          "schema",
+          "runs",
+          "sessions",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "The stored summary is plain text without source-document IDs, quotes, claim citations, or an evidence state in the inspected schema. No response evidence was adjudicated.",
+        "sources": [
+          "schema",
+          "adapters",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The host stores and later includes the bounded summary on a fresh-session path. No retrieval latency or write-to-recall interval was measured.",
+        "sources": [
+          "prompt",
+          "runs",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Summary length is capped at 16,000 characters and persisted in a text column; run usage is reported separately. No summary-specific token, cost, or storage measurement was collected.",
+        "sources": [
+          "schema",
+          "adapters",
+          "scheduler",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code and documentation",
+        "evidence": "The session retains one current text value with a 16,000-character parser cap, and prompt injection occurs only without a native session ID. These are code observations, not performance measurements.",
+        "sources": [
+          "schema",
+          "prompt",
+          "adapters"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded inspection covered the official overview and hosted-session guide, session schema, claim/completion path, prompt construction, CLI/ACP summary parsing, and clear/restore handling at the verified head. It did not inspect every adapter or all session authorization, retention, and deletion paths.",
+        "sources": [
+          "readme",
+          "sessions",
+          "schema",
+          "runs",
+          "prompt",
+          "adapters",
+          "acp",
+          "restore",
+          "commands"
+        ]
+      },
+      {
+        "text": "Source inspection cannot establish summary factual accuracy, coverage, native CLI resume success, downstream answer quality, or effective isolation. A summary is agent-authored text and the code explicitly labels it untrusted when reused.",
+        "sources": [
+          "prompt",
+          "adapters",
+          "sessions"
+        ]
+      },
+      {
+        "text": "No Agora runtime, benchmark workload, or tests were run. Metric domains remain unmeasured for this system.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. The repository was inspected but not executed; no benchmark operations or tests were run. Project metric definitions, fixture, and status record are evaluation protocol/status artifacts, not Agora measurements.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      }
+    ]
+  }
+}

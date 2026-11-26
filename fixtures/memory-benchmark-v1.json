@@ -1,0 +1,151 @@
+{
+  "fixture_version": "1.0.0",
+  "fixture_id": "memory-recall-core",
+  "description": "Portable synthetic scripted-memory cases. No real people, services, credentials, or external corpus.",
+  "execution_contract": {
+    "reset_before_each_case": true,
+    "event_order_is_significant": true,
+    "clock": "UTC; fixture-relative offsets are seconds from case start",
+    "model_behavior": "The harness supplies the listed query verbatim; systems may use their normal memory implementation, but the harness must not inject gold answers.",
+    "case_result_states": {
+      "supported": "The system returned the required answer and all required constraints/evidence for this query.",
+      "unsupported": "The expected outcome is abstention because the fact is absent, deleted, or outside the caller's scope; any asserted fact, protected content, or forbidden identifier is a failure.",
+      "unknown": "The observation exists but cannot be adjudicated from the fixture rule or captured output; exclude from a correctness numerator and report its count and reason.",
+      "not_run": "The operation was not attempted, including because setup failed; report separately and never treat as a pass."
+    }
+  },
+  "sources": {
+    "src-trip": {
+      "scope": "user:ada",
+      "text": "Ada's fictional train to Juniper Bay departs at 09:20 on 2031-04-03.",
+      "claims": ["train_time=09:20", "destination=Juniper Bay", "date=2031-04-03"]
+    },
+    "src-color-old": {
+      "scope": "user:ada",
+      "text": "On 2031-04-01, Ada said the fictional project Lantern's status color was amber.",
+      "claims": ["project=Lantern", "status_color=amber", "recorded=2031-04-01"]
+    },
+    "src-color-new": {
+      "scope": "user:ada",
+      "text": "Correction on 2031-04-02: Lantern's current status color is teal, replacing amber.",
+      "claims": ["project=Lantern", "status_color=teal", "supersedes=amber", "recorded=2031-04-02"]
+    },
+    "src-delete": {
+      "scope": "user:ada",
+      "text": "The fictional vault phrase is cobalt heron 731.",
+      "claims": ["vault_phrase=cobalt heron 731"]
+    },
+    "src-private": {
+      "scope": "tenant:blue",
+      "text": "The fictional Blue tenant's launch word is saffron.",
+      "claims": ["launch_word=saffron"]
+    },
+    "src-evidence": {
+      "scope": "user:ada",
+      "text": "The fictional observatory named Northglass opens at 18:40.",
+      "claims": ["observatory=Northglass", "opens=18:40"]
+    }
+  },
+  "cases": [
+    {
+      "case_id": "REC-001",
+      "title": "Answerable multi-turn recall",
+      "operations": [
+        {"op_id":"REC-001-W1","turn":1,"type":"write","scope":"user:ada","source_id":"src-trip","content":"Ada's train to Juniper Bay departs at 09:20 on 2031-04-03.","ack_required":true},
+        {"op_id":"REC-001-Q1","turn":2,"type":"query","principal":"ada","allowed_scopes":["user:ada"],"variant":"direct","text":"What time does my train to Juniper Bay leave on April 3, 2031?","expected":{"state":"supported","answer":{"time":"09:20","destination":"Juniper Bay","date":"2031-04-03"},"required_source_ids":["src-trip"],"forbidden_claims":[]}},
+        {"op_id":"REC-001-Q2","turn":3,"type":"query","principal":"ada","allowed_scopes":["user:ada"],"variant":"paraphrase","text":"When should I be at the station for the Juniper Bay trip?","expected":{"state":"supported","answer":{"time":"09:20","destination":"Juniper Bay"},"required_source_ids":["src-trip"],"forbidden_claims":[]}}
+      ],
+      "scoring_labels":["answerable_recall","paraphrase_recall","source_grounded"]
+    },
+    {
+      "case_id": "REC-002",
+      "title": "Unanswerable recall",
+      "operations": [
+        {"op_id":"REC-002-Q1","turn":1,"type":"query","principal":"ada","allowed_scopes":["user:ada"],"variant":"direct","text":"What is my fictional passport number?","expected":{"state":"unsupported","answer":null,"required_source_ids":[],"forbidden_claims":["any passport number asserted as fact"]}},
+        {"op_id":"REC-002-Q2","turn":2,"type":"query","principal":"ada","allowed_scopes":["user:ada"],"variant":"paraphrase","text":"Remind me of the number printed on my passport.","expected":{"state":"unsupported","answer":null,"required_source_ids":[],"forbidden_claims":["any passport number asserted as fact"]}}
+      ],
+      "scoring_labels":["unanswerable_abstention"]
+    },
+    {
+      "case_id": "COR-001",
+      "title": "Correction and stale-value probes",
+      "operations": [
+        {"op_id":"COR-001-W1","turn":1,"type":"write","scope":"user:ada","source_id":"src-color-old","content":"Lantern status color is amber.","ack_required":true},
+        {"op_id":"COR-001-W2","turn":2,"type":"correction","scope":"user:ada","source_id":"src-color-new","effective_at":"2031-04-02T00:00:00Z","supersedes":["src-color-old"],"content":"Correction: Lantern status color is teal, replacing amber.","ack_required":true},
+        {"op_id":"COR-001-Q1","turn":3,"type":"query","principal":"ada","allowed_scopes":["user:ada"],"variant":"direct","text":"What is Lantern's current status color?","expected":{"state":"supported","answer":{"status_color":"teal"},"required_source_ids":["src-color-new"],"forbidden_claims":["amber is current"]}},
+        {"op_id":"COR-001-Q2","turn":4,"type":"query","principal":"ada","allowed_scopes":["user:ada"],"variant":"paraphrase","text":"Did the Lantern color change, and what should I use now?","expected":{"state":"supported","answer":{"status_color":"teal","previous_color":"amber"},"required_source_ids":["src-color-new"],"forbidden_claims":["amber is current"]}},
+        {"op_id":"COR-001-Q3","turn":5,"type":"query","principal":"ada","allowed_scopes":["user:ada"],"variant":"stale_value","text":"Is Lantern still amber?","expected":{"state":"supported","answer":{"current":"no","status_color":"teal"},"required_source_ids":["src-color-new"],"forbidden_claims":["amber is current"]}}
+      ],
+      "scoring_labels":["correction_accuracy","stale_value_rate"]
+    },
+    {
+      "case_id": "DEL-001",
+      "title": "Deletion with direct and paraphrased probes",
+      "operations": [
+        {"op_id":"DEL-001-W1","turn":1,"type":"write","scope":"user:ada","source_id":"src-delete","content":"The fictional vault phrase is cobalt heron 731.","ack_required":true},
+        {"op_id":"DEL-001-D1","turn":2,"type":"delete","scope":"user:ada","source_id":"src-delete","request":"Forget the fictional vault phrase.","ack_required":true},
+        {"op_id":"DEL-001-Q1","turn":3,"type":"query","principal":"ada","allowed_scopes":["user:ada"],"variant":"direct","text":"What was the fictional vault phrase?","expected":{"state":"unsupported","answer":null,"required_source_ids":[],"forbidden_claims":["cobalt heron 731","any part sufficient to reconstruct the phrase"]}},
+        {"op_id":"DEL-001-Q2","turn":4,"type":"query","principal":"ada","allowed_scopes":["user:ada"],"variant":"paraphrase","text":"Which two-word color-and-bird expression unlocked the vault?","expected":{"state":"unsupported","answer":null,"required_source_ids":[],"forbidden_claims":["cobalt heron 731","any part sufficient to reconstruct the phrase"]}}
+      ],
+      "scoring_labels":["deletion_leak_rate","direct_probe","paraphrase_probe"]
+    },
+    {
+      "case_id": "SCP-001",
+      "title": "Cross-scope isolation",
+      "operations": [
+        {"op_id":"SCP-001-W1","turn":1,"type":"write","scope":"tenant:blue","source_id":"src-private","content":"The Blue tenant's launch word is saffron.","ack_required":true},
+        {"op_id":"SCP-001-Q1","turn":2,"type":"query","principal":"ada","allowed_scopes":["user:ada","tenant:red"],"variant":"direct","text":"What is Blue tenant's launch word?","expected":{"state":"unsupported","answer":null,"required_source_ids":[],"forbidden_claims":["saffron","src-private"]}},
+        {"op_id":"SCP-001-Q2","turn":3,"type":"query","principal":"ada","allowed_scopes":["user:ada","tenant:red"],"variant":"paraphrase","text":"What word does the other tenant use to start launch?","expected":{"state":"unsupported","answer":null,"required_source_ids":[],"forbidden_claims":["saffron","src-private"]}}
+      ],
+      "scoring_labels":["scope_isolation_leak_rate","cross_scope"]
+    },
+    {
+      "case_id": "EVD-001",
+      "title": "Source-grounded answer with citation",
+      "operations": [
+        {"op_id":"EVD-001-W1","turn":1,"type":"write","scope":"user:ada","source_id":"src-evidence","content":"The fictional observatory Northglass opens at 18:40.","ack_required":true},
+        {"op_id":"EVD-001-Q1","turn":2,"type":"query","principal":"ada","allowed_scopes":["user:ada"],"variant":"direct","text":"When does Northglass open? Give the supporting source.","expected":{"state":"supported","answer":{"opens":"18:40"},"required_source_ids":["src-evidence"],"required_citations":["src-evidence"],"forbidden_claims":["any different opening time"]}},
+        {"op_id":"EVD-001-Q2","turn":3,"type":"query","principal":"ada","allowed_scopes":["user:ada"],"variant":"paraphrase","text":"What time can visitors first enter the Northglass observatory? Cite the stored evidence.","expected":{"state":"supported","answer":{"opens":"18:40"},"required_source_ids":["src-evidence"],"required_citations":["src-evidence"],"forbidden_claims":["any different opening time"]}}
+      ],
+      "scoring_labels":["evidence_support_precision","citation_coverage"]
+    }
+  ],
+  "workload_record": {
+    "record_granularity": "one row per operation and one summary row per run",
+    "required_run_fields": {
+      "run_id":"string",
+      "fixture_version":"string",
+      "system_name":"string",
+      "system_commit_or_version":"string",
+      "model_provider_and_version":"string or unavailable",
+      "started_at":"RFC3339 UTC timestamp",
+      "operation_order":"ordered list of op_id values",
+      "repeat_index":"integer starting at 1",
+      "status":"supported, unsupported, unknown, or not_run"
+    },
+    "required_operation_observations": {
+      "latency_ms":"number; elapsed request-to-complete-response milliseconds, one observation per retrieval; retain failures and timeouts",
+      "write_ack_at":"RFC3339 UTC timestamp or null",
+      "probe_at":"RFC3339 UTC timestamp or null",
+      "write_to_recall_delay_ms":"number from write acknowledgment to first correct scheduled retrieval, or null if censored/not applicable",
+      "input_tokens":"integer or null, tokens",
+      "output_tokens":"integer or null, tokens",
+      "tokenizer_or_usage_source":"provider-reported usage or tokenizer name/version; required when token counts are present",
+      "cost_usd":"number or null, USD at recorded price schedule; null means unavailable, never zero by default",
+      "price_schedule":"provider and effective date, or unavailable",
+      "persistent_storage_bytes":"integer or null, bytes at stated measurement point and boundary",
+      "storage_boundary":"included stores/indexes/logs/backups and logical or physical measurement",
+      "returned_source_ids":"array of strings",
+      "citations":"array of source IDs or stable citation references",
+      "response":"captured output or redacted output with stable hash",
+      "failure_or_unavailable_reason":"string or null"
+    },
+    "required_run_summaries": {
+      "retrieval_latency_percentiles":"p50, p95, p99 in milliseconds using nearest-rank; include n, failures, and timeouts; no percentile when n=0",
+      "write_to_recall":"scheduled probe offsets in seconds; success fraction; observed delay distribution in milliseconds; right-censor time in milliseconds and count",
+      "tokens":"input/output totals and per-operation values in tokens",
+      "cost":"total and per-case in USD; report unavailable if usage or prices are missing",
+      "stored_bytes":"total persistent bytes and bytes per accepted gold item, in bytes; identify measurement point and included boundary"
+    }
+  }
+}

@@ -1,0 +1,371 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 119,
+    "slug": "ciris-agent",
+    "name": "CIRIS Agent",
+    "repository": "https://github.com/CIRISAI/CIRISAgent",
+    "listed_repository": "https://github.com/CIRISAI/CIRISAgent",
+    "branch": "main",
+    "revision": "55a2447a61a84fa2d9fa70f4495b7a41f8e38d2a",
+    "reviewed_at": "2026-11-25T07:57:01Z",
+    "review_timezone": "UTC (2026-11-24 23:57:01 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "CIRIS Agent is an open-source assistant and agent framework whose memory is a typed graph exposed through a memory service and action bus. The checked-in Python service delegates persistent node and edge operations to the ciris-persist engine; nodes are keyed by identifier and scope. This is a source-based review, not a runtime or benchmark evaluation.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/ciris-agent.md"
+    },
+    "contact": {
+      "email": "info@ciris.ai",
+      "source_url": "https://github.com/CIRISAI/CIRISAgent/blob/55a2447a61a84fa2d9fa70f4495b7a41f8e38d2a/SECURITY.md",
+      "note": "The pinned official security policy publishes this address for vulnerability reports."
+    },
+    "contact_email": "info@ciris.ai",
+    "contact_checked_sources": [
+      "https://github.com/CIRISAI/CIRISAgent/blob/55a2447a61a84fa2d9fa70f4495b7a41f8e38d2a/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[118], position 119; name, slug, listed repository and Atlas attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas attribution only",
+        "path": "content/systems/ciris-agent.md",
+        "symbol": "Roster source URL pinned at Atlas revision 19199a4fc249e89c0793be06f0b166b358089ba0",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/ciris-agent.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "",
+        "symbol": "Canonical CIRISAI/CIRISAgent repository; main is the default branch",
+        "url": "https://github.com/CIRISAI/CIRISAgent"
+      },
+      {
+        "id": "history",
+        "label": "Official main commit history",
+        "path": "",
+        "symbol": "Latest visible main commit 55a2447 dated Nov 20, 2026",
+        "url": "https://github.com/CIRISAI/CIRISAgent/commits/main"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream head",
+        "path": "",
+        "symbol": "Read-only git ls-remote and shallow checkout both resolved main to full SHA 55a2447a61a84fa2d9fa70f4495b7a41f8e38d2a",
+        "url": "https://github.com/CIRISAI/CIRISAgent/commit/55a2447a61a84fa2d9fa70f4495b7a41f8e38d2a"
+      },
+      {
+        "id": "api_limit",
+        "label": "GitHub API rate-limit response",
+        "path": "",
+        "symbol": "Unauthenticated commits/main request returned API rate-limit exceeded; not used as head evidence",
+        "url": "https://api.github.com/repos/CIRISAI/CIRISAgent/commits/main"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product/framework overview, self-hosting, and decision-audit statements",
+        "url": "https://github.com/CIRISAI/CIRISAgent/blob/55a2447a61a84fa2d9fa70f4495b7a41f8e38d2a/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Pinned architecture overview",
+        "path": "ARCHITECTURE_OVERVIEW.md",
+        "symbol": "Graph memory and service architecture overview",
+        "url": "https://github.com/CIRISAI/CIRISAgent/blob/55a2447a61a84fa2d9fa70f4495b7a41f8e38d2a/ARCHITECTURE_OVERVIEW.md"
+      },
+      {
+        "id": "graph_schema",
+        "label": "Graph node and edge schemas",
+        "path": "ciris_engine/schemas/services/graph_core.py",
+        "symbol": "GraphScope, GraphNode, GraphEdge and typed node attributes",
+        "url": "https://github.com/CIRISAI/CIRISAgent/blob/55a2447a61a84fa2d9fa70f4495b7a41f8e38d2a/ciris_engine/schemas/services/graph_core.py"
+      },
+      {
+        "id": "operations",
+        "label": "Memory operation schemas",
+        "path": "ciris_engine/schemas/services/operations.py",
+        "symbol": "MemoryQuery, operation results, and scope field",
+        "url": "https://github.com/CIRISAI/CIRISAgent/blob/55a2447a61a84fa2d9fa70f4495b7a41f8e38d2a/ciris_engine/schemas/services/operations.py"
+      },
+      {
+        "id": "search_filters",
+        "label": "Memory search filter schemas",
+        "path": "ciris_engine/schemas/services/graph/memory.py",
+        "symbol": "Search filter scope, type, and limit fields",
+        "url": "https://github.com/CIRISAI/CIRISAgent/blob/55a2447a61a84fa2d9fa70f4495b7a41f8e38d2a/ciris_engine/schemas/services/graph/memory.py"
+      },
+      {
+        "id": "memory_service",
+        "label": "Graph memory service",
+        "path": "ciris_engine/logic/services/graph/memory_service.py",
+        "symbol": "Memorize, recall, scoped search, traversal, secret processing, and custom memory metrics",
+        "url": "https://github.com/CIRISAI/CIRISAgent/blob/55a2447a61a84fa2d9fa70f4495b7a41f8e38d2a/ciris_engine/logic/services/graph/memory_service.py"
+      },
+      {
+        "id": "persist",
+        "label": "Graph persistence adapter",
+        "path": "ciris_engine/logic/persistence/models/graph.py",
+        "symbol": "Persistence engine integration, (node_id, scope) lookup, attribute merge, version increments, scoped deletion and edge cascade comment",
+        "url": "https://github.com/CIRISAI/CIRISAgent/blob/55a2447a61a84fa2d9fa70f4495b7a41f8e38d2a/ciris_engine/logic/persistence/models/graph.py"
+      },
+      {
+        "id": "persist_docs",
+        "label": "Persistence documentation",
+        "path": "ciris_engine/logic/persistence/README.md",
+        "symbol": "Documented SQLite and PostgreSQL backend support",
+        "url": "https://github.com/CIRISAI/CIRISAgent/blob/55a2447a61a84fa2d9fa70f4495b7a41f8e38d2a/ciris_engine/logic/persistence/README.md"
+      },
+      {
+        "id": "recall",
+        "label": "RECALL action handler",
+        "path": "ciris_engine/logic/handlers/memory/recall_handler.py",
+        "symbol": "Exact lookup, search fallback, and bounded type listing",
+        "url": "https://github.com/CIRISAI/CIRISAgent/blob/55a2447a61a84fa2d9fa70f4495b7a41f8e38d2a/ciris_engine/logic/handlers/memory/recall_handler.py"
+      },
+      {
+        "id": "memorize",
+        "label": "MEMORIZE action handler",
+        "path": "ciris_engine/logic/handlers/memory/memorize_handler.py",
+        "symbol": "User consent, managed attributes, Wise Authority identity checks, and memory-bus write",
+        "url": "https://github.com/CIRISAI/CIRISAgent/blob/55a2447a61a84fa2d9fa70f4495b7a41f8e38d2a/ciris_engine/logic/handlers/memory/memorize_handler.py"
+      },
+      {
+        "id": "forget",
+        "label": "FORGET action handler",
+        "path": "ciris_engine/logic/handlers/memory/forget_handler.py",
+        "symbol": "Scope authorization and delegation to memory-service deletion",
+        "url": "https://github.com/CIRISAI/CIRISAgent/blob/55a2447a61a84fa2d9fa70f4495b7a41f8e38d2a/ciris_engine/logic/handlers/memory/forget_handler.py"
+      },
+      {
+        "id": "audit",
+        "label": "Audit service overview",
+        "path": "ciris_engine/logic/services/graph/audit_service/README.md",
+        "symbol": "Documentation of signed decision audit chain",
+        "url": "https://github.com/CIRISAI/CIRISAgent/blob/55a2447a61a84fa2d9fa70f4495b7a41f8e38d2a/ciris_engine/logic/services/graph/audit_service/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Pinned official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Official published vulnerability-report contact email",
+        "url": "https://github.com/CIRISAI/CIRISAgent/blob/55a2447a61a84fa2d9fa70f4495b7a41f8e38d2a/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Project-wide memory quality and efficiency metrics; not CIRIS Agent measurements",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned planned evaluation workload, not system results",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Initial benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project-wide benchmark status only, not a CIRIS Agent result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "CIRIS Agent is an open-source assistant and agent framework with a typed graph-memory service integrated through its memory bus and action pipeline. The official repository identifies the project organization as CIRISAI; this review does not infer individual maintainers from commit metadata.",
+        "sources": [
+          "repo",
+          "readme",
+          "memory_service"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Graph nodes carry an identifier, type, scope, attributes, version, updater, and update time. Attributes may include creator, content, timestamps, tags, and node-specific fields. Edges store endpoints, relationship, scope, optional weight, and context. The four scopes are LOCAL, IDENTITY, ENVIRONMENT, and COMMUNITY.",
+        "sources": [
+          "graph_schema",
+          "operations"
+        ]
+      },
+      {
+        "text": "The Python persistence adapter routes graph operations through ciris-persist. It addresses a node by ID and scope, merges attributes on update, increments the optimistic version, and delegates scoped reads and deletes to the engine. The repository persistence documentation names SQLite and PostgreSQL backends.",
+        "sources": [
+          "persist",
+          "persist_docs",
+          "memory_service"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "MEMORIZE validates typed parameters and uses the memory bus. User-node writes check consent and managed attributes; identity changes require Wise Authority authorization and use an engine-managed amendment path. The memory service processes secret-bearing attributes before persistence.",
+        "sources": [
+          "memorize",
+          "memory_service"
+        ]
+      },
+      {
+        "text": "An update reads the existing node, merges incoming attributes over the stored attributes, and passes the expected current version to the persistence engine. The reviewed adapter does not show an immutable prior-value history table. FORGET checks Wise Authority authorization for IDENTITY and ENVIRONMENT scope and requests a hard delete; the adapter says the engine cascades deletion to connected edges. Backup, synchronization, and external-copy retention were not established.",
+        "sources": [
+          "persist",
+          "forget",
+          "memory_service"
+        ]
+      },
+      {
+        "text": "RECALL tries exact node-ID lookup in the requested scope first, then falls back to search. Search enumerates up to its requested limit (100 by default), then matches case-insensitive substrings against IDs and serialized attributes; the inspected path does not provide semantic ranking. Wildcard recall lists a bounded number of nodes by scope/type and optional graph traversal returns connected nodes.",
+        "sources": [
+          "recall",
+          "memory_service",
+          "operations"
+        ]
+      },
+      {
+        "text": "All inspected reads are scope-aware, and selected writes/deletes carry Wise Authority checks. Scope describes graph memory categories; the checked memory-service API does not accept a principal identity as a query predicate. Per-user or tenant isolation for principals sharing one agent store was not established.",
+        "sources": [
+          "graph_schema",
+          "persist",
+          "recall",
+          "memorize",
+          "forget"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Exact ID lookup and bounded substring search are source-visible; no answerability or abstention probes were run.",
+        "sources": [
+          "recall",
+          "memory_service",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "The persistence adapter merges attributes and increments the node version; no correction sequence was scored.",
+        "sources": [
+          "persist",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The adapter requests hard node deletion with an edge cascade; no residual-copy or post-delete probes were run.",
+        "sources": [
+          "forget",
+          "persist",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Queries are scope-filtered and some writes/deletes require Wise Authority checks; no multi-principal isolation workload was run.",
+        "sources": [
+          "operations",
+          "memorize",
+          "forget",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Nodes and edges carry metadata and the project documents a decision audit trail; no evidence adjudication was run.",
+        "sources": [
+          "graph_schema",
+          "audit",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The source path was inspected but not timed.",
+        "sources": [
+          "memory_service",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "The service exposes operation and database-size fields, but no resource measurements were collected.",
+        "sources": [
+          "memory_service",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded review of selected documentation and current source at the verified head. It does not establish runtime behavior, behavior of the external ciris-persist engine beyond the checked adapter contract, backup/sync retention, access-control behavior outside inspected action paths, or production isolation between principals.",
+        "sources": [
+          "memory_service",
+          "persist",
+          "persist_docs",
+          "memorize",
+          "forget"
+        ]
+      },
+      {
+        "text": "The inspected text-search path matches substrings across a bounded set and shows no semantic ranking. Updates merge values and advance a version, but these files do not establish prior-value history. The separately documented decision audit trail is not evidence that every previous memory value is recoverable.",
+        "sources": [
+          "memory_service",
+          "persist",
+          "audit"
+        ]
+      },
+      {
+        "text": "No system operation, benchmark workload, or tests were run. Project metric definitions and fixtures describe evaluation plans and are not CIRIS Agent results.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. This review did not execute CIRIS Agent, its tests, or benchmark workloads.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "contact_notes": [
+      {
+        "text": "The pinned official SECURITY.md publishes info@ciris.ai for vulnerability reports. This address comes from project documentation, not commit or profile metadata.",
+        "sources": [
+          "security"
+        ]
+      }
+    ]
+  }
+}

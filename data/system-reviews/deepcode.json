@@ -1,0 +1,308 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 182,
+    "slug": "deepcode",
+    "name": "DeepCode",
+    "repository": "https://github.com/HKUDS/DeepCode",
+    "listed_repository": "https://github.com/HKUDS/DeepCode",
+    "branch": "main",
+    "revision": "bfe34b668831848f144bb586f466e74b08846498",
+    "reviewed_at": "2026-11-25T10:39:55Z",
+    "review_timezone": "UTC (2026-11-25 02:39:55 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "DeepCode's persistent project memory is a workspace-local set of Markdown notes. A bounded MEMORY.md index is loaded into new sessions, while the agent retrieves topic files through explicit list/read/write/append/delete actions. This review records source behavior at the verified main head; no system, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 182,
+      "name": "DeepCode",
+      "slug": "deepcode",
+      "listed_repository": "https://github.com/HKUDS/DeepCode",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/deepcode.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "use": "Curated identity and locator attribution only; not assessment evidence."
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/HKUDS/DeepCode/blob/bfe34b668831848f144bb586f466e74b08846498/README.md",
+      "checked_urls": [
+        "https://github.com/HKUDS/DeepCode/blob/bfe34b668831848f144bb586f466e74b08846498/README.md",
+        "https://github.com/HKUDS/DeepCode/blob/bfe34b668831848f144bb586f466e74b08846498/SECURITY.md"
+      ],
+      "note": "Neither official page publishes a contact email. The README directs bugs and feature requests to GitHub Issues; SECURITY.md directs vulnerability reports to GitHub private vulnerability reporting."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/HKUDS/DeepCode/blob/bfe34b668831848f144bb586f466e74b08846498/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/HKUDS/DeepCode/blob/bfe34b668831848f144bb586f466e74b08846498/README.md",
+      "https://github.com/HKUDS/DeepCode/blob/bfe34b668831848f144bb586f466e74b08846498/SECURITY.md"
+    ],
+    "contact_email_note": "No email was found in the official README or SECURITY.md at the reviewed revision. No commit/profile metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Catalog ordinal and listed locator",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[181], ordinal 182; DeepCode identity, slug, explicit repository locator and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/deepcode.md",
+        "symbol": "Pinned roster entry used only for curated identity and locator context; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/deepcode.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Public HKUDS/DeepCode repository identifies main as default branch; latest commit prefix bfe34b6",
+        "url": "https://github.com/HKUDS/DeepCode"
+      },
+      {
+        "id": "feed",
+        "label": "Official main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Current full main head bfe34b668831848f144bb586f466e74b08846498; feed updated 2026-11-23T08:23:32Z",
+        "url": "https://github.com/HKUDS/DeepCode/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Official reviewed head commit",
+        "path": "commit/bfe34b668831848f144bb586f466e74b08846498",
+        "symbol": "Official commit page for verified current main head",
+        "url": "https://github.com/HKUDS/DeepCode/commit/bfe34b668831848f144bb586f466e74b08846498"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product overview, clients, memory location, local data and model endpoint statements, service logging and support contacts",
+        "url": "https://github.com/HKUDS/DeepCode/blob/bfe34b668831848f144bb586f466e74b08846498/README.md"
+      },
+      {
+        "id": "guide",
+        "label": "Pinned Skills and memory guide",
+        "path": "docs/guide/skills-and-memory.md",
+        "symbol": "Project instructions, persistent project memory path, index behavior and manual editing guidance",
+        "url": "https://github.com/HKUDS/DeepCode/blob/bfe34b668831848f144bb586f466e74b08846498/docs/guide/skills-and-memory.md"
+      },
+      {
+        "id": "memory",
+        "label": "Pinned memory tool implementation",
+        "path": "core/harness/memory.py",
+        "symbol": "MemoryTool read/list/write/append/delete, workspace path boundaries, index limit, topic fetching and candidate-only consolidation",
+        "url": "https://github.com/HKUDS/DeepCode/blob/bfe34b668831848f144bb586f466e74b08846498/core/harness/memory.py"
+      },
+      {
+        "id": "agent_setup",
+        "label": "Pinned shared agent-session assembly",
+        "path": "core/agent_setup.py",
+        "symbol": "Frontend-neutral session assembly and memory guidance integration",
+        "url": "https://github.com/HKUDS/DeepCode/blob/bfe34b668831848f144bb586f466e74b08846498/core/agent_setup.py"
+      },
+      {
+        "id": "security",
+        "label": "Pinned official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Private vulnerability reporting route; checked for a published contact email",
+        "url": "https://github.com/HKUDS/DeepCode/blob/bfe34b668831848f144bb586f466e74b08846498/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Metric domains and definitions; no DeepCode result inferred",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Workload specification reference only; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project execution status reference; no DeepCode result from this review",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes DeepCode as an open-source coding agent with TUI, Desktop, Web and headless clients over a shared local service. Project notes are one part of session context alongside instructions, Skills and session history.",
+        "sources": [
+          "readme",
+          "guide"
+        ]
+      },
+      {
+        "text": "GitHub identifies main as the default branch. The official main Atom feed reports full head bfe34b668831848f144bb586f466e74b08846498, updated 2026-11-23T08:23:32Z; assessment source links pin that revision.",
+        "sources": [
+          "repo",
+          "feed",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Persistent project memory is stored as Markdown files in <workspace>/.deepcode/memory/. MEMORY.md is a short index of topic links and hooks, injected into each new session with an 8,000-character cap; topic files hold longer notes and are fetched on demand.",
+        "sources": [
+          "memory",
+          "guide"
+        ]
+      },
+      {
+        "text": "The tool operates on regular files: list enumerates names, read fetches a named topic, write replaces contents, append concatenates, and delete unlinks. The offline Orient/Gather/Consolidate/Prune helper returns a candidate index and does not write it.",
+        "sources": [
+          "memory"
+        ]
+      },
+      {
+        "text": "Project instructions in AGENTS.md, DEEPCODE.md or CLAUDE.md and user-level instruction files are separate from the persistent project-memory notes. A shared session builder supplies the memory integration across frontends.",
+        "sources": [
+          "memory",
+          "guide",
+          "agent_setup"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write requires non-empty content and creates the memory directory as needed. Append reads an existing file, trims trailing whitespace, adds a newline, and appends the new content. The tool does not add an automatic note-level revision history.",
+        "sources": [
+          "memory"
+        ]
+      },
+      {
+        "text": "Write overwrites the prior file content. Delete removes the named file with unlink; the inspected path has no tombstone or recovery log. This is a source observation and does not establish removal from snapshots, backups, or copies elsewhere.",
+        "sources": [
+          "memory"
+        ]
+      },
+      {
+        "text": "Retrieval loads MEMORY.md into the session prompt, then relies on the agent to list or read a named topic. The inspected interface does not offer keyword or vector search. Topic reads are bounded and refuse symlink targets outside the memory directory.",
+        "sources": [
+          "memory",
+          "guide"
+        ]
+      },
+      {
+        "text": "The MemoryTool receives a workspace path, stores notes under that workspace, rejects names that are not plain file names, and checks read targets against the memory directory. These code-visible filesystem boundaries were not tested as a deployment-wide tenant isolation guarantee.",
+        "sources": [
+          "memory"
+        ]
+      },
+      {
+        "text": "The memory tool stores caller-provided text in ordinary files and does not attach typed source IDs, author, timestamp, confidence, or correction provenance. Any evidence trail depends on content supplied in the note.",
+        "sources": [
+          "memory",
+          "guide"
+        ]
+      },
+      {
+        "text": "The 8,000-character index cap and on-demand topic reads bound automatically injected memory context. The inspected memory path exposes no retrieval metrics, ranking, token accounting, or storage-efficiency reporting; none was measured.",
+        "sources": [
+          "memory",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention — unmeasured. No answer or abstention cases were scored.",
+        "sources": [
+          "memory",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured. No post-update factual probes were run.",
+        "sources": [
+          "memory",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Deletion leakage — unmeasured. No post-delete probes, snapshot/recovery checks, or backup checks were made.",
+        "sources": [
+          "memory",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Scope isolation — unmeasured. No cross-workspace or cross-user probes were run.",
+        "sources": [
+          "memory",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Evidence support precision and citation coverage — unmeasured. No generated claims or citations were adjudicated.",
+        "sources": [
+          "memory",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Retrieval latency and write-to-recall delay — unmeasured. No timed reads, writes, or recall probes were run.",
+        "sources": [
+          "memory",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Tokens, cost, and storage efficiency — unmeasured. No token counts, charges, corpus sizes, or disk usage were collected.",
+        "sources": [
+          "memory",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a selected source review of the official README, Skills and memory guide, memory-tool implementation, shared agent-session assembly, and security policy at the verified head. It did not inspect every permission path, deployment mode, lifecycle, or backup behavior.",
+        "sources": [
+          "readme",
+          "guide",
+          "memory",
+          "agent_setup",
+          "security"
+        ]
+      },
+      {
+        "text": "Memory quality depends on what is written into the notes and whether the agent follows the index to read a topic. Large-note behavior beyond the visible read cap, concurrent edits, practical isolation, and complete deletion guarantees remain unknown from this review.",
+        "sources": [
+          "memory",
+          "guide"
+        ]
+      },
+      {
+        "text": "The official README and SECURITY.md were checked for a contact email. Neither publishes one: the README directs bugs and feature requests to GitHub Issues and SECURITY.md directs vulnerability reports through GitHub private vulnerability reporting. The record stores contact_email as null and these exact checked URLs.",
+        "sources": [
+          "readme",
+          "security"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No DeepCode runtime, tests, or benchmark workload was executed. Source observations, project metric definitions, and the benchmark fixture are not measurements for DeepCode.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

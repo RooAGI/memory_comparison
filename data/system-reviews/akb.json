@@ -1,0 +1,295 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "akb",
+    "name": "AKB",
+    "repository": "https://github.com/dnotitia/akb",
+    "branch": "main",
+    "revision": "9f5f9e2df283c4b8a4e8a9b21b38195876aa9a68",
+    "reviewed_at": "2026-11-24T20:14:00Z",
+    "review_timezone": "UTC (2026-11-24 12:14:00 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":"support@dnotitia.com","source_url":"https://github.com/dnotitia/akb/blob/9f5f9e2df283c4b8a4e8a9b21b38195876aa9a68/README.md","note":"Published in the official README."},
+    "summary": "AKB is an organizational knowledge base for agents with versioned documents, tables, files, relations, and hybrid search through MCP, REST, and a web UI. PostgreSQL is the Native backend's source of truth; pluggable vector indexes are derived retrieval data. This review covers selected pinned source and documentation, not runtime quality or performance.",
+    "atlas_locator": {
+      "ordinal": 47,
+      "name": "AKB",
+      "slug": "akb",
+      "listed_repository": "https://github.com/dnotitia/akb",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/akb.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": "support@dnotitia.com",
+    "contact_email_source_url": "https://github.com/dnotitia/akb/blob/9f5f9e2df283c4b8a4e8a9b21b38195876aa9a68/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/dnotitia/akb/blob/9f5f9e2df283c4b8a4e8a9b21b38195876aa9a68/README.md"
+    ],
+    "contact_email_note": "The official pinned README publishes support@dnotitia.com for commercial licensing and trademark permission inquiries.",
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository page",
+        "path": "repository",
+        "symbol": "canonical dnotitia/akb; default branch main",
+        "url": "https://github.com/dnotitia/akb"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "head 9f5f9e2df283c4b8a4e8a9b21b38195876aa9a68; updated 2026-11-20T04:55:10Z",
+        "url": "https://github.com/dnotitia/akb/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed full commit",
+        "path": "commit",
+        "symbol": "9f5f9e2df283c4b8a4e8a9b21b38195876aa9a68",
+        "url": "https://github.com/dnotitia/akb/commit/9f5f9e2df283c4b8a4e8a9b21b38195876aa9a68"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "system description, architecture, APIs, historical retrieval claim, and published contact email",
+        "url": "https://github.com/dnotitia/akb/blob/9f5f9e2df283c4b8a4e8a9b21b38195876aa9a68/README.md"
+      },
+      {
+        "id": "evalguide",
+        "label": "Retrieval evaluation guide",
+        "path": "docs/guides/evaluating-retrieval-claims.md",
+        "symbol": "historical LongMemEval-S result, methodology, limitations, retrieval behavior",
+        "url": "https://github.com/dnotitia/akb/blob/9f5f9e2df283c4b8a4e8a9b21b38195876aa9a68/docs/guides/evaluating-retrieval-claims.md"
+      },
+      {
+        "id": "citation",
+        "label": "Citation guide",
+        "path": "docs/guides/citing-the-exact-source-behind-an-answer.md",
+        "symbol": "stable URIs, section reads, revision citations, provenance and archival",
+        "url": "https://github.com/dnotitia/akb/blob/9f5f9e2df283c4b8a4e8a9b21b38195876aa9a68/docs/guides/citing-the-exact-source-behind-an-answer.md"
+      },
+      {
+        "id": "revision",
+        "label": "Native revision service",
+        "path": "backend/app/services/native_revision_service.py",
+        "symbol": "transactional resource mutation and verified payload snapshot",
+        "url": "https://github.com/dnotitia/akb/blob/9f5f9e2df283c4b8a4e8a9b21b38195876aa9a68/backend/app/services/native_revision_service.py"
+      },
+      {
+        "id": "search",
+        "label": "Search service",
+        "path": "backend/app/services/search_service.py",
+        "symbol": "hybrid retrieval flow, metadata filtering, timing and bounded Native candidate processing",
+        "url": "https://github.com/dnotitia/akb/blob/9f5f9e2df283c4b8a4e8a9b21b38195876aa9a68/backend/app/services/search_service.py"
+      },
+      {
+        "id": "sql",
+        "label": "User SQL executor",
+        "path": "backend/app/services/user_sql_executor.py",
+        "symbol": "SET LOCAL ROLE and PostgreSQL-enforced vault isolation",
+        "url": "https://github.com/dnotitia/akb/blob/9f5f9e2df283c4b8a4e8a9b21b38195876aa9a68/backend/app/services/user_sql_executor.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "evaluation domains; no AKB run",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "shared status; no AKB measurement",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned workload only; not run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated roster",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 47 identity, locator and attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas attribution source",
+        "path": "content/systems/akb.md",
+        "symbol": "identity attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/akb.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes AKB as organizational memory for AI agents and identifies Dnotitia, Inc. as the trademark holder. It is a self-hostable knowledge-base service with MCP tooling and agent plugins. The README characterizes the core as a read/write store and leaves consolidation and other knowledge-maintenance policies to external consumers.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README describes an access layer with MCP, REST, and web UI surfaces over document, search, relation, session, and publication services. In Native mode, PostgreSQL stores document text, metadata, revisions, and BM25 vocabulary as source of truth; a configurable vector driver holds derived dense embeddings and sparse vectors. The README says vector indexes can be rebuilt from PostgreSQL. Explicit Bare Git deployments remain supported.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "Vaults define knowledge organization and access control. Collections group resources; documents use Markdown with YAML frontmatter and stable akb:// URIs. Document frontmatter can declare graph relations such as depends_on, related_to, and implements. Agent session lifecycle is described as a separate REST surface and is not deeply reviewed here.",
+        "sources": [
+          "readme",
+          "citation"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The README lists put, update, edit, delete, get, diff, history, browse, search, drill-down, and relation tools. The inspected Native revision service describes a resource mutation as one PostgreSQL authority transaction and verifies payload size and SHA-256 digest before returning a text snapshot.",
+        "sources": [
+          "readme",
+          "revision"
+        ]
+      },
+      {
+        "text": "The README describes archive as a way to retire a superseded document from default search while keeping its citation resolvable. This review did not trace every Native delete, file-retention, backup, index, or export path, so complete erasure is not established.",
+        "sources": [
+          "readme",
+          "citation"
+        ]
+      },
+      {
+        "text": "The inspected search-service docstring describes PostgreSQL metadata and ACL prefiltering, query embedding, dense-plus-BM25 retrieval with reciprocal-rank fusion, optional cross-encoder reranking, and metadata hydration. The code logs phase timings and result counts without query text, user IDs, or result data.",
+        "sources": [
+          "search"
+        ]
+      },
+      {
+        "text": "The citation guide describes stable resource URIs, section-level reads through akb_drill_down, current revision IDs from akb_get, and historical reads by version. It states that citations identify documents and sections, not each generated sentence.",
+        "sources": [
+          "citation"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Hybrid dense/BM25 retrieval and optional reranking are visible in code. AKB separately publishes an older LongMemEval-S Recall@5 result; this review did not run answerability or abstention probes.",
+        "sources": [
+          "search",
+          "evalguide",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Revision history and versioned reads are documented, but no correction or stale-value workload was measured.",
+        "sources": [
+          "citation",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Delete is listed in the README and archiving preserves historical citations. No deletion-leak checks across Native storage, indexes, files, backups, or exports were run.",
+        "sources": [
+          "readme",
+          "citation",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Vault ACL checks and transaction-local PostgreSQL roles are visible in the inspected SQL executor. No cross-vault or cross-surface isolation probes were run.",
+        "sources": [
+          "sql",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Stable URI, section, revision, history, and provenance affordances are documented, but no claim-support or citation-coverage adjudication was performed.",
+        "sources": [
+          "citation",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The search implementation logs internal phase timing fields. No runtime latency or write-to-recall timings were collected.",
+        "sources": [
+          "search",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The source review and README expose configurable model routes and derived-index design; no token, cost, or storage measurements were collected.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code and documentation",
+        "evidence": "PostgreSQL is documented as source of truth with rebuildable vector indexes; the search source shows metadata prefiltering, bounded Native candidate processing, optional reranking, degradation-aware results, and phase timing logs. These observations are not performance measurements.",
+        "sources": [
+          "readme",
+          "search"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded review inspected the pinned README, retrieval-evaluation and citation guides, plus selected Native revision, search, and SQL-scope code. It did not inspect all CRUD routes, relation/provenance internals, every vector driver, all file-retention and deletion paths, or session-memory internals. No AKB runtime, benchmark workload, or tests were run.",
+        "sources": [
+          "readme",
+          "evalguide",
+          "citation",
+          "revision",
+          "search",
+          "sql"
+        ]
+      },
+      {
+        "text": "The published 98.4% Recall@5 result is a historical source-reported measurement for a different backend revision and a specific retrieval configuration; it is not a measurement from this task or a claim about generated-answer accuracy. Complete erasure, end-to-end isolation across all surfaces, answer quality on other workloads, and operational performance remain unknown here.",
+        "sources": [
+          "evalguide",
+          "readme"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. This task did not execute AKB, tests, or benchmark workloads. The official evaluation guide reports a historical LongMemEval-S Recall@5 result of 98.4% (492/500), measured 2026-05-20 on backend revision b54184a; that source-published result was not reproduced and does not describe the current reviewed head. Project metric definitions, execution status, and fixture are a separate protocol, not AKB results.",
+        "sources": [
+          "evalguide",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

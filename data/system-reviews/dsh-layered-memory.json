@@ -1,0 +1,425 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 200,
+    "slug": "dsh-layered-memory",
+    "name": "dsh-layered-memory",
+    "repository": "https://github.com/JunNanLYS/dsh-layered-memory",
+    "listed_repository": "https://github.com/JunNanLYS/dsh-layered-memory",
+    "branch": "main",
+    "revision": "69028fbee43e9950fffecc578430909fc827527e",
+    "reviewed_at": "2026-11-25T11:39:02Z",
+    "review_timezone": "UTC (2026-11-25 03:39:02 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "dsh-layered-memory is a DeepSeek Harness plugin that captures conversations, distills atomic memories, and consolidates them into scene and persona summaries. It stores append-only JSONL sources beside a SQLite search index, optionally uses embeddings, and injects bounded recall before model steps. This is a pinned source review, not a runtime or benchmark assessment.",
+    "atlas_locator": {
+      "ordinal": 200,
+      "name": "dsh-layered-memory",
+      "slug": "dsh-layered-memory",
+      "listed_repository": "https://github.com/JunNanLYS/dsh-layered-memory",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dsh-layered-memory.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "use": "Curated identity and locator attribution only; not assessment evidence."
+    },
+    "contact": {
+      "email": null,
+      "source_url": null,
+      "checked_urls": [
+        "https://github.com/JunNanLYS/dsh-layered-memory/blob/69028fbee43e9950fffecc578430909fc827527e/README.en.md"
+      ],
+      "note": "The official pinned English README was checked and publishes no contact email."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/JunNanLYS/dsh-layered-memory/blob/69028fbee43e9950fffecc578430909fc827527e/README.en.md"
+    ],
+    "contact_email_note": "Checked only the official pinned README.en.md for contact. It publishes no email. No commit/profile metadata, third-party directory, or inferred address was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Catalog ordinal and listed repository",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[199], ordinal 200: dsh-layered-memory, explicit locator",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/dsh-layered-memory.md",
+        "symbol": "Pinned report used only for roster identity and locator",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dsh-layered-memory.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository metadata",
+        "path": "GitHub repository API",
+        "symbol": "Public, canonical, non-fork repository; default branch main",
+        "url": "https://api.github.com/repos/JunNanLYS/dsh-layered-memory"
+      },
+      {
+        "id": "head",
+        "label": "Official default-branch head",
+        "path": "branches/main",
+        "symbol": "main resolves to 69028fbee43e9950fffecc578430909fc827527e; commit timestamp 2026-09-07T01:12:22Z",
+        "url": "https://api.github.com/repos/JunNanLYS/dsh-layered-memory/branches/main"
+      },
+      {
+        "id": "commit_page",
+        "label": "Pinned full-SHA commit page",
+        "path": "commit",
+        "symbol": "Official GitHub commit page for the reviewed full SHA",
+        "url": "https://github.com/JunNanLYS/dsh-layered-memory/commit/69028fbee43e9950fffecc578430909fc827527e"
+      },
+      {
+        "id": "feed",
+        "label": "Official main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Feed reports full head 69028fbee43e9950fffecc578430909fc827527e, updated 2026-09-07T01:12:22Z",
+        "url": "https://github.com/JunNanLYS/dsh-layered-memory/commits/main.atom"
+      },
+      {
+        "id": "readme_en",
+        "label": "Pinned English README checked for contact",
+        "path": "README.en.md",
+        "symbol": "Storage, retrieval, scope, budgets, observability and contact check",
+        "url": "https://github.com/JunNanLYS/dsh-layered-memory/blob/69028fbee43e9950fffecc578430909fc827527e/README.en.md"
+      },
+      {
+        "id": "types",
+        "label": "Pinned memory data types",
+        "path": "src/types.ts",
+        "symbol": "L0/L1 records, memory family and source-message fields",
+        "url": "https://github.com/JunNanLYS/dsh-layered-memory/blob/69028fbee43e9950fffecc578430909fc827527e/src/types.ts"
+      },
+      {
+        "id": "l0",
+        "label": "Pinned conversation store",
+        "path": "src/store/l0.ts",
+        "symbol": "Daily JSONL capture, SQLite index, FTS/vector retrieval and reindex",
+        "url": "https://github.com/JunNanLYS/dsh-layered-memory/blob/69028fbee43e9950fffecc578430909fc827527e/src/store/l0.ts"
+      },
+      {
+        "id": "l1",
+        "label": "Pinned atomic memory store",
+        "path": "src/store/l1.ts",
+        "symbol": "Daily JSONL records, SQLite index operations, search and freshness decay",
+        "url": "https://github.com/JunNanLYS/dsh-layered-memory/blob/69028fbee43e9950fffecc578430909fc827527e/src/store/l1.ts"
+      },
+      {
+        "id": "recall",
+        "label": "Pinned recall hook",
+        "path": "src/hooks/recall.ts",
+        "symbol": "Pre-step injection, bounded query, timeout, deduplication and recall telemetry",
+        "url": "https://github.com/JunNanLYS/dsh-layered-memory/blob/69028fbee43e9950fffecc578430909fc827527e/src/hooks/recall.ts"
+      },
+      {
+        "id": "tools",
+        "label": "Pinned memory tools",
+        "path": "src/tools/index.ts",
+        "symbol": "Read tool surface and caller-family gate behavior",
+        "url": "https://github.com/JunNanLYS/dsh-layered-memory/blob/69028fbee43e9950fffecc578430909fc827527e/src/tools/index.ts"
+      },
+      {
+        "id": "pipeline",
+        "label": "Pinned L1 distillation pipeline",
+        "path": "src/pipeline/l1.ts",
+        "symbol": "Extraction, dedup decisions, update/merge replacement and record lineage",
+        "url": "https://github.com/JunNanLYS/dsh-layered-memory/blob/69028fbee43e9950fffecc578430909fc827527e/src/pipeline/l1.ts"
+      },
+      {
+        "id": "scenes",
+        "label": "Pinned L2 scene store",
+        "path": "src/store/scenes.ts",
+        "symbol": "Family-specific Markdown scenes, atomic writes and hard-delete marker",
+        "url": "https://github.com/JunNanLYS/dsh-layered-memory/blob/69028fbee43e9950fffecc578430909fc827527e/src/store/scenes.ts"
+      },
+      {
+        "id": "config",
+        "label": "Pinned configuration",
+        "path": "src/config.ts",
+        "symbol": "Recall limits, score threshold, timeout and embedding options",
+        "url": "https://github.com/JunNanLYS/dsh-layered-memory/blob/69028fbee43e9950fffecc578430909fc827527e/src/config.ts"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Benchmark domains; not executed",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Workload specification only; not run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Execution record; this review adds no result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository is a public, non-fork GitHub project. Its README describes dsh-layered-memory as a layered memory plugin for DeepSeek Harness with web, TUI and headless integrations; it is a host plugin rather than a hosted memory service.",
+        "sources": [
+          "repo",
+          "readme_en"
+        ]
+      },
+      {
+        "text": "Catalog ordinal 200 identifies dsh-layered-memory and lists the explicit JunNanLYS/dsh-layered-memory locator. The pinned Atlas entry is retained for roster attribution only.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The official GitHub API identifies main as default branch and resolves it to 69028fbee43e9950fffecc578430909fc827527e; the official main feed reports the same head.",
+        "sources": [
+          "repo",
+          "head",
+          "commit_page",
+          "feed"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The design separates L0 conversation messages, L1 atomic memories, L2 scene documents and L3 persona summaries. L0 keeps session/message IDs, role, content and timestamps. L1 records carry content, type, family, scene, timestamps, version and source-message IDs.",
+        "sources": [
+          "readme_en",
+          "types",
+          "l0",
+          "l1"
+        ]
+      },
+      {
+        "text": "L0 and L1 have append-only daily JSONL records and a SQLite retrieval index. The README describes FTS and optional vector search; L2 scenes are family-specific Markdown files, while scene navigation and persona summaries feed a stable prompt section.",
+        "sources": [
+          "readme_en",
+          "l0",
+          "l1",
+          "scenes"
+        ]
+      },
+      {
+        "text": "Host capture and pre-step hooks connect to LLM extraction and deduplication, per-family stores, recall tools, settings UI and optional embedding providers. SQLite is the main search index; JSONL retains the source records.",
+        "sources": [
+          "readme_en",
+          "pipeline",
+          "recall",
+          "l1"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Capture appends non-off session messages to L0 JSONL and indexes them in SQLite. L1 extraction groups facts into scenes and attaches source message IDs; a separate LLM deduplication decision can store, update, merge or skip a proposal against same-family candidates.",
+        "sources": [
+          "readme_en",
+          "l0",
+          "pipeline",
+          "types"
+        ]
+      },
+      {
+        "text": "New L1 entries append to JSONL and are indexed in SQLite. An update or merge creates a new record ID and increments the version from replaced targets, then removes prior targets from SQLite; older JSONL entries remain. L2 scene writes are family-specific, and a [DELETED] scene result unlinks its file.",
+        "sources": [
+          "l1",
+          "pipeline",
+          "scenes"
+        ]
+      },
+      {
+        "text": "The README documents editing and deleting memories through the settings panel. The inspected model-callable tools expose search and read operations only, not a memory-delete tool; writes flow through capture/distillation and the UI or other host surfaces.",
+        "sources": [
+          "readme_en",
+          "tools",
+          "pipeline"
+        ]
+      },
+      {
+        "text": "L1 supports FTS5 keyword search, vector search, or hybrid search with reciprocal-rank fusion and a recency-decay weight with a floor. Automatic recall uses the last eight messages, caps its query at 2,000 characters, applies a configured timeout and deduplicates records within a session. A timeout skips injection.",
+        "sources": [
+          "l1",
+          "recall",
+          "config"
+        ]
+      },
+      {
+        "text": "Recall inserts bounded L1 snippets before new user messages. memory_search retrieves L1, conversation_search searches raw L0, and memory_read_scene reads L2/L3 files; persona and scene navigation can also be placed in stable prompt context.",
+        "sources": [
+          "readme_en",
+          "recall",
+          "tools"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "text": "L0 retains source session and message identifiers. L1 carries source_message_ids and version data; append-only JSONL retains earlier records. The README also describes consolidation receipts with an input snapshot, decision details and result hash.",
+        "sources": [
+          "readme_en",
+          "types",
+          "l0",
+          "l1",
+          "pipeline"
+        ]
+      },
+      {
+        "text": "These fields trace records to conversation messages and processing runs. The inspected contracts do not establish independent source-document citations or human verification for each extracted claim.",
+        "sources": [
+          "types",
+          "pipeline",
+          "readme_en"
+        ]
+      }
+    ],
+    "observability": [
+      {
+        "text": "The README describes local logs, activity and recall views, and token-cost accounting grouped by provider, model and distillation layer. The recall hook keeps counts, durations, timeouts and duplicate-suppression totals; cost retention is configurable.",
+        "sources": [
+          "readme_en",
+          "recall",
+          "config"
+        ]
+      },
+      {
+        "text": "The source bounds recall length and execution time, and embeddings are optional with a local option. Extraction and consolidation still call the configured host/provider LLM; local embeddings alone do not mean those calls stay on-device. No runtime telemetry or cost was collected here.",
+        "sources": [
+          "readme_en",
+          "config",
+          "pipeline"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention — unmeasured in this review; no cases were scored.",
+        "sources": [
+          "readme_en",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured; no correction probes were run.",
+        "sources": [
+          "pipeline",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Deletion leakage — unmeasured; no post-delete, rebuild or reintroduction probes were run.",
+        "sources": [
+          "readme_en",
+          "l1",
+          "scenes",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Scope isolation — unmeasured; family gates and failure-open behavior were inspected, but no cross-family/session workload was run.",
+        "sources": [
+          "tools",
+          "recall",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Evidence support and citation coverage — unmeasured; source-message lineage was reviewed, but claims were not adjudicated against source material.",
+        "sources": [
+          "types",
+          "pipeline",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Retrieval latency and write-to-recall delay — unmeasured; no timings were collected.",
+        "sources": [
+          "recall",
+          "l1",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Tokens and cost — unmeasured by this review; accounting is described in project docs, but no provider usage was collected here.",
+        "sources": [
+          "readme_en",
+          "config",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Storage efficiency — unmeasured; no corpus or index size was collected.",
+        "sources": [
+          "l0",
+          "l1",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This inspection covered the pinned English README, core types, L0/L1 stores, L1 extraction, recall hook, model-callable tools, L2 scene store and configuration. It did not inspect every SQLite query, UI route, host integration, provider adapter or deployment path.",
+        "sources": [
+          "readme_en",
+          "types",
+          "l0",
+          "l1",
+          "pipeline",
+          "recall",
+          "tools",
+          "scenes"
+        ]
+      },
+      {
+        "text": "Family filters are software routing, not demonstrated authorization: the tool code falls back to unfiltered family search if the host omits the caller agent ID; conversation_search remains global, and a scene read can check the other family. No deployed authorization was evaluated.",
+        "sources": [
+          "tools",
+          "recall",
+          "scenes"
+        ]
+      },
+      {
+        "text": "Source review cannot establish extraction quality, secure deletion across source logs/backups/rebuilds, runtime stability, real-world isolation, recall quality, latency, cost, storage growth or benchmark performance. Review used official pinned GitHub pages; no local upstream checkout was available.",
+        "sources": [
+          "readme_en",
+          "l0",
+          "l1",
+          "tools",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No dsh-layered-memory runtime, tests, or benchmark workload was executed. Upstream README benchmark statements were not reproduced or independently adjudicated; source observations and the project fixture are not results.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

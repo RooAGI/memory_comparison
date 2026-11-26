@@ -1,0 +1,408 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "obelyth-cortex",
+    "name": "Cortex (Obelyth)",
+    "ordinal": 160,
+    "repository": "https://github.com/Obelyth/cortex",
+    "listed_repository": "https://github.com/Obelyth/cortex",
+    "branch": "main",
+    "revision": "65d449a3275eee51efd6ce0c275572806ee9d553",
+    "reviewed_at": "2026-11-25T09:37:59Z",
+    "review_timezone": "UTC (2026-11-25 01:37:59 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "A self-hosted memory service using a private GitHub Markdown repository as the authoritative durable brain, with MCP reads/writes, reader-backed question answering, and optional working-state, mirror, and operations services. This is a pinned source review, not a runtime or benchmark assessment.",
+    "atlas_locator": {
+      "ordinal": 160,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/obelyth-cortex.md",
+      "listed_repository": "https://github.com/Obelyth/cortex"
+    },
+    "contact": {
+      "email": "support@obelyth.cloud",
+      "source_url": "https://github.com/Obelyth/cortex/blob/65d449a3275eee51efd6ce0c275572806ee9d553/SECURITY.md",
+      "note": "Published in the official pinned security policy for vulnerability reports."
+    },
+    "contact_email": "support@obelyth.cloud",
+    "contact_email_source_url": "https://github.com/Obelyth/cortex/blob/65d449a3275eee51efd6ce0c275572806ee9d553/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/Obelyth/cortex/blob/65d449a3275eee51efd6ce0c275572806ee9d553/README.md",
+      "https://github.com/Obelyth/cortex/blob/65d449a3275eee51efd6ce0c275572806ee9d553/SECURITY.md"
+    ],
+    "contact_email_note": "The official pinned SECURITY.md publishes support@obelyth.cloud for vulnerability reports. The official pinned README was also checked. No commit/profile metadata or third-party directories were used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and roster attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "Position 160: Cortex (Obelyth), slug obelyth-cortex, explicit repository locator; pinned Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster entry",
+        "path": "content/systems/obelyth-cortex.md",
+        "symbol": "Identity and listed-locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/obelyth-cortex.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository metadata",
+        "path": "GitHub repository API",
+        "symbol": "Public, non-fork canonical repository; default branch main",
+        "url": "https://api.github.com/repos/Obelyth/cortex"
+      },
+      {
+        "id": "history",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Current main head 65d449a3275eee51efd6ce0c275572806ee9d553; feed updated 2026-10-06T18:12:42Z",
+        "url": "https://github.com/Obelyth/cortex/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified full head commit",
+        "path": "commit",
+        "symbol": "Full current main SHA 65d449a3275eee51efd6ce0c275572806ee9d553",
+        "url": "https://github.com/Obelyth/cortex/commit/65d449a3275eee51efd6ce0c275572806ee9d553"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Product scope, Git-backed private Markdown brain, optional services, MCP interface, and operating model",
+        "url": "https://github.com/Obelyth/cortex/blob/65d449a3275eee51efd6ce0c275572806ee9d553/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Trust boundaries, scoped guest access, quote-verification limits, and published support email",
+        "url": "https://github.com/Obelyth/cortex/blob/65d449a3275eee51efd6ce0c275572806ee9d553/SECURITY.md"
+      },
+      {
+        "id": "corpus",
+        "label": "Live corpus loader",
+        "path": "lib/corpus.ts",
+        "symbol": "GitHub branch head/tarball loading, live-note selection, SHA cache, optional mirror fallback and limits",
+        "url": "https://github.com/Obelyth/cortex/blob/65d449a3275eee51efd6ce0c275572806ee9d553/lib/corpus.ts"
+      },
+      {
+        "id": "mirror",
+        "label": "Rebuildable Postgres mirror",
+        "path": "lib/mirror.ts",
+        "symbol": "Git remains authoritative; mirror snapshot and compare-and-swap synchronization",
+        "url": "https://github.com/Obelyth/cortex/blob/65d449a3275eee51efd6ce0c275572806ee9d553/lib/mirror.ts"
+      },
+      {
+        "id": "brain",
+        "label": "Note and context implementation",
+        "path": "lib/brain.ts",
+        "symbol": "Path policies, context assembly, Git writes, exact edits, capture and index regeneration",
+        "url": "https://github.com/Obelyth/cortex/blob/65d449a3275eee51efd6ce0c275572806ee9d553/lib/brain.ts"
+      },
+      {
+        "id": "frontmatter",
+        "label": "Note frontmatter and router",
+        "path": "lib/frontmatter.ts",
+        "symbol": "Description/tag router, decay and re-verification fields; deterministic parsing and ordering",
+        "url": "https://github.com/Obelyth/cortex/blob/65d449a3275eee51efd6ce0c275572806ee9d553/lib/frontmatter.ts"
+      },
+      {
+        "id": "tools",
+        "label": "MCP tool registration and schemas",
+        "path": "lib/tools.ts",
+        "symbol": "Trusted and guest tool surfaces, write modes, bounded corpus reads, ask and working state",
+        "url": "https://github.com/Obelyth/cortex/blob/65d449a3275eee51efd6ce0c275572806ee9d553/lib/tools.ts"
+      },
+      {
+        "id": "ask",
+        "label": "Reader and retrieval implementation",
+        "path": "lib/ask.ts",
+        "symbol": "Scoped note selection, reader contract, byte budgets, response protocol, coverage and quote verification",
+        "url": "https://github.com/Obelyth/cortex/blob/65d449a3275eee51efd6ce0c275572806ee9d553/lib/ask.ts"
+      },
+      {
+        "id": "verify",
+        "label": "Quote verifier",
+        "path": "lib/verify.ts",
+        "symbol": "Contiguous quote checks, source block/line, commit pin and correction/superseded markers",
+        "url": "https://github.com/Obelyth/cortex/blob/65d449a3275eee51efd6ce0c275572806ee9d553/lib/verify.ts"
+      },
+      {
+        "id": "handoff",
+        "label": "Project handoff assembly",
+        "path": "lib/handoff.ts",
+        "symbol": "Bounded project bundle, graph neighbors, scope filters, inclusion reasons and preview",
+        "url": "https://github.com/Obelyth/cortex/blob/65d449a3275eee51efd6ce0c275572806ee9d553/lib/handoff.ts"
+      },
+      {
+        "id": "bubble",
+        "label": "Working-state store",
+        "path": "lib/bubble.ts",
+        "symbol": "Project-keyed working items, update/file/age lifecycle, Supabase store and bounded rendering",
+        "url": "https://github.com/Obelyth/cortex/blob/65d449a3275eee51efd6ce0c275572806ee9d553/lib/bubble.ts"
+      },
+      {
+        "id": "lexical",
+        "label": "Lexical index",
+        "path": "lib/lexical.ts",
+        "symbol": "BM25-style scoring, scope-before-index filtering, bounded prepared-index cache",
+        "url": "https://github.com/Obelyth/cortex/blob/65d449a3275eee51efd6ce0c275572806ee9d553/lib/lexical.ts"
+      },
+      {
+        "id": "calls",
+        "label": "Call log and operational observations",
+        "path": "lib/calls.ts",
+        "symbol": "Per-call timing/stamps/model/token savings, bounded durable KV log and process-local fallback",
+        "url": "https://github.com/Obelyth/cortex/blob/65d449a3275eee51efd6ce0c275572806ee9d553/lib/calls.ts"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Required quality and efficiency metric domains and protocol",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned workload; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared measured-result status; no Cortex run recorded",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Cortex by OBELYTH as a self-hosted AI memory system and public application template. It provides a protected dashboard and an MCP server for compatible clients; this review does not infer an individual maintainer from account or commit metadata.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The durable brain is a separate private GitHub repository of Markdown notes. The code recognizes profile.md, INDEX.md, projects/, notes/, log/, history/, and read-only archive/ paths. Frontmatter descriptions and tags support a router; optional decay and re-verification fields are also parsed.",
+        "sources": [
+          "readme",
+          "brain",
+          "frontmatter"
+        ]
+      },
+      {
+        "text": "Each request resolves the configured branch head and loads a filtered GitHub tarball. Warm instances cache by commit SHA and share in-flight builds. An optional Postgres mirror is reconciled against Git and falls back to the tarball path when unavailable. Working notes, devices, and operations history are separate from the notes repository.",
+        "sources": [
+          "corpus",
+          "mirror",
+          "readme"
+        ]
+      },
+      {
+        "text": "The canonical catalog locator and pinned Atlas roster source are recorded for identity attribution only. Official GitHub metadata identifies the canonical public non-fork repository and default branch main; the official main feed and matching checkout resolve current head 65d449a3275eee51efd6ce0c275572806ee9d553. Review timestamp 2026-11-25T09:37:59Z (UTC; 2026-11-25 01:37:59 PST; America/Los_Angeles).",
+        "sources": [
+          "catalog",
+          "atlas",
+          "repo",
+          "history",
+          "head"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Trusted MCP writes create, replace, append, or perform exact-once passage edits; note mutations are Git commits. Append/edit retry against fresh file content after a SHA conflict. A generated human-facing index refresh failure is reported after the note is already committed. brain_capture appends timestamped daily-log entries.",
+        "sources": [
+          "tools",
+          "brain"
+        ]
+      },
+      {
+        "text": "No durable-note delete tool appears in the inspected MCP roster. Archive is readable by exact path but excluded from live retrieval and is read-only for writes; the inspected source does not establish a server-side permanent-erasure API for Git history. Bubble items can be updated, filed, or manually aged; a read sweep ages items untouched for 14 days and the inspected store retains filed/aged items.",
+        "sources": [
+          "tools",
+          "brain",
+          "corpus",
+          "bubble"
+        ]
+      },
+      {
+        "text": "brain_context assembles a bounded profile, router, and recent context, falling back to logs when the optional bubble is absent, empty, or failing. brain_handoff builds a budgeted project page/bubble/log/neighbor bundle and labels why each piece is included. brain_ask narrows with lexical matching, sends selected note text to an allowlisted reader, and verifies the citation; default candidate count is 15 and note-body budget is 400,000 UTF-8 bytes. brain_corpus provides bounded path, relevance, or listing reads with resumable cursors.",
+        "sources": [
+          "tools",
+          "brain",
+          "handoff",
+          "lexical",
+          "ask"
+        ]
+      },
+      {
+        "text": "Trusted paths can read the corpus. Project context narrows project-keyed working items and matching log sections but does not create universal tenant authorization for durable Markdown notes. The guest door removes policy-disallowed notes before the reader runs and has proposal rather than trusted write access.",
+        "sources": [
+          "security",
+          "tools",
+          "brain",
+          "handoff",
+          "bubble"
+        ]
+      },
+      {
+        "text": "Ask uses opaque file tags and checks a returned quote against one source block in the loaded corpus at its commit. It reports source location and commit; correction/superseded markers alter the stamp. Textual presence does not prove truth or entailment. Handoff reports inclusion reasons and graph evidence but does not itself verify claims.",
+        "sources": [
+          "ask",
+          "verify",
+          "handoff",
+          "security"
+        ]
+      },
+      {
+        "text": "Corpus loading uses one tarball and an immutable SHA cache, with in-flight deduplication and an optional reconciled mirror. Lexical indexing is bounded and scoped files are filtered before preparation. Handoff defaults to a 24,000-byte budget and considers at most eight graph neighbors. These are implementation controls, not measured efficiency.",
+        "sources": [
+          "corpus",
+          "mirror",
+          "lexical",
+          "handoff"
+        ]
+      },
+      {
+        "text": "The call log records tool, surface, outcome stamp, duration, and selected model/token-savings fields. Optional Upstash persistence is bounded; an in-process ring is the fallback and the console labels the source. The log omits question text and may keep a keyed digest. No telemetry was configured or measured in this review.",
+        "sources": [
+          "calls",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention — unmeasured. The ask path has a reader contract, abstention protocol, lexical narrowing, and coverage reporting; no answerability workload was run.",
+        "sources": [
+          "ask",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured. Exact edit operations and correction/superseded recognition are code-visible; no correction probes were scored.",
+        "sources": [
+          "brain",
+          "verify",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Deletion leakage — unmeasured. No durable deletion tool was found in the inspected roster; no post-delete, archive, history, or backup probe was run.",
+        "sources": [
+          "tools",
+          "brain",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Scope isolation — unmeasured. Guest path filtering and project-scoped context are documented/code-visible; no cross-scope workload was run.",
+        "sources": [
+          "security",
+          "handoff",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Evidence support precision and citation coverage — unmeasured. The verifier establishes quote presence but not semantic support; no material-claim adjudication was run.",
+        "sources": [
+          "verify",
+          "ask",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Retrieval latency — unmeasured. Call duration is recorded by the implementation, but this review collected no timing samples.",
+        "sources": [
+          "calls",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Write-to-recall delay — unmeasured. Writes return Git commit receipts; no scheduled retrieval-after-write probes were run.",
+        "sources": [
+          "brain",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Tokens and cost — unmeasured. Ask logging includes estimated token savings; no provider-reported token usage or cost totals were collected.",
+        "sources": [
+          "calls",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Storage efficiency — unmeasured. Git notes, optional mirror, and operational stores are separate boundaries; no corpus-attributed bytes were measured.",
+        "sources": [
+          "readme",
+          "mirror",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "Bounded inspection of the pinned README and security policy plus selected corpus loader, mirror, frontmatter, note mutation, MCP tools, ask, verifier, handoff, bubble, lexical index, and call-log sources. Not every route, migration, provider adapter, or deployment configuration was inspected.",
+        "sources": [
+          "readme",
+          "security",
+          "corpus",
+          "mirror",
+          "brain",
+          "tools",
+          "ask",
+          "verify",
+          "handoff",
+          "bubble",
+          "lexical",
+          "calls"
+        ]
+      },
+      {
+        "text": "The sources do not establish which optional services, reader model, private corpus, retention, backup, or guest policy a particular deployment uses, nor do they establish production scope behavior or deletion completeness.",
+        "sources": [
+          "readme",
+          "security",
+          "corpus",
+          "mirror",
+          "bubble",
+          "metrics"
+        ]
+      },
+      {
+        "text": "No Cortex runtime, tests, or benchmarks were run. This source review cannot establish recall/correction quality, erasure completeness, deployed isolation, end-to-end latency, cost, or storage efficiency.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Cortex runtime, tests, or benchmark workload was executed. Source observations are not measurements.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

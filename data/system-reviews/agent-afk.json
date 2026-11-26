@@ -1,0 +1,383 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "agent-afk",
+    "name": "agent-afk",
+    "repository": "https://github.com/griffinwork40/agent-afk",
+    "branch": "main",
+    "revision": "d577927d0033d4779bffc003de408053b06e7279",
+    "reviewed_at": "2026-11-24T18:23:51Z",
+    "review_timezone": "UTC (2026-11-24 10:23:51 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":"agentafk@graisol.com","source_url":"https://github.com/griffinwork40/agent-afk/blob/d577927d0033d4779bffc003de408053b06e7279/SECURITY.md","note":"Published in the official security policy."},
+    "summary": "A local coding-agent framework with cross-session memory split between prompt-injected hot notes, an FTS5 SQLite fact archive, and searchable Markdown procedures. Source review documents implementation paths, not measured recall or isolation quality.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/griffinwork40/agent-afk"
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Current canonical GitHub repository metadata",
+        "path": "repository metadata",
+        "symbol": "full_name, owner, default_branch",
+        "url": "https://api.github.com/repos/griffinwork40/agent-afk"
+      },
+      {
+        "id": "head",
+        "label": "Current main branch head metadata",
+        "path": "main commit endpoint",
+        "symbol": "full SHA d577927d0033d4779bffc003de408053b06e7279",
+        "url": "https://api.github.com/repos/griffinwork40/agent-afk/commits/main"
+      },
+      {
+        "id": "tree",
+        "label": "Reviewed repository tree",
+        "path": "repository",
+        "symbol": "commit d577927d0033d4779bffc003de408053b06e7279",
+        "url": "https://github.com/griffinwork40/agent-afk/tree/d577927d0033d4779bffc003de408053b06e7279"
+      },
+      {
+        "id": "readme",
+        "label": "Project README",
+        "path": "README.md",
+        "symbol": "local state and cross-session memory",
+        "url": "https://github.com/griffinwork40/agent-afk/blob/d577927d0033d4779bffc003de408053b06e7279/README.md"
+      },
+      {
+        "id": "agent-readme",
+        "label": "Agent module README",
+        "path": "src/agent/README.md",
+        "symbol": "provider-agnostic session harness and memory module",
+        "url": "https://github.com/griffinwork40/agent-afk/blob/d577927d0033d4779bffc003de408053b06e7279/src/agent/README.md"
+      },
+      {
+        "id": "store",
+        "label": "MemoryStore",
+        "path": "src/agent/memory/memory-store.ts",
+        "symbol": "saveHot, storeFact, searchFacts, removeFact, hotUsage",
+        "url": "https://github.com/griffinwork40/agent-afk/blob/d577927d0033d4779bffc003de408053b06e7279/src/agent/memory/memory-store.ts"
+      },
+      {
+        "id": "schema",
+        "label": "Memory schema and migrations",
+        "path": "src/agent/memory/memory-store.schema.ts",
+        "symbol": "SCHEMA_SQL, facts, sessions, FTS5 triggers, schema version 6",
+        "url": "https://github.com/griffinwork40/agent-afk/blob/d577927d0033d4779bffc003de408053b06e7279/src/agent/memory/memory-store.schema.ts"
+      },
+      {
+        "id": "fts",
+        "label": "FTS helpers",
+        "path": "src/agent/memory/memory-store.fts.ts",
+        "symbol": "factsToResults, sanitizeFtsQuery",
+        "url": "https://github.com/griffinwork40/agent-afk/blob/d577927d0033d4779bffc003de408053b06e7279/src/agent/memory/memory-store.fts.ts"
+      },
+      {
+        "id": "wal",
+        "label": "Fact write-ahead log",
+        "path": "src/agent/memory/memory-store.wal.ts",
+        "symbol": "appendWAL, replayWAL",
+        "url": "https://github.com/griffinwork40/agent-afk/blob/d577927d0033d4779bffc003de408053b06e7279/src/agent/memory/memory-store.wal.ts"
+      },
+      {
+        "id": "facts",
+        "label": "Fact supersede operation",
+        "path": "src/agent/memory/memory-store.facts.ts",
+        "symbol": "supersedeFact",
+        "url": "https://github.com/griffinwork40/agent-afk/blob/d577927d0033d4779bffc003de408053b06e7279/src/agent/memory/memory-store.facts.ts"
+      },
+      {
+        "id": "tools",
+        "label": "Memory tool APIs and handlers",
+        "path": "src/agent/memory/memory-tools.ts",
+        "symbol": "memory_search, memory_update, procedure_write",
+        "url": "https://github.com/griffinwork40/agent-afk/blob/d577927d0033d4779bffc003de408053b06e7279/src/agent/memory/memory-tools.ts"
+      },
+      {
+        "id": "procedures",
+        "label": "Procedure store",
+        "path": "src/agent/memory/memory-store.procedures.ts",
+        "symbol": "writeProcedure, loadProcedure, searchProcedures",
+        "url": "https://github.com/griffinwork40/agent-afk/blob/d577927d0033d4779bffc003de408053b06e7279/src/agent/memory/memory-store.procedures.ts"
+      },
+      {
+        "id": "loader",
+        "label": "Memory loader",
+        "path": "src/agent/memory/memory-loader.ts",
+        "symbol": "injectHotMemory, injectEpisodeRecall",
+        "url": "https://github.com/griffinwork40/agent-afk/blob/d577927d0033d4779bffc003de408053b06e7279/src/agent/memory/memory-loader.ts"
+      },
+      {
+        "id": "evidence",
+        "label": "Evidence policy",
+        "path": "src/agent/memory/memory-evidence.ts",
+        "symbol": "evidenceGateEnabled, verificationStatus, recall tags",
+        "url": "https://github.com/griffinwork40/agent-afk/blob/d577927d0033d4779bffc003de408053b06e7279/src/agent/memory/memory-evidence.ts"
+      },
+      {
+        "id": "hooks",
+        "label": "Memory hooks",
+        "path": "src/agent/memory/memory-hooks.ts",
+        "symbol": "session lifecycle integration",
+        "url": "https://github.com/griffinwork40/agent-afk/blob/d577927d0033d4779bffc003de408053b06e7279/src/agent/memory/memory-hooks.ts"
+      },
+      {
+        "id": "gc",
+        "label": "Memory GC sweep",
+        "path": "src/agent/memory/memory-gc-sweep.ts",
+        "symbol": "opt-in soft-delete policy",
+        "url": "https://github.com/griffinwork40/agent-afk/blob/d577927d0033d4779bffc003de408053b06e7279/src/agent/memory/memory-gc-sweep.ts"
+      },
+      {
+        "id": "facet",
+        "label": "Facet FTS sidecar",
+        "path": "src/agent/memory/facet-fts-store.ts",
+        "symbol": "facet index store",
+        "url": "https://github.com/griffinwork40/agent-afk/blob/d577927d0033d4779bffc003de408053b06e7279/src/agent/memory/facet-fts-store.ts"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog locator attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 13 agent-afk entry and catalog revision 19199a4fc249e89c0793be06f0b166b358089ba0",
+        "url": "../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "GitHub repository metadata identifies griffinwork40 as the public repository owner. The README presents agent-afk as a locally run coding agent with multiple interaction surfaces and cross-session memory; this article assesses its memory subsystem at the reviewed revision.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "MemoryStore combines memory.db (SQLite sessions and facts), HOT.md plus a backup, a procedures/ directory of Markdown files, and a separate SQLite FTS index for session facets. The facts schema includes category, text, timestamps, session/source attribution, confidence, access tracking, supersession, and nullable evidence. FTS5 indexes content and category.",
+        "sources": [
+          "store",
+          "schema",
+          "facet"
+        ]
+      },
+      {
+        "text": "The README describes hot memory injected into the prompt and a fact archive queried on demand. HOT.md has a 5,250-character cap (approximately 1,500 tokens), a truncation marker and backup; hot-memory loading occurs before AgentSession construction. A separate episode recall path is opt-in and token/candidate capped.",
+        "sources": [
+          "readme",
+          "store",
+          "loader",
+          "agent-readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: memory_update supports hot and fact targets. Fact writes append a JSONL WAL record before the SQLite insert; the WAL can replay entries on a later open. Hot writes use an atomic file replacement. procedure_write writes or overwrites a named Markdown file with creation time and source-session metadata. The README describes completed top-level sessions being recorded automatically; subagent sessions are excluded.",
+        "sources": [
+          "tools",
+          "store",
+          "wal",
+          "procedures",
+          "hooks",
+          "readme"
+        ]
+      },
+      {
+        "text": "Update/correction: supersedeFact inserts a replacement fact, links the prior row through superseded_by, and records WAL entries. Prior evidence carries forward unless replaced or cleared. Active search excludes superseded rows. This establishes a source-visible history link, not correction accuracy or stale-answer handling.",
+        "sources": [
+          "facts",
+          "store",
+          "wal",
+          "tools"
+        ]
+      },
+      {
+        "text": "Delete: memory_update exposes remove for facts; removeFact deletes a row by ID and the FTS delete trigger removes its index entry. An opt-in garbage-collection sweep instead marks some old never-accessed rows as superseded while retaining them. The inspected code does not establish unified erasure across all memory files, session history, caches, and backups.",
+        "sources": [
+          "tools",
+          "store",
+          "schema",
+          "gc",
+          "procedures"
+        ]
+      },
+      {
+        "text": "Retrieval: memory_search uses FTS5 rank, defaults to ten results, filters optionally by category/date, and omits superseded facts. It also searches Markdown procedures by simple any-term substring matching. Hot memory is injected at session start. Episode recall is separately opt-in and capped; implementation limits do not demonstrate retrieval quality or calibrated abstention.",
+        "sources": [
+          "tools",
+          "store",
+          "fts",
+          "procedures",
+          "loader"
+        ]
+      },
+      {
+        "text": "Scope: the README places the store under the local user's ~/.afk directory and says REPL, chat, daemon, and Telegram share it. Facts have session and surface labels but the inspected fact schema/search API has no user, tenant, or project key. This is a local state layout, not verified application authorization or cross-tenant isolation.",
+        "sources": [
+          "readme",
+          "schema",
+          "store",
+          "loader"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "FTS ranking and a result limit are visible in source, but no answerable gold probes or abstention adjudication were run.",
+        "sources": [
+          "store",
+          "fts",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Superseding preserves a link to prior facts, but no correction or stale-value probe was run.",
+        "sources": [
+          "facts",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "A fact hard-delete path and a separate soft-delete sweep exist; post-delete leakage and complete erasure were not probed.",
+        "sources": [
+          "store",
+          "gc",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "The source shows local shared state with no tenant key in the inspected fact schema; no cross-scope probes were run.",
+        "sources": [
+          "readme",
+          "schema",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Evidence strings can label convention facts, but source review did not verify reference resolution/support and no generated claims were adjudicated.",
+        "sources": [
+          "evidence",
+          "tools",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "FTS indexing and bounded result counts are implementation details; no latency distribution was measured.",
+        "sources": [
+          "schema",
+          "store",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No schedule of post-write recall probes was run.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "The schema has session token/cost fields and hot memory estimates tokens, but no agent-afk workload totals were captured.",
+        "sources": [
+          "schema",
+          "store",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No database/file byte measurements attributable to a benchmark corpus were collected.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Source-visible observability",
+        "status": "available in code",
+        "evidence": "Fact access counters, last-access timestamps, session token/cost columns, and hot-memory usage estimates are defined; retrieval latency instrumentation was not established in inspected memory paths.",
+        "sources": [
+          "schema",
+          "store"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded read-only inspection of the README and selected memory modules at the verified SHA. The system, its tests, and benchmarks were not run. Source structure and documentation do not establish runtime reliability, authorization, answer quality, complete deletion, or performance.",
+        "sources": [
+          "readme",
+          "store",
+          "tools",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Unknown means unverified in this review. Other code paths, local deployment settings, and OS account boundaries may affect behavior; this inspection did not trace those end to end.",
+        "sources": [
+          "readme",
+          "schema",
+          "loader"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Status: Benchmark not run for agent-afk. No system execution, benchmark workload, or test suite was run. The project fixture and metric definitions describe planned measurement protocol and are not agent-afk results.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

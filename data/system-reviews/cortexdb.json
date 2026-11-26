@@ -1,0 +1,445 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "cortexdb",
+    "name": "CortexDB",
+    "ordinal": 163,
+    "repository": "https://github.com/liliang-cn/cortexdb",
+    "listed_repository": "https://github.com/liliang-cn/cortexdb",
+    "branch": "main",
+    "revision": "0c6b7b98285a63125328dea95b8fe32f6d182d0d",
+    "reviewed_at": "2026-11-25T09:46:24Z",
+    "review_timezone": "UTC (2026-11-25 01:46:24 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "CortexDB is a Go memory and knowledge-graph library with MCP and gRPC interfaces. Its default storage is a SQLite database that combines scoped memories, knowledge documents/chunks, vectors, full-text indexes, and graph data; PostgreSQL is also supported. The source review is pinned to the verified current main head. No runtime, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 163,
+      "name": "CortexDB",
+      "slug": "cortexdb",
+      "listed_repository": "https://github.com/liliang-cn/cortexdb",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cortexdb.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/liliang-cn/cortexdb/blob/0c6b7b98285a63125328dea95b8fe32f6d182d0d/README.md",
+      "checked_urls": [
+        "https://github.com/liliang-cn/cortexdb/blob/0c6b7b98285a63125328dea95b8fe32f6d182d0d/README.md"
+      ],
+      "note": "Checked the official pinned README for a published contact email; none was found."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/liliang-cn/cortexdb/blob/0c6b7b98285a63125328dea95b8fe32f6d182d0d/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the official pinned README. No commit/profile metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Catalog ordinal and locator",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[162], ordinal 163; curated identity and explicit listed repository",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/cortexdb.md",
+        "symbol": "Pinned report used only to attribute catalog identity and locator; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cortexdb.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Public CortexDB repository; GitHub page identifies main as default branch",
+        "url": "https://github.com/liliang-cn/cortexdb"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Full current main head 0c6b7b98285a63125328dea95b8fe32f6d182d0d; feed updated 2026-11-25T02:41:10Z",
+        "url": "https://github.com/liliang-cn/cortexdb/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Official reviewed head",
+        "path": "commit/0c6b7b98285a63125328dea95b8fe32f6d182d0d",
+        "symbol": "Official full-SHA commit page for verified current main head 0c6b7b98285a63125328dea95b8fe32f6d182d0d",
+        "url": "https://github.com/liliang-cn/cortexdb/commit/0c6b7b98285a63125328dea95b8fe32f6d182d0d"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product scope, storage, SDK/API, integration and configuration overview; contact check",
+        "url": "https://github.com/liliang-cn/cortexdb/blob/0c6b7b98285a63125328dea95b8fe32f6d182d0d/README.md"
+      },
+      {
+        "id": "overview",
+        "label": "Architecture overview",
+        "path": "docs/PROJECT_OVERVIEW.md",
+        "symbol": "Layered Go architecture, SQLite engine, graph, workflows and integration surfaces",
+        "url": "https://github.com/liliang-cn/cortexdb/blob/0c6b7b98285a63125328dea95b8fe32f6d182d0d/docs/PROJECT_OVERVIEW.md"
+      },
+      {
+        "id": "memory",
+        "label": "Memory API and storage",
+        "path": "pkg/cortexdb/memory_api.go",
+        "symbol": "Memory write/update/delete, scope bucket resolution, filters, lexical/vector/graph recall",
+        "url": "https://github.com/liliang-cn/cortexdb/blob/0c6b7b98285a63125328dea95b8fe32f6d182d0d/pkg/cortexdb/memory_api.go"
+      },
+      {
+        "id": "brain",
+        "label": "Knowledge-memory facade",
+        "path": "pkg/cortexdb/brain.go",
+        "symbol": "Fused recall, context packing, graph facts, grade/time filtering and source IDs",
+        "url": "https://github.com/liliang-cn/cortexdb/blob/0c6b7b98285a63125328dea95b8fe32f6d182d0d/pkg/cortexdb/brain.go"
+      },
+      {
+        "id": "knowledge_types",
+        "label": "Knowledge data model",
+        "path": "pkg/cortexdb/knowledge_memory_types.go",
+        "symbol": "Knowledge records, save/update requests and review/expiry fields",
+        "url": "https://github.com/liliang-cn/cortexdb/blob/0c6b7b98285a63125328dea95b8fe32f6d182d0d/pkg/cortexdb/knowledge_memory_types.go"
+      },
+      {
+        "id": "knowledge_api",
+        "label": "Knowledge write and delete API",
+        "path": "pkg/cortexdb/knowledge_api.go",
+        "symbol": "Knowledge persistence, updates and deletion entry points",
+        "url": "https://github.com/liliang-cn/cortexdb/blob/0c6b7b98285a63125328dea95b8fe32f6d182d0d/pkg/cortexdb/knowledge_api.go"
+      },
+      {
+        "id": "ingest",
+        "label": "Document ingestion",
+        "path": "pkg/cortexdb/graphrag_tool_ingest.go",
+        "symbol": "Content chunking, source metadata, document/entity graph and source-linked writes",
+        "url": "https://github.com/liliang-cn/cortexdb/blob/0c6b7b98285a63125328dea95b8fe32f6d182d0d/pkg/cortexdb/graphrag_tool_ingest.go"
+      },
+      {
+        "id": "search",
+        "label": "GraphRAG lexical search",
+        "path": "pkg/cortexdb/graphrag_tool_search.go",
+        "symbol": "Text search planning, collection filters and chunk result construction",
+        "url": "https://github.com/liliang-cn/cortexdb/blob/0c6b7b98285a63125328dea95b8fe32f6d182d0d/pkg/cortexdb/graphrag_tool_search.go"
+      },
+      {
+        "id": "delete_graph",
+        "label": "Document graph deletion",
+        "path": "pkg/cortexdb/graphrag_tool_delete_document.go",
+        "symbol": "Document-scoped graph deletion, source detachment and transactional cleanup",
+        "url": "https://github.com/liliang-cn/cortexdb/blob/0c6b7b98285a63125328dea95b8fe32f6d182d0d/pkg/cortexdb/graphrag_tool_delete_document.go"
+      },
+      {
+        "id": "caller_scope",
+        "label": "Caller scope enforcement",
+        "path": "pkg/cortexdb/memory_owner.go",
+        "symbol": "Memory bucket and knowledge collection confinement behavior and limits",
+        "url": "https://github.com/liliang-cn/cortexdb/blob/0c6b7b98285a63125328dea95b8fe32f6d182d0d/pkg/cortexdb/memory_owner.go"
+      },
+      {
+        "id": "grade",
+        "label": "Memory evidence grades",
+        "path": "pkg/cortexdb/memory_grade.go",
+        "symbol": "Grade vocabulary, validation and minimum-grade ordering",
+        "url": "https://github.com/liliang-cn/cortexdb/blob/0c6b7b98285a63125328dea95b8fe32f6d182d0d/pkg/cortexdb/memory_grade.go"
+      },
+      {
+        "id": "supersession",
+        "label": "Memory supersession chain",
+        "path": "pkg/cortexdb/memory_supersession.go",
+        "symbol": "Explicit replacement history and recall behavior",
+        "url": "https://github.com/liliang-cn/cortexdb/blob/0c6b7b98285a63125328dea95b8fe32f6d182d0d/pkg/cortexdb/memory_supersession.go"
+      },
+      {
+        "id": "provenance",
+        "label": "Graph fact provenance",
+        "path": "pkg/cortexdb/fact_provenance.go",
+        "symbol": "Relation edge source/chunk lineage and optional supporting-text resolution",
+        "url": "https://github.com/liliang-cn/cortexdb/blob/0c6b7b98285a63125328dea95b8fe32f6d182d0d/pkg/cortexdb/fact_provenance.go"
+      },
+      {
+        "id": "explain",
+        "label": "Recall explanation",
+        "path": "pkg/cortexdb/recall_explain.go",
+        "symbol": "Plans, candidate scores, dropped hits, final results and degraded reasons",
+        "url": "https://github.com/liliang-cn/cortexdb/blob/0c6b7b98285a63125328dea95b8fe32f6d182d0d/pkg/cortexdb/recall_explain.go"
+      },
+      {
+        "id": "recall_log",
+        "label": "Recall log",
+        "path": "pkg/cortexdb/recall_log.go",
+        "symbol": "Opt-in bounded recall query/result log and retention controls",
+        "url": "https://github.com/liliang-cn/cortexdb/blob/0c6b7b98285a63125328dea95b8fe32f6d182d0d/pkg/cortexdb/recall_log.go"
+      },
+      {
+        "id": "mcp",
+        "label": "MCP tracing middleware",
+        "path": "pkg/cortexdb/mcp_call.go",
+        "symbol": "Request IDs, client metadata and W3C trace propagation across MCP/gRPC",
+        "url": "https://github.com/liliang-cn/cortexdb/blob/0c6b7b98285a63125328dea95b8fe32f6d182d0d/pkg/cortexdb/mcp_call.go"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Required quality and efficiency metrics; definitions are not measurements",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned workload specification; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Project benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Existing not-run execution status; no result was produced by this review",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes CortexDB as a local-first Go library for agent memory and a knowledge graph, with MCP and gRPC service integrations plus clients. It is an embeddable library and can also be run behind a shared service; the README advertises a one-file SQLite setup and optional PostgreSQL.",
+        "sources": [
+          "readme",
+          "overview"
+        ]
+      },
+      {
+        "text": "The official GitHub repository identifies main as the default branch. The official main commit feed reports full head 0c6b7b98285a63125328dea95b8fe32f6d182d0d at 2026-11-25T02:41:10Z, and a fresh read-only git ls-remote plus shallow checkout independently resolved main to the same SHA.",
+        "sources": [
+          "repo",
+          "feed",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The architecture is layered: core storage/indexing and graph engines sit below the public pkg/cortexdb facade; memoryflow and graphflow add ingestion/recall workflows; MCP and gRPC expose tools and APIs. The project overview describes SQLite as the default single-file engine, with vector and FTS indexes alongside graph/RDF data; the README also documents PostgreSQL support.",
+        "sources": [
+          "overview",
+          "readme"
+        ]
+      },
+      {
+        "text": "A memory is a message row addressed by memory_id with content, embedding, bucket/session identifier, role, metadata, importance, TTL and optional evidence grade. Knowledge is a durable record with title/content/source URL/author/collection, metadata, chunks, entities, and timestamps. Ingestion splits documents into chunks and links document, chunk, entity and relation graph records.",
+        "sources": [
+          "memory",
+          "knowledge_types",
+          "ingest"
+        ]
+      },
+      {
+        "text": "The KnowledgeMemory facade composes memory search, knowledge search and graph facts into a context pack. Search paths include lexical retrieval, optional embedding search and graph/PPR routes; the project overview says no-embedder mode remains usable with lexical retrieval.",
+        "sources": [
+          "brain",
+          "memory",
+          "search",
+          "overview"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Memory writes require a nonempty memory_id and content, redact recognized credentials, resolve global/user/session buckets, validate optional evidence grade, embed content when configured, upsert the messages row, mark explicitly superseded IDs, and update the corresponding memory graph node when entities are supplied. UpdateMemory changes content/metadata/importance/TTL and refreshes the vector when content changes.",
+        "sources": [
+          "memory",
+          "grade"
+        ]
+      },
+      {
+        "text": "A memory may be deleted by ID; the implementation removes its message row, cleans an empty bucket, and retracts its graph node so the graph no longer points to a deleted memory. Supersession is a separate explicit mutation: old rows remain stored with superseded_by/superseded_at and are filtered from current recall, while the replacement chain can be returned and queried as of an earlier time.",
+        "sources": [
+          "memory",
+          "supersession"
+        ]
+      },
+      {
+        "text": "Knowledge writes preserve source URL, author, metadata, collection, chunks and graph relationships; updates expose partial document fields, expiry and review decisions. The ingestion path uses stable document/chunk identities, content hashes and source fields; re-ingesting changed text retires chunks beyond the new content. Document graph deletion removes source relations and nodes in a transaction and detaches entities still sourced by other documents.",
+        "sources": [
+          "knowledge_types",
+          "knowledge_api",
+          "ingest",
+          "delete_graph"
+        ]
+      },
+      {
+        "text": "Memory scope resolves to global, user or session buckets plus a namespace. Search filters by the resolved bucket and optional user/session/namespace values; a configured CallerScope can constrain readable/writable buckets. Knowledge collections also carry caller-scope checks. The implementation notes that unconfined library calls remain unchecked, and its scope commentary lists several raw DB/listing/change/chunk-reading paths outside that facade guard; callers should not assume every endpoint is confined by the same predicate.",
+        "sources": [
+          "memory",
+          "caller_scope",
+          "brain"
+        ]
+      },
+      {
+        "text": "Recall can combine memories and knowledge, apply minimum evidence grade and as-of filters, and pack bounded context. Memory grades distinguish verified, self_consistent, asserted, held and refused; verified/held/refused require a reason. Graph fact provenance can resolve document IDs, chunk IDs, inferred-rule metadata and supporting text, including reporting source chunk IDs that no longer resolve.",
+        "sources": [
+          "brain",
+          "grade",
+          "provenance"
+        ]
+      },
+      {
+        "text": "Efficiency and operations mechanisms include FTS and vector indexes, bounded recall/context structures, optional recall explanation, query/result logging that is off unless enabled and has row/age limits, request IDs and trace-context propagation. The inspected source exposes stage and degraded-mode signals; these implementation features do not establish observed speed or resource use.",
+        "sources": [
+          "memory",
+          "brain",
+          "explain",
+          "recall_log",
+          "mcp"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "Memory and knowledge retrieval paths and empty/no-hit behavior were inspected; no answerability fixture or adjudicated response was run.",
+        "sources": [
+          "memory",
+          "search",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Explicit memory supersession and knowledge update/expiry mechanisms exist; no post-correction probe was run.",
+        "sources": [
+          "memory",
+          "supersession",
+          "knowledge_api",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Memory row and graph-node deletion and document-scoped graph cleanup were inspected; no post-delete probes or physical-storage/backup checks were made.",
+        "sources": [
+          "memory",
+          "delete_graph",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Bucket, namespace, collection and caller-scope mechanisms were inspected; no paired permitted/forbidden cross-scope workload was run.",
+        "sources": [
+          "memory",
+          "caller_scope",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Grades and graph provenance/source-chunk lookup are implemented; no generated claims were adjudicated for support or citation coverage.",
+        "sources": [
+          "grade",
+          "provenance",
+          "brain",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Recall stage timing/explanation and tracing hooks are present; no latency samples or timed write/recall probes were collected.",
+        "sources": [
+          "brain",
+          "explain",
+          "mcp",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No model usage or provider charges were measured in this source review.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "SQLite/PostgreSQL, vector, FTS and graph storage structure was inspected; no corpus-attributed bytes or per-item size were measured.",
+        "sources": [
+          "overview",
+          "readme",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded review inspected the official README and project architecture overview, memory and knowledge APIs, graph document ingestion/deletion, caller-scope commentary, evidence-grade/provenance code, recall explanation/logging and MCP trace middleware. It did not inspect every server adapter, SQL migration, deployment configuration, embedder or graph query path.",
+        "sources": [
+          "readme",
+          "overview",
+          "memory",
+          "knowledge_api",
+          "ingest",
+          "delete_graph",
+          "caller_scope",
+          "provenance",
+          "explain",
+          "recall_log",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Source inspection cannot establish deployed authorization wiring, effective isolation, retrieval accuracy, correction/deletion outcomes, erasure from backups or storage devices, latency, token use, cost, or corpus storage efficiency. No CortexDB runtime, tests, or benchmarks were run.",
+        "sources": [
+          "caller_scope",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "text": "The project's README and source comments include upstream-reported performance/calibration statements; this review did not reproduce or independently adjudicate those figures, and they are not measurements from this project review.",
+        "sources": [
+          "readme",
+          "memory",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No CortexDB runtime, tests, or benchmark workload was executed. Upstream documentation or code comments are not benchmark results from this review.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

@@ -1,0 +1,324 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 290,
+    "slug": "hermes-fleet-memory",
+    "name": "Hermes Fleet Memory",
+    "repository": "https://github.com/amrlazw/hermes-fleet-memory",
+    "listed_repository": "https://github.com/amrlazw/hermes-fleet-memory",
+    "branch": "main",
+    "revision": "87ce8978accdeb2e5a4252b51e7d02842c95ebd5",
+    "reviewed_at": "2026-11-25T22:47:15Z",
+    "review_timezone": "UTC (checked 2026-11-25 14:47:15 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "A self-operated MCP memory server that embeds cards and stores them in a shared Qdrant collection, with on-demand retrieval and client-configured domain gates. This is a source review; runtime quality and performance were not measured.",
+    "atlas_locator": {
+      "revision": "87ce8978accdeb2e5a4252b51e7d02842c95ebd5",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hermes-fleet-memory.md"
+    },
+    "contact": {
+      "email": "amirulazw94@gmail.com",
+      "source_url": "https://github.com/amrlazw/hermes-fleet-memory/blob/87ce8978accdeb2e5a4252b51e7d02842c95ebd5/SECURITY.md",
+      "checked_urls": [
+        "https://github.com/amrlazw/hermes-fleet-memory/blob/87ce8978accdeb2e5a4252b51e7d02842c95ebd5/SECURITY.md"
+      ],
+      "note": "The official pinned SECURITY.md publishes this address for confidential vulnerability reports. No profile metadata or third-party directory was used."
+    },
+    "contact_email": "amirulazw94@gmail.com",
+    "contact_email_source_url": "https://github.com/amrlazw/hermes-fleet-memory/blob/87ce8978accdeb2e5a4252b51e7d02842c95ebd5/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/amrlazw/hermes-fleet-memory/blob/87ce8978accdeb2e5a4252b51e7d02842c95ebd5/SECURITY.md"
+    ],
+    "contact_email_note": "Published in the official pinned SECURITY.md as a confidential vulnerability reporting address.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[289], ordinal 290; identity, explicit locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/hermes-fleet-memory.md",
+        "symbol": "Pinned attribution for curated identity and locator only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hermes-fleet-memory.md"
+      },
+      {
+        "id": "repo",
+        "label": "Hermes Fleet Memory current upstream repository",
+        "path": "repository",
+        "url": "https://github.com/amrlazw/hermes-fleet-memory"
+      },
+      {
+        "id": "head",
+        "label": "Official GitHub main commit feed",
+        "path": "main.atom",
+        "symbol": "Full head 87ce8978accdeb2e5a4252b51e7d02842c95ebd5; updated 2026-09-24T14:02:18Z",
+        "url": "https://github.com/amrlazw/hermes-fleet-memory/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Hermes Fleet Memory README",
+        "path": "README.md",
+        "url": "https://github.com/amrlazw/hermes-fleet-memory/blob/87ce8978accdeb2e5a4252b51e7d02842c95ebd5/README.md"
+      },
+      {
+        "id": "core",
+        "label": "FastMCP client and memory operations",
+        "path": "client/fleet_memory.py",
+        "symbol": "FastMCP setup, collection/domain configuration, embedding and Qdrant client; memory tool handlers",
+        "url": "https://github.com/amrlazw/hermes-fleet-memory/blob/87ce8978accdeb2e5a4252b51e7d02842c95ebd5/client/fleet_memory.py"
+      },
+      {
+        "id": "kg",
+        "label": "Lightweight entity and relation extraction",
+        "path": "client/knowledge_graph.py",
+        "symbol": "extract_entities_and_relations",
+        "url": "https://github.com/amrlazw/hermes-fleet-memory/blob/87ce8978accdeb2e5a4252b51e7d02842c95ebd5/client/knowledge_graph.py"
+      },
+      {
+        "id": "secret-scan",
+        "label": "Memory-card credential scanner",
+        "path": "client/secret_scan.py",
+        "symbol": "find_secrets; credential-pattern names without returning matched values",
+        "url": "https://github.com/amrlazw/hermes-fleet-memory/blob/87ce8978accdeb2e5a4252b51e7d02842c95ebd5/client/secret_scan.py"
+      },
+      {
+        "id": "cleaner",
+        "label": "Expired-memory archive and cleanup worker",
+        "path": "server/cleaner.py",
+        "symbol": "archive_points; clean_expired_memories",
+        "url": "https://github.com/amrlazw/hermes-fleet-memory/blob/87ce8978accdeb2e5a4252b51e7d02842c95ebd5/server/cleaner.py"
+      },
+      {
+        "id": "skill",
+        "label": "Official Fleet Memory agent guide",
+        "path": "skills/fleet-memory/SKILL.md",
+        "url": "https://github.com/amrlazw/hermes-fleet-memory/blob/87ce8978accdeb2e5a4252b51e7d02842c95ebd5/skills/fleet-memory/SKILL.md"
+      },
+      {
+        "id": "security-policy",
+        "label": "Hermes Fleet Memory security policy",
+        "path": "SECURITY.md",
+        "url": "https://github.com/amrlazw/hermes-fleet-memory/blob/87ce8978accdeb2e5a4252b51e7d02842c95ebd5/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository presents this as a Python FastMCP stdio server for operator-managed, cross-device memory. It requires an explicitly configured Qdrant endpoint and is not a hosted memory service.",
+        "sources": [
+          "readme",
+          "core",
+          "repo"
+        ]
+      },
+      {
+        "text": "The curated roster places Hermes Fleet Memory at ordinal 290 and lists its explicit repository locator. The pinned Atlas entry is retained only as locator attribution and is not assessment evidence.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The official repository page identifies main as the default branch, and the official main.atom feed identifies full head 87ce8978accdeb2e5a4252b51e7d02842c95ebd5, updated 2026-09-24T14:02:18Z.",
+        "sources": [
+          "repo",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README describes one Qdrant collection, hermes_fleet_memory, with 384-dimensional bge-small embeddings and no ambient memory injection. The client source defines the collection name, reads FLEET_HARD_DOMAIN with default work, configures the Qdrant endpoint, and sets a request timeout.",
+        "sources": [
+          "readme",
+          "core"
+        ]
+      },
+      {
+        "text": "The documented card payload includes content and domain/client/slot identifiers, memory type, active and pinned state, author node, revision, and expiration metadata. Named slots use deterministic UUID5 identity; episodic cards use a separate near-duplicate path.",
+        "sources": [
+          "readme",
+          "skill"
+        ]
+      },
+      {
+        "text": "The inspected graph helper extracts explicit wiki links, backticked identifiers, and capitalized phrases using patterns, keeps up to 15 entities, and derives at most 15 directional relations from a fixed list of verbs. This is lightweight heuristic extraction rather than a dedicated graph database.",
+        "sources": [
+          "kg"
+        ]
+      },
+      {
+        "text": "The client includes a regex-based credential scanner that returns names of detected credential patterns rather than matched values. This is a format-specific write guard, not validation of a card's factual evidence.",
+        "sources": [
+          "secret-scan"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: the official guide documents fleet_memory_store. Named slots are deterministic UUID5 records; episodic writes check for a candidate at the documented 0.95 cosine threshold. The guide says cards receive author-node attribution and a monotonic revision; no live write was run.",
+        "sources": [
+          "readme",
+          "skill",
+          "core"
+        ]
+      },
+      {
+        "text": "Update: documentation describes slot replacement and episodic near-duplicate refresh as in-place updates, and describes timestamp validation to reject stale writes. The reviewed materials do not establish retained correction history or temporal queries.",
+        "sources": [
+          "readme",
+          "skill",
+          "core"
+        ]
+      },
+      {
+        "text": "Delete: no direct user-facing memory-forget operation is described in the inspected memory guide. server/cleaner.py archives the payload of expired, active, unpinned points to JSONL before deleting them in batches; the process is capped at 200 batches and retained archive copies mean expiry cleanup is not full erasure.",
+        "sources": [
+          "skill",
+          "cleaner"
+        ]
+      },
+      {
+        "text": "Retrieval: fleet_memory_search is documented as embedding and querying Qdrant with active-state, allowed-domain, and optional client filters. fleet_graph_search provides entity-oriented lookup; the inspected helper uses bounded regex extraction rather than general graph reasoning.",
+        "sources": [
+          "readme",
+          "skill",
+          "kg",
+          "core"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Search APIs are documented, but answer correctness and abstention were not adjudicated.",
+        "sources": [
+          "readme",
+          "skill",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "In-place slot and near-duplicate updates are documented; no correction sequence or post-correction probe was run.",
+        "sources": [
+          "readme",
+          "skill",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The expiry worker archives and removes eligible Qdrant points; no user deletion or post-delete leakage probes were run.",
+        "sources": [
+          "cleaner",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "The guide and README describe client-side domain checks; no cross-domain workload or server-side ACL assessment was run.",
+        "sources": [
+          "skill",
+          "security-policy",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Author-node provenance is documented, but stored-source citations and claim-level evidence were not established in the inspected interfaces.",
+        "sources": [
+          "skill",
+          "core",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The client has a request timeout and the cleanup worker logs batches, but no request timings or write-to-recall probes were collected.",
+        "sources": [
+          "core",
+          "cleaner",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "On-demand access and Qdrant storage are documented, but no prompt-token, provider-cost, or corpus-storage measurement was made; README figures were not reproduced.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review covers selected official docs and code at the verified main SHA; no application runtime, tests, or benchmark workload was run. README performance and security claims remain upstream statements.",
+        "sources": [
+          "readme",
+          "core",
+          "security-policy"
+        ]
+      },
+      {
+        "text": "The review does not establish server-side per-domain authorization, deletion through backups or archived copies, live recall quality, or deployment reliability. It did not inspect every tool handler or all external integrations.",
+        "sources": [
+          "core",
+          "cleaner",
+          "security-policy",
+          "repo"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Hermes Fleet Memory runtime, tests, or benchmark workload was run. Project metric artifacts describe protocol only; upstream README numbers are not treated as reproduced results.",
+      "metric_definitions": "../METRICS.md",
+      "fixture": "../fixtures/memory-benchmark-v1.json",
+      "execution_status": "../results/initial-baselines-status.json"
+    }
+  }
+}

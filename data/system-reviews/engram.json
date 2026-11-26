@@ -1,0 +1,321 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 221,
+    "slug": "engram",
+    "name": "Engram",
+    "repository": "https://github.com/Gentleman-Programming/engram",
+    "listed_repository": "https://github.com/Gentleman-Programming/engram",
+    "branch": "main",
+    "revision": "11521f4f3776db6d94dc17c11731bad35b71c7bc",
+    "reviewed_at": "2026-11-25T19:18:02Z",
+    "review_timezone": "UTC (checked 2026-11-25 11:18:02 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Engram is a local-first Go memory system for coding agents, exposing MCP, HTTP, CLI, and TUI interfaces over SQLite + FTS5. Optional Git export and cloud replication support sharing. This review describes pinned source and documentation; runtime quality and performance were not measured.",
+    "atlas_locator": {
+      "ordinal": 221,
+      "name": "Engram",
+      "slug": "engram",
+      "listed_repository": "https://github.com/Gentleman-Programming/engram",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/engram.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/Gentleman-Programming/engram/blob/11521f4f3776db6d94dc17c11731bad35b71c7bc/README.md",
+      "checked_urls": [
+        "https://github.com/Gentleman-Programming/engram/blob/11521f4f3776db6d94dc17c11731bad35b71c7bc/README.md"
+      ],
+      "note": "Checked the official pinned README for a published contact email; none was present. No commit/profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/Gentleman-Programming/engram/blob/11521f4f3776db6d94dc17c11731bad35b71c7bc/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/Gentleman-Programming/engram/blob/11521f4f3776db6d94dc17c11731bad35b71c7bc/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the checked official pinned README. No commit/profile metadata, third-party directory, or inferred address was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[220], ordinal 221; identity, explicit listed repository locator, pinned Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/engram.md",
+        "symbol": "Pinned attribution source for curated locator only; not used for assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/engram.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "",
+        "symbol": "Public repository page; selected branch main and repository identity",
+        "url": "https://github.com/Gentleman-Programming/engram"
+      },
+      {
+        "id": "head",
+        "label": "Official current head patch",
+        "path": "",
+        "symbol": "Official commit patch supplies full current head SHA and commit date; repository commit list showed the same latest commit",
+        "url": "https://github.com/Gentleman-Programming/engram/commit/11521f4f3776db6d94dc17c11731bad35b71c7bc.patch"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Go binary, SQLite + FTS5, interfaces, local-first and agent usage model",
+        "url": "https://github.com/Gentleman-Programming/engram/blob/11521f4f3776db6d94dc17c11731bad35b71c7bc/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Pinned architecture guide",
+        "path": "docs/ARCHITECTURE.md",
+        "symbol": "Memory lifecycle, topic keys, review defaults, scopes, delete semantics, operations, security/deployment boundaries",
+        "url": "https://github.com/Gentleman-Programming/engram/blob/11521f4f3776db6d94dc17c11731bad35b71c7bc/docs/ARCHITECTURE.md"
+      },
+      {
+        "id": "store",
+        "label": "Pinned core store source",
+        "path": "internal/store/store.go",
+        "symbol": "Core SQLite/FTS5 store and observation operations (linked by upstream architecture guide)",
+        "url": "https://github.com/Gentleman-Programming/engram/blob/11521f4f3776db6d94dc17c11731bad35b71c7bc/internal/store/store.go"
+      },
+      {
+        "id": "search",
+        "label": "Pinned search projection source",
+        "path": "internal/store/search_projection.go",
+        "symbol": "Compact bounded projection of preview, scope, lifecycle, and optional relation annotations",
+        "url": "https://github.com/Gentleman-Programming/engram/blob/11521f4f3776db6d94dc17c11731bad35b71c7bc/internal/store/search_projection.go"
+      },
+      {
+        "id": "capture-provenance",
+        "label": "Pinned capture provenance source",
+        "path": "internal/store/capture_project_provenance.go",
+        "symbol": "ProjectProvenance explicitly separates capture evidence from ownership and enrollment",
+        "url": "https://github.com/Gentleman-Programming/engram/blob/11521f4f3776db6d94dc17c11731bad35b71c7bc/internal/store/capture_project_provenance.go"
+      },
+      {
+        "id": "observation-provenance",
+        "label": "Pinned observation provenance source",
+        "path": "internal/store/observation_provenance.go",
+        "symbol": "Preserves structured supersession links across local rows and delete tombstones",
+        "url": "https://github.com/Gentleman-Programming/engram/blob/11521f4f3776db6d94dc17c11731bad35b71c7bc/internal/store/observation_provenance.go"
+      },
+      {
+        "id": "managed-update",
+        "label": "Pinned managed update source",
+        "path": "internal/store/managed_observation_update.go",
+        "symbol": "Atomic edit/receipt, exact attachment, operation replay, and expected-project checks; source also visible in official current-head patch",
+        "url": "https://github.com/Gentleman-Programming/engram/blob/11521f4f3776db6d94dc17c11731bad35b71c7bc/internal/store/managed_observation_update.go"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Project assessment domains and definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Project benchmark fixture, not an Engram result",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status; not an Engram result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The upstream README identifies Alan Buscaglia (Gentleman Programming) as the builder and describes Engram as a standalone memory layer also used by Gentle-AI. No maintainer identity was inferred from commit or profile metadata.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "Engram is a software repository with a local-first Go runtime and optional cloud replication, rather than a hosted-only memory API.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The documented agent path uses MCP stdio with a single Go binary backed by SQLite and FTS5. The repository also exposes local HTTP, CLI, and TUI interfaces; optional Git export and cloud replication support portability and sharing, while SQLite stays authoritative.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The store models observations alongside sessions, captured prompts, relations, and sync state. Observation metadata includes project and scope, title, type, topic key, review/pin fields, and revision counters. A topic key is scoped to project and scope; it is not a parent-child graph.",
+        "sources": [
+          "architecture",
+          "store"
+        ]
+      },
+      {
+        "text": "Search previews carry stable observation IDs, lifecycle state, and scope; the compact projection may add topic/review information and relation annotations without hydrating full observation content.",
+        "sources": [
+          "search"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Agents are expected to choose durable information and save it with mem_save rather than storing a raw stream of tool calls. Topic-key saves update the matching project/scope/topic item; duplicate detection updates duplicate metadata, and user-visible content edits preserve a previous observation version.",
+        "sources": [
+          "readme",
+          "architecture",
+          "store"
+        ]
+      },
+      {
+        "text": "The managed-runtime HTTP update path binds an edit to the current live host attachment and operation ID. It commits the edit and retry receipt together, rejects project changes, and replays the recorded response for an identical retry. This is source evidence, not an observed runtime result.",
+        "sources": [
+          "managed-update"
+        ]
+      },
+      {
+        "text": "mem_delete soft-deletes by default and supports explicit hard deletion. Soft-deleted observations are omitted from search, context, recent lists, and timeline; this review did not exercise local deletion or cleanup of replicated copies.",
+        "sources": [
+          "architecture",
+          "store"
+        ]
+      },
+      {
+        "text": "Retrieval uses FTS5 previews and supports progressive inspection through search, timeline, and full observation retrieval. Project reads resolve an explicit selector, then ENGRAM_PROJECT, then cwd detection; all-project reads are explicitly requested. Search candidates were not scored for answer correctness or abstention.",
+        "sources": [
+          "readme",
+          "architecture",
+          "store"
+        ]
+      },
+      {
+        "text": "Project-capture provenance is stored separately and the source explicitly says it does not grant ownership or enrollment. Observation relations and supersession links record relationships, but do not prove truth or provide answer citations. Older/imported records may lack capture metadata.",
+        "sources": [
+          "capture-provenance",
+          "observation-provenance",
+          "search"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Search, context, and progressive disclosure are documented; no answers were scored.",
+        "sources": [
+          "architecture",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Topic upserts, update paths, and revision history are present; no correction sequence was assessed.",
+        "sources": [
+          "architecture",
+          "store",
+          "managed-update",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Soft/hard delete paths are documented; no post-delete probe or cloud-copy audit was run.",
+        "sources": [
+          "architecture",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Project/scope selectors and widening controls are documented; no isolation workload was run.",
+        "sources": [
+          "architecture",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Relations and capture provenance are stored; no answer evidence was adjudicated.",
+        "sources": [
+          "capture-provenance",
+          "observation-provenance",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No runtime timings were collected.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "No workload, token, charge, or storage measurements were collected.",
+        "sources": [
+          "readme",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded review of the official README, architecture guide, and selected store sources at the verified head. The system, tests, and benchmark workloads were not run; source presence does not demonstrate recall quality or appropriate saving behavior.",
+        "sources": [
+          "readme",
+          "architecture",
+          "store"
+        ]
+      },
+      {
+        "text": "Concurrent writes, sync conflict outcomes, backup/restore, account-level authorization, and deletion across replicated copies were not tested. Runtime isolation and cleanup guarantees therefore remain unknown.",
+        "sources": [
+          "architecture",
+          "store",
+          "managed-update"
+        ]
+      },
+      {
+        "text": "Review dates are documented as review prompts rather than calibrated expiration deadlines. Global read options intentionally broaden scope, and local HTTP bearer auth is optional by default; suitability depends on deployment settings and was not assessed against a threat model.",
+        "sources": [
+          "architecture"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Engram runtime, tests, or benchmarks were run. Source/documentation observations are not system measurements."
+    }
+  }
+}

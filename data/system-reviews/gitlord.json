@@ -1,0 +1,350 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 258,
+    "slug": "gitlord",
+    "name": "GitLord",
+    "repository": "https://github.com/yashneil75/gitlord",
+    "branch": "master",
+    "revision": "8bfe0aa391a82cf62e595cd41bba06c7e4966e39",
+    "reviewed_at": "2026-11-25T20:58:29Z",
+    "review_timezone": "UTC (2026-11-25 12:58:29 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/yashneil75/gitlord/blob/8bfe0aa391a82cf62e595cd41bba06c7e4966e39/README.md",
+      "note": "No published contact email was displayed in the checked official README or official GitHub Pages site; no address was inferred from commit or profile metadata."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/yashneil75/gitlord/blob/8bfe0aa391a82cf62e595cd41bba06c7e4966e39/README.md",
+      "https://yashneil75.github.io/gitlord/"
+    ],
+    "summary": "A Python agent-orchestration framework that stores turns and tool events as Git commits, with session and subagent branches plus JSON and optional vector indexes. This review records source observations, not measured quality or performance.",
+    "atlas_locator": {
+      "ordinal": 258,
+      "name": "GitLord",
+      "slug": "gitlord",
+      "listed_repository": "https://github.com/yashneil75/gitlord",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/gitlord.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "sources": [
+      {
+        "id": "roster",
+        "label": "Curated roster identity, listed repository locator, and Atlas attribution",
+        "path": "../data/memory-systems.json",
+        "symbol": "ordinal 258",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitLord repository and default branch",
+        "path": "repository",
+        "symbol": "public repository; default branch master",
+        "url": "https://github.com/yashneil75/gitlord"
+      },
+      {
+        "id": "head",
+        "label": "Official GitHub current master commit endpoint",
+        "path": "commit",
+        "symbol": "full current head SHA 8bfe0aa391a82cf62e595cd41bba06c7e4966e39",
+        "url": "https://api.github.com/repos/yashneil75/gitlord/commits/master"
+      },
+      {
+        "id": "readme",
+        "label": "Official GitLord README at reviewed SHA",
+        "path": "README.md",
+        "url": "https://github.com/yashneil75/gitlord/blob/8bfe0aa391a82cf62e595cd41bba06c7e4966e39/README.md"
+      },
+      {
+        "id": "site",
+        "label": "Official GitHub Pages project website; contact email check",
+        "path": "website",
+        "url": "https://yashneil75.github.io/gitlord/"
+      },
+      {
+        "id": "architecture",
+        "label": "Two-repository model, ref layout, turn lifecycle, context assembly",
+        "path": "docs/architecture.md",
+        "url": "https://github.com/yashneil75/gitlord/blob/8bfe0aa391a82cf62e595cd41bba06c7e4966e39/docs/architecture.md"
+      },
+      {
+        "id": "schemas",
+        "label": "Turn, commit trailer, agent, and session data models",
+        "path": "gitlord/schemas.py",
+        "url": "https://github.com/yashneil75/gitlord/blob/8bfe0aa391a82cf62e595cd41bba06c7e4966e39/gitlord/schemas.py"
+      },
+      {
+        "id": "git",
+        "label": "Git plumbing, turn persistence, CAS ref updates, trailers",
+        "path": "gitlord/git.py",
+        "url": "https://github.com/yashneil75/gitlord/blob/8bfe0aa391a82cf62e595cd41bba06c7e4966e39/gitlord/git.py"
+      },
+      {
+        "id": "session",
+        "label": "Session create, append, rewind, branch retrieval, and index call",
+        "path": "gitlord/session.py",
+        "url": "https://github.com/yashneil75/gitlord/blob/8bfe0aa391a82cf62e595cd41bba06c7e4966e39/gitlord/session.py"
+      },
+      {
+        "id": "index",
+        "label": "JSON index rebuild from agent refs and commits",
+        "path": "gitlord/index.py",
+        "url": "https://github.com/yashneil75/gitlord/blob/8bfe0aa391a82cf62e595cd41bba06c7e4966e39/gitlord/index.py"
+      },
+      {
+        "id": "query",
+        "label": "TurnQuery index loading, filters, and aggregations",
+        "path": "gitlord/query.py",
+        "url": "https://github.com/yashneil75/gitlord/blob/8bfe0aa391a82cf62e595cd41bba06c7e4966e39/gitlord/query.py"
+      },
+      {
+        "id": "context",
+        "label": "Context assembly, cache, deduplication, and token budget",
+        "path": "gitlord/context.py",
+        "url": "https://github.com/yashneil75/gitlord/blob/8bfe0aa391a82cf62e595cd41bba06c7e4966e39/gitlord/context.py"
+      },
+      {
+        "id": "subagent",
+        "label": "Subagent branch completion, parent result, and ref cleanup",
+        "path": "gitlord/subagent.py",
+        "url": "https://github.com/yashneil75/gitlord/blob/8bfe0aa391a82cf62e595cd41bba06c7e4966e39/gitlord/subagent.py"
+      },
+      {
+        "id": "rag",
+        "label": "Optional Chroma vector index and query metadata",
+        "path": "gitlord/rag.py",
+        "url": "https://github.com/yashneil75/gitlord/blob/8bfe0aa391a82cf62e595cd41bba06c7e4966e39/gitlord/rag.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project benchmark metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture protocol",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository presents GitLord as a Python agent-orchestration framework whose Git-backed log stores turns and tool calls as commits; the workspace repository is kept separate and associated by workspace commit SHA. The package documents session/subagent orchestration, context management, MCP, model routing, JSON queries, and optional Chroma retrieval. No hosted service is inferred.",
+        "sources": [
+          "repo",
+          "readme",
+          "architecture",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Documentation and code observation: the log repository stores one JSON turn per commit under a session or subagent branch. Git plumbing builds blobs and trees and updates refs with compare-and-swap; a separate workspace repository is cross-referenced by workspace_commit. The Turn schema records role, timestamp, agent lineage, content/tool data, model, token and cost metadata, error, tags, summary references, and workspace SHA.",
+        "sources": [
+          "architecture",
+          "git",
+          "schemas",
+          "session"
+        ]
+      },
+      {
+        "text": "The rebuilt JSON index collects metadata from all refs/agents branches. The optional Chroma-backed VectorIndex stores text chunks with turn SHA, agent ID, turn number, tags, chunk ID, and indexing time. These are derived indexes over the Git event log.",
+        "sources": [
+          "index",
+          "rag",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: session creation creates a session ref and initial system turn. Appending captures workspace HEAD, creates a numbered turn commit, and compare-and-swap updates the branch ref; automatic indexing can rebuild the JSON index after commit.",
+        "sources": [
+          "session",
+          "git",
+          "schemas"
+        ]
+      },
+      {
+        "text": "Update and delete: the inspected session interface appends and rewinds by creating a branch at an earlier commit; it does not expose an individual turn edit/delete operation. Subagent completion appends a result to the parent and optionally removes the child branch ref; trim can remove eligible refs. Ref removal does not itself establish physical object erasure.",
+        "sources": [
+          "session",
+          "subagent",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Retrieval: get_turns walks the selected branch and supports turn-number bounds. The JSON index enables filtering and aggregation across indexed sessions. Optional vector retrieval chunks turn text, stores Git SHA and agent metadata, and accepts a caller-supplied metadata filter; documentation describes context assembly with summaries, repeated-read deduplication, token budgeting, caching, and optional RAG augmentation.",
+        "sources": [
+          "session",
+          "index",
+          "query",
+          "rag",
+          "context",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Scope isolation: branch-specific history and context coexist with a JSON index that spans discovered agent refs. TurnQuery loads all indexed sessions and does not add a session filter by default. Vector queries allow optional metadata filters, but the inspected sources do not establish mandatory tenant authorization; no isolation probes were run.",
+        "sources": [
+          "session",
+          "index",
+          "query",
+          "rag"
+        ]
+      },
+      {
+        "text": "Provenance and evidence: Git SHA and commit ancestry identify stored events, while turn and trailer fields can preserve timestamps, agent lineage, tool/model, workspace commit, tokens, cost, errors, and subagent result references. The inspected schema does not express claim confidence, verification status, or claim-level source citations.",
+        "sources": [
+          "schemas",
+          "git",
+          "subagent"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: source-visible mechanisms include working-tree-free log commits, CAS retry, branch-specific context caching, content-hash deduplication, token budgeting, optional chunked vector search, and token/cost/error metadata with JSON aggregations. Automatic JSON-index rebuild scans refs and commits; the session path suppresses exceptions from rebuild. No performance or reliability measurements were collected.",
+        "sources": [
+          "architecture",
+          "git",
+          "context",
+          "rag",
+          "session",
+          "index",
+          "query"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "History and query paths are present, but no adjudicated answerable-query or calibrated abstention workload was run.",
+        "sources": [
+          "session",
+          "query",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Turns are append-only and rewind creates a new branch; no correction or stale-value workload was run.",
+        "sources": [
+          "session",
+          "git",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Subagent branch refs can be removed, but no post-delete retrieval, ref-retention, or physical-erasure probe was performed.",
+        "sources": [
+          "subagent",
+          "git",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "The JSON query index spans sessions and vector filters are optional; no cross-session or cross-user leakage probe was run.",
+        "sources": [
+          "index",
+          "query",
+          "rag",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "The schema stores event/tool provenance, but no claim-level evidence-support or citation-coverage adjudication was performed.",
+        "sources": [
+          "schemas",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No latency distribution or scheduled write-to-recall measurement was collected.",
+        "sources": [
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Turn metadata supports token and cost recording, but no corpus token, provider-cost, or storage totals were measured.",
+        "sources": [
+          "schemas",
+          "index",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code/documentation",
+        "evidence": "Git plumbing, CAS, context caching/deduplication, token-budget controls, optional vector indexing, and metadata aggregations are visible design mechanisms, not measured results.",
+        "sources": [
+          "architecture",
+          "git",
+          "context",
+          "rag",
+          "query"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded read-only inspection of the official README, architecture documentation, selected source at the verified repository SHA, and the official project website for contact information. GitLord, tests, optional integrations, and benchmark workloads were not run; answer quality, calibrated abstention, correction correctness, deletion completeness, authorization isolation, runtime performance, and storage efficiency remain unknown.",
+        "sources": [
+          "readme",
+          "architecture",
+          "session",
+          "query",
+          "metrics",
+          "site"
+        ]
+      },
+      {
+        "text": "Atlas data was used only for ordinal, name, slug, listed locator, and roster attribution. Atlas descriptions and assessment claims were excluded from the review evidence.",
+        "sources": [
+          "roster",
+          "repo"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is not_run. No GitLord runtime, tests, or benchmarks were run. Project metric definitions, fixture, and execution-status record are protocol and status artifacts, not GitLord measurements.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

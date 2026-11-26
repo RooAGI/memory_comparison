@@ -1,0 +1,338 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 219,
+    "slug": "empryo",
+    "name": "Empryo",
+    "repository": "https://github.com/proxysoul/Empryo",
+    "listed_repository": "https://github.com/proxysoul/Empryo",
+    "branch": "main",
+    "revision": "bc87cc125c2fa6246b76e09606a2d150ca33865f",
+    "reviewed_at": "2026-11-25T19:11:50Z",
+    "review_timezone": "UTC (2026-11-25 11:11:50 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Empryo is an agent coding harness whose public SoulForge v2 core includes persistent cross-session memory. The inspected memory subsystem stores categorized records in separate project and global SQLite databases, combines lexical, semantic, file and usage signals for recall, and supports updates, restorable soft deletion, and supersession. The repository says the public source is not the full current Empryo v3 source; runtime quality and performance were not measured.",
+    "atlas_locator": {
+      "ordinal": 219,
+      "name": "Empryo",
+      "slug": "empryo",
+      "listed_repository": "https://github.com/proxysoul/Empryo",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/empryo.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": "empryo@proxysoul.com",
+      "source_url": "https://github.com/proxysoul/Empryo/blob/bc87cc125c2fa6246b76e09606a2d150ca33865f/README.md",
+      "checked_urls": [
+        "https://github.com/proxysoul/Empryo/blob/bc87cc125c2fa6246b76e09606a2d150ca33865f/README.md"
+      ],
+      "note": "The official pinned README publishes empryo@proxysoul.com for commercial licensing contact. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": "empryo@proxysoul.com",
+    "contact_email_source_url": "https://github.com/proxysoul/Empryo/blob/bc87cc125c2fa6246b76e09606a2d150ca33865f/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/proxysoul/Empryo/blob/bc87cc125c2fa6246b76e09606a2d150ca33865f/README.md"
+    ],
+    "contact_email_note": "Published in the official pinned README as the commercial licensing contact.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated memory systems roster",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[218], ordinal 219; name, slug, explicit listed repository and pinned Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/empryo.md",
+        "symbol": "Pinned catalog attribution used for identity and locator only, not assessment claims",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/empryo.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository metadata",
+        "path": "repository metadata",
+        "symbol": "Canonical repository proxysoul/Empryo; default branch main",
+        "url": "https://api.github.com/repos/proxysoul/Empryo"
+      },
+      {
+        "id": "head",
+        "label": "Verified current main head",
+        "path": "commit API and git ls-remote",
+        "symbol": "GitHub commit API and fresh git ls-remote agree on full main HEAD bc87cc125c2fa6246b76e09606a2d150ca33865f",
+        "url": "https://github.com/proxysoul/Empryo/commit/bc87cc125c2fa6246b76e09606a2d150ca33865f"
+      },
+      {
+        "id": "readme",
+        "label": "Official pinned README",
+        "path": "README.md",
+        "symbol": "Project description, public/private source boundary, official contact email",
+        "url": "https://github.com/proxysoul/Empryo/blob/bc87cc125c2fa6246b76e09606a2d150ca33865f/README.md"
+      },
+      {
+        "id": "docs",
+        "label": "Official memory documentation",
+        "path": "mintlify-docs/tools/memory.mdx",
+        "symbol": "Memory categories, automatic recall, UI actions, scope locations and embedding options",
+        "url": "https://github.com/proxysoul/Empryo/blob/bc87cc125c2fa6246b76e09606a2d150ca33865f/mintlify-docs/tools/memory.mdx"
+      },
+      {
+        "id": "types",
+        "label": "Memory record and scope types",
+        "path": "src/core/memory/types.ts",
+        "symbol": "MemoryScopeConfig, MemoryRecord, MemoryRecallSignals and result model",
+        "url": "https://github.com/proxysoul/Empryo/blob/bc87cc125c2fa6246b76e09606a2d150ca33865f/src/core/memory/types.ts"
+      },
+      {
+        "id": "db",
+        "label": "SQLite memory database",
+        "path": "src/core/memory/db.ts",
+        "symbol": "SQLite schema, FTS indexes, content hash upsert/dedup, soft delete/restore/supersede, embedding and edges",
+        "url": "https://github.com/proxysoul/Empryo/blob/bc87cc125c2fa6246b76e09606a2d150ca33865f/src/core/memory/db.ts"
+      },
+      {
+        "id": "manager",
+        "label": "Scoped memory manager",
+        "path": "src/core/memory/manager.ts",
+        "symbol": "Project/global database paths, scope resolution, writes, list and lifecycle operations",
+        "url": "https://github.com/proxysoul/Empryo/blob/bc87cc125c2fa6246b76e09606a2d150ca33865f/src/core/memory/manager.ts"
+      },
+      {
+        "id": "recall",
+        "label": "Memory recall ranking",
+        "path": "src/core/memory/recall.ts",
+        "symbol": "Read scope filtering, candidate signals, sorting, threshold and character budget",
+        "url": "https://github.com/proxysoul/Empryo/blob/bc87cc125c2fa6246b76e09606a2d150ca33865f/src/core/memory/recall.ts"
+      },
+      {
+        "id": "tool",
+        "label": "Memory tool API",
+        "path": "src/core/tools/memory.ts",
+        "symbol": "Agent memory write/search/list/get/delete/restore/pin/unpin/supersede actions and scope parameters",
+        "url": "https://github.com/proxysoul/Empryo/blob/bc87cc125c2fa6246b76e09606a2d150ca33865f/src/core/tools/memory.ts"
+      },
+      {
+        "id": "embedder",
+        "label": "Memory embedding implementation",
+        "path": "src/core/memory/embedder.ts",
+        "symbol": "Offline hashbag-v2 embedding and optional provider interface",
+        "url": "https://github.com/proxysoul/Empryo/blob/bc87cc125c2fa6246b76e09606a2d150ca33865f/src/core/memory/embedder.ts"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Shared benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Empryo as a coding harness with desktop, terminal, and headless modes. It says this repository contains the public SoulForge v2 core and engine, not the full source of Empryo v3. The inspected public core includes a persistent memory subsystem and an agent tool surface.",
+        "sources": [
+          "readme",
+          "docs",
+          "tool"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "MemoryManager opens separate SQLite databases at .soulforge/memory.db for the project and ~/.soulforge/memory.db for global memory. Each database stores categorized summary/details/topics records, source and session identifiers, timestamps, usage counts, content hashes, pinned/hidden/superseded lifecycle fields, and file references.",
+        "sources": [
+          "manager",
+          "db",
+          "types",
+          "docs"
+        ]
+      },
+      {
+        "text": "FTS5 provides unicode word and trigram indexes; the database also stores vector embeddings and similarity/supersession edges. The built-in hashbag-v2 embedder creates normalized 384-dimensional vectors, with optional provider-backed embeddings. Recall combines semantic, lexical, recency, use-count, pin, file affinity, co-change and code blast-radius signals.",
+        "sources": [
+          "db",
+          "embedder",
+          "recall",
+          "types"
+        ]
+      },
+      {
+        "text": "The system exposes a memory tool for writes, search, list/get and lifecycle actions, plus a /memory browser for review and settings. The docs describe automatic injection of up to three relevant memories before a turn; the actual surfaced set depends on implementation gates and configured scopes.",
+        "sources": [
+          "tool",
+          "docs",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Writes create or update records in the selected scope. A content hash deduplicates identical summary/details; repeat writes can refresh usage and unhide a soft-deleted record, and explicit ID writes upsert that record. Similarity hints are advisory. This supports correction through a write/update path, but no independent version history is established by the inspected record schema.",
+        "sources": [
+          "db",
+          "tool",
+          "types"
+        ]
+      },
+      {
+        "text": "Delete is soft: it marks a memory hidden and prunes similarity edges. Restore unhides it and attempts to re-link; supersede hides an old row and records the replacement ID. The official docs state hidden entries are restorable and that memory deletion is not permanent. No physical erasure guarantee is established.",
+        "sources": [
+          "db",
+          "tool",
+          "docs",
+          "types"
+        ]
+      },
+      {
+        "text": "Recall filters candidate databases by read scope, then ranks lexical, semantic and contextual signals, applies a score threshold and stops at a result limit or character budget. The docs describe automatic surfacing of up to three relevant entries; an agent can also search explicitly.",
+        "sources": [
+          "recall",
+          "docs",
+          "tool"
+        ]
+      },
+      {
+        "text": "Scope is implemented with distinct project and global databases and configurable write/read scopes, including project, global, all/both, and none modes. This is an application-level scope boundary; the reviewed sources do not establish multi-user authorization or isolation between processes sharing a database.",
+        "sources": [
+          "manager",
+          "types",
+          "tool",
+          "docs"
+        ]
+      },
+      {
+        "text": "Records retain user/agent source, session ID, timestamps, category, topics and file references. These fields provide attribution and context but do not require source quotations, citations, or truth evaluation; the reviewed schema has no explicit epistemic trust state.",
+        "sources": [
+          "types",
+          "db",
+          "tool"
+        ]
+      },
+      {
+        "text": "SQLite FTS indexes, content-hash deduplication, cached project file associations, and bounded recall output are code-level efficiency mechanisms. The schema also tracks memory hint surface/acted counts, and the UI supports cleanup review. They are not measured latency, cost, recall quality, operational monitoring, or a complete mutation audit.",
+        "sources": [
+          "db",
+          "recall",
+          "manager",
+          "docs"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Lexical/semantic and contextual retrieval paths were inspected; no answerability, recall, or abstention workload was run.",
+        "sources": [
+          "db",
+          "recall",
+          "tool",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "ID upsert and supersession are present in source; no correction or stale-value probes were run.",
+        "sources": [
+          "db",
+          "tool",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Delete is implemented as restorable soft hiding; no residual-read or physical-erasure workload was run.",
+        "sources": [
+          "db",
+          "docs",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Project/global storage and read/write scope selection were inspected; no cross-scope or shared-process isolation probe was run.",
+        "sources": [
+          "manager",
+          "recall",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Attribution and file/session metadata exist; no evidence-support or citation-coverage workload was run.",
+        "sources": [
+          "types",
+          "db",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No runtime timing samples were collected.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No token, cost, database size, or storage measurements were collected.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review is a source inspection of the public repository at the verified main head. The repository explicitly says it is not the full source of current Empryo v3, so findings describe the inspected public SoulForge v2 core and may not represent private/current product behavior.",
+        "sources": [
+          "readme",
+          "repo",
+          "head"
+        ]
+      },
+      {
+        "text": "No Empryo runtime, tests, or benchmarks were run. Retrieval quality, abstention, correctness under concurrent access or failure, physical deletion, cross-user isolation, latency, token use, cost, and storage scaling remain unverified.",
+        "sources": [
+          "readme",
+          "db",
+          "manager",
+          "recall",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No system runtime, tests, or benchmarks were run. Project metric definitions and fixtures are not Empryo results."
+    }
+  }
+}

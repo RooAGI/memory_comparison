@@ -1,0 +1,346 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 125,
+    "slug": "claude-mem-lite",
+    "name": "claude-mem-lite",
+    "repository": "https://github.com/sdsrss/claude-mem-lite",
+    "listed_repository": "https://github.com/sdsrss/claude-mem-lite",
+    "branch": "main",
+    "revision": "3f6d5dcc4d0b59b35420f3d33a75ac61617df1fb",
+    "reviewed_at": "2026-11-25T08:09:22Z",
+    "review_timezone": "UTC (2026-11-25 00:09:22 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "claude-mem-lite is a Claude Code plugin that captures session activity through lifecycle hooks, batches related tool activity into observations, and exposes persistent memory through MCP and CLI tools. The reviewed source uses a local SQLite database with FTS5 text search. This is a source review, not a runtime or benchmark evaluation.",
+    "atlas_locator": {
+      "ordinal": 125,
+      "name": "claude-mem-lite",
+      "slug": "claude-mem-lite",
+      "listed_repository": "https://github.com/sdsrss/claude-mem-lite",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/claude-mem-lite.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "attribution": "Curated identity, locator, and roster attribution only; not assessment evidence."
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/sdsrss/claude-mem-lite/blob/3f6d5dcc4d0b59b35420f3d33a75ac61617df1fb/SECURITY.md",
+      "checked_urls": [
+        "https://github.com/sdsrss/claude-mem-lite/blob/3f6d5dcc4d0b59b35420f3d33a75ac61617df1fb/README.md",
+        "https://github.com/sdsrss/claude-mem-lite/blob/3f6d5dcc4d0b59b35420f3d33a75ac61617df1fb/SECURITY.md"
+      ],
+      "note": "No contact email is published in the checked official README or SECURITY.md; the security policy directs reports through GitHub's private vulnerability reporting flow. Commit/profile metadata and third-party directories were not used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/sdsrss/claude-mem-lite/blob/3f6d5dcc4d0b59b35420f3d33a75ac61617df1fb/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/sdsrss/claude-mem-lite/blob/3f6d5dcc4d0b59b35420f3d33a75ac61617df1fb/README.md",
+      "https://github.com/sdsrss/claude-mem-lite/blob/3f6d5dcc4d0b59b35420f3d33a75ac61617df1fb/SECURITY.md"
+    ],
+    "contact_email_note": "No contact email is published in the checked official README or SECURITY.md; reports are directed through GitHub private vulnerability reporting. Commit/profile metadata and third-party directories were not used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[124], position 125; name, slug, listed repository, explicit status, and Atlas attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/claude-mem-lite.md",
+        "symbol": "Pinned roster entry at Atlas revision 19199a4fc249e89c0793be06f0b166b358089ba0",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/claude-mem-lite.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "",
+        "symbol": "Public sdsrss/claude-mem-lite repository; main is the default branch",
+        "url": "https://github.com/sdsrss/claude-mem-lite"
+      },
+      {
+        "id": "history",
+        "label": "Official main commit feed",
+        "path": "",
+        "symbol": "Official main Atom feed updated 2026-11-25T01:50:27Z and lists current head",
+        "url": "https://github.com/sdsrss/claude-mem-lite/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream head",
+        "path": "",
+        "symbol": "Full main head 3f6d5dcc4d0b59b35420f3d33a75ac61617df1fb",
+        "url": "https://github.com/sdsrss/claude-mem-lite/commit/3f6d5dcc4d0b59b35420f3d33a75ac61617df1fb"
+      },
+      {
+        "id": "readme",
+        "label": "Official README at reviewed SHA",
+        "path": "README.md",
+        "symbol": "Product architecture, hooks, writes, retrieval, project-scoped context, and illustrative cost claims",
+        "url": "https://github.com/sdsrss/claude-mem-lite/blob/3f6d5dcc4d0b59b35420f3d33a75ac61617df1fb/README.md"
+      },
+      {
+        "id": "schema",
+        "label": "Shared database schema",
+        "path": "schema.mjs",
+        "symbol": "SQLite schema, FTS5, migrations, shared database initialization",
+        "url": "https://github.com/sdsrss/claude-mem-lite/blob/3f6d5dcc4d0b59b35420f3d33a75ac61617df1fb/schema.mjs"
+      },
+      {
+        "id": "server",
+        "label": "MCP server",
+        "path": "server.mjs",
+        "symbol": "MCP tools, database integration, search and mutation entry points",
+        "url": "https://github.com/sdsrss/claude-mem-lite/blob/3f6d5dcc4d0b59b35420f3d33a75ac61617df1fb/server.mjs"
+      },
+      {
+        "id": "search",
+        "label": "Search engine",
+        "path": "search-engine.mjs",
+        "symbol": "FTS query filters, scoring factors, fallback and expansion",
+        "url": "https://github.com/sdsrss/claude-mem-lite/blob/3f6d5dcc4d0b59b35420f3d33a75ac61617df1fb/search-engine.mjs"
+      },
+      {
+        "id": "write",
+        "label": "Observation write and update core",
+        "path": "lib/observation-write.mjs",
+        "symbol": "Observation insert, accepted update fields, secret scrubbing, transactional derived-text rebuild",
+        "url": "https://github.com/sdsrss/claude-mem-lite/blob/3f6d5dcc4d0b59b35420f3d33a75ac61617df1fb/lib/observation-write.mjs"
+      },
+      {
+        "id": "delete",
+        "label": "Delete core",
+        "path": "lib/delete-core.mjs",
+        "symbol": "Shared hard-delete orchestration",
+        "url": "https://github.com/sdsrss/claude-mem-lite/blob/3f6d5dcc4d0b59b35420f3d33a75ac61617df1fb/lib/delete-core.mjs"
+      },
+      {
+        "id": "provenance",
+        "label": "Provenance helper",
+        "path": "lib/provenance.mjs",
+        "symbol": "Manual and machine-written session identity and display marks",
+        "url": "https://github.com/sdsrss/claude-mem-lite/blob/3f6d5dcc4d0b59b35420f3d33a75ac61617df1fb/lib/provenance.mjs"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy at reviewed SHA",
+        "path": "SECURITY.md",
+        "symbol": "GitHub private vulnerability reporting route; checked for published contact email",
+        "url": "https://github.com/sdsrss/claude-mem-lite/blob/3f6d5dcc4d0b59b35420f3d33a75ac61617df1fb/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Project-wide memory evaluation definitions, not system results",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned evaluation workload, not system results",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Initial benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project-wide execution status, not claude-mem-lite results",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "claude-mem-lite is an open-source Claude Code plugin combining lifecycle hooks, an MCP server, CLI tools, local persistent storage, and context injection. This review does not infer an individual maintainer identity from commit or profile metadata.",
+        "sources": [
+          "repo",
+          "readme",
+          "server"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The shared schema initializes a local SQLite database and defines observation records with descriptive, project, branch, file, session, importance, and timestamp fields, alongside session, prompt, and activity-event records. FTS5 indexes and triggers maintain searchable text; database initialization uses WAL mode.",
+        "sources": [
+          "schema",
+          "readme"
+        ]
+      },
+      {
+        "text": "Claude Code lifecycle hooks filter activity and batch related operations into episodes; an MCP server and CLI expose explicit memory operations. Hook and server processes share the schema and data directory.",
+        "sources": [
+          "readme",
+          "server",
+          "schema"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Automatic capture uses lifecycle hooks and episode batching before an observation is written. Explicit saves are also available. The shared update function accepts title, narrative, type, importance, lesson, and concepts; it scrubs strings and rebuilds derived search text in a transaction. The README describes degraded saves when model enrichment fails, a documented fallback not exercised here.",
+        "sources": [
+          "readme",
+          "server",
+          "write"
+        ]
+      },
+      {
+        "text": "The MCP/CLI deletion path uses shared hard-delete orchestration. Official documentation describes a pre-delete database copy, so deletion from the active database does not establish erasure from backups or other copies.",
+        "sources": [
+          "server",
+          "delete",
+          "readme"
+        ]
+      },
+      {
+        "text": "Search uses FTS5/BM25 and accepts project, type, date, importance, and branch filters. Ranking combines recency, type, importance, lesson presence, noise, and citation-related factors; the current source also has AND-to-OR fallback and concept/PRF expansion when direct results are sparse. README-documented synonym processing and contextual recall are implementation claims, not measured quality.",
+        "sources": [
+          "search",
+          "readme",
+          "server"
+        ]
+      },
+      {
+        "text": "Search can filter to a project, while the current-project value also affects ranking when no explicit project is supplied. The inspected query does not establish tenant authorization or isolation for users sharing one data directory.",
+        "sources": [
+          "search",
+          "server",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "FTS5 retrieval and query expansion are source-visible; no answerable or unanswerable cases were scored.",
+        "sources": [
+          "search",
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "A field-patch update and supersession paths exist; no correction sequence was adjudicated.",
+        "sources": [
+          "write",
+          "server",
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The source exposes hard deletion and the README describes a pre-delete copy; no residual-copy probes were run.",
+        "sources": [
+          "delete",
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Project filters and current-project ranking are source-visible; no cross-project or multi-user isolation workload was run.",
+        "sources": [
+          "search",
+          "server",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Provenance and citation-related ranking state exist; no evidence adjudication was performed.",
+        "sources": [
+          "provenance",
+          "search",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The source paths were inspected but not timed.",
+        "sources": [
+          "search",
+          "write",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "The README presents illustrative estimates; no resource measurements were collected.",
+        "sources": [
+          "readme",
+          "schema",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded inspection of selected official documentation and code at the verified main head. It does not establish runtime correctness, retrieval quality, complete deletion across backups, tenant isolation, backup retention, or performance under load.",
+        "sources": [
+          "repo",
+          "head",
+          "readme",
+          "search",
+          "delete"
+        ]
+      },
+      {
+        "text": "Project-aware ranking and filtering do not by themselves prove user or tenant isolation. Provenance tags and citation interaction counts do not establish evidence support or claim-level citation validation.",
+        "sources": [
+          "search",
+          "server",
+          "provenance"
+        ]
+      },
+      {
+        "text": "No system runtime, benchmark workload, or tests were run. README quality and cost claims were not reproduced and are not treated as measurements.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. This review did not execute claude-mem-lite, its tests, or any benchmark workload.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "contact_notes": [
+      {
+        "text": "No email is published in the checked official README or SECURITY.md; the security policy directs reports through GitHub's private vulnerability reporting flow.",
+        "sources": [
+          "readme",
+          "security"
+        ]
+      }
+    ]
+  }
+}

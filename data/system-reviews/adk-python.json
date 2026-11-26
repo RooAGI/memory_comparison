@@ -1,0 +1,351 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 267,
+    "slug": "adk-python",
+    "name": "Google ADK",
+    "repository": "https://github.com/google/adk-python",
+    "listed_repository": "https://github.com/google/adk-python",
+    "branch": "main",
+    "revision": "9fd6b330e6cd5d02bd3604d8e8a31fced17b0286",
+    "reviewed_at": "2026-11-25T21:32:16Z",
+    "review_timezone": "UTC (checked 2026-11-25 13:32:16 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Google ADK’s Python package defines a memory service interface and three backends: an in-process event store, Vertex AI Memory Bank, and Vertex AI RAG. The durable backends delegate generation or retrieval to managed Google services; behavior such as deletion and provenance differs by backend. No runtime or benchmark was executed.",
+    "atlas_locator": {
+      "ordinal": 267,
+      "name": "Google ADK",
+      "slug": "adk-python",
+      "listed_repository": "https://github.com/google/adk-python",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/adk-python.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/google/adk-python/blob/9fd6b330e6cd5d02bd3604d8e8a31fced17b0286/README.md",
+      "checked_urls": [
+        "https://github.com/google/adk-python/blob/9fd6b330e6cd5d02bd3604d8e8a31fced17b0286/README.md"
+      ],
+      "note": "Checked the official pinned repository README for a published contact email; none was found. No commit/profile metadata, package metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/google/adk-python/blob/9fd6b330e6cd5d02bd3604d8e8a31fced17b0286/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/google/adk-python/blob/9fd6b330e6cd5d02bd3604d8e8a31fced17b0286/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the official pinned README checked for this review.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[266], ordinal 267; roster identity, explicit repository locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/adk-python.md",
+        "symbol": "Pinned curated attribution for identity/locator only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/adk-python.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository metadata",
+        "path": "",
+        "symbol": "GitHub repository API identifies google/adk-python and default branch main",
+        "url": "https://api.github.com/repos/google/adk-python"
+      },
+      {
+        "id": "head",
+        "label": "Official current main commit API",
+        "path": "",
+        "symbol": "Full current main head SHA and commit metadata",
+        "url": "https://api.github.com/repos/google/adk-python/commits/main"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project identity and scope; checked for a published contact email",
+        "url": "https://github.com/google/adk-python/blob/9fd6b330e6cd5d02bd3604d8e8a31fced17b0286/README.md"
+      },
+      {
+        "id": "docs",
+        "label": "Official ADK Memory documentation",
+        "path": "",
+        "symbol": "Memory service role, implementation selection, and configuration guidance",
+        "url": "https://adk.dev/sessions/memory/"
+      },
+      {
+        "id": "base",
+        "label": "Pinned memory service contract",
+        "path": "src/google/adk/memory/base_memory_service.py",
+        "symbol": "BaseMemoryService add/search/delete contracts and SearchMemoryResponse",
+        "url": "https://github.com/google/adk-python/blob/9fd6b330e6cd5d02bd3604d8e8a31fced17b0286/src/google/adk/memory/base_memory_service.py"
+      },
+      {
+        "id": "entry",
+        "label": "Pinned memory record model",
+        "path": "src/google/adk/memory/memory_entry.py",
+        "symbol": "MemoryEntry content, id, author, timestamp, custom_metadata",
+        "url": "https://github.com/google/adk-python/blob/9fd6b330e6cd5d02bd3604d8e8a31fced17b0286/src/google/adk/memory/memory_entry.py"
+      },
+      {
+        "id": "memory",
+        "label": "Pinned in-memory backend",
+        "path": "src/google/adk/memory/in_memory_memory_service.py",
+        "symbol": "Session/event storage, Unicode-aware keyword ranking, scoped search and delete suppression",
+        "url": "https://github.com/google/adk-python/blob/9fd6b330e6cd5d02bd3604d8e8a31fced17b0286/src/google/adk/memory/in_memory_memory_service.py"
+      },
+      {
+        "id": "bank",
+        "label": "Pinned Vertex AI Memory Bank backend",
+        "path": "src/google/adk/memory/vertex_ai_memory_bank_service.py",
+        "symbol": "Event ingestion/generation, direct memory creation, scope, search and profile retrieval",
+        "url": "https://github.com/google/adk-python/blob/9fd6b330e6cd5d02bd3604d8e8a31fced17b0286/src/google/adk/memory/vertex_ai_memory_bank_service.py"
+      },
+      {
+        "id": "rag",
+        "label": "Pinned Vertex AI RAG backend",
+        "path": "src/google/adk/memory/vertex_ai_rag_memory_service.py",
+        "symbol": "Session upload, encoded source scope, bounded corpus listing, retrieval and result filtering",
+        "url": "https://github.com/google/adk-python/blob/9fd6b330e6cd5d02bd3604d8e8a31fced17b0286/src/google/adk/memory/vertex_ai_rag_memory_service.py"
+      },
+      {
+        "id": "tool",
+        "label": "Pinned load-memory tool",
+        "path": "src/google/adk/tools/load_memory_tool.py",
+        "symbol": "Agent tool calls ToolContext.search_memory and returns MemoryEntry results",
+        "url": "https://github.com/google/adk-python/blob/9fd6b330e6cd5d02bd3604d8e8a31fced17b0286/src/google/adk/tools/load_memory_tool.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation domains and metric formulas; not a Google ADK result",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned workload, not executed in this review",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status record; not an ADK measurement",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes ADK as an open-source, code-first Python framework for building and deploying agents. Its memory package is a pluggable component of the agent runtime rather than a standalone memory database; applications choose and configure a service and decide when sessions or event deltas are ingested.",
+        "sources": [
+          "readme",
+          "docs",
+          "base"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "BaseMemoryService defines session ingestion, optional event-delta and direct-memory writes, and scoped search. MemoryEntry holds google.genai Content plus optional id, author, timestamp, and custom metadata; the response is a list of entries.",
+        "sources": [
+          "base",
+          "entry"
+        ]
+      },
+      {
+        "text": "The shipped implementations are InMemoryMemoryService, VertexAiMemoryBankService, and VertexAiRagMemoryService. The first keeps event records in process; Memory Bank delegates memory generation and semantic retrieval to Agent Platform; RAG uploads session text into a configured corpus and retrieves matching contexts.",
+        "sources": [
+          "docs",
+          "memory",
+          "bank",
+          "rag"
+        ]
+      },
+      {
+        "text": "Session state is distinct from long-term memory. ADK exposes an agent load_memory tool that calls ToolContext.search_memory; an application or runner must connect the chosen service and arrange ingestion.",
+        "sources": [
+          "docs",
+          "tool",
+          "base"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "InMemoryMemoryService replaces a stored session when adding a whole session, while add_events_to_memory appends unseen event IDs as a delta. Both discard entries without content and apply event rewinds for complete-session ingestion.",
+        "sources": [
+          "memory",
+          "base"
+        ]
+      },
+      {
+        "text": "Its search scans stored event text, excludes thought parts, normalizes Unicode, and scores the count of overlapping query words. It returns at most ten entries, with ties retaining insertion order; this is keyword matching rather than semantic retrieval.",
+        "sources": [
+          "memory"
+        ]
+      },
+      {
+        "text": "In-memory delete_memory removes a matching event ID only within the supplied app/user scope and remembers that ID to suppress re-ingestion. It is process-local state and is lost on restart.",
+        "sources": [
+          "memory"
+        ]
+      },
+      {
+        "text": "Memory Bank session ingestion routes events through Vertex AI ingest_events by default, with an alternative generate path selected by certain custom metadata. The default ingest request runs as a background task and errors are logged; direct add_memory uses remote create calls or server-side consolidation. Event deltas include event IDs and timestamps on the ingest path.",
+        "sources": [
+          "bank",
+          "base"
+        ]
+      },
+      {
+        "text": "Memory Bank search passes app_name and user_id as the remote scope and requests similarity retrieval; an additional retrieve_profiles method offers scope-keyed structured profiles. The implementation does not override BaseMemoryService.delete_memory, whose default raises NotImplementedError.",
+        "sources": [
+          "bank",
+          "base"
+        ]
+      },
+      {
+        "text": "RAG serializes visible event text, author, and timestamp as JSON lines in a temporary file and uploads it to the configured corpus under an encoded app/user/session display name. Search requests vector retrieval, then reconstructs entries from matching context lines.",
+        "sources": [
+          "rag"
+        ]
+      },
+      {
+        "text": "RAG scopes candidate corpus files by listing at most ten pages of 100 files. If listing fails or exceeds that bound it performs retrieval against the broader configured corpus, then filters returned contexts by their encoded app/user identity. The service does not override the base delete method.",
+        "sources": [
+          "rag",
+          "base"
+        ]
+      },
+      {
+        "text": "The agent-facing load_memory tool accepts a query and returns results from ToolContext.search_memory; the caller chooses the service and controls when memory is written and queried.",
+        "sources": [
+          "tool",
+          "docs"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention: in-memory search implements a bounded lexical ranker and Vertex backends delegate retrieval to managed services; no answer accuracy or abstention was measured.",
+        "sources": [
+          "memory",
+          "bank",
+          "rag",
+          "metrics"
+        ]
+      },
+      {
+        "text": "Correction and staleness: the shared interface has no update or correction contract; in-memory session replacement and event-ID deduplication do not establish correction accuracy. Stale-value rate is unmeasured.",
+        "sources": [
+          "base",
+          "memory",
+          "metrics"
+        ]
+      },
+      {
+        "text": "Deletion: the in-memory backend removes an event and suppresses re-ingestion for the process lifetime; the Vertex backends inherit the unsupported base delete method. Deletion leakage and remote erasure were not tested.",
+        "sources": [
+          "base",
+          "memory",
+          "bank",
+          "rag",
+          "metrics"
+        ]
+      },
+      {
+        "text": "Scope isolation: base writes/search carry app_name and user_id; in-memory keys by both, Memory Bank sends both as remote scope, and RAG encodes and checks them in file metadata and returned contexts. No isolation workload was run.",
+        "sources": [
+          "base",
+          "memory",
+          "bank",
+          "rag",
+          "metrics"
+        ]
+      },
+      {
+        "text": "Evidence support and citations: MemoryEntry has author, timestamp, and free-form metadata, but the service contract does not require source references and returned entries are not source citations. Support precision and citation coverage are unmeasured.",
+        "sources": [
+          "entry",
+          "base",
+          "memory",
+          "bank",
+          "rag",
+          "metrics"
+        ]
+      },
+      {
+        "text": "Retrieval latency and write-to-recall delay: Memory Bank ingestion is background-triggered and RAG uses a hosted corpus; no timing or first-recall probes were collected.",
+        "sources": [
+          "bank",
+          "rag",
+          "metrics"
+        ]
+      },
+      {
+        "text": "Tokens and cost: no token usage or price accounting was collected for local or managed backends; cost is unavailable here, not zero.",
+        "sources": [
+          "memory",
+          "bank",
+          "rag",
+          "metrics"
+        ]
+      },
+      {
+        "text": "Storage: in-memory records are process-local; Vertex data is held in managed services. No attributable persistent byte count or per-item storage measurement was collected.",
+        "sources": [
+          "memory",
+          "bank",
+          "rag",
+          "metrics"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded source review of selected memory API, backend, tool, and official documentation at the verified repository head. ADK, its tests, external Google services, and benchmark workloads were not run.",
+        "sources": [
+          "readme",
+          "base",
+          "memory",
+          "bank",
+          "rag",
+          "docs"
+        ]
+      },
+      {
+        "text": "Managed service behavior, retention, deletion propagation, billing, availability, and exact latency depend on deployed Google Cloud resources and configuration not exercised here. A code path that includes scope keys is not a measured tenant-isolation guarantee.",
+        "sources": [
+          "bank",
+          "rag",
+          "metrics"
+        ]
+      },
+      {
+        "text": "The review did not inspect every agent/session integration or managed-service API behavior. It cannot establish retrieval quality, ingestion completion time, effective deletion, cost, or storage efficiency.",
+        "sources": [
+          "base",
+          "bank",
+          "rag",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Google ADK runtime, tests, managed service calls, or benchmark workload were run.",
+      "metric_definitions": "../METRICS.md",
+      "fixture": "../fixtures/memory-benchmark-v1.json",
+      "execution_status": "../results/initial-baselines-status.json"
+    }
+  }
+}

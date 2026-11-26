@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "aeris",
+    "name": "Aeris",
+    "repository": "https://github.com/Cedrick-Coto/Aeris",
+    "branch": "main",
+    "revision": "d94d63ba32cd0f5f5f372722d4751bf3e7e26388",
+    "reviewed_at": "2026-11-23T23:44:09Z",
+    "review_timezone": "UTC (2026-11-23 15:44:09 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Aeris is described as a deterministic cognitive simulation engine. Memory models and retrieval are specified in documentation, while the reviewed repository tree contains no engine implementation; documented designs are not runtime evidence.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/Cedrick-Coto/Aeris"
+    },
+    "sources": [
+      {"id":"repo","label":"Current upstream repository at reviewed main head","path":"repository","symbol":"GitHub repository metadata; default branch main; head d94d63ba32cd0f5f5f372722d4751bf3e7e26388","url":"https://github.com/Cedrick-Coto/Aeris/tree/d94d63ba32cd0f5f5f372722d4751bf3e7e26388"},
+      {"id":"readme","label":"Project README","path":"README.md","symbol":"Project description, architecture, development roadmap; memory retrieval in progress","url":"https://github.com/Cedrick-Coto/Aeris/blob/d94d63ba32cd0f5f5f372722d4751bf3e7e26388/README.md"},
+      {"id":"overview","label":"Project overview","path":"docs/00-overview.md","symbol":"Design overview","url":"https://github.com/Cedrick-Coto/Aeris/blob/d94d63ba32cd0f5f5f372722d4751bf3e7e26388/docs/00-overview.md"},
+      {"id":"models","label":"Documented data models","path":"docs/03-data-models.md","symbol":"MemoryData; BeliefData","url":"https://github.com/Cedrick-Coto/Aeris/blob/d94d63ba32cd0f5f5f372722d4751bf3e7e26388/docs/03-data-models.md"},
+      {"id":"persistence","label":"Persistence design document","path":"docs/07-persistence.md","symbol":"SQLite/JSON examples; migration, backup, export examples; open decisions","url":"https://github.com/Cedrick-Coto/Aeris/blob/d94d63ba32cd0f5f5f372722d4751bf3e7e26388/docs/07-persistence.md"},
+      {"id":"retrieval","label":"Memory retrieval contract","path":"docs/contracts/MemoryRetrieval.contract.md","symbol":"LinearScan design; strategy interface; RetrievalEvidence; invariants; complexity","url":"https://github.com/Cedrick-Coto/Aeris/blob/d94d63ba32cd0f5f5f372722d4751bf3e7e26388/docs/contracts/MemoryRetrieval.contract.md"},
+      {"id":"scenarios","label":"Memory retrieval validation scenarios","path":"docs/validation-scenarios/3B-memory-retrieval.md","symbol":"S-001 through S-010; specified cases, not executed results","url":"https://github.com/Cedrick-Coto/Aeris/blob/d94d63ba32cd0f5f5f372722d4751bf3e7e26388/docs/validation-scenarios/3B-memory-retrieval.md"},
+      {"id":"engine-project","label":"Engine project file present in source tree","path":"src/Aeris.Engine/Aeris.Engine.csproj","symbol":"Project file; reviewed tree contains no engine C# implementation files","url":"https://github.com/Cedrick-Coto/Aeris/blob/d94d63ba32cd0f5f5f372722d4751bf3e7e26388/src/Aeris.Engine/Aeris.Engine.csproj"},
+      {"id":"metrics","label":"Project metric definitions","path":"METRICS.md","url":"../METRICS.md"},
+      {"id":"record","label":"Project benchmark execution status","path":"results/initial-baselines-status.json","url":"../results/initial-baselines-status.json"},
+      {"id":"fixture","label":"Project benchmark fixture","path":"fixtures/memory-benchmark-v1.json","url":"../fixtures/memory-benchmark-v1.json"},
+      {"id":"atlas","label":"Atlas roster locator attribution","path":"data/memory-systems.json","symbol":"Aeris roster entry; catalog revision 19199a4fc249e89c0793be06f0b166b358089ba0","url":"../data/memory-systems.json"}
+    ],
+    "who_what": [
+      {"text":"GitHub identifies Cedrick-Coto as the public repository owner. The README describes Aeris as a deterministic cognitive simulation engine for a Pokémon world, not a conversational memory service. This assessment is limited to repository documentation and tree state at the pinned revision.","sources":["repo","readme"]}
+    ],
+    "architecture": [
+      {"text":"Documented design: the README separates an ECS simulation from cognition, affect, and narrative. docs/03-data-models.md defines MemoryData with type, description, emotional weight, certainty, importance, simulation timestamp, location and involved-entity references, category, and tags. BeliefData includes confidence, source, times, supporting/contradicting memory IDs, and status. These described data records were not found as runtime types in the reviewed source tree.","sources":["readme","models","engine-project"]},
+      {"text":"The persistence document gives SQLite/JSON configuration and sample migration, backup, restore, and export designs. The only file under src/Aeris.Engine in the reviewed tree is its project file, so those examples do not establish implemented persistence or durability.","sources":["persistence","engine-project"]}
+    ],
+    "behavior": [
+      {"text":"Retrieval (documented contract): a MemoryRetrievalSystem orchestrator reads long-term memory, working-memory context, and affect; a replaceable strategy returns scored memories and activation boosts; the orchestrator is described as loading selections into working memory and recording a separate causal trace. The proposed LinearScan filters forgotten/low-importance entries, applies an effective-importance threshold, scores importance/recency/context overlap/attention, stable-sorts, and applies top-N. Activation-based and embedding-based strategies are marked future. This is a contract description, not observed runtime behavior.","sources":["retrieval","readme"]},
+      {"text":"Write and correction: inspected data-model and retrieval documents do not specify an implemented write API, update/correction history, or stale-value resolution. The behavior is unknown at this revision.","sources":["models","retrieval","engine-project"]},
+      {"text":"Deletion: the retrieval contract says forgotten memories are excluded from candidates. The reviewed documents and source tree do not establish a deletion API, erasure, or lifecycle propagation; deletion behavior is unknown.","sources":["retrieval","persistence","engine-project"]},
+      {"text":"Scope: documented records contain entity/location references, but the inspected retrieval contract defines no tenant/principal authorization boundary. These fields do not establish security isolation.","sources":["models","retrieval"]},
+      {"text":"Provenance and evidence: data-model documentation distinguishes observed, experienced, learned, inferred, and forgotten memories and gives beliefs source and supporting/contradicting memory IDs. The retrieval contract proposes a trace with outcome, factor values, score, and strategy. These are documented structures; implementation, external citations, and claim-level evidence support remain unverified.","sources":["models","retrieval"]}
+    ],
+    "metrics": [
+      {"domain":"Answerable recall and abstention","status":"unmeasured","evidence":"Documented scenarios specify desired relevant recall and empty results; no Aeris runtime responses were captured or adjudicated.","sources":["scenarios","metrics","record"]},
+      {"domain":"Correction accuracy and stale values","status":"unmeasured","evidence":"No implemented correction/history path or post-correction probes were established by this source review.","sources":["models","retrieval","metrics","record"]},
+      {"domain":"Deletion leakage","status":"unmeasured","evidence":"The contract filters Forgotten candidates, but deletion acceptance and post-delete behavior were not established or probed.","sources":["retrieval","scenarios","metrics","record"]},
+      {"domain":"Scope isolation","status":"unmeasured","evidence":"No tenant/principal boundary was found in the inspected memory contract and no cross-scope probes ran.","sources":["models","retrieval","metrics","record"]},
+      {"domain":"Evidence support and citation coverage","status":"unmeasured","evidence":"The contract proposes computational retrieval trace fields, but no generated claims or citations were captured and adjudicated.","sources":["retrieval","metrics","record"]},
+      {"domain":"Retrieval latency and write-to-recall delay","status":"unmeasured","evidence":"The contract gives O(L log L) complexity for its proposed baseline; this is not a runtime measurement. No latency or write-to-recall observations exist.","sources":["retrieval","metrics","record"]},
+      {"domain":"Tokens, cost, and storage","status":"unmeasured","evidence":"Documentation examples do not provide Aeris workload usage, cost, or storage measurements.","sources":["persistence","metrics","fixture","record"]},
+      {"domain":"Latency observability","status":"unknown from inspected sources","evidence":"No runtime instrumentation path was established in the inspected documentation/engine project tree; no latency distribution was recorded.","sources":["retrieval","engine-project","metrics","record"]}
+    ],
+    "limits": [
+      {"text":"This is a documentation and repository-tree review. The README marks memory retrieval in progress and the reviewed engine source directory contains only a project file. Detailed designs and scenarios must not be read as implemented behavior or passing validation.","sources":["readme","engine-project","retrieval","scenarios"]},
+      {"text":"The review does not establish runtime correctness, persistence, correction, deletion completeness, tenant isolation, evidence quality, latency, or production reliability. Unknown means not verified here, not a claim that future work cannot implement the behavior.","sources":["models","persistence","retrieval","engine-project"]}
+    ],
+    "benchmark": [
+      {"text":"Status: Benchmark not run for Aeris. The project execution-status record states no metric values or execution observations were produced; fixture probe counts are planned only. No Aeris workload or test suite was run for this review.","sources":["metrics","record","fixture"]}
+    ]
+  }
+}

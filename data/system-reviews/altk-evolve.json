@@ -1,0 +1,400 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "altk-evolve",
+    "name": "ALTK-Evolve",
+    "repository": "https://github.com/AgentToolkit/altk-evolve",
+    "branch": "main",
+    "revision": "03f83be7480bf0be3f4aa6e868b832486e064718",
+    "reviewed_at": "2026-11-24T20:31:28Z",
+    "review_timezone": "UTC (2026-11-24 20:31:28; PST 12:31:28; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/AgentToolkit/altk-evolve/blob/03f83be7480bf0be3f4aa6e868b832486e064718/README.md","checked_urls":["https://github.com/AgentToolkit/altk-evolve/blob/03f83be7480bf0be3f4aa6e868b832486e064718/README.md","https://github.com/AgentToolkit/altk-evolve/blob/03f83be7480bf0be3f4aa6e868b832486e064718/SECURITY.md","https://github.com/AgentToolkit/altk-evolve/blob/03f83be7480bf0be3f4aa6e868b832486e064718/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "ALTK-Evolve learns reusable guidelines from agent trajectories, stores entities in a selectable backend, and retrieves a task-specific set for later sessions. This is a bounded source review; no runtime or benchmark was run.",
+    "atlas_locator": {
+      "ordinal": 51,
+      "name": "ALTK-Evolve",
+      "slug": "altk-evolve",
+      "listed_repository": "https://github.com/AgentToolkit/altk-evolve",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/altk-evolve.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/AgentToolkit/altk-evolve/blob/03f83be7480bf0be3f4aa6e868b832486e064718/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/AgentToolkit/altk-evolve/blob/03f83be7480bf0be3f4aa6e868b832486e064718/README.md",
+      "https://agenttoolkit.github.io/altk-evolve/"
+    ],
+    "contact_email_note": "No published contact email was found in the official pinned README or official documentation site. The root SECURITY.md and SUPPORT.md paths are absent at the reviewed repository revision.",
+    "sources": [
+      {
+        "id": "repository",
+        "label": "Official repository metadata",
+        "path": "repository",
+        "symbol": "Canonical repository AgentToolkit/altk-evolve; default branch main",
+        "url": "https://github.com/AgentToolkit/altk-evolve"
+      },
+      {
+        "id": "head",
+        "label": "Official main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Current main entry identifies full head 03f83be7480bf0be3f4aa6e868b832486e064718; updated 2026-11-20T18:28:02Z",
+        "url": "https://github.com/AgentToolkit/altk-evolve/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Product overview, interfaces, backend options, scope and telemetry",
+        "url": "https://github.com/AgentToolkit/altk-evolve/blob/03f83be7480bf0be3f4aa6e868b832486e064718/README.md"
+      },
+      {
+        "id": "backend-guide",
+        "label": "Backend configuration guide",
+        "path": "docs/guides/backend-configuration.md",
+        "symbol": "Storage backends, indexes, identity and isolation model",
+        "url": "https://github.com/AgentToolkit/altk-evolve/blob/03f83be7480bf0be3f4aa6e868b832486e064718/docs/guides/backend-configuration.md"
+      },
+      {
+        "id": "entity-model",
+        "label": "Entity schema",
+        "path": "altk_evolve/schema/core.py",
+        "symbol": "Entity, RecordedEntity and Namespace fields",
+        "url": "https://github.com/AgentToolkit/altk-evolve/blob/03f83be7480bf0be3f4aa6e868b832486e064718/altk_evolve/schema/core.py"
+      },
+      {
+        "id": "provenance",
+        "label": "Provenance helpers",
+        "path": "altk_evolve/schema/provenance.py",
+        "symbol": "Identity, source associations, support task IDs and association timestamps",
+        "url": "https://github.com/AgentToolkit/altk-evolve/blob/03f83be7480bf0be3f4aa6e868b832486e064718/altk_evolve/schema/provenance.py"
+      },
+      {
+        "id": "backend-base",
+        "label": "Backend API and writes",
+        "path": "altk_evolve/backend/base.py",
+        "symbol": "Hook-wrapped search/delete, prepared writes, conflict reconciliation and commit",
+        "url": "https://github.com/AgentToolkit/altk-evolve/blob/03f83be7480bf0be3f4aa6e868b832486e064718/altk_evolve/backend/base.py"
+      },
+      {
+        "id": "retrieval",
+        "label": "Guideline selection",
+        "path": "altk_evolve/llm/guidelines/retrieval.py",
+        "symbol": "Support thresholds, core and task-similarity retrieval, deduplication",
+        "url": "https://github.com/AgentToolkit/altk-evolve/blob/03f83be7480bf0be3f4aa6e868b832486e064718/altk_evolve/llm/guidelines/retrieval.py"
+      },
+      {
+        "id": "mcp",
+        "label": "MCP integration",
+        "path": "altk_evolve/frontend/mcp/mcp_server.py",
+        "symbol": "Guideline scope, trajectory writes, entity create/delete and ownership",
+        "url": "https://github.com/AgentToolkit/altk-evolve/blob/03f83be7480bf0be3f4aa6e868b832486e064718/altk_evolve/frontend/mcp/mcp_server.py"
+      },
+      {
+        "id": "client",
+        "label": "Python client",
+        "path": "altk_evolve/frontend/client/evolve_client.py",
+        "symbol": "Backend selection, process_trajectory, update/search/delete/access APIs",
+        "url": "https://github.com/AgentToolkit/altk-evolve/blob/03f83be7480bf0be3f4aa6e868b832486e064718/altk_evolve/frontend/client/evolve_client.py"
+      },
+      {
+        "id": "filesystem",
+        "label": "Filesystem backend",
+        "path": "altk_evolve/backend/filesystem.py",
+        "symbol": "JSON namespace storage, text matching and write coordination",
+        "url": "https://github.com/AgentToolkit/altk-evolve/blob/03f83be7480bf0be3f4aa6e868b832486e064718/altk_evolve/backend/filesystem.py"
+      },
+      {
+        "id": "postgres",
+        "label": "PostgreSQL backend",
+        "path": "altk_evolve/backend/postgres.py",
+        "symbol": "Namespace tables, vector search and transactional writes",
+        "url": "https://github.com/AgentToolkit/altk-evolve/blob/03f83be7480bf0be3f4aa6e868b832486e064718/altk_evolve/backend/postgres.py"
+      },
+      {
+        "id": "milvus",
+        "label": "Milvus backend",
+        "path": "altk_evolve/backend/milvus.py",
+        "symbol": "Vector collection storage and coordination constraints",
+        "url": "https://github.com/AgentToolkit/altk-evolve/blob/03f83be7480bf0be3f4aa6e868b832486e064718/altk_evolve/backend/milvus.py"
+      },
+      {
+        "id": "retention",
+        "label": "Retention engine",
+        "path": "altk_evolve/retention/engine.py",
+        "symbol": "Policy evaluation, deletion, provenance cascade, scan bound and missing access behavior",
+        "url": "https://github.com/AgentToolkit/altk-evolve/blob/03f83be7480bf0be3f4aa6e868b832486e064718/altk_evolve/retention/engine.py"
+      },
+      {
+        "id": "telemetry",
+        "label": "Telemetry instrumentation",
+        "path": "altk_evolve/telemetry.py",
+        "symbol": "Operation histograms/counters, privacy allowlist and OTLP export",
+        "url": "https://github.com/AgentToolkit/altk-evolve/blob/03f83be7480bf0be3f4aa6e868b832486e064718/altk_evolve/telemetry.py"
+      },
+      {
+        "id": "hooks",
+        "label": "Memory hook seam",
+        "path": "altk_evolve/hooks/manager.py",
+        "symbol": "Pre-write/read/delete hooks and policy dispatch",
+        "url": "https://github.com/AgentToolkit/altk-evolve/blob/03f83be7480bf0be3f4aa6e868b832486e064718/altk_evolve/hooks/manager.py"
+      },
+      {
+        "id": "guideline-schema",
+        "label": "Guideline model",
+        "path": "altk_evolve/schema/guidelines.py",
+        "symbol": "Guideline content, trigger, category, support and evidence fields",
+        "url": "https://github.com/AgentToolkit/altk-evolve/blob/03f83be7480bf0be3f4aa6e868b832486e064718/altk_evolve/schema/guidelines.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Proposed recall, correction, deletion, scope, evidence and efficiency metrics",
+        "url": "./METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project status is not_run; no ALTK-Evolve run or observations",
+        "url": "./results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned planned workload; fixture case counts are not results",
+        "url": "./fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "project-site",
+        "label": "Official documentation site",
+        "path": "https://agenttoolkit.github.io/altk-evolve/",
+        "symbol": "Official project overview and documentation; contact email check",
+        "url": "https://agenttoolkit.github.io/altk-evolve/"
+      },
+      {
+        "id": "atlas-attribution",
+        "label": "Curated roster source attribution",
+        "path": "content/systems/altk-evolve.md",
+        "symbol": "Roster locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/altk-evolve.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The README presents Evolve as an open-source toolkit for on-the-job agent learning. Full mode uses an MCP/service integration and pluggable memory backends; Evolve Lite integrates learning and retrieval into supported agent assistants. The code reviewed here is the Python full-mode core and MCP surface.",
+        "sources": [
+          "readme",
+          "client",
+          "repository"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "An entity stores searchable text or structured content, a type and arbitrary metadata; recorded entities add an ID and creation time. A namespace groups the stored entities. Guideline records have content, rationale, category, trigger, implementation steps, support count and optional success/failure evidence.",
+        "sources": [
+          "entity-model",
+          "guideline-schema"
+        ]
+      },
+      {
+        "text": "The client selects filesystem, PostgreSQL or Milvus backends. Filesystem namespaces are JSON files with case-insensitive text matching. PostgreSQL and Milvus support vector-oriented search; the backend guide describes physical namespace separation as a file, table or collection, depending on backend.",
+        "sources": [
+          "client",
+          "filesystem",
+          "backend-guide",
+          "postgres",
+          "milvus"
+        ]
+      },
+      {
+        "text": "Trajectory processing extracts guidelines and persists them through a preparation/commit path. With conflict resolution enabled, a model compares incoming entities to stored candidates and produces ADD, UPDATE, DELETE or NONE decisions; hook policy and backend commit logic apply those decisions. This describes an implemented path, not a guarantee that a model resolves every conflict correctly.",
+        "sources": [
+          "client",
+          "backend-base",
+          "readme"
+        ]
+      },
+      {
+        "text": "Retrieval builds an always-included core from guidelines meeting a support threshold, then adds up to top_k task-relevant candidates. By default, relevance uses embeddings of source task descriptions; candidates similar to core content or already-kept candidates are removed before selection. The filesystem backend uses text matching for entity search and does not provide vector similarity.",
+        "sources": [
+          "retrieval",
+          "readme",
+          "filesystem"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: save_trajectory stores trajectory messages with task/user/session metadata and generates guidelines through the processing path. Direct create_entity supports manual entities, with optional conflict resolution. update_entities prepares reconciliation, runs memory hooks, and commits storage changes; atomic backends verify prepared targets and can retry concurrent-change conflicts.",
+        "sources": [
+          "mcp",
+          "client",
+          "backend-base",
+          "hooks"
+        ]
+      },
+      {
+        "text": "Update: conflict decisions can update an existing entity's content and metadata; metadata patching is also exposed separately. Provenance helpers merge source associations, track supporting versus superseded sources, and timestamp associations. No runtime correction accuracy or stale-value rate was measured.",
+        "sources": [
+          "backend-base",
+          "provenance",
+          "guideline-schema"
+        ]
+      },
+      {
+        "text": "Delete: direct entity deletion is exposed through the client and MCP tool, with ownership checked at the MCP boundary when an entity has an owner. A pre-delete hook may veto. Retention policies can flag or delete by age, disuse, or source deletion; trajectory deletion can cascade to qualifying derived entities. Retention scans at most 100,000 entities by default and warns on a scan-limit hit, so this review does not establish deletion completeness across stores, backups or other copies.",
+        "sources": [
+          "client",
+          "mcp",
+          "backend-base",
+          "retention"
+        ]
+      },
+      {
+        "text": "Scope: a namespace is the primary physical partition. General guideline retrieval accepts user_id and session_id but intentionally does not hard-filter on them; sharing can additionally retrieve public entities from other namespaces. The README documents a separate personal-facts path requiring explicit namespace_id/user_id filtering and rejecting empty explicit scopes. These patterns do not establish authenticated tenant isolation for every API or deployment.",
+        "sources": [
+          "backend-guide",
+          "mcp",
+          "readme"
+        ]
+      },
+      {
+        "text": "Provenance/evidence: source associations can retain conversation/task/user/agent IDs, status and association time. Guideline records may carry an evidence label of success, failure or both, and MCP attribution responses can return source task IDs. These fields support traceability but are not claim-level citations or proof that an answer is supported by its source.",
+        "sources": [
+          "provenance",
+          "guideline-schema",
+          "readme"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency and observability: backend choice trades simple file/text search against vector search and its indexing/coordination requirements. Telemetry defines operation-duration histograms and outcome counters with bounded labels; instrumentation excludes prompts, memory contents, SQL values, exception messages and user/entity IDs from Evolve-owned exports. The README notes bounded asynchronous OTLP export may drop unsent telemetry. No latency, token, cost or storage measurements were collected.",
+        "sources": [
+          "backend-guide",
+          "telemetry",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Guideline retrieval and entity search are implemented, but no ALTK-Evolve outputs were captured and scored against answerable or unsupported cases.",
+        "sources": [
+          "retrieval",
+          "mcp",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Conflict resolution and update paths are visible in code; no correction probes or adjudicated outputs were produced.",
+        "sources": [
+          "backend-base",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Entity and retention delete paths exist, but no acknowledged delete and post-delete probes were run; retention scans have a documented default limit.",
+        "sources": [
+          "mcp",
+          "retention",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Namespaces and scope fields are visible, including intentionally broad guideline retrieval. No cross-scope probes were run.",
+        "sources": [
+          "backend-guide",
+          "mcp",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Provenance and evidence metadata are represented, but no captured answers were adjudicated for claim support or citations.",
+        "sources": [
+          "provenance",
+          "guideline-schema",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Instrumentation exposes operation timing; no system workload or first-recall delay was measured.",
+        "sources": [
+          "telemetry",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost and persistent storage",
+        "status": "unmeasured",
+        "evidence": "No ALTK-Evolve token, provider-cost or storage observations were collected.",
+        "sources": [
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is read-only source inspection at the recorded SHA. It does not establish runtime correctness, quality, security, deployed authorization, backend parity, concurrency behavior, deletion completeness or performance. Optional hooks, model settings and backends may vary by deployment.",
+        "sources": [
+          "head",
+          "backend-base",
+          "hooks",
+          "client"
+        ]
+      },
+      {
+        "text": "The root README reports separate upstream AppWorld and τ²-bench results. They are project-reported results under their described model/configuration protocols, not measurements from this review and not entries in this project's benchmark record.",
+        "sources": [
+          "readme",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "The curated roster source is retained for ordinal/name/slug/repository attribution only. Its descriptions, capability marks and presentation are not assessment evidence.",
+        "sources": [
+          "atlas-attribution"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Status: Benchmark not run for ALTK-Evolve. Project metric definitions are in METRICS.md; the versioned fixture defines planned cases; the execution-status record has status not_run and no ALTK-Evolve run. Planned fixture sizes are not measured denominators, and no ALTK-Evolve system, benchmark workload or tests were run.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ]
+  }
+}

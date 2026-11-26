@@ -1,0 +1,350 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 285,
+    "slug": "headroom",
+    "name": "Headroom",
+    "repository": "https://github.com/headroomlabs-ai/headroom",
+    "branch": "main",
+    "revision": "d2014cb948d27bd9d411b147a6d203363f70b912",
+    "reviewed_at": "2026-11-25T22:36:50Z",
+    "review_timezone": "UTC (2026-11-25 14:36:50 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": "hello@headroomlabs.ai",
+      "source_url": "https://github.com/headroomlabs-ai/headroom/blob/d2014cb948d27bd9d411b147a6d203363f70b912/README.md",
+      "note": "Published in the official README's Headroom for Teams contact section."
+    },
+    "summary": "Headroom is a local-first LLM context compression library, proxy, and agent integration suite. Its optional persistent-memory subsystem adds hierarchical user/session/agent/turn memories, embedding and text retrieval, and project-aware storage. This review describes selected source and documentation, not runtime quality or performance.",
+    "atlas_locator": {
+      "ordinal": 285,
+      "name": "Headroom",
+      "slug": "headroom",
+      "listed_repository": "https://github.com/headroomlabs-ai/headroom",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/headroom.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": "hello@headroomlabs.ai",
+    "contact_email_source_url": "https://github.com/headroomlabs-ai/headroom/blob/d2014cb948d27bd9d411b147a6d203363f70b912/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/headroomlabs-ai/headroom/blob/d2014cb948d27bd9d411b147a6d203363f70b912/README.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official upstream repository metadata",
+        "path": "repository API",
+        "symbol": "canonical repository and default branch main",
+        "url": "https://api.github.com/repos/headroomlabs-ai/headroom"
+      },
+      {
+        "id": "head",
+        "label": "Official current main commit",
+        "path": "commits/main API",
+        "symbol": "full head SHA d2014cb948d27bd9d411b147a6d203363f70b912",
+        "url": "https://api.github.com/repos/headroomlabs-ai/headroom/commits/main"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official repository README",
+        "path": "README.md",
+        "url": "https://github.com/headroomlabs-ai/headroom/blob/d2014cb948d27bd9d411b147a6d203363f70b912/README.md"
+      },
+      {
+        "id": "docs",
+        "label": "Official Persistent Memory guide",
+        "path": "Persistent Memory",
+        "url": "https://docs.headroomlabs.ai/docs/memory"
+      },
+      {
+        "id": "models",
+        "label": "Memory record model and scope fields",
+        "path": "headroom/memory/models.py",
+        "symbol": "Memory, ScopeLevel, temporal and lineage fields",
+        "url": "https://github.com/headroomlabs-ai/headroom/blob/d2014cb948d27bd9d411b147a6d203363f70b912/headroom/memory/models.py"
+      },
+      {
+        "id": "core",
+        "label": "Hierarchical memory operations",
+        "path": "headroom/memory/core.py",
+        "symbol": "HierarchicalMemory add/search/text_search/update/supersede/delete",
+        "url": "https://github.com/headroomlabs-ai/headroom/blob/d2014cb948d27bd9d411b147a6d203363f70b912/headroom/memory/core.py"
+      },
+      {
+        "id": "system",
+        "label": "LLM tool orchestration and backend protocol",
+        "path": "headroom/memory/system.py",
+        "symbol": "MemoryBackend and MemorySystem",
+        "url": "https://github.com/headroomlabs-ai/headroom/blob/d2014cb948d27bd9d411b147a6d203363f70b912/headroom/memory/system.py"
+      },
+      {
+        "id": "router",
+        "label": "Project-aware physical memory storage routing",
+        "path": "headroom/memory/storage_router.py",
+        "symbol": "PROJECT/USER/GLOBAL modes; unresolved-project fallback",
+        "url": "https://github.com/headroomlabs-ai/headroom/blob/d2014cb948d27bd9d411b147a6d203363f70b912/headroom/memory/storage_router.py"
+      },
+      {
+        "id": "local_backend",
+        "label": "Local memory storage backend",
+        "path": "headroom/memory/backends/local.py",
+        "url": "https://github.com/headroomlabs-ai/headroom/blob/d2014cb948d27bd9d411b147a6d203363f70b912/headroom/memory/backends/local.py"
+      },
+      {
+        "id": "ports",
+        "label": "Memory storage, index, embedder and cache interfaces",
+        "path": "headroom/memory/ports.py",
+        "url": "https://github.com/headroomlabs-ai/headroom/blob/d2014cb948d27bd9d411b147a6d203363f70b912/headroom/memory/ports.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions and protocol",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Versioned project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated roster identity, locator and Atlas attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 285",
+        "url": "../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The README presents Headroom as an open-source context-compression library, proxy and coding-agent integration suite; its persistent-memory feature is an optional subsystem rather than the whole product. The official memory guide documents a provider wrapper and direct memory API.",
+        "sources": [
+          "readme",
+          "docs"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The source centers the memory API on HierarchicalMemory, which coordinates a persistent MemoryStore, vector index, text index, embedder, and optional cache. A factory builds these components from MemoryConfig. The guide describes local SQLite records, HNSW vector search and SQLite FTS5, while current LocalBackend source instead names SQLite-vec for vector search and a persistent SQLite graph store. This documentation/source difference is unresolved in this review. Other configured backends and adapters exist, so exact deployment depends on configuration.",
+        "sources": [
+          "core",
+          "ports",
+          "docs",
+          "local_backend"
+        ]
+      },
+      {
+        "text": "A Memory stores content, user_id, optional session_id/agent_id/turn_id, created and validity timestamps, importance, supersession and promotion lineage, access counters, entity references, an optional embedding, and arbitrary metadata. Scope is derived from the most specific populated hierarchy field. The model has no required category or source-citation field; the guide recommends putting conventional categories in metadata.",
+        "sources": [
+          "models",
+          "docs"
+        ]
+      },
+      {
+        "text": "The documented with_memory wrapper intercepts provider calls, injects retrieved memory, asks the model to return an extraction block, stores the extracted material, and removes the block before returning the response. The docs describe this as inline extraction. Memory tools and a separate MemorySystem/backend protocol provide another integration path.",
+        "sources": [
+          "docs",
+          "system"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: HierarchicalMemory.add accepts content and a required user identifier plus optional narrower scopes, importance, entity references, metadata and embedding/bubbling controls. The orchestrator generates an embedding when enabled and updates the persistent store and search indexes. The with_memory route instead documents extraction from the provider response. These are implementation/documentation observations, not evidence that extracted facts are correct.",
+        "sources": [
+          "core",
+          "docs"
+        ]
+      },
+      {
+        "text": "Update and correction: update() edits the existing record and re-indexes changed content; supersede() creates a successor, closes the predecessor's validity interval, and retains the history chain. Searches exclude superseded records by default unless requested. The guide's wrapper can auto-extract memories, but the docs do not define a universal correction policy for contradictory extractions.",
+        "sources": [
+          "core",
+          "models",
+          "docs"
+        ]
+      },
+      {
+        "text": "Delete: delete(memory_id) removes the record from the store and removes its vector and text index entries, then invalidates cache state. clear_scope removes records for a scope. This describes the inspected local orchestration path; complete erasure from backups, external backends, replicas, or exported copies was not established.",
+        "sources": [
+          "core",
+          "ports",
+          "docs"
+        ]
+      },
+      {
+        "text": "Retrieval: search() embeds a query and requests vector-similarity matches with user/session/agent, scope-level, similarity, and superseded-state filters. text_search() uses BM25 through the text index; query() exposes store filters. The guide documents automatic retrieval and injection into prompts. The source review does not measure recall or answer quality.",
+        "sources": [
+          "core",
+          "ports",
+          "docs"
+        ]
+      },
+      {
+        "text": "Scope: Memory carries user, session, agent and turn identifiers, and the main API filters by them. In proxy mode the router defaults to a separate SQLite database per resolved project; it recognizes explicit project headers, CLI root overrides and supported client working-directory context. If project scope cannot be resolved, the documented default is fail-closed with no memory; USER and GLOBAL modes and explicit global fallback can intentionally share data. No isolation probe was run.",
+        "sources": [
+          "models",
+          "core",
+          "router",
+          "docs"
+        ]
+      },
+      {
+        "text": "Evidence and provenance: the inspected Memory model retains scope, timestamps, validity, lineage, entity references and free-form metadata, but no required source passage or citation record. Supersession history helps inspect changes, but by itself does not show which source supports a memory or a generated claim. The guide's extraction/injection behavior is not a citation guarantee.",
+        "sources": [
+          "models",
+          "core",
+          "docs"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: the source has distinct persistent, vector, text and cache layers, filters and top-k bounds, and access counters/timestamps. The memory guide gives storage and latency figures and the README discusses token savings, but these are project-published claims, not observations collected in this review. The documented memory stats endpoint currently exposes a total count; detailed operational tracing and per-category metrics were not established from the inspected sources.",
+        "sources": [
+          "core",
+          "models",
+          "docs",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "Search and automatic injection exist in source/docs, but no fixed answerable or unanswerable workload was executed or adjudicated.",
+        "sources": [
+          "core",
+          "docs",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Update and temporal supersession paths are implemented; no correction fixture or stale-value probes were run.",
+        "sources": [
+          "core",
+          "models",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leak rate",
+        "status": "unmeasured",
+        "evidence": "The inspected delete path removes store/index/cache entries, but there were no acknowledged deletion requests followed by probes and no review of every backup or external copy.",
+        "sources": [
+          "core",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation leak rate",
+        "status": "unmeasured",
+        "evidence": "Hierarchical filters and a fail-closed per-project proxy mode are visible in source/docs; no cross-user, cross-agent, or cross-project isolation workload was run.",
+        "sources": [
+          "core",
+          "router",
+          "docs",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "The memory record does not require source citations and no generated claims or citations were captured and adjudicated.",
+        "sources": [
+          "models",
+          "docs",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The guide publishes performance figures, but this review measured no operation latency or delay from acknowledged write to correct recall.",
+        "sources": [
+          "docs",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "The README and guide discuss token savings and configured embedding choices; no common fixture, provider usage or billable operation was collected.",
+        "sources": [
+          "readme",
+          "docs",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Persistent storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Storage components are identifiable from source/docs, but no corpus size, index size or bytes-per-accepted-item was measured.",
+        "sources": [
+          "local_backend",
+          "ports",
+          "docs",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded read-only inspection of the official README and memory guide plus selected memory model, operation, backend protocol, local backend, and project router source at the verified commit. Headroom, its tests and the benchmark fixture were not run. Runtime quality, security, service reliability, actual latency/cost, and completeness of deletion remain unknown.",
+        "sources": [
+          "readme",
+          "docs",
+          "models",
+          "core",
+          "system",
+          "router"
+        ]
+      },
+      {
+        "text": "The listed locator is the canonical public repository according to official repository metadata, with default branch main and current head recorded above. The roster's Atlas report URL and revision are retained only as curated identity/locator attribution; Atlas descriptions and assessment claims were not used as evidence.",
+        "sources": [
+          "repo",
+          "head",
+          "roster"
+        ]
+      },
+      {
+        "text": "Backend adapters and proxy storage modes differ. This review does not establish that every adapter implements identical update, deletion, scope, embedding, or provenance semantics.",
+        "sources": [
+          "system",
+          "ports",
+          "router",
+          "local_backend"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is not_run. No Headroom runtime, tests, or benchmark workload was executed. Project metric definitions, fixture counts, and the execution-status file are protocol/status material, not Headroom measurements.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

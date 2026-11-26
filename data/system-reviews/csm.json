@@ -1,0 +1,369 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "csm",
+    "name": "CSM",
+    "ordinal": 173,
+    "repository": "https://github.com/NovasPlace/CSM",
+    "listed_repository": "https://github.com/NovasPlace/CSM",
+    "branch": "master",
+    "revision": "9c7cfb22e525eb9210c3048cb0d44544b09b95d0",
+    "reviewed_at": "2026-11-25T10:14:30Z",
+    "review_timezone": "UTC (2026-11-25 02:14:30 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "CSM is a local and self-hosted memory and operational-continuity runtime for coding agents. Its layered system combines durable memory, project event history, re-entry context, context controls, and governance, with PostgreSQL for the complete feature path and a narrower SQLite core. This bounded review describes official documentation and selected source at the verified master head; no runtime, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 173,
+      "name": "CSM",
+      "slug": "csm",
+      "listed_repository": "https://github.com/NovasPlace/CSM",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/csm.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/NovasPlace/CSM/blob/9c7cfb22e525eb9210c3048cb0d44544b09b95d0/README.md",
+      "checked_urls": [
+        "https://github.com/NovasPlace/CSM/blob/9c7cfb22e525eb9210c3048cb0d44544b09b95d0/README.md",
+        "https://github.com/NovasPlace/CSM/blob/9c7cfb22e525eb9210c3048cb0d44544b09b95d0/SECURITY.md"
+      ],
+      "note": "No contact email was published in the checked official README or SECURITY.md. The security policy directs vulnerability reports to GitHub private vulnerability reporting when available."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/NovasPlace/CSM/blob/9c7cfb22e525eb9210c3048cb0d44544b09b95d0/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/NovasPlace/CSM/blob/9c7cfb22e525eb9210c3048cb0d44544b09b95d0/README.md",
+      "https://github.com/NovasPlace/CSM/blob/9c7cfb22e525eb9210c3048cb0d44544b09b95d0/SECURITY.md"
+    ],
+    "contact_email_note": "No email was found in the official pinned README or SECURITY.md; the checked README URL is the contact source URL. No profile or third-party source was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[172], ordinal 173: CSM, slug csm, explicit listed repository locator",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas attribution only",
+        "path": "content/systems/csm.md",
+        "symbol": "Curated identity and locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/csm.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Public NovasPlace/CSM repository",
+        "url": "https://github.com/NovasPlace/CSM"
+      },
+      {
+        "id": "branches",
+        "label": "Official repository branches page",
+        "path": "branches",
+        "symbol": "GitHub labels master as the default branch",
+        "url": "https://github.com/NovasPlace/CSM/branches"
+      },
+      {
+        "id": "history",
+        "label": "Official master commit feed",
+        "path": "commits/master.atom",
+        "symbol": "Latest master feed entry is 9c7cfb22e525eb9210c3048cb0d44544b09b95d0 updated 2026-09-18T00:21:00Z",
+        "url": "https://github.com/NovasPlace/CSM/commits/master.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified current head commit",
+        "path": "commit/9c7cfb22e525eb9210c3048cb0d44544b09b95d0",
+        "symbol": "Full current master head verified from official commit page and feed",
+        "url": "https://github.com/NovasPlace/CSM/commit/9c7cfb22e525eb9210c3048cb0d44544b09b95d0"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "System components, storage modes, retrieval, integrations, deployment limits and configuration",
+        "url": "https://github.com/NovasPlace/CSM/blob/9c7cfb22e525eb9210c3048cb0d44544b09b95d0/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Product architecture",
+        "path": "docs/PRODUCT_ARCHITECTURE.md",
+        "symbol": "Runtime layers, write/read paths, provider boundaries, re-entry and governance",
+        "url": "https://github.com/NovasPlace/CSM/blob/9c7cfb22e525eb9210c3048cb0d44544b09b95d0/docs/PRODUCT_ARCHITECTURE.md"
+      },
+      {
+        "id": "privacy",
+        "label": "Data privacy and lifecycle documentation",
+        "path": "docs/DATA_PRIVACY_AND_LIFECYCLE.md",
+        "symbol": "Capture and redaction boundaries, project isolation, cleanup, deletion, exports and operator limits",
+        "url": "https://github.com/NovasPlace/CSM/blob/9c7cfb22e525eb9210c3048cb0d44544b09b95d0/docs/DATA_PRIVACY_AND_LIFECYCLE.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Security reporting and documented operational boundaries; no published email",
+        "url": "https://github.com/NovasPlace/CSM/blob/9c7cfb22e525eb9210c3048cb0d44544b09b95d0/SECURITY.md"
+      },
+      {
+        "id": "manager",
+        "label": "Memory manager implementation",
+        "path": "src/memory-manager-base.ts",
+        "symbol": "Memory persistence, provenance defaults, project-filtered operations and recall telemetry",
+        "url": "https://github.com/NovasPlace/CSM/blob/9c7cfb22e525eb9210c3048cb0d44544b09b95d0/src/memory-manager-base.ts"
+      },
+      {
+        "id": "search",
+        "label": "Hybrid search implementation",
+        "path": "src/hybrid-search.ts",
+        "symbol": "Parallel vector, text and entity candidate retrieval, rank fusion, recency scoring and deduplication",
+        "url": "https://github.com/NovasPlace/CSM/blob/9c7cfb22e525eb9210c3048cb0d44544b09b95d0/src/hybrid-search.ts"
+      },
+      {
+        "id": "merger",
+        "label": "Exact duplicate merge implementation",
+        "path": "src/merge-tool.ts",
+        "symbol": "Exact normalized-content/type duplicate grouping, supersession and merge records",
+        "url": "https://github.com/NovasPlace/CSM/blob/9c7cfb22e525eb9210c3048cb0d44544b09b95d0/src/merge-tool.ts"
+      },
+      {
+        "id": "provenance",
+        "label": "Memory provenance audit implementation",
+        "path": "src/memory-provenance-audit.ts",
+        "symbol": "Required provenance fields and read-only gap counts for all and active memories",
+        "url": "https://github.com/NovasPlace/CSM/blob/9c7cfb22e525eb9210c3048cb0d44544b09b95d0/src/memory-provenance-audit.ts"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Workload specification only; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Execution-status record; no CSM measurement is reported",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "CSM (Cross-Session Memory) is a source-first local/self-hosted agent memory and continuity runtime. Its documented surfaces span durable memory, AgentBook project activity, fresh-session re-entry, context management, Living State and governance.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      },
+      {
+        "text": "GitHub identifies master as the default branch. The official master Atom feed and full commit page identify 9c7cfb22e525eb9210c3048cb0d44544b09b95d0 as its current head; the feed gives the commit time as 2026-09-18T00:21:00Z. Review time was 2026-11-25T10:14:30Z (UTC; 2026-11-25 02:14:30 PST, America/Los_Angeles).",
+        "sources": [
+          "repo",
+          "branches",
+          "history",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The documented runtime is layered: host integration and provider-aware tool registration sit above storage, durable memory, AgentBook, re-entry, Living State, context control, work continuity and governance. PostgreSQL is the complete feature path; SQLite provides a local core and removes unsupported PostgreSQL-only tools at registration.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Durable memory handles saving and classification, text/vector retrieval, metadata filters, relationship traversal, lessons and transcript-derived records, compaction, embedding backfill, duplicate handling and maintenance. AgentBook separately stores append-only operational events and derives summaries, current state and a Markdown front page for project resumption.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      },
+      {
+        "text": "At the memory layer, the manager persists typed memory records with metadata and embeddings and can create graph links; indexed search uses vector, full-text and entity candidates, then recency/weight scoring, rank fusion and content deduplication. The product architecture describes provider-specific availability rather than full PostgreSQL/SQLite parity.",
+        "sources": [
+          "manager",
+          "search",
+          "architecture"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Writes may arrive through host hooks or explicit tools. The architecture describes normalization and configured redaction, metadata/provenance construction, durable persistence, then embedding and relationship work where supported. The privacy document says automatic conversation and full-transcript capture default to enabled, so operators need to review capture settings before handling sensitive content.",
+        "sources": [
+          "architecture",
+          "manager",
+          "privacy"
+        ]
+      },
+      {
+        "text": "Memory metadata is completed with source_kind, evidence_strength, source_session_id, source_agent_id, source_model_id and source_surface fields; a missing model identity is marked unknown. The read-only provenance audit counts incomplete fields and unknown/default model IDs across all and active rows.",
+        "sources": [
+          "manager",
+          "provenance",
+          "head"
+        ]
+      },
+      {
+        "text": "Ordinary memory records can be updated through write/manage operations. The merge implementation groups active records with matching normalized content and memory type, marks duplicates superseded, and records a merge row; this is a non-destructive duplicate merge path rather than a general immutable edit history.",
+        "sources": [
+          "manager",
+          "merger"
+        ]
+      },
+      {
+        "text": "Direct deletion requires both memory ID and active project and hard-deletes the database record with dependent rows covered by foreign-key cascades. Retention cleanup is explicit and preview-first, project-bound and capped per application. These database operations do not erase copies in generated documents, exports, logs, snapshots, filesystem backups or third-party backups.",
+        "sources": [
+          "privacy",
+          "manager"
+        ]
+      },
+      {
+        "text": "Hybrid recall launches vector, full-text and entity candidate retrieval in parallel, applies configured weights and recency scoring, deduplicates content and returns a bounded result list. The README documents vector, text, entity, type, tag, importance and relationship signals with text-only/vector-only fallback paths.",
+        "sources": [
+          "search",
+          "readme",
+          "manager"
+        ]
+      },
+      {
+        "text": "Memory operations are project-scoped in the documented host-facing paths: OpenCode binds its memory tools to the directory that registered the plugin, and Codex MCP operations require an explicit project identifier. A project search that finds no rows may retry against legacy rows with null project_id, but not another named project. Project identifiers are not authentication or hostile multi-tenant authorization; separate trust domains require separate databases and credentials.",
+        "sources": [
+          "privacy",
+          "security"
+        ]
+      },
+      {
+        "text": "Saved provenance can identify source kind, evidence strength, source session, agent, model and surface; CSM also documents evidence distinctions, source attribution and governance reports. Provenance completeness is audited, but evidence metadata does not make stored text safe or prove that a generated answer is supported.",
+        "sources": [
+          "readme",
+          "provenance",
+          "security"
+        ]
+      },
+      {
+        "text": "The implementation has source-visible efficiency and operational surfaces, including parallel retrieval lanes, bounded results, provider-aware tool registration, recall telemetry and provenance-gap reports. These are implementation/documentation observations; this review collected no runtime latency, token, cost or storage measurements.",
+        "sources": [
+          "search",
+          "manager",
+          "provenance",
+          "metrics"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "All project benchmark domains remain unmeasured for CSM because the system and benchmark workloads were not run. The fixture and METRICS.md define protocol, not CSM outcomes.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The documented provider boundary is material: PostgreSQL supports the complete stack, while SQLite is a deliberately narrower core. Tool availability and features such as vector backfill, advanced governance, Living State analysis and context/checkpoint workflows differ by provider.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Project scoping is local data partitioning, not an identity or tenant authorization layer. Direct database credentials, SQLite filesystem access and unrestricted programmatic APIs have operator-wide reach; legacy null-project rows are migration data rather than a tenant boundary.",
+        "sources": [
+          "privacy",
+          "security"
+        ]
+      },
+      {
+        "text": "Redaction covers supported capture and storage boundaries but is not retroactive, cannot find every sensitive value and does not cover every field with the same end-to-end proof. CSM does not provide application-level field encryption, and deletion does not remove all downstream copies.",
+        "sources": [
+          "privacy",
+          "security"
+        ]
+      },
+      {
+        "text": "This is a bounded review of the README, product architecture, privacy/security documentation, memory manager, hybrid search, duplicate merger and provenance audit. It does not establish behavior for every tool, host, provider, migration, database query or deployment.",
+        "sources": [
+          "readme",
+          "architecture",
+          "privacy",
+          "manager",
+          "search",
+          "merger",
+          "provenance"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "CSM, its tests and benchmark workloads were not run. The project fixture is protocol material only; no runtime measurements were collected.",
+      "metrics": [
+        {
+          "domain": "Answerable retrieval and abstention",
+          "status": "unmeasured",
+          "note": "No answerable/unanswerable scored probes were run."
+        },
+        {
+          "domain": "Correction accuracy and stale-value rate",
+          "status": "unmeasured",
+          "note": "No correction workload or post-correction probes were run."
+        },
+        {
+          "domain": "Deletion leakage",
+          "status": "unmeasured",
+          "note": "No post-deletion probes or backup/export inspection was run."
+        },
+        {
+          "domain": "Scope isolation",
+          "status": "unmeasured",
+          "note": "No cross-project leakage workload was run."
+        },
+        {
+          "domain": "Evidence support and citation coverage",
+          "status": "unmeasured",
+          "note": "No generated claim/citation scoring was run."
+        },
+        {
+          "domain": "Retrieval latency",
+          "status": "unmeasured",
+          "note": "No timing samples were collected."
+        },
+        {
+          "domain": "Write-to-recall delay",
+          "status": "unmeasured",
+          "note": "No timed write/recall probes were run."
+        },
+        {
+          "domain": "Tokens and cost",
+          "status": "unmeasured",
+          "note": "No runtime usage or charges were collected."
+        },
+        {
+          "domain": "Storage efficiency",
+          "status": "unmeasured",
+          "note": "No corpus-attributed storage size was collected."
+        }
+      ],
+      "sources": [
+        "metrics",
+        "fixture",
+        "status"
+      ]
+    }
+  }
+}

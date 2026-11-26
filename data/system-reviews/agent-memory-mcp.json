@@ -1,0 +1,362 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "agent-memory-mcp",
+    "name": "agent-memory-mcp",
+    "repository": "https://github.com/ipiton/agent-memory-mcp",
+    "branch": "main",
+    "revision": "1794edb14f727c8120eae11d1f30468cfdbf7d20",
+    "reviewed_at": "2026-11-24T18:40:37Z",
+    "review_timezone": "UTC (2026-11-24 10:40:37 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/ipiton/agent-memory-mcp/blob/1794edb14f727c8120eae11d1f30468cfdbf7d20/README.md","checked_urls":["https://github.com/ipiton/agent-memory-mcp/blob/1794edb14f727c8120eae11d1f30468cfdbf7d20/README.md","https://github.com/ipiton/agent-memory-mcp/blob/1794edb14f727c8120eae11d1f30468cfdbf7d20/SECURITY.md","https://github.com/ipiton/agent-memory-mcp/blob/1794edb14f727c8120eae11d1f30468cfdbf7d20/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "A Go MCP server and CLI combining persistent SQLite memory, project-document search, and stewardship tools. This review describes inspected code and official documentation, not measured quality.",
+    "atlas_locator": {
+      "ordinal": 14,
+      "name": "agent-memory-mcp",
+      "slug": "agent-memory-mcp",
+      "listed_repository": "https://github.com/ipiton/agent-memory-mcp",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agent-memory-mcp.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/ipiton/agent-memory-mcp/blob/1794edb14f727c8120eae11d1f30468cfdbf7d20/docs/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/ipiton/agent-memory-mcp/blob/1794edb14f727c8120eae11d1f30468cfdbf7d20/docs/SECURITY.md",
+      "https://github.com/ipiton/agent-memory-mcp/blob/1794edb14f727c8120eae11d1f30468cfdbf7d20/docs/CONTRIBUTING.md",
+      "https://github.com/ipiton/agent-memory-mcp/blob/1794edb14f727c8120eae11d1f30468cfdbf7d20/README.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Current canonical public GitHub repository",
+        "path": "repository",
+        "symbol": "canonical repository and default branch main",
+        "url": "https://github.com/ipiton/agent-memory-mcp"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed main head patch",
+        "path": "commit patch",
+        "symbol": "full SHA 1794edb14f727c8120eae11d1f30468cfdbf7d20",
+        "url": "https://github.com/ipiton/agent-memory-mcp/commit/1794edb14f727c8120eae11d1f30468cfdbf7d20.patch"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "url": "https://github.com/ipiton/agent-memory-mcp/blob/1794edb14f727c8120eae11d1f30468cfdbf7d20/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Architecture guide",
+        "path": "docs/ARCHITECTURE.md",
+        "url": "https://github.com/ipiton/agent-memory-mcp/blob/1794edb14f727c8120eae11d1f30468cfdbf7d20/docs/ARCHITECTURE.md"
+      },
+      {
+        "id": "installation",
+        "label": "Installation and deployment guide",
+        "path": "docs/INSTALLATION.md",
+        "url": "https://github.com/ipiton/agent-memory-mcp/blob/1794edb14f727c8120eae11d1f30468cfdbf7d20/docs/INSTALLATION.md"
+      },
+      {
+        "id": "tools",
+        "label": "MCP tool reference",
+        "path": "docs/MCP_TOOLS.md",
+        "url": "https://github.com/ipiton/agent-memory-mcp/blob/1794edb14f727c8120eae11d1f30468cfdbf7d20/docs/MCP_TOOLS.md"
+      },
+      {
+        "id": "security",
+        "label": "Security policy and deployment boundaries",
+        "path": "docs/SECURITY.md",
+        "url": "https://github.com/ipiton/agent-memory-mcp/blob/1794edb14f727c8120eae11d1f30468cfdbf7d20/docs/SECURITY.md"
+      },
+      {
+        "id": "stewardship",
+        "label": "Knowledge stewardship guide",
+        "path": "docs/STEWARDSHIP.md",
+        "url": "https://github.com/ipiton/agent-memory-mcp/blob/1794edb14f727c8120eae11d1f30468cfdbf7d20/docs/STEWARDSHIP.md"
+      },
+      {
+        "id": "contributing",
+        "label": "Contributor guide",
+        "path": "docs/CONTRIBUTING.md",
+        "url": "https://github.com/ipiton/agent-memory-mcp/blob/1794edb14f727c8120eae11d1f30468cfdbf7d20/docs/CONTRIBUTING.md"
+      },
+      {
+        "id": "memory",
+        "label": "Memory model and fields",
+        "path": "internal/memory/memory.go",
+        "symbol": "Memory and Type",
+        "url": "https://github.com/ipiton/agent-memory-mcp/blob/1794edb14f727c8120eae11d1f30468cfdbf7d20/internal/memory/memory.go"
+      },
+      {
+        "id": "write",
+        "label": "Memory write and update code",
+        "path": "internal/memory/write.go",
+        "symbol": "Store and Update",
+        "url": "https://github.com/ipiton/agent-memory-mcp/blob/1794edb14f727c8120eae11d1f30468cfdbf7d20/internal/memory/write.go"
+      },
+      {
+        "id": "sql",
+        "label": "SQLite row persistence",
+        "path": "internal/memory/store_sql.go",
+        "symbol": "insertMemoryRow, updateMemoryRow, verifyMemoryPersisted",
+        "url": "https://github.com/ipiton/agent-memory-mcp/blob/1794edb14f727c8120eae11d1f30468cfdbf7d20/internal/memory/store_sql.go"
+      },
+      {
+        "id": "read",
+        "label": "Memory reads and context snapshots",
+        "path": "internal/memory/read.go",
+        "symbol": "contextSnapshot and contextFromFile",
+        "url": "https://github.com/ipiton/agent-memory-mcp/blob/1794edb14f727c8120eae11d1f30468cfdbf7d20/internal/memory/read.go"
+      },
+      {
+        "id": "trust",
+        "label": "Trust metadata derivation",
+        "path": "internal/memory/trust.go",
+        "symbol": "deriveTrust",
+        "url": "https://github.com/ipiton/agent-memory-mcp/blob/1794edb14f727c8120eae11d1f30468cfdbf7d20/internal/memory/trust.go"
+      },
+      {
+        "id": "revisions",
+        "label": "Memory revision history",
+        "path": "internal/memory/revisions.go",
+        "symbol": "Revision and insertRevision",
+        "url": "https://github.com/ipiton/agent-memory-mcp/blob/1794edb14f727c8120eae11d1f30468cfdbf7d20/internal/memory/revisions.go"
+      },
+      {
+        "id": "temporal",
+        "label": "As-of retrieval and temporal validity",
+        "path": "internal/memory/temporal.go",
+        "symbol": "RecallAsOf and isValidAt",
+        "url": "https://github.com/ipiton/agent-memory-mcp/blob/1794edb14f727c8120eae11d1f30468cfdbf7d20/internal/memory/temporal.go"
+      },
+      {
+        "id": "stats",
+        "label": "Sampled JSONL usage statistics",
+        "path": "internal/stats/stats.go",
+        "symbol": "Event and Logger",
+        "url": "https://github.com/ipiton/agent-memory-mcp/blob/1794edb14f727c8120eae11d1f30468cfdbf7d20/internal/stats/stats.go"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated locator and attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 14 and Atlas source revision",
+        "url": "../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The repository describes agent-memory-mcp as a Go MCP server and CLI for persistent agent memory and project-document search; the implementation has separate memory, RAG, file-access and stewardship components.",
+        "sources": [
+          "repo",
+          "readme",
+          "architecture",
+          "contributing"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Memory types are episodic, semantic, procedural and working. SQLite rows carry content, title, tags, context, importance, metadata, embedding/model identity, timestamps, access counters and temporal/supersession fields; the store also maintains an in-process cache.",
+        "sources": [
+          "memory",
+          "sql",
+          "read"
+        ]
+      },
+      {
+        "text": "The architecture guide separates memory storage, a SQLite-backed RAG document index, protocol tools, allowlisted file access and stewardship. Embedding model identity is retained; changing models requires reindexing and re-embedding.",
+        "sources": [
+          "architecture",
+          "installation"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Store validates input, rejects provider tokens and redacts credential-shaped content, computes optional embeddings before the write lock, inserts and reads back the SQLite row, updates cache and may asynchronously extract triples. Update also embeds outside the write lock and may continue without a vector if embedding fails.",
+        "sources": [
+          "write",
+          "sql"
+        ]
+      },
+      {
+        "text": "Revision code records prior content and title transactionally. Documentation exposes mark_outdated with temporal validity and supersession; RecallAsOf filters by validity and can return historical revision text. These are source observations, not measured correction accuracy.",
+        "sources": [
+          "revisions",
+          "temporal",
+          "tools"
+        ]
+      },
+      {
+        "text": "The official tool guide exposes delete_memory by ID. The bounded review did not establish physical deletion across SQLite revisions, vector indexes, cache and derived state, so deletion completeness is unknown.",
+        "sources": [
+          "tools",
+          "write",
+          "sql"
+        ]
+      },
+      {
+        "text": "The tool guide documents semantic/text recall with optional filters and trust-aware ranking, plus separate hybrid document search. Context is a supported filter; the code has context snapshots and a pre-cache-load database query. These interfaces do not establish recall quality or calibrated abstention.",
+        "sources": [
+          "tools",
+          "read"
+        ]
+      },
+      {
+        "text": "The local install guide describes a per-project state directory. Shared HTTP mode documents bearer-token and host/origin checks; repository file tools are constrained to MCP_ROOT and allowlisted paths. Context filtering is not itself an authenticated tenant boundary; deployment isolation was not exercised.",
+        "sources": [
+          "installation",
+          "security",
+          "memory"
+        ]
+      },
+      {
+        "text": "Trust metadata derives layer, source type, confidence, owner and freshness from memory metadata, lifecycle, tags and timestamps. Stewardship docs describe verification and source drift checks; these signals do not prove a source currently supports a memory.",
+        "sources": [
+          "trust",
+          "stewardship",
+          "tools"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Retrieval paths exist; no answerable probes or abstention adjudication were run.",
+        "sources": [
+          "tools",
+          "read",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Revision history and temporal supersession exist; no correction probes were run.",
+        "sources": [
+          "revisions",
+          "temporal",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "delete_memory is documented; deletion completeness and post-delete leakage were not probed.",
+        "sources": [
+          "tools",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Local and shared deployment controls are documented; no cross-scope probes were run.",
+        "sources": [
+          "installation",
+          "security",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Trust and stewardship mechanisms exist; claim-to-source support was not adjudicated.",
+        "sources": [
+          "trust",
+          "stewardship",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No latency distribution or scheduled post-write recall probes were collected.",
+        "sources": [
+          "stats",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No workload token/cost totals or corpus-attributable storage measurements were collected.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code",
+        "evidence": "Embedding is computed outside the write lock; cache/context snapshots are used; sampled JSONL events include duration, outcome, tool/method and query/request limits. These are implementation details, not measurements.",
+        "sources": [
+          "write",
+          "read",
+          "stats"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded read-only review covered selected source and official documentation at the verified SHA. The system, tests and benchmarks were not run. Exact delete semantics, deployed tenant authorization, claim-support quality and concurrent runtime behavior remain unverified.",
+        "sources": [
+          "write",
+          "security",
+          "tools"
+        ]
+      },
+      {
+        "text": "Unknown here means not established by the selected sources and inspection; it does not claim that a behavior is absent.",
+        "sources": [
+          "architecture",
+          "security",
+          "tools"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No agent-memory-mcp execution, test suite, or workload was run. Project metrics, fixture and status are protocol artifacts, not system results.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

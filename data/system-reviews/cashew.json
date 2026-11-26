@@ -1,0 +1,347 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 112,
+    "slug": "cashew",
+    "name": "Cashew",
+    "repository": "https://github.com/rajkripal/cashew",
+    "listed_repository": "https://github.com/rajkripal/cashew",
+    "branch": "main",
+    "revision": "1bb7ae6549a9814e58c866ca18f70d760e9bf493",
+    "reviewed_at": "2026-11-25T07:41:37Z",
+    "review_timezone": "UTC (2026-11-24 23:41:37 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Cashew is a local persistent thought graph for agent memory. Typed thought nodes and derivation edges are stored in SQLite; retrieval combines vector seeding with a bounded graph walk, while extraction and consolidation use model-assisted processing. This is a source-based review, not a runtime or benchmark evaluation.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cashew.md"
+    },
+    "contact": {
+      "email": "rajkripal.danday@gmail.com",
+      "source_url": "https://github.com/rajkripal/cashew/blob/1bb7ae6549a9814e58c866ca18f70d760e9bf493/SECURITY.md",
+      "note": "The pinned official security policy publishes this email for private security reports."
+    },
+    "contact_email": "rajkripal.danday@gmail.com",
+    "contact_checked_sources": [
+      "https://github.com/rajkripal/cashew/blob/1bb7ae6549a9814e58c866ca18f70d760e9bf493/SECURITY.md",
+      "https://github.com/rajkripal/cashew/blob/1bb7ae6549a9814e58c866ca18f70d760e9bf493/README.md"
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[111], position 112; name, slug, listed repository and Atlas attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas attribution only",
+        "path": "content/systems/cashew.md",
+        "symbol": "Roster source URL pinned at Atlas revision 19199a4fc249e89c0793be06f0b166b358089ba0",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cashew.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "",
+        "symbol": "Canonical rajkripal/cashew repository; main is the default branch",
+        "url": "https://github.com/rajkripal/cashew"
+      },
+      {
+        "id": "head",
+        "label": "Official GitHub API current main head",
+        "path": "",
+        "symbol": "Full current main head 1bb7ae6549a9814e58c866ca18f70d760e9bf493; commit timestamp 2026-11-10T09:50:51Z",
+        "url": "https://api.github.com/repos/rajkripal/cashew/commits/main"
+      },
+      {
+        "id": "revision",
+        "label": "Reviewed upstream head",
+        "path": "",
+        "symbol": "Reviewed full commit SHA 1bb7ae6549a9814e58c866ca18f70d760e9bf493",
+        "url": "https://github.com/rajkripal/cashew/commit/1bb7ae6549a9814e58c866ca18f70d760e9bf493"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product overview, ingestion, retrieval architecture, local embeddings, scale note, daemon and contact check",
+        "url": "https://github.com/rajkripal/cashew/blob/1bb7ae6549a9814e58c866ca18f70d760e9bf493/README.md"
+      },
+      {
+        "id": "design",
+        "label": "Pinned design document",
+        "path": "DESIGN.md",
+        "symbol": "Schema, data model, retrieval, extraction, sleep/decay pipeline, stated limitations and scaling",
+        "url": "https://github.com/rajkripal/cashew/blob/1bb7ae6549a9814e58c866ca18f70d760e9bf493/DESIGN.md"
+      },
+      {
+        "id": "db",
+        "label": "Database schema and access helper",
+        "path": "core/db.py",
+        "symbol": "SQLite graph tables, schema and connection management",
+        "url": "https://github.com/rajkripal/cashew/blob/1bb7ae6549a9814e58c866ca18f70d760e9bf493/core/db.py"
+      },
+      {
+        "id": "retrieval",
+        "label": "Retrieval implementation",
+        "path": "core/retrieval.py",
+        "symbol": "Vector-seeded retrieval, domain/tag filters, decayed-node exclusion, graph paths and result shape",
+        "url": "https://github.com/rajkripal/cashew/blob/1bb7ae6549a9814e58c866ca18f70d760e9bf493/core/retrieval.py"
+      },
+      {
+        "id": "extractors",
+        "label": "Extractor implementation",
+        "path": "core/extractors.py",
+        "symbol": "Official ingestion and extraction paths",
+        "url": "https://github.com/rajkripal/cashew/blob/1bb7ae6549a9814e58c866ca18f70d760e9bf493/core/extractors.py"
+      },
+      {
+        "id": "sleep",
+        "label": "Sleep/consolidation implementation",
+        "path": "core/sleep.py",
+        "symbol": "Cross-linking, deduplication, decay, promotion and capped work",
+        "url": "https://github.com/rajkripal/cashew/blob/1bb7ae6549a9814e58c866ca18f70d760e9bf493/core/sleep.py"
+      },
+      {
+        "id": "decay",
+        "label": "Decay implementation",
+        "path": "core/decay.py",
+        "symbol": "Fitness-based node decay behavior",
+        "url": "https://github.com/rajkripal/cashew/blob/1bb7ae6549a9814e58c866ca18f70d760e9bf493/core/decay.py"
+      },
+      {
+        "id": "audit",
+        "label": "Decay audit implementation",
+        "path": "core/decay_audit.py",
+        "symbol": "Decay transition audit snapshots",
+        "url": "https://github.com/rajkripal/cashew/blob/1bb7ae6549a9814e58c866ca18f70d760e9bf493/core/decay_audit.py"
+      },
+      {
+        "id": "security",
+        "label": "Pinned official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Official published private-report contact email",
+        "url": "https://github.com/rajkripal/cashew/blob/1bb7ae6549a9814e58c866ca18f70d760e9bf493/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Project-wide memory quality and efficiency metric definitions; not Cashew measurements",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned planned workload, not system results",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Initial benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project-wide status only, not a Cashew result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "Cashew is a local thought-graph memory system for agents. Its repository describes SQLite storage, vector-seeded graph retrieval, LLM-backed extraction and autonomous think/sleep cycles. Retrieval uses local embeddings and does not require an API call.",
+        "sources": [
+          "repo",
+          "readme",
+          "design"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The design specifies thought_nodes, derivation_edges and embeddings in SQLite, with sqlite-vec as an optional vector table. Nodes include content, type, domain, timestamps including optional referent time, source file, access counters, tags, metadata and decay/permanence state. Edges store parent/child relationships, weights and reasoning.",
+        "sources": [
+          "design",
+          "db"
+        ]
+      },
+      {
+        "text": "The design describes typed fact, observation, insight, decision, belief, derived, meta, core-memory and cross-link nodes. Multiple domains can coexist in one graph; domain filtering is applied at retrieval.",
+        "sources": [
+          "design",
+          "retrieval"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The README documents text extraction and ingestion for Obsidian, Markdown directories, OpenClaw session logs and Claude archives. It says LLM extraction is the default and offers a no-LLM paragraph-splitting mode. The design describes linking extracted nodes to similar parent nodes with derivation reasoning.",
+        "sources": [
+          "readme",
+          "design",
+          "extractors"
+        ]
+      },
+      {
+        "text": "The documented maintenance model marks low-fitness nodes as decayed, excludes them from retrieval, and uses sleep cycles for cross-linking, near-duplicate consolidation, permanence promotion and decay. The audit module records decay transitions, writes a stub row if a node was already hard-deleted, truncates content summaries to 80 characters, and prunes old audit rows after seven days by default. The reviewed sources do not establish a general user-facing delete contract or content retention in backups and synchronized copies.",
+        "sources": [
+          "readme",
+          "design",
+          "sleep",
+          "decay",
+          "audit"
+        ]
+      },
+      {
+        "text": "Retrieval embeds a query, searches for vector seed nodes, then expands through a bounded breadth-first graph walk and ranks returned context. The code supports optional domain and tag filters, filters decayed nodes, and can return node/path explanations. The README states that local all-MiniLM-L6-v2 embeddings are used and retrieval needs no API call.",
+        "sources": [
+          "readme",
+          "retrieval",
+          "design"
+        ]
+      },
+      {
+        "text": "The model offers domain labels and retrieval filters but the reviewed sources do not show tenant or principal access control. A local SQLite file is the documented deployment boundary; multi-user isolation was not verified.",
+        "sources": [
+          "readme",
+          "design",
+          "retrieval"
+        ]
+      },
+      {
+        "text": "Nodes can carry a source_file and edges can carry reasoning; decay audits preserve a snapshot at the transition. The reviewed contract does not require source URLs, evidence excerpts, author, trust state, citation validation or human approval, so this is partial lineage rather than a verified evidence chain.",
+        "sources": [
+          "design",
+          "audit",
+          "extractors"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Vector search and graph expansion are documented, but no answerability probes were run.",
+        "sources": [
+          "readme",
+          "retrieval",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Sleep deduplication can merge near-duplicates; no correction sequence was scored.",
+        "sources": [
+          "design",
+          "sleep",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Decay flags and filters are documented; no post-delete or residual-copy probes were run.",
+        "sources": [
+          "retrieval",
+          "decay",
+          "audit",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Domain filtering exists but no multi-principal isolation workload was run.",
+        "sources": [
+          "retrieval",
+          "design",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source-file and derivation fields exist; no evidence-support adjudication was run.",
+        "sources": [
+          "design",
+          "extractors",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The documented retrieval path was not timed.",
+        "sources": [
+          "readme",
+          "retrieval",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost and storage",
+        "status": "unmeasured",
+        "evidence": "Local embeddings and work caps are documented; no resource measurements were collected.",
+        "sources": [
+          "readme",
+          "sleep",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded read-only review of selected official source and documentation at the pinned head. Runtime behavior, every ingestion-to-database path, arbitrary hard-delete behavior, backup/sync retention, multi-user authorization, retrieval quality and operational performance were not established.",
+        "sources": [
+          "readme",
+          "design",
+          "extractors",
+          "retrieval",
+          "decay"
+        ]
+      },
+      {
+        "text": "The documented vector seed scan is brute-force O(N), so cost grows with vector count; an ANN index is identified as a future need at substantially larger scale. The local embedding model requires a first-use download and local resources, and LLM-dependent extraction/think cycles require a configured provider.",
+        "sources": [
+          "readme",
+          "design"
+        ]
+      },
+      {
+        "text": "No system operation, benchmark workload or tests were run. Project metrics and fixtures describe evaluation plans and are not Cashew results.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. This review did not execute Cashew, its tests, or benchmark workloads.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "contact_notes": [
+      {
+        "text": "The pinned official SECURITY.md publishes rajkripal.danday@gmail.com for private security reports. The address was taken from project documentation, not commit or profile metadata.",
+        "sources": [
+          "security"
+        ]
+      }
+    ]
+  }
+}

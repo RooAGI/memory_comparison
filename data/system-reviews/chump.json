@@ -1,0 +1,369 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 117,
+    "slug": "chump",
+    "name": "Chump",
+    "repository": "https://github.com/repairman29/chump",
+    "branch": "main",
+    "revision": "6b818800cd6eca1b7fe9c759584c53b215265719",
+    "reviewed_at": "2026-11-25T07:52:56Z",
+    "review_timezone": "UTC (2026-11-24 23:52:56 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/repairman29/chump/blob/6b818800cd6eca1b7fe9c759584c53b215265719/README.md",
+      "checked_urls": [
+        "https://github.com/repairman29/chump/blob/6b818800cd6eca1b7fe9c759584c53b215265719/README.md",
+        "https://github.com/repairman29/chump/blob/6b818800cd6eca1b7fe9c759584c53b215265719/SECURITY.md"
+      ],
+      "note": "No contact email was published in the checked official README or SECURITY.md at the reviewed revision; no SUPPORT.md exists at the repository root."
+    },
+    "summary": "Chump's built-in agent stores semantic memories in SQLite with FTS5, optional local embeddings, and an associative relation graph; it also records episodes. The review is source-based and reports no benchmark results.",
+    "atlas_locator": {
+      "ordinal": 117,
+      "name": "Chump",
+      "slug": "chump",
+      "listed_repository": "https://github.com/repairman29/chump",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/chump.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "attribution": "Curated identity and locator only; not assessment evidence."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/repairman29/chump/blob/6b818800cd6eca1b7fe9c759584c53b215265719/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/repairman29/chump/blob/6b818800cd6eca1b7fe9c759584c53b215265719/README.md",
+      "https://github.com/repairman29/chump/blob/6b818800cd6eca1b7fe9c759584c53b215265719/SECURITY.md"
+    ],
+    "contact_email_note": "No contact email was found in the official README or SECURITY.md. The official repository has no root SUPPORT.md. Commit/co-author/profile metadata was not used.",
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository",
+        "path": "repository",
+        "symbol": "repairman29/chump",
+        "url": "https://github.com/repairman29/chump"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed main head",
+        "path": "commit",
+        "symbol": "6b818800cd6eca1b7fe9c759584c53b215265719",
+        "url": "https://github.com/repairman29/chump/commit/6b818800cd6eca1b7fe9c759584c53b215265719"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "url": "https://github.com/repairman29/chump/blob/6b818800cd6eca1b7fe9c759584c53b215265719/README.md"
+      },
+      {
+        "id": "memory-tool",
+        "label": "Memory store and recall tool",
+        "path": "src/memory_tool.rs",
+        "symbol": "MemoryTool::execute; hybrid recall",
+        "url": "https://github.com/repairman29/chump/blob/6b818800cd6eca1b7fe9c759584c53b215265719/src/memory_tool.rs"
+      },
+      {
+        "id": "memory-db",
+        "label": "SQLite memory schema, search, curation and reranking",
+        "path": "crates/chump-memory-db/src/memory_db.rs",
+        "symbol": "MemoryRow; keyword_search; rerank_memories; memory_curate",
+        "url": "https://github.com/repairman29/chump/blob/6b818800cd6eca1b7fe9c759584c53b215265719/crates/chump-memory-db/src/memory_db.rs"
+      },
+      {
+        "id": "memory-graph",
+        "label": "Triple extraction, storage and associative recall",
+        "path": "src/memory_graph.rs",
+        "symbol": "extract_triples; store_triples; associative_recall",
+        "url": "https://github.com/repairman29/chump/blob/6b818800cd6eca1b7fe9c759584c53b215265719/src/memory_graph.rs"
+      },
+      {
+        "id": "episode-db",
+        "label": "Episodic memory schema and API",
+        "path": "src/episode_db.rs",
+        "symbol": "episode_log; episode_recent; episode_search",
+        "url": "https://github.com/repairman29/chump/blob/6b818800cd6eca1b7fe9c759584c53b215265719/src/episode_db.rs"
+      },
+      {
+        "id": "mcp-memory",
+        "label": "Official memory MCP server documentation",
+        "path": "crates/mcp-servers/chump-mcp-memory/README.md",
+        "url": "https://github.com/repairman29/chump/blob/6b818800cd6eca1b7fe9c759584c53b215265719/crates/mcp-servers/chump-mcp-memory/README.md"
+      },
+      {
+        "id": "mcp-source",
+        "label": "Memory MCP implementation",
+        "path": "crates/mcp-servers/chump-mcp-memory/src/main.rs",
+        "symbol": "memory_search; memory_recall; episode_save; episode_search",
+        "url": "https://github.com/repairman29/chump/blob/6b818800cd6eca1b7fe9c759584c53b215265719/crates/mcp-servers/chump-mcp-memory/src/main.rs"
+      },
+      {
+        "id": "architecture",
+        "label": "Official architecture documentation",
+        "path": "docs/architecture/ARCHITECTURE.md",
+        "symbol": "Enriched memory",
+        "url": "https://github.com/repairman29/chump/blob/6b818800cd6eca1b7fe9c759584c53b215265719/docs/architecture/ARCHITECTURE.md"
+      },
+      {
+        "id": "graph-doc",
+        "label": "Official graph and FTS5 design note",
+        "path": "docs/architecture/MEMORY_GRAPH_VS_FTS5.md",
+        "url": "https://github.com/repairman29/chump/blob/6b818800cd6eca1b7fe9c759584c53b215265719/docs/architecture/MEMORY_GRAPH_VS_FTS5.md"
+      },
+      {
+        "id": "db-pool",
+        "label": "SQLite pool and database setup",
+        "path": "crates/chump-db-pool/src/lib.rs",
+        "symbol": "DB path, schema and WAL pool",
+        "url": "https://github.com/repairman29/chump/blob/6b818800cd6eca1b7fe9c759584c53b215265719/crates/chump-db-pool/src/lib.rs"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated roster identity and attribution",
+        "path": "data/memory-systems.json",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas attribution only (not assessment evidence)",
+        "path": "content/systems/chump.md",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/chump.md"
+      },
+      {
+        "id": "contact-readme",
+        "label": "Official README checked for contact email",
+        "path": "README.md",
+        "url": "https://github.com/repairman29/chump/blob/6b818800cd6eca1b7fe9c759584c53b215265719/README.md"
+      },
+      {
+        "id": "contact-security",
+        "label": "Official security policy checked for contact email",
+        "path": "SECURITY.md",
+        "url": "https://github.com/repairman29/chump/blob/6b818800cd6eca1b7fe9c759584c53b215265719/SECURITY.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository describes Chump as both an agent fleet coordinator and an optional self-hosted coding agent. This assessment is limited to the built-in agent's durable memory surfaces: semantic memory, an associative graph, and episodic logs.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The memory subsystem stores semantic entries in SQLite at sessions/chump_memory.db when the pooled database is available, with a JSON fallback at sessions/chump_memory.json. The SQLite chump_memory rows contain content, timestamp, source, confidence, verified flag, sensitivity, optional expiry, and memory type; an FTS5 external-content index is maintained by insert/update/delete triggers. Embeddings are a separate JSON sidecar. The graph stores subject-relation-object triples with optional source memory/episode IDs and weights; episodic events have their own table in the same database.",
+        "sources": [
+          "memory-tool",
+          "memory-db",
+          "memory-graph",
+          "episode-db",
+          "db-pool"
+        ]
+      },
+      {
+        "text": "The core memory tool, MCP memory server, and episode store are distinct interfaces over the local store. The MCP README documents a repo-root-based database path and optional CHUMP_MEMORY_DB override; the core tool's JSON and embedding paths are relative to the current working directory. This review found no user or tenant identity in these memory records.",
+        "sources": [
+          "mcp-memory",
+          "mcp-source",
+          "memory-tool",
+          "memory-db"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write — the core memory tool accepts store content and optional confidence, memory_type, and expires_after_hours; it truncates content to 500 characters, writes source/time metadata, attempts embedding, and extracts simple relation triples. The code can fall back to JSON if SQLite is unavailable. Episode logging stores summary, detail, tags, repo, sentiment and optional PR/issue numbers. MCP exposes memory_search/recall and episode_save/search.",
+        "sources": [
+          "memory-tool",
+          "memory-db",
+          "memory-graph",
+          "episode-db",
+          "mcp-source",
+          "mcp-memory"
+        ]
+      },
+      {
+        "text": "Update and correction — no general edit or user-facing forget action appears in the inspected core memory tool, which exposes store and recall. Maintenance code expires rows, deduplicates exact content, decays confidence for unverified rows, and may summarize old episodes. These are curation behaviors, not a correction history or proof that all derived copies are revised.",
+        "sources": [
+          "memory-tool",
+          "memory-db"
+        ]
+      },
+      {
+        "text": "Delete — the database has expiry and deduplication deletion paths, and FTS triggers remove indexed text when a semantic row is deleted. No direct per-item delete tool was found in the inspected memory interfaces. Graph triples may retain a source_memory_id, but inspected deletion/expiry code does not establish synchronized graph cleanup; JSON embeddings and other backups/copies also remain outside the demonstrated deletion path.",
+        "sources": [
+          "memory-db",
+          "memory-graph",
+          "memory-tool",
+          "mcp-source"
+        ]
+      },
+      {
+        "text": "Retrieval — the internal hybrid path can combine FTS keyword candidates, cosine similarity over local embeddings, and graph-associated memory IDs with reciprocal-rank fusion, then optional BM25 reranking and an MMR diversity pass. It caps returned context and falls back to keyword matching when embedding is unavailable. A separate basic recall action uses keyword search; the MCP server uses FTS5 and LIKE searches. The code and MCP docs do not imply a measured accuracy result, and the implementation's candidate ordering and optional paths must be distinguished from effective ranking in a workload.",
+        "sources": [
+          "memory-tool",
+          "memory-db",
+          "memory-graph",
+          "mcp-source",
+          "mcp-memory"
+        ]
+      },
+      {
+        "text": "Scope isolation — memory paths are rooted in the process's current repository or configured CHUMP_REPO/CHUMP_HOME; the MCP README describes a separate database per repo by default. Episode queries can optionally filter by repo, while an omitted filter searches the shared episode table. No per-user authorization layer or cross-scope isolation test was inspected, so repository-local paths alone do not prove isolation for a multi-user host.",
+        "sources": [
+          "memory-tool",
+          "mcp-memory",
+          "mcp-source",
+          "episode-db",
+          "db-pool"
+        ]
+      },
+      {
+        "text": "Provenance and evidence — semantic rows retain a source string and timestamp, graph triples can point to their source memory or episode, and episodes retain repo and issue/PR metadata. The memory tool's provenance is a source hint (including a Discord channel identifier for that constructor); inspected rows do not require a source URL, quote, claim-level citation, or evidence validation. Provenance fields support trace-back but do not establish evidence support.",
+        "sources": [
+          "memory-tool",
+          "memory-db",
+          "memory-graph",
+          "episode-db"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Hybrid retrieval paths are present in source, but no adjudicated answerable or unanswerable cases were run.",
+        "sources": [
+          "memory-tool",
+          "memory-db",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction and stale values",
+        "status": "code_observed_with_limits",
+        "evidence": "Confidence decay and deduplication exist, but no general correction API or correction history was found in the inspected memory interface; stale-value accuracy was not measured.",
+        "sources": [
+          "memory-tool",
+          "memory-db",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion and forgetting",
+        "status": "code_observed_with_limits",
+        "evidence": "Expiry/deduplication delete database rows and FTS triggers track semantic rows; synchronized cleanup of graph/embedding/fallback copies was not established and no deletion-leak probe ran.",
+        "sources": [
+          "memory-db",
+          "memory-graph",
+          "memory-tool",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "code_observed_with_limits",
+        "evidence": "Repository-root paths and optional episode repo filters are visible in code/docs; no adversarial cross-repo or tenant isolation test was run.",
+        "sources": [
+          "mcp-memory",
+          "episode-db",
+          "mcp-source",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source and graph linkage fields exist, but entries do not require claim-level citations; no support/citation adjudication was performed.",
+        "sources": [
+          "memory-db",
+          "memory-graph",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Latency and observability",
+        "status": "unmeasured",
+        "evidence": "The source bounds recall count, embedding batch size and HTTP timeout, and uses a pooled SQLite backend; no latency distribution or live observability data was collected.",
+        "sources": [
+          "memory-tool",
+          "memory-db",
+          "db-pool",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No token, provider cost, or storage-per-item measurements were collected for memory operations.",
+        "sources": [
+          "memory-tool",
+          "memory-db",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a read-only source review pinned to the verified upstream main head. The system, tests, and benchmarks were not run. Source code establishes available paths, not runtime correctness, recall quality, safe forgetting, isolation, or operational performance.",
+        "sources": [
+          "repo",
+          "head",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "The repository's architecture and graph design documents describe intended behavior; where an implementation detail could not be established from inspected code, it is left unknown. In particular, complete deletion across derived graph and embedding data, tenant authorization, and retrieval answerability remain unverified.",
+        "sources": [
+          "architecture",
+          "graph-doc",
+          "memory-graph",
+          "memory-tool",
+          "mcp-memory"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is not_run. The project metric definitions, fixture, and execution-status record describe the evaluation protocol, not Chump measurements. No Chump runtime, benchmark, or tests were run for this review.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ]
+  }
+}

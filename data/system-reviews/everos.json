@@ -1,0 +1,384 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 230,
+    "slug": "everos",
+    "name": "EverOS",
+    "repository": "https://github.com/EverMind-AI/EverOS",
+    "listed_repository": "https://github.com/EverMind-AI/EverOS",
+    "branch": "main",
+    "revision": "d2b74780a443c6d7304ca9aa1bfdf36fdc6d7c9b",
+    "reviewed_at": "2026-11-25T20:05:56Z",
+    "review_timezone": "UTC (checked 2026-11-25 12:05:56 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "EverOS is a local-first Python memory runtime that keeps canonical memory in Markdown and uses SQLite plus a derived LanceDB index for retrieval. Writes and derived processing are asynchronous at different stages, so stored and searchable state can temporarily diverge.",
+    "atlas_locator": {
+      "ordinal": 230,
+      "name": "EverOS",
+      "slug": "everos",
+      "listed_repository": "https://github.com/EverMind-AI/EverOS",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/everos.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": "evermind@shanda.com",
+      "source_url": "https://github.com/EverMind-AI/EverOS/blob/d2b74780a443c6d7304ca9aa1bfdf36fdc6d7c9b/SECURITY.md",
+      "checked_urls": [
+        "https://github.com/EverMind-AI/EverOS/blob/d2b74780a443c6d7304ca9aa1bfdf36fdc6d7c9b/SECURITY.md"
+      ],
+      "note": "The official pinned SECURITY.md publishes this address for vulnerability reports. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": "evermind@shanda.com",
+    "contact_email_source_url": "https://github.com/EverMind-AI/EverOS/blob/d2b74780a443c6d7304ca9aa1bfdf36fdc6d7c9b/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/EverMind-AI/EverOS/blob/d2b74780a443c6d7304ca9aa1bfdf36fdc6d7c9b/SECURITY.md"
+    ],
+    "contact_email_note": "Official pinned SECURITY.md publishes evermind@shanda.com for vulnerability reports; this is the exact checked source.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[229], ordinal 230; EverOS identity, explicit listed repository locator and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/everos.md",
+        "symbol": "Pinned roster attribution, used only for identity and locator context",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/everos.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "Canonical repository and default branch main",
+        "url": "https://github.com/EverMind-AI/EverOS"
+      },
+      {
+        "id": "head",
+        "label": "Official current main head",
+        "path": "GitHub commits API",
+        "symbol": "Current main head d2b74780a443c6d7304ca9aa1bfdf36fdc6d7c9b; commit timestamp 2026-11-25T11:58:34Z",
+        "url": "https://api.github.com/repos/EverMind-AI/EverOS/commits/main"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project identity, supported runtime surface and documented product features",
+        "url": "https://github.com/EverMind-AI/EverOS/blob/d2b74780a443c6d7304ca9aa1bfdf36fdc6d7c9b/README.md"
+      },
+      {
+        "id": "memory-flow",
+        "label": "How memory works",
+        "path": "docs/how-memory-works.md",
+        "symbol": "Storage stack, memory pipeline, OME, cascade, consistency, memory kinds and limitations",
+        "url": "https://github.com/EverMind-AI/EverOS/blob/d2b74780a443c6d7304ca9aa1bfdf36fdc6d7c9b/docs/how-memory-works.md"
+      },
+      {
+        "id": "storage",
+        "label": "Storage layout",
+        "path": "docs/storage_layout.md",
+        "symbol": "Canonical Markdown, frontmatter and ids, scope path, deletion/purge behavior and storage strategies",
+        "url": "https://github.com/EverMind-AI/EverOS/blob/d2b74780a443c6d7304ca9aa1bfdf36fdc6d7c9b/docs/storage_layout.md"
+      },
+      {
+        "id": "api",
+        "label": "HTTP API reference",
+        "path": "docs/api.md",
+        "symbol": "Add/flush/search/get/delete APIs, consistency, request ids, metrics endpoints and provider requirements",
+        "url": "https://github.com/EverMind-AI/EverOS/blob/d2b74780a443c6d7304ca9aa1bfdf36fdc6d7c9b/docs/api.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Architecture guide",
+        "path": "docs/architecture.md",
+        "symbol": "Layer boundaries and package responsibilities",
+        "url": "https://github.com/EverMind-AI/EverOS/blob/d2b74780a443c6d7304ca9aa1bfdf36fdc6d7c9b/docs/architecture.md"
+      },
+      {
+        "id": "memorize",
+        "label": "Memorize service source",
+        "path": "src/everos/service/memory/_memorize.py",
+        "symbol": "Current session ingestion/extraction orchestration",
+        "url": "https://github.com/EverMind-AI/EverOS/blob/d2b74780a443c6d7304ca9aa1bfdf36fdc6d7c9b/src/everos/service/memory/_memorize.py"
+      },
+      {
+        "id": "cascade",
+        "label": "Cascade source",
+        "path": "src/everos/infra/cascade/orchestrator.py",
+        "symbol": "Current durable indexing/reconciliation orchestration",
+        "url": "https://github.com/EverMind-AI/EverOS/blob/d2b74780a443c6d7304ca9aa1bfdf36fdc6d7c9b/src/everos/infra/cascade/orchestrator.py"
+      },
+      {
+        "id": "filters",
+        "label": "Search scope filter source",
+        "path": "src/everos/memory/search/filters.py",
+        "symbol": "Backend-neutral scope predicate and reserved-field validation",
+        "url": "https://github.com/EverMind-AI/EverOS/blob/d2b74780a443c6d7304ca9aa1bfdf36fdc6d7c9b/src/everos/memory/search/filters.py"
+      },
+      {
+        "id": "adapter",
+        "label": "Search method routing source",
+        "path": "src/everos/memory/search/adapter.py",
+        "symbol": "Current hybrid retrieval pipeline selection by memory kind",
+        "url": "https://github.com/EverMind-AI/EverOS/blob/d2b74780a443c6d7304ca9aa1bfdf36fdc6d7c9b/src/everos/memory/search/adapter.py"
+      },
+      {
+        "id": "delete",
+        "label": "Deletion service source",
+        "path": "src/everos/service/memory/_delete.py",
+        "symbol": "Current delete scopes, source-first removal and asynchronous index erase behavior",
+        "url": "https://github.com/EverMind-AI/EverOS/blob/d2b74780a443c6d7304ca9aa1bfdf36fdc6d7c9b/src/everos/service/memory/_delete.py"
+      },
+      {
+        "id": "memtrace",
+        "label": "MemTrace documentation",
+        "path": "docs/memtrace-graphs.md",
+        "symbol": "Optional execution-trace documentation referenced by current project README",
+        "url": "https://github.com/EverMind-AI/EverOS/blob/d2b74780a443c6d7304ca9aa1bfdf36fdc6d7c9b/docs/memtrace-graphs.md"
+      },
+      {
+        "id": "configuration",
+        "label": "Configuration reference",
+        "path": "docs/configuration.md",
+        "symbol": "Optional providers, backend and runtime configuration",
+        "url": "https://github.com/EverMind-AI/EverOS/blob/d2b74780a443c6d7304ca9aa1bfdf36fdc6d7c9b/docs/configuration.md"
+      },
+      {
+        "id": "security",
+        "label": "Pinned official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Published vulnerability contact and security threat model",
+        "url": "https://github.com/EverMind-AI/EverOS/blob/d2b74780a443c6d7304ca9aa1bfdf36fdc6d7c9b/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Project evaluation domains",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned project evaluation fixture",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project run status; not an EverOS result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository describes EverOS as a Python memory library and runtime under the EverMind-AI organization. It exposes an HTTP API and CLI backed by service orchestration, memory-domain operations, and infrastructure adapters; no individual maintainer identity is inferred.",
+        "sources": [
+          "readme",
+          "architecture",
+          "api"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The package layout separates entrypoints, service, memory domain, and infrastructure adapters. Markdown is canonical; SQLite holds buffers, cascade state and OME state; LanceDB holds derived vector, BM25 and scalar search rows that can be rebuilt from Markdown.",
+        "sources": [
+          "architecture",
+          "memory-flow",
+          "storage"
+        ]
+      },
+      {
+        "text": "User episodes, atomic facts and profiles, agent cases and skills, and shared knowledge documents/topics use distinct storage strategies. Daily logs append entries, profiles rewrite one file, and skills use named directories. App/project and owner scope are reflected in the local path; records carry entry ids and source/session/parent metadata where relevant.",
+        "sources": [
+          "memory-flow",
+          "storage"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "POST /memory/add buffers session messages and a boundary detector or /flush drives extraction. The user pipeline writes episode Markdown synchronously, then the OME asynchronously derives summaries, atomic facts, profiles, cases and skills. A successful extraction response can precede derived records and index availability.",
+        "sources": [
+          "api",
+          "memory-flow",
+          "memorize"
+        ]
+      },
+      {
+        "text": "Direct Markdown edits are supported. The in-process cascade watcher records filesystem changes in a durable SQLite queue, then updates affected search rows; the docs describe re-embedding changed entries by content digest.",
+        "sources": [
+          "memory-flow",
+          "cascade"
+        ]
+      },
+      {
+        "text": "Daily-log entries can be superseded by a deprecation pointer, profiles are rewritten, and Reflection can merge episode clusters and deprecate source episodes. The reviewed sources do not describe one versioned claim ledger or adjudication mechanism for every generated derivative.",
+        "sources": [
+          "storage",
+          "memory-flow"
+        ]
+      },
+      {
+        "text": "Delete supports owner, session, owner-plus-session and episode-id scopes. It removes source Markdown and related memories before index rows; the index catches up asynchronously. Purge docs warn older LanceDB row versions and SQLite free pages can retain bytes until prune/vacuum, and local root removal does not clear remote Milvus.",
+        "sources": [
+          "delete",
+          "api",
+          "storage"
+        ]
+      },
+      {
+        "text": "Search exposes keyword, vector, hybrid and agentic methods. Episode/fact hybrid retrieval uses three recall lanes with reciprocal-rank fusion and calibrated scoring; agent case and skill types route through separate pipelines.",
+        "sources": [
+          "api",
+          "adapter"
+        ]
+      },
+      {
+        "text": "The filter compiler pins owner_id, owner_type, app_id and project_id into the base predicate and rejects caller filters on these reserved fields; user reads also exclude deprecated rows. This is source evidence of scope filtering, not a separate security or isolation test.",
+        "sources": [
+          "filters"
+        ]
+      },
+      {
+        "text": "Markdown/frontmatter preserves entry identities, timestamps and relationships including sender, session and parent ids. The optional raw input log records accepted add requests before extraction, subject to retention/size controls, but has no read API. These links do not guarantee factual correctness or evidence sufficiency of model outputs.",
+        "sources": [
+          "storage",
+          "memory-flow",
+          "readme",
+          "api"
+        ]
+      },
+      {
+        "text": "The embedded storage stack avoids separate database services; the cascade indexes changed entries and the API exposes health, metrics, request ids and structured observability correlation. Optional MemTrace captures execution stages when installed and enabled. This review collected no runtime efficiency data.",
+        "sources": [
+          "memory-flow",
+          "cascade",
+          "api",
+          "memtrace",
+          "configuration"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Search methods and retrieval lanes were inspected; no answer set was scored in this review.",
+        "sources": [
+          "api",
+          "adapter",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Deprecation and Reflection supersession paths were inspected; no correction workload was run.",
+        "sources": [
+          "storage",
+          "memory-flow",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Delete and purge paths were inspected; no post-delete probe was run.",
+        "sources": [
+          "delete",
+          "storage",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Reserved scope filtering was inspected; no cross-scope workload or authorization audit was run.",
+        "sources": [
+          "filters",
+          "security",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source and parent relationships are represented; no generated output was adjudicated for support or citation coverage.",
+        "sources": [
+          "storage",
+          "memory-flow",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Docs identify an asynchronous index window; this review collected no runtime timings.",
+        "sources": [
+          "memory-flow",
+          "api",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost and storage",
+        "status": "unmeasured",
+        "evidence": "Storage and provider configuration were inspected; no workload cost, token or resource measurements were collected.",
+        "sources": [
+          "memory-flow",
+          "configuration",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a source review at a verified main SHA, not an operational audit. The pipeline can have an entry durable in Markdown before it is searchable or before OME-derived memory appears; provider-dependent features require configuration.",
+        "sources": [
+          "memory-flow",
+          "api",
+          "configuration"
+        ]
+      },
+      {
+        "text": "The security policy says the API has no built-in authentication and is intended for trusted local callers; Markdown is plaintext. Purge and backend docs also describe retained bytes during index pruning/SQLite vacuum and remote Milvus data outside local-root deletion.",
+        "sources": [
+          "security",
+          "storage"
+        ]
+      },
+      {
+        "text": "This review did not run EverOS, tests, or benchmarks and did not measure retrieval quality, evidence support, deletion leakage, cross-scope isolation, latency, cost or storage efficiency.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No EverOS runtime, tests, or benchmarks were run in this review. Source observations and project evaluation definitions are not results measured here."
+    }
+  }
+}

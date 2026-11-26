@@ -1,0 +1,306 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 296,
+    "slug": "hindsight",
+    "name": "Hindsight",
+    "repository": "https://github.com/vectorize-io/hindsight",
+    "listed_repository": "https://github.com/vectorize-io/hindsight",
+    "branch": "main",
+    "revision": "00c9d19e2d9386a54d84a9a12b9fc385df7009e1",
+    "reviewed_at": "2026-11-25T23:04:21Z",
+    "review_timezone": "UTC (checked 2026-11-25 15:04:21 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Hindsight is a service and SDK for agent memory that retains inputs into isolated banks, recalls them with semantic, keyword, graph, and temporal retrieval, and can derive evidence-backed observations and mental models. This source review does not measure runtime quality or performance.",
+    "atlas_locator": {
+      "ordinal": 296,
+      "name": "Hindsight",
+      "slug": "hindsight",
+      "listed_repository": "https://github.com/vectorize-io/hindsight",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hindsight.md",
+      "revision": "16d4025f882ba232a2d4c72abd1eb47420e68e17"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/vectorize-io/hindsight/blob/00c9d19e2d9386a54d84a9a12b9fc385df7009e1/README.md",
+      "checked_urls": [
+        "https://github.com/vectorize-io/hindsight/blob/00c9d19e2d9386a54d84a9a12b9fc385df7009e1/README.md",
+        "https://github.com/vectorize-io/hindsight/blob/00c9d19e2d9386a54d84a9a12b9fc385df7009e1/SECURITY.md"
+      ],
+      "note": "Checked the official pinned README and SECURITY.md for an email; neither publishes one. SECURITY.md requests vulnerability reports through GitHub Security Advisories. No commit/profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/vectorize-io/hindsight/blob/00c9d19e2d9386a54d84a9a12b9fc385df7009e1/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/vectorize-io/hindsight/blob/00c9d19e2d9386a54d84a9a12b9fc385df7009e1/README.md",
+      "https://github.com/vectorize-io/hindsight/blob/00c9d19e2d9386a54d84a9a12b9fc385df7009e1/SECURITY.md"
+    ],
+    "contact_email_note": "No contact email was published in the checked official pinned README or SECURITY.md. No address was inferred from commit/profile metadata or obtained from a third-party directory.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[295], ordinal 296; identity, explicit listed repository locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/hindsight.md",
+        "symbol": "Pinned attribution for curated identity/locator context only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hindsight.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "",
+        "symbol": "Official repository page identifies vectorize-io/hindsight and default branch main",
+        "url": "https://github.com/vectorize-io/hindsight"
+      },
+      {
+        "id": "head",
+        "label": "Official current head commit",
+        "path": "",
+        "symbol": "Official main.atom feed reports full SHA and update timestamp; repository page latest commit prefix agrees",
+        "url": "https://github.com/vectorize-io/hindsight/commit/00c9d19e2d9386a54d84a9a12b9fc385df7009e1"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product, memory model, retain/recall/reflect, observations, scope, storage, monitoring, and published contact check",
+        "url": "https://github.com/vectorize-io/hindsight/blob/00c9d19e2d9386a54d84a9a12b9fc385df7009e1/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Pinned official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Vulnerability reporting procedure and official contact-email check",
+        "url": "https://github.com/vectorize-io/hindsight/blob/00c9d19e2d9386a54d84a9a12b9fc385df7009e1/SECURITY.md"
+      },
+      {
+        "id": "retain",
+        "label": "Pinned retain pipeline orchestrator",
+        "path": "hindsight-api-slim/hindsight_api/engine/retain/orchestrator.py",
+        "symbol": "Retain pipeline orchestration, memory-defense handling, operation checkpoints, and observation change tracking",
+        "url": "https://github.com/vectorize-io/hindsight/blob/00c9d19e2d9386a54d84a9a12b9fc385df7009e1/hindsight-api-slim/hindsight_api/engine/retain/orchestrator.py"
+      },
+      {
+        "id": "retrieval",
+        "label": "Pinned retrieval dispatcher",
+        "path": "hindsight-api-slim/hindsight_api/engine/search/retrieval.py",
+        "symbol": "Parallel semantic, BM25, graph, and temporal retrieval result structures and store dispatch",
+        "url": "https://github.com/vectorize-io/hindsight/blob/00c9d19e2d9386a54d84a9a12b9fc385df7009e1/hindsight-api-slim/hindsight_api/engine/search/retrieval.py"
+      },
+      {
+        "id": "sql",
+        "label": "Pinned PostgreSQL retrieval SQL",
+        "path": "hindsight-api-slim/hindsight_api/engine/sql/postgresql.py",
+        "symbol": "SQL construction for retrieval arms including bank_id scoping in BM25",
+        "url": "https://github.com/vectorize-io/hindsight/blob/00c9d19e2d9386a54d84a9a12b9fc385df7009e1/hindsight-api-slim/hindsight_api/engine/sql/postgresql.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation domains and metric definitions",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned fixture; no Hindsight result is asserted",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project baseline execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status; no Hindsight result is asserted",
+        "url": "../../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents Hindsight as an agent-memory system built by Vectorize.io, available as a self-hosted API, embedded Python service, or hosted cloud, with SDK, REST, and MCP integrations.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README organizes memory in banks and describes world facts, experiences, evidence-backed observations, and mental models. Retained material is represented through entities, relationships, and time series alongside sparse and dense search representations.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The current retain pipeline is divided into modules for content and chunk handling, fact extraction and storage, entity processing, embeddings, link creation, and orchestration. The orchestrator includes operation/document checkpoints and observation-change tracking.",
+        "sources": [
+          "retain"
+        ]
+      },
+      {
+        "text": "The recall implementation describes four parallel strategies—semantic, BM25 keyword, graph, and temporal—handed to the memory store. The README describes reciprocal-rank fusion, cross-encoder reranking, and token-budget trimming.",
+        "sources": [
+          "retrieval",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The public retain operation accepts content with optional context and timestamp. The documented pipeline uses an LLM to extract facts, temporal data, entities, and relationships, normalizes them into canonical entities and time series, and prepares search indexes.",
+        "sources": [
+          "readme",
+          "retain"
+        ]
+      },
+      {
+        "text": "The README says observations consolidate related facts into deduplicated beliefs with exact supporting quotes and proof counts; later evidence can strengthen, weaken, or extend the observation. The inspected sources do not establish one general direct-update API or every explicit correction workflow.",
+        "sources": [
+          "readme",
+          "retain"
+        ]
+      },
+      {
+        "text": "Deletion semantics were not established by the README, retain orchestrator, retrieval dispatcher, and PostgreSQL retrieval SQL inspected for this review. Behavior for removal of source memories, derived observations, indexes, and backups remains unknown.",
+        "sources": [
+          "readme",
+          "retain",
+          "retrieval",
+          "sql"
+        ]
+      },
+      {
+        "text": "Recall runs semantic, BM25, graph, and temporal retrieval in parallel; the PostgreSQL retrieval source scopes the inspected BM25 arm with a bank_id predicate. The README describes reciprocal-rank fusion, cross-encoder reranking, and trimming to a token limit; reflect performs deeper analysis.",
+        "sources": [
+          "retrieval",
+          "sql",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Four retrieval arms, fusion, reranking, and reflect are documented; answer correctness and abstention were not scored.",
+        "sources": [
+          "readme",
+          "retrieval",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "The README describes evidence-based observation refinement; no correction sequence was tested, and direct correction semantics remain partly unknown.",
+        "sources": [
+          "readme",
+          "retain",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Deletion and post-delete behavior were not established by the inspected sources; no deletion probe was run.",
+        "sources": [
+          "readme",
+          "retain",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Bank isolation is documented and the inspected PostgreSQL BM25 arm filters by bank; no isolation workload was run.",
+        "sources": [
+          "readme",
+          "sql",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Observations are described with exact supporting quotes and proof counts; no answer was adjudicated against retained evidence.",
+        "sources": [
+          "readme",
+          "retain",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timings were collected.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Monitoring and storage backends are documented; no token, cost, or storage workload was measured.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded inspection of the official README, SECURITY policy, retain orchestrator, retrieval dispatcher, and PostgreSQL retrieval SQL at the verified head. Hindsight, its tests, and benchmarks were not run.",
+        "sources": [
+          "readme",
+          "security",
+          "retain",
+          "retrieval",
+          "sql"
+        ]
+      },
+      {
+        "text": "The inspection does not establish actual recall accuracy, abstention quality, end-to-end isolation, deletion completeness, correction success, or production performance.",
+        "sources": [
+          "readme",
+          "retain",
+          "retrieval",
+          "sql"
+        ]
+      },
+      {
+        "text": "The reviewed paths do not resolve all deletion semantics, every backend's scope enforcement, backup erasure, or how each derived memory type responds to item removal. Upstream descriptions and published benchmark figures were not reproduced.",
+        "sources": [
+          "readme",
+          "security",
+          "retain",
+          "retrieval",
+          "sql"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Hindsight runtime, tests, or benchmarks were run. Source observations and upstream claims are not results from this project review."
+    }
+  }
+}

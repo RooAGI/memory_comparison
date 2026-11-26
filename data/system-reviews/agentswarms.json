@@ -1,0 +1,364 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "agentswarms",
+    "name": "AgentSwarms",
+    "repository": "https://github.com/AgentSwarms-fyi/agentswarms",
+    "branch": "main",
+    "revision": "ebb0816479074dbef561c4f1f6a2b437c3229c66",
+    "reviewed_at": "2026-11-24T19:21:17Z",
+    "review_timezone": "UTC (2026-11-24 11:21:17 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":"hello@agentswarms.fyi","source_url":"https://github.com/AgentSwarms-fyi/agentswarms/blob/ebb0816479074dbef561c4f1f6a2b437c3229c66/SECURITY.md","note":"Published in the official security policy."},
+    "summary": "AgentSwarms is a self-hosted agent and data platform whose memory subsystem combines conversation summaries and scratchpads with optional per-agent long-term notes. Long-term recall uses indexed keyword overlap; this review records source observations, not benchmark results.",
+    "atlas_locator": {
+      "ordinal": 31,
+      "name": "AgentSwarms",
+      "slug": "agentswarms",
+      "listed_repository": "https://github.com/AgentSwarms-fyi/agentswarms",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agentswarms.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": "hello@agentswarms.fyi",
+    "contact_email_source_url": "https://github.com/AgentSwarms-fyi/agentswarms/blob/ebb0816479074dbef561c4f1f6a2b437c3229c66/SECURITY.md?plain=1",
+    "contact_email_checked_sources": [
+      "https://github.com/AgentSwarms-fyi/agentswarms/blob/ebb0816479074dbef561c4f1f6a2b437c3229c66/SECURITY.md?plain=1"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official public repository and default branch",
+        "path": "repository",
+        "symbol": "main is the default branch",
+        "url": "https://github.com/AgentSwarms-fyi/agentswarms"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "head ebb0816479074dbef561c4f1f6a2b437c3229c66",
+        "url": "https://github.com/AgentSwarms-fyi/agentswarms/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified current head commit",
+        "path": "commit",
+        "symbol": "full SHA ebb0816479074dbef561c4f1f6a2b437c3229c66",
+        "url": "https://github.com/AgentSwarms-fyi/agentswarms/commit/ebb0816479074dbef561c4f1f6a2b437c3229c66"
+      },
+      {
+        "id": "readme",
+        "label": "Official README: platform and memory overview",
+        "path": "README.md",
+        "url": "https://github.com/AgentSwarms-fyi/agentswarms/blob/ebb0816479074dbef561c4f1f6a2b437c3229c66/README.md?plain=1"
+      },
+      {
+        "id": "types",
+        "label": "Memory configuration, defaults, and item type",
+        "path": "src/utils/memory/types.ts",
+        "symbol": "MemoryConfig, DEFAULT_MEMORY_CONFIG, MemoryItem",
+        "url": "https://github.com/AgentSwarms-fyi/agentswarms/blob/ebb0816479074dbef561c4f1f6a2b437c3229c66/src/utils/memory/types.ts?plain=1"
+      },
+      {
+        "id": "memory",
+        "label": "Memory configuration and request context assembly",
+        "path": "src/utils/memory/memory.server.ts",
+        "symbol": "resolveMemoryConfig, loadMemoryContext, composeSystemPrompt",
+        "url": "https://github.com/AgentSwarms-fyi/agentswarms/blob/ebb0816479074dbef561c4f1f6a2b437c3229c66/src/utils/memory/memory.server.ts?plain=1"
+      },
+      {
+        "id": "summarize",
+        "label": "Short-term conversation summarization",
+        "path": "src/utils/memory/summarize.server.ts",
+        "symbol": "summarizeIfNeeded, rolling summary model call",
+        "url": "https://github.com/AgentSwarms-fyi/agentswarms/blob/ebb0816479074dbef561c4f1f6a2b437c3229c66/src/utils/memory/summarize.server.ts?plain=1"
+      },
+      {
+        "id": "extract",
+        "label": "Automatic long-term memory extraction",
+        "path": "src/utils/memory/extract.server.ts",
+        "symbol": "extractMemoriesFromTurn, callModelForExtraction",
+        "url": "https://github.com/AgentSwarms-fyi/agentswarms/blob/ebb0816479074dbef561c4f1f6a2b437c3229c66/src/utils/memory/extract.server.ts?plain=1"
+      },
+      {
+        "id": "recall",
+        "label": "Long-term retrieval and context block",
+        "path": "src/utils/memory/recall.server.ts",
+        "symbol": "recallMemoryItems, buildLtmBlock",
+        "url": "https://github.com/AgentSwarms-fyi/agentswarms/blob/ebb0816479074dbef561c4f1f6a2b437c3229c66/src/utils/memory/recall.server.ts?plain=1"
+      },
+      {
+        "id": "tokenize",
+        "label": "Long-term retrieval tokenization",
+        "path": "src/utils/memory/tokenize.ts",
+        "symbol": "tokenize",
+        "url": "https://github.com/AgentSwarms-fyi/agentswarms/blob/ebb0816479074dbef561c4f1f6a2b437c3229c66/src/utils/memory/tokenize.ts?plain=1"
+      },
+      {
+        "id": "tools",
+        "label": "Agent memory remember, recall, forget, and scratchpad tools",
+        "path": "src/utils/memory/tools.server.ts",
+        "symbol": "runMemoryRemember, runMemoryRecall, runMemoryForget, runMemorySet, runMemoryGet",
+        "url": "https://github.com/AgentSwarms-fyi/agentswarms/blob/ebb0816479074dbef561c4f1f6a2b437c3229c66/src/utils/memory/tools.server.ts?plain=1"
+      },
+      {
+        "id": "sealed",
+        "label": "Per-user sealing, blind keyword tokens, and storage helpers",
+        "path": "src/utils/memory/sealed.server.ts",
+        "symbol": "insertMemoryItems, recallTerms, openMemoryContent, sealSummary, sealScratchpad",
+        "url": "https://github.com/AgentSwarms-fyi/agentswarms/blob/ebb0816479074dbef561c4f1f6a2b437c3229c66/src/utils/memory/sealed.server.ts?plain=1"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy and published contact",
+        "path": "SECURITY.md",
+        "symbol": "Reporting a vulnerability",
+        "url": "https://github.com/AgentSwarms-fyi/agentswarms/blob/ebb0816479074dbef561c4f1f6a2b437c3229c66/SECURITY.md?plain=1"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated identity and attribution only",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 31",
+        "url": "../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes AgentSwarms as a self-hosted agentic AI and data platform. Memory is an integrated agent-runtime subsystem, rather than a separately presented hosted memory service.",
+        "sources": [
+          "readme",
+          "types",
+          "memory"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The source separates short-term conversation state from long-term memory. Per-agent configuration controls a rolling summary and message window, automatic extraction, whether long-term recall is enabled, the item cap, and recall top-K. Defaults enable short-term memory and summarization, leave long-term recall disabled, enable auto-extraction, cap long-term items at 200, use top-K 5, and retain a 20-message window.",
+        "sources": [
+          "types",
+          "memory"
+        ]
+      },
+      {
+        "text": "The rolling summary and scratchpad are stored with a conversation; long-term items are stored in `agent_memory_items` and carry user, agent, optional conversation IDs, kind and content. The shared `MemoryItem` view includes an ID, kind, content, score, last-use time and creation time. Kinds are fact, preference, episodic, and instruction.",
+        "sources": [
+          "types",
+          "sealed",
+          "tools",
+          "summarize"
+        ]
+      },
+      {
+        "text": "Memory item contents, conversation summaries and scratchpads use the app's per-user sealing helpers. For sealed long-term items, search terms are represented as per-owner blind tokens so the database can filter without indexing plaintext words; existing plaintext rows are still supported by the code.",
+        "sources": [
+          "sealed"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Short-term summarization folds older conversation messages into a rolling summary and keeps a configured live message window. The summary prompt asks for a compact third-person account, under 350 words, preserving user facts, preferences, decisions and ongoing tasks. Summary model calls record returned token usage and elapsed time through the gateway-usage recorder when a user ID and provider usage are available.",
+        "sources": [
+          "types",
+          "summarize"
+        ]
+      },
+      {
+        "text": "Long-term automatic extraction runs on a chat turn when both messages are present. It sends up to 4,000 characters from each side to the configured model, requests durable facts/preferences/episodes/instructions, rejects malformed or out-of-range items, redaction placeholders and content over 500 characters, and accepts at most eight extracted items per call. Inserted items include user, agent and optional conversation IDs. A server RPC is called to enforce the configured item cap; its implementation was not inspected.",
+        "sources": [
+          "extract",
+          "types"
+        ]
+      },
+      {
+        "text": "The agent can also call `memory_remember`, which inserts one item and returns its ID; it has no inspected deduplication or update path. `memory_forget` deletes a row by ID under the current user. A fact correction therefore depends on adding/removing records; no automatic supersession behavior was established in the inspected interface.",
+        "sources": [
+          "tools",
+          "sealed"
+        ]
+      },
+      {
+        "text": "Recall tokenizes text to unique lowercase ASCII letter/digit terms of at least four characters, excluding a stop-word list. It queries up to 50 candidates with keyword-array overlap and explicit user and agent predicates, scores overlap most heavily with stored score and a 30-day recency boost, then returns a bounded top-K (maximum 12 in the retrieval function; the manual tool caps requests at 10). It opens sealed content and omits rows whose keys cannot be opened. The injected context is a numbered list of kind and content, not semantic retrieval.",
+        "sources": [
+          "tokenize",
+          "recall",
+          "sealed",
+          "tools"
+        ]
+      },
+      {
+        "text": "`memory_set` and `memory_get` expose a key/value scratchpad tied to the conversation ID. The code reads and writes one JSON object, seals the stored form under the user's key, and requires conversation context; it is a within-conversation working area, separate from long-term recall.",
+        "sources": [
+          "tools",
+          "sealed"
+        ]
+      },
+      {
+        "text": "Scope is explicit in long-term insertion and recall: records carry user and agent IDs, and recall filters on both. The tools' source comments also state that Supabase row-level security scopes calls to the user. Conversation summary and scratchpad reads use conversation ID with the authenticated client. This is source-visible scoping only; this review did not inspect the full database policy history or run cross-scope probes.",
+        "sources": [
+          "extract",
+          "recall",
+          "tools",
+          "memory",
+          "security"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Keyword overlap and an empty-match response are visible. No answerability or abstention probes were run.",
+        "sources": [
+          "recall",
+          "tools",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "The inspected long-term interface inserts and deletes items but establishes no update or supersession path. No correction workload was run.",
+        "sources": [
+          "tools",
+          "extract",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "A user-scoped item deletion tool is present. No post-delete retrieval probes, database checks, or backup/erasure checks were run.",
+        "sources": [
+          "tools",
+          "security",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Explicit user and agent predicates and a documented reliance on row-level security are source observations. No forbidden cross-user or cross-agent probes were executed.",
+        "sources": [
+          "recall",
+          "tools",
+          "security",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "The inspected memory item has no source-document pointer, quote, claim citation, or evidence status. Answer support and citation coverage were not adjudicated.",
+        "sources": [
+          "types",
+          "extract",
+          "tools",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Some extraction and summary calls record provider latency, but no end-to-end memory timing or write-to-recall probe was collected.",
+        "sources": [
+          "extract",
+          "summarize",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Extraction and summary paths can record returned input/output token counts; no provider cost, database size, or storage-efficiency measurement was collected.",
+        "sources": [
+          "extract",
+          "summarize",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code and documentation",
+        "evidence": "Recall uses indexed keyword overlap, at most 50 candidates and a bounded top-K. Summary and extraction model calls capture latency and provider token counts when returned. These implementation details are not measured performance results.",
+        "sources": [
+          "recall",
+          "extract",
+          "summarize",
+          "types"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded review inspected the official README and selected memory configuration, extraction, sealing, retrieval and tool code at the verified repository head. It did not inspect the full chat call path, every database migration/policy, every memory mutation path, or the item-pruning RPC.",
+        "sources": [
+          "readme",
+          "memory",
+          "extract",
+          "recall",
+          "tools",
+          "sealed"
+        ]
+      },
+      {
+        "text": "The keyword path does not establish semantic or paraphrase retrieval quality; one-turn model extraction does not establish fact accuracy, deduplication, or correction quality. The inspected item interface lacks explicit evidence pointers and a version/supersession field.",
+        "sources": [
+          "extract",
+          "recall",
+          "tools",
+          "types"
+        ]
+      },
+      {
+        "text": "Source-visible user/agent filters do not prove effective isolation, key destruction does not establish backup erasure, and a successful `forget` response does not measure retrieval leakage. No runtime, benchmark workload, or tests were run.",
+        "sources": [
+          "security",
+          "tools",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No AgentSwarms runtime, project fixture, benchmark, or test suite was executed. The project metric definitions, fixture, and result status describe the evaluation protocol and status only; they are not AgentSwarms results.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      }
+    ]
+  }
+}

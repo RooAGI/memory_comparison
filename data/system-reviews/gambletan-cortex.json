@@ -1,0 +1,375 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "gambletan-cortex",
+    "name": "Cortex (gambletan)",
+    "ordinal": 158,
+    "repository": "https://github.com/gambletan/cortex",
+    "listed_repository": "https://github.com/gambletan/cortex",
+    "repository_status": "explicit",
+    "branch": "main",
+    "revision": "de02006c7e81f8955ddc25489440f73cd829492e",
+    "reviewed_at": "2026-11-25T09:34:33Z",
+    "review_timezone": "UTC (2026-11-25 01:34:33 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Cortex (gambletan) is a local-first Rust memory engine and MCP server. It stores typed memories across several tiers, offers multi-signal retrieval, and has optional sync and sharing features.",
+    "atlas_locator": {
+      "ordinal": 158,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/gambletan-cortex.md",
+      "listed_repository": "https://github.com/gambletan/cortex"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/gambletan/cortex/blob/de02006c7e81f8955ddc25489440f73cd829492e/README.md",
+      "note": "No contact email was published in the checked official README or SECURITY.md; exact checked URLs are recorded below."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/gambletan/cortex/blob/de02006c7e81f8955ddc25489440f73cd829492e/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/gambletan/cortex/blob/de02006c7e81f8955ddc25489440f73cd829492e/README.md",
+      "https://github.com/gambletan/cortex/blob/de02006c7e81f8955ddc25489440f73cd829492e/SECURITY.md"
+    ],
+    "contact_email_note": "No email published in the official README; it directs support to GitHub Issues. The official SECURITY.md recommends Issues or contacting maintainers directly but publishes no email.",
+    "sources": [
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/gambletan-cortex.md",
+        "symbol": "Pinned roster attribution; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/gambletan-cortex.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "Public canonical repository; default branch main.",
+        "url": "https://github.com/gambletan/cortex"
+      },
+      {
+        "id": "head",
+        "label": "Official GitHub main head",
+        "path": "commits/main",
+        "symbol": "Current main head de02006c7e81f8955ddc25489440f73cd829492e; commit time 2026-10-22T21:24:43Z.",
+        "url": "https://api.github.com/repos/gambletan/cortex/commits/main"
+      },
+      {
+        "id": "commit",
+        "label": "Reviewed head commit",
+        "path": "commit page",
+        "symbol": "Full reviewed head SHA; commit dated 2026-10-22T21:24:43Z.",
+        "url": "https://github.com/gambletan/cortex/commit/de02006c7e81f8955ddc25489440f73cd829492e"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Project overview, tools, integrations, architecture, metric claims, and published benchmark caveats.",
+        "url": "https://github.com/gambletan/cortex/blob/de02006c7e81f8955ddc25489440f73cd829492e/README.md"
+      },
+      {
+        "id": "types",
+        "label": "Memory type definitions",
+        "path": "cortex-core/src/types.rs",
+        "symbol": "MemObject, MemContent, MemSource, privacy and namespace fields, tiers, links.",
+        "url": "https://github.com/gambletan/cortex/blob/de02006c7e81f8955ddc25489440f73cd829492e/cortex-core/src/types.rs"
+      },
+      {
+        "id": "episode",
+        "label": "Episode store",
+        "path": "cortex-core/src/episode.rs",
+        "symbol": "Episodic memory construction, persistence, index insertion, and decay.",
+        "url": "https://github.com/gambletan/cortex/blob/de02006c7e81f8955ddc25489440f73cd829492e/cortex-core/src/episode.rs"
+      },
+      {
+        "id": "semantic",
+        "label": "Semantic store",
+        "path": "cortex-core/src/semantic.rs",
+        "symbol": "Fact/preference writes, entity queries, confidence updates, and supersedes links.",
+        "url": "https://github.com/gambletan/cortex/blob/de02006c7e81f8955ddc25489440f73cd829492e/cortex-core/src/semantic.rs"
+      },
+      {
+        "id": "retrieval",
+        "label": "Retrieval engine",
+        "path": "cortex-core/src/retrieval.rs",
+        "symbol": "Query fields, score breakdown and default bounded work budget.",
+        "url": "https://github.com/gambletan/cortex/blob/de02006c7e81f8955ddc25489440f73cd829492e/cortex-core/src/retrieval.rs"
+      },
+      {
+        "id": "context",
+        "label": "Context generation",
+        "path": "cortex-core/src/context.rs",
+        "symbol": "Namespace, channel, privacy, fact-confidence filtering, and context assembly.",
+        "url": "https://github.com/gambletan/cortex/blob/de02006c7e81f8955ddc25489440f73cd829492e/cortex-core/src/context.rs"
+      },
+      {
+        "id": "storage_contract",
+        "label": "Storage contract",
+        "path": "cortex-core/src/storage/traits.rs",
+        "symbol": "Memory CRUD API and namespace listing contract.",
+        "url": "https://github.com/gambletan/cortex/blob/de02006c7e81f8955ddc25489440f73cd829492e/cortex-core/src/storage/traits.rs"
+      },
+      {
+        "id": "sqlite",
+        "label": "SQLite storage",
+        "path": "cortex-core/src/storage/sqlite.rs",
+        "symbol": "WAL configuration, read/write connections, caches, and storage implementation.",
+        "url": "https://github.com/gambletan/cortex/blob/de02006c7e81f8955ddc25489440f73cd829492e/cortex-core/src/storage/sqlite.rs"
+      },
+      {
+        "id": "consolidation",
+        "label": "Consolidation",
+        "path": "cortex-core/src/consolidation.rs",
+        "symbol": "Decay, promotion, and archiving of low-salience episodic memories.",
+        "url": "https://github.com/gambletan/cortex/blob/de02006c7e81f8955ddc25489440f73cd829492e/cortex-core/src/consolidation.rs"
+      },
+      {
+        "id": "tools",
+        "label": "MCP tool surface",
+        "path": "cortex-mcp-server/src/tools.rs",
+        "symbol": "Ingest/search/context/delete tool definitions and input caps.",
+        "url": "https://github.com/gambletan/cortex/blob/de02006c7e81f8955ddc25489440f73cd829492e/cortex-mcp-server/src/tools.rs"
+      },
+      {
+        "id": "gateway",
+        "label": "Sharing gateway",
+        "path": "cortex-mcp-server/src/gateway.rs",
+        "symbol": "Explicit export namespace, read limits, and fail-closed gateway design.",
+        "url": "https://github.com/gambletan/cortex/blob/de02006c7e81f8955ddc25489440f73cd829492e/cortex-mcp-server/src/gateway.rs"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Local data and sync threat model, privacy boundaries, gateway controls and disclosure contact guidance.",
+        "url": "https://github.com/gambletan/cortex/blob/de02006c7e81f8955ddc25489440f73cd829492e/SECURITY.md"
+      },
+      {
+        "id": "architecture_missing",
+        "label": "Checked architecture documentation path",
+        "path": "docs/architecture.md",
+        "symbol": "GitHub reports this path is absent at the reviewed head.",
+        "url": "https://github.com/gambletan/cortex/blob/de02006c7e81f8955ddc25489440f73cd829492e/docs/architecture.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Definitions for retrieval, correction, deletion, scope, evidence, latency, cost and storage metrics.",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Execution status is not_run; no metric values were collected.",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned workload specification, not a set of results.",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Cortex as a local-first Rust memory engine for personal AI agents, with an MCP server and additional HTTP, Python, WebAssembly, and plugin interfaces.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The local SQLite database is the documented default. PostgreSQL, encrypted device sync, and the Muse sharing gateway are optional paths with separate setup and privacy controls.",
+        "sources": [
+          "readme",
+          "security",
+          "gateway"
+        ]
+      },
+      {
+        "text": "The official GitHub repository is public and defaults to main; its main commit endpoint and full commit page confirm reviewed head de02006c7e81f8955ddc25489440f73cd829492e.",
+        "sources": [
+          "repo",
+          "head",
+          "commit"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The Rust workspace separates core memory logic, storage/indexing, MCP, HTTP, Python, WebAssembly, sync, and plugins. SQLite storage uses WAL, separate write/read connections, a four-connection read pool, and bounded LRU caches.",
+        "sources": [
+          "readme",
+          "sqlite"
+        ]
+      },
+      {
+        "text": "The README provides the architecture overview; the expected docs/architecture.md file is absent at the reviewed head.",
+        "sources": [
+          "readme",
+          "architecture_missing"
+        ]
+      },
+      {
+        "text": "MemObject contains a tier, typed content, optional embedding, temporal/access data, salience, MemSource, privacy, links, tags, metadata, optional content hash, and optional namespace. MemContent includes text, facts, preferences, relationships, patterns, and events.",
+        "sources": [
+          "types"
+        ]
+      },
+      {
+        "text": "MemSource stores channel and optional identity, chat, thread, and message identifiers; PrivacyLevel defaults to Private, with Shared and Public variants eligible for sync.",
+        "sources": [
+          "types",
+          "security"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "EpisodeStore.add builds an episodic MemObject from content and MemSource, applies optional salience and embedding, stores it, and inserts an available embedding into the in-memory index. The MCP surface exposes single and batch ingest with source-defined size caps.",
+        "sources": [
+          "episode",
+          "tools"
+        ]
+      },
+      {
+        "text": "Semantic fact writes create typed subject-predicate-object records. Preference confidence can be updated. merge_facts adds a Supersedes link and reduces the old fact's base salience to 0.3 of its previous value while retaining it.",
+        "sources": [
+          "semantic",
+          "types"
+        ]
+      },
+      {
+        "text": "The storage contract exposes delete_memory and the MCP tool describes memory_delete as permanent deletion by ID. Consolidation instead archives low-salience episodes and removes their vector-index entries; this review did not trace all physical deletion or derived-record cleanup paths.",
+        "sources": [
+          "storage_contract",
+          "tools",
+          "consolidation"
+        ]
+      },
+      {
+        "text": "Retrieval queries accept text, optional embedding, channel, person, namespace, time context, result limit, and budget. The default query budget caps candidate gathering at 10,000 or 250 ms. The README describes vector, temporal, salience, social, channel, full-text and frecency signals.",
+        "sources": [
+          "retrieval",
+          "readme"
+        ]
+      },
+      {
+        "text": "Namespace is optional and caller-supplied. Context generation filters semantic records by namespace; when a channel is supplied it lists episodes by channel instead of using the namespace-filtered episode query. Semantic fact and preference query APIs do not accept a namespace. The README recommends separate database files for physical project isolation.",
+        "sources": [
+          "types",
+          "context",
+          "semantic",
+          "readme"
+        ]
+      },
+      {
+        "text": "The Muse gateway reads only the reserved export namespace, rechecks records, applies disclosure and response caps, and fails closed on audit or budget errors. This is a separate explicit sharing path, not evidence that ordinary namespace filters enforce caller authorization.",
+        "sources": [
+          "gateway",
+          "security"
+        ]
+      },
+      {
+        "text": "Source metadata and typed links preserve some origin and correction context, but the inspected model does not require claim-level citation spans. README describes reference-resolution grading as structural local checking, not independent verification of truth.",
+        "sources": [
+          "types",
+          "semantic",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval accuracy and unanswerable abstention — unmeasured. Ranking signals and limits are implemented; the fixture specifies probes, but none were adjudicated.",
+        "sources": [
+          "retrieval",
+          "readme",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured. Supersedes links and salience changes are implemented; no correction workload was run.",
+        "sources": [
+          "semantic",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Deletion leak rate — unmeasured. A delete API/tool is exposed; no delete operation or post-delete probe was run.",
+        "sources": [
+          "storage_contract",
+          "tools",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Scope isolation leak rate — unmeasured. Optional filters have the code-path limits described above; no permitted/forbidden scope workload was run.",
+        "sources": [
+          "context",
+          "semantic",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Evidence support precision and citation coverage — unmeasured. Source metadata exists; no claim/evidence outputs were scored.",
+        "sources": [
+          "types",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Retrieval latency — unmeasured. The source defines a per-query work cap; no latency samples were collected.",
+        "sources": [
+          "retrieval",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Write-to-recall delay — unmeasured. No timed writes or retrieval probes were run.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Tokens and cost — unmeasured. No model usage or provider charges were collected.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Storage efficiency — unmeasured. No corpus-attributed storage measurement was collected.",
+        "sources": [
+          "sqlite",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      "The review is bounded to the current official README, selected core types and store/retrieval/context code, SQLite setup, consolidation, MCP tool surface, and security/gateway documentation. It did not inspect every database operation, inference path, PostgreSQL adapter, sync path, plugin, or deployment configuration.",
+      "The listed upstream was verified through the official GitHub repository and current main commit endpoint; source was reviewed through official SHA-pinned GitHub pages without a local checkout. The expected docs/architecture.md path is absent at the reviewed head.",
+      "No Cortex runtime, tests, or benchmark was run. Runtime correctness, answer quality, abstention, deployed isolation, full physical deletion, latency, write-to-recall delay, token/cost, and storage efficiency remain unknown.",
+      "Namespace is an optional filter rather than an identity-bound authorization guarantee in the inspected core APIs. Separate database files are the README's recommended physical isolation mechanism."
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Cortex runtime, tests, or benchmark workload was executed. Source observations and upstream-published figures are not measurements from this project.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

@@ -1,0 +1,296 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "ai-brain-starter",
+    "name": "AI Brain Starter",
+    "repository": "https://github.com/mycelium-hq/ai-brain-starter",
+    "branch": "main",
+    "revision": "6bdf33c8067725085de38a1d518354a832c48cfd",
+    "reviewed_at": "2026-11-24T19:36:38Z",
+    "review_timezone": "UTC (2026-11-24 11:36:38 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/mycelium-hq/ai-brain-starter/blob/6bdf33c8067725085de38a1d518354a832c48cfd/README.md","checked_urls":["https://github.com/mycelium-hq/ai-brain-starter/blob/6bdf33c8067725085de38a1d518354a832c48cfd/README.md","https://github.com/mycelium-hq/ai-brain-starter/blob/6bdf33c8067725085de38a1d518354a832c48cfd/SECURITY.md","https://github.com/mycelium-hq/ai-brain-starter/blob/6bdf33c8067725085de38a1d518354a832c48cfd/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "A local-first Claude Code and Obsidian vault setup whose memory is represented by Markdown notes and an index, with hooks and session workflows for routing, checks, and capture. This review reports inspected sources, not measured outcomes.",
+    "atlas_locator": {
+      "ordinal": 37,
+      "name": "AI Brain Starter",
+      "slug": "ai-brain-starter",
+      "listed_repository": "https://github.com/mycelium-hq/ai-brain-starter",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/ai-brain-starter.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/mycelium-hq/ai-brain-starter/blob/6bdf33c8067725085de38a1d518354a832c48cfd/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/mycelium-hq/ai-brain-starter/blob/6bdf33c8067725085de38a1d518354a832c48cfd/README.md",
+      "https://github.com/mycelium-hq/ai-brain-starter/blob/6bdf33c8067725085de38a1d518354a832c48cfd/SECURITY.md",
+      "https://mycelium-ai.co/"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Current canonical public GitHub repository",
+        "path": "repository",
+        "symbol": "canonical repository and default branch main",
+        "url": "https://github.com/mycelium-hq/ai-brain-starter"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed main head patch",
+        "path": "commit patch",
+        "symbol": "full SHA 6bdf33c8067725085de38a1d518354a832c48cfd",
+        "url": "https://github.com/mycelium-hq/ai-brain-starter/commit/6bdf33c8067725085de38a1d518354a832c48cfd.patch"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "url": "https://github.com/mycelium-hq/ai-brain-starter/blob/6bdf33c8067725085de38a1d518354a832c48cfd/README.md"
+      },
+      {
+        "id": "memory",
+        "label": "Memory system guide",
+        "path": "docs/MEMORY_SYSTEM.md",
+        "url": "https://github.com/mycelium-hq/ai-brain-starter/blob/6bdf33c8067725085de38a1d518354a832c48cfd/docs/MEMORY_SYSTEM.md"
+      },
+      {
+        "id": "close",
+        "label": "Session close architecture and operations",
+        "path": "docs/SESSION_CLOSE.md",
+        "url": "https://github.com/mycelium-hq/ai-brain-starter/blob/6bdf33c8067725085de38a1d518354a832c48cfd/docs/SESSION_CLOSE.md"
+      },
+      {
+        "id": "detector",
+        "label": "Closing signal hook implementation",
+        "path": "hooks/detect-closing-signal.py",
+        "symbol": "UserPromptSubmit preparation and context injection",
+        "url": "https://github.com/mycelium-hq/ai-brain-starter/blob/6bdf33c8067725085de38a1d518354a832c48cfd/hooks/detect-closing-signal.py"
+      },
+      {
+        "id": "finalizer",
+        "label": "Stop hook finalizer implementation",
+        "path": "scripts/session-end-hook.sh",
+        "symbol": "fallback, aggregation, retention, snapshot",
+        "url": "https://github.com/mycelium-hq/ai-brain-starter/blob/6bdf33c8067725085de38a1d518354a832c48cfd/scripts/session-end-hook.sh"
+      },
+      {
+        "id": "security",
+        "label": "Official security guide",
+        "path": "SECURITY.md",
+        "url": "https://github.com/mycelium-hq/ai-brain-starter/blob/6bdf33c8067725085de38a1d518354a832c48cfd/SECURITY.md"
+      },
+      {
+        "id": "site",
+        "label": "Official project website",
+        "path": "project website",
+        "url": "https://mycelium-ai.co/"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated system locator and attribution only",
+        "path": "data/memory-systems.json",
+        "url": "../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "AI Brain Starter is a local-first Claude Code and Obsidian vault setup. Its memory model is Markdown notes plus an index, while hooks and session workflows route context, check operations, and capture session outcomes.",
+        "sources": [
+          "readme",
+          "memory"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The documented project-memory directory contains a MEMORY.md index and one Markdown file per memory, with YAML fields for name, description, and type. The five documented types are user, feedback, project, reference, and optional discovery. The index is loaded up to 200 lines; individual notes are read on demand based on their descriptions.",
+        "sources": [
+          "memory"
+        ]
+      },
+      {
+        "text": "The session close flow has a UserPromptSubmit hook that detects closing signals, resolves paths, prepares a session file shell, and injects context; the model performs the content selection and writes; the Stop hook may backfill an empty file, rebuild aggregates, perform retention and a targeted git snapshot, then clean up the marker.",
+        "sources": [
+          "close",
+          "detector",
+          "finalizer"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Writes to the project memory are documented as Markdown file creation plus an updated MEMORY.md index. The guide gives admission rules, naming/frontmatter guidance, a 50-entry cap, and quarterly hygiene. The inspected session close path prebuilds a separate session artifact before the model fills its content.",
+        "sources": [
+          "memory",
+          "close",
+          "detector"
+        ]
+      },
+      {
+        "text": "Updates and removal of ordinary memory notes are described through file edits and pruning; the inspected memory guide does not define a dedicated write/update/delete API, tombstone, or memory revision ledger. The session close guide documents an interactive undo script for the most recent close, not a general memory deletion interface.",
+        "sources": [
+          "memory",
+          "close"
+        ]
+      },
+      {
+        "text": "Retrieval is index-led: MEMORY.md is available at session start, and matching individual notes are loaded on demand according to their relevance descriptions. The guide describes no programmatic query API or vector retrieval for this memory directory.",
+        "sources": [
+          "memory"
+        ]
+      },
+      {
+        "text": "The guide scopes local project memory to one Claude account and project path, and distinguishes it from team-shared and substrate-wide homes. It explicitly states that local memory does not automatically reach other accounts, tools, CI, teammates, or retrieval runtimes. This is routing/scope guidance, not tenant authorization.",
+        "sources": [
+          "memory"
+        ]
+      },
+      {
+        "text": "The note type and description classify a memory; feedback/project notes may preserve a rationale and use guidance, and the guide asks that memory be backed by a durable file. These practices do not amount to structured claim-level citations or an audit of later edits.",
+        "sources": [
+          "memory"
+        ]
+      },
+      {
+        "text": "The detector records operational metadata in a close marker. The session close guide documents local error logging, debug tracing, resource gating, a mutex, and deferred daily maintenance for heavier work. The memory model itself exposes no measured recall, latency, token, or cost telemetry.",
+        "sources": [
+          "detector",
+          "finalizer",
+          "close"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Index-led retrieval is described, but no recall probes or abstention adjudication were run.",
+        "sources": [
+          "memory",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "File edits, pruning, and hygiene guidance are documented; no correction or staleness probes were run.",
+        "sources": [
+          "memory",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Ordinary note removal is file-level; no post-delete leakage or backup/sync propagation checks were performed.",
+        "sources": [
+          "memory",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Account/path scope is described, but no cross-project or cross-account isolation probes were run.",
+        "sources": [
+          "memory",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Frontmatter classification and durable backing files are recommended; claim-to-source support was not adjudicated.",
+        "sources": [
+          "memory",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The close guide gives implementation budgets/estimates, but no latency distributions or post-write recall timings were collected.",
+        "sources": [
+          "close",
+          "detector",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The guide identifies index size and note loading as token-cost concerns; no token, cost, or storage measurements were collected.",
+        "sources": [
+          "memory",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code",
+        "evidence": "The source/docs expose a 200-line index bound, on-demand note reads, close-time logging/debugging, resource gating, and a mutex. These are source observations and documented budgets, not measurements.",
+        "sources": [
+          "memory",
+          "close",
+          "detector",
+          "finalizer"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded review covered selected official memory and session-close documentation plus the closing-signal and Stop-hook implementations at the verified SHA. The software, hooks, tests, and benchmarks were not run. The agent's adherence, real-world recall and abstention, note edit/delete propagation, access-control behavior, and measured resource use remain unestablished.",
+        "sources": [
+          "memory",
+          "close",
+          "detector",
+          "finalizer",
+          "security"
+        ]
+      },
+      {
+        "text": "Unknown means not established by the selected sources and inspection; it does not establish that a feature is absent elsewhere in the repository.",
+        "sources": [
+          "memory",
+          "close"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. The record is not a measured result. No runtime, tests, or benchmark workload was executed; the project metric definitions, fixture, and status file are protocol/status artifacts only.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      }
+    ]
+  }
+}

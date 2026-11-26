@@ -1,0 +1,612 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "dsh-continual-harness",
+    "name": "dsh-continual-harness",
+    "ordinal": 198,
+    "repository": "https://github.com/jasen215/dsh-continual-harness",
+    "listed_repository": "https://github.com/jasen215/dsh-continual-harness",
+    "repository_status": "explicit",
+    "branch": "main",
+    "revision": "0432de6bb0d66f420f1b40f3889833d14d385f9e",
+    "reviewed_at": "2026-11-25T11:30:42Z",
+    "review_timezone": "UTC (2026-11-25 03:30:42 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "dsh-continual-harness is a DeepSeek Harness plugin that stores reusable prompts, memories, skills, and subagent instructions in local session and shared global layers. It injects ranked context and supports model-proposed refinements with validation, history, rollback, optional review gates, and an explicit A/B benchmark tool. This is a bounded source review; the system, tests, and benchmarks were not run.",
+    "atlas_locator": {
+      "ordinal": 198,
+      "name": "dsh-continual-harness",
+      "slug": "dsh-continual-harness",
+      "listed_repository": "https://github.com/jasen215/dsh-continual-harness",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dsh-continual-harness.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "use": "Curated identity and locator attribution only; not assessment evidence."
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/jasen215/dsh-continual-harness/blob/0432de6bb0d66f420f1b40f3889833d14d385f9e/README.md",
+      "checked_urls": [
+        "https://github.com/jasen215/dsh-continual-harness/blob/0432de6bb0d66f420f1b40f3889833d14d385f9e/README.md",
+        "https://github.com/jasen215/dsh-continual-harness/blob/0432de6bb0d66f420f1b40f3889833d14d385f9e/SECURITY.md"
+      ],
+      "note": "The official pinned README publishes no contact email. The official SECURITY.md path returned File not found at the reviewed revision."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/jasen215/dsh-continual-harness/blob/0432de6bb0d66f420f1b40f3889833d14d385f9e/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/jasen215/dsh-continual-harness/blob/0432de6bb0d66f420f1b40f3889833d14d385f9e/README.md",
+      "https://github.com/jasen215/dsh-continual-harness/blob/0432de6bb0d66f420f1b40f3889833d14d385f9e/SECURITY.md"
+    ],
+    "contact_email_note": "No contact email was published in the checked official pinned README; the checked SECURITY.md path is absent at this revision. No commit or profile metadata, third-party directory, or inferred address was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated memory-systems roster",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[197], ordinal 198; name, slug, listed repository, explicit attribution and Atlas locator",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster attribution only",
+        "path": "content/systems/dsh-continual-harness.md",
+        "symbol": "Curated identity and locator context only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dsh-continual-harness.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "Public jasen215/dsh-continual-harness; main is the default branch; repository page shows latest commit prefix 0432de6",
+        "url": "https://github.com/jasen215/dsh-continual-harness"
+      },
+      {
+        "id": "head_feed",
+        "label": "Official main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Full current main head 0432de6bb0d66f420f1b40f3889833d14d385f9e; updated 2026-10-14T03:03:43Z",
+        "url": "https://github.com/jasen215/dsh-continual-harness/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Official current head commit",
+        "path": "commit/0432de6bb0d66f420f1b40f3889833d14d385f9e",
+        "symbol": "Full main head commit page for the reviewed revision",
+        "url": "https://github.com/jasen215/dsh-continual-harness/commit/0432de6bb0d66f420f1b40f3889833d14d385f9e"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Product, state layout, ESP data model, plugin integration, refinement governance, retrieval/injection, configuration, benchmark mechanics and stated limitations; checked for contact email",
+        "url": "https://github.com/jasen215/dsh-continual-harness/blob/0432de6bb0d66f420f1b40f3889833d14d385f9e/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy path",
+        "path": "SECURITY.md",
+        "symbol": "Checked official pinned path; GitHub returned File not found",
+        "url": "https://github.com/jasen215/dsh-continual-harness/blob/0432de6bb0d66f420f1b40f3889833d14d385f9e/SECURITY.md"
+      },
+      {
+        "id": "types",
+        "label": "Entry and refinement types",
+        "path": "src/types.ts",
+        "symbol": "HarnessEntry, RefinementProposal, AppliedRefinementEdit, lifecycle, project tags and provenance fields",
+        "url": "https://github.com/jasen215/dsh-continual-harness/blob/0432de6bb0d66f420f1b40f3889833d14d385f9e/src/types.ts"
+      },
+      {
+        "id": "storage",
+        "label": "Filesystem state storage",
+        "path": "src/storage.ts",
+        "symbol": "Schema migration, state validation, local/global directories, merge and persistence utilities",
+        "url": "https://github.com/jasen215/dsh-continual-harness/blob/0432de6bb0d66f420f1b40f3889833d14d385f9e/src/storage.ts"
+      },
+      {
+        "id": "refine",
+        "label": "Refinement validation and apply",
+        "path": "src/refine.ts",
+        "symbol": "Edit validation, blast-radius checks, versioning, fingerprints, growth guard and snapshot handling",
+        "url": "https://github.com/jasen215/dsh-continual-harness/blob/0432de6bb0d66f420f1b40f3889833d14d385f9e/src/refine.ts"
+      },
+      {
+        "id": "store",
+        "label": "HarnessStore",
+        "path": "src/store.ts",
+        "symbol": "Session/global state access, commit and scoped refinement event path",
+        "url": "https://github.com/jasen215/dsh-continual-harness/blob/0432de6bb0d66f420f1b40f3889833d14d385f9e/src/store.ts"
+      },
+      {
+        "id": "project",
+        "label": "Project tag derivation",
+        "path": "src/project.ts",
+        "symbol": "Workspace-aware project tag derived from session cwd/repository path",
+        "url": "https://github.com/jasen215/dsh-continual-harness/blob/0432de6bb0d66f420f1b40f3889833d14d385f9e/src/project.ts"
+      },
+      {
+        "id": "rollback",
+        "label": "Rollback projection",
+        "path": "src/rollback.ts",
+        "symbol": "Builds inverse edits from before/after snapshots and marks degraded legacy rollback",
+        "url": "https://github.com/jasen215/dsh-continual-harness/blob/0432de6bb0d66f420f1b40f3889833d14d385f9e/src/rollback.ts"
+      },
+      {
+        "id": "render",
+        "label": "Ranking and prompt rendering",
+        "path": "src/render.ts",
+        "symbol": "Query construction, project rank and per-kind ranked injection overview",
+        "url": "https://github.com/jasen215/dsh-continual-harness/blob/0432de6bb0d66f420f1b40f3889833d14d385f9e/src/render.ts"
+      },
+      {
+        "id": "projection",
+        "label": "Pre-step projection",
+        "path": "src/projection.ts",
+        "symbol": "Digest-based injection, session surface replacement and approximate injection event recording",
+        "url": "https://github.com/jasen215/dsh-continual-harness/blob/0432de6bb0d66f420f1b40f3889833d14d385f9e/src/projection.ts"
+      },
+      {
+        "id": "driver",
+        "label": "Automatic refinement driver",
+        "path": "src/driver.ts",
+        "symbol": "Turn/compaction gates, cooldown, re-entry handling and review outcomes",
+        "url": "https://github.com/jasen215/dsh-continual-harness/blob/0432de6bb0d66f420f1b40f3889833d14d385f9e/src/driver.ts"
+      },
+      {
+        "id": "audit",
+        "label": "Review gate audit",
+        "path": "src/audit.ts",
+        "symbol": "Append/read reviews.jsonl gate verdict records",
+        "url": "https://github.com/jasen215/dsh-continual-harness/blob/0432de6bb0d66f420f1b40f3889833d14d385f9e/src/audit.ts"
+      },
+      {
+        "id": "usage",
+        "label": "Injection telemetry",
+        "path": "src/usage.ts",
+        "symbol": "Scope-qualified use keys and approximate injection event aggregation",
+        "url": "https://github.com/jasen215/dsh-continual-harness/blob/0432de6bb0d66f420f1b40f3889833d14d385f9e/src/usage.ts"
+      },
+      {
+        "id": "wrapup",
+        "label": "Deterministic wrap-up suggestions",
+        "path": "src/wrapup.ts",
+        "symbol": "Uses local entry injection counts and global coverage to suggest keep/promote/archive",
+        "url": "https://github.com/jasen215/dsh-continual-harness/blob/0432de6bb0d66f420f1b40f3889833d14d385f9e/src/wrapup.ts"
+      },
+      {
+        "id": "skills",
+        "label": "Skill entry validation",
+        "path": "src/skills.ts",
+        "symbol": "Skill bundle relative path, file count and size constraints",
+        "url": "https://github.com/jasen215/dsh-continual-harness/blob/0432de6bb0d66f420f1b40f3889833d14d385f9e/src/skills.ts"
+      },
+      {
+        "id": "skills_fs",
+        "label": "Skill bundle reconciliation",
+        "path": "src/skills-fs.ts",
+        "symbol": "Harness-owned bundle writes/deletes, stale file cleanup and filesystem safety",
+        "url": "https://github.com/jasen215/dsh-continual-harness/blob/0432de6bb0d66f420f1b40f3889833d14d385f9e/src/skills-fs.ts"
+      },
+      {
+        "id": "approval",
+        "label": "Optional global approval gate",
+        "path": "src/approval.ts",
+        "symbol": "When configured, requires explicit approval before global write commits",
+        "url": "https://github.com/jasen215/dsh-continual-harness/blob/0432de6bb0d66f420f1b40f3889833d14d385f9e/src/approval.ts"
+      },
+      {
+        "id": "logfile",
+        "label": "Plugin file logging",
+        "path": "src/logfile.ts",
+        "symbol": "Scoped plugin logs, private file mode, rotation and non-fatal log failures",
+        "url": "https://github.com/jasen215/dsh-continual-harness/blob/0432de6bb0d66f420f1b40f3889833d14d385f9e/src/logfile.ts"
+      },
+      {
+        "id": "benchmark",
+        "label": "Explicit A/B benchmark contracts",
+        "path": "src/benchmark.ts",
+        "symbol": "Frozen cases, reference/candidate snapshots, candidate-delta validation and cell contracts",
+        "url": "https://github.com/jasen215/dsh-continual-harness/blob/0432de6bb0d66f420f1b40f3889833d14d385f9e/src/benchmark.ts"
+      },
+      {
+        "id": "score",
+        "label": "Code-owned benchmark decisions",
+        "path": "src/score.ts",
+        "symbol": "Paired score aggregation and ACCEPTED/REJECTED/INCONCLUSIVE rules",
+        "url": "https://github.com/jasen215/dsh-continual-harness/blob/0432de6bb0d66f420f1b40f3889833d14d385f9e/src/score.ts"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Definitions and procedures for retrieval, correction, deletion, scope, evidence and efficiency metrics",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned synthetic workload specification; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared run-status record; not a measured result for this system",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes dsh-continual-harness as a DeepSeek Harness plugin for persistent experience, periodic review/refinement, cross-session knowledge sharing, and rollback. It integrates with host agent, session, LLM, tool, and system-prompt capabilities; it is a plugin rather than a standalone memory database.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The catalog resolves ordinal 198 to dsh-continual-harness, slug dsh-continual-harness, listed repository https://github.com/jasen215/dsh-continual-harness, and explicit repository attribution. The pinned Atlas record is retained only for curated identity/locator attribution, not as assessment evidence.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The official repository identifies main as the default branch. Its current main commit feed reports full head 0432de6bb0d66f420f1b40f3889833d14d385f9e, updated 2026-10-14T03:03:43Z; this review pins source citations to that SHA.",
+        "sources": [
+          "repo",
+          "head_feed",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The package separates domain/types, filesystem state, refinement validation, store/event integration, rendering/projection, automatic driver, review audit, usage telemetry, skill materialization, and optional benchmark evaluation. The README describes it as a Cordis plugin mounted into a DeepSeek Harness profile.",
+        "sources": [
+          "readme",
+          "types",
+          "store",
+          "driver"
+        ]
+      },
+      {
+        "text": "Experience state schema version 1 stores four entry kinds—prompt, memory, skill, and subagent—with stable id, version, content, and updatedAt. Entries may also carry title, project tags, blast radius, protection, source-session metadata, lifecycle state, pin state, and last-injected timestamp.",
+        "sources": [
+          "readme",
+          "types"
+        ]
+      },
+      {
+        "text": "The shared harness root contains harness_state.json and append-only refinements.jsonl; session-specific state and history live under sessions/<sessionKey>/. Skill entries are materialized as SKILL.md bundles in the configured DSH skills directory. Global and local entries merge with a local same-kind/id entry shadowing the global one.",
+        "sources": [
+          "readme",
+          "storage"
+        ]
+      },
+      {
+        "text": "Pre-step projection injects a digest-marked model-visible user message and replaces the prior plugin block in the session surface on subsequent updates. The default stable anchor ranks against the session opening request and project cwd; query mode can instead use the current user request. The README documents a capped per-kind ranking.",
+        "sources": [
+          "readme",
+          "render",
+          "projection"
+        ]
+      },
+      {
+        "text": "The automatic review driver can gate on a turn interval or compaction end, observes a cooldown and re-entry guard, and delegates approved plans to the refinement coordinator. Manual entry points include harness_refine and an optional /refine command; wrap-up suggestions are deterministic.",
+        "sources": [
+          "readme",
+          "driver",
+          "wrapup"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Create, update, and delete proposals are validated before application. Updates and deletes require a reason; create/update need content; the base system prompt is immutable; protection and scope legality are checked; growth is capped, and update planning can compare an entry fingerprint to detect a changed baseline.",
+        "sources": [
+          "readme",
+          "refine"
+        ]
+      },
+      {
+        "text": "A committed refinement increments entry versions, records applied edits and before/after snapshots in the append-only refinement history, and can be rolled back by refinement id. Delete removes the entry from active state; archive is an update lifecycle flag that hides an entry from injection/materialization and can be reversed.",
+        "sources": [
+          "readme",
+          "types",
+          "refine",
+          "store",
+          "rollback"
+        ]
+      },
+      {
+        "text": "Local and global writes are distinct. The default tool scope is global; local refinement cannot modify a global entry in place, and a declared general blast radius cannot target local scope while a session blast radius cannot target global scope. Global approval is disabled by default and can be enabled as an explicit pre-commit gate.",
+        "sources": [
+          "readme",
+          "refine",
+          "approval"
+        ]
+      },
+      {
+        "text": "Retrieval is ranked prompt projection rather than a general search API: the renderer builds a bounded query, scores title/content overlap, then applies project rank, recency, id ordering, and per-kind limits. The README says project tags rank matching entries upward but do not filter entries out.",
+        "sources": [
+          "readme",
+          "render"
+        ]
+      },
+      {
+        "text": "When a skill entry changes, the plugin validates auxiliary bundle paths and reconciles owned SKILL.md bundles; deletion/rollback removes harness-owned materialized files while avoiding writes into unrelated user-owned bundles. This is filesystem synchronization, not a separate durable skill store.",
+        "sources": [
+          "readme",
+          "skills",
+          "skills_fs",
+          "rollback"
+        ]
+      },
+      {
+        "text": "The optional explicit benchmark tool freezes cases and reference snapshots, evaluates same-round reference/candidate cells, checks that the candidate is exactly one recorded refinement delta, and computes its decision in code. This is a product feature description; it is not a benchmark run for this review.",
+        "sources": [
+          "readme",
+          "benchmark",
+          "score"
+        ]
+      }
+    ],
+    "scope": [
+      {
+        "text": "The local layer is keyed by session id and the global layer is cross-session. These are application storage scopes; the inspected implementation does not establish tenant-level authorization or hard security isolation.",
+        "sources": [
+          "readme",
+          "storage",
+          "store"
+        ]
+      },
+      {
+        "text": "Project tags are stamped from the applying session's working directory and affect ranking priority. They do not filter memories by project, so this feature is relevance ordering rather than project isolation.",
+        "sources": [
+          "types",
+          "render",
+          "project",
+          "readme"
+        ]
+      },
+      {
+        "text": "Blast radius is a declared validity scope checked against target layer: general effects are rejected for local writes and session effects are rejected for global writes. Entries without a declaration remain undeclared rather than having scope inferred.",
+        "sources": [
+          "types",
+          "refine",
+          "storage"
+        ]
+      },
+      {
+        "text": "Skill bundles materialize under one configured DSH skills directory; session-local versus global entry origin is not a separate filesystem namespace. Cross-session and cross-layer side effects were not dynamically tested.",
+        "sources": [
+          "readme",
+          "skills_fs"
+        ]
+      }
+    ],
+    "provenance": [
+      {
+        "text": "A refinement journal record includes action, kind, id, reason, applied outcome, and before/after entry snapshots. This supports change inspection and rollback, but the inspected record shape does not provide a complete independent source citation for every fact or a separately authenticated actor identity.",
+        "sources": [
+          "readme",
+          "types",
+          "refine",
+          "storage"
+        ]
+      },
+      {
+        "text": "Entry metadata can hold sourceSession, lifecycle state, pinned state, and lastInjectedAt, while project tags are stamped from the session environment. Injection usage telemetry records that the plugin attempted to include an entry; its own source describes usage as approximate and not proof that the model read or cited it.",
+        "sources": [
+          "types",
+          "project",
+          "usage",
+          "render"
+        ]
+      },
+      {
+        "text": "Automatic review verdicts can be appended to reviews.jsonl. The plugin log is JSONL, private-mode 0600, size-rotated, and configured logging failures do not interrupt the agent loop. These records improve operational traceability but do not establish correctness of a stored memory.",
+        "sources": [
+          "readme",
+          "audit",
+          "logfile",
+          "driver"
+        ]
+      }
+    ],
+    "efficiency_observability": [
+      {
+        "text": "The README exposes limits for trajectory characters, planner tokens, prefix-cache route size, injected entries per kind, and automatic refinement cadence/cooldown. Digest-based projection avoids republishing unchanged content; stable injection can preserve a provider prefix, as a design choice rather than a measured latency gain.",
+        "sources": [
+          "readme",
+          "projection",
+          "render",
+          "driver"
+        ]
+      },
+      {
+        "text": "Operational surfaces include append-only refinement and review JSONL, approximate usage events, and a rotated plugin log. Usage events are lazily loaded and aggregated; they do not prove consumption. No latency, token, cost, or storage figures were collected in this review.",
+        "sources": [
+          "readme",
+          "audit",
+          "usage",
+          "logfile"
+        ]
+      },
+      {
+        "text": "The README documents limitations including last-writer-wins concurrent writes, automatic refinement failures that are logged without interrupting the session, compaction gate dependence on a loaded capability, and the absence of a real-LLM end-to-end test setup in the inspected project documentation.",
+        "sources": [
+          "readme",
+          "driver",
+          "store"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "Ranked injection is present, but no answerable or unanswerable retrieval cases were run or scored.",
+        "sources": [
+          "render",
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Versioned updates and rollback exist; no correction sequence or post-correction probe was evaluated.",
+        "sources": [
+          "refine",
+          "rollback",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leak rate",
+        "status": "unmeasured",
+        "evidence": "Delete and archive paths are source-visible; no deletion request or residual-data probe was run.",
+        "sources": [
+          "refine",
+          "storage",
+          "skills_fs",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation leak rate",
+        "status": "unmeasured",
+        "evidence": "Local/global layers and project ranking are documented; no forbidden cross-session or cross-project probe was run.",
+        "sources": [
+          "storage",
+          "render",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Change journals and approximate injection telemetry exist, but no generated factual claims were adjudicated against retained evidence.",
+        "sources": [
+          "types",
+          "usage",
+          "audit",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "Ranking and projection are implemented; no retrieval timing samples were collected.",
+        "sources": [
+          "render",
+          "projection",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Writes and next-step projection are available; no acknowledged-write probe schedule was run.",
+        "sources": [
+          "refine",
+          "projection",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "The README describes planner/provider token limits and model calls, but no usage or price accounting was collected.",
+        "sources": [
+          "readme",
+          "driver",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "State, history, telemetry, logs, skills, and optional benchmark stores are described; no corpus-attributed persistent-byte measurement was made.",
+        "sources": [
+          "readme",
+          "storage",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a selected read-only source review of the official README and entry, store, refinement, render/projection, driver, telemetry, audit, skill, and benchmark code at the verified head. It does not trace every host capability, packaging path, migration, or downstream DSH runtime behavior.",
+        "sources": [
+          "readme",
+          "types",
+          "store",
+          "refine",
+          "render",
+          "projection",
+          "driver",
+          "skills",
+          "benchmark"
+        ]
+      },
+      {
+        "text": "No runtime, tests, or benchmarks were run. Source-visible validation and benchmark machinery do not establish retrieval quality, deletion completeness, isolation, rollback reliability under faults, concurrency safety, or performance.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "The review identifies storage-layer scope distinctions, not a security boundary. Real-user authorization, global approval configuration, concurrent multi-process behavior, failure recovery, and skill-file interactions remain deployment-dependent or unverified.",
+        "sources": [
+          "storage",
+          "approval",
+          "skills_fs",
+          "readme"
+        ]
+      },
+      {
+        "text": "The official README was checked for contact and publishes no email; SECURITY.md is absent at the reviewed SHA. No other contact source was used.",
+        "sources": [
+          "readme",
+          "security"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No dsh-continual-harness runtime, tests, or benchmark workload was executed. Source-visible capabilities, the project fixture, and metric definitions are not measurements.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    },
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "This task recorded a source assessment only. No measurements are attributed to dsh-continual-harness."
+    }
+  }
+}

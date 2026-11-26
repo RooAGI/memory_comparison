@@ -1,0 +1,410 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 227,
+    "slug": "engram-provable",
+    "name": "Engram Provable",
+    "repository": "https://github.com/Harshitk-cp/engram",
+    "listed_repository": "https://github.com/Harshitk-cp/engram",
+    "branch": "main",
+    "revision": "4a3d20487a370d0cca6eaaf97861a6d5d0bcbe37",
+    "reviewed_at": "2026-11-25T19:56:43Z",
+    "review_timezone": "UTC (2026-11-25 11:56:43 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Engram is a Go memory service for AI agents with HTTP and MCP interfaces and PostgreSQL/pgvector storage. It models semantic beliefs with episodic, procedural and working memory, tenant and subject bindings, hybrid recall, and provenance/audit features. This is a source review; no runtime, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 227,
+      "name": "Engram Provable",
+      "slug": "engram-provable",
+      "listed_repository": "https://github.com/Harshitk-cp/engram",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/engram-provable.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/Harshitk-cp/engram/blob/4a3d20487a370d0cca6eaaf97861a6d5d0bcbe37/README.md",
+      "checked_urls": [
+        "https://github.com/Harshitk-cp/engram/blob/4a3d20487a370d0cca6eaaf97861a6d5d0bcbe37/README.md"
+      ],
+      "note": "Checked only the official pinned repository README for a published contact email; none was found. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/Harshitk-cp/engram/blob/4a3d20487a370d0cca6eaaf97861a6d5d0bcbe37/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/Harshitk-cp/engram/blob/4a3d20487a370d0cca6eaaf97861a6d5d0bcbe37/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the official pinned README.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated memory systems roster",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[226], ordinal 227; name, slug, explicit listed repository, Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/engram-provable.md",
+        "symbol": "Pinned identity/locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/engram-provable.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "GitHub repository page",
+        "symbol": "Canonical repository Harshitk-cp/engram; official page names main branch",
+        "url": "https://github.com/Harshitk-cp/engram"
+      },
+      {
+        "id": "head",
+        "label": "Verified current main head",
+        "path": "Official Git smart transport and shallow checkout",
+        "symbol": "git ls-remote --symref reported HEAD -> refs/heads/main at 4a3d20487a370d0cca6eaaf97861a6d5d0bcbe37; shallow checkout main resolved to same SHA",
+        "url": "https://github.com/Harshitk-cp/engram/commit/4a3d20487a370d0cca6eaaf97861a6d5d0bcbe37"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Product, interfaces, architecture, types, scopes, trust, benchmark claims; official contact-email check",
+        "url": "https://github.com/Harshitk-cp/engram/blob/4a3d20487a370d0cca6eaaf97861a6d5d0bcbe37/README.md"
+      },
+      {
+        "id": "memory-domain",
+        "label": "Memory domain model",
+        "path": "internal/domain/memory.go",
+        "symbol": "Memory fields, provenance/evidence values, binding and decay defaults",
+        "url": "https://github.com/Harshitk-cp/engram/blob/4a3d20487a370d0cca6eaaf97861a6d5d0bcbe37/internal/domain/memory.go"
+      },
+      {
+        "id": "memory-handler",
+        "label": "Memory HTTP handler",
+        "path": "internal/api/handlers/memory.go",
+        "symbol": "Create, scope resolution, retrieve, delete, archive restore and quarantine routes",
+        "url": "https://github.com/Harshitk-cp/engram/blob/4a3d20487a370d0cca6eaaf97861a6d5d0bcbe37/internal/api/handlers/memory.go"
+      },
+      {
+        "id": "router",
+        "label": "HTTP route registration",
+        "path": "internal/api/router.go",
+        "symbol": "Memory CRUD/admin patch and quarantine route registration and authorization middleware",
+        "url": "https://github.com/Harshitk-cp/engram/blob/4a3d20487a370d0cca6eaaf97861a6d5d0bcbe37/internal/api/router.go"
+      },
+      {
+        "id": "admin-handler",
+        "label": "Admin memory handler",
+        "path": "internal/api/handlers/admin.go",
+        "symbol": "Admin-scoped PATCH correction and review actions",
+        "url": "https://github.com/Harshitk-cp/engram/blob/4a3d20487a370d0cca6eaaf97861a6d5d0bcbe37/internal/api/handlers/admin.go"
+      },
+      {
+        "id": "auth",
+        "label": "Authentication middleware",
+        "path": "internal/api/middleware/auth.go",
+        "symbol": "API key/session authentication, tenant context, write/admin scopes",
+        "url": "https://github.com/Harshitk-cp/engram/blob/4a3d20487a370d0cca6eaaf97861a6d5d0bcbe37/internal/api/middleware/auth.go"
+      },
+      {
+        "id": "memory-store",
+        "label": "Memory persistence and recall",
+        "path": "internal/store/memory.go",
+        "symbol": "Tenant-filtered reads, vectors, full-text and hybrid recall, deletion snapshots, purge, archive and restore",
+        "url": "https://github.com/Harshitk-cp/engram/blob/4a3d20487a370d0cca6eaaf97861a6d5d0bcbe37/internal/store/memory.go"
+      },
+      {
+        "id": "memory-service",
+        "label": "Memory service",
+        "path": "internal/service/memory.go",
+        "symbol": "Create/reinforcement/contradiction behavior, quarantine release/reject, delete and recall",
+        "url": "https://github.com/Harshitk-cp/engram/blob/4a3d20487a370d0cca6eaaf97861a6d5d0bcbe37/internal/service/memory.go"
+      },
+      {
+        "id": "hybrid",
+        "label": "Hybrid recall service",
+        "path": "internal/service/hybrid_recall.go",
+        "symbol": "Vector and graph recall combination and salience score computation",
+        "url": "https://github.com/Harshitk-cp/engram/blob/4a3d20487a370d0cca6eaaf97861a6d5d0bcbe37/internal/service/hybrid_recall.go"
+      },
+      {
+        "id": "audit-store",
+        "label": "Mutation audit store",
+        "path": "internal/store/learning.go",
+        "symbol": "Mutation history and tenant audit-chain verification",
+        "url": "https://github.com/Harshitk-cp/engram/blob/4a3d20487a370d0cca6eaaf97861a6d5d0bcbe37/internal/store/learning.go"
+      },
+      {
+        "id": "audit-handler",
+        "label": "Audit API",
+        "path": "internal/api/handlers/audit.go",
+        "symbol": "Verify, chain and NDJSON export endpoints",
+        "url": "https://github.com/Harshitk-cp/engram/blob/4a3d20487a370d0cca6eaaf97861a6d5d0bcbe37/internal/api/handlers/audit.go"
+      },
+      {
+        "id": "admin",
+        "label": "Admin memory actions",
+        "path": "internal/service/admin.go",
+        "symbol": "Admin correction, redaction and subject crypto-shred behavior",
+        "url": "https://github.com/Harshitk-cp/engram/blob/4a3d20487a370d0cca6eaaf97861a6d5d0bcbe37/internal/service/admin.go"
+      },
+      {
+        "id": "schema",
+        "label": "Initial database schema",
+        "path": "migrations/001_init.up.sql",
+        "symbol": "PostgreSQL tenant, agent, memory, episode and vector schema",
+        "url": "https://github.com/Harshitk-cp/engram/blob/4a3d20487a370d0cca6eaaf97861a6d5d0bcbe37/migrations/001_init.up.sql"
+      },
+      {
+        "id": "hnsw",
+        "label": "Vector index migration",
+        "path": "migrations/008_hnsw_index.up.sql",
+        "symbol": "HNSW vector indexes for memories and other vector-backed records",
+        "url": "https://github.com/Harshitk-cp/engram/blob/4a3d20487a370d0cca6eaaf97861a6d5d0bcbe37/migrations/008_hnsw_index.up.sql"
+      },
+      {
+        "id": "audit-migration",
+        "label": "Audit-chain migration",
+        "path": "migrations/019_audit_chain_complete.up.sql",
+        "symbol": "Versioned audit hash encoding, append-only guard, chain-head validation",
+        "url": "https://github.com/Harshitk-cp/engram/blob/4a3d20487a370d0cca6eaaf97861a6d5d0bcbe37/migrations/019_audit_chain_complete.up.sql"
+      },
+      {
+        "id": "decay-migration",
+        "label": "Decay audit policy",
+        "path": "migrations/029_audit_exclude_decay.up.sql",
+        "symbol": "Routine decay mutation entries remain unsealed and are excluded from audit-chain verification",
+        "url": "https://github.com/Harshitk-cp/engram/blob/4a3d20487a370d0cca6eaaf97861a6d5d0bcbe37/migrations/029_audit_exclude_decay.up.sql"
+      },
+      {
+        "id": "observability-middleware",
+        "label": "Request observability middleware",
+        "path": "internal/api/middleware/observability.go",
+        "symbol": "Authenticated request duration and coarse operation recording",
+        "url": "https://github.com/Harshitk-cp/engram/blob/4a3d20487a370d0cca6eaaf97861a6d5d0bcbe37/internal/api/middleware/observability.go"
+      },
+      {
+        "id": "observability-registry",
+        "label": "Observability registry",
+        "path": "internal/observability/registry.go",
+        "symbol": "Process-local per-tenant counts, error totals, and bucketed latency estimates",
+        "url": "https://github.com/Harshitk-cp/engram/blob/4a3d20487a370d0cca6eaaf97861a6d5d0bcbe37/internal/observability/registry.go"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Comparison metric definitions; not Engram results",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Shared benchmark status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution state; no Engram measurement claimed",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned comparison workload; not an Engram result",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Engram as memory infrastructure for agents, delivered through HTTP or MCP with PostgreSQL/pgvector storage and an admin console. No individual maintainer identity is asserted.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The curated roster resolves this review to ordinal 227, Engram Provable, slug engram-provable, and the explicit listed locator Harshitk-cp/engram. Atlas is retained only as the pinned roster attribution.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The service separates Go domain, service, store, API, and middleware layers. A memory records type/content, provenance and confidence, freshness currency, temporal metadata, embedding metadata, and tenant/agent plus subject bindings. Separate stores and APIs cover episodic, procedural, schema, graph/entity, and working memory.",
+        "sources": [
+          "readme",
+          "memory-domain",
+          "schema"
+        ]
+      },
+      {
+        "text": "Semantic retrieval uses vector similarity and an optional PostgreSQL full-text/vector hybrid path; the hybrid query uses reciprocal-rank fusion. Graph-enabled recall blends vector and graph scores. HNSW indexes are declared in migrations; this source inspection does not establish the deployed database index state.",
+        "sources": [
+          "memory-store",
+          "hybrid",
+          "hnsw"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Create accepts typed content, source/provenance, confidence, event date and optional anchor/session IDs. The server derives tenant from authentication and computes the binding from scope IDs. Service logic can reinforce similar memories or register contradictions; correction is exposed through an admin-scoped PATCH route.",
+        "sources": [
+          "memory-handler",
+          "memory-service",
+          "router",
+          "admin-handler"
+        ]
+      },
+      {
+        "text": "The ordinary DELETE path snapshots content and a content hash to mutation_log before physically deleting the memory in a transaction. Archive/restore is a separate soft-state path. Dedicated subject purge/redaction handles subject-bound and derived content; quarantine reject records its decision and deletes the held row, while release recomputes its normal binding.",
+        "sources": [
+          "memory-store",
+          "memory-service",
+          "memory-handler",
+          "admin"
+        ]
+      },
+      {
+        "text": "Recall combines vector, full-text hybrid, or graph-enabled flows and scores evidence confidence and freshness currency alongside relevance. Queries filter by tenant and agent and may additionally filter by binding, anchor/session, type, confidence, and time. Quarantined and archived rows are excluded from normal recall.",
+        "sources": [
+          "memory-store",
+          "hybrid",
+          "memory-handler"
+        ]
+      },
+      {
+        "text": "Tenant identity comes from authenticated request context; store queries use tenant predicates. Private is the default binding, anchor/session bind to a subject or conversation, canon is tenant-shared, and quarantine remains outside active recall. The inspected boundary is application and query filtering; database row-level security and adversarial isolation were not established.",
+        "sources": [
+          "auth",
+          "memory-handler",
+          "memory-store",
+          "memory-domain"
+        ]
+      },
+      {
+        "text": "Provenance categories and evidence types are explicit model fields, and quarantine provides a separate review path. The per-tenant SHA-256 mutation chain is append-only at the database layer and verifies row links and the recorded head. It does not prove factual truth, and routine decay mutations are logged without being sealed into the chain.",
+        "sources": [
+          "memory-domain",
+          "memory-service",
+          "audit-store",
+          "audit-handler",
+          "audit-migration",
+          "decay-migration"
+        ]
+      },
+      {
+        "text": "HNSW indices and bounded vector candidates are code-visible efficiency mechanisms. Middleware records coarse per-tenant operation counts, 5xx errors, and bucketed latency percentiles in a process-local registry. This review collected no runtime, token, cost, or storage observations.",
+        "sources": [
+          "hnsw",
+          "memory-store",
+          "observability-middleware",
+          "observability-registry"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Vector, hybrid and graph retrieval paths were inspected; no answerability or abstention workload was run.",
+        "sources": [
+          "memory-store",
+          "hybrid",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Reinforcement, contradiction, confidence/currency and admin update code were inspected; no correction or stale-value probes were run.",
+        "sources": [
+          "memory-service",
+          "memory-store",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Delete, archive, restore, redaction and purge code were inspected; no post-delete or backup-erasure probe was run.",
+        "sources": [
+          "memory-store",
+          "admin",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Tenant, agent, anchor, session, canon and quarantine filtering were inspected; no isolation workload was run.",
+        "sources": [
+          "auth",
+          "memory-handler",
+          "memory-store",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source/provenance fields, quarantine and mutation history were inspected; response claim support and citation coverage were not scored.",
+        "sources": [
+          "memory-domain",
+          "audit-store",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The code exposes process-local request latency summaries, but no timings or write-to-recall schedule were collected.",
+        "sources": [
+          "observability-registry",
+          "metrics",
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No token, cost, or persistent storage measurements were collected.",
+        "sources": [
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a source review at the verified current main head. Engram, its tests, and benchmarks were not run.",
+        "sources": [
+          "repo",
+          "head",
+          "readme"
+        ]
+      },
+      {
+        "text": "The README advertises LongMemEval scores; this review did not reproduce or independently adjudicate them. Runtime retrieval quality, abstention, isolation under adversarial conditions, backup erasure, deployment state, sustained latency, cost, and scale remain unknown.",
+        "sources": [
+          "readme",
+          "memory-store",
+          "auth",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Engram runtime, tests, or benchmarks were run. Project metrics and fixtures are comparison definitions, not Engram results."
+    }
+  }
+}

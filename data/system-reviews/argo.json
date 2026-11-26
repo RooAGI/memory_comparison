@@ -1,0 +1,341 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 69,
+    "slug": "argo",
+    "name": "ARGO",
+    "repository": "https://github.com/derekhu0002/Argo",
+    "listed_repository": "https://github.com/derekhu0002/Argo",
+    "branch": "main",
+    "revision": "607a1c1dd0cd310fdfcb1ae8f060f01675142a7b",
+    "reviewed_at": "2026-11-24T21:35:08Z",
+    "review_timezone": "UTC (2026-11-24 13:35:08 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "ARGO is a repository-centered software delivery framework that uses an ArchiMate knowledge graph as durable project context. A canonical JSON architecture document is validated and read through MCP; Neo4j and its vector indexes act as derived semantic projections for query and context assembly. This is a pinned source review, not an execution or benchmark assessment.",
+    "atlas_locator": {
+      "ordinal": 69,
+      "name": "ARGO",
+      "slug": "argo",
+      "listed_repository": "https://github.com/derekhu0002/Argo",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/argo.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/derekhu0002/Argo/blob/607a1c1dd0cd310fdfcb1ae8f060f01675142a7b/README.md",
+      "note": "No contact email was published in the official pinned README. The official SECURITY.md path returned a File not found page at this revision."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/derekhu0002/Argo/blob/607a1c1dd0cd310fdfcb1ae8f060f01675142a7b/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/derekhu0002/Argo/blob/607a1c1dd0cd310fdfcb1ae8f060f01675142a7b/README.md",
+      "https://github.com/derekhu0002/Argo/blob/607a1c1dd0cd310fdfcb1ae8f060f01675142a7b/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated roster entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[68], ordinal 69: name, slug, listed repository locator, and Atlas source attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas attribution source only",
+        "path": "content/systems/argo.md",
+        "symbol": "Catalog attribution; excluded from behavior assessment",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/argo.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "",
+        "symbol": "Canonical repository derekhu0002/Argo; repository page identifies main as default branch and latest short commit 607a1c1",
+        "url": "https://github.com/derekhu0002/Argo"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed current main head",
+        "path": "commit",
+        "symbol": "Full current head SHA 607a1c1dd0cd310fdfcb1ae8f060f01675142a7b; matches latest commit shown on official repository page",
+        "url": "https://github.com/derekhu0002/Argo/commit/607a1c1dd0cd310fdfcb1ae8f060f01675142a7b"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Product description, architecture overview, workflow, install and operation guidance",
+        "url": "https://github.com/derekhu0002/Argo/blob/607a1c1dd0cd310fdfcb1ae8f060f01675142a7b/README.md"
+      },
+      {
+        "id": "overall",
+        "label": "Overall architecture contract",
+        "path": "OVERALL_ARCHITECTURE.md",
+        "symbol": "Canonical JSON authority, public query boundaries, scope, semantic retrieval and provenance contracts",
+        "url": "https://github.com/derekhu0002/Argo/blob/607a1c1dd0cd310fdfcb1ae8f060f01675142a7b/OVERALL_ARCHITECTURE.md"
+      },
+      {
+        "id": "schema",
+        "label": "Canonical graph schema",
+        "path": ".argo/schema/SystemArchitecture.schema.json",
+        "symbol": "Graph, Element, ArchitectureRelationship, and View object contracts and ArchiMate type fields",
+        "url": "https://github.com/derekhu0002/Argo/blob/607a1c1dd0cd310fdfcb1ae8f060f01675142a7b/.argo/schema/SystemArchitecture.schema.json"
+      },
+      {
+        "id": "mcp",
+        "label": "System architecture MCP boundary",
+        "path": ".argo/scripts/systemarchitecture-mcp-server.js",
+        "symbol": "getSystemArchitecture, applySystemArchitectureMutation, validation and typed query response boundary",
+        "url": "https://github.com/derekhu0002/Argo/blob/607a1c1dd0cd310fdfcb1ae8f060f01675142a7b/.argo/scripts/systemarchitecture-mcp-server.js"
+      },
+      {
+        "id": "store",
+        "label": "Neo4j graph store",
+        "path": ".argo/scripts/neo4j-system-architecture-store.js",
+        "symbol": "Path-derived graphKey, canonical JSON read, projection records, relationships, graph sync state, and rebuild/verification",
+        "url": "https://github.com/derekhu0002/Argo/blob/607a1c1dd0cd310fdfcb1ae8f060f01675142a7b/.argo/scripts/neo4j-system-architecture-store.js"
+      },
+      {
+        "id": "sync",
+        "label": "Neo4j sync command",
+        "path": ".argo/scripts/syncSystemArchitectureToNeo4j.js",
+        "symbol": "Sync and verification entry point",
+        "url": "https://github.com/derekhu0002/Argo/blob/607a1c1dd0cd310fdfcb1ae8f060f01675142a7b/.argo/scripts/syncSystemArchitectureToNeo4j.js"
+      },
+      {
+        "id": "retrieval",
+        "label": "Default semantic retrieval",
+        "path": ".argo/scripts/graph-rag/defaultSemanticRetrieval.js",
+        "symbol": "Persistent readiness, approved embedding profile, per-channel indexes and thresholds, and semantic query flow",
+        "url": "https://github.com/derekhu0002/Argo/blob/607a1c1dd0cd310fdfcb1ae8f060f01675142a7b/.argo/scripts/graph-rag/defaultSemanticRetrieval.js"
+      },
+      {
+        "id": "graphrag",
+        "label": "Graph-RAG architecture contract",
+        "path": ".argo/scripts/graph-rag/ARCHITECTURE.md",
+        "symbol": "Readiness, incremental lifecycle, threshold-all query, graph closure, result provenance, persistent projection and metric gates",
+        "url": "https://github.com/derekhu0002/Argo/blob/607a1c1dd0cd310fdfcb1ae8f060f01675142a7b/.argo/scripts/graph-rag/ARCHITECTURE.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Proposed recall, abstention, correction, deletion, scope, evidence, latency, token, cost, and storage measures",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned synthetic workload; planned cases rather than results",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "not_run; no ARGO execution observations or metric values",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository account is derekhu0002; the README presents ARGO as an agent-loop framework spanning requirements, design, development, testing, and delivery archival, with human-in-the-loop and agent-led delivery modes. This review treats the repository as a framework with a project knowledge subsystem, not as a standalone memory database or hosted service.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The repository identifies design/KG/SystemArchitecture.json as the authoritative graph. Its schema requires a graph name and description plus non-empty arrays of Elements, ArchitectureRelationships, and Views. Elements use ArchiMate element types; relationships carry type and source/target IDs; Views contain metadata and included element/relationship IDs. Optional object fields include descriptions, attributes, test cases, and documents, but the schema does not require a general source URL or author field on every fact.",
+        "sources": [
+          "overall",
+          "schema"
+        ]
+      },
+      {
+        "text": "The Neo4j adapter maps graph objects to ArchitectureGraph, Element, ArchitectureRelationship, and View nodes, preserving raw object JSON and selected searchable properties. It keys records by a graph key derived from the architecture path, adds typed relationship and View-membership edges, and keeps local sync state with dirty/error timestamps and last verified counts. Neo4j remains subordinate projection state; canonical JSON remains authoritative.",
+        "sources": [
+          "store",
+          "overall",
+          "graphrag"
+        ]
+      },
+      {
+        "text": "The reviewed retrieval contract separates Element, ArchitectureRelationship, and View channels, each with its own vector index and score threshold. Versioned semantic records and persistent readiness evidence bind provider/model metadata and index state back to canonical/content versions. The docs specify a Node.js Neo4j-driver path and external credential configuration; vector data are not canonical.",
+        "sources": [
+          "retrieval",
+          "graphrag"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The public architecture boundary exposes applySystemArchitectureMutation after schema and graph-semantic validation. Successful changes update the canonical JSON graph; the projection path can synchronize that document to Neo4j. The current production semantic lifecycle is documented to consume the exact touched object IDs and upsert changed vectors only after a successful canonical write. Preview/dry-run and failed validation are not supposed to cause vector writes.",
+        "sources": [
+          "mcp",
+          "schema",
+          "graphrag"
+        ]
+      },
+      {
+        "text": "The general Neo4j sync implementation clears nodes for the graph key and rebuilds graph, element, relationship, View, and membership records from canonical JSON. Verification compares expected and actual counts and IDs and records sync status. The separate production semantic projection contract says changed identities are upserted and removals become tombstones; this does not establish erasure from backups, provider logs, or other copies.",
+        "sources": [
+          "store",
+          "sync",
+          "graphrag"
+        ]
+      },
+      {
+        "text": "The MCP read boundary preserves an exact full canonical snapshot for no-query reads and graph-tidy. Ordinary semantic requests pass through persistent readiness checks before embedding and vector queries. The implementation defines independent Element, ArchitectureRelationship, and View thresholds (0.80, 0.78, and 0.76); the contract requires threshold-all results using expanding windows, followed by deterministic purpose-specific graph closure and structural completion. An unaligned index is automatically reconciled and the original ordinary query is retried once; if alignment still cannot be established, retrieval fails closed with no full-snapshot fallback.",
+        "sources": [
+          "mcp",
+          "retrieval",
+          "graphrag",
+          "overall"
+        ]
+      }
+    ],
+    "scope": [
+      {
+        "text": "The graph store uses a graphKey based on the repository-relative architecture path, and graph/object uniqueness constraints include that key. Query purposes are explicit categories such as intent-decision, implementation-design, coding-repair, audit, and graph-tidy. The inspected contracts say caller identity is not a scope selector; public query fields are purpose, intent, subject, and optional anchors. This establishes graph/path organization and policy-specific context selection, but not per-user or per-agent authorization isolation.",
+        "sources": [
+          "store",
+          "mcp",
+          "overall"
+        ]
+      }
+    ],
+    "provenance": [
+      {
+        "text": "Canonical objects have stable IDs and relationships reference source/target IDs. Semantic records and readiness track canonical, content, and index versions plus channel/provider/model details. The graph-RAG contract also requires returned context to include governing versions, selected policy and parameters, anchors, and ordered first-inclusion reasons for graph objects. The schema does not require claim-level citations or source-document lineage for each stored fact.",
+        "sources": [
+          "schema",
+          "store",
+          "graphrag"
+        ]
+      }
+    ],
+    "efficiency": [
+      {
+        "text": "A semantic request resolves external configuration, checks durable readiness, obtains an embedding, and queries three vector channels. Each channel uses a separate index and expanding windows so qualifying peers beyond the initial window can be returned; continuation may entail multiple query windows. General graph sync rebuilds a graph key’s projection, while the incremental semantic lifecycle is specified for affected records. Sync state and readiness expose dirty/success/recovery timestamps, verified counts, state, versions, and completed/missing/mismatched channels. These are source-visible work and diagnostics, not performance measurements.",
+        "sources": [
+          "retrieval",
+          "store",
+          "graphrag"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Channel thresholds and fail-closed alignment gates are source-visible; no answer-quality or abstention cases were run.",
+        "sources": [
+          "retrieval",
+          "graphrag",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Canonical mutation and projection lifecycle are source-visible, but no correction accuracy or stale-value probe was run.",
+        "sources": [
+          "mcp",
+          "graphrag",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Canonical removals, graph-key rebuild, and semantic tombstones are documented; no post-delete or copy-leak probe was run.",
+        "sources": [
+          "store",
+          "graphrag",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "A path-derived graph key and purpose policies are visible; no cross-project, user, or agent isolation probe was run.",
+        "sources": [
+          "store",
+          "mcp",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Query results can carry graph identity, version, policy, and inclusion provenance; no fact-level evidence adjudication was run.",
+        "sources": [
+          "schema",
+          "graphrag",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "External embedding, readiness checks, vector windows, graph closure, and projection updates are visible; no timings were collected.",
+        "sources": [
+          "retrieval",
+          "graphrag",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "The system uses provider embeddings and persistent Neo4j state; no token, provider-cost, or corpus-attributed storage measurements were collected.",
+        "sources": [
+          "retrieval",
+          "store",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded inspection establishes source and contract behavior at the reviewed commit, not successful deployment or runtime behavior. It does not verify Neo4j/provider configuration, index readiness on a live database, vector quality, scope isolation, deletion completeness, write-to-recall delay, latency, token use, provider cost, or storage efficiency.",
+        "sources": [
+          "readme",
+          "graphrag",
+          "store",
+          "status"
+        ]
+      },
+      {
+        "text": "The architecture documentation contains implementation requirements and delivery gates; their presence in a contract is not evidence that a production environment has satisfied them. The local sync path’s wholesale graph-key rebuild is visible, but its interruption and recovery behavior was not exercised.",
+        "sources": [
+          "overall",
+          "graphrag",
+          "store"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. ARGO was not executed and no benchmark workload, build, or tests were run for this review. The project metric definitions, fixture, and status record describe proposed reporting and planned cases; they are not ARGO results.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,403 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 195,
+    "slug": "dreamgraph",
+    "name": "DreamGraph",
+    "repository": "https://github.com/mmethodz/dreamgraph",
+    "listed_repository": "https://github.com/mmethodz/dreamgraph",
+    "branch": "main",
+    "revision": "41f65091746bc1cf0ac17e34eedda6d29973f9f0",
+    "reviewed_at": "2026-11-25T11:21:09Z",
+    "review_timezone": "UTC (2026-11-25 03:21:09 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "DreamGraph is a project-scoped cognitive graph for software projects. It separates speculative hypotheses from validated project knowledge, evaluates normalization claims against source and human evidence, and retrieves bounded graph context. This is a source-based review; no system, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 195,
+      "name": "DreamGraph",
+      "slug": "dreamgraph",
+      "listed_repository": "https://github.com/mmethodz/dreamgraph",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dreamgraph.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "use": "Curated identity and locator attribution only; not assessment evidence."
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/mmethodz/dreamgraph/blob/41f65091746bc1cf0ac17e34eedda6d29973f9f0/README.md",
+      "checked_urls": [
+        "https://github.com/mmethodz/dreamgraph/blob/41f65091746bc1cf0ac17e34eedda6d29973f9f0/README.md",
+        "https://github.com/mmethodz/dreamgraph/blob/41f65091746bc1cf0ac17e34eedda6d29973f9f0/SECURITY.md"
+      ],
+      "note": "Neither official pinned document publishes a contact email."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/mmethodz/dreamgraph/blob/41f65091746bc1cf0ac17e34eedda6d29973f9f0/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/mmethodz/dreamgraph/blob/41f65091746bc1cf0ac17e34eedda6d29973f9f0/README.md",
+      "https://github.com/mmethodz/dreamgraph/blob/41f65091746bc1cf0ac17e34eedda6d29973f9f0/SECURITY.md"
+    ],
+    "contact_email_note": "No email was found in the official README or SECURITY.md at the reviewed revision. No profile or commit metadata, third-party directory, or inferred address was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Catalog ordinal and listed locator",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[194], ordinal 195; DreamGraph identity, slug, explicit repository locator and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/dreamgraph.md",
+        "symbol": "Pinned Atlas entry used only for curated identity and locator context; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dreamgraph.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Public mmethodz/dreamgraph repository identifies main as default branch; latest commit prefix 41f6509",
+        "url": "https://github.com/mmethodz/dreamgraph"
+      },
+      {
+        "id": "feed",
+        "label": "Official main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Current full main head 41f65091746bc1cf0ac17e34eedda6d29973f9f0; feed updated 2026-10-09T06:30:46Z",
+        "url": "https://github.com/mmethodz/dreamgraph/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Official reviewed head commit",
+        "path": "commit/41f65091746bc1cf0ac17e34eedda6d29973f9f0",
+        "symbol": "Official commit page for verified current main head",
+        "url": "https://github.com/mmethodz/dreamgraph/commit/41f65091746bc1cf0ac17e34eedda6d29973f9f0"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product, architecture surfaces and project context; checked for contact email",
+        "url": "https://github.com/mmethodz/dreamgraph/blob/41f65091746bc1cf0ac17e34eedda6d29973f9f0/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Pinned official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Official security policy; checked for contact email",
+        "url": "https://github.com/mmethodz/dreamgraph/blob/41f65091746bc1cf0ac17e34eedda6d29973f9f0/SECURITY.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Pinned architecture guide",
+        "path": "docs/architecture.md",
+        "symbol": "Instance model, boundaries, daemon and graph architecture",
+        "url": "https://github.com/mmethodz/dreamgraph/blob/41f65091746bc1cf0ac17e34eedda6d29973f9f0/docs/architecture.md"
+      },
+      {
+        "id": "data_model",
+        "label": "Pinned data-model guide",
+        "path": "docs/data-model.md",
+        "symbol": "Speculative graph, candidate outcomes, validated edges and tension lifecycle",
+        "url": "https://github.com/mmethodz/dreamgraph/blob/41f65091746bc1cf0ac17e34eedda6d29973f9f0/docs/data-model.md"
+      },
+      {
+        "id": "cognitive_engine",
+        "label": "Pinned cognitive-engine guide",
+        "path": "docs/cognitive-engine.md",
+        "symbol": "Speculative/validated separation, grounding and promotion lifecycle",
+        "url": "https://github.com/mmethodz/dreamgraph/blob/41f65091746bc1cf0ac17e34eedda6d29973f9f0/docs/cognitive-engine.md"
+      },
+      {
+        "id": "types",
+        "label": "Cognitive data types",
+        "path": "src/cognitive/types.ts",
+        "symbol": "Typed cognitive states and dream node/edge data model",
+        "url": "https://github.com/mmethodz/dreamgraph/blob/41f65091746bc1cf0ac17e34eedda6d29973f9f0/src/cognitive/types.ts"
+      },
+      {
+        "id": "engine",
+        "label": "Cognitive engine",
+        "path": "src/cognitive/engine.ts",
+        "symbol": "Cognitive state transitions and dream graph persistence boundaries",
+        "url": "https://github.com/mmethodz/dreamgraph/blob/41f65091746bc1cf0ac17e34eedda6d29973f9f0/src/cognitive/engine.ts"
+      },
+      {
+        "id": "normalizer",
+        "label": "Normalizer",
+        "path": "src/cognitive/normalizer.ts",
+        "symbol": "Claim-specific normalization, grounding checks, and publication into canonical graph",
+        "url": "https://github.com/mmethodz/dreamgraph/blob/41f65091746bc1cf0ac17e34eedda6d29973f9f0/src/cognitive/normalizer.ts"
+      },
+      {
+        "id": "evidence",
+        "label": "Normalization evidence ledger",
+        "path": "src/cognitive/normalization-evidence.ts",
+        "symbol": "Claim/source proof schemas, repository/path/hash verification, observations and withdrawals",
+        "url": "https://github.com/mmethodz/dreamgraph/blob/41f65091746bc1cf0ac17e34eedda6d29973f9f0/src/cognitive/normalization-evidence.ts"
+      },
+      {
+        "id": "graph_rag",
+        "label": "Canonical graph retrieval",
+        "path": "src/cognitive/graph-rag.ts",
+        "symbol": "Canonical read-only context-pack retrieval and legacy comparison path",
+        "url": "https://github.com/mmethodz/dreamgraph/blob/41f65091746bc1cf0ac17e34eedda6d29973f9f0/src/cognitive/graph-rag.ts"
+      },
+      {
+        "id": "curation",
+        "label": "Cognitive curation",
+        "path": "src/cognitive/curation.ts",
+        "symbol": "Revision-bound human dispositions, curation archive and reversible lifecycle operations",
+        "url": "https://github.com/mmethodz/dreamgraph/blob/41f65091746bc1cf0ac17e34eedda6d29973f9f0/src/cognitive/curation.ts"
+      },
+      {
+        "id": "publication",
+        "label": "Graph publication boundary",
+        "path": "src/graph/publication.ts",
+        "symbol": "Journaled publication, revisions, receipts and per-store hashes",
+        "url": "https://github.com/mmethodz/dreamgraph/blob/41f65091746bc1cf0ac17e34eedda6d29973f9f0/src/graph/publication.ts"
+      },
+      {
+        "id": "cognitive_store",
+        "label": "Cognitive-store reader",
+        "path": "src/cognitive/cognitive-store.ts",
+        "symbol": "Read barrier, publication hash validation, fail-closed handling for invalid or withdrawn state",
+        "url": "https://github.com/mmethodz/dreamgraph/blob/41f65091746bc1cf0ac17e34eedda6d29973f9f0/src/cognitive/cognitive-store.ts"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Benchmark domains and definitions; no DreamGraph result inferred",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Workload specification reference only; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status reference; no result from this review",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes DreamGraph as a graph-governed development environment for software projects, with daemon, MCP tools, CLI, VS Code extension, Explorer and browser Architect surfaces.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The official repository page identifies main as default; its main commit feed reports full head 41f65091746bc1cf0ac17e34eedda6d29973f9f0 updated 2026-10-09T06:30:46Z.",
+        "sources": [
+          "repo",
+          "feed",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "DreamGraph maintains a fact graph for project entities and validated relationships, alongside a separate dream graph for candidate hypotheses. The documented entities include features, workflows, data-model entities, ADRs, UI elements and tensions; instance graph state is stored in JSON files.",
+        "sources": [
+          "architecture",
+          "data_model",
+          "cognitive_engine",
+          "types"
+        ]
+      },
+      {
+        "text": "Dream candidates carry fields such as confidence, plausibility, evidence, contradiction, origin strategy, TTL, reinforcement count and lifecycle status. Candidate normalization outcomes, validated edges and tensions have distinct persistent stores.",
+        "sources": [
+          "data_model",
+          "types",
+          "engine"
+        ]
+      },
+      {
+        "text": "The architecture describes UUID-scoped instances attached to projects, with repository bindings controlling which paths are in bounds.",
+        "sources": [
+          "architecture"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Scans and enrichment populate project entities; dream strategies add speculative nodes and edges; normalization evaluates candidates and publishes accepted graph changes through the shared publication boundary.",
+        "sources": [
+          "cognitive_engine",
+          "normalizer",
+          "publication"
+        ]
+      },
+      {
+        "text": "The normalization evidence ledger models claim observations as supporting or contradicting and records origin, ancestry, operation identity, observation time and optional source proof. A source proof binds a configured repository and path to a content hash, JSON pointer and independence ID; the implementation checks scope, bytes and the selected JSON value.",
+        "sources": [
+          "evidence",
+          "normalizer"
+        ]
+      },
+      {
+        "text": "Cognitive curation supports reject, retire, reopen, restore and assert actions bound to a graph revision, actor and reason; it stores disposition history and supports reversible hash-bound archives. The evidence ledger records withdrawals separately.",
+        "sources": [
+          "curation",
+          "evidence",
+          "data_model"
+        ]
+      },
+      {
+        "text": "Canonical RAG uses a read-only context-pack path and reports included records, token count and selection details. The legacy path uses lexical TF-IDF matching and graph expansion but has fewer supported controls; canonical retrieval is the current default.",
+        "sources": [
+          "graph_rag",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The inspected architecture documents per-instance project/repository boundaries. The evidence reader rejects absolute and parent-traversal paths and symlinks outside a configured repository. No cross-instance isolation testing was performed.",
+        "sources": [
+          "architecture",
+          "evidence"
+        ]
+      },
+      {
+        "text": "Claim-specific provenance distinguishes source-backed, human-asserted and derived claims; source observations can be withdrawn. This does not establish complete source provenance for every graph entity or mutation surface.",
+        "sources": [
+          "cognitive_engine",
+          "evidence",
+          "normalizer"
+        ]
+      },
+      {
+        "text": "The normalizer yields to the event loop in batches. Graph publication records revisions, content hashes, receipts and journal state, while cognitive-store reads reject published-content mismatches instead of treating them as empty state. These are code observations, not measured results.",
+        "sources": [
+          "normalizer",
+          "publication",
+          "cognitive_store"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval accuracy and abstention — unmeasured. No answerable or abstention cases were scored.",
+        "sources": [
+          "graph_rag",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured. No post-correction recall probes were run.",
+        "sources": [
+          "curation",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Deletion leakage — unmeasured. No post-removal probes or backup/snapshot checks were run.",
+        "sources": [
+          "curation",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Scope isolation — unmeasured. No cross-instance, project, or repository probes were run.",
+        "sources": [
+          "architecture",
+          "evidence",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Evidence support precision and citation coverage — unmeasured. No generated claims were adjudicated against stored evidence.",
+        "sources": [
+          "evidence",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Retrieval latency and write-to-recall delay — unmeasured. No reads, writes or recall timings were collected.",
+        "sources": [
+          "graph_rag",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Tokens and cost — unmeasured. No token counts or provider charges were collected.",
+        "sources": [
+          "graph_rag",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "Storage efficiency — unmeasured. No corpus or persistent-byte measurements were made.",
+        "sources": [
+          "data_model",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a selected source review of the README, architecture/cognitive/data-model guides, and current retrieval, normalization, evidence, curation, publication and store code. It did not inspect every graph write API, plugin/client, deployment or recovery/export route.",
+        "sources": [
+          "readme",
+          "architecture",
+          "cognitive_engine",
+          "normalizer",
+          "graph_rag",
+          "evidence",
+          "curation",
+          "publication",
+          "cognitive_store"
+        ]
+      },
+      {
+        "text": "The inspected evidence gate applies to cognitive normalization. Provenance coverage across all entity types and mutation surfaces, practical isolation, backup retention, concurrency under load, and generated-claim quality remain unknown or unmeasured.",
+        "sources": [
+          "evidence",
+          "normalizer",
+          "architecture",
+          "publication"
+        ]
+      },
+      {
+        "text": "The pinned official README and SECURITY.md were checked for contact. Neither publishes a contact email; the record stores null and the exact checked URLs.",
+        "sources": [
+          "readme",
+          "security"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No DreamGraph runtime, tests, or benchmark workload was executed. Source observations, metric definitions, and the benchmark fixture are not measurements.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

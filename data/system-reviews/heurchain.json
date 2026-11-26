@@ -1,0 +1,349 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 293,
+    "slug": "heurchain",
+    "name": "HeurChain",
+    "repository": "https://github.com/peterjohannmedina/heurchain",
+    "listed_repository": "https://github.com/peterjohannmedina/heurchain",
+    "branch": "master",
+    "revision": "2da09e66626044661355540c320c8a4cb3d23b15",
+    "reviewed_at": "2026-11-25T22:56:38Z",
+    "review_timezone": "UTC (checked 2026-11-25 14:56:38 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "HeurChain is a self-hosted Go memory broker that stores tenant-scoped agent memories in Redis and combines BM25 keyword search with dense Qdrant search. It supports sessions, lifecycle consolidation, versioned correction, and explicit forget operations. This review is source-based; no HeurChain runtime or project benchmark was run.",
+    "atlas_locator": {
+      "ordinal": 293,
+      "name": "HeurChain",
+      "slug": "heurchain",
+      "listed_repository": "https://github.com/peterjohannmedina/heurchain",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/heurchain.md",
+      "revision": "82fa9f6cd2e6c10c46597dd6dd3988ccab5702df"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/peterjohannmedina/heurchain/blob/2da09e66626044661355540c320c8a4cb3d23b15/README.md",
+      "checked_urls": [
+        "https://github.com/peterjohannmedina/heurchain/blob/2da09e66626044661355540c320c8a4cb3d23b15/README.md"
+      ],
+      "note": "Checked the official pinned README for a published contact email; none was present. No commit/profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/peterjohannmedina/heurchain/blob/2da09e66626044661355540c320c8a4cb3d23b15/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/peterjohannmedina/heurchain/blob/2da09e66626044661355540c320c8a4cb3d23b15/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the checked official pinned README. No address was inferred from commit/profile metadata or obtained from a third-party directory.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[292], ordinal 293; identity, listed repository locator and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/heurchain.md",
+        "symbol": "Pinned attribution source for curated locator only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/heurchain.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "",
+        "symbol": "Repository page identifies peterjohannmedina/heurchain and default branch master",
+        "url": "https://github.com/peterjohannmedina/heurchain"
+      },
+      {
+        "id": "head",
+        "label": "Official current head commit",
+        "path": "",
+        "symbol": "Official master Atom feed reports full head SHA and timestamp 2026-11-23T03:42:31Z",
+        "url": "https://github.com/peterjohannmedina/heurchain/commit/2da09e66626044661355540c320c8a4cb3d23b15"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Self-hosted system architecture, store/recall, lifecycle, integrations, limitations and upstream-reported LoCoMo results; checked for contact email",
+        "url": "https://github.com/peterjohannmedina/heurchain/blob/2da09e66626044661355540c320c8a4cb3d23b15/README.md"
+      },
+      {
+        "id": "records",
+        "label": "Pinned memory record lifecycle",
+        "path": "broker/memory_records.go",
+        "symbol": "Redis memory fields, revisioned writes, retained history, immutable tombstones, active/archive reads",
+        "url": "https://github.com/peterjohannmedina/heurchain/blob/2da09e66626044661355540c320c8a4cb3d23b15/broker/memory_records.go"
+      },
+      {
+        "id": "api",
+        "label": "Pinned memory API",
+        "path": "broker/memory_api.go",
+        "symbol": "Tenant-authenticated get/list/update handlers, optimistic revision checks, audit events and cursor behavior",
+        "url": "https://github.com/peterjohannmedina/heurchain/blob/2da09e66626044661355540c320c8a4cb3d23b15/broker/memory_api.go"
+      },
+      {
+        "id": "recall",
+        "label": "Pinned hybrid recall pipeline",
+        "path": "broker/recall.go",
+        "symbol": "Tenant-level BM25 and dense retrieval, eligibility filtering, fusion, hydration and diagnostics",
+        "url": "https://github.com/peterjohannmedina/heurchain/blob/2da09e66626044661355540c320c8a4cb3d23b15/broker/recall.go"
+      },
+      {
+        "id": "forget",
+        "label": "Pinned forget implementation",
+        "path": "broker/memory_forget.go",
+        "symbol": "Revision-checked explicit forget, Redis tombstone, index cleanup and declared erasure boundary",
+        "url": "https://github.com/peterjohannmedina/heurchain/blob/2da09e66626044661355540c320c8a4cb3d23b15/broker/memory_forget.go"
+      },
+      {
+        "id": "auth",
+        "label": "Pinned API-key authentication",
+        "path": "broker/auth.go",
+        "symbol": "Tenant-bound bcrypt key validation and short-lived authorization cache",
+        "url": "https://github.com/peterjohannmedina/heurchain/blob/2da09e66626044661355540c320c8a4cb3d23b15/broker/auth.go"
+      },
+      {
+        "id": "provenance",
+        "label": "Pinned agent provenance endpoint",
+        "path": "broker/agent_provenance.go",
+        "symbol": "Observed agent activity and request metadata aggregation over a bounded recent window",
+        "url": "https://github.com/peterjohannmedina/heurchain/blob/2da09e66626044661355540c320c8a4cb3d23b15/broker/agent_provenance.go"
+      },
+      {
+        "id": "schema",
+        "label": "Pinned SQLite schema",
+        "path": "broker/schema.sql",
+        "symbol": "Tenant, API-key, audit-log and usage-event tables",
+        "url": "https://github.com/peterjohannmedina/heurchain/blob/2da09e66626044661355540c320c8a4cb3d23b15/broker/schema.sql"
+      },
+      {
+        "id": "consolidation",
+        "label": "Pinned consolidation worker",
+        "path": "broker/consolidation.go",
+        "symbol": "ACT-R activation decay and operator-controlled archive promotion defaults",
+        "url": "https://github.com/peterjohannmedina/heurchain/blob/2da09e66626044661355540c320c8a4cb3d23b15/broker/consolidation.go"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation domains and metric definitions",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned benchmark fixture",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project baseline execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status record; no HeurChain result is asserted here",
+        "url": "../../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents this repository as the complete self-hosted edition of HeurChain: a Go broker with a Docker Compose stack, systemd option, and docs. Clients use HTTP/JSON or MCP; the README says its broker line is frozen at 0.6.1-oss.1, with this edition receiving fixes and documentation rather than new broker features.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README describes four local components: Redis is the source of truth for memory records, sessions, BM25 terms and the vault; an embedding service is required for writes; Qdrant holds dense vectors; and SQLite stores tenants, API-key hashes, audit events and usage counts. Redis records carry text, tags, agent/session identifiers and timestamps; the lifecycle code adds revision, status, namespace, metadata and change reason fields.",
+        "sources": [
+          "readme",
+          "records",
+          "schema"
+        ]
+      },
+      {
+        "text": "The broker exposes HTTP/JSON endpoints and MCP tools over the same tenant-authenticated service. Each request supplies an API key and tenant ID. The tenant participates in Redis key namespaces and Qdrant collection selection; API keys are bcrypt-checked against SQLite rows for that tenant and successful checks are cached briefly in Redis.",
+        "sources": [
+          "readme",
+          "auth",
+          "schema"
+        ]
+      },
+      {
+        "text": "Memory correction uses an optimistic revision boundary. A write records prior content in a bounded history (up to 100 versions and 1 MiB), increments the revision, and rejects mismatched expected revisions. Checkpoint records are immutable. Reads can return active or archived records, and cursored listing may scan both populations; it is explicitly not a snapshot.",
+        "sources": [
+          "records",
+          "api"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write requests authenticate the tenant, embed the text, save the record in Redis, then update Redis BM25 and Qdrant projections. Index updates are not a distributed transaction with the source record: the API returns an accepted response with retry information when indexing is incomplete. The README says writes require an embedder; without Qdrant, keyword-only search remains available with an indexing warning.",
+        "sources": [
+          "readme",
+          "recall",
+          "api"
+        ]
+      },
+      {
+        "text": "Updates require an expected revision and a non-empty reason, can change text, metadata, tags or namespace, and re-embed changed text before storing the next revision. Revision history is bounded. Explicit forget requires the expected revision and confirm=true; it removes active/archive copies, prior revisions, and BM25 state, writes a non-expiring ID tombstone, and deletes the dense point. If Qdrant deletion fails, the response reports incomplete cleanup and requests retry.",
+        "sources": [
+          "api",
+          "records",
+          "forget"
+        ]
+      },
+      {
+        "text": "The broker’s forget response scopes its guarantee to the memory ID and revisions in broker storage and indexes. It explicitly excludes backups, independently copied records and context already returned to clients. Tombstones prevent reuse of a forgotten ID and are checked on reads so stale restored content is hidden; this is application-level erasure behavior, not proof that every external copy is erased.",
+        "sources": [
+          "forget",
+          "records"
+        ]
+      },
+      {
+        "text": "Search embeds the query and runs BM25 and dense retrieval concurrently, then fuses candidate ranks. Tenant, optional agent/tag filters and metadata scope are checked through eligibility and again during result hydration; tombstoned records are excluded. The response can include rank scores and stage diagnostics such as candidate counts, backend status, embedding/cache time and retrieval time.",
+        "sources": [
+          "readme",
+          "recall"
+        ]
+      },
+      {
+        "text": "Consolidation computes ACT-R-style activation from access and elapsed time and can move low-activation records to an exportable vault that is excluded from search. The README says promotion ships in dry-run mode by default; the worker configuration makes live promotion operator-controlled. This source behavior does not establish that archival thresholds preserve useful memories.",
+        "sources": [
+          "readme",
+          "consolidation"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Hybrid top-k retrieval and filters are implemented, but answer quality and abstention were not scored in this review.",
+        "sources": [
+          "recall",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "The code has revision-checked updates and bounded prior versions; no correction sequence or stale-value probe was run.",
+        "sources": [
+          "records",
+          "api",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Forget removes broker copies and indexes and uses a tombstone, with explicit exclusions for backups and client-held context. No deletion or recovery probe was run.",
+        "sources": [
+          "forget",
+          "records",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Tenant-bound API keys, tenant-namespaced Redis keys and tenant-specific Qdrant collections are implemented; no cross-tenant isolation workload was run.",
+        "sources": [
+          "auth",
+          "readme",
+          "schema",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "The inspected memory record and retrieval paths do not establish source-backed factual citations or adjudicated answer support. No evidence-support workload was run.",
+        "sources": [
+          "records",
+          "recall",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The broker emits timing diagnostics, but this review collected no latency or write-to-recall measurements.",
+        "sources": [
+          "recall",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The current README reports LoCoMo token and answer-score comparisons as upstream results; they were not independently reproduced, and no cost or storage measurement was made for this review.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded inspection of the official README and selected Go broker files at the verified current head. The broker, tests and benchmarks were not run.",
+        "sources": [
+          "readme",
+          "records",
+          "api",
+          "recall",
+          "forget",
+          "auth",
+          "consolidation"
+        ]
+      },
+      {
+        "text": "The README reports results on 543 scored LoCoMo development questions, including input-token and reader-score comparisons. Those are upstream-reported figures and are not results from this project review; their methodology and per-category results are linked by the README.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The broker’s source-level tenant boundaries do not establish deployment security, reverse-proxy correctness, key-management practice, or agent-level separation inside a tenant. The agent filter is a search selector; no separate agent credential boundary is established by the inspected paths.",
+        "sources": [
+          "auth",
+          "readme",
+          "recall",
+          "schema"
+        ]
+      },
+      {
+        "text": "The reviewed paths do not establish data durability under every Redis/Qdrant failure, recovery behavior beyond the documented backup boundary, real-world memory usefulness, or whether automatic recall works on client versions and platforms outside those the README says were tested.",
+        "sources": [
+          "readme",
+          "records",
+          "recall",
+          "forget"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No HeurChain runtime, tests, or benchmarks were run. Source observations and upstream-reported LoCoMo figures are not this review's measured results."
+    }
+  }
+}

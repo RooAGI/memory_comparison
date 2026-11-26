@@ -1,0 +1,354 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "ai-agent-automation",
+    "name": "AI Agent Automation",
+    "repository": "https://github.com/vmDeshpande/ai-agent-automation",
+    "branch": "main",
+    "revision": "86b6072dd4c9bf6abe68c26c4265b3296a368737",
+    "reviewed_at": "2026-11-24T19:35:21Z",
+    "review_timezone": "UTC (2026-11-24 11:35:21 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/vmDeshpande/ai-agent-automation/blob/86b6072dd4c9bf6abe68c26c4265b3296a368737/README.md","checked_urls":["https://github.com/vmDeshpande/ai-agent-automation/blob/86b6072dd4c9bf6abe68c26c4265b3296a368737/README.md","https://github.com/vmDeshpande/ai-agent-automation/blob/86b6072dd4c9bf6abe68c26c4265b3296a368737/SECURITY.md","https://github.com/vmDeshpande/ai-agent-automation/blob/86b6072dd4c9bf6abe68c26c4265b3296a368737/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "AI Agent Automation is a self-hosted workflow platform with optional per-agent conversation memory. At the reviewed head, memory stores conversation envelopes with embeddings in MongoDB and retrieves them by scanning an agent's conversation rows and ranking cosine similarity in application code. This is a source review, not a benchmark result.",
+    "atlas_locator": {
+      "ordinal": 35,
+      "name": "AI Agent Automation",
+      "slug": "ai-agent-automation",
+      "listed_repository": "https://github.com/vmDeshpande/ai-agent-automation",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/ai-agent-automation.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/vmDeshpande/ai-agent-automation/blob/86b6072dd4c9bf6abe68c26c4265b3296a368737/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/vmDeshpande/ai-agent-automation/blob/86b6072dd4c9bf6abe68c26c4265b3296a368737/README.md",
+      "https://github.com/vmDeshpande/ai-agent-automation/blob/86b6072dd4c9bf6abe68c26c4265b3296a368737/SECURITY.md",
+      "https://vmdeshpande.github.io/ai-automation-platform-website/"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official public repository and default branch",
+        "path": "repository",
+        "symbol": "main is the default branch",
+        "url": "https://github.com/vmDeshpande/ai-agent-automation"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "head 86b6072dd4c9bf6abe68c26c4265b3296a368737",
+        "url": "https://github.com/vmDeshpande/ai-agent-automation/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified current head commit",
+        "path": "commit",
+        "symbol": "full SHA 86b6072dd4c9bf6abe68c26c4265b3296a368737",
+        "url": "https://github.com/vmDeshpande/ai-agent-automation/commit/86b6072dd4c9bf6abe68c26c4265b3296a368737"
+      },
+      {
+        "id": "readme",
+        "label": "Official README: platform overview and documentation map",
+        "path": "README.md",
+        "url": "https://github.com/vmDeshpande/ai-agent-automation/blob/86b6072dd4c9bf6abe68c26c4265b3296a368737/README.md?plain=1"
+      },
+      {
+        "id": "semantic",
+        "label": "Semantic memory documentation",
+        "path": "docs/semantic-memory.md",
+        "url": "https://github.com/vmDeshpande/ai-agent-automation/blob/86b6072dd4c9bf6abe68c26c4265b3296a368737/docs/semantic-memory.md?plain=1"
+      },
+      {
+        "id": "agentdocs",
+        "label": "Agent system documentation",
+        "path": "docs/agent-system.md",
+        "url": "https://github.com/vmDeshpande/ai-agent-automation/blob/86b6072dd4c9bf6abe68c26c4265b3296a368737/docs/agent-system.md?plain=1"
+      },
+      {
+        "id": "telemetry",
+        "label": "Telemetry documentation",
+        "path": "docs/telemetry.md",
+        "url": "https://github.com/vmDeshpande/ai-agent-automation/blob/86b6072dd4c9bf6abe68c26c4265b3296a368737/docs/telemetry.md?plain=1"
+      },
+      {
+        "id": "schema",
+        "label": "MongoDB memory document schema",
+        "path": "backend/src/models/agentMemory.model.js",
+        "symbol": "AgentMemorySchema",
+        "url": "https://github.com/vmDeshpande/ai-agent-automation/blob/86b6072dd4c9bf6abe68c26c4265b3296a368737/backend/src/models/agentMemory.model.js?plain=1"
+      },
+      {
+        "id": "service",
+        "label": "Memory write, retention, scope checks, retrieval, and score logging",
+        "path": "backend/src/services/memoryService.js",
+        "symbol": "storeMemory, assertAgentOwnership, retrieveMemory",
+        "url": "https://github.com/vmDeshpande/ai-agent-automation/blob/86b6072dd4c9bf6abe68c26c4265b3296a368737/backend/src/services/memoryService.js?plain=1"
+      },
+      {
+        "id": "controller",
+        "label": "Authenticated memory listing and deletion API",
+        "path": "backend/src/controllers/memory.controller.js",
+        "symbol": "listMemories, deleteMemory, clearAgentMemory",
+        "url": "https://github.com/vmDeshpande/ai-agent-automation/blob/86b6072dd4c9bf6abe68c26c4265b3296a368737/backend/src/controllers/memory.controller.js?plain=1"
+      },
+      {
+        "id": "routes",
+        "label": "Memory management routes",
+        "path": "backend/src/routes/memory.routes.js",
+        "url": "https://github.com/vmDeshpande/ai-agent-automation/blob/86b6072dd4c9bf6abe68c26c4265b3296a368737/backend/src/routes/memory.routes.js?plain=1"
+      },
+      {
+        "id": "embedding",
+        "label": "Embedding provider selection and request adapter",
+        "path": "backend/src/agents/embeddingAdapter.js",
+        "symbol": "supportsEmbedding, defaultEmbeddingModelFor, runEmbedding",
+        "url": "https://github.com/vmDeshpande/ai-agent-automation/blob/86b6072dd4c9bf6abe68c26c4265b3296a368737/backend/src/agents/embeddingAdapter.js?plain=1"
+      },
+      {
+        "id": "llmhandler",
+        "label": "LLM workflow step memory integration",
+        "path": "backend/src/agents/handlers/llm.handler.js",
+        "symbol": "execute; useMemory retrieval and store",
+        "url": "https://github.com/vmDeshpande/ai-agent-automation/blob/86b6072dd4c9bf6abe68c26c4265b3296a368737/backend/src/agents/handlers/llm.handler.js?plain=1"
+      },
+      {
+        "id": "agentcall",
+        "label": "Agent-call workflow step memory integration",
+        "path": "backend/src/agents/handlers/agentCall.handler.js",
+        "symbol": "execute; useMemory retrieval and store",
+        "url": "https://github.com/vmDeshpande/ai-agent-automation/blob/86b6072dd4c9bf6abe68c26c4265b3296a368737/backend/src/agents/handlers/agentCall.handler.js?plain=1"
+      },
+      {
+        "id": "security",
+        "label": "Official repository security policy",
+        "path": "SECURITY.md",
+        "url": "https://github.com/vmDeshpande/ai-agent-automation/blob/86b6072dd4c9bf6abe68c26c4265b3296a368737/SECURITY.md?plain=1"
+      },
+      {
+        "id": "site",
+        "label": "Official project website checked for published contact",
+        "path": "project website",
+        "url": "https://vmdeshpande.github.io/ai-automation-platform-website/"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated identity and attribution only",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 35",
+        "url": "../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes a self-hosted workflow automation platform. Memory is integrated into configured LLM and agent-call workflow steps; the inspected code does not present it as a separate hosted memory service.",
+        "sources": [
+          "readme",
+          "llmhandler",
+          "agentcall"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The semantic-memory guide documents MongoDB storage, embedding generation, cosine retrieval, top-K prompt injection, a management UI, and retention caps. These are documentation claims; the implementation observations below are based on pinned source.",
+        "sources": [
+          "semantic"
+        ]
+      },
+      {
+        "text": "AgentMemory is a Mongoose document keyed by required agentId, with content, numeric embedding, optional taskId/workflowId/type metadata, embedding provider/model strings, and timestamps. The inspected schema indexes agentId and defines no vector index.",
+        "sources": [
+          "schema"
+        ]
+      },
+      {
+        "text": "LLM and agent-call handlers can opt into memory. They retrieve before a model call and store a JSON user/assistant envelope with task/workflow metadata afterward. The inspected call paths store conversation records rather than extracted facts or preferences.",
+        "sources": [
+          "llmhandler",
+          "agentcall",
+          "service"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "storeMemory calls the embedding adapter, rejects content under 20 characters after that call, inserts accepted content and metadata, then checks a fixed per-agent limit of 500 rows. A short rejected item can therefore still cause an embedding request.",
+        "sources": [
+          "service",
+          "embedding"
+        ]
+      },
+      {
+        "text": "No update handler was located in the inspected memory controller/routes. The documentation says the UI can modify memories, but this source slice establishes only list and delete management operations; correction and supersession semantics remain unknown.",
+        "sources": [
+          "controller",
+          "routes",
+          "semantic"
+        ]
+      },
+      {
+        "text": "The authenticated management API lists memories, deletes one memory, or clears an agent's memories. It verifies agent ownership before the scoped operations. The selected files expose hard deletion, not a tombstone or mutation audit.",
+        "sources": [
+          "controller",
+          "routes"
+        ]
+      },
+      {
+        "text": "retrieveMemory requires an explicit user ID, rechecks ownership against the Agent collection, embeds the query, loads all conversation memories for the agent, computes cosine scores in JavaScript, sorts, and returns topK. The minScore parameter is accepted but unused in the inspected implementation.",
+        "sources": [
+          "service",
+          "embedding"
+        ]
+      },
+      {
+        "text": "Retrieval filters by agentId and conversation type. Management list and clear operations constrain records to agents owned by the authenticated user. These source predicates do not substitute for runtime isolation tests.",
+        "sources": [
+          "service",
+          "controller",
+          "routes"
+        ]
+      },
+      {
+        "text": "Memory rows preserve agent/task/workflow identifiers, type, timestamps, and embedding provider/model fields. The service sets provider/model values from agent configuration, which can differ from the embedding adapter's selected provider/model. The schema has no source citation, confidence, trust, or mutation-history fields.",
+        "sources": [
+          "schema",
+          "service",
+          "embedding"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Cosine-ranked top-K retrieval is visible; no answerability or abstention probes were run.",
+        "sources": [
+          "service",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction and stale values",
+        "status": "unmeasured",
+        "evidence": "The inspected management routes expose no update path; correction and stale-value behavior were not measured.",
+        "sources": [
+          "controller",
+          "routes",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Individual and per-agent deletion endpoints exist; no post-deletion probes or backup checks were run.",
+        "sources": [
+          "controller",
+          "routes",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Ownership checks and agent filters are visible in source; cross-user leakage was not tested.",
+        "sources": [
+          "service",
+          "controller",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence and citation support",
+        "status": "unmeasured",
+        "evidence": "The inspected memory schema stores no source evidence or citation fields; support precision and coverage were not measured.",
+        "sources": [
+          "schema",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No workload timing or scheduled recall measurements were collected.",
+        "sources": [
+          "service",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No versioned model/token/cost or corpus storage measurements were collected.",
+        "sources": [
+          "embedding",
+          "schema",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review covers selected memory documentation, model/service/controller/routes, embedding adapter, workflow handlers, README, and telemetry documentation at the verified head. It does not inspect every memory call site, all UI code, complete database/deployment policy, or all backup and retention behavior.",
+        "sources": [
+          "readme",
+          "semantic",
+          "service",
+          "controller"
+        ]
+      },
+      {
+        "text": "Runtime correctness, cross-user isolation, correction behavior, deletion completeness, answer quality, latency, token use, cost, and storage efficiency remain unverified. The system, tests, and benchmarks were not run.",
+        "sources": [
+          "service",
+          "controller",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No system execution, tests, or benchmark workload was run. Project metrics, fixture, and status record are protocol artifacts, not system results.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      }
+    ],
+    "benchmark_record": {
+      "status": "not_run",
+      "result_path": null,
+      "note": "No versioned measured benchmark result exists for this system."
+    }
+  }
+}

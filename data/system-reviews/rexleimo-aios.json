@@ -1,0 +1,386 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "rexleimo-aios",
+    "name": "aios (rexleimo)",
+    "repository": "https://github.com/rexleimo/aios",
+    "branch": "main",
+    "revision": "79d99896bfa823249e54b008e56f93497f212367",
+    "reviewed_at": "2026-11-24T20:05:56Z",
+    "review_timezone": "UTC (2026-11-24 12:05:56 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/rexleimo/aios/blob/79d99896bfa823249e54b008e56f93497f212367/README.md","checked_urls":["https://github.com/rexleimo/aios/blob/79d99896bfa823249e54b008e56f93497f212367/README.md","https://github.com/rexleimo/aios/blob/79d99896bfa823249e54b008e56f93497f212367/SECURITY.md","https://github.com/rexleimo/aios/blob/79d99896bfa823249e54b008e56f93497f212367/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "AIOS is a local-first control plane for coding agents. ContextDB stores project sessions, events, checkpoints and pull-based context; a separate memo plane stores durable, scoped facts. This review describes pinned source and documentation, not runtime quality or performance.",
+    "atlas_locator": {
+      "ordinal": 45,
+      "name": "aios (rexleimo)",
+      "slug": "rexleimo-aios",
+      "listed_repository": "https://github.com/rexleimo/aios",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/rexleimo-aios.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/rexleimo/aios/blob/79d99896bfa823249e54b008e56f93497f212367/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/rexleimo/aios/blob/79d99896bfa823249e54b008e56f93497f212367/README.md"
+    ],
+    "contact_email_note": "The official repository README was checked for a published contact email. It directs questions and feedback to GitHub issues and publishes no email.",
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository page",
+        "path": "repository",
+        "symbol": "canonical rexleimo/aios; default branch main",
+        "url": "https://github.com/rexleimo/aios"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "head 79d99896bfa823249e54b008e56f93497f212367; updated 2026-11-24T09:37:00Z",
+        "url": "https://github.com/rexleimo/aios/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed full commit",
+        "path": "commit",
+        "symbol": "79d99896bfa823249e54b008e56f93497f212367",
+        "url": "https://github.com/rexleimo/aios/commit/79d99896bfa823249e54b008e56f93497f212367"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "project purpose, maintainer, local-first design and contact check",
+        "url": "https://github.com/rexleimo/aios/blob/79d99896bfa823249e54b008e56f93497f212367/README.md"
+      },
+      {
+        "id": "docs",
+        "label": "ContextDB documentation",
+        "path": "docs-site/contextdb.md",
+        "symbol": "registry, storage, pull recall, scope, maintenance, privacy",
+        "url": "https://github.com/rexleimo/aios/blob/79d99896bfa823249e54b008e56f93497f212367/docs-site/contextdb.md"
+      },
+      {
+        "id": "core",
+        "label": "ContextDB store",
+        "path": "mcp-server/src/contextdb/store/core.ts",
+        "symbol": "session/event/checkpoint writes, recall packet, token budgets and telemetry",
+        "url": "https://github.com/rexleimo/aios/blob/79d99896bfa823249e54b008e56f93497f212367/mcp-server/src/contextdb/store/core.ts"
+      },
+      {
+        "id": "schema",
+        "label": "SQLite sidecar schema",
+        "path": "mcp-server/src/contextdb/sqlite/tables/schema.ts",
+        "symbol": "canonical file indexes, FTS5 tables and workspace/session indexes",
+        "url": "https://github.com/rexleimo/aios/blob/79d99896bfa823249e54b008e56f93497f212367/mcp-server/src/contextdb/sqlite/tables/schema.ts"
+      },
+      {
+        "id": "eventsearch",
+        "label": "ContextDB event search",
+        "path": "mcp-server/src/contextdb/sqlite/tables/events.ts",
+        "symbol": "project/session filtering, FTS5 BM25 and LIKE fallback",
+        "url": "https://github.com/rexleimo/aios/blob/79d99896bfa823249e54b008e56f93497f212367/mcp-server/src/contextdb/sqlite/tables/events.ts"
+      },
+      {
+        "id": "paths",
+        "label": "Workspace path resolver",
+        "path": "mcp-server/src/contextdb/query/paths.ts",
+        "symbol": "workspace-local context database location and override",
+        "url": "https://github.com/rexleimo/aios/blob/79d99896bfa823249e54b008e56f93497f212367/mcp-server/src/contextdb/query/paths.ts"
+      },
+      {
+        "id": "memowrite",
+        "label": "Memo writer",
+        "path": "scripts/lib/memory/memo/storage/events/events-write.mjs",
+        "symbol": "append-only memo schema, JSONL/split writes, authority, scopes",
+        "url": "https://github.com/rexleimo/aios/blob/79d99896bfa823249e54b008e56f93497f212367/scripts/lib/memory/memo/storage/events/events-write.mjs"
+      },
+      {
+        "id": "temporal",
+        "label": "Memo temporal lifecycle",
+        "path": "scripts/lib/memory/memo/storage/govern/temporal.mjs",
+        "symbol": "supersession links, read-time invalidation and scope checks",
+        "url": "https://github.com/rexleimo/aios/blob/79d99896bfa823249e54b008e56f93497f212367/scripts/lib/memory/memo/storage/govern/temporal.mjs"
+      },
+      {
+        "id": "memoquery",
+        "label": "Memo query",
+        "path": "scripts/lib/memory/memo/storage/views/query.mjs",
+        "symbol": "ranking, candidate and agent filtering, TTL, optional embeddings",
+        "url": "https://github.com/rexleimo/aios/blob/79d99896bfa823249e54b008e56f93497f212367/scripts/lib/memory/memo/storage/views/query.mjs"
+      },
+      {
+        "id": "provenance",
+        "label": "Memo authority/provenance",
+        "path": "scripts/lib/memory/memo/storage/govern/provenance.mjs",
+        "symbol": "runtime identity, capabilities and claim status",
+        "url": "https://github.com/rexleimo/aios/blob/79d99896bfa823249e54b008e56f93497f212367/scripts/lib/memory/memo/storage/govern/provenance.mjs"
+      },
+      {
+        "id": "memoread",
+        "label": "Memo event reader",
+        "path": "scripts/lib/memory/memo/storage/events/events-read.mjs",
+        "symbol": "canonical reads, malformed records, bounded parse cache",
+        "url": "https://github.com/rexleimo/aios/blob/79d99896bfa823249e54b008e56f93497f212367/scripts/lib/memory/memo/storage/events/events-read.mjs"
+      },
+      {
+        "id": "normalizers",
+        "label": "Memo normalizers",
+        "path": "scripts/lib/memory/memo/storage/base/normalizers.mjs",
+        "symbol": "scope, event and provenance normalization",
+        "url": "https://github.com/rexleimo/aios/blob/79d99896bfa823249e54b008e56f93497f212367/scripts/lib/memory/memo/storage/base/normalizers.mjs"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "evaluation domains; no AIOS run",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "shared status; no AIOS measurement",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned workload only; not run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated roster",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 45 identity, locator and attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas attribution source",
+        "path": "content/systems/rexleimo-aios.md",
+        "symbol": "identity attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/rexleimo-aios.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The README describes AIOS as a local-first control plane around existing coding clients, providing project memory, routing, teams, resumable runs and verification evidence. It identifies Rex as maintainer. ContextDB and AIOS Memo are the memory components reviewed here.",
+        "sources": [
+          "readme",
+          "docs"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "ContextDB is filesystem-backed under .aios/context-db by default, with a legacy location option. It stores session metadata, JSONL events and checkpoints, state and continuity summaries. Workspace JSONL indexes and a SQLite sidecar support search; the sidecar has FTS5 tables and project/session indexes and is rebuildable.",
+        "sources": [
+          "docs",
+          "paths",
+          "core",
+          "schema"
+        ]
+      },
+      {
+        "text": "Session metadata includes client/agent, project, goal, tags, status and timestamps. Events carry role, kind, text, references and optional turn metadata. Checkpoints carry status, summary, next actions, artifacts and optional verification, retry, elapsed-time and cost telemetry. A separate memo event can store scope, agent, claim status, provenance, refs, valid time, supersession links, entities, confidence and an evidence reference.",
+        "sources": [
+          "core",
+          "memowrite",
+          "docs"
+        ]
+      },
+      {
+        "text": "The documented model is pull-based: clients locate the registry and retrieve selected memos, checkpoints, events or context packs as needed. Context packet construction selects recent and goal-relevant events, with an optional token budget; the docs do not guarantee all clients read all sources or stay within a fixed prompt size.",
+        "sources": [
+          "docs",
+          "core"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Session creation writes metadata and initial state. Event append uses a session lock, deduplicates an identical last event within 30 seconds, appends JSONL, updates state and indexes, then best-effort updates SQLite. Checkpoint writes append a record and refresh summary/continuity files and indexes.",
+        "sources": [
+          "core"
+        ]
+      },
+      {
+        "text": "Memo writes append events in JSONL by default or one-file-per-event split storage. An agent-authored shared memo without publish capability is assigned candidate status. Corrections append a successor with supersedes links; read-time folding hides superseded values while retaining history. No hard-delete operation was located in the inspected write paths.",
+        "sources": [
+          "memowrite",
+          "temporal",
+          "provenance",
+          "docs"
+        ]
+      },
+      {
+        "text": "ContextDB search filters by project/session and other query fields using SQLite FTS5 BM25, with a LIKE fallback when FTS yields no rows. Session recall uses bounded candidates. Memo search adds token/BM25 ranking and optional entity/feedback boosts; a local embedder can widen, not replace, lexical candidates.",
+        "sources": [
+          "eventsearch",
+          "core",
+          "memoquery",
+          "schema"
+        ]
+      },
+      {
+        "text": "The documentation says a client clear leaves project files intact and removing the registry marker does not erase .aios data. Hygiene operations archive or rotate without deleting source rows; memo supersession preserves append-only history. Erasure from backups, exports, Git history or provider context was not established.",
+        "sources": [
+          "docs",
+          "temporal"
+        ]
+      },
+      {
+        "text": "ContextDB queries can filter by project and session. Memo scopes include project_shared, agent_private and agent_ephemeral; shared entries are visible to supported clients and private entries require a matching agent identity. Candidate inclusion is opt-in; supersession checks scope and principal. These are application-level checks, not proof of isolation across every integration or filesystem boundary.",
+        "sources": [
+          "docs",
+          "eventsearch",
+          "memoquery",
+          "temporal"
+        ]
+      },
+      {
+        "text": "Memo provenance may retain producer/principal, agent, session/run/activation identifiers, policy revision, source reference/hash and capabilities. Memo refs/evidenceRef and ContextDB artifact references and checkpoint verification telemetry help trace records but do not prove truth or citation support.",
+        "sources": [
+          "provenance",
+          "memowrite",
+          "core",
+          "readme"
+        ]
+      },
+      {
+        "text": "The official README directs questions and feedback to GitHub issues and publishes no email address; only that official README was used for the contact check.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Lexical/BM25 and optional semantic paths are visible; no adjudicated answerable or unsupported workload was run.",
+        "sources": [
+          "eventsearch",
+          "memoquery",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Memo supersession and validAt/as-of controls exist in source; no correction or stale-value probes were measured.",
+        "sources": [
+          "temporal",
+          "memowrite",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Reviewed paths append or archive records; no deletion workflow or leak checks across indexes, backups and exports were run.",
+        "sources": [
+          "docs",
+          "temporal",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Project/session filters and memo scope/agent filters are visible; no cross-project or cross-agent probes were run.",
+        "sources": [
+          "eventsearch",
+          "memoquery",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Records support refs, artifacts and evidence references; no support-precision or citation-coverage adjudication was run.",
+        "sources": [
+          "core",
+          "memowrite",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Index updates and a process-local parse cache are visible; no latency or write-to-recall timings were collected.",
+        "sources": [
+          "core",
+          "memoread",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Context packets support token budgets and checkpoints can store cost fields; no token, cost or storage measurements were collected.",
+        "sources": [
+          "core",
+          "docs",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code and documentation",
+        "evidence": "FTS5 indexes, project/session filters, bounded search, rebuildable sidecar, token-budget accounting, checkpoint telemetry, memo parse-cache counters and hygiene/report commands are visible. These are not runtime performance measurements.",
+        "sources": [
+          "schema",
+          "eventsearch",
+          "core",
+          "memoread",
+          "docs"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded review inspected the official README and ContextDB docs, plus selected ContextDB session/search/schema and memo write/temporal/query/provenance/read-cache code at the verified SHA. It did not inspect every client adapter, MCP route, export, backup or provider path. No runtime, tests or benchmarks were run.",
+        "sources": [
+          "readme",
+          "docs",
+          "core",
+          "memowrite",
+          "memoquery"
+        ]
+      },
+      {
+        "text": "ContextDB sessions and durable memos are distinct stores with different schemas and lifecycle operations. This review does not establish physical deletion completeness, all-path authorization, answer quality, cross-process behavior under every failure mode, or performance. Unknown means not established here, not necessarily absent.",
+        "sources": [
+          "docs",
+          "core",
+          "memowrite",
+          "temporal"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No AIOS runtime, test suite or benchmark workload was run. Project metric definitions, fixture and execution-status record describe a separate protocol and are not AIOS results.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,450 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 255,
+    "slug": "genome",
+    "name": "GENOME",
+    "repository": "https://github.com/NORTHTEKDevs/genome",
+    "listed_repository": "https://github.com/NORTHTEKDevs/genome",
+    "branch": "main",
+    "revision": "037755182b143db05e812efa1cc186b4b2ab4b32",
+    "reviewed_at": "2026-11-25T20:55:06Z",
+    "review_timezone": "UTC (checked 2026-11-25 12:55:06 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "GENOME is a Python memory library with SQLite or PostgreSQL storage, local embeddings by default, optional fact extraction and conflict resolution, scoped retrieval, temporal entity facts, and MCP/REST interfaces. Its source includes provenance quarantine and an opt-in mutation journal; this review did not run the system or measure it.",
+    "atlas_locator": {
+      "ordinal": 255,
+      "name": "GENOME",
+      "slug": "genome",
+      "listed_repository": "https://github.com/NORTHTEKDevs/genome",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/genome.md",
+      "revision": "ea76cf924b2382499a158b8c7ad8a815913c962f"
+    },
+    "contact": {
+      "email": "info@northtek.io",
+      "source_url": "https://github.com/NORTHTEKDevs/genome/blob/037755182b143db05e812efa1cc186b4b2ab4b32/README.md",
+      "checked_urls": [
+        "https://github.com/NORTHTEKDevs/genome/blob/037755182b143db05e812efa1cc186b4b2ab4b32/README.md"
+      ],
+      "note": "The official pinned README publishes info@northtek.io for project questions and commercial support. No commit or profile metadata or third-party directory was used."
+    },
+    "contact_email": "info@northtek.io",
+    "contact_email_source_url": "https://github.com/NORTHTEKDevs/genome/blob/037755182b143db05e812efa1cc186b4b2ab4b32/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/NORTHTEKDevs/genome/blob/037755182b143db05e812efa1cc186b4b2ab4b32/README.md"
+    ],
+    "contact_email_note": "The official pinned README publishes info@northtek.io for project questions and commercial support. No commit or profile metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[254], ordinal 255; identity, explicit listed locator and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/genome.md",
+        "symbol": "Curated identity and locator context only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/genome.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository metadata",
+        "symbol": "Canonical NORTHTEKDevs/genome; default branch main",
+        "url": "https://github.com/NORTHTEKDevs/genome"
+      },
+      {
+        "id": "head",
+        "label": "Official current main commit API",
+        "path": "GitHub commits API",
+        "symbol": "Current main SHA 037755182b143db05e812efa1cc186b4b2ab4b32; commit timestamp 2026-11-02T19:09:53Z",
+        "url": "https://api.github.com/repos/NORTHTEKDevs/genome/commits/main"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product, architecture, API, retrieval, temporal feature, upstream benchmark descriptions and contact",
+        "url": "https://github.com/NORTHTEKDevs/genome/blob/037755182b143db05e812efa1cc186b4b2ab4b32/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Architecture guide",
+        "path": "docs/architecture.md",
+        "symbol": "Module boundaries, MemoryRecord, retrieval flow, caching and observability",
+        "url": "https://github.com/NORTHTEKDevs/genome/blob/037755182b143db05e812efa1cc186b4b2ab4b32/docs/architecture.md"
+      },
+      {
+        "id": "api",
+        "label": "API reference",
+        "path": "docs/api_reference.md",
+        "symbol": "Public methods, optional extractors, storage and metrics interfaces",
+        "url": "https://github.com/NORTHTEKDevs/genome/blob/037755182b143db05e812efa1cc186b4b2ab4b32/docs/api_reference.md"
+      },
+      {
+        "id": "schema",
+        "label": "Memory record schema",
+        "path": "genome/memory/schema.py",
+        "symbol": "MemoryRecord fields and input invariants",
+        "url": "https://github.com/NORTHTEKDevs/genome/blob/037755182b143db05e812efa1cc186b4b2ab4b32/genome/memory/schema.py"
+      },
+      {
+        "id": "facade",
+        "label": "Memory facade",
+        "path": "genome/memory/facade.py",
+        "symbol": "add, get, update, delete, search, reset and entity-fact API",
+        "url": "https://github.com/NORTHTEKDevs/genome/blob/037755182b143db05e812efa1cc186b4b2ab4b32/genome/memory/facade.py"
+      },
+      {
+        "id": "sqlite",
+        "label": "SQLite store",
+        "path": "genome/memory/sqlite_store.py",
+        "symbol": "SQLite schema, exact in-scope cosine search, CRUD and scope predicates",
+        "url": "https://github.com/NORTHTEKDevs/genome/blob/037755182b143db05e812efa1cc186b4b2ab4b32/genome/memory/sqlite_store.py"
+      },
+      {
+        "id": "postgres",
+        "label": "PostgreSQL store",
+        "path": "genome/memory/postgres_store.py",
+        "symbol": "PostgreSQL/pgvector schema and HNSW vector index",
+        "url": "https://github.com/NORTHTEKDevs/genome/blob/037755182b143db05e812efa1cc186b4b2ab4b32/genome/memory/postgres_store.py"
+      },
+      {
+        "id": "temporal",
+        "label": "Temporal fact implementation",
+        "path": "genome/memory/temporal.py",
+        "symbol": "EntityFact, validity windows, provenance links and scoped timeline operations",
+        "url": "https://github.com/NORTHTEKDevs/genome/blob/037755182b143db05e812efa1cc186b4b2ab4b32/genome/memory/temporal.py"
+      },
+      {
+        "id": "firewall",
+        "label": "Provenance trust firewall",
+        "path": "genome/firewall.py",
+        "symbol": "Trust tiers, quarantine policy, provenance and limitations",
+        "url": "https://github.com/NORTHTEKDevs/genome/blob/037755182b143db05e812efa1cc186b4b2ab4b32/genome/firewall.py"
+      },
+      {
+        "id": "journal",
+        "label": "Mutation journal",
+        "path": "genome/journal.py",
+        "symbol": "Append-only operation log, hash/HMAC chain and replay",
+        "url": "https://github.com/NORTHTEKDevs/genome/blob/037755182b143db05e812efa1cc186b4b2ab4b32/genome/journal.py"
+      },
+      {
+        "id": "mcp",
+        "label": "MCP server",
+        "path": "genome/mcp/server.py",
+        "symbol": "remember, recall, forget and reset_memories scope arguments and forget relevance floor",
+        "url": "https://github.com/NORTHTEKDevs/genome/blob/037755182b143db05e812efa1cc186b4b2ab4b32/genome/mcp/server.py"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "REST authentication defaults, scope enforcement switch, network and telemetry statements",
+        "url": "https://github.com/NORTHTEKDevs/genome/blob/037755182b143db05e812efa1cc186b4b2ab4b32/SECURITY.md"
+      },
+      {
+        "id": "observability",
+        "label": "Logging and metrics implementation",
+        "path": "genome/observability.py",
+        "symbol": "Structured logs, in-process counters/histograms and external sink",
+        "url": "https://github.com/NORTHTEKDevs/genome/blob/037755182b143db05e812efa1cc186b4b2ab4b32/genome/observability.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The catalog identifies GENOME, slug genome, and the explicit listed repository locator; its pinned Atlas entry is retained only as roster attribution, not as assessment evidence. The official repository presents GENOME as an open-source Python memory layer for AI agents, with a Python API, optional MCP server, and optional REST service. The official README identifies Northtek (FrostByte Digital LLC) as project copyright holder; this review does not infer individual maintainer identity from commit or profile metadata.",
+        "sources": [
+          "catalog",
+          "atlas",
+          "repo",
+          "head",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The `Memory` facade composes an embedding provider, a storage backend, an extractor, optional conflict resolution, reranking, cache, and optional journal. SQLite is the default local store; a PostgreSQL backend uses pgvector and an HNSW cosine index. The MemoryRecord schema stores content and float32 embedding with optional user_id and agent_id, created/access timestamps and count, parent IDs, an operator tag, and JSON metadata.",
+        "sources": [
+          "facade",
+          "schema",
+          "sqlite",
+          "postgres",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The default extractor is IdentityExtractor: it stores input as supplied after embedding. Optional LLM extraction splits text into facts; optional conflict resolution may ask an LLM to ADD, UPDATE, DELETE, or ignore a candidate. Temporal entity facts are also MemoryRecords, tagged with entity/fact metadata including valid_from, valid_until, source_memory_id, confidence, and optional believed_by attribution.",
+        "sources": [
+          "api",
+          "facade",
+          "temporal"
+        ]
+      },
+      {
+        "text": "Retrieval supports dense cosine by default, plus hybrid BM25+dense and graph modes; optional reranking reorders a larger candidate pool. Parent filtering and a response cache are enabled by default. The README's benchmark and latency numbers are upstream-reported claims; this source review collected no measurements.",
+        "sources": [
+          "facade",
+          "architecture",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: `add()` validates text and scope identifiers, calls the configured extractor (identity by default), embeds its output, and stores one record per extracted fact. The default embedding provider is local; the optional OpenAI provider makes API calls. The README describes the default local ingest path as requiring no LLM or network call, though cold model setup may download model files.",
+        "sources": [
+          "facade",
+          "api",
+          "readme"
+        ]
+      },
+      {
+        "text": "Update: `update()` can replace content and/or metadata; content is re-embedded by default. With conflict resolution enabled, the resolver can update an existing candidate only after target membership is checked against the scope-filtered candidates; lower-trust provenance is refused when the configured trust policy requires equal or higher trust.",
+        "sources": [
+          "facade",
+          "firewall"
+        ]
+      },
+      {
+        "text": "Delete: `delete(id)` physically removes the row and touching graph edges, while `reset()` deletes all rows matching supplied scope predicates. Omitting both scope arguments makes reset global. The MCP `forget` tool deletes the nearest search result only if its cosine score reaches `min_score` (default 0.5); it is not a tombstone API. An opt-in journal stores mutation content, so replaying an earlier prefix can reconstruct pre-delete state; deletion from journal copies, backups, or other replicas is not established.",
+        "sources": [
+          "facade",
+          "sqlite",
+          "mcp",
+          "journal"
+        ]
+      },
+      {
+        "text": "Retrieval: dense cosine search is default. Hybrid mode combines BM25 and dense ranks, graph mode follows the memory graph, and a configured reranker can reorder candidates. Search accepts `user_id` and `agent_id`; the store adds a predicate only for each supplied identifier, so omitting an identifier broadens the query. Search quality, answer support, and abstention were not exercised.",
+        "sources": [
+          "facade",
+          "sqlite",
+          "architecture",
+          "readme"
+        ]
+      },
+      {
+        "text": "Scope isolation: records carry nullable user and agent identifiers, and SQLite/Postgres store queries apply the corresponding filters when values are supplied. The REST service's per-request scope is optional by default; operators can set `GENOME_REQUIRE_SCOPE=1` to require scope fields and disable global reset. MCP tools default to the `default` user namespace. These are implementation boundaries, not proof of resistance to all cross-scope attacks.",
+        "sources": [
+          "schema",
+          "sqlite",
+          "postgres",
+          "security",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Provenance and evidence: callers can tag records as system, user, agent, tool, or web. A TrustPolicy can quarantine records below a trust threshold and, with conflict resolution, prevent lower-trust material from superseding higher-trust content; these controls are opt-in and do not detect false claims. Temporal facts can link to a source memory and track confidence and believer. The inspected interface does not establish claim-level citations to external source passages.",
+        "sources": [
+          "facade",
+          "firewall",
+          "temporal",
+          "readme"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: SQLite performs exact cosine comparisons over the scoped rows and holds records for scoring in memory; PostgreSQL can use pgvector HNSW. Local embeddings avoid an embedding API call after model availability, but the default dependency set includes PyTorch through sentence-transformers. The project implements structured logs, in-process counters and histograms, and an optional metric sink; SECURITY.md states there is no telemetry by default.",
+        "sources": [
+          "sqlite",
+          "postgres",
+          "readme",
+          "architecture",
+          "observability",
+          "security"
+        ]
+      },
+      {
+        "text": "Temporal behavior: `record_fact()` writes an entity fact with a domain validity interval and closes the prior current fact of the same type and believer by default. `facts_valid_at()` supports as-of reads. This is a separate structured belief timeline; correctness on naturally phrased temporal questions was not tested here.",
+        "sources": [
+          "temporal",
+          "facade"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Dense, hybrid, and graph retrieval paths were inspected; no fixture output was generated or adjudicated.",
+        "sources": [
+          "facade",
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Updates, conflict resolution and fact validity windows are present in source; no correction or stale-answer probes were run.",
+        "sources": [
+          "facade",
+          "temporal",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The API has physical delete/reset and the optional journal can replay earlier state; no post-delete probes or replica/backup inspection were performed.",
+        "sources": [
+          "facade",
+          "journal",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Scope identifiers and conditional query filters were inspected; no cross-scope workload was executed.",
+        "sources": [
+          "schema",
+          "sqlite",
+          "postgres",
+          "security",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Provenance and source-memory links are represented; no generated claims were checked against evidence passages.",
+        "sources": [
+          "firewall",
+          "temporal",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No runtime timing samples were collected.",
+        "sources": [
+          "sqlite",
+          "postgres",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No write/read probe schedule was run.",
+        "sources": [
+          "facade",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "Optional LLM paths and local embedding options were inspected; no workload usage or cost was collected.",
+        "sources": [
+          "facade",
+          "readme",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Store schemas and vector representations are visible; no corpus-attributed storage sizes were captured.",
+        "sources": [
+          "sqlite",
+          "postgres",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Source-visible observability",
+        "status": "available in code",
+        "evidence": "Structured logging, counters, histograms, and a configurable sink exist; no production telemetry or external sink was configured or measured.",
+        "sources": [
+          "observability",
+          "architecture",
+          "security"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "Scope arguments are optional in the base library, and REST multi-tenant enforcement is an operator setting. The source review therefore does not establish safe isolation when callers omit scope or configure deployment boundaries incorrectly.",
+        "sources": [
+          "facade",
+          "sqlite",
+          "postgres",
+          "security"
+        ]
+      },
+      {
+        "text": "The journal is opt-in and retains mutation payloads. Its unkeyed hash chain is tamper-evident, not tamper-proof; a key changes the chain to HMAC. Replay and journal retention mean a store-level delete alone is not evidence of comprehensive erasure.",
+        "sources": [
+          "journal",
+          "facade"
+        ]
+      },
+      {
+        "text": "Trust tiers record origin and filter by configured threshold; they do not verify whether a trusted statement is true. Source-memory linkage and confidence are metadata, not proof that responses cite or faithfully support their claims.",
+        "sources": [
+          "firewall",
+          "temporal"
+        ]
+      },
+      {
+        "text": "The README reports upstream benchmark results and performance claims, including comparison figures. They were not independently reproduced in this task and are not this project's benchmark results. No GENOME process, benchmark, or tests were run; runtime correctness, retrieval quality, latency, costs, resource use, and operational isolation remain unmeasured.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No GENOME runtime, tests, or benchmarks were run. Project metric definitions and upstream-published results are not results produced by this review."
+    }
+  }
+}

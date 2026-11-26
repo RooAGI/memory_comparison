@@ -1,0 +1,280 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 197,
+    "slug": "dsh-auto-memory",
+    "name": "dsh-auto-memory",
+    "repository": "https://github.com/AskTheWay/dsh-auto-memory",
+    "listed_repository": "https://github.com/AskTheWay/dsh-auto-memory",
+    "branch": "main",
+    "revision": "ac3cfd4ba161adf9b48f01238e58d677a55cb09b",
+    "reviewed_at": "2026-11-25T11:26:37Z",
+    "review_timezone": "UTC (2026-11-25 03:26:37 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "A DeepSeek Harness plugin that stores typed memories as scoped Markdown files, injects a byte-bounded index, and adds trust states, transcript evidence for optional consolidation, lexical search, and injection audit. This is a source review; the system, tests, and benchmark workloads were not run.",
+    "atlas_locator": {
+      "ordinal": 197,
+      "name": "dsh-auto-memory",
+      "slug": "dsh-auto-memory",
+      "listed_repository": "https://github.com/AskTheWay/dsh-auto-memory",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dsh-auto-memory.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "use": "Curated identity and locator attribution only; not assessment evidence."
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/AskTheWay/dsh-auto-memory/blob/ac3cfd4ba161adf9b48f01238e58d677a55cb09b/README.md",
+      "checked_urls": [
+        "https://github.com/AskTheWay/dsh-auto-memory/blob/ac3cfd4ba161adf9b48f01238e58d677a55cb09b/README.md"
+      ],
+      "note": "The official pinned README was checked and publishes no contact email."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/AskTheWay/dsh-auto-memory/blob/ac3cfd4ba161adf9b48f01238e58d677a55cb09b/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/AskTheWay/dsh-auto-memory/blob/ac3cfd4ba161adf9b48f01238e58d677a55cb09b/README.md"
+    ],
+    "contact_email_note": "No email appears in the official pinned README. No profile/commit metadata, third-party directory, or inferred address was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Catalog ordinal and listed locator",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[196], ordinal 197; dsh-auto-memory identity, slug, explicit repository locator and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/dsh-auto-memory.md",
+        "symbol": "Pinned Atlas entry used only for curated identity and locator context; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dsh-auto-memory.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Public AskTheWay/dsh-auto-memory repository; default branch main; current head prefix ac3cfd4",
+        "url": "https://github.com/AskTheWay/dsh-auto-memory"
+      },
+      {
+        "id": "feed",
+        "label": "Official main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Current full main head ac3cfd4ba161adf9b48f01238e58d677a55cb09b; feed updated 2026-11-23T14:24:50Z",
+        "url": "https://github.com/AskTheWay/dsh-auto-memory/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Official reviewed head commit",
+        "path": "commit/ac3cfd4ba161adf9b48f01238e58d677a55cb09b",
+        "symbol": "Official commit page identifies the verified current main head",
+        "url": "https://github.com/AskTheWay/dsh-auto-memory/commit/ac3cfd4ba161adf9b48f01238e58d677a55cb09b"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product, architecture, current budget, project-reported evaluation context, and contact check",
+        "url": "https://github.com/AskTheWay/dsh-auto-memory/blob/ac3cfd4ba161adf9b48f01238e58d677a55cb09b/README.md"
+      },
+      {
+        "id": "types",
+        "label": "Memory types and record schema",
+        "path": "src/types.ts",
+        "symbol": "MemoryRecord, four memory types, two scopes, trust status, evidence, origin and lifecycle fields",
+        "url": "https://github.com/AskTheWay/dsh-auto-memory/blob/ac3cfd4ba161adf9b48f01238e58d677a55cb09b/src/types.ts"
+      },
+      {
+        "id": "store",
+        "label": "Markdown store and derived index",
+        "path": "src/store.ts",
+        "symbol": "Project scope path, normalization, CRUD, locks, atomic writes, sanitization and index rebuilding",
+        "url": "https://github.com/AskTheWay/dsh-auto-memory/blob/ac3cfd4ba161adf9b48f01238e58d677a55cb09b/src/store.ts"
+      },
+      {
+        "id": "tools",
+        "label": "Memory tool surface",
+        "path": "src/tools.ts",
+        "symbol": "memory_write/read/list/search/delete and destructive-operation approval and scope guards",
+        "url": "https://github.com/AskTheWay/dsh-auto-memory/blob/ac3cfd4ba161adf9b48f01238e58d677a55cb09b/src/tools.ts"
+      },
+      {
+        "id": "prompt",
+        "label": "Prompt injection and budgeting",
+        "path": "src/prompt.ts",
+        "symbol": "Session-scoped index assembly, query-aware budget truncation, data wrapper and 16 KiB default integration",
+        "url": "https://github.com/AskTheWay/dsh-auto-memory/blob/ac3cfd4ba161adf9b48f01238e58d677a55cb09b/src/prompt.ts"
+      },
+      {
+        "id": "recall",
+        "label": "Lexical retrieval",
+        "path": "src/recall.ts",
+        "symbol": "Coverage-ranked search, excerpts, state/freshness notes, limit of eight hits",
+        "url": "https://github.com/AskTheWay/dsh-auto-memory/blob/ac3cfd4ba161adf9b48f01238e58d677a55cb09b/src/recall.ts"
+      },
+      {
+        "id": "consolidate",
+        "label": "Automatic session consolidation",
+        "path": "src/consolidate.ts",
+        "symbol": "Buffered transcript capture, bounded model proposal flow, candidate validation and writes",
+        "url": "https://github.com/AskTheWay/dsh-auto-memory/blob/ac3cfd4ba161adf9b48f01238e58d677a55cb09b/src/consolidate.ts"
+      },
+      {
+        "id": "audit",
+        "label": "Injection and consolidation audit",
+        "path": "src/audit.ts",
+        "symbol": "Injection event schema, append serialization/rotation, session snapshots and consolidation outcomes",
+        "url": "https://github.com/AskTheWay/dsh-auto-memory/blob/ac3cfd4ba161adf9b48f01238e58d677a55cb09b/src/audit.ts"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Benchmark domains and definitions; not a result",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Workload specification reference only; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution-status reference; no dsh-auto-memory result inferred",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "Catalog ordinal 197 identifies dsh-auto-memory with the explicit AskTheWay/dsh-auto-memory repository locator. The pinned Atlas roster entry is recorded only for curated identity and locator attribution, not as assessment evidence.",
+        "sources": ["catalog", "atlas"]
+      },
+      {
+        "text": "The official repository presents dsh-auto-memory as a DeepSeek Harness plugin that provides local persistent memory. The inspected README does not identify a more specific maintainer or publish a contact email.",
+        "sources": ["repo", "readme"]
+      },
+      {
+        "text": "The official repository page identifies main as default. The main Atom feed reports current head ac3cfd4ba161adf9b48f01238e58d677a55cb09b updated 2026-11-23T14:24:50Z; the commit page identifies the same revision on main.",
+        "sources": ["repo", "feed", "head"]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Each record is a Markdown file with YAML frontmatter and body; MEMORY.md is regenerated as a derived index. Records support four types, user/project scopes, trust state, evidence, expiry, keywords, read metadata and lifecycle links.",
+        "sources": ["types", "store"]
+      },
+      {
+        "text": "Project directories are derived from the owning session cwd; the user directory is shared across workspaces. Tool guards reject project-scope operations without a trusted session cwd and remove user scope from all paths when disabled.",
+        "sources": ["store", "tools", "prompt"]
+      },
+      {
+        "text": "The plugin wires tools, a prompt section, optional disposal-time consolidation, and a web panel. No separate hosted service or embedding store is required.",
+        "sources": ["readme", "tools", "prompt", "consolidate"]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "memory_write creates or updates a named record. Without explicit scope, it finds an existing same-name record in an available scope and updates that layer, otherwise it writes to project scope. The store sanitizes and atomically writes under a cross-process lock, then rebuilds the derived index.",
+        "sources": ["tools", "store"]
+      },
+      {
+        "text": "Automatic consolidation is disabled by default. If enabled, bounded session text is sent to a model at root-agent disposal; validated proposals are stored as candidates. Failures are logged and do not interrupt the session; buffered material can be lost on process crash before writing.",
+        "sources": ["readme", "consolidate"]
+      },
+      {
+        "text": "Direct deletion removes a selected memory file. Disable, expiry and stale zero-read eviction suppress injection while retaining the file. Bulk prune and delete-all are guarded by approval; delete-all additionally requires confirmation. File deletion does not establish secure erasure from backups or later re-extraction.",
+        "sources": ["tools", "store", "types"]
+      },
+      {
+        "text": "Prompt assembly injects a byte-bounded index wrapped as stored data. The first user message freezes that session's selection; tool reads see writes immediately, while later prompt injection sees them in the next session. With both scopes over budget, project memory receives a guaranteed share.",
+        "sources": ["prompt", "audit", "readme"]
+      },
+      {
+        "text": "Explicit search is lexical, coverage-ranked and limited to eight results; excerpts and reads carry trust/lifecycle notes. No vector or embedding retrieval path was found in the inspected search implementation.",
+        "sources": ["recall", "tools"]
+      }
+    ],
+    "evidence": [
+      {
+        "text": "Records can carry candidate, verified, disputed or superseded status, plus evidence containing a source session ID and quote. The panel is the user-controlled verification path; content changes downgrade trust and invalidate prior evidence.",
+        "sources": ["types", "consolidate", "store"]
+      },
+      {
+        "text": "Consolidation quotes originate in model proposals and are checked against captured transcript text. They support traceability to a conversation but do not establish independent source citations or factual correctness.",
+        "sources": ["consolidate", "types"]
+      },
+      {
+        "text": "The store applies an injection-pattern guard and the prompt labels injected content as data, not instructions. Candidate records may still be injected; disputed and superseded records are excluded.",
+        "sources": ["store", "prompt", "types"]
+      }
+    ],
+    "observability": [
+      {
+        "text": "The append-only JSONL audit records session, cwd, injected and truncated entries, byte count, configured budget and whether selection was frozen. Appends are serialized and the file is rotated at a size limit; failures do not block prompt assembly.",
+        "sources": ["audit"]
+      },
+      {
+        "text": "The panel exposes injection/truncation statistics, reads, health findings, and the latest consolidation outcome. Source-visible locking, atomic replacement and bounded prompt bytes are design properties, not measured performance.",
+        "sources": ["readme", "store", "audit"]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention — unmeasured in this review; no cases were scored.",
+        "sources": ["recall", "metrics", "fixture", "status"]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured; no correction probes were run.",
+        "sources": ["store", "types", "metrics", "fixture", "status"]
+      },
+      {
+        "text": "Deletion leakage — unmeasured; no post-delete, backup, or reintroduction probes were run.",
+        "sources": ["tools", "store", "metrics", "fixture", "status"]
+      },
+      {
+        "text": "Scope isolation — unmeasured; no cross-workspace workload was run.",
+        "sources": ["tools", "prompt", "metrics", "fixture", "status"]
+      },
+      {
+        "text": "Evidence support and citation coverage — unmeasured; no claim-support adjudication was performed.",
+        "sources": ["types", "consolidate", "metrics", "fixture", "status"]
+      },
+      {
+        "text": "Retrieval latency and write-to-recall delay — unmeasured; no timings were collected.",
+        "sources": ["recall", "prompt", "metrics", "fixture", "status"]
+      },
+      {
+        "text": "Tokens and cost — unmeasured; byte budgeting is visible but no token/provider cost was measured.",
+        "sources": ["prompt", "metrics", "fixture", "status"]
+      },
+      {
+        "text": "Storage efficiency — unmeasured; no corpus or audit storage size was collected.",
+        "sources": ["store", "audit", "metrics", "fixture", "status"]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review covered the README and selected current sources for records, storage, tools, prompt assembly, retrieval, consolidation and audit. It did not inspect every panel, import/export, host integration, or deployment path, and did not use a local upstream checkout.",
+        "sources": ["readme", "types", "store", "tools", "prompt", "recall", "consolidate", "audit"]
+      },
+      {
+        "text": "Source inspection does not establish deployed isolation, extraction quality, effective security, physical deletion completeness, real-world recall, load behavior, latency, cost or storage efficiency. No system, tests or benchmark workload was run.",
+        "sources": ["store", "tools", "consolidate", "metrics", "fixture", "status"]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No dsh-auto-memory runtime, tests, or benchmark workload was executed. Upstream README evaluation claims were not reproduced or independently adjudicated; source observations and project fixtures are not results.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

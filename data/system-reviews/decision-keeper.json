@@ -1,0 +1,383 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 181,
+    "slug": "decision-keeper",
+    "name": "Decision Keeper",
+    "repository": "https://github.com/mudassirzulfiqar/Decision-Keeper",
+    "branch": "main",
+    "revision": "911ff6b88e7c5e65b64326f9a5719291e6608ab6",
+    "reviewed_at": "2026-11-25T10:43:20Z",
+    "review_timezone": "UTC (2026-11-25 02:43:20 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/mudassirzulfiqar/Decision-Keeper/blob/911ff6b88e7c5e65b64326f9a5719291e6608ab6/README.md",
+      "checked_urls": [
+        "https://github.com/mudassirzulfiqar/Decision-Keeper/blob/911ff6b88e7c5e65b64326f9a5719291e6608ab6/README.md"
+      ],
+      "note": "The official pinned README was checked; it publishes no contact email."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/mudassirzulfiqar/Decision-Keeper/blob/911ff6b88e7c5e65b64326f9a5719291e6608ab6/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/mudassirzulfiqar/Decision-Keeper/blob/911ff6b88e7c5e65b64326f9a5719291e6608ab6/README.md"
+    ],
+    "contact_email_note": "No email is published in the official README at the reviewed revision. No commit or profile metadata or third-party directories were used.",
+    "summary": "Decision Keeper is an instruction-and-skill workflow for storing project decisions as Markdown under docs/decision/. It installs client-specific guidance and asks the host agent to recognize, retrieve, apply, and organize lasting project rules. The reviewed repository does not provide a separate memory service or structured record API.",
+    "atlas_locator": {
+      "ordinal": 181,
+      "name": "Decision Keeper",
+      "slug": "decision-keeper",
+      "listed_repository": "https://github.com/mudassirzulfiqar/Decision-Keeper",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/decision-keeper.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated system catalog",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 181 identity, slug, listed locator, and roster attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster attribution only",
+        "path": "content/systems/decision-keeper.md",
+        "symbol": "curated attribution for catalog identity and listed locator; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/decision-keeper.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "canonical public repository, non-fork status, and default branch main",
+        "url": "https://github.com/mudassirzulfiqar/Decision-Keeper"
+      },
+      {
+        "id": "history",
+        "label": "Official main branch history",
+        "path": "main commits feed",
+        "symbol": "official branch history confirms current main head",
+        "url": "https://github.com/mudassirzulfiqar/Decision-Keeper/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream commit",
+        "path": "commit 911ff6b",
+        "symbol": "full current main SHA and commit timestamp 2026-11-16T13:03:03+01:00",
+        "url": "https://github.com/mudassirzulfiqar/Decision-Keeper/commit/911ff6b88e7c5e65b64326f9a5719291e6608ab6"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "project purpose, install contract, supported clients and user-facing operation; checked for published contact",
+        "url": "https://github.com/mudassirzulfiqar/Decision-Keeper/blob/911ff6b88e7c5e65b64326f9a5719291e6608ab6/README.md"
+      },
+      {
+        "id": "skill",
+        "label": "Decision Keeper skill",
+        "path": "SKILL.md",
+        "symbol": "recognition rules, project scope, read/apply/write workflow, manual triggers and intended organization/verification",
+        "url": "https://github.com/mudassirzulfiqar/Decision-Keeper/blob/911ff6b88e7c5e65b64326f9a5719291e6608ab6/SKILL.md"
+      },
+      {
+        "id": "installer",
+        "label": "Project installer",
+        "path": "install.py",
+        "symbol": "installation safeguards, paths and package-file manifest",
+        "url": "https://github.com/mudassirzulfiqar/Decision-Keeper/blob/911ff6b88e7c5e65b64326f9a5719291e6608ab6/install.py"
+      },
+      {
+        "id": "organizer",
+        "label": "Decision-tree organizer procedure",
+        "path": ".agents/skills/decision-keeper/references/organizer.md",
+        "symbol": "file organization, one-writer procedure, ten-rule limit and verification steps",
+        "url": "https://github.com/mudassirzulfiqar/Decision-Keeper/blob/911ff6b88e7c5e65b64326f9a5719291e6608ab6/.agents/skills/decision-keeper/references/organizer.md"
+      },
+      {
+        "id": "checker",
+        "label": "Decision-tree checker",
+        "path": ".agents/skills/decision-keeper/scripts/check_tree.py",
+        "symbol": "relative topic links, duplicate rules, orphan files and ten-rule structural checks",
+        "url": "https://github.com/mudassirzulfiqar/Decision-Keeper/blob/911ff6b88e7c5e65b64326f9a5719291e6608ab6/.agents/skills/decision-keeper/scripts/check_tree.py"
+      },
+      {
+        "id": "metrics_doc",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "benchmark domains and definitions; no Decision Keeper measurements",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Shared benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "shared execution status; not a Decision Keeper result",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Planned benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned workload specification only",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The catalog places Decision Keeper at ordinal 181, uses slug decision-keeper and lists the explicit locator https://github.com/mudassirzulfiqar/Decision-Keeper. The pinned Atlas report is retained only for identity and locator attribution.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The official public GitHub repository is mudassirzulfiqar/Decision-Keeper, its default branch is main, and official branch metadata plus a shallow checkout agree on full head 911ff6b88e7c5e65b64326f9a5719291e6608ab6.",
+        "sources": [
+          "repo",
+          "history",
+          "head"
+        ]
+      },
+      {
+        "text": "The README describes a Markdown decision knowledge base installed into Codex or Claude Code projects; the skill defines the agent-mediated capture, read, apply and organize workflow.",
+        "sources": [
+          "readme",
+          "skill"
+        ]
+      },
+      {
+        "text": "The official pinned README publishes no contact email; contact_email is null and the exact checked README URL is recorded.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The installer appends managed instructions and copies client-specific skill files; the README documents shared project decision files under docs/decision/ for Codex and Claude Code.",
+        "sources": [
+          "readme",
+          "installer"
+        ]
+      },
+      {
+        "text": "The memory unit is a Markdown rule or reusable correction organized in an index and linked topic files. The skill directs a full index read followed by relevant linked reads; the reviewed source provides no typed record schema, database, identifiers or retrieval index.",
+        "sources": [
+          "skill",
+          "readme"
+        ]
+      },
+      {
+        "text": "The installer checks root selection, symlink paths and recognized file hashes before writing. The bundled organizer specifies one active rule per bullet and a ten-rule file limit; its checker reports broken links, duplicates, orphan files and over-limit topics. These checks validate tree structure, while decision recognition and application still rely on the host agent.",
+        "sources": [
+          "installer",
+          "organizer",
+          "checker",
+          "skill"
+        ]
+      },
+      {
+        "text": "The bundled organizer and checker provide concrete organization and structural validation, but they do not judge factual correctness, confirmation provenance, policy scope, or whether the host agent actually applied a rule. The checker is invoked by the organizer procedure rather than continuously.",
+        "sources": [
+          "organizer",
+          "checker",
+          "skill"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: capture clear lasting user-confirmed rules and reusable corrections, skip one-off or tentative content, and allow explicit /keep and /keep and go triggers. The skill tells the agent to omit secrets, personal data and transcripts.",
+        "sources": [
+          "skill",
+          "readme"
+        ]
+      },
+      {
+        "text": "Update: apply rules at the narrowest supported scope, preserve unchanged parts of a choice, and resolve material conflicts before recording a new default. The reviewed implementation surface is prose-guided Markdown editing, not a typed correction API.",
+        "sources": [
+          "skill"
+        ]
+      },
+      {
+        "text": "Delete: README and skill describe dropping/removing a rule. No delete API, tombstone, mutation ledger or cross-copy retention guarantee is defined in the inspected files.",
+        "sources": [
+          "readme",
+          "skill"
+        ]
+      },
+      {
+        "text": "Retrieval: read the project decision index in full and follow relevant topic links. This is instruction-based file retrieval with no ranking algorithm or measured accuracy.",
+        "sources": [
+          "skill"
+        ]
+      },
+      {
+        "text": "Scope: installation is project-root based and the skill requires opt-in project instructions. The installer refuses filesystem root/home and nested Git subdirectories. These boundaries do not constitute per-user or tenant authorization on later operations.",
+        "sources": [
+          "readme",
+          "skill",
+          "installer"
+        ]
+      },
+      {
+        "text": "Provenance: the workflow asks for user-confirmed rules and marks manual triggers as manual entries, but the Markdown model has no required author, timestamp, source passage, confidence, trust state or audit history fields.",
+        "sources": [
+          "skill"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: ordinary Markdown avoids a required database, but full-index reading can increase context cost with tree size. No indexing, background processing, telemetry, usage accounting or performance data is present in reviewed files.",
+        "sources": [
+          "readme",
+          "skill"
+        ]
+      },
+      {
+        "text": "No runtime, tests or benchmark workloads were run; all project metric domains remain unmeasured.",
+        "sources": [
+          "metrics_doc",
+          "status",
+          "fixture"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy",
+        "status": "unmeasured",
+        "evidence": "The skill defines file-based recall; no retrieval probes were run.",
+        "sources": [
+          "skill",
+          "metrics_doc",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Corrections are agent-directed edits; no correction workload was run.",
+        "sources": [
+          "skill",
+          "metrics_doc",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Rule removal is described without a retention contract; no post-deletion probes were run.",
+        "sources": [
+          "readme",
+          "skill",
+          "metrics_doc",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation leak rate",
+        "status": "unmeasured",
+        "evidence": "Project opt-in and installer root checks exist; no cross-scope probes were run.",
+        "sources": [
+          "installer",
+          "metrics_doc",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Confirmation is a workflow rule; no evidence adjudication was run.",
+        "sources": [
+          "skill",
+          "metrics_doc",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No retrieval timing was collected.",
+        "sources": [
+          "metrics_doc",
+          "status"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No write acknowledgment or scheduled recall probes were collected.",
+        "sources": [
+          "metrics_doc",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No model usage or cost accounting was collected.",
+        "sources": [
+          "metrics_doc",
+          "status"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No persistent storage size was measured.",
+        "sources": [
+          "metrics_doc",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The reviewed repository is a small instruction and skill package rather than a standalone memory runtime; its behavior depends on host-agent interpretation and project files.",
+        "sources": [
+          "readme",
+          "skill"
+        ]
+      },
+      {
+        "text": "The organizer and checker provide deterministic file-organization rules and structural checks, but they do not validate whether a decision is true, user-confirmed, correctly scoped, or applied by the host agent. The checker is only useful when the workflow invokes it.",
+        "sources": [
+          "organizer",
+          "checker",
+          "skill"
+        ]
+      },
+      {
+        "text": "No structured provenance or mutation history is guaranteed by the documented Markdown data model. Git history may retain edits, but repository-specific retention and privacy behavior are outside this source review.",
+        "sources": [
+          "skill",
+          "readme"
+        ]
+      },
+      {
+        "text": "The read-all-index instruction favors predictable inspection but can scale poorly in prompt/context use as project decision files grow; no measured limits or optimization are documented.",
+        "sources": [
+          "skill"
+        ]
+      },
+      {
+        "text": "No Decision Keeper runtime, tests or benchmarks were run; all metric domains are unmeasured.",
+        "sources": [
+          "metrics_doc",
+          "status",
+          "fixture"
+        ]
+      }
+    ],
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "No Decision Keeper runtime or benchmark workload was run for this source review."
+    }
+  }
+}

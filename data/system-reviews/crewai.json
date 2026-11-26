@@ -1,0 +1,433 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "crewai",
+    "name": "CrewAI",
+    "ordinal": 171,
+    "repository": "https://github.com/crewAIInc/crewAI",
+    "listed_repository": "https://github.com/crewAIInc/crewAI",
+    "branch": "main",
+    "revision": "ba2bd50f70069e3079eed29bb9cbed3f777c548b",
+    "reviewed_at": "2026-11-25T10:07:39Z",
+    "review_timezone": "UTC (2026-11-25 02:07:39 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "CrewAI is a Python agent and workflow framework with an optional unified memory API, LLM-assisted memory encoding and consolidation, and shallow or adaptive-depth recall over pluggable vector storage. This is a pinned source review; no runtime, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 171,
+      "name": "CrewAI",
+      "slug": "crewai",
+      "listed_repository": "https://github.com/crewAIInc/crewAI",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/crewai.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/crewAIInc/crewAI/blob/ba2bd50f70069e3079eed29bb9cbed3f777c548b/README.md",
+      "checked_urls": [
+        "https://github.com/crewAIInc/crewAI/blob/ba2bd50f70069e3079eed29bb9cbed3f777c548b/README.md"
+      ],
+      "note": "Checked only the official pinned README. It publishes website, docs, and forum links but no contact email; no profile or commit metadata or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/crewAIInc/crewAI/blob/ba2bd50f70069e3079eed29bb9cbed3f777c548b/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/crewAIInc/crewAI/blob/ba2bd50f70069e3079eed29bb9cbed3f777c548b/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the official README at the reviewed head.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 171 is CrewAI, slug crewai; explicit listed locator is https://github.com/crewAIInc/crewAI.",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/crewai.md",
+        "symbol": "Pinned Atlas entry retained only for curated name, slug, listed locator and attribution; not assessment evidence.",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/crewai.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "Public canonical crewAIInc/crewAI repository page identifies main as the default branch.",
+        "url": "https://github.com/crewAIInc/crewAI"
+      },
+      {
+        "id": "api",
+        "label": "Official GitHub current-main API",
+        "path": "repos/crewAIInc/crewAI/commits/main",
+        "symbol": "Current main head ba2bd50f70069e3079eed29bb9cbed3f777c548b; commit timestamp 2026-11-25T06:18:49Z.",
+        "url": "https://api.github.com/repos/crewAIInc/crewAI/commits/main"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream head commit",
+        "path": "commit",
+        "symbol": "ba2bd50f70069e3079eed29bb9cbed3f777c548b; checkout and git ls-remote matched.",
+        "url": "https://github.com/crewAIInc/crewAI/commit/ba2bd50f70069e3079eed29bb9cbed3f777c548b"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official repository README",
+        "path": "README.md",
+        "symbol": "Framework overview and official support channels; checked for contact email.",
+        "url": "https://github.com/crewAIInc/crewAI/blob/ba2bd50f70069e3079eed29bb9cbed3f777c548b/README.md"
+      },
+      {
+        "id": "guide",
+        "label": "Pinned official memory guide",
+        "path": "docs/v1.15.45/en/concepts/memory.mdx",
+        "symbol": "Unified memory use, crew/agent integration, scoped views, recall modes, embedder configuration, events, and troubleshooting.",
+        "url": "https://github.com/crewAIInc/crewAI/blob/ba2bd50f70069e3079eed29bb9cbed3f777c548b/docs/v1.15.45/en/concepts/memory.mdx"
+      },
+      {
+        "id": "types",
+        "label": "Pinned memory record and configuration types",
+        "path": "lib/crewai/src/crewai/memory/types.py",
+        "symbol": "MemoryRecord, MemoryMatch, scoring configuration, scope model, and composite score structure.",
+        "url": "https://github.com/crewAIInc/crewAI/blob/ba2bd50f70069e3079eed29bb9cbed3f777c548b/lib/crewai/src/crewai/memory/types.py"
+      },
+      {
+        "id": "memory",
+        "label": "Pinned unified Memory implementation",
+        "path": "lib/crewai/src/crewai/memory/unified_memory.py",
+        "symbol": "Storage defaults, write/update/delete/recall APIs, root scope, read barrier, and operation events.",
+        "url": "https://github.com/crewAIInc/crewAI/blob/ba2bd50f70069e3079eed29bb9cbed3f777c548b/lib/crewai/src/crewai/memory/unified_memory.py"
+      },
+      {
+        "id": "encoding",
+        "label": "Pinned memory encoding flow",
+        "path": "lib/crewai/src/crewai/memory/encoding_flow.py",
+        "symbol": "Batch embedding, duplicate filtering, concurrent similar-record lookup and analysis, and consolidation execution.",
+        "url": "https://github.com/crewAIInc/crewAI/blob/ba2bd50f70069e3079eed29bb9cbed3f777c548b/lib/crewai/src/crewai/memory/encoding_flow.py"
+      },
+      {
+        "id": "analysis",
+        "label": "Pinned memory analysis and consolidation",
+        "path": "lib/crewai/src/crewai/memory/analyze.py",
+        "symbol": "LLM-generated save metadata, consolidation action schema, query analysis, and safe fallbacks on errors.",
+        "url": "https://github.com/crewAIInc/crewAI/blob/ba2bd50f70069e3079eed29bb9cbed3f777c548b/lib/crewai/src/crewai/memory/analyze.py"
+      },
+      {
+        "id": "recall",
+        "label": "Pinned adaptive recall flow",
+        "path": "lib/crewai/src/crewai/memory/recall_flow.py",
+        "symbol": "Query analysis, scoped parallel search, confidence routing, bounded exploration and evidence-gap propagation.",
+        "url": "https://github.com/crewAIInc/crewAI/blob/ba2bd50f70069e3079eed29bb9cbed3f777c548b/lib/crewai/src/crewai/memory/recall_flow.py"
+      },
+      {
+        "id": "scope",
+        "label": "Pinned memory scope views",
+        "path": "lib/crewai/src/crewai/memory/memory_scope.py",
+        "symbol": "MemoryScope and MemorySlice views, path joining, and read-only behavior.",
+        "url": "https://github.com/crewAIInc/crewAI/blob/ba2bd50f70069e3079eed29bb9cbed3f777c548b/lib/crewai/src/crewai/memory/memory_scope.py"
+      },
+      {
+        "id": "lance",
+        "label": "Pinned LanceDB backend",
+        "path": "lib/crewai/src/crewai/memory/storage/lancedb_storage.py",
+        "symbol": "Default vector store operations, scope-prefix filtering, updates, deletion, listing and reset.",
+        "url": "https://github.com/crewAIInc/crewAI/blob/ba2bd50f70069e3079eed29bb9cbed3f777c548b/lib/crewai/src/crewai/memory/storage/lancedb_storage.py"
+      },
+      {
+        "id": "qdrant",
+        "label": "Pinned Qdrant Edge backend",
+        "path": "lib/crewai/src/crewai/memory/storage/qdrant_edge_storage.py",
+        "symbol": "Alternative embedded vector store, ancestor-path scope filter, search and mutation operations.",
+        "url": "https://github.com/crewAIInc/crewAI/blob/ba2bd50f70069e3079eed29bb9cbed3f777c548b/lib/crewai/src/crewai/memory/storage/qdrant_edge_storage.py"
+      },
+      {
+        "id": "backend",
+        "label": "Pinned storage backend protocol",
+        "path": "lib/crewai/src/crewai/memory/storage/backend.py",
+        "symbol": "Pluggable storage contract for search, save, update, deletion, listing and reset.",
+        "url": "https://github.com/crewAIInc/crewAI/blob/ba2bd50f70069e3079eed29bb9cbed3f777c548b/lib/crewai/src/crewai/memory/storage/backend.py"
+      },
+      {
+        "id": "events",
+        "label": "Pinned memory events",
+        "path": "lib/crewai/src/crewai/events/types/memory_events.py",
+        "symbol": "Save, query, and agent retrieval success/failure events and timing fields.",
+        "url": "https://github.com/crewAIInc/crewAI/blob/ba2bd50f70069e3079eed29bb9cbed3f777c548b/lib/crewai/src/crewai/events/types/memory_events.py"
+      },
+      {
+        "id": "crew",
+        "label": "Pinned Crew integration",
+        "path": "lib/crewai/src/crewai/crew.py",
+        "symbol": "Crew memory initialization, shared backing instance, default memory scope, and agent memory tool integration.",
+        "url": "https://github.com/crewAIInc/crewAI/blob/ba2bd50f70069e3079eed29bb9cbed3f777c548b/lib/crewai/src/crewai/crew.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Benchmark protocol only; not executed.",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared project status is not_run; no CrewAI measurements were produced.",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "CrewAI is an open-source Python framework for autonomous multi-agent Crews and event-driven Flows. Its optional unified Memory API is a standalone component that can also be shared through crews, agents, and flows.",
+        "sources": [
+          "readme",
+          "guide",
+          "repo"
+        ]
+      }
+    ],
+    "identity": [
+      {
+        "text": "The curated catalog resolves ordinal 171 to CrewAI, slug crewai, and explicit listed locator https://github.com/crewAIInc/crewAI; the pinned Atlas record is attribution only. Official GitHub API metadata identifies main as default and reports head ba2bd50f70069e3079eed29bb9cbed3f777c548b. Read-only git ls-remote and a shallow checkout matched. Reviewed 2026-11-25T10:07:39Z (UTC; 2026-11-25 02:07:39 PST; America/Los_Angeles).",
+        "sources": [
+          "catalog",
+          "atlas",
+          "repo",
+          "api",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The optional unified Memory class exposes the same store to standalone scripts and Crew, Agent, and Flow integrations. Crews can share one backing instance; agents can receive their own memory or a scoped view.",
+        "sources": [
+          "guide",
+          "memory",
+          "scope",
+          "crew"
+        ]
+      },
+      {
+        "text": "MemoryRecord stores text, ID, hierarchical scope, categories, arbitrary metadata, importance, creation/access times, optional embedding, source string, and private flag. MemoryMatch adds score, match reasons, and optional evidence-gap text.",
+        "sources": [
+          "types"
+        ]
+      },
+      {
+        "text": "The default backend is LanceDB; Qdrant Edge and custom StorageBackend implementations are supported. The default embedder is OpenAI unless configured; the official guide gives a local default storage path and describes embedding-dimension migration concerns.",
+        "sources": [
+          "memory",
+          "backend",
+          "guide"
+        ]
+      },
+      {
+        "text": "Recall combines semantic similarity, recency decay, and importance. Configurable encoding and recall flows use LLM analysis and vector embeddings; these source-visible mechanisms do not establish measured retrieval quality.",
+        "sources": [
+          "types",
+          "analysis",
+          "encoding",
+          "recall"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: remember() synchronously waits on a serialized save queue; remember_many() queues batch processing in the background, and later recall drains pending writes. Encoding embeds a batch, drops near duplicates, searches for similar records, infers missing fields, requests LLM consolidation actions, and applies updates/deletions and inserts.",
+        "sources": [
+          "memory",
+          "encoding",
+          "analysis"
+        ]
+      },
+      {
+        "text": "Update/correction: update(record_id, ...) replaces selected fields under the same ID and recomputes the vector if content changes. The record schema exposes no prior-value revision ledger. LLM consolidation can also replace or delete entries; no human review is required by this save path.",
+        "sources": [
+          "memory",
+          "encoding",
+          "analysis",
+          "types"
+        ]
+      },
+      {
+        "text": "Deletion: forget() supports scope, category, age, metadata, and record-ID filters; reset() and reset_all() clear a scope or store. Backend source implements deletion, but no physical-erasure assurance or post-delete behavior was tested.",
+        "sources": [
+          "memory",
+          "backend",
+          "lance",
+          "qdrant"
+        ]
+      },
+      {
+        "text": "Retrieval: shallow recall performs a direct vector search and composite re-ranking. Deep recall may distill longer queries into subqueries, select candidate scopes, search in parallel, and perform a bounded deeper exploration when confidence is low. Results include match reasons and may include query-gap text; no answer-level citation or abstention guarantee was established.",
+        "sources": [
+          "memory",
+          "recall",
+          "types",
+          "guide"
+        ]
+      },
+      {
+        "text": "Scope isolation: hierarchical scopes, root_scope, MemoryScope/MemorySlice, and private/source filters constrain searches when callers supply them. They are not authenticated identity or tenant enforcement. LanceDB uses a string-prefix LIKE filter; Qdrant Edge matches ancestor-path values. No cross-scope runtime probes were run.",
+        "sources": [
+          "scope",
+          "memory",
+          "lance",
+          "qdrant",
+          "guide"
+        ]
+      },
+      {
+        "text": "Provenance/evidence: source, categories, metadata, and evidence_gaps can describe a record or retrieval gap, but source is free-form and the schema does not require document IDs, immutable supporting passages, trust state, or claim-to-source verification.",
+        "sources": [
+          "types",
+          "analysis",
+          "recall"
+        ]
+      },
+      {
+        "text": "Efficiency/observability: batch embedding, intra-batch cosine deduplication, concurrent similar-record lookups and LLM analyses, candidate oversampling, and parallel recall searches are implemented. Save/query events carry success/failure and elapsed time; some event payloads include query, content, metadata, or results. No performance or cost measurements were collected.",
+        "sources": [
+          "encoding",
+          "recall",
+          "events"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "Recall paths exist, but no answerable or unanswerable probes were run or adjudicated.",
+        "sources": [
+          "recall",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Explicit update and LLM consolidation exist, but no correction cases were scored.",
+        "sources": [
+          "memory",
+          "encoding",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leak rate",
+        "status": "unmeasured",
+        "evidence": "Forget/reset and backend delete paths exist; no post-delete probe was run.",
+        "sources": [
+          "memory",
+          "lance",
+          "qdrant",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation leak rate",
+        "status": "unmeasured",
+        "evidence": "Scope and private-source filters are implemented, but no cross-principal workload was run.",
+        "sources": [
+          "scope",
+          "lance",
+          "qdrant",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Metadata and query-gap fields exist; no claim-to-evidence audit was performed.",
+        "sources": [
+          "types",
+          "recall",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Events include elapsed-time fields, but no runtime timing samples were collected.",
+        "sources": [
+          "events",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No provider usage or billing data was collected.",
+        "sources": [
+          "guide",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No corpus footprint or bytes-per-record measurement was collected.",
+        "sources": [
+          "backend",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The bounded review covered the pinned README and memory guide, record/config types, unified Memory API, encoding and recall flows, LLM analysis, both built-in backends, scope views, backend contract, and event models. It did not trace every integration, migration, custom backend, or error path.",
+        "sources": [
+          "readme",
+          "guide",
+          "types",
+          "memory",
+          "encoding",
+          "analysis",
+          "recall",
+          "scope",
+          "lance",
+          "qdrant",
+          "backend",
+          "events"
+        ]
+      },
+      {
+        "text": "No system, tests, or benchmarks were run. Retrieval quality, correction behavior, deletion guarantees, actual isolation under an application policy, operating reliability, latency, cost, and storage use remain unknown.",
+        "sources": [
+          "fixture",
+          "status",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No CrewAI runtime, tests, or benchmark workload was executed. Source and documentation observations are not measured outcomes.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    },
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "No CrewAI measurements were produced."
+    }
+  }
+}

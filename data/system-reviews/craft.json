@@ -1,0 +1,223 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "craft",
+    "name": "craft",
+    "ordinal": 169,
+    "repository": "https://github.com/drobins25/craft",
+    "listed_repository": "https://github.com/drobins25/craft",
+    "branch": "main",
+    "revision": "c9c16fa53c214577b5aca7770b1875f53c80a101",
+    "catalog_revision": "7006381d0b01990e5d3fc3d3b9d97cf9a5e545a0",
+    "reviewed_at": "2026-11-25T22:17:56Z",
+    "review_timezone": "UTC (2026-11-25 14:17:56 PST; America/Los_Angeles)",
+    "source_status": "identity_verified_review_limited",
+    "review_scope": "Verified repository identity, default branch, current head, pinned catalog revision, and citation targets. Did not redo an implementation assessment.",
+    "benchmark_status": "not_run",
+    "summary": "The catalog locator is canonical as listed: official GitHub metadata identifies public, non-fork drobins25/craft on main, and the catalog-pinned SHA exists there. The prior neo4j-labs/create-context-graph destination and missing-SHA conclusion were caused by mis-targeted lookups and are withdrawn. This review corrects the source links and identity claims only; implementation and benchmark results remain unassessed.",
+    "atlas_locator": {
+      "ordinal": 169,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/craft.md",
+      "listed_repository": "https://github.com/drobins25/craft",
+      "use": "Roster and locator attribution only; not assessment evidence."
+    },
+    "review_note": {
+      "resolution": "The listed repository URL is canonical and does not redirect to neo4j-labs/create-context-graph. The catalog-pinned SHA resolves in the listed repository. The previous review queried the wrong repository, so its redirect and missing-commit claims were incorrect.",
+      "evidence_urls": [
+        "https://api.github.com/repos/drobins25/craft",
+        "https://api.github.com/repos/drobins25/craft/commits/7006381d0b01990e5d3fc3d3b9d97cf9a5e545a0",
+        "https://api.github.com/repos/drobins25/craft/commits/main",
+        "https://github.com/drobins25/craft/commit/c9c16fa53c214577b5aca7770b1875f53c80a101"
+      ]
+    },
+    "contact_email": null,
+    "contact_email_note": "Contact details were not reviewed in this link-focused re-review.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity, locator, and revision",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 169, slug craft, explicit repository locator, pinned revision",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster locator",
+        "path": "content/systems/craft.md",
+        "symbol": "Locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/craft.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository metadata",
+        "path": "GitHub repository API",
+        "symbol": "Public, non-fork drobins25/craft; default branch main; Craft description",
+        "url": "https://api.github.com/repos/drobins25/craft"
+      },
+      {
+        "id": "head",
+        "label": "Official current main commit endpoint",
+        "path": "GitHub commits API",
+        "symbol": "Current full main head SHA c9c16fa53c214577b5aca7770b1875f53c80a101",
+        "url": "https://api.github.com/repos/drobins25/craft/commits/main"
+      },
+      {
+        "id": "commit",
+        "label": "Official full current head commit page",
+        "path": "commit/c9c16fa53c214577b5aca7770b1875f53c80a101",
+        "symbol": "Official commit page for current main head",
+        "url": "https://github.com/drobins25/craft/commit/c9c16fa53c214577b5aca7770b1875f53c80a101"
+      },
+      {
+        "id": "pin_check",
+        "label": "Catalog-pinned commit lookup",
+        "path": "GitHub commits API",
+        "symbol": "Exact catalog revision 7006381d0b01990e5d3fc3d3b9d97cf9a5e545a0 exists in drobins25/craft",
+        "url": "https://api.github.com/repos/drobins25/craft/commits/7006381d0b01990e5d3fc3d3b9d97cf9a5e545a0"
+      },
+      {
+        "id": "readme",
+        "label": "Official README at reviewed current head",
+        "path": "README.md",
+        "symbol": "README is pinned to the verified current main head and describes Craft as a Claude Code plugin",
+        "url": "https://github.com/drobins25/craft/blob/c9c16fa53c214577b5aca7770b1875f53c80a101/README.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Workload specification only; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "No Craft measurement claimed",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The curated catalog lists craft at ordinal 169 with slug craft, repository https://github.com/drobins25/craft, and pinned revision 7006381d0b01990e5d3fc3d3b9d97cf9a5e545a0. Atlas is retained only for roster/locator attribution.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "Official GitHub metadata identifies the listed repository as public, non-fork drobins25/craft with default branch main. The catalog-pinned revision resolves there; the previous Neo4j redirect and missing-SHA assertions were based on wrong-target URLs.",
+        "sources": [
+          "repo",
+          "pin_check"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Not assessed in this link-focused re-review. The current README is linked at the verified current main head, but its product overview is not treated as implementation verification.",
+        "sources": [
+          "readme",
+          "head",
+          "commit"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Implementation behavior, including write, update, delete, retrieval, scope isolation, provenance, efficiency, and observability, was not reassessed in this task.",
+        "sources": [
+          "repo",
+          "head",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention — unmeasured; no probes were run.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured; no correction workload was run.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Deletion leakage — unmeasured; no delete path was tested.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Scope isolation — unmeasured; no leakage workload was run.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Evidence support and citation coverage — unmeasured; no claim scoring was run.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Retrieval latency and write-to-recall delay — unmeasured; no runtime probes were run.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Tokens, cost, and storage efficiency — unmeasured; no runtime or storage measurements were made.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "Repository identity, default branch, current head, and existence of the catalog-pinned revision were verified using official GitHub endpoints. The previously recorded Neo4j destination and missing-SHA result were wrong-target errors and are withdrawn.",
+        "sources": [
+          "repo",
+          "head",
+          "pin_check",
+          "commit"
+        ]
+      },
+      {
+        "text": "This was a link and identity re-review, not a source implementation assessment. The Atlas citation is only a roster locator; implementation behavior and all runtime metrics remain unassessed.",
+        "sources": [
+          "atlas",
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Craft runtime, tests, or benchmark workload was executed. This re-review verified source identity and citation targets only.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

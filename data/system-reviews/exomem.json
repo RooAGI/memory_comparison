@@ -1,0 +1,346 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 233,
+    "slug": "exomem",
+    "name": "Exomem",
+    "repository": "https://github.com/substrate-systems/evermatter",
+    "listed_repository": "https://github.com/Artexis10/exomem",
+    "branch": "main",
+    "revision": "5ef9dfb10e4b948390293bd14d9c5ff6a41e0269",
+    "reviewed_at": "2026-11-25T20:11:28Z",
+    "review_timezone": "UTC (checked 2026-11-25 12:11:28 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "The current project describes a local-first memory server for agent clients that reads and writes a user's Markdown/Obsidian vault through MCP, CLI, and REST interfaces. Its design separates captured Sources, authored knowledge pages, and Evidence; retrieval combines lexical, semantic, and graph-related paths. This review is limited to public source and documentation, not runtime behavior.",
+    "atlas_locator": {
+      "ordinal": 233,
+      "name": "Exomem",
+      "slug": "exomem",
+      "listed_repository": "https://github.com/Artexis10/exomem",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/exomem.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/substrate-systems/evermatter/blob/5ef9dfb10e4b948390293bd14d9c5ff6a41e0269/README.md",
+      "checked_urls": [
+        "https://github.com/substrate-systems/evermatter/blob/5ef9dfb10e4b948390293bd14d9c5ff6a41e0269/README.md"
+      ],
+      "note": "Checked the official pinned README for a published contact email; none was present. No commit/profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/substrate-systems/evermatter/blob/5ef9dfb10e4b948390293bd14d9c5ff6a41e0269/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/substrate-systems/evermatter/blob/5ef9dfb10e4b948390293bd14d9c5ff6a41e0269/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the checked official pinned README. No commit/profile metadata, third-party directory, or inferred address was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[232], ordinal 233; name, slug, explicit locator and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/exomem.md",
+        "symbol": "Pinned attribution source for curated identity/locator only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/exomem.md"
+      },
+      {
+        "id": "repo",
+        "label": "Canonical official upstream repository",
+        "path": "",
+        "symbol": "Listed locator redirects here; official repository page identifies main as default branch",
+        "url": "https://github.com/substrate-systems/evermatter"
+      },
+      {
+        "id": "head",
+        "label": "Official current head",
+        "path": "",
+        "symbol": "Official GitHub commits API for main returns the full current head SHA",
+        "url": "https://api.github.com/repos/substrate-systems/evermatter/commits/main"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project identity, architecture, operations, retrieval, scope, efficiency claims; checked for published contact email",
+        "url": "https://github.com/substrate-systems/evermatter/blob/5ef9dfb10e4b948390293bd14d9c5ff6a41e0269/README.md"
+      },
+      {
+        "id": "find",
+        "label": "Pinned search implementation",
+        "path": "src/exomem/find.py",
+        "symbol": "Search corpus scan, frontmatter filters, cache and degradation observability",
+        "url": "https://github.com/substrate-systems/evermatter/blob/5ef9dfb10e4b948390293bd14d9c5ff6a41e0269/src/exomem/find.py"
+      },
+      {
+        "id": "add",
+        "label": "Pinned source capture writer",
+        "path": "src/exomem/add.py",
+        "symbol": "Source capture, index/log updates and atomic write workflow",
+        "url": "https://github.com/substrate-systems/evermatter/blob/5ef9dfb10e4b948390293bd14d9c5ff6a41e0269/src/exomem/add.py"
+      },
+      {
+        "id": "replace",
+        "label": "Pinned supersession implementation",
+        "path": "src/exomem/replace.py",
+        "symbol": "Predecessor and successor relationship, content hash provenance and safe replacement",
+        "url": "https://github.com/substrate-systems/evermatter/blob/5ef9dfb10e4b948390293bd14d9c5ff6a41e0269/src/exomem/replace.py"
+      },
+      {
+        "id": "delete",
+        "label": "Pinned delete-to-trash implementation",
+        "path": "src/exomem/delete_file.py",
+        "symbol": "Explicit confirmation, recoverable trash and append-only restrictions",
+        "url": "https://github.com/substrate-systems/evermatter/blob/5ef9dfb10e4b948390293bd14d9c5ff6a41e0269/src/exomem/delete_file.py"
+      },
+      {
+        "id": "policy",
+        "label": "Pinned governance policy loader",
+        "path": "src/exomem/governance/policy.py",
+        "symbol": "Strict policy loader and path/project/tag/type/class/reference scope selectors",
+        "url": "https://github.com/substrate-systems/evermatter/blob/5ef9dfb10e4b948390293bd14d9c5ff6a41e0269/src/exomem/governance/policy.py"
+      },
+      {
+        "id": "semantic_writes",
+        "label": "Pinned semantic write path",
+        "path": "src/exomem/semantic_writes.py",
+        "symbol": "Structured authored writes, provenance and mutation commit routing",
+        "url": "https://github.com/substrate-systems/evermatter/blob/5ef9dfb10e4b948390293bd14d9c5ff6a41e0269/src/exomem/semantic_writes.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation domains and metric definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Evaluation fixture, not an Exomem result",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status; not an Exomem measurement",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README identifies the repository as Evermatter, formerly Exomem, and describes it as a memory server and library that works over an owned Markdown vault. It exposes MCP tools and shared CLI/REST operations. No individual maintainer identity is inferred.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The catalog's explicit Exomem locator currently redirects to substrate-systems/evermatter; the official repository page identifies main as the default branch, and GitHub's official commits API supplies the current full head SHA.",
+        "sources": [
+          "catalog",
+          "repo",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README describes Markdown pages under a governed Knowledge Base as user-owned content, with sidecar indexes for search and graph/resolver data. The current search module scans Markdown pages, parses frontmatter, applies structured filters, and performs text matching; parsed pages are cached in process and invalidated by file modification time.",
+        "sources": [
+          "readme",
+          "find"
+        ]
+      },
+      {
+        "text": "Documented memory types separate captured Sources, compiled notes, entities, Evidence, and superseded conclusions. The README also describes Record and Planning collections. The reviewed files show indexes and operation history updated with page writes; the structures do not establish that a stored statement is true.",
+        "sources": [
+          "readme",
+          "add",
+          "semantic_writes"
+        ]
+      }
+    ],
+    "operations": [
+      {
+        "text": "Write: add captures a raw Source and note creates authored typed knowledge pages. The implementation describes preparing the page, indexes, and operation log together and batch-atomic writing. The inspected paths do not establish autonomous extraction from arbitrary conversations.",
+        "sources": [
+          "readme",
+          "add"
+        ]
+      },
+      {
+        "text": "Update: edit patches a compiled page. replace marks the predecessor superseded and writes a linked successor, refusing success if it cannot safely mark the predecessor. Supersession preserves history, but does not establish that retrieval always excludes stale conclusions.",
+        "sources": [
+          "readme",
+          "replace"
+        ]
+      },
+      {
+        "text": "Delete: the documented Tier-2 delete_file operation moves pages to dated _trash with recovery metadata; permanent removal is outside that tool. Its implementation requires explicit confirmation and protects append-only Sources and Evidence from ordinary deletion.",
+        "sources": [
+          "readme",
+          "delete"
+        ]
+      },
+      {
+        "text": "Retrieval: find and ask_memory search, while recall_context returns a bounded packet or abstains. The inspected find module has structured filters, semantic lanes, caches, and degradation counters. The README describes FTS5/BM25 and optional embedding and media paths; these are source observations, not scored results.",
+        "sources": [
+          "readme",
+          "find"
+        ]
+      },
+      {
+        "text": "Scope: governance policy defines selectors for paths, projects, tags, types, classes, and references; the README documents project/type/tag filters and audience release controls. End-to-end authorization across every caller and cross-scope leakage were not tested.",
+        "sources": [
+          "policy",
+          "readme"
+        ]
+      }
+    ],
+    "provenance": [
+      {
+        "text": "The documented model separates captured Sources and append-only Evidence from compiled conclusions. Replacement records a predecessor relation and content hash, and writes update vault activity history. These mechanisms record lineage and change context, not independent verification of source truth or claim support.",
+        "sources": [
+          "readme",
+          "replace",
+          "semantic_writes",
+          "add"
+        ]
+      }
+    ],
+    "efficiency_observability": [
+      {
+        "text": "The README describes FTS5/BM25 lexical search, optional local text/image embeddings, and deferred media processing. The search module includes cache status and process-scoped degradation counters; the writer uses operation spans and logs. No resource workload or deployed monitoring configuration was examined.",
+        "sources": [
+          "readme",
+          "find",
+          "add"
+        ]
+      },
+      {
+        "text": "The README reports 864 ms retrieval at 50,000 notes on a reference desktop. This is upstream-reported and was not reproduced or entered as a comparison-project measurement.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "metric_domain_mapping": {
+      "recall": {
+        "profile_fields": [
+          "Memory unit",
+          "Retrieval strategy",
+          "Write strategy",
+          "Background processing"
+        ],
+        "capability_flags": [],
+        "benchmark_metrics": [
+          "Answerable retrieval accuracy",
+          "Write-to-recall delay"
+        ]
+      },
+      "correction": {
+        "profile_fields": [
+          "Update/delete model",
+          "Trust/provenance model"
+        ],
+        "capability_flags": [],
+        "benchmark_metrics": [
+          "Correction accuracy",
+          "Stale-value rate"
+        ]
+      },
+      "deletion": {
+        "profile_fields": [
+          "Update/delete model",
+          "Background processing"
+        ],
+        "capability_flags": [],
+        "benchmark_metrics": [
+          "Deletion leak rate"
+        ]
+      },
+      "scope": {
+        "profile_fields": [
+          "Scoping model",
+          "Agent integration"
+        ],
+        "capability_flags": [],
+        "benchmark_metrics": [
+          "Scope isolation leak rate"
+        ]
+      },
+      "evidence": {
+        "profile_fields": [
+          "Memory unit",
+          "Trust/provenance model",
+          "Agent integration"
+        ],
+        "capability_flags": [],
+        "benchmark_metrics": [
+          "Evidence support precision",
+          "Citation coverage"
+        ]
+      },
+      "efficiency": {
+        "profile_fields": [
+          "Storage backend",
+          "Retrieval strategy",
+          "Write strategy",
+          "Background processing",
+          "Agent integration"
+        ],
+        "capability_flags": [],
+        "benchmark_metrics": [
+          "Retrieval latency",
+          "Tokens",
+          "Cost",
+          "Storage efficiency"
+        ]
+      }
+    },
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "Source and README statements are not Exomem benchmark results."
+    },
+    "limits": [
+      {
+        "text": "The listed Exomem URL now redirects to a renamed repository; observations are pinned to the canonical official repository's current main head. GitHub briefly returned an error page for a source path; that path was excluded as evidence.",
+        "sources": [
+          "catalog",
+          "repo",
+          "head"
+        ]
+      },
+      {
+        "text": "The inspection cannot establish production deployment settings, full authorization behavior across all entry points, deletion behavior across backups/replicas, memory factual correctness, or independently measured performance. The upstream README's performance number was not reproduced.",
+        "sources": [
+          "readme",
+          "policy"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Exomem runtime, tests, or benchmarks were executed. Project metric, fixture, and status files define protocol/status and contain no Exomem measurements.",
+      "sources": [
+        "metrics",
+        "fixture",
+        "status"
+      ]
+    },
+    "contact_metadata": {
+      "email": null,
+      "checked_url": "https://github.com/substrate-systems/evermatter/blob/5ef9dfb10e4b948390293bd14d9c5ff6a41e0269/README.md",
+      "note": "Checked only the official pinned README; no published contact email was present."
+    }
+  }
+}

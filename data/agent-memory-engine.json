@@ -1,0 +1,428 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "agent-memory-engine",
+    "name": "Agent Memory Engine",
+    "repository": "https://github.com/uudam42/agent-memory-engine",
+    "branch": "main",
+    "revision": "6e345342051dea267e465fc24e3e88e326d9ac51",
+    "reviewed_at": "2026-11-23T23:59:29Z",
+    "review_timezone": "UTC (2026-11-23 15:59:29 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "A local-first MCP runtime for coding-agent memory and project knowledge. It combines a structured memory tree with indexed source material; source inspection does not establish runtime quality or measured performance.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/uudam42/agent-memory-engine"
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Current upstream repository at reviewed main head",
+        "path": "repository",
+        "symbol": "GitHub repository metadata and git ls-remote; main at full commit 6e345342051dea267e465fc24e3e88e326d9ac51",
+        "url": "https://github.com/uudam42/agent-memory-engine/tree/6e345342051dea267e465fc24e3e88e326d9ac51"
+      },
+      {
+        "id": "readme",
+        "label": "README",
+        "path": "README.md",
+        "symbol": "MCP runtime, storage, optional semantic retrieval, retention, tools",
+        "url": "https://github.com/uudam42/agent-memory-engine/blob/6e345342051dea267e465fc24e3e88e326d9ac51/README.md"
+      },
+      {
+        "id": "overview",
+        "label": "System overview",
+        "path": "docs/architecture/system-overview.md",
+        "symbol": "component boundaries; before/after task data flows",
+        "url": "https://github.com/uudam42/agent-memory-engine/blob/6e345342051dea267e465fc24e3e88e326d9ac51/docs/architecture/system-overview.md"
+      },
+      {
+        "id": "retrieval-doc",
+        "label": "Retrieval pipeline documentation",
+        "path": "docs/architecture/retrieval-pipeline.md",
+        "symbol": "retrieval modes, rank signals, token budget, trace",
+        "url": "https://github.com/uudam42/agent-memory-engine/blob/6e345342051dea267e465fc24e3e88e326d9ac51/docs/architecture/retrieval-pipeline.md"
+      },
+      {
+        "id": "domain",
+        "label": "Domain models",
+        "path": "memory_engine/models/domain.py",
+        "symbol": "MemoryNode, MemoryCandidate, Evidence, trust and verification models",
+        "url": "https://github.com/uudam42/agent-memory-engine/blob/6e345342051dea267e465fc24e3e88e326d9ac51/memory_engine/models/domain.py"
+      },
+      {
+        "id": "orm",
+        "label": "SQLite ORM models",
+        "path": "memory_engine/models/orm.py",
+        "symbol": "MemoryNodeORM, EvidenceORM, MemoryCandidateORM, MemoryRelationORM, Knowledge ORM",
+        "url": "https://github.com/uudam42/agent-memory-engine/blob/6e345342051dea267e465fc24e3e88e326d9ac51/memory_engine/models/orm.py"
+      },
+      {
+        "id": "recall",
+        "label": "Memory recall",
+        "path": "memory_engine/skills/recall.py",
+        "symbol": "RecallService.recall; _passes_relevance_gate; _MAX_VALIDITY_CHECKS_PER_RECALL",
+        "url": "https://github.com/uudam42/agent-memory-engine/blob/6e345342051dea267e465fc24e3e88e326d9ac51/memory_engine/skills/recall.py"
+      },
+      {
+        "id": "composer",
+        "label": "Context composition and provenance",
+        "path": "memory_engine/skills/composer.py",
+        "symbol": "ContextComposer._fill_bucket; build_provenance; token estimation",
+        "url": "https://github.com/uudam42/agent-memory-engine/blob/6e345342051dea267e465fc24e3e88e326d9ac51/memory_engine/skills/composer.py"
+      },
+      {
+        "id": "post-task",
+        "label": "Post-task reflection",
+        "path": "memory_engine/services/post_task.py",
+        "symbol": "PostTaskService.reflect_and_write",
+        "url": "https://github.com/uudam42/agent-memory-engine/blob/6e345342051dea267e465fc24e3e88e326d9ac51/memory_engine/services/post_task.py"
+      },
+      {
+        "id": "promotion",
+        "label": "Candidate promotion",
+        "path": "memory_engine/services/promotion.py",
+        "symbol": "PromotionService._branch; _action_update; _action_merge; _action_supersede; _action_needs_review",
+        "url": "https://github.com/uudam42/agent-memory-engine/blob/6e345342051dea267e465fc24e3e88e326d9ac51/memory_engine/services/promotion.py"
+      },
+      {
+        "id": "memory-service",
+        "label": "Memory and evidence service",
+        "path": "memory_engine/services/memory_service.py",
+        "symbol": "MemoryService.delete_node; create_node; add_evidence; delete_evidence",
+        "url": "https://github.com/uudam42/agent-memory-engine/blob/6e345342051dea267e465fc24e3e88e326d9ac51/memory_engine/services/memory_service.py"
+      },
+      {
+        "id": "memory-repository",
+        "label": "Memory repository operations",
+        "path": "memory_engine/repositories/memory_node.py",
+        "symbol": "MemoryNodeRepository.delete; update_fields",
+        "url": "https://github.com/uudam42/agent-memory-engine/blob/6e345342051dea267e465fc24e3e88e326d9ac51/memory_engine/repositories/memory_node.py"
+      },
+      {
+        "id": "retention",
+        "label": "Memory retention",
+        "path": "memory_engine/services/retention.py",
+        "symbol": "MemoryRetentionService.run; archive_memory; restore_memory; compaction",
+        "url": "https://github.com/uudam42/agent-memory-engine/blob/6e345342051dea267e465fc24e3e88e326d9ac51/memory_engine/services/retention.py"
+      },
+      {
+        "id": "scope",
+        "label": "Constraint scope",
+        "path": "memory_engine/services/constraint_scope.py",
+        "symbol": "effective_scope; constraint_is_eligible",
+        "url": "https://github.com/uudam42/agent-memory-engine/blob/6e345342051dea267e465fc24e3e88e326d9ac51/memory_engine/services/constraint_scope.py"
+      },
+      {
+        "id": "mcp",
+        "label": "MCP tool handlers",
+        "path": "memory_engine/mcp/tools.py",
+        "symbol": "_validate_workspace; retrieval project and Git context",
+        "url": "https://github.com/uudam42/agent-memory-engine/blob/6e345342051dea267e465fc24e3e88e326d9ac51/memory_engine/mcp/tools.py"
+      },
+      {
+        "id": "validity",
+        "label": "Source validity service",
+        "path": "memory_engine/services/source_validity.py",
+        "symbol": "SourceValidityService.check; revalidate; file/hash/symbol/commit checks",
+        "url": "https://github.com/uudam42/agent-memory-engine/blob/6e345342051dea267e465fc24e3e88e326d9ac51/memory_engine/services/source_validity.py"
+      },
+      {
+        "id": "ingestion",
+        "label": "Knowledge ingestion",
+        "path": "memory_engine/knowledge/ingestion.py",
+        "symbol": "KnowledgeIngestionService.ingest; redaction, hashes, stale prior records, indexing",
+        "url": "https://github.com/uudam42/agent-memory-engine/blob/6e345342051dea267e465fc24e3e88e326d9ac51/memory_engine/knowledge/ingestion.py"
+      },
+      {
+        "id": "fts",
+        "label": "FTS5 index",
+        "path": "memory_engine/knowledge/fts_index.py",
+        "symbol": "create_fts_table; fts_insert; fts_delete",
+        "url": "https://github.com/uudam42/agent-memory-engine/blob/6e345342051dea267e465fc24e3e88e326d9ac51/memory_engine/knowledge/fts_index.py"
+      },
+      {
+        "id": "search",
+        "label": "Knowledge search",
+        "path": "memory_engine/knowledge/search.py",
+        "symbol": "KnowledgeSearchService.search; FTS, vector arm, ranking, token trim",
+        "url": "https://github.com/uudam42/agent-memory-engine/blob/6e345342051dea267e465fc24e3e88e326d9ac51/memory_engine/knowledge/search.py"
+      },
+      {
+        "id": "fusion",
+        "label": "Unified retrieval",
+        "path": "memory_engine/knowledge/fusion.py",
+        "symbol": "UnifiedContextRetrievalService.retrieve; token and result fields",
+        "url": "https://github.com/uudam42/agent-memory-engine/blob/6e345342051dea267e465fc24e3e88e326d9ac51/memory_engine/knowledge/fusion.py"
+      },
+      {
+        "id": "cache",
+        "label": "Retrieval cache",
+        "path": "memory_engine/knowledge/cache.py",
+        "symbol": "SimpleCache; TTL; make_key; invalidate_project",
+        "url": "https://github.com/uudam42/agent-memory-engine/blob/6e345342051dea267e465fc24e3e88e326d9ac51/memory_engine/knowledge/cache.py"
+      },
+      {
+        "id": "storage",
+        "label": "Local storage",
+        "path": "memory_engine/bootstrap/local_storage.py",
+        "symbol": "ProjectLocalStorage.db_path; vector_db_path; per-project storage directory",
+        "url": "https://github.com/uudam42/agent-memory-engine/blob/6e345342051dea267e465fc24e3e88e326d9ac51/memory_engine/bootstrap/local_storage.py"
+      },
+      {
+        "id": "incremental",
+        "label": "Incremental project index",
+        "path": "memory_engine/bootstrap/incremental_index.py",
+        "symbol": "IncrementalIndexCoordinator; file manifest",
+        "url": "https://github.com/uudam42/agent-memory-engine/blob/6e345342051dea267e465fc24e3e88e326d9ac51/memory_engine/bootstrap/incremental_index.py"
+      },
+      {
+        "id": "observability",
+        "label": "Observability module",
+        "path": "memory_engine/runtime/observability/__init__.py",
+        "symbol": "reserved for future logging, metrics, diagnostics",
+        "url": "https://github.com/uudam42/agent-memory-engine/blob/6e345342051dea267e465fc24e3e88e326d9ac51/memory_engine/runtime/observability/__init__.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "./METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "./results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "./fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "atlas-roster",
+        "label": "Atlas roster locator attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 9 name, slug, repository locator; catalog revision 19199a4fc249e89c0793be06f0b166b358089ba0",
+        "url": "./data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The upstream project describes a local-first Python runtime for coding-agent memory and project knowledge, exposed primarily over MCP stdio. It also contains a FastAPI interface for direct use; this review does not inspect or measure a deployment.",
+        "sources": [
+          "readme",
+          "overview"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Memory is represented as a project-scoped tree of MemoryNode records, with staged MemoryCandidate records, relations, and attached evidence. Nodes include status/confidence/importance and optional source, branch, trust, and verification metadata. SQLAlchemy maps these records to SQLite.",
+        "sources": [
+          "domain",
+          "orm",
+          "storage"
+        ]
+      },
+      {
+        "text": "The separate knowledge path redacts and chunks source documents, records hashes and source locations, indexes text in FTS5, and can use an optional persistent semantic vector index. In-memory vector search is also present as a fallback. Retrieval fuses memory nodes and source knowledge into one context pack, but the two data models stay distinct.",
+        "sources": [
+          "readme",
+          "ingestion",
+          "fts",
+          "search",
+          "fusion"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: PostTaskService runs reflection gates, stages proposed candidates, and immediately promotes them. Promotion may create, update, merge, supersede, discard, or mark a conflict for review. Updates replace the existing summary and merge tags; merges append a short new summary; supersession preserves the prior node with a supersedes relation. These are source-observed paths; correction accuracy is unmeasured.",
+        "sources": [
+          "post-task",
+          "promotion"
+        ]
+      },
+      {
+        "text": "Retrieval: RecallService analyzes task/file/symbol context, scores project nodes, applies relevance and scope checks, then ContextComposer fills typed buckets and emits a signal trace. KnowledgeSearchService combines FTS5 with a vector arm and token trimming; UnifiedContextRetrievalService combines both domains. This does not establish answer quality. The composer’s inspected exclusion list omits needs_review, so that flag alone does not prevent selection in this path.",
+        "sources": [
+          "recall",
+          "composer",
+          "search",
+          "fusion",
+          "promotion"
+        ]
+      },
+      {
+        "text": "Deletion and lifecycle: MemoryService.delete_node calls a physical repository delete; ORM relationships cascade attached evidence and relations. Retention archive/compaction and source-validity transitions are non-destructive status changes. Re-indexing marks prior knowledge chunks and derived records stale. No reviewed path establishes end-to-end deletion across every storage/index/backup copy.",
+        "sources": [
+          "memory-service",
+          "memory-repository",
+          "orm",
+          "retention",
+          "validity",
+          "ingestion"
+        ]
+      },
+      {
+        "text": "Scope: memory and knowledge records include project_id, and retrieval/search are project-filtered. MCP workspace validation rejects mismatching provided context; missing context only warns in compatibility mode unless strict mode is enabled. Constraint scope can be global, repository, branch, module, path, symbol, or task-intent. These mechanisms do not prove user/team authorization or runtime isolation.",
+        "sources": [
+          "orm",
+          "mcp",
+          "scope",
+          "search",
+          "recall"
+        ]
+      },
+      {
+        "text": "Provenance: memory nodes carry optional source path/hash/symbol, branch and commit, trust and verification fields, plus Evidence records. Source-validity checks record invalidated or needs_revalidation states on source changes. Retrieval traces carry ranking and compact-provenance signals; knowledge results retain source location fields. Claim-to-source citation correctness has not been measured.",
+        "sources": [
+          "orm",
+          "validity",
+          "composer",
+          "domain",
+          "search"
+        ]
+      },
+      {
+        "text": "Efficiency mechanisms include incremental indexing, a five-minute in-process cache keyed by project/query/file/symbol/budget and Git context, token-budgeted composition, and a cap of 50 source-validity checks per recall. The token estimate is character-based; these mechanisms do not constitute measured throughput or latency.",
+        "sources": [
+          "incremental",
+          "cache",
+          "recall",
+          "composer",
+          "fusion"
+        ]
+      },
+      {
+        "text": "Latency observability is not established: the runtime exposes cache-hit and result/token counts, while the observability package is reserved for future metrics/diagnostics. The unified retrieval function captures a monotonic start time but returns no elapsed-time field; no latency histogram or exported metric was found.",
+        "sources": [
+          "fusion",
+          "observability",
+          "domain"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Retrieval code and traces exist, but no Agent Memory Engine responses were captured or adjudicated in this project.",
+        "sources": [
+          "recall",
+          "search",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Candidate update/merge/supersede paths are present; no correction probes or stale-answer measurements were run.",
+        "sources": [
+          "promotion",
+          "validity",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "A service-level physical node delete exists, but no deletion workload tested leakage across knowledge, indexes, backups, or other copies.",
+        "sources": [
+          "memory-service",
+          "memory-repository",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Project predicates and optional MCP workspace validation are source-observed; no cross-project isolation probes ran.",
+        "sources": [
+          "mcp",
+          "orm",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source/evidence fields and retrieval traces exist, but no response claims were captured and adjudicated for support or citations.",
+        "sources": [
+          "domain",
+          "composer",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Caching and incremental indexing are implementation details. No timing observations or latency metrics were collected for this system.",
+        "sources": [
+          "cache",
+          "fusion",
+          "observability",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "The runtime reports approximate token estimates; there are no system workload measurements of token use, cost, or storage.",
+        "sources": [
+          "composer",
+          "fusion",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Latency observability",
+        "status": "unknown from inspected sources",
+        "evidence": "No exported latency instrumentation was found in the reviewed runtime; the observability package is reserved. No workload timing data exists.",
+        "sources": [
+          "observability",
+          "fusion",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspects source and documentation at one verified upstream commit. It does not establish production correctness, retrieval quality, availability, scaling, authorization, deletion completeness, or benchmark performance.",
+        "sources": [
+          "repo",
+          "readme",
+          "overview"
+        ]
+      },
+      {
+        "text": "Atlas is attributed only for the ordinal roster name and repository locator. Its review prose, capability marks, and UI are not used as findings in this article.",
+        "sources": [
+          "atlas-roster"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status: not_run. The project execution record has no metric values or runtime observations; fixture probe counts are planned inputs, not measured denominators, and there is no Agent Memory Engine result entry.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

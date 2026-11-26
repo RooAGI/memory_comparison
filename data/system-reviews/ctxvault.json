@@ -1,0 +1,334 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "ctxvault",
+    "name": "CtxVault",
+    "ordinal": 176,
+    "repository": "https://github.com/Filippo-Venturini/ctxvault",
+    "listed_repository": "https://github.com/Filippo-Venturini/ctxvault",
+    "branch": "main",
+    "revision": "bee8578d49ea35c440d9bee6cd91d4cb139d8744",
+    "reviewed_at": "2026-11-25T10:23:12Z",
+    "review_timezone": "UTC (2026-11-25 02:23:12 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "CtxVault separates local agent memory into semantic document, procedural skill, and bitemporal episodic vaults. It provides CLI, Python, HTTP, and MCP access with vault-level public/restricted access control and local inspection surfaces.",
+    "atlas_locator": {
+      "ordinal": 176,
+      "name": "CtxVault",
+      "slug": "ctxvault",
+      "listed_repository": "https://github.com/Filippo-Venturini/ctxvault",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/ctxvault.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/ctxvault.md",
+      "listed_repository": "https://github.com/Filippo-Venturini/ctxvault"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/Filippo-Venturini/ctxvault/blob/bee8578d49ea35c440d9bee6cd91d4cb139d8744/README.md",
+      "checked_urls": [
+        "https://github.com/Filippo-Venturini/ctxvault/blob/bee8578d49ea35c440d9bee6cd91d4cb139d8744/README.md",
+        "https://filippo-venturini.github.io/ctxvault/"
+      ],
+      "note": "No contact email is published in the checked official README or official documentation home."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/Filippo-Venturini/ctxvault/blob/bee8578d49ea35c440d9bee6cd91d4cb139d8744/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/Filippo-Venturini/ctxvault/blob/bee8578d49ea35c440d9bee6cd91d4cb139d8744/README.md",
+      "https://filippo-venturini.github.io/ctxvault/"
+    ],
+    "contact_email_note": "No contact email was published in the checked official README or official documentation home. No profile/commit metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "Current canonical repository; default branch main",
+        "url": "https://github.com/Filippo-Venturini/ctxvault"
+      },
+      {
+        "id": "history",
+        "label": "Official main branch history",
+        "path": "commits/main.atom",
+        "symbol": "Current main head bee8578d49ea35c440d9bee6cd91d4cb139d8744; updated 2026-11-20T09:12:56Z",
+        "url": "https://github.com/Filippo-Venturini/ctxvault/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified full-SHA head commit",
+        "path": "commit",
+        "symbol": "Current main head bee8578d49ea35c440d9bee6cd91d4cb139d8744",
+        "url": "https://github.com/Filippo-Venturini/ctxvault/commit/bee8578d49ea35c440d9bee6cd91d4cb139d8744"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Product model, supported interfaces, local storage, agent-controlled writes, and contact check",
+        "url": "https://github.com/Filippo-Venturini/ctxvault/blob/bee8578d49ea35c440d9bee6cd91d4cb139d8744/README.md"
+      },
+      {
+        "id": "types",
+        "label": "Official memory type documentation",
+        "path": "docs/how-it-works/memory-types.md",
+        "symbol": "Semantic, skill, and episodic storage, retrieval, lifecycle, and data model",
+        "url": "https://github.com/Filippo-Venturini/ctxvault/blob/bee8578d49ea35c440d9bee6cd91d4cb139d8744/docs/how-it-works/memory-types.md"
+      },
+      {
+        "id": "access",
+        "label": "Official access-control documentation",
+        "path": "docs/how-it-works/access-control.md",
+        "symbol": "Vault-level restrictions, identity by interface, owner surfaces, HTTP exceptions and authentication limits",
+        "url": "https://github.com/Filippo-Venturini/ctxvault/blob/bee8578d49ea35c440d9bee6cd91d4cb139d8744/docs/how-it-works/access-control.md"
+      },
+      {
+        "id": "episodic",
+        "label": "Episodic vault implementation",
+        "path": "src/ctxvault/core/vaults/episodic.py",
+        "symbol": "Episodic write/query operations, optional vector ranking, keyword fallback, recency/salience weighting and limits",
+        "url": "https://github.com/Filippo-Venturini/ctxvault/blob/bee8578d49ea35c440d9bee6cd91d4cb139d8744/src/ctxvault/core/vaults/episodic.py"
+      },
+      {
+        "id": "sqlite",
+        "label": "SQLite episodic store",
+        "path": "src/ctxvault/storage/sqlite_store.py",
+        "symbol": "Episode schema, bitemporal state, append-only attestations/disputes/closures, concurrency, and timestamp caveats",
+        "url": "https://github.com/Filippo-Venturini/ctxvault/blob/bee8578d49ea35c440d9bee6cd91d4cb139d8744/src/ctxvault/storage/sqlite_store.py"
+      },
+      {
+        "id": "semantic",
+        "label": "Semantic vault implementation",
+        "path": "src/ctxvault/core/vaults/semantic.py",
+        "symbol": "Document indexing, synchronization, deletion, vector retrieval, caller metadata and document source results",
+        "url": "https://github.com/Filippo-Venturini/ctxvault/blob/bee8578d49ea35c440d9bee6cd91d4cb139d8744/src/ctxvault/core/vaults/semantic.py"
+      },
+      {
+        "id": "site",
+        "label": "Official documentation home",
+        "path": "https://filippo-venturini.github.io/ctxvault/",
+        "symbol": "Official docs home; checked for contact email",
+        "url": "https://filippo-venturini.github.io/ctxvault/"
+      },
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 176, name, slug, explicit listed repository locator and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster locator",
+        "path": "content/systems/ctxvault.md",
+        "symbol": "Curated roster attribution only; not used as assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/ctxvault.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Definitions for the project benchmark domains",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned workload only; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared not_run status; no CtxVault measurements",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes CtxVault as local-first memory infrastructure with semantic, skill, and episodic vaults and Python, CLI, HTTP, and MCP interfaces. It states that the agent decides what to write rather than automatic fact extraction.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Vaults are directory-backed independent units: semantic vaults pair source documents with Chroma, skill vaults contain Markdown procedures, and episodic vaults store episodes in SQLite. A registry describes their type, path, and access configuration.",
+        "sources": [
+          "readme",
+          "types"
+        ]
+      },
+      {
+        "text": "Semantic chunks retain source document identity and caller metadata; skill files use name/description frontmatter; episodes retain content, source, confidence, salience, entity links, metadata, valid and recorded time axes, and optional embeddings. Separate SQLite tables preserve attestations, disputes, and closure/reopen events.",
+        "sources": [
+          "types",
+          "sqlite"
+        ]
+      },
+      {
+        "text": "GitHub identifies main as the default branch; the official main Atom feed and full-SHA commit page identify bee8578d49ea35c440d9bee6cd91d4cb139d8744 as current head. Reviewed 2026-11-25T10:23:12Z (UTC; 02:23:12 PST, America/Los_Angeles).",
+        "sources": [
+          "repo",
+          "history",
+          "head"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Semantic document indexing extracts text into chunks and writes vector records. API document writes are indexed immediately; documents changed or deleted outside the vault path can leave stale index entries until status/sync or reindex, while vault deletion removes indexed records and the file.",
+        "sources": [
+          "semantic",
+          "types"
+        ]
+      },
+      {
+        "text": "Skill records are named Markdown procedures selected by listing and reading, not by embedding. The reviewed docs do not describe a separate version or archive history for edited skills.",
+        "sources": [
+          "types"
+        ]
+      },
+      {
+        "text": "Episodic writes add statements with optional source, entity, confidence, salience, time and metadata. Invalidate closes a statement; supersede closes and links a successor; revise retains validity while changing the recorded version; reopen retains close history; confirmations add dated attestations; unresolved disputes keep both statements open.",
+        "sources": [
+          "types",
+          "episodic",
+          "sqlite"
+        ]
+      },
+      {
+        "text": "Semantic retrieval returns nearest vector chunks with document source and metadata; the vault API defaults to five results. Skill retrieval is list/read. Episodic retrieval applies structured SQLite filters first and ranks the candidate set by relevance, recency, salience, or a weighted composite. Relevance uses cosine similarity when configured vectors exist and word overlap otherwise.",
+        "sources": [
+          "semantic",
+          "episodic",
+          "sqlite",
+          "types"
+        ]
+      },
+      {
+        "text": "Restricted vaults allow only attached agent names through checked agent-facing read/write interfaces; public vaults are open. CLI and viewer are owner surfaces, HTTP indexing and listing are exceptions, and the HTTP name header is not authentication. A vault, rather than individual rows, is the isolation boundary.",
+        "sources": [
+          "access",
+          "readme"
+        ]
+      },
+      {
+        "text": "Records preserve source paths, caller metadata, episode sources and event histories. The reviewed material does not establish a shared claim-level citation contract for generated answers; provenance fields alone do not measure answer support.",
+        "sources": [
+          "semantic",
+          "types",
+          "sqlite"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention — unmeasured. Semantic and episodic retrieval paths are implemented; no answerability or negative-query probes were scored.",
+        "sources": [
+          "readme",
+          "types",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured. Episode corrections are modeled through linked lifecycle operations; no correction workload was run.",
+        "sources": [
+          "types",
+          "episodic",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Deletion leakage — unmeasured. Semantic deletion removes indexed records; no post-delete probes or physical-storage checks were made.",
+        "sources": [
+          "semantic",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Scope-isolation leakage — unmeasured. Restricted vault checks are documented; no permitted/forbidden access workload was run.",
+        "sources": [
+          "access",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Evidence support and citation coverage — unmeasured. Source and history metadata exist; no generated answers or citations were scored.",
+        "sources": [
+          "types",
+          "sqlite",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Retrieval latency — unmeasured. No timing samples were collected.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Write-to-recall delay — unmeasured. No timed write/retrieval probes were run.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Tokens and cost — unmeasured. No runtime token usage or charges were collected.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Storage efficiency — unmeasured. No corpus-attributed logical or physical storage size was collected.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      "Automatic conversation fact extraction and graph-structured semantic memory are not part of the reviewed product description; semantic files can drift from their index if changed outside synchronization.",
+      "Access control is vault-level. Agent names are declarations, owner surfaces bypass agent restrictions, and HTTP exceptions require deployment-aware handling.",
+      "Episode timestamps are stored and compared as ISO-8601 strings, which require consistent offsets for lexical ordering. The SQLite code recommends UTC; legacy schema-v3 closures may not retain a prior valid_to for reopening.",
+      "This bounded review inspected the README, memory-type and access-control documentation, episodic storage/ranking, and semantic vault implementation. It did not trace every endpoint, migration, Chroma query, or deployment configuration.",
+      "No runtime, tests, or benchmarks were run; behavior under a deployment, retrieval quality, physical erasure, latency, cost, and storage efficiency remain unverified."
+    ],
+    "benchmark": [
+      {
+        "text": "benchmark_status is not_run. CtxVault, its tests, and benchmark workloads were not run.",
+        "sources": [
+          "status",
+          "fixture"
+        ]
+      },
+      {
+        "text": "Project metrics and fixture are specifications, not measured results for CtxVault.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "No runtime correctness, recall quality, deployed isolation, physical erasure, or efficiency conclusions are claimed.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,322 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 256,
+    "slug": "gh-aw",
+    "name": "gh-aw",
+    "repository": "https://github.com/github/gh-aw",
+    "listed_repository": "https://github.com/github/gh-aw",
+    "branch": "main",
+    "revision": "ea7bc4dd637ff9c9f61e1706a53041c34cd4724c",
+    "reviewed_at": "2026-11-25T20:55:28Z",
+    "review_timezone": "UTC (2026-11-25 12:55:28 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "GitHub Agentic Workflows (gh-aw) compiles Markdown workflow definitions into GitHub Actions workflows and offers file-backed memory through Actions cache, Git branches, and an experimental GitHub Drives preview.",
+    "atlas_locator": {
+      "ordinal": 256,
+      "revision": "9259aea14a8d0d6f423fb5813b2675b3e81c8398",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/gh-aw.md",
+      "listed_repository": "https://github.com/github/gh-aw"
+    },
+    "contact": {
+      "email": "opensource-security@github.com",
+      "source_url": "https://github.com/github/gh-aw/blob/ea7bc4dd637ff9c9f61e1706a53041c34cd4724c/SECURITY.md",
+      "note": "The official SECURITY.md publishes the obfuscated address opensource-security[@]github.com for coordinated vulnerability disclosure."
+    },
+    "contact_email": "opensource-security@github.com",
+    "contact_email_source_url": "https://github.com/github/gh-aw/blob/ea7bc4dd637ff9c9f61e1706a53041c34cd4724c/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/github/gh-aw/blob/ea7bc4dd637ff9c9f61e1706a53041c34cd4724c/SECURITY.md"
+    ],
+    "contact_email_note": "Official SECURITY.md lists opensource-security[@]github.com for coordinated vulnerability disclosure; normalized the documented obfuscation to the email address.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated roster entry",
+        "path": "systems[255]",
+        "symbol": "ordinal 256 identity, listed repository and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas attribution",
+        "path": "content/systems/gh-aw.md",
+        "symbol": "pinned roster attribution only; not used as assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/gh-aw.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official repository",
+        "path": "repository page",
+        "symbol": "canonical github/gh-aw; default branch main",
+        "url": "https://github.com/github/gh-aw"
+      },
+      {
+        "id": "head",
+        "label": "Official current head",
+        "path": "refs/heads/main",
+        "symbol": "git ls-remote and shallow checkout agree on full head SHA",
+        "url": "https://github.com/github/gh-aw/commit/ea7bc4dd637ff9c9f61e1706a53041c34cd4724c"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "system purpose, compilation, agent execution and security posture",
+        "url": "https://github.com/github/gh-aw/blob/ea7bc4dd637ff9c9f61e1706a53041c34cd4724c/README.md"
+      },
+      {
+        "id": "cache-doc",
+        "label": "Cache Memory guide",
+        "path": "docs/src/content/docs/reference/cache-memory.md",
+        "symbol": "configuration, cache behavior, scope, validation and security",
+        "url": "https://github.com/github/gh-aw/blob/ea7bc4dd637ff9c9f61e1706a53041c34cd4724c/docs/src/content/docs/reference/cache-memory.md"
+      },
+      {
+        "id": "repo-doc",
+        "label": "Repo Memory guide",
+        "path": "docs/src/content/docs/reference/repo-memory.md",
+        "symbol": "branch persistence, limits, validation, conflict handling and security",
+        "url": "https://github.com/github/gh-aw/blob/ea7bc4dd637ff9c9f61e1706a53041c34cd4724c/docs/src/content/docs/reference/repo-memory.md"
+      },
+      {
+        "id": "drive-doc",
+        "label": "Experimental Drive Memory guide",
+        "path": "docs/src/content/docs/experimental/drive-memory.md",
+        "symbol": "preview constraints, access scope, publication gates and limits",
+        "url": "https://github.com/github/gh-aw/blob/ea7bc4dd637ff9c9f61e1706a53041c34cd4724c/docs/src/content/docs/experimental/drive-memory.md"
+      },
+      {
+        "id": "cache-prompt",
+        "label": "Cache memory prompt",
+        "path": "actions/setup/md/cache_memory_prompt.md",
+        "symbol": "agent instructions for the mounted cache-memory directory and missing data",
+        "url": "https://github.com/github/gh-aw/blob/ea7bc4dd637ff9c9f61e1706a53041c34cd4724c/actions/setup/md/cache_memory_prompt.md"
+      },
+      {
+        "id": "repo-prompt",
+        "label": "Repo memory prompt",
+        "path": "actions/setup/md/repo_memory_prompt.md",
+        "symbol": "agent instructions for the mounted branch-backed repository memory",
+        "url": "https://github.com/github/gh-aw/blob/ea7bc4dd637ff9c9f61e1706a53041c34cd4724c/actions/setup/md/repo_memory_prompt.md"
+      },
+      {
+        "id": "repo-prompt-multi",
+        "label": "Multi-repository memory prompt",
+        "path": "actions/setup/md/repo_memory_prompt_multi.md",
+        "symbol": "agent instructions for multiple repository memory roots",
+        "url": "https://github.com/github/gh-aw/blob/ea7bc4dd637ff9c9f61e1706a53041c34cd4724c/actions/setup/md/repo_memory_prompt_multi.md"
+      },
+      {
+        "id": "cache-setup",
+        "label": "Cache memory setup script",
+        "path": "actions/setup/sh/setup_cache_memory_git.sh",
+        "symbol": "integrity branch initialization and pre-agent sanitization",
+        "url": "https://github.com/github/gh-aw/blob/ea7bc4dd637ff9c9f61e1706a53041c34cd4724c/actions/setup/sh/setup_cache_memory_git.sh"
+      },
+      {
+        "id": "cache-commit",
+        "label": "Cache memory commit script",
+        "path": "actions/setup/sh/commit_cache_memory_git.sh",
+        "symbol": "post-agent cleanup, staging and cache lineage commit",
+        "url": "https://github.com/github/gh-aw/blob/ea7bc4dd637ff9c9f61e1706a53041c34cd4724c/actions/setup/sh/commit_cache_memory_git.sh"
+      },
+      {
+        "id": "repo-clone",
+        "label": "Repo memory clone script",
+        "path": "actions/setup/sh/clone_repo_memory_branch.sh",
+        "symbol": "repository memory branch preparation",
+        "url": "https://github.com/github/gh-aw/blob/ea7bc4dd637ff9c9f61e1706a53041c34cd4724c/actions/setup/sh/clone_repo_memory_branch.sh"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "coordinated disclosure address; checked for official contact",
+        "url": "https://github.com/github/gh-aw/blob/ea7bc4dd637ff9c9f61e1706a53041c34cd4724c/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned workload only; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "shared status record; no gh-aw results claimed",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository presents GitHub Agentic Workflows as an open-source GitHub CLI extension and compiler. The reviewed memory features are workflow storage integrations rather than a separate memory server.",
+        "sources": [
+          "readme",
+          "cache-doc",
+          "repo-doc"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The project compiles Markdown workflow source with YAML frontmatter into GitHub Actions workflows. Memory directories are plain files managed by generated setup and persistence steps around agent execution.",
+        "sources": [
+          "readme",
+          "cache-doc",
+          "repo-doc"
+        ]
+      },
+      {
+        "text": "Cache-memory stores workflow files in Actions cache, repo-memory persists files in Git branches, and experimental Drive memory mounts GitHub Drives for enrolled preview repositories. None of the inspected guides imposes a common fact schema.",
+        "sources": [
+          "cache-doc",
+          "repo-doc",
+          "drive-doc"
+        ]
+      },
+      {
+        "text": "Current canonical repository is github/gh-aw, default branch main, reviewed at full head ea7bc4dd637ff9c9f61e1706a53041c34cd4724c. Reviewed 2026-11-25 20:55:28 UTC (12:55:28 PST; America/Los_Angeles).",
+        "sources": [
+          "repo",
+          "head"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The agent writes ordinary files in configured memory directories. Cache-memory saves into cache lineages; repo-memory validates and commits/pushes eligible files; Drive memory checks out and later publishes validated drive changes. Optional schema and JavaScript validators, extension/glob filters, and size/count/patch limits constrain persistence.",
+        "sources": [
+          "cache-doc",
+          "repo-doc",
+          "drive-doc"
+        ]
+      },
+      {
+        "text": "Files may be overwritten or removed locally, and repo-memory keeps Git history. The guides do not establish content-level correction, tombstones, or physical erasure across caches, branch history, backups, and external drive storage. Repo-memory preserves existing branch files outside its configured eligible-file scope.",
+        "sources": [
+          "repo-doc",
+          "cache-doc",
+          "drive-doc"
+        ]
+      },
+      {
+        "text": "The reviewed guides expose file mounts and prompt instructions, not a built-in semantic recall API. The agent or separately configured tools must locate and interpret relevant files; retrieval quality is unknown.",
+        "sources": [
+          "cache-prompt",
+          "repo-prompt",
+          "repo-prompt-multi",
+          "cache-doc",
+          "repo-doc",
+          "drive-doc"
+        ]
+      },
+      {
+        "text": "Cache memory uses branch/key lineages, with optional integrity levels and default-branch fallback. Repo memory uses configured branches and target repositories. Drive scope is repository/ref/drive based in the preview. These boundaries do not prove adversarial isolation; Drive service-side namespace enforcement is not verified by gh-aw.",
+        "sources": [
+          "cache-doc",
+          "repo-doc",
+          "drive-doc"
+        ]
+      },
+      {
+        "text": "Repo Git history and cache integrity branches can expose writer lineage, while threat detection and validation can gate some writes. Memory remains untrusted: these controls do not authenticate truth or establish claim-level evidence, and cache contents are unsigned and unverified.",
+        "sources": [
+          "cache-doc",
+          "repo-doc",
+          "drive-doc",
+          "repo-prompt",
+          "cache-setup"
+        ]
+      },
+      {
+        "text": "Guides document workflow logs, validation output and persistence job summaries. Cache memory has a 10GB per-repository quota and seven-day inactivity eviction; repo memory has file/count/patch constraints and repository limits. No runtime efficiency measurements were collected.",
+        "sources": [
+          "cache-doc",
+          "repo-doc",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable recall and abstention — unmeasured; file mounting and agent retrieval are documented, but no retrieval workload was scored.",
+        "sources": [
+          "cache-prompt",
+          "repo-prompt",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured; files can be updated and versioned, but no correction workload was run.",
+        "sources": [
+          "repo-doc",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Deletion leakage — unmeasured; no end-to-end physical erasure guarantee was established or probed.",
+        "sources": [
+          "repo-doc",
+          "cache-doc",
+          "drive-doc",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Scope-isolation leakage — unmeasured; storage scopes are documented, but no cross-scope workload was executed.",
+        "sources": [
+          "cache-doc",
+          "repo-doc",
+          "drive-doc",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Evidence support and citation coverage — unmeasured; the inspected memory guides do not define claim-level citations and no answer adjudication was done.",
+        "sources": [
+          "cache-doc",
+          "repo-doc",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Retrieval latency, write-to-recall delay, tokens, cost, and storage efficiency — unmeasured; no system or benchmark workload was run.",
+        "sources": [
+          "cache-doc",
+          "repo-doc",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      "Bounded review of current official README, cache/repository/Drive memory documentation, prompt templates, and selected cache setup/commit and repository clone source. Other compiler paths, jobs, and external service behaviors were not exhaustively traced.",
+      "No gh-aw runtime, tests, or benchmarks were executed. Runtime correctness, recall quality, complete deletion, adversarial isolation, latency, token use, cost, and storage efficiency remain unknown.",
+      "The documented file-oriented model delegates memory schema, recall selection, and evidence quality to workflows and agents; no general-purpose fact correction or evidence adjudication mechanism was established.",
+      "Drive memory is explicitly experimental and available only to repositories admitted to the GitHub Drives private preview."
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No gh-aw runtime, tests, or benchmark workload was executed. No metric values are claimed.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

@@ -1,0 +1,408 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 201,
+    "slug": "dsh-mneme",
+    "name": "dsh-mneme",
+    "repository": "https://github.com/slow-stack/mneme",
+    "listed_repository": "https://github.com/modusensus/dsh-mneme",
+    "branch": "main",
+    "revision": "9e66506deede3cc0facfb02271578fa501555e2c",
+    "reviewed_at": "2026-11-25T11:39:01Z",
+    "review_timezone": "UTC (2026-11-25 03:39:01 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "dsh-mneme (Mneme) is a local-first, cross-session memory plugin for DeepSeek Harness. It stores typed memory records in SQLite with editable Markdown mirrors, automatically summarizes conversations, injects selected memories, and can consolidate them in background dream/sleep passes. The implementation also exposes MCP and standalone interfaces. This review is source-based; no runtime or benchmark results were collected.",
+    "atlas_locator": {
+      "ordinal": 201,
+      "name": "dsh-mneme",
+      "slug": "dsh-mneme",
+      "listed_repository": "https://github.com/modusensus/dsh-mneme",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dsh-mneme.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": "work@modusensus.space",
+      "source_url": "https://github.com/slow-stack/mneme/blob/9e66506deede3cc0facfb02271578fa501555e2c/SECURITY.md",
+      "checked_urls": [
+        "https://github.com/slow-stack/mneme/blob/9e66506deede3cc0facfb02271578fa501555e2c/README.md",
+        "https://github.com/slow-stack/mneme/blob/9e66506deede3cc0facfb02271578fa501555e2c/dsh-mneme/README.md",
+        "https://github.com/slow-stack/mneme/blob/9e66506deede3cc0facfb02271578fa501555e2c/SECURITY.md"
+      ],
+      "note": "Official SECURITY.md publishes work@modusensus.space for vulnerability reports. No commit or profile metadata or third-party directory was used."
+    },
+    "contact_email": "work@modusensus.space",
+    "contact_email_source_url": "https://github.com/slow-stack/mneme/blob/9e66506deede3cc0facfb02271578fa501555e2c/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/slow-stack/mneme/blob/9e66506deede3cc0facfb02271578fa501555e2c/README.md",
+      "https://github.com/slow-stack/mneme/blob/9e66506deede3cc0facfb02271578fa501555e2c/dsh-mneme/README.md",
+      "https://github.com/slow-stack/mneme/blob/9e66506deede3cc0facfb02271578fa501555e2c/SECURITY.md"
+    ],
+    "contact_email_note": "Official SECURITY.md publishes work@modusensus.space for vulnerability reports; no profile metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated roster identity, listed locator and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[200], ordinal 201",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/dsh-mneme.md",
+        "symbol": "pinned catalog attribution",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dsh-mneme.md"
+      },
+      {
+        "id": "repo",
+        "label": "Canonical official GitHub repository",
+        "path": "repository",
+        "symbol": "listed URL redirects to slow-stack/mneme; public repository, default branch main",
+        "url": "https://github.com/slow-stack/mneme"
+      },
+      {
+        "id": "feed",
+        "label": "Official main commit feed",
+        "path": "main.atom",
+        "symbol": "updated 2026-11-24T13:31:28Z; latest entry 9e66506deede3cc0facfb02271578fa501555e2c",
+        "url": "https://github.com/slow-stack/mneme/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed current upstream head",
+        "path": "commit",
+        "symbol": "9e66506deede3cc0facfb02271578fa501555e2c",
+        "url": "https://github.com/slow-stack/mneme/commit/9e66506deede3cc0facfb02271578fa501555e2c"
+      },
+      {
+        "id": "readme",
+        "label": "Official repository README",
+        "path": "README.md",
+        "url": "https://github.com/slow-stack/mneme/blob/9e66506deede3cc0facfb02271578fa501555e2c/README.md"
+      },
+      {
+        "id": "package_readme",
+        "label": "Installable dsh-mneme package README",
+        "path": "dsh-mneme/README.md",
+        "url": "https://github.com/slow-stack/mneme/blob/9e66506deede3cc0facfb02271578fa501555e2c/dsh-mneme/README.md"
+      },
+      {
+        "id": "storage",
+        "label": "SQLite schema and store implementation",
+        "path": "dsh-mneme/src/store.js",
+        "url": "https://github.com/slow-stack/mneme/blob/9e66506deede3cc0facfb02271578fa501555e2c/dsh-mneme/src/store.js"
+      },
+      {
+        "id": "service",
+        "label": "Memory service and retrieval pipeline",
+        "path": "dsh-mneme/src/service.js",
+        "url": "https://github.com/slow-stack/mneme/blob/9e66506deede3cc0facfb02271578fa501555e2c/dsh-mneme/src/service.js"
+      },
+      {
+        "id": "tools",
+        "label": "Memory tool API and lifecycle operations",
+        "path": "dsh-mneme/src/tools.js",
+        "url": "https://github.com/slow-stack/mneme/blob/9e66506deede3cc0facfb02271578fa501555e2c/dsh-mneme/src/tools.js"
+      },
+      {
+        "id": "scope",
+        "label": "Agent/workspace scope resolution",
+        "path": "dsh-mneme/src/scope.js",
+        "url": "https://github.com/slow-stack/mneme/blob/9e66506deede3cc0facfb02271578fa501555e2c/dsh-mneme/src/scope.js"
+      },
+      {
+        "id": "summarize",
+        "label": "Conversation distillation write path",
+        "path": "dsh-mneme/src/summarize.js",
+        "url": "https://github.com/slow-stack/mneme/blob/9e66506deede3cc0facfb02271578fa501555e2c/dsh-mneme/src/summarize.js"
+      },
+      {
+        "id": "dream",
+        "label": "Dream and sleep consolidation decisions",
+        "path": "dsh-mneme/src/dream/decisions.js",
+        "url": "https://github.com/slow-stack/mneme/blob/9e66506deede3cc0facfb02271578fa501555e2c/dsh-mneme/src/dream/decisions.js"
+      },
+      {
+        "id": "mirror",
+        "label": "Editable Markdown mirror",
+        "path": "dsh-mneme/src/mirror.js",
+        "url": "https://github.com/slow-stack/mneme/blob/9e66506deede3cc0facfb02271578fa501555e2c/dsh-mneme/src/mirror.js"
+      },
+      {
+        "id": "semantic",
+        "label": "Semantic search design and documentation",
+        "path": "dsh-mneme/docs/SEMANTIC.md",
+        "url": "https://github.com/slow-stack/mneme/blob/9e66506deede3cc0facfb02271578fa501555e2c/dsh-mneme/docs/SEMANTIC.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "url": "https://github.com/slow-stack/mneme/blob/9e66506deede3cc0facfb02271578fa501555e2c/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Project benchmark execution status record",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents Mneme as cross-session memory for DeepSeek Harness, and the installable package exposes memory tools plus MCP and standalone interfaces. This review concerns the memory plugin rather than the broader host.",
+        "sources": [
+          "readme",
+          "package_readme",
+          "tools"
+        ]
+      },
+      {
+        "text": "The catalog position is 201: name dsh-mneme, slug dsh-mneme, and listed repository https://github.com/modusensus/dsh-mneme. The listed locator redirects to the canonical public repository https://github.com/slow-stack/mneme. Atlas is retained only as roster attribution.",
+        "sources": [
+          "catalog",
+          "atlas",
+          "repo"
+        ]
+      },
+      {
+        "text": "The official repository identifies main as its default branch. Its main Atom feed reports head 9e66506deede3cc0facfb02271578fa501555e2c, updated 2026-11-24T13:31:28Z; a fresh read-only git ref check and shallow checkout resolved the same full SHA.",
+        "sources": [
+          "repo",
+          "feed",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The durable store is a local SQLite database. The memories table contains typed records with title, content, tags, importance, forgotten/archive flags, source, content history/hash, optional embedding, epistemic status, event/access timestamps, evidence, and document path. The package README describes ten memory types and ten per-type Markdown mirrors; documents are represented as read-only pointer rows.",
+        "sources": [
+          "package_readme",
+          "storage",
+          "mirror"
+        ]
+      },
+      {
+        "text": "The package describes a flow from explicit memory_save and end-of-session summarization into SQLite and Markdown, then retrieval/injection and optional background consolidation. The code keeps memory lifecycle, search, plugin tools, and host adapters in separate store/service/tool modules.",
+        "sources": [
+          "package_readme",
+          "storage",
+          "service",
+          "tools",
+          "summarize",
+          "dream"
+        ]
+      },
+      {
+        "text": "The Markdown mirror is human-readable and editable: edits to entry titles or body text can be merged back with human edits taking precedence. A generation/applied-generation state tracks pending synchronization and permits recovery after interrupted mirror writes. The document mirror is a pointer view and is not a human-edit round-trip channel.",
+        "sources": [
+          "mirror",
+          "storage",
+          "package_readme"
+        ]
+      },
+      {
+        "text": "Agent and workspace scope labels are stored on records and are part of the same-title deduplication key. The resolver derives identity from the session agent preset and workspace registry/path; strictScope can filter other explicitly scoped records. Scope enforcement and hard-wall behavior depend on configuration and the available session/workspace identity.",
+        "sources": [
+          "scope",
+          "service",
+          "tools",
+          "package_readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write paths include model-invoked memory_save, session summarization, imports and document registration. memory_save validates supported types and can merge same-title entries only when type, agent scope, workspace scope and sensitivity match; meaningful merges append the new material and keep content history. Session summarization distills conversation content into memory records and links resulting entries to source session sequence ranges when provenance is recorded.",
+        "sources": [
+          "tools",
+          "service",
+          "summarize",
+          "storage"
+        ]
+      },
+      {
+        "text": "Update/correction uses memory_update for an ID-targeted patch to title, content, type, tags, importance and optional scope. The service records prior content in content history, and when reflection-failure tracking is enabled it can record the old and corrected values. Scope changes also have a separate audit row. Dream/sleep passes can keep, merge, update, archive, create, supersede or freeze conflicts depending on policy; decision runs retain an input snapshot digest, decisions, outcomes and receipt for review/replay.",
+        "sources": [
+          "tools",
+          "service",
+          "dream",
+          "storage"
+        ]
+      },
+      {
+        "text": "Deletion has distinct operations: memory_forget suppresses a row from injection, search and lists while retaining it; memory_archive hides it but supports restore; memory_delete permanently removes the memory row and explicitly clears provenance, mint and pin side rows in a transaction. These source paths do not establish cleanup of external backups or copies made outside the store.",
+        "sources": [
+          "tools",
+          "storage",
+          "package_readme"
+        ]
+      },
+      {
+        "text": "Retrieval combines literal keyword matching, BM25 token recall, optional vector similarity, and optionally entity-linked recall; modes include auto, keyword, vector and hybrid. The service fuses and filters candidates, can deduplicate and rerank, applies scope ranking/filtering where configured, and can record the returned candidate list in recall_runs. Automatic injection is a separate path that selects a bounded subset using relevance/importance, heat and current context.",
+        "sources": [
+          "service",
+          "tools",
+          "storage",
+          "semantic",
+          "package_readme"
+        ]
+      },
+      {
+        "text": "The local semantic-search design documents local, Ollama and OpenAI-compatible embedding backends; with no usable embedder or on embedding/search failure, code keeps or falls back to keyword retrieval. Optional reranking is also configuration dependent. This is a source-level fallback path, not a verified runtime outcome.",
+        "sources": [
+          "semantic",
+          "service"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "No fixture questions or response outcomes were run; inspected retrieval code cannot establish answer quality or abstention behavior.",
+        "sources": [
+          "service",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "The code has update, content-history and consolidation paths, but no correction/staleness probes were executed or adjudicated.",
+        "sources": [
+          "service",
+          "dream",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "A direct delete path is present, but no post-delete retrieval probes or cross-copy audit were performed.",
+        "sources": [
+          "tools",
+          "storage",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation leak rate",
+        "status": "unmeasured",
+        "evidence": "Scope labels, gates and strict filtering are implemented, but no paired permitted/forbidden caller probes were run.",
+        "sources": [
+          "scope",
+          "service",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Memory records can retain source and session-range provenance; no generated claims were adjudicated against stored evidence.",
+        "sources": [
+          "storage",
+          "summarize",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No latency samples were collected.",
+        "sources": [
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timed write-and-recall probes were run.",
+        "sources": [
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No usage or charge measurements were collected for the project fixture.",
+        "sources": [
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No corpus-attributed persistent-byte measurement was collected.",
+        "sources": [
+          "storage",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This selected review covers the official root and package READMEs and pinned SQLite store, service, tools, scope resolver, summarization, dream-decision, mirror and semantic-search documentation. It did not trace every host integration, database migration, MCP/HTTP authorization path, or the full consolidation scheduler.",
+        "sources": [
+          "readme",
+          "package_readme",
+          "storage",
+          "service",
+          "tools",
+          "scope",
+          "summarize",
+          "dream",
+          "mirror",
+          "semantic"
+        ]
+      },
+      {
+        "text": "LLM-based summarization and consolidation can change or omit details; implementation audit receipts make decisions inspectable but do not demonstrate factual correctness. No runtime behavior, isolation guarantee, deletion completeness, index-recovery behavior, multi-process outcome, or large-corpus performance is established by this source review.",
+        "sources": [
+          "summarize",
+          "dream",
+          "service",
+          "storage",
+          "metrics"
+        ]
+      },
+      {
+        "text": "The inspected package README and root README were checked for a published contact email; neither publishes one. The repository has no SECURITY.md at the reviewed revision. No email was inferred from contributor, commit, or profile metadata.",
+        "sources": [
+          "readme",
+          "package_readme",
+          "repo"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No dsh-mneme runtime, tests, or benchmarks were run. Source observations and documentation are not benchmark outcomes."
+    }
+  }
+}

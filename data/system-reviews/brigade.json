@@ -1,0 +1,316 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 103,
+    "slug": "brigade",
+    "name": "Brigade",
+    "repository": "https://github.com/escoffier-labs/brigadestack",
+    "listed_repository": "https://github.com/escoffier-labs/brigade",
+    "branch": "main",
+    "revision": "126cb1270e868613a4caa8814e44f3f0777af9d5",
+    "reviewed_at": "2026-11-25T00:14:02Z",
+    "review_timezone": "UTC (2026-11-24 16:14:02 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":"me@solomonneas.dev","source_url":"https://github.com/escoffier-labs/brigadestack/blob/126cb1270e868613a4caa8814e44f3f0777af9d5/SECURITY.md","note":"Published in the official security policy."},
+    "summary": "BrigadeStack is an agent-workspace CLI with repository Markdown cards, ingested handoff proposals, deterministic BM25 search, bounded session-start recall, and optional hub synchronization. A distinct optional Obsidian vault module indexes configured roots and stages additive proposals. This is a source review, not a runtime or performance assessment.",
+    "atlas_locator": {
+      "ordinal": 103,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/brigade.md",
+      "listed_repository": "https://github.com/escoffier-labs/brigade"
+    },
+    "contact_email": "me@solomonneas.dev",
+    "contact_email_source_url": "https://github.com/escoffier-labs/brigadestack/blob/126cb1270e868613a4caa8814e44f3f0777af9d5/SECURITY.md",
+    "contact_checked_sources": [
+      "https://github.com/escoffier-labs/brigadestack/blob/126cb1270e868613a4caa8814e44f3f0777af9d5/README.md",
+      "https://github.com/escoffier-labs/brigadestack/blob/126cb1270e868613a4caa8814e44f3f0777af9d5/SECURITY.md",
+      "https://github.com/escoffier-labs/brigadestack/blob/126cb1270e868613a4caa8814e44f3f0777af9d5/MAINTAINERS.md"
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[102], position 103; name, slug, listed locator and Atlas attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas attribution only",
+        "path": "content/systems/brigade.md",
+        "symbol": "Roster source pinned at Atlas revision 19199a4fc249e89c0793be06f0b166b358089ba0",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/brigade.md"
+      },
+      {
+        "id": "repo",
+        "label": "Canonical official repository",
+        "path": "repository",
+        "symbol": "Listed escoffier-labs/brigade locator resolves to escoffier-labs/brigadestack; default branch main",
+        "url": "https://github.com/escoffier-labs/brigadestack"
+      },
+      {
+        "id": "head-feed",
+        "label": "Official main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Latest main commit prefix 126cb12, checked against the full commit patch",
+        "url": "https://github.com/escoffier-labs/brigadestack/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified current head",
+        "path": "commit",
+        "symbol": "main head 126cb1270e868613a4caa8814e44f3f0777af9d5; full SHA from official patch",
+        "url": "https://github.com/escoffier-labs/brigadestack/commit/126cb1270e868613a4caa8814e44f3f0777af9d5"
+      },
+      {
+        "id": "readme",
+        "label": "Official BrigadeStack README",
+        "path": "README.md",
+        "symbol": "Repository memory cards, handoff and search flows; workspace identity and documented limits",
+        "url": "https://github.com/escoffier-labs/brigadestack/blob/126cb1270e868613a4caa8814e44f3f0777af9d5/README.md"
+      },
+      {
+        "id": "vault",
+        "label": "Memory vault implementation",
+        "path": "src/brigade/memory_vault.py",
+        "symbol": "Vault configuration, indexing, lexical search, show, and additive proposal path",
+        "url": "https://github.com/escoffier-labs/brigadestack/blob/126cb1270e868613a4caa8814e44f3f0777af9d5/src/brigade/memory_vault.py"
+      },
+      {
+        "id": "overview",
+        "label": "Memory architecture overview",
+        "path": "docs/overview.md",
+        "symbol": "Card and handoff architecture, frontmatter fields, stable identity, memory owner and index model",
+        "url": "https://github.com/escoffier-labs/brigadestack/blob/126cb1270e868613a4caa8814e44f3f0777af9d5/docs/overview.md"
+      },
+      {
+        "id": "care",
+        "label": "Memory lifecycle and retrieval guide",
+        "path": "docs/memory-care.md",
+        "symbol": "Card identity, BM25 search, recall signal, archive/undo, and session-start recall behavior",
+        "url": "https://github.com/escoffier-labs/brigadestack/blob/126cb1270e868613a4caa8814e44f3f0777af9d5/docs/memory-care.md"
+      },
+      {
+        "id": "memory-cmd",
+        "label": "Card search and recall dispatch",
+        "path": "src/brigade/memory_cmd.py",
+        "symbol": "Card field extraction, search payload, BM25 call and search logging",
+        "url": "https://github.com/escoffier-labs/brigadestack/blob/126cb1270e868613a4caa8814e44f3f0777af9d5/src/brigade/memory_cmd.py"
+      },
+      {
+        "id": "bm25",
+        "label": "BM25 implementation",
+        "path": "src/brigade/memory_bm25.py",
+        "symbol": "Tokenization, per-query in-memory postings, scoring parameters and result ranking",
+        "url": "https://github.com/escoffier-labs/brigadestack/blob/126cb1270e868613a4caa8814e44f3f0777af9d5/src/brigade/memory_bm25.py"
+      },
+      {
+        "id": "hooks",
+        "label": "Session recall implementation",
+        "path": "src/brigade/memory_hooks.py",
+        "symbol": "Prompt/cwd query choice, child-process timeout and bounded index-only output",
+        "url": "https://github.com/escoffier-labs/brigadestack/blob/126cb1270e868613a4caa8814e44f3f0777af9d5/src/brigade/memory_hooks.py"
+      },
+      {
+        "id": "mcp",
+        "label": "MCP memory tool contract",
+        "path": "src/brigade/memory_mcp_core.py",
+        "symbol": "Repo/user store routing; read tools and draft-only write_handoff contract",
+        "url": "https://github.com/escoffier-labs/brigadestack/blob/126cb1270e868613a4caa8814e44f3f0777af9d5/src/brigade/memory_mcp_core.py"
+      },
+      {
+        "id": "ingest",
+        "label": "Handoff ingestion implementation",
+        "path": "src/brigade/ingest.py",
+        "symbol": "Create/update card validation, reinforce behavior, expected SHA guard and publication path",
+        "url": "https://github.com/escoffier-labs/brigadestack/blob/126cb1270e868613a4caa8814e44f3f0777af9d5/src/brigade/ingest.py"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Published vulnerability-report contact email",
+        "url": "https://github.com/escoffier-labs/brigadestack/blob/126cb1270e868613a4caa8814e44f3f0777af9d5/SECURITY.md"
+      },
+      {
+        "id": "maintainers",
+        "label": "Official maintainer contact",
+        "path": "MAINTAINERS.md",
+        "symbol": "Project email and maintainer identity",
+        "url": "https://github.com/escoffier-labs/brigadestack/blob/126cb1270e868613a4caa8814e44f3f0777af9d5/MAINTAINERS.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Project-wide metric domains; not Brigade results",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Planned benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned evaluation inputs; not a result",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project-wide execution status; not a Brigade result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The README identifies Escoffier Labs and presents BrigadeStack as a CLI for shared agent memory, handoffs, MCP servers and skills, and work verification. This review focuses on Markdown cards, handoff ingestion and the optional vault module.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README documents repository Markdown cards shared by commits. The overview describes YAML card frontmatter and stable IDs, with MEMORY.md as a one-line session-start index; writer harnesses draft handoffs for the memory owner or reviewer to ingest.",
+        "sources": [
+          "readme",
+          "overview",
+          "care",
+          "ingest"
+        ]
+      },
+      {
+        "text": "The inspected vault module reads .brigade/vault.toml, resolves the configured vault and named roots, and stores a derived index at .brigade/vault-index/index.json and staging files under .brigade/vault-propose. Separate payload schemas exist for indexing, receipts, search, show, doctor, and proposals.",
+        "sources": [
+          "vault"
+        ]
+      },
+      {
+        "text": "Local card search builds an in-memory BM25 index over title, tags, summary and searchable body on every call. Session recall runs in a child process, returns bounded index-level output and has a five-second search deadline.",
+        "sources": [
+          "care",
+          "memory-cmd",
+          "bm25",
+          "hooks"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "MCP write_handoff creates a repo or user inbox draft and proposes create-card or update-card. The ingester validates structure and destination, screens content, may reinforce known facts on create-card, and supports replacement updates guarded by expected SHA to reject stale changes.",
+        "sources": [
+          "mcp",
+          "ingest",
+          "overview"
+        ]
+      },
+      {
+        "text": "memory search returns card IDs and aliases, paths, titles, tags, summaries and BM25 scores; archive inclusion is opt-in. Session recall accepts prompt or explicit terms, then falls back to checkout/folder terms, emits index-level details only and fails open on errors.",
+        "sources": [
+          "care",
+          "memory-cmd",
+          "bm25",
+          "hooks",
+          "readme"
+        ]
+      },
+      {
+        "text": "Memory-care archives eligible cards with a journaled before-image and undo path; archived cards leave ordinary search. Automatic unused-card retirement is disabled pending hub read coverage, so archive is not hard delete. The vault interface separately proposes only additive writes and provides no note update/delete path.",
+        "sources": [
+          "care",
+          "vault"
+        ]
+      },
+      {
+        "text": "Card IDs, freshness metadata, fingerprints and optional evidence references support identification and review but do not establish truth or answer-level grounding. Vault search/show returns paths, snippets, content hashes and an untrusted label; proposal receipts report operation state.",
+        "sources": [
+          "care",
+          "mcp",
+          "ingest",
+          "vault"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Repository BM25 search and vault lexical search are documented or implemented; no adjudicated answerability probes were run.",
+        "sources": ["readme","care","memory-cmd","bm25","vault","metrics","status"]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Handoffs are proposals; update-card replacement can check the expected SHA, and archive changes can be undone. No stale-value correction evaluation was run.",
+        "sources": ["readme","ingest","care","metrics","status"]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The reviewed care workflow archives rather than hard-deletes cards and records an undo journal; vault proposals are additive. Git history, clones, and backups were not evaluated.",
+        "sources": ["care","vault","metrics","status"]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Repo/user store selection and named allowlisted vault roots are visible; no cross-project or cross-user isolation workload was run.",
+        "sources": ["mcp","vault","metrics","status"]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Search returns card/note locators and snippets; card metadata can include evidence references, while vault show reports content hash and untrusted label. No answer-support adjudication was run.",
+        "sources": ["care","mcp","vault","metrics","status"]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Per-query BM25 construction, bounded recall, vault indexing and repository commits are source-visible; no timing or propagation workload was run.",
+        "sources": ["readme","memory-cmd","bm25","hooks","vault","metrics","status"]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "Markdown cards, a bounded index-level recall packet and a derived vault JSON index are visible; no token, provider-cost, or storage measurements were collected.",
+        "sources": ["readme","hooks","vault","metrics","status"]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review covers the official README/overview, memory-care guide, and selected card search, recall, MCP, ingestion, and vault code at one verified commit. It does not establish runtime behavior, retrieval accuracy, prompt cost, fault durability, concurrency safety, or practical scale; all adapters and every memory command were not exhaustively inspected.",
+        "sources": [
+          "head",
+          "readme",
+          "vault"
+        ]
+      },
+      {
+        "text": "Repo/user stores, configured roots and safe proposal delivery are storage/path controls, not demonstrated tenant authorization. Archiving is not hard erasure from Git history, clones, backups or downstream agent contexts.",
+        "sources": [
+          "vault",
+          "readme"
+        ]
+      },
+      {
+        "text": "The listed repository locator now resolves to the BrigadeStack repository and current README; the roster retains the historical display name Brigade. The roster/Atlas data is used for identity attribution only.",
+        "sources": [
+          "catalog",
+          "atlas",
+          "repo"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status: not run for Brigade in this task. Project metric definitions, the planned fixture, and project-wide execution status are separate from these source observations. No BrigadeStack runtime, benchmark workload, or tests were executed.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ]
+  }
+}

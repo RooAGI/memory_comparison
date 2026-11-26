@@ -1,0 +1,456 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "cortexgraph",
+    "name": "CortexGraph",
+    "ordinal": 165,
+    "repository": "https://github.com/prefrontal-systems/cortexgraph",
+    "listed_repository": "https://github.com/prefrontal-systems/cortexgraph",
+    "branch": "main",
+    "revision": "81a2daa3436f0923650eda9d84579cab54710408",
+    "reviewed_at": "2026-11-25T09:53:45Z",
+    "review_timezone": "UTC (2026-11-25 01:53:45 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "CortexGraph is a local-first MCP memory system with decaying short-term records, optional semantic search, and promotion to Markdown long-term notes. This is an upstream source review; no system, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 165,
+      "name": "CortexGraph",
+      "slug": "cortexgraph",
+      "listed_repository": "https://github.com/prefrontal-systems/cortexgraph",
+      "roster_attribution": "repository_status=explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cortexgraph.md",
+      "atlas_revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/prefrontal-systems/cortexgraph/blob/81a2daa3436f0923650eda9d84579cab54710408/README.md",
+      "checked_urls": [
+        "https://github.com/prefrontal-systems/cortexgraph/blob/81a2daa3436f0923650eda9d84579cab54710408/README.md",
+        "https://github.com/prefrontal-systems/cortexgraph/blob/81a2daa3436f0923650eda9d84579cab54710408/SECURITY.md"
+      ],
+      "note": "No email is published in the checked official README or SECURITY.md. General issues use repository channels; security reports use GitHub private vulnerability reporting."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/prefrontal-systems/cortexgraph/blob/81a2daa3436f0923650eda9d84579cab54710408/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/prefrontal-systems/cortexgraph/blob/81a2daa3436f0923650eda9d84579cab54710408/README.md",
+      "https://github.com/prefrontal-systems/cortexgraph/blob/81a2daa3436f0923650eda9d84579cab54710408/SECURITY.md"
+    ],
+    "contact_email_note": "Checked only the official pinned README and SECURITY.md. Neither publishes an email.",
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository/default branch",
+        "path": "repository root",
+        "symbol": "Public repository; main is the default branch and its current head prefix matches the verified full SHA.",
+        "url": "https://github.com/prefrontal-systems/cortexgraph"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch Atom feed",
+        "path": "commits/main.atom",
+        "symbol": "Current main head 81a2daa3436f0923650eda9d84579cab54710408; updated 2026-02-17T18:56:36Z.",
+        "url": "https://github.com/prefrontal-systems/cortexgraph/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified full-SHA head commit",
+        "path": "commit",
+        "symbol": "81a2daa3436f0923650eda9d84579cab54710408",
+        "url": "https://github.com/prefrontal-systems/cortexgraph/commit/81a2daa3436f0923650eda9d84579cab54710408"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product model, local storage, decay, reported limits, and contact channels.",
+        "url": "https://github.com/prefrontal-systems/cortexgraph/blob/81a2daa3436f0923650eda9d84579cab54710408/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Pinned architecture documentation",
+        "path": "docs/architecture.md",
+        "symbol": "Decay, lifecycle, storage, retrieval, target scale, and design limitations.",
+        "url": "https://github.com/prefrontal-systems/cortexgraph/blob/81a2daa3436f0923650eda9d84579cab54710408/docs/architecture.md"
+      },
+      {
+        "id": "models",
+        "label": "Pinned memory and relation models",
+        "path": "src/cortexgraph/storage/models.py",
+        "symbol": "Memory fields/statuses, source/context metadata, embeddings, review fields, and relation structure.",
+        "url": "https://github.com/prefrontal-systems/cortexgraph/blob/81a2daa3436f0923650eda9d84579cab54710408/src/cortexgraph/storage/models.py"
+      },
+      {
+        "id": "jsonl",
+        "label": "Pinned JSONL storage",
+        "path": "src/cortexgraph/storage/jsonl_storage.py",
+        "symbol": "In-memory indexes, append/update/delete markers, storage statistics and compaction.",
+        "url": "https://github.com/prefrontal-systems/cortexgraph/blob/81a2daa3436f0923650eda9d84579cab54710408/src/cortexgraph/storage/jsonl_storage.py"
+      },
+      {
+        "id": "sqlite",
+        "label": "Pinned SQLite storage",
+        "path": "src/cortexgraph/storage/sqlite_storage.py",
+        "symbol": "Alternative local database storage operations.",
+        "url": "https://github.com/prefrontal-systems/cortexgraph/blob/81a2daa3436f0923650eda9d84579cab54710408/src/cortexgraph/storage/sqlite_storage.py"
+      },
+      {
+        "id": "save",
+        "label": "Pinned save tool",
+        "path": "src/cortexgraph/tools/save.py",
+        "symbol": "Validation, metadata, optional preprocessing/embedding, UUID creation and write.",
+        "url": "https://github.com/prefrontal-systems/cortexgraph/blob/81a2daa3436f0923650eda9d84579cab54710408/src/cortexgraph/tools/save.py"
+      },
+      {
+        "id": "search",
+        "label": "Pinned search tool",
+        "path": "src/cortexgraph/tools/search.py",
+        "symbol": "Filters, decay and lexical/optional semantic ranking, review blending and limits.",
+        "url": "https://github.com/prefrontal-systems/cortexgraph/blob/81a2daa3436f0923650eda9d84579cab54710408/src/cortexgraph/tools/search.py"
+      },
+      {
+        "id": "touch",
+        "label": "Pinned touch tool",
+        "path": "src/cortexgraph/tools/touch.py",
+        "symbol": "Use reinforcement updates and optional strength increase.",
+        "url": "https://github.com/prefrontal-systems/cortexgraph/blob/81a2daa3436f0923650eda9d84579cab54710408/src/cortexgraph/tools/touch.py"
+      },
+      {
+        "id": "observe",
+        "label": "Pinned usage observation tool",
+        "path": "src/cortexgraph/tools/observe.py",
+        "symbol": "Usage reinforcement and context-tag handling.",
+        "url": "https://github.com/prefrontal-systems/cortexgraph/blob/81a2daa3436f0923650eda9d84579cab54710408/src/cortexgraph/tools/observe.py"
+      },
+      {
+        "id": "gc",
+        "label": "Pinned garbage-collection tool",
+        "path": "src/cortexgraph/tools/gc.py",
+        "symbol": "Dry-run, archive, or delete behavior at the forget threshold.",
+        "url": "https://github.com/prefrontal-systems/cortexgraph/blob/81a2daa3436f0923650eda9d84579cab54710408/src/cortexgraph/tools/gc.py"
+      },
+      {
+        "id": "promote",
+        "label": "Pinned promotion tool",
+        "path": "src/cortexgraph/tools/promote.py",
+        "symbol": "Promotion criteria and Markdown long-term storage.",
+        "url": "https://github.com/prefrontal-systems/cortexgraph/blob/81a2daa3436f0923650eda9d84579cab54710408/src/cortexgraph/tools/promote.py"
+      },
+      {
+        "id": "relation",
+        "label": "Pinned relation tool",
+        "path": "src/cortexgraph/tools/create_relation.py",
+        "symbol": "Typed links with optional metadata.",
+        "url": "https://github.com/prefrontal-systems/cortexgraph/blob/81a2daa3436f0923650eda9d84579cab54710408/src/cortexgraph/tools/create_relation.py"
+      },
+      {
+        "id": "decay",
+        "label": "Pinned decay implementation",
+        "path": "src/cortexgraph/core/decay.py",
+        "symbol": "Power-law, exponential, and two-component score implementations.",
+        "url": "https://github.com/prefrontal-systems/cortexgraph/blob/81a2daa3436f0923650eda9d84579cab54710408/src/cortexgraph/core/decay.py"
+      },
+      {
+        "id": "performance",
+        "label": "Pinned performance instrumentation",
+        "path": "src/cortexgraph/performance.py",
+        "symbol": "In-process timings, counters, and summary statistics.",
+        "url": "https://github.com/prefrontal-systems/cortexgraph/blob/81a2daa3436f0923650eda9d84579cab54710408/src/cortexgraph/performance.py"
+      },
+      {
+        "id": "security",
+        "label": "Pinned official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Contact guidance; encryption, isolation, and locking limitations.",
+        "url": "https://github.com/prefrontal-systems/cortexgraph/blob/81a2daa3436f0923650eda9d84579cab54710408/SECURITY.md"
+      },
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and repository locator",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 165: name, slug, explicit locator and Atlas attribution.",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster attribution only",
+        "path": "content/systems/cortexgraph.md",
+        "symbol": "Used for roster attribution only, not assessment evidence.",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cortexgraph.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Protocol only; not executed.",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared status is not_run; no CortexGraph measurements.",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents CortexGraph as a local-first MCP memory server and research proof of concept, explicitly not maintained for general production use. It says the project was transferred to Prefrontal Systems and renamed from Mnemex.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "identity": [
+      {
+        "text": "The curated catalog resolves ordinal 165 to CortexGraph, slug cortexgraph, with explicit listed locator https://github.com/prefrontal-systems/cortexgraph. The pinned Atlas entry is retained only for identity/locator attribution. GitHub identifies main as default; its main Atom feed and repository page show head 81a2daa3436f0923650eda9d84579cab54710408. A shallow checkout and git ls-remote independently returned the same SHA. Reviewed 2026-11-25T09:53:45Z (UTC; 2026-11-25 01:53:45 PST; America/Los_Angeles).",
+        "sources": [
+          "catalog",
+          "atlas",
+          "repo",
+          "feed",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The Python package separates MCP tools, core algorithms, local storage, consolidation agents, preprocessing, activation, vault integration, and optional web/CLI surfaces. Short-term memory is stored in JSONL by default or SQLite; promoted long-term records become Markdown notes.",
+        "sources": [
+          "readme",
+          "architecture",
+          "jsonl",
+          "sqlite",
+          "promote"
+        ]
+      },
+      {
+        "text": "A Memory record has an ID, content, metadata (tags, free-text source/context and custom fields), timestamps, use count, strength, status, optional embedding, entities, and review counters. Status values are active, promoted, and archived. Relations are typed directed links with strength, timestamp, and optional metadata.",
+        "sources": [
+          "models",
+          "relation"
+        ]
+      },
+      {
+        "text": "The configured score combines use count, elapsed time since last use, decay model, and strength. The implementation supports power-law, exponential, and two-component decay. These are code observations, not measured retention behavior.",
+        "sources": [
+          "architecture",
+          "decay"
+        ]
+      },
+      {
+        "text": "JSONL loads records into in-memory indexes and appends record snapshots and deletion markers. Its source warns that all records are loaded into RAM. The documentation states a single-machine, single-user target and 1,000–10,000 active memories.",
+        "sources": [
+          "jsonl",
+          "architecture"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write — save_memory validates content and metadata, may extract entities and calculate importance, optionally generates an embedding, creates a new UUID record, and persists it. Source and context are caller-supplied text, not validated references to retained evidence. Embeddings are disabled by default in configuration.",
+        "sources": [
+          "save",
+          "models",
+          "search"
+        ]
+      },
+      {
+        "text": "Update and correction — touch_memory and observe_memory_usage update last-used time and use count; optional reinforcement raises strength up to its cap. Storage updates selected usage, review, status, and promotion fields. save_memory creates a new UUID; the inspected API defines no dedicated correction revision or stale-value reconciliation protocol.",
+        "sources": [
+          "touch",
+          "observe",
+          "jsonl",
+          "save",
+          "models"
+        ]
+      },
+      {
+        "text": "Delete and forgetting — gc defaults to dry_run and selects active records below the forget threshold; when applied it archives or deletes them. JSONL deletion removes the record from the in-memory index and appends a deletion marker; compaction can rewrite storage to discard markers. This is logical application-level deletion, not proof of secure physical erasure. No delete or post-delete probe was run.",
+        "sources": [
+          "gc",
+          "jsonl",
+          "architecture",
+          "security"
+        ]
+      },
+      {
+        "text": "Retrieval — search_memory filters by status, tags, and optional recency window, ranks by decay and text overlap, optionally uses embedding similarity, and can blend relevant review candidates. It validates search bounds and returns memory records; source review establishes no answer-quality or abstention guarantee.",
+        "sources": [
+          "search",
+          "models",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Scope isolation — inspected memory records and search filters contain no user, project, tenant, or session principal. The official security policy explicitly says CortexGraph is single-user without multi-user isolation. Filesystem path containment does not establish logical tenant isolation.",
+        "sources": [
+          "models",
+          "search",
+          "security"
+        ]
+      },
+      {
+        "text": "Provenance and evidence — records can store free-text source/context, tags, entities and custom metadata; relations accept arbitrary metadata. The inspected schema does not enforce passage identifiers, a provenance chain, trust state, or citation contract for generated answers. Caller metadata may describe provenance, but its evidentiary accuracy is not checked.",
+        "sources": [
+          "models",
+          "save",
+          "relation"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Search and ranking are implemented; no answerable or unanswerable probes were run or adjudicated.",
+        "sources": [
+          "search",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Usage updates exist, but no explicit correction workflow was identified and no correction probes were scored.",
+        "sources": [
+          "touch",
+          "jsonl",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leak rate",
+        "status": "unmeasured",
+        "evidence": "Garbage collection and JSONL deletion markers are implemented; no delete or post-delete probe was run.",
+        "sources": [
+          "gc",
+          "jsonl",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation leak rate",
+        "status": "unmeasured",
+        "evidence": "The project documents single-user operation without multi-user isolation; no cross-principal probe was run.",
+        "sources": [
+          "security",
+          "models",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Free-text provenance fields exist; no claims, source citations, or evidence judgments were generated or scored.",
+        "sources": [
+          "models",
+          "save",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The code includes in-process timers; no timing samples or write-to-recall probes were collected.",
+        "sources": [
+          "performance",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No runtime/model operations, provider usage, or charges were collected.",
+        "sources": [
+          "save",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "JSONL reports counts, file sizes, and compaction potential; no corpus size or bytes-per-item measurement was collected.",
+        "sources": [
+          "jsonl",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Efficiency and observability",
+        "status": "source_observed",
+        "evidence": "JSONL builds in-memory indexes and exposes counts, bytes, and compaction potential. The performance collector retains up to 1,000 timing samples per operation and reports count, average, minimum, maximum, and total. These are implementation observations, not measurements.",
+        "sources": [
+          "jsonl",
+          "performance"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded inspection covered the README and architecture document, record model, JSONL and SQLite storage, save/search/touch/observe/GC/promotion/relation tools, decay logic, performance collector, and security policy. It did not trace every MCP tool, database query, agent workflow, migration, web surface, or vault synchronization path.",
+        "sources": [
+          "readme",
+          "architecture",
+          "models",
+          "jsonl",
+          "sqlite",
+          "save",
+          "search",
+          "touch",
+          "observe",
+          "gc",
+          "promote",
+          "relation",
+          "decay",
+          "performance",
+          "security"
+        ]
+      },
+      {
+        "text": "The README labels the project a research proof of concept. The security policy states there is no encryption at rest, no multi-user isolation, and OS-level file locking is not cluster-safe. No runtime, tests, or benchmarks were run, so operational correctness and measured behavior remain unknown.",
+        "sources": [
+          "readme",
+          "security",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No CortexGraph runtime, tests, or benchmark workload was executed. Source and documentation observations are not measurements.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    },
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "No project measurements were produced."
+    }
+  }
+}

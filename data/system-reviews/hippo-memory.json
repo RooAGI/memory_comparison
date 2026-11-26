@@ -1,0 +1,471 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 298,
+    "slug": "hippo-memory",
+    "name": "Hippo",
+    "repository": "https://github.com/kitfunso/hippo-memory",
+    "listed_repository": "https://github.com/kitfunso/hippo-memory",
+    "branch": "master",
+    "revision": "8bf399e78b9c720b866c7299134ecd1d51a7c2d1",
+    "reviewed_at": "2026-11-25T23:07:55Z",
+    "review_timezone": "UTC (checked local time: 2026-11-25 15:07:55 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Hippo is a local-first memory system for coding agents, with a SQLite store, CLI/API/MCP integrations, tenant and project boundaries, lexical and optional vector retrieval, and lifecycle operations for superseding, forgetting, and maintaining memories. This review describes the current source at the verified upstream head; it is not a runtime or benchmark result.",
+    "atlas_locator": {
+      "ordinal": 298,
+      "name": "Hippo",
+      "slug": "hippo-memory",
+      "listed_repository": "https://github.com/kitfunso/hippo-memory",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hippo-memory.md",
+      "revision": "f774b2db885d7f7c87dccb38b7f0ae919b14dc36"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/kitfunso/hippo-memory/blob/8bf399e78b9c720b866c7299134ecd1d51a7c2d1/README.md",
+      "checked_urls": [
+        "https://github.com/kitfunso/hippo-memory/blob/8bf399e78b9c720b866c7299134ecd1d51a7c2d1/README.md",
+        "https://hippo-memory.com/"
+      ],
+      "note": "The official pinned README and official project homepage were checked; neither publishes a contact email. No profile or commit metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/kitfunso/hippo-memory/blob/8bf399e78b9c720b866c7299134ecd1d51a7c2d1/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/kitfunso/hippo-memory/blob/8bf399e78b9c720b866c7299134ecd1d51a7c2d1/README.md",
+      "https://hippo-memory.com/"
+    ],
+    "contact_email_note": "Neither the official pinned README nor the official homepage publishes a contact email.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "Position 298; system name, slug, listed locator and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/hippo-memory.md",
+        "symbol": "Curated identity/locator context only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hippo-memory.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository API",
+        "path": "Repository metadata",
+        "symbol": "Canonical kitfunso/hippo-memory and default branch master",
+        "url": "https://api.github.com/repos/kitfunso/hippo-memory"
+      },
+      {
+        "id": "head",
+        "label": "Official current master commit API",
+        "path": "GitHub commits API",
+        "symbol": "Full head 8bf399e78b9c720b866c7299134ecd1d51a7c2d1; commit timestamp 2026-11-25T22:02:01Z; verified against shallow checkout",
+        "url": "https://api.github.com/repos/kitfunso/hippo-memory/commits/master"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project description, user-facing capabilities and constraints; checked for contact email",
+        "url": "https://github.com/kitfunso/hippo-memory/blob/8bf399e78b9c720b866c7299134ecd1d51a7c2d1/README.md"
+      },
+      {
+        "id": "entry",
+        "label": "Pinned memory entry model",
+        "path": "src/base/memory/entry.ts",
+        "symbol": "Memory fields, types, lifecycle, provenance, scope, confidence and time validity",
+        "url": "https://github.com/kitfunso/hippo-memory/blob/8bf399e78b9c720b866c7299134ecd1d51a7c2d1/src/base/memory/entry.ts"
+      },
+      {
+        "id": "remember",
+        "label": "Pinned memory write API",
+        "path": "src/api/memories/remember.ts",
+        "symbol": "Write preparation, scope and owner checks, secret vetting, screening and commit flow",
+        "url": "https://github.com/kitfunso/hippo-memory/blob/8bf399e78b9c720b866c7299134ecd1d51a7c2d1/src/api/memories/remember.ts"
+      },
+      {
+        "id": "screen",
+        "label": "Pinned write screening",
+        "path": "src/api/memories/write-screen.ts",
+        "symbol": "Instruction-like text screening and connector/shared-write quarantine behavior",
+        "url": "https://github.com/kitfunso/hippo-memory/blob/8bf399e78b9c720b866c7299134ecd1d51a7c2d1/src/api/memories/write-screen.ts"
+      },
+      {
+        "id": "entryrow",
+        "label": "Pinned SQLite entry adapter",
+        "path": "src/store/sqlite/entries/entry-row.ts",
+        "symbol": "SQLite upsert, rejected-value guard, full-text synchronization and project origin storage",
+        "url": "https://github.com/kitfunso/hippo-memory/blob/8bf399e78b9c720b866c7299134ecd1d51a7c2d1/src/store/sqlite/entries/entry-row.ts"
+      },
+      {
+        "id": "entrywrites",
+        "label": "Pinned lifecycle write adapter",
+        "path": "src/store/sqlite/entries/entry-writes.ts",
+        "symbol": "Transactional remember, forget, supersede, outcomes, mirrors and write audit",
+        "url": "https://github.com/kitfunso/hippo-memory/blob/8bf399e78b9c720b866c7299134ecd1d51a7c2d1/src/store/sqlite/entries/entry-writes.ts"
+      },
+      {
+        "id": "forget",
+        "label": "Pinned forget API",
+        "path": "src/api/memories/forget.ts",
+        "symbol": "Tenant- and scope-aware forget and rejection operations",
+        "url": "https://github.com/kitfunso/hippo-memory/blob/8bf399e78b9c720b866c7299134ecd1d51a7c2d1/src/api/memories/forget.ts"
+      },
+      {
+        "id": "promote",
+        "label": "Pinned supersede and archive API",
+        "path": "src/api/memories/promote.ts",
+        "symbol": "Replacement chaining, authorization, raw-memory archive and promotion behavior",
+        "url": "https://github.com/kitfunso/hippo-memory/blob/8bf399e78b9c720b866c7299134ecd1d51a7c2d1/src/api/memories/promote.ts"
+      },
+      {
+        "id": "rejection",
+        "label": "Pinned rejected-value tombstone store",
+        "path": "src/store/sqlite/review/rejection.ts",
+        "symbol": "Tenant-scoped normalized content digests; refusal and exact-value limitation",
+        "url": "https://github.com/kitfunso/hippo-memory/blob/8bf399e78b9c720b866c7299134ecd1d51a7c2d1/src/store/sqlite/review/rejection.ts"
+      },
+      {
+        "id": "recall",
+        "label": "Pinned recall API",
+        "path": "src/api/recall/recall.ts",
+        "symbol": "Recall mode, request filters, ranking request and recall completion",
+        "url": "https://github.com/kitfunso/hippo-memory/blob/8bf399e78b9c720b866c7299134ecd1d51a7c2d1/src/api/recall/recall.ts"
+      },
+      {
+        "id": "scope",
+        "label": "Pinned scope and authorization rules",
+        "path": "src/base/scope/recall-scope.ts",
+        "symbol": "Private-scope default deny, exact API scope, owner scope, grants and reader reach",
+        "url": "https://github.com/kitfunso/hippo-memory/blob/8bf399e78b9c720b866c7299134ecd1d51a7c2d1/src/base/scope/recall-scope.ts"
+      },
+      {
+        "id": "ranksearch",
+        "label": "Pinned recall candidate loading",
+        "path": "src/api/recall/rank-search.ts",
+        "symbol": "Tenant, scope, origin-project and supersession filtering before bounded scoring",
+        "url": "https://github.com/kitfunso/hippo-memory/blob/8bf399e78b9c720b866c7299134ecd1d51a7c2d1/src/api/recall/rank-search.ts"
+      },
+      {
+        "id": "hybrid",
+        "label": "Pinned hybrid search implementation",
+        "path": "src/domain/search/hybrid.ts",
+        "symbol": "BM25/vector blending or RRF, strength/recency, MMR and reranker hooks",
+        "url": "https://github.com/kitfunso/hippo-memory/blob/8bf399e78b9c720b866c7299134ecd1d51a7c2d1/src/domain/search/hybrid.ts"
+      },
+      {
+        "id": "pipeline",
+        "label": "Pinned recall ranking pipeline",
+        "path": "src/api/recall/pipeline.ts",
+        "symbol": "Bounded profiles and optional ranking stages",
+        "url": "https://github.com/kitfunso/hippo-memory/blob/8bf399e78b9c720b866c7299134ecd1d51a7c2d1/src/api/recall/pipeline.ts"
+      },
+      {
+        "id": "finish",
+        "label": "Pinned recall completion and audit",
+        "path": "src/api/recall/finish.ts",
+        "symbol": "Shown-list audit metadata and hashed query representation",
+        "url": "https://github.com/kitfunso/hippo-memory/blob/8bf399e78b9c720b866c7299134ecd1d51a7c2d1/src/api/recall/finish.ts"
+      },
+      {
+        "id": "audit",
+        "label": "Pinned SQLite audit implementation",
+        "path": "src/store/sqlite/audit/audit.ts",
+        "symbol": "Tenant-filtered audit events with actor, operation, target and metadata",
+        "url": "https://github.com/kitfunso/hippo-memory/blob/8bf399e78b9c720b866c7299134ecd1d51a7c2d1/src/store/sqlite/audit/audit.ts"
+      },
+      {
+        "id": "audit-schema",
+        "label": "Pinned API key and audit schema",
+        "path": "src/db/migrations/v27.ts",
+        "symbol": "SQLite API key roles and tenant-scoped audit_log schema",
+        "url": "https://github.com/kitfunso/hippo-memory/blob/8bf399e78b9c720b866c7299134ecd1d51a7c2d1/src/db/migrations/v27.ts"
+      },
+      {
+        "id": "tombstone-schema",
+        "label": "Pinned rejected-values schema",
+        "path": "src/db/migrations/v41.ts",
+        "symbol": "Tenant and digest primary key; rejected content is not stored",
+        "url": "https://github.com/kitfunso/hippo-memory/blob/8bf399e78b9c720b866c7299134ecd1d51a7c2d1/src/db/migrations/v41.ts"
+      },
+      {
+        "id": "fts",
+        "label": "Pinned full-text index",
+        "path": "src/db/fts-index.ts",
+        "symbol": "SQLite FTS5 and trigram indexes with synchronization triggers",
+        "url": "https://github.com/kitfunso/hippo-memory/blob/8bf399e78b9c720b866c7299134ecd1d51a7c2d1/src/db/fts-index.ts"
+      },
+      {
+        "id": "vectors",
+        "label": "Pinned vector store",
+        "path": "src/db/vector-store.ts",
+        "symbol": "Per-memory embedding vectors stored as Float32 BLOBs in SQLite",
+        "url": "https://github.com/kitfunso/hippo-memory/blob/8bf399e78b9c720b866c7299134ecd1d51a7c2d1/src/db/vector-store.ts"
+      },
+      {
+        "id": "sleep",
+        "label": "Pinned sleep orchestration",
+        "path": "src/api/sleep/sleep.ts",
+        "symbol": "Whole-store sleep processing and multi-tenant/loopback boundary",
+        "url": "https://github.com/kitfunso/hippo-memory/blob/8bf399e78b9c720b866c7299134ecd1d51a7c2d1/src/api/sleep/sleep.ts"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Recall, correction, deletion, scope, evidence, efficiency and delay protocol",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned cases and expected outcomes; not Hippo results",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status; not Hippo results",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "website",
+        "label": "Official Hippo website",
+        "path": "Hippo product homepage",
+        "symbol": "Official product information; checked for published contact email",
+        "url": "https://hippo-memory.com/"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents Hippo as a local-first memory tool for coding agents, with a CLI and integrations for agent hooks, plugins, and MCP clients. It also describes a team server that exposes a shared store through tenant-bound API keys and roles.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      },
+      {
+        "text": "The reviewed implementation stores memory entries in SQLite and separates API/domain logic, store adapters, and CLI/MCP/HTTP surfaces; the repository also contains adjacent continuity, connector, and graph features beyond the memory-entry paths inspected here.",
+        "sources": [
+          "entry",
+          "remember",
+          "recall",
+          "audit-schema"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "A memory entry carries text plus lifecycle and retrieval metadata: kind, layer, tags, strength and half-life, confidence, timestamps, outcome counters, optional scope/owner, tenant ID and project origin. Provenance-related fields include source, artifact reference, source session ID, lead-in, extraction origin, parents, and supersession successor.",
+        "sources": [
+          "entry"
+        ]
+      },
+      {
+        "text": "The write API validates caller scope and ownership, screens new content for secrets and instruction-like text, creates a typed entry, then hands it to a SQLite store adapter. The adapter persists rows and keeps full-text and vector indexes synchronized; mutation and recall paths can append audit events.",
+        "sources": [
+          "remember",
+          "screen",
+          "entryrow",
+          "entrywrites",
+          "audit"
+        ]
+      },
+      {
+        "text": "Recall loads a bounded candidate pool from the tenant store, applying scope and project filters before scoring. The ranker can combine BM25 with vector cosine using a weighted blend or reciprocal-rank fusion; strength and recency affect ranking, and optional stages include graph expansion, MMR, reranking, and a result-token budget.",
+        "sources": [
+          "ranksearch",
+          "pipeline",
+          "hybrid",
+          "fts",
+          "vectors"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Writes default to distilled memories; callers can set kind, layer, confidence, tags, scope, owner, artifact reference, lead-in and project identity. The shared remember path vets secret-like material and screens shared-member or connector text for instruction-like patterns. Where the store supports review, flagged writes can be held in quarantine; these source checks do not show that every unsafe input is detected.",
+        "sources": [
+          "remember",
+          "screen",
+          "entry",
+          "readme"
+        ]
+      },
+      {
+        "text": "A memory can be corrected with supersede: a successor is stored and linked to the old memory, with an audit event; default recall excludes superseded entries. This preserves a correction chain instead of replacing old text in place.",
+        "sources": [
+          "promote",
+          "entry",
+          "entrywrites",
+          "recall"
+        ]
+      },
+      {
+        "text": "Forget requires the caller to reach and have write rights to the row. It removes a non-raw row from SQLite and full-text search, records the operation, and attempts mirror cleanup after commit. Raw transcript rows are append-only through ordinary forget and use a separate archive path. The rejection guard stores a tenant-scoped digest and reason, not rejected content, and blocks exact normalized text re-ingestion; semantic paraphrases are outside the guard.",
+        "sources": [
+          "forget",
+          "entrywrites",
+          "entryrow",
+          "rejection",
+          "tombstone-schema"
+        ]
+      },
+      {
+        "text": "Recall applies tenant identity from the authenticated context and passes scope and project-origin filters into candidate loading before the ranking window. Superseded rows are excluded by default. Search combines BM25 with optional vector similarity; optional stages include graph expansion, diversity reranking, configured rerankers and a token budget.",
+        "sources": [
+          "recall",
+          "ranksearch",
+          "hybrid",
+          "pipeline"
+        ]
+      },
+      {
+        "text": "SQLite FTS5 and trigram tables provide lexical candidate indexes; memory vectors are stored as Float32 blobs. Failed FTS synchronization marks the index out of sync and emits a warning, leaving SQLite rows authoritative but potentially reducing recall until repair.",
+        "sources": [
+          "fts",
+          "entryrow",
+          "vectors"
+        ]
+      },
+      {
+        "text": "The API audit log records tenant, actor, operation, target, timestamp and metadata. Recall audit metadata hashes the query rather than persisting its text. Operational events do not establish quality or performance.",
+        "sources": [
+          "audit",
+          "audit-schema",
+          "finish",
+          "sleep"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "The inspected recall pipeline ranks lexical and optional vector candidates under scope and a result budget; no answerability or abstention workload was scored.",
+        "sources": [
+          "recall",
+          "ranksearch",
+          "hybrid",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Supersession preserves a successor link and default recall excludes superseded rows; no correction probes were run.",
+        "sources": [
+          "promote",
+          "entry",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Forget deletes a row and synchronizes indexes/mirrors, while raw rows have an archive path; no post-delete leakage probes were run.",
+        "sources": [
+          "forget",
+          "entrywrites",
+          "entryrow",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Tenant, caller scope, and project-origin filters are applied to candidate loading; whole-store sleep is cross-tenant, and no isolation workload was run.",
+        "sources": [
+          "scope",
+          "ranksearch",
+          "sleep",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Memory metadata can retain source, artifact reference, lead-in, source session, and extraction/parent links; no recalled claim was adjudicated against source passages.",
+        "sources": [
+          "entry",
+          "remember",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No runtime timings or write-to-recall intervals were collected.",
+        "sources": [
+          "recall",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "SQLite indexes and optional local vectors were inspected; no token, cost, storage-size, or workload measurements were collected.",
+        "sources": [
+          "fts",
+          "vectors",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "Tenant and project boundaries depend on the store and surface supplying the intended authenticated context; CLI/operator routes and background whole-store sleep have different reach from an API caller. Sleep explicitly processes all tenants, and its source comments describe a loopback-only boundary. No cross-tenant or cross-project isolation probes were run.",
+        "sources": [
+          "scope",
+          "ranksearch",
+          "sleep",
+          "readme"
+        ]
+      },
+      {
+        "text": "Confidence labels, source labels, counts and artifact references are stored metadata; the reviewed paths do not validate that a source passage entails a memory or that repeated observations are independent. A digest tombstone rejects matching normalized text, not paraphrases.",
+        "sources": [
+          "entry",
+          "remember",
+          "rejection"
+        ]
+      },
+      {
+        "text": "Forget and archive paths were inspected, but complete erasure from backups and every derivative copy was not established. This review did not trace every connector-specific retention path.",
+        "sources": [
+          "forget",
+          "entrywrites",
+          "readme"
+        ]
+      },
+      {
+        "text": "The repository README includes product descriptions and upstream evaluation claims, but this review did not reproduce those results. The current homepage shows a different displayed version from the repository head; implementation claims here use the pinned source review.",
+        "sources": [
+          "readme",
+          "website",
+          "head"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Hippo runtime, tests, or benchmark workload was run. Code observations and project evaluation definitions are not Hippo benchmark results."
+    }
+  }
+}

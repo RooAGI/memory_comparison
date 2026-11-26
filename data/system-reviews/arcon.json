@@ -1,0 +1,424 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "arcon",
+    "name": "Arcon",
+    "repository": "https://github.com/vmDeshpande/Arcon",
+    "branch": "main",
+    "revision": "ea59c28349bae303118e6f7388016628585723b7",
+    "reviewed_at": "2026-11-24T21:26:10Z",
+    "review_timezone": "UTC (2026-11-24 13:26:10 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":"vedant.milind.deshpande@gmail.com","source_url":"https://github.com/vmDeshpande/Arcon/blob/ea59c28349bae303118e6f7388016628585723b7/SECURITY.md","note":"Published in the official security policy."},
+    "summary": "Arcon is a local-first digital companion application with a modular TypeScript memory subsystem. The reviewed package combines SQLite records, extraction and review, lifecycle and scope filters, lexical ranking, entity knowledge, and reflection proposals. This is a pinned source review; no runtime or benchmark results were produced.",
+    "atlas_locator": {
+      "ordinal": 66,
+      "name": "Arcon",
+      "slug": "arcon",
+      "listed_repository": "https://github.com/vmDeshpande/Arcon",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/arcon.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": "vedant.milind.deshpande@gmail.com",
+    "contact_email_source_url": "https://github.com/vmDeshpande/Arcon/blob/ea59c28349bae303118e6f7388016628585723b7/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/vmDeshpande/Arcon/blob/ea59c28349bae303118e6f7388016628585723b7/README.md",
+      "https://github.com/vmDeshpande/Arcon/blob/ea59c28349bae303118e6f7388016628585723b7/SUPPORT.md",
+      "https://github.com/vmDeshpande/Arcon/blob/ea59c28349bae303118e6f7388016628585723b7/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository and branch metadata",
+        "path": "repository",
+        "symbol": "canonical repository vmDeshpande/Arcon; default branch main",
+        "url": "https://github.com/vmDeshpande/Arcon"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "head ea59c28349bae303118e6f7388016628585723b7; feed updated 2026-11-22T06:22:53Z",
+        "url": "https://github.com/vmDeshpande/Arcon/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed full upstream head commit",
+        "path": "commit",
+        "symbol": "ea59c28349bae303118e6f7388016628585723b7",
+        "url": "https://github.com/vmDeshpande/Arcon/commit/ea59c28349bae303118e6f7388016628585723b7.patch"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "architecture, lifecycle, retrieval, documented system behavior",
+        "url": "https://github.com/vmDeshpande/Arcon/blob/ea59c28349bae303118e6f7388016628585723b7/README.md"
+      },
+      {
+        "id": "memory",
+        "label": "Personal memory repository and schema",
+        "path": "packages/memory/src/personal-memory.ts",
+        "symbol": "SQLite schema, memory fields, lifecycle, scope, audit records",
+        "url": "https://github.com/vmDeshpande/Arcon/blob/ea59c28349bae303118e6f7388016628585723b7/packages/memory/src/personal-memory.ts"
+      },
+      {
+        "id": "extractor",
+        "label": "Memory extraction path",
+        "path": "packages/memory/src/extractor/memory-extractor.ts",
+        "symbol": "validation, phrase extraction, deduplication and instruction-pattern rejection",
+        "url": "https://github.com/vmDeshpande/Arcon/blob/ea59c28349bae303118e6f7388016628585723b7/packages/memory/src/extractor/memory-extractor.ts"
+      },
+      {
+        "id": "candidate",
+        "label": "Staged memory candidate type",
+        "path": "packages/memory/src/extractor/candidate.ts",
+        "symbol": "candidate confidence, importance, source, scope and reasoning",
+        "url": "https://github.com/vmDeshpande/Arcon/blob/ea59c28349bae303118e6f7388016628585723b7/packages/memory/src/extractor/candidate.ts"
+      },
+      {
+        "id": "pipeline",
+        "label": "Memory lifecycle pipeline",
+        "path": "packages/memory/src/pipeline/memory-pipeline.ts",
+        "symbol": "candidate validation and create/update/conflict paths",
+        "url": "https://github.com/vmDeshpande/Arcon/blob/ea59c28349bae303118e6f7388016628585723b7/packages/memory/src/pipeline/memory-pipeline.ts"
+      },
+      {
+        "id": "review",
+        "label": "Candidate review decisions",
+        "path": "packages/memory/src/pipeline/memory-review.ts",
+        "symbol": "CREATE, UPDATE, IGNORE, CONFLICT and SUPERSEDE decisions",
+        "url": "https://github.com/vmDeshpande/Arcon/blob/ea59c28349bae303118e6f7388016628585723b7/packages/memory/src/pipeline/memory-review.ts"
+      },
+      {
+        "id": "retriever",
+        "label": "Memory retrieval implementation",
+        "path": "packages/memory/src/retrieval/memory-retriever.ts",
+        "symbol": "status/scope filters, entity retrieval and last-used updates",
+        "url": "https://github.com/vmDeshpande/Arcon/blob/ea59c28349bae303118e6f7388016628585723b7/packages/memory/src/retrieval/memory-retriever.ts"
+      },
+      {
+        "id": "ranking",
+        "label": "Memory score implementation",
+        "path": "packages/memory/src/retrieval/memory-ranking.ts",
+        "symbol": "keyword, importance, confidence, evidence, recency and status score",
+        "url": "https://github.com/vmDeshpande/Arcon/blob/ea59c28349bae303118e6f7388016628585723b7/packages/memory/src/retrieval/memory-ranking.ts"
+      },
+      {
+        "id": "context",
+        "label": "Memory context formatter",
+        "path": "packages/memory/src/retrieval/context-builder.ts",
+        "symbol": "context status filtering and 15-item cap",
+        "url": "https://github.com/vmDeshpande/Arcon/blob/ea59c28349bae303118e6f7388016628585723b7/packages/memory/src/retrieval/context-builder.ts"
+      },
+      {
+        "id": "reflection_candidate",
+        "label": "Reflection evidence structures",
+        "path": "packages/memory/src/reflection/reflection-candidate.ts",
+        "symbol": "experience types, counts, timestamps and context",
+        "url": "https://github.com/vmDeshpande/Arcon/blob/ea59c28349bae303118e6f7388016628585723b7/packages/memory/src/reflection/reflection-candidate.ts"
+      },
+      {
+        "id": "reflection_engine",
+        "label": "Reflection proposal engine",
+        "path": "packages/memory/src/reflection/reflection-engine.ts",
+        "symbol": "experience grouping and proposal thresholds",
+        "url": "https://github.com/vmDeshpande/Arcon/blob/ea59c28349bae303118e6f7388016628585723b7/packages/memory/src/reflection/reflection-engine.ts"
+      },
+      {
+        "id": "reflection_processor",
+        "label": "Reflection proposal processing",
+        "path": "packages/memory/src/reflection/reflection-processor.ts",
+        "symbol": "proposal conversion to pipeline candidates or archive calls",
+        "url": "https://github.com/vmDeshpande/Arcon/blob/ea59c28349bae303118e6f7388016628585723b7/packages/memory/src/reflection/reflection-processor.ts"
+      },
+      {
+        "id": "conversation",
+        "label": "Conversation history store",
+        "path": "packages/memory/src/conversation-store.ts",
+        "symbol": "SQLite conversation/message tables and conversation-scoped reads/clear",
+        "url": "https://github.com/vmDeshpande/Arcon/blob/ea59c28349bae303118e6f7388016628585723b7/packages/memory/src/conversation-store.ts"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy and contact",
+        "path": "SECURITY.md",
+        "symbol": "published vedant.milind.deshpande@gmail.com for security reports",
+        "url": "https://github.com/vmDeshpande/Arcon/blob/ea59c28349bae303118e6f7388016628585723b7/SECURITY.md"
+      },
+      {
+        "id": "support",
+        "label": "Official support instructions",
+        "path": "SUPPORT.md",
+        "symbol": "usage support points to Discussions/issues; no email listed",
+        "url": "https://github.com/vmDeshpande/Arcon/blob/ea59c28349bae303118e6f7388016628585723b7/SUPPORT.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog identity and attribution only",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 66",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Roster attribution source; identity only",
+        "path": "content/systems/arcon.md",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/arcon.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents Arcon as a local-first digital companion architecture, not a standalone hosted memory service. This review focuses on its TypeScript memory package inside a Node.js application; the README describes a separate Python inference service.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The memory package separates durable personal memories from conversation history. Source modules cover extraction, lifecycle pipeline and review, retrieval, reflection, semantic helpers, and entity knowledge.",
+        "sources": [
+          "readme",
+          "memory",
+          "pipeline",
+          "retriever",
+          "reflection_engine"
+        ]
+      },
+      {
+        "text": "Personal memory is a typed SQLite row with one of six memory types and six lifecycle states. Fields include content, importance and confidence scores, source type, timestamps, optional subject and tags, evidence count, last-used time, supersession link, and scope. The repository enables WAL mode and indexes type, status, type/status, subject, update time, and scope.",
+        "sources": [
+          "memory"
+        ]
+      },
+      {
+        "text": "Conversation history uses separate conversation and message tables with IDs, timestamps, roles, summaries, topics, and metadata. The store exposes reads scoped by conversation ID and a clear operation for a conversation.",
+        "sources": [
+          "conversation"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write and extraction. The inspected MemoryExtractor rejects a set of instruction-like patterns, validates messages, applies phrase rules, and deduplicates similar candidate text; it returns candidates without persisting them. The pipeline normalizes and validates candidates and applies review decisions. The README separately describes semantic extraction with an LLM and regex fallback; that model-backed path was not inspected.",
+        "sources": [
+          "extractor",
+          "candidate",
+          "pipeline",
+          "review",
+          "readme"
+        ]
+      },
+      {
+        "text": "Create, update, and correction. The pipeline implements CREATE, UPDATE, IGNORE, and CONFLICT decisions; a conflict can create a PENDING_CONFIRMATION memory. The README documents broader lifecycle actions including supersession and archive. Correction accuracy and consistency across callers were not measured.",
+        "sources": [
+          "pipeline",
+          "review",
+          "memory",
+          "readme"
+        ]
+      },
+      {
+        "text": "Delete and retirement. Documentation and pipeline expose archive and supersession as ways to retire or hide a memory while preserving history. This bounded review did not establish a physical-erasure API or completeness across databases, backups, exports, and derived data; erasure behavior remains unknown here.",
+        "sources": [
+          "readme",
+          "pipeline",
+          "memory"
+        ]
+      },
+      {
+        "text": "Retrieval combines entity-derived memories with stored memories, filters non-current statuses on the normal path, deduplicates by type and content, scores and sorts candidates, then applies a result limit. The score uses substring keyword matches, importance, confidence, capped evidence count, recency, and status. The implementation is lexical; the README says semantic vector search is deferred.",
+        "sources": [
+          "retriever",
+          "ranking",
+          "readme"
+        ]
+      },
+      {
+        "text": "Scope isolation. Records have a scope field and index. Normal retrieval restricts general memories to USER or ARCON; the threshold API accepts optional type and scope filters. Entity memories are fetched separately and merged with general results. The inspected record model has no tenant or principal identifier, so these filters do not establish multi-tenant authorization.",
+        "sources": [
+          "memory",
+          "retriever"
+        ]
+      },
+      {
+        "text": "Provenance and evidence. Records can retain source type, confidence, timestamps, evidence count, and a supersession link. The repository schema includes an audit log with prior and new status/content, reason, source, and time; the README describes a mutation audit trail. Reflection candidates carry experience types, counts, time range, and optional context. The inspected processor passes a reason string and scores into a memory candidate rather than the full evidence array, so durable evidence retention through that path is not established.",
+        "sources": [
+          "memory",
+          "readme",
+          "reflection_candidate",
+          "reflection_engine",
+          "reflection_processor",
+          "candidate"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency and observability. SQLite indexes support type, status, scope, and time lookups, with WAL mode enabled. Retrieval loads candidate rows, scores them in application code, sorts them, and updates last-used timestamps for returned memories. The context formatter caps output at 15 entries. The pipeline returns action counters; the inspected scorer has no timing instrumentation. These are code observations, not measured performance.",
+        "sources": [
+          "memory",
+          "retriever",
+          "ranking",
+          "context",
+          "pipeline"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Source shows lexical ranking and a configurable threshold path. No answerable or unanswerable benchmark probes were run.",
+        "sources": [
+          "retriever",
+          "ranking",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Lifecycle states, conflict review, and supersession links are visible in source. No correction workload was run.",
+        "sources": [
+          "pipeline",
+          "review",
+          "memory",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Archive and supersession are documented; physical-erasure completeness and post-delete leakage were not tested.",
+        "sources": [
+          "readme",
+          "pipeline",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Retrieval applies status and scope filters in code. No cross-scope probes were run, and the record schema has no tenant principal.",
+        "sources": [
+          "memory",
+          "retriever",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source and audit fields are visible, but no generated claims were adjudicated against retained evidence.",
+        "sources": [
+          "memory",
+          "reflection_candidate",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "Indexes, scoring steps, and result limits are source-visible; no timed retrieval observations were collected.",
+        "sources": [
+          "memory",
+          "retriever",
+          "ranking",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Write and retrieval APIs are present, but no ordered write and scheduled recall probes were run.",
+        "sources": [
+          "pipeline",
+          "retriever",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No token or cost measurements were produced for this review.",
+        "sources": [
+          "readme",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "SQLite schema and indexes are visible, but persistent bytes and bytes per accepted item were not measured.",
+        "sources": [
+          "memory",
+          "conversation",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded review covered the official README and selected memory, extraction, pipeline, retrieval, reflection, and conversation-store files at the verified full SHA. Arcon, its tests, and benchmark workloads were not run. The README's reported test and runtime status is upstream documentation, not verification performed here.",
+        "sources": [
+          "readme",
+          "memory",
+          "extractor",
+          "pipeline",
+          "retriever",
+          "reflection_engine",
+          "conversation"
+        ]
+      },
+      {
+        "text": "The lexical scorer does not establish answer quality or calibrated abstention. Physical-erasure completeness, principal-level isolation, and end-to-end persistence of reflection evidence remain unverified.",
+        "sources": [
+          "retriever",
+          "ranking",
+          "memory",
+          "reflection_processor"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No Arcon runtime, tests, or benchmark workload was executed. Project metric definitions, fixture, and the not_run status record describe a separate protocol; they are not Arcon results.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      }
+    ]
+  }
+}

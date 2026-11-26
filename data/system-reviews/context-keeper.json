@@ -1,0 +1,406 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 143,
+    "slug": "context-keeper",
+    "name": "Context Keeper",
+    "repository": "https://github.com/jarmstrong158/context-keeper",
+    "listed_repository": "https://github.com/jarmstrong158/context-keeper",
+    "branch": "main",
+    "revision": "d08355a46548d5a20d9170d3271e2054c51a4db9",
+    "reviewed_at": "2026-11-25T08:52:18Z",
+    "review_timezone": "UTC (2026-11-25 00:52:18 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Context Keeper is an offline-first MCP memory server that stores typed project decisions, pipelines, and constraints as human-editable JSON. Its retrieval combines lexical, scope, status, recency, and origin signals, with optional local or OpenAI-compatible embeddings. This assessment is tied to the verified main head; no runtime, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 143,
+      "name": "Context Keeper",
+      "slug": "context-keeper",
+      "listed_repository": "https://github.com/jarmstrong158/context-keeper",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/context-keeper.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": null,
+      "checked_urls": [
+        "https://github.com/jarmstrong158/context-keeper/blob/d08355a46548d5a20d9170d3271e2054c51a4db9/README.md"
+      ],
+      "note": "No contact email was published in the official pinned README. Contact was not inferred from commit/profile metadata or third-party directories."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/jarmstrong158/context-keeper/blob/d08355a46548d5a20d9170d3271e2054c51a4db9/README.md"
+    ],
+    "contact_email_note": "No published contact email found in the official pinned README.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[142], ordinal 143: Context Keeper, slug context-keeper, explicit repository locator and pinned Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/context-keeper.md",
+        "symbol": "Pinned attribution used only for curated identity and locator; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/context-keeper.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Public jarmstrong158/context-keeper; default branch main",
+        "url": "https://github.com/jarmstrong158/context-keeper"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Full current main head d08355a46548d5a20d9170d3271e2054c51a4db9; Atom feed updated 2026-08-06T17:09:21Z",
+        "url": "https://github.com/jarmstrong158/context-keeper/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream head",
+        "path": "commit",
+        "symbol": "d08355a46548d5a20d9170d3271e2054c51a4db9",
+        "url": "https://github.com/jarmstrong158/context-keeper/commit/d08355a46548d5a20d9170d3271e2054c51a4db9"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project purpose, MCP tools, storage, retrieval, scope, limitations and evaluation claims; checked for published email",
+        "url": "https://github.com/jarmstrong158/context-keeper/blob/d08355a46548d5a20d9170d3271e2054c51a4db9/README.md"
+      },
+      {
+        "id": "server",
+        "label": "MCP server implementation",
+        "path": "server.py",
+        "symbol": "Record, retrieve, query, update, deprecate, stale-review, export/import handlers and JSON persistence",
+        "url": "https://github.com/jarmstrong158/context-keeper/blob/d08355a46548d5a20d9170d3271e2054c51a4db9/server.py"
+      },
+      {
+        "id": "ranking",
+        "label": "Retrieval ranking implementation",
+        "path": "ranking.py",
+        "symbol": "Lexical/scope/recency/status/origin scoring and supersession weighting",
+        "url": "https://github.com/jarmstrong158/context-keeper/blob/d08355a46548d5a20d9170d3271e2054c51a4db9/ranking.py"
+      },
+      {
+        "id": "scope",
+        "label": "Shared scope rules",
+        "path": "scope_rules.py",
+        "symbol": "Path-scope semantics, coverage, overlap and Claude Code glob projection",
+        "url": "https://github.com/jarmstrong158/context-keeper/blob/d08355a46548d5a20d9170d3271e2054c51a4db9/scope_rules.py"
+      },
+      {
+        "id": "semantic",
+        "label": "Optional semantic index",
+        "path": "semantic_index.py",
+        "symbol": "Embedding request, cache, batching and lexical fallback behavior",
+        "url": "https://github.com/jarmstrong158/context-keeper/blob/d08355a46548d5a20d9170d3271e2054c51a4db9/semantic_index.py"
+      },
+      {
+        "id": "store",
+        "label": "Store paths and data layout",
+        "path": "store_paths.py",
+        "symbol": "Project-local JSON entry stores and configuration paths",
+        "url": "https://github.com/jarmstrong158/context-keeper/blob/d08355a46548d5a20d9170d3271e2054c51a4db9/store_paths.py"
+      },
+      {
+        "id": "hook",
+        "label": "Scoped constraint hook",
+        "path": "hooks/scope_guard.py",
+        "symbol": "PreToolUse scope matching and injection behavior",
+        "url": "https://github.com/jarmstrong158/context-keeper/blob/d08355a46548d5a20d9170d3271e2054c51a4db9/hooks/scope_guard.py"
+      },
+      {
+        "id": "usage",
+        "label": "Usage sidecar",
+        "path": "usage.py",
+        "symbol": "Best-effort injected/retrieved counters and unused-entry advisory",
+        "url": "https://github.com/jarmstrong158/context-keeper/blob/d08355a46548d5a20d9170d3271e2054c51a4db9/usage.py"
+      },
+      {
+        "id": "mirror",
+        "label": "Optional remote mirror",
+        "path": "mirror.py",
+        "symbol": "Newest-wins synchronization and no-delete propagation",
+        "url": "https://github.com/jarmstrong158/context-keeper/blob/d08355a46548d5a20d9170d3271e2054c51a4db9/mirror.py"
+      },
+      {
+        "id": "evals",
+        "label": "Upstream evaluation methodology",
+        "path": "evals/README.md",
+        "symbol": "Frozen corpus, retrieval/abstention results and declared limitations",
+        "url": "https://github.com/jarmstrong158/context-keeper/blob/d08355a46548d5a20d9170d3271e2054c51a4db9/evals/README.md"
+      },
+      {
+        "id": "project_metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned workload specification only; no Context Keeper run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "No benchmark result for this source review; status remains not_run",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The curated catalog lists ordinal 143 as Context Keeper, slug context-keeper, with the explicit locator https://github.com/jarmstrong158/context-keeper. Atlas is retained only for roster identity and locator attribution, not assessment evidence.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The public official repository page identifies main as the default branch. GitHub's main Atom feed reports full head d08355a46548d5a20d9170d3271e2054c51a4db9 with update time 2026-08-06T17:09:21Z; read-only git ls-remote and a shallow checkout independently resolved main to the same SHA.",
+        "sources": [
+          "repo",
+          "feed",
+          "head"
+        ]
+      },
+      {
+        "text": "The README describes an MCP server and Claude Code integration for structured project memory. Data is held in project-local JSON files; semantic retrieval is optional and the default implementation has no required runtime dependencies.",
+        "sources": [
+          "readme",
+          "store",
+          "semantic"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The stored units are typed decisions, pipelines, and constraints, with fields such as status, origin, scope, tags, timestamps, relationships, and type-specific rationale or ordered steps. The project describes `.context/*.json` as the canonical, human-editable store; project summary and Markdown/rules exports are derived projections.",
+        "sources": [
+          "readme",
+          "server",
+          "store"
+        ]
+      },
+      {
+        "text": "The stdlib Python MCP server exposes validated record, ranked context retrieval, deterministic structured queries, updates, deprecation, quality/staleness checks, snapshot import/export, and optional mirror operations. Claude Code hooks inject project context and constraints at session start and before writes to matching paths.",
+        "sources": [
+          "readme",
+          "server",
+          "hook"
+        ]
+      },
+      {
+        "text": "Writes use temporary files and `os.replace` for atomic JSON replacement, and write handlers refuse to overwrite an unreadable existing store. Optional semantic retrieval embeds query and entry text through Ollama or an OpenAI-compatible endpoint, batches cache misses, and caches vectors by entry text hash.",
+        "sources": [
+          "server",
+          "semantic"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: `record_entry` dispatches by decision, pipeline, or constraint kind; required fields are validated for minimum content, origin is normalized to user/agent/import, and similar-entry plus possible-supersession advisories are returned without blocking capture. Explicit supersedes links change earlier decisions to superseded.",
+        "sources": [
+          "readme",
+          "server"
+        ]
+      },
+      {
+        "text": "Update/correction: `update_entry` edits the stored entry in place, revalidates required fields, and refreshes timestamps/verification state. `deprecate_entry` records a reason and may merge a duplicate non-destructively into a survivor. These mutation paths do not themselves prove a correction is accurate or prevent all stale information from being recalled.",
+        "sources": [
+          "server",
+          "readme"
+        ]
+      },
+      {
+        "text": "Delete: no hard-delete MCP tool is exposed in the inspected tool set. Deprecation removes an entry from ordinary ranked retrieval but keeps its JSON record on disk; superseded entries are retained as history. README states that users may directly edit or delete the project-local JSON. The optional mirror is upsert/newest-wins and neither side propagates deletes.",
+        "sources": [
+          "server",
+          "readme",
+          "mirror"
+        ]
+      },
+      {
+        "text": "Retrieval: `get_context` ranks entries using tags and lexical overlap, scope, recency, lifecycle status, and origin; related entries and a compact predecessor explanation can be included subject to a token budget. A low-relevance result receives `no_confident_match` guidance, but weak matches are still returned. `query_entries` is a separate deterministic AND-combined filter over structured fields and does not rank.",
+        "sources": [
+          "server",
+          "ranking",
+          "readme"
+        ]
+      },
+      {
+        "text": "Scope: entries carry one scope string. Shared path-component rules are used by ranking, work-focus, scope hooks, and rules projection. File scopes match path tails, directory scopes match whole components below the directory, and `global`/`all`/`*` are domain labels rather than path coverage. Session start and Claude Code hooks provide the delivery boundary; this repository alone does not establish isolation between users or projects sharing a host.",
+        "sources": [
+          "scope",
+          "hook",
+          "server",
+          "readme"
+        ]
+      },
+      {
+        "text": "Provenance/evidence: entries store origin (`user`, `agent`, or `import`), created/updated/verified timestamps, and optional relationships, supersession, and source-like rationale fields. This is authored-entry metadata, not an enforced external source citation or immutable mutation audit; no claim-level evidence guarantee follows from it.",
+        "sources": [
+          "server",
+          "readme"
+        ]
+      },
+      {
+        "text": "Efficiency/observability: JSON files avoid a required database service; writes are atomic, summaries and retrieval are token-budgeted, and optional embedding requests are batched with cached vectors and lexical fallback. A best-effort usage sidecar counts injected and targeted retrievals; these counts inform an advisory and are not a direct usefulness measure. There is no telemetry or analytics by default, per the README.",
+        "sources": [
+          "server",
+          "semantic",
+          "usage",
+          "readme"
+        ]
+      },
+      {
+        "text": "The upstream evaluation README reports results on a frozen public-store corpus, but also documents missed history queries, false-positive abstention behavior, and embedding-arm availability pitfalls. Those are upstream-reported evaluations at the reviewed revision, not results from this project benchmark or a fresh run in this task.",
+        "sources": [
+          "evals",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "No project benchmark cases were run here. Upstream reports retrieval evaluations and explicitly documents limits; those do not measure this task's run.",
+        "sources": [
+          "evals",
+          "project_metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale retrieval",
+        "status": "unmeasured",
+        "evidence": "Update and supersession mechanisms are source-visible, but no correction probes or stale-value rate were measured.",
+        "sources": [
+          "server",
+          "project_metrics"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The inspected MCP lifecycle retains deprecated/superseded records and exposes no hard-delete tool; no residual-data probe was run.",
+        "sources": [
+          "server",
+          "mirror",
+          "project_metrics"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Path and session delivery rules are documented, but no cross-project or cross-user isolation workload was executed.",
+        "sources": [
+          "scope",
+          "hook",
+          "project_metrics"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Entry origin and rationale metadata exist; no answer-level evidence-support or citation-coverage adjudication was performed.",
+        "sources": [
+          "server",
+          "project_metrics"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No latency distribution was collected.",
+        "sources": [
+          "project_metrics"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timed write-then-correct-recall workload was run.",
+        "sources": [
+          "project_metrics"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No token or provider-cost accounting was performed.",
+        "sources": [
+          "project_metrics"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No corpus storage-size measurement was collected.",
+        "sources": [
+          "project_metrics"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a source-only review of selected README and current server, ranking, scope, semantic, store, hook, usage, and mirror files. It does not establish behavior across every MCP client, configuration, platform, external embedding service, or failure path.",
+        "sources": [
+          "readme",
+          "server",
+          "ranking",
+          "scope",
+          "semantic",
+          "hook",
+          "usage",
+          "mirror"
+        ]
+      },
+      {
+        "text": "The visible lifecycle does not expose hard deletion; the documented mirror also has no delete propagation. Deletion compliance across direct file removal, snapshots, embedding caches, or remote copies was not tested.",
+        "sources": [
+          "server",
+          "mirror",
+          "semantic"
+        ]
+      },
+      {
+        "text": "No Context Keeper runtime, tests, or benchmarks were run. Recall, abstention, correction, deletion, isolation, evidence support, latency, write-to-recall delay, tokens/cost, and storage remain unmeasured for this assessment.",
+        "sources": [
+          "project_metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "text": "The upstream evaluation documents that no-answer flagging can miss plausible in-domain negatives and that prior-state queries were not retrieved by its tested configuration. These are limitations reported by the upstream's own frozen evaluation, not new measurements.",
+        "sources": [
+          "evals"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Context Keeper runtime, tests, or benchmark execution was performed. Upstream evaluations and source observations are not project benchmark results."
+    }
+  }
+}

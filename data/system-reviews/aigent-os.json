@@ -1,0 +1,281 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "aigent-os",
+    "name": "aigent-OS",
+    "repository": "https://github.com/wrg32786/aigent-os",
+    "branch": "master",
+    "revision": "89157fba56b734b8e0a45b3e9d45966f07d11203",
+    "reviewed_at": "2026-11-24T19:58:22Z",
+    "review_timezone": "UTC (2026-11-24 11:58:22 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "aigent-OS is a local Claude Code harness with Git-backed Markdown memory, local semantic search, and managed context-refresh capsules. This bounded review combines official README documentation with a narrow current code-diff inspection; it is not a runtime or quality assessment.",
+    "atlas_locator": {
+      "ordinal": 42,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/aigent-os.md",
+      "listed_repository": "https://github.com/wrg32786/aigent-os"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/wrg32786/aigent-os",
+      "checked_sources": [
+        "https://github.com/wrg32786/aigent-os"
+      ],
+      "note": "The official README was checked for a published contact email; none was found in the checked source."
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical official repository",
+        "path": "repository",
+        "symbol": "wrg32786/aigent-os; public repository page",
+        "url": "https://github.com/wrg32786/aigent-os"
+      },
+      {
+        "id": "head",
+        "label": "Verified current head and branch",
+        "path": "commit",
+        "symbol": "master head 89157fba56b734b8e0a45b3e9d45966f07d11203; commit feed updated 2026-11-24T19:22:37Z",
+        "url": "https://github.com/wrg32786/aigent-os/commit/89157fba56b734b8e0a45b3e9d45966f07d11203"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "architecture, memory, retrieval, context refresh, scope, local behavior, limits, and contact check",
+        "url": "https://github.com/wrg32786/aigent-os/blob/89157fba56b734b8e0a45b3e9d45966f07d11203/README.md"
+      },
+      {
+        "id": "code-diff",
+        "label": "Current head code diff",
+        "path": "daemons/nightly-context-hygiene.mjs",
+        "symbol": "inspectSessionLog; BOM handling, capsule-line and dated-block parsing, retention and ordering validation",
+        "url": "https://github.com/wrg32786/aigent-os/commit/89157fba56b734b8e0a45b3e9d45966f07d11203"
+      },
+      {
+        "id": "code-test-diff",
+        "label": "Current head context-hygiene test diff",
+        "path": "daemons/tests/nightly-context-hygiene.test.mjs",
+        "symbol": "test cases introduced alongside the checker; not executed during this review",
+        "url": "https://github.com/wrg32786/aigent-os/commit/89157fba56b734b8e0a45b3e9d45966f07d11203"
+      },
+      {
+        "id": "atlas-entry",
+        "label": "Roster-provided Atlas attribution",
+        "path": "content/systems/aigent-os.md",
+        "symbol": "curated ordinal 42 and listed repository locator only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/aigent-os.md"
+      },
+      {
+        "id": "roster",
+        "label": "Curated memory-system roster entry",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 42 name, slug, listed locator and Atlas source attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "benchmark metric domains; no system run",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "execution-status",
+        "label": "Project benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "shared project execution status; no aigent-OS measurement",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned workload only; not run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes aigent-OS as an open-source MIT Claude Code harness that runs locally and manages context refresh, memory, hooks, and skills. No individual maintainer identity is established by the inspected sources.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README describes an event-hook and local-runner system around an Obsidian-compatible Markdown vault. Sessions read vault material at startup and write memory and capsules at checkpoints; described records include daily notes, decisions, open threads, and capsules.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The README describes three memory levels: a short napkin, an index, and deeper topic files. It reports heat-ranked notes and a staged digest above the full topic files. This is documentation evidence; underlying ranking and consolidation implementations were not inspected.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The current head diff exposes inspectSessionLog in daemons/nightly-context-hygiene.mjs. It removes a leading byte-order mark, recognizes one-line capsule entries and dated blocks, and reports malformed entries, retention count, and newest-first ordering. This is a code observation about session-log hygiene, not a runtime result.",
+        "sources": [
+          "code-diff",
+          "head"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The README documents checkpoint writes as Markdown memory and a resume capsule. At a completed capsule cycle, it says the harness commits the memory folder and pushes it when the install directory has a Git remote; behavior depends on user configuration and was not exercised.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The inspected documentation describes file-based edits and Git history for review and rollback, but no dedicated memory CRUD contract was located. Deletion effects on search indexes, backups, remotes, and optional providers remain unknown because the relevant code paths were not inspected.",
+        "sources": [
+          "readme",
+          "head"
+        ]
+      },
+      {
+        "text": "The README documents local semantic search over the vault using all-MiniLM-L6-v2, with model files downloaded on first use. It also describes validity-window notes ranking below current notes and heat-ranked summaries pointing to topic files. Search scoring, filtering, and deletion consistency were not verified in source code.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The documented Auto-Refresh sequence is threshold, capsule request, exact acknowledgement, one /clear, a fresh-session identity, and a resume prompt. The current code diff reviewed here covers session-log hygiene, not the full capsule transport or resume path.",
+        "sources": [
+          "readme",
+          "code-diff"
+        ]
+      },
+      {
+        "text": "The README says each seat has its own vault and confidential folders are excluded from search. The inspection did not establish whether all retrieval paths enforce those rules or whether they provide an authorization boundary.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The README describes Git-tracked Markdown as readable, diffable, and rollback-capable; it also says recalled memory is treated as data rather than instructions. A complete source-conversation-to-memory-to-answer provenance chain was not verified.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The official README was checked for a published contact email and none was found. No commit metadata, personal profile, third-party directory, or inferred address was used.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Documentation describes local ranked semantic retrieval, but no adjudicated answerable or unsupported probes were run.",
+        "sources": [
+          "readme",
+          "metrics",
+          "execution-status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Validity-window ranking is described, but no correction, stale-value, or precedence probe was measured.",
+        "sources": [
+          "readme",
+          "metrics",
+          "execution-status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No deletion workload or checks of index, backup, remote, and provider cleanup were performed.",
+        "sources": [
+          "readme",
+          "metrics",
+          "execution-status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Per-seat vaults and confidential-folder exclusions are documented, but authorization and cross-scope isolation were not tested.",
+        "sources": [
+          "readme",
+          "metrics",
+          "execution-status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Git history and capsule verification provide documented traceability mechanisms, but no evidence-support or citation adjudication was run.",
+        "sources": [
+          "readme",
+          "metrics",
+          "execution-status"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Local search and checkpoint mechanisms are documented; no timing observations were collected.",
+        "sources": [
+          "readme",
+          "metrics",
+          "execution-status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "No token, provider cost, model size, or storage measurements were collected for this workload.",
+        "sources": [
+          "readme",
+          "metrics",
+          "execution-status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded review of the official README, repository and commit metadata, and the current head's visible context-hygiene code diff. GitHub file-level source pages returned an outage page and the unauthenticated contents API was rate-limited, so core memory search, capture, capsule, scope, and purge implementations were not directly inspected.",
+        "sources": [
+          "repo",
+          "head",
+          "readme",
+          "code-diff"
+        ]
+      },
+      {
+        "text": "README descriptions of memory retrieval, isolation, Git sync, and capsule behavior are documentation claims. This review did not execute the system or independently verify runtime behavior.",
+        "sources": [
+          "readme",
+          "metrics",
+          "execution-status"
+        ]
+      },
+      {
+        "text": "The curated roster and Atlas entry were used solely to establish ordinal 42, name, slug, listed repository locator, and attribution. Their descriptive assessment content and capability marks were excluded.",
+        "sources": [
+          "roster",
+          "atlas-entry"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No aigent-OS runtime, benchmark workload, or tests were run. Source and README observations are not measured benchmark results.",
+      "metrics_url": "../METRICS.md",
+      "execution_status_url": "../results/initial-baselines-status.json",
+      "fixture_url": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

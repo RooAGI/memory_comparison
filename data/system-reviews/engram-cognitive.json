@@ -1,0 +1,323 @@
+{
+  "schema_version": 1,
+  "article": {
+    "ordinal": 224,
+    "slug": "engram-cognitive",
+    "name": "Engram Cognitive",
+    "repository": "https://github.com/TAIPANBOX/engram",
+    "branch": "main",
+    "revision": "08ee3bf5a9e50cf067f50221a8ac77c9adfa539e",
+    "reviewed_at": "2026-11-25T19:24:05Z",
+    "review_timezone": "America/Los_Angeles",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Engram Cognitive is a local-first Python memory library that stores episodic observations, extracted semantic facts, and graph relationships in one SQLite file, with optional vector, LLM, MCP, and event integrations.",
+    "atlas_locator": {
+      "ordinal": 224,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/engram-cognitive.md",
+      "listed_repository": "https://github.com/TAIPANBOX/engram"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/TAIPANBOX/engram/blob/08ee3bf5a9e50cf067f50221a8ac77c9adfa539e/SECURITY.md",
+      "note": "No contact email was published in the official pinned README or SECURITY.md, or on the official project website checked at https://it-rat.com/services/engram.html. The security policy directs reports to GitHub private security advisories."
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Current canonical GitHub repository",
+        "path": "repository page",
+        "symbol": "TAIPANBOX/engram; default branch main",
+        "url": "https://github.com/TAIPANBOX/engram"
+      },
+      {
+        "id": "history",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "current feed head 08ee3bf5a9e50cf067f50221a8ac77c9adfa539e; updated 2026-11-23T22:37:54Z",
+        "url": "https://github.com/TAIPANBOX/engram/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed full head commit",
+        "path": "commit page",
+        "symbol": "08ee3bf5a9e50cf067f50221a8ac77c9adfa539e",
+        "url": "https://github.com/TAIPANBOX/engram/commit/08ee3bf5a9e50cf067f50221a8ac77c9adfa539e"
+      },
+      {
+        "id": "readme",
+        "label": "README at reviewed revision",
+        "path": "README.md",
+        "url": "https://github.com/TAIPANBOX/engram/blob/08ee3bf5a9e50cf067f50221a8ac77c9adfa539e/README.md"
+      },
+      {
+        "id": "dataflow",
+        "label": "Data flow and SQLite architecture",
+        "path": "DATA_FLOW.md",
+        "url": "https://github.com/TAIPANBOX/engram/blob/08ee3bf5a9e50cf067f50221a8ac77c9adfa539e/DATA_FLOW.md"
+      },
+      {
+        "id": "api",
+        "label": "API reference",
+        "path": "docs/api-reference.md",
+        "url": "https://github.com/TAIPANBOX/engram/blob/08ee3bf5a9e50cf067f50221a8ac77c9adfa539e/docs/api-reference.md"
+      },
+      {
+        "id": "core",
+        "label": "Public Engram API and connection setup",
+        "path": "engram/core.py",
+        "symbol": "Engram, observe, reflect, forget, lifecycle APIs",
+        "url": "https://github.com/TAIPANBOX/engram/blob/08ee3bf5a9e50cf067f50221a8ac77c9adfa539e/engram/core.py"
+      },
+      {
+        "id": "store",
+        "label": "SQLite CRUD and indexes",
+        "path": "engram/store.py",
+        "symbol": "Store transactions, episode/fact storage, search",
+        "url": "https://github.com/TAIPANBOX/engram/blob/08ee3bf5a9e50cf067f50221a8ac77c9adfa539e/engram/store.py"
+      },
+      {
+        "id": "retrieval",
+        "label": "Recall implementation",
+        "path": "engram/retrieval.py",
+        "symbol": "hybrid, cosine and graph spreading dispatch; access tracking",
+        "url": "https://github.com/TAIPANBOX/engram/blob/08ee3bf5a9e50cf067f50221a8ac77c9adfa539e/engram/retrieval.py"
+      },
+      {
+        "id": "reflection",
+        "label": "Reflection implementation",
+        "path": "engram/reflection.py",
+        "symbol": "fact extraction, contradiction handling, decay and pruning",
+        "url": "https://github.com/TAIPANBOX/engram/blob/08ee3bf5a9e50cf067f50221a8ac77c9adfa539e/engram/reflection.py"
+      },
+      {
+        "id": "graph",
+        "label": "Spreading activation implementation",
+        "path": "engram/graph.py",
+        "url": "https://github.com/TAIPANBOX/engram/blob/08ee3bf5a9e50cf067f50221a8ac77c9adfa539e/engram/graph.py"
+      },
+      {
+        "id": "schema",
+        "label": "SQLite schema and vector index",
+        "path": "engram/schema.py",
+        "symbol": "episodes, facts, entities, edges; vec0 partitions; migrations",
+        "url": "https://github.com/TAIPANBOX/engram/blob/08ee3bf5a9e50cf067f50221a8ac77c9adfa539e/engram/schema.py"
+      },
+      {
+        "id": "events",
+        "label": "Agent Passport event exporter",
+        "path": "engram/events.py",
+        "symbol": "opt-in NDJSON event stream",
+        "url": "https://github.com/TAIPANBOX/engram/blob/08ee3bf5a9e50cf067f50221a8ac77c9adfa539e/engram/events.py"
+      },
+      {
+        "id": "mcp",
+        "label": "MCP server",
+        "path": "engram/mcp_server.py",
+        "symbol": "stdio tools, server identity scope and provenance handling",
+        "url": "https://github.com/TAIPANBOX/engram/blob/08ee3bf5a9e50cf067f50221a8ac77c9adfa539e/engram/mcp_server.py"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "url": "https://github.com/TAIPANBOX/engram/blob/08ee3bf5a9e50cf067f50221a8ac77c9adfa539e/SECURITY.md"
+      },
+      {
+        "id": "official-site",
+        "label": "Official project website",
+        "path": "https://it-rat.com/services/engram.html",
+        "symbol": "contact information check",
+        "url": "https://it-rat.com/services/engram.html"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "shared benchmark status; no Engram result produced by this review",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned workload only",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated roster identity and locator",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 224 and pinned Atlas attribution; not assessment evidence",
+        "url": "../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository describes Engram as an embeddable, local-first Python library distributed as a single SQLite-backed .engram file. The public entry point is the Engram class; the repository also includes a CLI, MCP server, and LangChain/LlamaIndex adapters.",
+        "sources": [
+          "readme",
+          "api",
+          "core"
+        ]
+      },
+      {
+        "text": "The README identifies TAIPANBOX as the project/repository owner. This review describes the public library and its integrations, not a hosted memory service.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The store separates raw episodic observations from semantic subject-predicate-object facts, entities, graph edges, reflection runs, and access records. Episode records include content, timestamps, actors/tags, salience, emotional value, agent scope, provenance, and quarantine state; facts retain validity and recorded-time fields, confidence, derivation, and agent/trust metadata.",
+        "sources": [
+          "dataflow",
+          "schema",
+          "api"
+        ]
+      },
+      {
+        "text": "A local embedder writes episode vectors to sqlite-vec; FTS5 supports keyword search. The schema puts agent_id as a vector partition key and timestamps in the index metadata so scope and as_of constraints apply during KNN search. SQLite WAL and synchronized store operations support concurrent reads/writes and serialize access to the shared connection.",
+        "sources": [
+          "schema",
+          "store",
+          "core"
+        ]
+      },
+      {
+        "text": "WorkingMemory is a bounded in-memory LRU scratchpad that can spill evicted values into episodic storage. Reflection is a separate slower path that asks a configured LLM adapter to extract facts and can update the entity graph, detect contradictions, and apply importance decay.",
+        "sources": [
+          "readme",
+          "dataflow",
+          "reflection",
+          "api"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: observe() stores an episode, computes a local embedding, and updates the full-text index without an LLM call. observe_many() batches embeddings and inserts in one transaction. Provenance defaults to external in the library API; records written before provenance support are returned as unknown.",
+        "sources": [
+          "api",
+          "core",
+          "schema"
+        ]
+      },
+      {
+        "text": "Fact writes can be made directly with assert_fact(), or derived later by reflect()/reflect_async(). Reflection uses the optional LLM adapter, records extraction runs and source episode links, and can close superseded facts rather than erase their history. refute_fact() closes a fact and marks derived facts as undermined while preserving records.",
+        "sources": [
+          "api",
+          "reflection",
+          "store"
+        ]
+      },
+      {
+        "text": "Deletion APIs include forgetting episodes, facts, or an entity and its connected data; compression can replace raw episodes with summaries. These operations have different retention effects: entity/fact/episode forgetting removes selected records, while compression intentionally removes compressed source episodes. This review did not establish erasure from backups or exported copies.",
+        "sources": [
+          "api",
+          "core",
+          "store"
+        ]
+      },
+      {
+        "text": "Recall offers cosine vector search, hybrid FTS5 plus cosine ranking, and graph spreading activation. It supports k, time filters, agent scoping, and cross-agent retrieval; returned results carry score and episode information and access is logged for importance reinforcement.",
+        "sources": [
+          "api",
+          "retrieval",
+          "store",
+          "graph"
+        ]
+      },
+      {
+        "text": "Library recall defaults to an unscoped search if no agent_id is supplied. MCP instead binds a server to its configured agent identity, refuses calls naming another agent, sets provenance itself, and can quarantine later writes after untrusted content is read. MCP uses stdio and intentionally does not expose reflection.",
+        "sources": [
+          "api",
+          "mcp",
+          "readme"
+        ]
+      },
+      {
+        "text": "Provenance and quarantine are returned with recall and why results. Facts retain derivation/source links and trust information; opt-in Agent Passport NDJSON events can record writes, forgets, reflection, and contradictions. Traceability does not itself prove that an answer claim is supported by a stored source.",
+        "sources": [
+          "readme",
+          "api",
+          "events",
+          "mcp"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention — unmeasured in this review. The code exposes cosine, hybrid, and graph retrieval, but no retrieval probes were run.",
+        "sources": [
+          "retrieval",
+          "graph",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Correction and stale-value behavior — unmeasured here. Bitemporal fields and refutation/supersession paths are present; no correction workload was run.",
+        "sources": [
+          "schema",
+          "reflection",
+          "api",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Deletion leakage and scope-isolation leakage — unmeasured. Delete APIs and indexed scope filters exist, but this review ran no deletion or cross-agent probes.",
+        "sources": [
+          "api",
+          "schema",
+          "mcp",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Evidence support and citation coverage — unmeasured. Source episode links, provenance, why(), and quarantine provide traceability signals; no generated answer was adjudicated against evidence.",
+        "sources": [
+          "api",
+          "events",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Latency, write-to-recall delay, tokens, cost, and storage efficiency — not measured by this review. Source and docs describe local embedding, hybrid indexing, batching, and optional LLM operations; none of their reported numbers are newly reproduced here.",
+        "sources": [
+          "core",
+          "store",
+          "api",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      "This is a bounded read-only source review of the current README, data-flow and API docs, and selected core/store/retrieval/reflection/schema/graph/MCP/event code. Other paths and edge cases were not exhaustively inspected.",
+      "The reviewed project uses a single local SQLite file and local/process integration model. Multi-agent filtering and MCP enforcement are code-level mechanisms; this review did not validate a deployed trust boundary.",
+      "Reflection and compression can use external LLM adapters; their behavior depends on configuration and provider output. LLM calls are outside the basic observe write path.",
+      "Library recall with no agent_id searches across agents by design, so callers must supply scope when isolation is required. MCP adds a server identity boundary, but no penetration or leakage workload was run.",
+      "No Engram runtime, tests, or benchmarks were executed. Correctness, quality, performance, complete physical erasure, and cost remain unverified in this review."
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Engram Cognitive runtime, tests, or benchmark workload was executed. Source and documentation observations are not measurements produced by this review.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

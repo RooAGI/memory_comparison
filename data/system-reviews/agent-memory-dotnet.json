@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "agent-memory-dotnet",
+    "name": "AgentMemory for .NET",
+    "repository": "https://github.com/joslat/agent-memory-dotnet",
+    "branch": "main",
+    "revision": "53f4cf8030fb53a33da9da0c1544f911511eaa0f",
+    "reviewed_at": "2026-11-24T19:02:32Z",
+    "review_timezone": "UTC (2026-11-24 11:02:32 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "AgentMemory for .NET is an independent Neo4j-backed .NET memory framework. It stores conversation history, structured long-term knowledge, and reasoning traces, then assembles scoped, time-aware context for agent frameworks and direct callers.",
+    "atlas_locator": {
+      "ordinal": 23,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agent-memory-dotnet.md",
+      "listed_repository": "https://github.com/joslat/agent-memory-dotnet"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/joslat/agent-memory-dotnet/blob/53f4cf8030fb53a33da9da0c1544f911511eaa0f/SECURITY.md",
+      "note": "No published contact email found in the checked official repository SECURITY.md or README. Vulnerability reports are directed to GitHub private vulnerability reporting."
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Current canonical GitHub repository",
+        "path": "repository page",
+        "symbol": "joslat/agent-memory-dotnet; default branch main",
+        "url": "https://github.com/joslat/agent-memory-dotnet"
+      },
+      {
+        "id": "history",
+        "label": "Current main branch history",
+        "path": "commits/main.atom",
+        "symbol": "main head 53f4cf8030fb53a33da9da0c1544f911511eaa0f",
+        "url": "https://github.com/joslat/agent-memory-dotnet/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified full-SHA head commit",
+        "path": "commit",
+        "symbol": "current main head 53f4cf8030fb53a33da9da0c1544f911511eaa0f",
+        "url": "https://github.com/joslat/agent-memory-dotnet/commit/53f4cf8030fb53a33da9da0c1544f911511eaa0f"
+      },
+      {
+        "id": "readme",
+        "label": "Official project README",
+        "path": "README.md",
+        "symbol": "product model, memory governance, limits, integration and operating posture",
+        "url": "https://github.com/joslat/agent-memory-dotnet/blob/53f4cf8030fb53a33da9da0c1544f911511eaa0f/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Architecture documentation",
+        "path": "docs/architecture.md",
+        "symbol": "package boundaries, data model, retrieval and service architecture",
+        "url": "https://github.com/joslat/agent-memory-dotnet/blob/53f4cf8030fb53a33da9da0c1544f911511eaa0f/docs/architecture.md"
+      },
+      {
+        "id": "memory-map",
+        "label": "Memory Map documentation",
+        "path": "docs/memory-map.md",
+        "symbol": "built/wired/measured distinctions, scope and documented capability limits",
+        "url": "https://github.com/joslat/agent-memory-dotnet/blob/53f4cf8030fb53a33da9da0c1544f911511eaa0f/docs/memory-map.md"
+      },
+      {
+        "id": "time-model",
+        "label": "Time model documentation",
+        "path": "docs/time-model.md",
+        "symbol": "valid-time and transaction-time behavior and limitations",
+        "url": "https://github.com/joslat/agent-memory-dotnet/blob/53f4cf8030fb53a33da9da0c1544f911511eaa0f/docs/time-model.md"
+      },
+      {
+        "id": "observability",
+        "label": "Observability documentation",
+        "path": "docs/observability.md",
+        "symbol": "OpenTelemetry spans, privacy, query timing and metric signals",
+        "url": "https://github.com/joslat/agent-memory-dotnet/blob/53f4cf8030fb53a33da9da0c1544f911511eaa0f/docs/observability.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "private vulnerability reporting; checked for published contact email",
+        "url": "https://github.com/joslat/agent-memory-dotnet/blob/53f4cf8030fb53a33da9da0c1544f911511eaa0f/SECURITY.md"
+      },
+      {
+        "id": "memory-service",
+        "label": "MemoryService implementation",
+        "path": "src/AgentMemory.Core/Services/MemoryService.cs",
+        "symbol": "recall routing, assembly and access tracking",
+        "url": "https://github.com/joslat/agent-memory-dotnet/blob/53f4cf8030fb53a33da9da0c1544f911511eaa0f/src/AgentMemory.Core/Services/MemoryService.cs"
+      },
+      {
+        "id": "longterm-service",
+        "label": "LongTermMemoryService implementation",
+        "path": "src/AgentMemory.Core/Services/LongTermMemoryService.cs",
+        "symbol": "long-term retrieval, owner scope and shared recall budget",
+        "url": "https://github.com/joslat/agent-memory-dotnet/blob/53f4cf8030fb53a33da9da0c1544f911511eaa0f/src/AgentMemory.Core/Services/LongTermMemoryService.cs"
+      },
+      {
+        "id": "fact-repository",
+        "label": "Neo4j fact repository",
+        "path": "src/AgentMemory.Neo4j/Repositories/Neo4jFactRepository.cs",
+        "symbol": "fact upsert, canonical keys, owner key, source message IDs and vector retrieval",
+        "url": "https://github.com/joslat/agent-memory-dotnet/blob/53f4cf8030fb53a33da9da0c1544f911511eaa0f/src/AgentMemory.Neo4j/Repositories/Neo4jFactRepository.cs"
+      },
+      {
+        "id": "isolation-policy",
+        "label": "Default memory isolation policy",
+        "path": "src/AgentMemory.Core/Services/DefaultMemoryIsolationPolicy.cs",
+        "symbol": "single-tenant, warning and strict multi-tenant scope behavior",
+        "url": "https://github.com/joslat/agent-memory-dotnet/blob/53f4cf8030fb53a33da9da0c1544f911511eaa0f/src/AgentMemory.Core/Services/DefaultMemoryIsolationPolicy.cs"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog entry and attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 23 identity, listed repository locator, and pinned catalog source attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "shared not_run status; no AgentMemory for .NET measurements",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned workload only; not executed in this review",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The public repository is maintained by its author and identifies José Luis Latorre Millas as the author of its research paper. README describes an independent open-source .NET framework backed by Neo4j, with Microsoft Agent Framework, Semantic Kernel, direct .NET, and MCP integrations. This review covers the public repository, not a hosted service.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The architecture separates framework-independent abstractions and core orchestration from Neo4j infrastructure, with adapters for Microsoft Agent Framework, Semantic Kernel, MCP, and GraphRAG-related context. The core coordinates extraction, embedding, resolution, recall assembly, and formatting; the Neo4j package owns repositories, Cypher, schema and transactions.",
+        "sources": [
+          "architecture",
+          "readme"
+        ]
+      },
+      {
+        "text": "The public model has short-term conversation/message memory; long-term entities, facts, preferences, and relationships; and reasoning traces, steps, and tool calls. Neo4j stores these as graph nodes and relationships, with vector/full-text indexes supporting retrieval. A fact has subject, predicate, object, owner, timestamps, optional valid-time values, metadata, and source message IDs; a canonical composite key includes its owner bucket.",
+        "sources": [
+          "architecture",
+          "readme",
+          "fact-repository"
+        ]
+      },
+      {
+        "text": "The current canonical repository is joslat/agent-memory-dotnet. GitHub identifies main as the default branch; the official main Atom feed resolves the current full head to 53f4cf8030fb53a33da9da0c1544f911511eaa0f. Reviewed 2026-11-24 19:02:32 UTC (11:02:32 PST; America/Los_Angeles).",
+        "sources": [
+          "repo",
+          "history",
+          "head"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Writes can persist messages directly and can extract entities, facts, preferences, and relationships from turns. The fact repository upserts on canonical subject/predicate/object plus owner key and preserves display values and source message IDs. Extraction can be best-effort per item or fail-fast; the public Memory Map says partial item failures remain visible in ingestion outcomes.",
+        "sources": [
+          "readme",
+          "architecture",
+          "fact-repository",
+          "memory-map"
+        ]
+      },
+      {
+        "text": "Changes are generally represented through supersession/invalidation with transaction-time history rather than deleting the old fact. The README describes soft invalidation by default and hard deletion as opt-in. Bitemporal change recording is configurable; the documented default leaves it off. The reviewed material does not establish end-to-end hard-erasure coverage across every memory type, audit record, and derived/indexed copy.",
+        "sources": [
+          "readme",
+          "time-model",
+          "memory-map"
+        ]
+      },
+      {
+        "text": "Recall uses an embedding and configurable retrieval paths, then assembles and formats sections under per-section and context budgets. The code includes vector search, optional predicate expansion, routing, shared-memory budget splitting, temporal/as-of paths, and access tracking. Query-time vector retrieval and context assembly are source-observed design behavior, not a recall-quality result.",
+        "sources": [
+          "memory-service",
+          "longterm-service",
+          "architecture",
+          "memory-map"
+        ]
+      },
+      {
+        "text": "Owner scoping is carried through long-term repositories and recall. The default isolation mode preserves backward-compatible global behavior when no owner is supplied; WarnOnUnscoped logs a content-free warning, and StrictMultiTenant rejects unscoped tenant operations. The README calls out a short-term exception: Message nodes have no owner_id, and a session ID acts as a capability for direct message reads by handle; treat those IDs as secrets.",
+        "sources": [
+          "isolation-policy",
+          "readme",
+          "memory-map"
+        ]
+      },
+      {
+        "text": "Facts, entities, and preferences can be linked to source messages through EXTRACTED_FROM relationships/source_message_ids. The README describes provenance edges for source messages and extractor identity; the Memory Map cautions that EXTRACTED_BY has no production caller in the inspected default path and span-level provenance inputs are not populated there. Provenance indicates origin; it does not itself adjudicate whether a generated answer is supported by evidence.",
+        "sources": [
+          "readme",
+          "memory-map",
+          "fact-repository"
+        ]
+      },
+      {
+        "text": "The observability guide documents an OpenTelemetry ActivitySource, recall/ingestion/compose spans, retrieval counts, embedding-cache counts, extraction outcomes and token attributes, Neo4j query fingerprints, server timings, rows and retries. It deliberately excludes message text, memory content, prompts, Cypher text, and owner/application identifiers from span attributes. Telemetry requires a listener/exporter.",
+        "sources": [
+          "observability",
+          "memory-service",
+          "architecture"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention — unmeasured in this review. The source describes vector/hybrid/graph retrieval and context assembly, but no retrieval or abstention probes were run.",
+        "sources": [
+          "memory-service",
+          "longterm-service",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured. The time model documents supersession and bitemporal history, but this review did not run correction probes or adjudicate returned answers.",
+        "sources": [
+          "time-model",
+          "fact-repository",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Deletion leakage — unmeasured. Soft invalidation is the documented default and hard deletion is opt-in; no post-deletion retrieval or erasure workload was run.",
+        "sources": [
+          "readme",
+          "time-model",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Scope-isolation leakage — unmeasured. The code exposes strict isolation behavior, but no cross-owner benchmark probes were executed. Short-term by-handle reads are a documented capability exception.",
+        "sources": [
+          "isolation-policy",
+          "readme",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Evidence support and citation coverage — unmeasured. Source-message provenance is available for some stored records, but no generated answer claims were scored against cited evidence.",
+        "sources": [
+          "fact-repository",
+          "memory-map",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Latency and write-to-recall delay — unmeasured by this review. Observability exposes query and operation timing signals, but the system and benchmark workload were not run.",
+        "sources": [
+          "observability",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Tokens, cost and storage efficiency — unmeasured by this review. Telemetry can carry model-call token usage when provider instrumentation is enabled; no corpus-attributed storage, token, or cost totals were collected.",
+        "sources": [
+          "observability",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency and observability — available in code and documentation. The implementation supports embedding-cache counts, query fingerprints, database server timings, transaction retry counts, read tracking, context budgets, and optional omission of embeddings from recall projections. These are instrumentation/configuration surfaces, not measurements made for this task.",
+        "sources": [
+          "observability",
+          "fact-repository",
+          "memory-service"
+        ]
+      }
+    ],
+    "limits": [
+      "This is a bounded read-only review of the pinned README, selected architecture/security/time/observability docs, and current core/Neo4j source paths. Other adapters, extension modules, operations, and all edge cases were not exhaustively traced.",
+      "The review did not execute AgentMemory, tests, or benchmark workloads. It does not establish runtime correctness, answer quality, tenant isolation in deployment, complete physical erasure, latency, token use, cost, storage efficiency, or behavior against a live Neo4j instance.",
+      "Unscoped global behavior is intentionally retained for compatibility, and direct short-term message reads by session handle rely on possession of the session ID. Hosts must establish owner scope and protect session identifiers.",
+      "Valid-time live filtering and bitemporal change recording have configuration-dependent defaults. The time-model document says ordinary live recall ignores valid time unless configured; preferences/entities and relationship edges have different temporal coverage.",
+      "The README describes this as early-stage, actively developed software without an SLA or support contract; the author maintains it on a best-effort basis."
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No AgentMemory for .NET system, tests, or benchmark workload was executed. Source and documentation observations are not measurements, and no metric values were produced.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

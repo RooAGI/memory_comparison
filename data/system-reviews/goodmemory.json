@@ -1,0 +1,422 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 266,
+    "slug": "goodmemory",
+    "name": "GoodMemory",
+    "repository": "https://github.com/hjqcan/GoodMemory",
+    "listed_repository": "https://github.com/hjqcan/GoodMemory",
+    "branch": "main",
+    "revision": "c7d8060036010762512c292b84f1d23b86ba2787",
+    "reviewed_at": "2026-11-25T21:21:54Z",
+    "review_timezone": "UTC (checked 2026-11-25 13:21:54 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "GoodMemory is a TypeScript memory library whose scoped remember, recall, context assembly, correction, and deletion flows are backed by storage adapters. Bun defaults to durable SQLite, while Node without a configured durable adapter falls back to in-memory storage.",
+    "atlas_locator": {
+      "ordinal": 266,
+      "name": "GoodMemory",
+      "slug": "goodmemory",
+      "listed_repository": "https://github.com/hjqcan/GoodMemory",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/goodmemory.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/hjqcan/GoodMemory/blob/c7d8060036010762512c292b84f1d23b86ba2787/README.md",
+      "checked_urls": [
+        "https://github.com/hjqcan/GoodMemory/blob/c7d8060036010762512c292b84f1d23b86ba2787/README.md"
+      ],
+      "note": "The official pinned README was checked and publishes no contact email. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/hjqcan/GoodMemory/blob/c7d8060036010762512c292b84f1d23b86ba2787/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/hjqcan/GoodMemory/blob/c7d8060036010762512c292b84f1d23b86ba2787/README.md"
+    ],
+    "contact_email_note": "Official pinned README checked; no contact email was published.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[265], ordinal 266; GoodMemory identity, slug, listed repository locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/goodmemory.md",
+        "symbol": "Pinned roster attribution for identity and locator context only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/goodmemory.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "Canonical repository and default branch main",
+        "url": "https://github.com/hjqcan/GoodMemory"
+      },
+      {
+        "id": "head",
+        "label": "Official current main head",
+        "path": "GitHub commits API",
+        "symbol": "Current main head c7d8060036010762512c292b84f1d23b86ba2787; commit timestamp 2026-10-20T03:50:03Z",
+        "url": "https://api.github.com/repos/hjqcan/GoodMemory/commits/main"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project identity, public APIs, storage defaults, retrieval configuration, integration/security ownership, and benchmark-claim status",
+        "url": "https://github.com/hjqcan/GoodMemory/blob/c7d8060036010762512c292b84f1d23b86ba2787/README.md"
+      },
+      {
+        "id": "recall-architecture",
+        "label": "Pinned recall-selection architecture",
+        "path": "docs/GoodMemory-Recall-Selection-Architecture.md",
+        "symbol": "Current production selection path, generalized fusion, bounded selection, and legacy evaluation boundary",
+        "url": "https://github.com/hjqcan/GoodMemory/blob/c7d8060036010762512c292b84f1d23b86ba2787/docs/GoodMemory-Recall-Selection-Architecture.md"
+      },
+      {
+        "id": "domain-records",
+        "label": "Memory record types",
+        "path": "src/domain/records.ts",
+        "symbol": "Fact, preference, feedback and note models; lifecycle and temporal validity",
+        "url": "https://github.com/hjqcan/GoodMemory/blob/c7d8060036010762512c292b84f1d23b86ba2787/src/domain/records.ts"
+      },
+      {
+        "id": "scope",
+        "label": "Scope identity helpers",
+        "path": "src/domain/scope.ts",
+        "symbol": "Five-part normalized scope, encoded identity key, prefixes and durable-scope comparison",
+        "url": "https://github.com/hjqcan/GoodMemory/blob/c7d8060036010762512c292b84f1d23b86ba2787/src/domain/scope.ts"
+      },
+      {
+        "id": "provenance",
+        "label": "Memory provenance model",
+        "path": "src/domain/provenance.ts",
+        "symbol": "Source method and timestamp; lifecycle state transitions",
+        "url": "https://github.com/hjqcan/GoodMemory/blob/c7d8060036010762512c292b84f1d23b86ba2787/src/domain/provenance.ts"
+      },
+      {
+        "id": "remember",
+        "label": "Remember engine",
+        "path": "src/remember/engine.ts",
+        "symbol": "Extraction and write pipeline composition",
+        "url": "https://github.com/hjqcan/GoodMemory/blob/c7d8060036010762512c292b84f1d23b86ba2787/src/remember/engine.ts"
+      },
+      {
+        "id": "write-pipeline",
+        "label": "Remember write pipeline",
+        "path": "src/remember/writePipeline.ts",
+        "symbol": "Candidate extraction, redaction and masking, coordinated document writes, embedding/projection commits, rollback and write outcome",
+        "url": "https://github.com/hjqcan/GoodMemory/blob/c7d8060036010762512c292b84f1d23b86ba2787/src/remember/writePipeline.ts"
+      },
+      {
+        "id": "memory-store",
+        "label": "In-memory document and vector stores",
+        "path": "src/storage/memory.ts",
+        "symbol": "Document CRUD and vector search adapter contracts",
+        "url": "https://github.com/hjqcan/GoodMemory/blob/c7d8060036010762512c292b84f1d23b86ba2787/src/storage/memory.ts"
+      },
+      {
+        "id": "sqlite-store",
+        "label": "SQLite storage adapter",
+        "path": "src/storage/sqlite.ts",
+        "symbol": "SQLite-backed document/session/vector operations and optional accelerated vector search",
+        "url": "https://github.com/hjqcan/GoodMemory/blob/c7d8060036010762512c292b84f1d23b86ba2787/src/storage/sqlite.ts"
+      },
+      {
+        "id": "recall-engine",
+        "label": "Recall engine",
+        "path": "src/recall/engine.ts",
+        "symbol": "Public recall engine delegates to the retrieval pipeline",
+        "url": "https://github.com/hjqcan/GoodMemory/blob/c7d8060036010762512c292b84f1d23b86ba2787/src/recall/engine.ts"
+      },
+      {
+        "id": "retrieval-pipeline",
+        "label": "Retrieval pipeline",
+        "path": "src/recall/retrievalPipeline.ts",
+        "symbol": "Query planning, retrieval context, fusion path, recall assembly and fallback",
+        "url": "https://github.com/hjqcan/GoodMemory/blob/c7d8060036010762512c292b84f1d23b86ba2787/src/recall/retrievalPipeline.ts"
+      },
+      {
+        "id": "retrieval-trace",
+        "label": "Retrieval trace schema",
+        "path": "src/recall/retrievalTrace.ts",
+        "symbol": "Fusion candidate channels, ranks, scores, fallback state, reranker model/provider and latency trace fields",
+        "url": "https://github.com/hjqcan/GoodMemory/blob/c7d8060036010762512c292b84f1d23b86ba2787/src/recall/retrievalTrace.ts"
+      },
+      {
+        "id": "evidence",
+        "label": "Recall evidence selection",
+        "path": "src/recall/evidence.ts",
+        "symbol": "Scope-matched evidence linking and bounded evidence selection for recall hits",
+        "url": "https://github.com/hjqcan/GoodMemory/blob/c7d8060036010762512c292b84f1d23b86ba2787/src/recall/evidence.ts"
+      },
+      {
+        "id": "evidence-ledger",
+        "label": "Evidence ledger",
+        "path": "src/recall/evidenceLedger.ts",
+        "symbol": "Evidence-to-claim links and current/superseded/uncertain temporal status and support/contradiction/context relation",
+        "url": "https://github.com/hjqcan/GoodMemory/blob/c7d8060036010762512c292b84f1d23b86ba2787/src/recall/evidenceLedger.ts"
+      },
+      {
+        "id": "admin",
+        "label": "Memory admin operations",
+        "path": "src/api/memoryAdminOps.ts",
+        "symbol": "Scope-filtered forget/delete operations and deletion trace attributes",
+        "url": "https://github.com/hjqcan/GoodMemory/blob/c7d8060036010762512c292b84f1d23b86ba2787/src/api/memoryAdminOps.ts"
+      },
+      {
+        "id": "revision",
+        "label": "Memory revision service",
+        "path": "src/api/revision.ts",
+        "symbol": "Targeted scoped revision with evidence metadata, idempotency, and supersession",
+        "url": "https://github.com/hjqcan/GoodMemory/blob/c7d8060036010762512c292b84f1d23b86ba2787/src/api/revision.ts"
+      },
+      {
+        "id": "scope-deletion",
+        "label": "Scope deletion coordination",
+        "path": "src/storage/scopeDeletion.ts",
+        "symbol": "Scope-overlap mutation/deletion coordination and persistent deletion locks",
+        "url": "https://github.com/hjqcan/GoodMemory/blob/c7d8060036010762512c292b84f1d23b86ba2787/src/storage/scopeDeletion.ts"
+      },
+      {
+        "id": "tracer",
+        "label": "Observability tracer",
+        "path": "src/observability/tracer.ts",
+        "symbol": "Optional trace sink, lifecycle statuses, attributes, trace IDs and HMAC scope digests",
+        "url": "https://github.com/hjqcan/GoodMemory/blob/c7d8060036010762512c292b84f1d23b86ba2787/src/observability/tracer.ts"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Metric domains and run protocol",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned fixture contract; no GoodMemory result",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project run status; not a GoodMemory measurement",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository describes GoodMemory as a TypeScript memory layer for AI products and coding agents, with application, AI SDK, host, HTTP, and CLI integrations. Authentication and product authorization remain the integrating application's responsibility.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Typed records include facts, preferences, feedback, references, notes, episodes, profiles, and runtime continuity state. Records carry user scope and can include source method, extraction time, confidence, lifecycle, and temporal validity metadata.",
+        "sources": [
+          "domain-records",
+          "provenance"
+        ]
+      },
+      {
+        "text": "Storage is abstracted behind document, session, and vector interfaces. The repository contains in-memory and SQLite implementations; the README also documents Postgres and injected adapters. Bun defaults to SQLite, while unsupported Node zero-config environments use memory storage.",
+        "sources": [
+          "memory-store",
+          "sqlite-store",
+          "readme"
+        ]
+      },
+      {
+        "text": "The current recall path plans a query, retrieves candidates, applies bounded generalized selection when configured, assembles a result, and can attach evidence and trace data. Historical fitted selectors are documented as repository-only evaluation machinery rather than the production default.",
+        "sources": [
+          "recall-engine",
+          "retrieval-pipeline",
+          "recall-architecture",
+          "evidence"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "remember composes extraction and write pipelines, applies redaction and persistence masking, coordinates document writes with rollback, then commits embeddings and optional claim projections. A result distinguishes committed, failed, and no-admissible-candidate outcomes.",
+        "sources": [
+          "remember",
+          "write-pipeline"
+        ]
+      },
+      {
+        "text": "The public README exposes feedback and targeted reviseMemory for correction. The revision service checks a scoped target and idempotency digest, conditionally writes a successor with the prior-target snapshot and evidence record, and can return a vector_write_failed warning after durable commit.",
+        "sources": [
+          "readme",
+          "revision",
+          "provenance"
+        ]
+      },
+      {
+        "text": "forget and deleteAllMemory are public operations. Admin deletion filters records against the requested scope and deletes scoped document records; omitted optional scope keys are wildcards. The deletion coordinator gates overlapping mutations and delete operations.",
+        "sources": [
+          "readme",
+          "admin",
+          "scope-deletion"
+        ]
+      },
+      {
+        "text": "Recall defaults to rules-only unless the optional recommended preset is enabled. That preset can fuse BM25, entity adjacency, and available dense candidates with reciprocal-rank fusion; optional reranking and multi-hop add configured work. Selection budgets cap candidate and fact counts.",
+        "sources": [
+          "readme",
+          "recall-architecture",
+          "retrieval-pipeline"
+        ]
+      },
+      {
+        "text": "Recall evidence is linked to memory or archive IDs and filtered by complete scope. The evidence ledger can attach excerpts to claims and classify temporal status and relation; these are lineage annotations rather than independent truth adjudication.",
+        "sources": [
+          "evidence",
+          "evidence-ledger",
+          "provenance"
+        ]
+      },
+      {
+        "text": "Tracing is optional through a supplied sink. Spans represent operation status and HMAC-digested scope identifiers; retrieval traces can capture channels, scores, fallbacks, and reranker latency/status.",
+        "sources": [
+          "tracer",
+          "retrieval-trace"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Recall and selection paths were inspected; no answer set was scored.",
+        "sources": [
+          "recall-engine",
+          "recall-architecture",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction and stale values",
+        "status": "unmeasured",
+        "evidence": "Scoped revision and lifecycle code were inspected; no correction probes were run.",
+        "sources": [
+          "revision",
+          "provenance",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Scope deletion and forget paths were inspected; no post-delete probes were run.",
+        "sources": [
+          "admin",
+          "scope-deletion",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Five-part scope encoding and scope-aware evidence selection were inspected; no cross-scope workload was run.",
+        "sources": [
+          "scope",
+          "evidence",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source/evidence links and ledger classifications were inspected; no response claims were adjudicated.",
+        "sources": [
+          "provenance",
+          "evidence",
+          "evidence-ledger",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Bounded retrieval and trace fields exist; no runtime timings were collected.",
+        "sources": [
+          "retrieval-pipeline",
+          "retrieval-trace",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "Provider-dependent paths are documented; no token usage or charges were measured.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "SQLite and adapter paths were inspected; no corpus-attributable byte count was collected.",
+        "sources": [
+          "sqlite-store",
+          "memory-store",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review is pinned source inspection, not an operational, security, or quality audit. It cannot establish end-to-end correctness, provider availability, hostile-caller isolation, deletion from backups or external stores, measured quality, or resource use.",
+        "sources": [
+          "head",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "text": "Durability depends on storage selection: Bun defaults to local SQLite while Node without a durable adapter falls back to in-memory. Rules-only recall is the default; dense retrieval and provider reranking require configuration.",
+        "sources": [
+          "readme",
+          "sqlite-store",
+          "retrieval-pipeline"
+        ]
+      },
+      {
+        "text": "The scope model and evidence annotations demonstrate intended boundaries, but this review did not test whether each adapter and host integration enforces them identically. The integrating application owns authentication and product authorization.",
+        "sources": [
+          "scope",
+          "evidence",
+          "readme"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No GoodMemory runtime, tests, or benchmarks were run in this review. Source observations and upstream documentation statements are not measured results."
+    }
+  }
+}

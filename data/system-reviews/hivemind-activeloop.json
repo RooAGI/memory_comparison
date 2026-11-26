@@ -1,0 +1,407 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 301,
+    "slug": "hivemind-activeloop",
+    "name": "Hivemind (Activeloop)",
+    "repository": "https://github.com/activeloopai/hivemind",
+    "listed_repository": "https://github.com/activeloopai/hivemind",
+    "branch": "main",
+    "revision": "438796a1f243f075a45cf5ca5f0c19d8cb72432f",
+    "reviewed_at": "2026-11-25T23:13:55Z",
+    "review_timezone": "UTC (checked 2026-11-25 15:13:55 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Hivemind is a multi-agent memory and trace-sharing system built around Activeloop Deeplake workspaces. It captures structured agent events, creates session summaries, mines reusable skills, and exposes the data through a virtual filesystem and retrieval hooks. This assessment describes pinned public source and documentation; it does not establish runtime quality or isolation.",
+    "atlas_locator": {
+      "ordinal": 301,
+      "name": "Hivemind (Activeloop)",
+      "slug": "hivemind-activeloop",
+      "listed_repository": "https://github.com/activeloopai/hivemind",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hivemind-activeloop.md",
+      "revision": "ce30de7ca94115cb73fa991538c6d2595ac2622a"
+    },
+    "contact": {
+      "email": "hello@activeloop.ai",
+      "source_url": "https://github.com/activeloopai/hivemind/blob/438796a1f243f075a45cf5ca5f0c19d8cb72432f/README.md",
+      "checked_urls": [
+        "https://github.com/activeloopai/hivemind/blob/438796a1f243f075a45cf5ca5f0c19d8cb72432f/README.md"
+      ],
+      "note": "The official pinned README publishes hello@activeloop.ai as a contact for teams running coding agents. No commit/profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": "hello@activeloop.ai",
+    "contact_email_source_url": "https://github.com/activeloopai/hivemind/blob/438796a1f243f075a45cf5ca5f0c19d8cb72432f/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/activeloopai/hivemind/blob/438796a1f243f075a45cf5ca5f0c19d8cb72432f/README.md"
+    ],
+    "contact_email_note": "The official pinned README publishes hello@activeloop.ai as a contact for teams running coding agents.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[300], ordinal 301; curated name, slug, explicit listed repository locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/hivemind-activeloop.md",
+        "symbol": "Pinned attribution for curated identity and locator only; not used as assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hivemind-activeloop.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "GitHub repository page",
+        "symbol": "Canonical repository activeloopai/hivemind; page identifies default branch main",
+        "url": "https://github.com/activeloopai/hivemind"
+      },
+      {
+        "id": "head",
+        "label": "Official current branch commit",
+        "path": "GitHub commits API",
+        "symbol": "Official main head 438796a1f243f075a45cf5ca5f0c19d8cb72432f; commit timestamp 2026-11-11T13:39:07Z; independently matched by fresh git ls-remote and shallow checkout",
+        "url": "https://api.github.com/repos/activeloopai/hivemind/commits/main"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project purpose, captured data, integration surfaces, workspace sharing and official published contact address",
+        "url": "https://github.com/activeloopai/hivemind/blob/438796a1f243f075a45cf5ca5f0c19d8cb72432f/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Pinned architecture guide",
+        "path": "docs/ARCHITECTURE.md",
+        "symbol": "Shared core, agent adapters, and package/module layout",
+        "url": "https://github.com/activeloopai/hivemind/blob/438796a1f243f075a45cf5ca5f0c19d8cb72432f/docs/ARCHITECTURE.md"
+      },
+      {
+        "id": "schema",
+        "label": "Pinned Deeplake schema",
+        "path": "src/deeplake-schema.ts",
+        "symbol": "Memory, raw session-event and versioned skill table column definitions",
+        "url": "https://github.com/activeloopai/hivemind/blob/438796a1f243f075a45cf5ca5f0c19d8cb72432f/src/deeplake-schema.ts"
+      },
+      {
+        "id": "capture",
+        "label": "Pinned capture implementation",
+        "path": "src/hooks/capture.ts",
+        "symbol": "Event capture, secret redaction, optional embedding, and session row write",
+        "url": "https://github.com/activeloopai/hivemind/blob/438796a1f243f075a45cf5ca5f0c19d8cb72432f/src/hooks/capture.ts"
+      },
+      {
+        "id": "insert",
+        "label": "Pinned session insert builder",
+        "path": "src/hooks/shared/session-insert-sql.ts",
+        "symbol": "Idempotent event insertion keyed by stable event id",
+        "url": "https://github.com/activeloopai/hivemind/blob/438796a1f243f075a45cf5ca5f0c19d8cb72432f/src/hooks/shared/session-insert-sql.ts"
+      },
+      {
+        "id": "grep",
+        "label": "Pinned retrieval implementation",
+        "path": "src/shell/grep-core.ts",
+        "symbol": "Lexical/hybrid memory and session search, path scoping, per-source limits, and separate project-scoped docs search",
+        "url": "https://github.com/activeloopai/hivemind/blob/438796a1f243f075a45cf5ca5f0c19d8cb72432f/src/shell/grep-core.ts"
+      },
+      {
+        "id": "vfs",
+        "label": "Pinned virtual filesystem",
+        "path": "src/shell/deeplake-fs.ts",
+        "symbol": "Memory/session virtual files, reads and write/delete routing",
+        "url": "https://github.com/activeloopai/hivemind/blob/438796a1f243f075a45cf5ca5f0c19d8cb72432f/src/shell/deeplake-fs.ts"
+      },
+      {
+        "id": "prune",
+        "label": "Pinned session pruning command",
+        "path": "src/commands/session-prune.ts",
+        "symbol": "Author-scoped session listing and deletion of event rows plus matching session summary",
+        "url": "https://github.com/activeloopai/hivemind/blob/438796a1f243f075a45cf5ca5f0c19d8cb72432f/src/commands/session-prune.ts"
+      },
+      {
+        "id": "scope",
+        "label": "Pinned per-directory routing",
+        "path": "src/dir-config.ts",
+        "symbol": "Nearest .hivemind routing, org/workspace identity, environment precedence and capture opt-out",
+        "url": "https://github.com/activeloopai/hivemind/blob/438796a1f243f075a45cf5ca5f0c19d8cb72432f/src/dir-config.ts"
+      },
+      {
+        "id": "skilldoc",
+        "label": "Pinned skillify documentation",
+        "path": "docs/SKILLIFY.md",
+        "symbol": "Background skill mining, provenance, scope, pull and unpull behavior",
+        "url": "https://github.com/activeloopai/hivemind/blob/438796a1f243f075a45cf5ca5f0c19d8cb72432f/docs/SKILLIFY.md"
+      },
+      {
+        "id": "skills",
+        "label": "Pinned skill version store",
+        "path": "src/skillify/skills-table.ts",
+        "symbol": "Append-only skill version writes and lazy table/schema initialization",
+        "url": "https://github.com/activeloopai/hivemind/blob/438796a1f243f075a45cf5ca5f0c19d8cb72432f/src/skillify/skills-table.ts"
+      },
+      {
+        "id": "skillpublish",
+        "label": "Pinned SkillOpt publish path",
+        "path": "src/skillify/skill-org-publish.ts",
+        "symbol": "Direct publication of improved skills as new team-visible versions",
+        "url": "https://github.com/activeloopai/hivemind/blob/438796a1f243f075a45cf5ca5f0c19d8cb72432f/src/skillify/skill-org-publish.ts"
+      },
+      {
+        "id": "embeddings",
+        "label": "Pinned embeddings guide",
+        "path": "docs/EMBEDDINGS.md",
+        "symbol": "Optional local embedding daemon, dependency footprint and lexical-only fallback",
+        "url": "https://github.com/activeloopai/hivemind/blob/438796a1f243f075a45cf5ca5f0c19d8cb72432f/docs/EMBEDDINGS.md"
+      },
+      {
+        "id": "debug",
+        "label": "Pinned debug logger",
+        "path": "src/utils/debug.ts",
+        "symbol": "Opt-in hook debug log destination and timestamped output",
+        "url": "https://github.com/activeloopai/hivemind/blob/438796a1f243f075a45cf5ca5f0c19d8cb72432f/src/utils/debug.ts"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Required benchmark metric domains and measurement protocol",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Synthetic evaluation cases, not Hivemind results",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status; not a Hivemind result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README identifies Activeloop as the builder and presents Hivemind as shared memory for coding agents; the architecture guide shows a TypeScript core with adapters for several agent harnesses.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      },
+      {
+        "text": "The central backend is a Deeplake org/workspace accessed through an API client; local hooks, CLI commands, virtual-filesystem handling and workers implement capture, reads and derived artifacts.",
+        "sources": [
+          "readme",
+          "architecture",
+          "schema"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The Deeplake `sessions` table stores one JSONB event per row with stable id, session path, filename, author, project, agent, plugin version, size and timestamps; `message_embedding` is nullable. The `memory` table stores generated text summaries with optional 768-dimensional embeddings and similar author/project/agent metadata.",
+        "sources": [
+          "schema",
+          "insert",
+          "capture"
+        ]
+      },
+      {
+        "text": "Capture hooks serialize prompt, tool-call, tool-result and assistant-turn data, redact secret-like values, optionally embed the event locally, then write an idempotent row keyed by event id. The summary worker writes a separate AI-generated summary, so raw events and summaries have distinct update and deletion paths.",
+        "sources": [
+          "readme",
+          "capture",
+          "insert",
+          "schema"
+        ]
+      },
+      {
+        "text": "A third `skills` table stores a versioned skill body with project/project key, local path, install target, source session ids, source agent, scope, author, contributors, version and timestamps. Workers mine recent sessions and install or share `SKILL.md` files; Hivemind also includes separate rules, goals, docs and code-graph features.",
+        "sources": [
+          "schema",
+          "skilldoc",
+          "architecture"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Capture is enabled by default for supported integrations and can be disabled globally or for a directory tree. Captured event rows are append-like, use stable ids to avoid duplicates on retry, and can carry an embedding; periodic or session-end workers derive summaries and skills from the captured events.",
+        "sources": [
+          "readme",
+          "capture",
+          "insert",
+          "scope",
+          "skilldoc"
+        ]
+      },
+      {
+        "text": "Session pruning deletes the selected author's raw event rows for each session path and deletes the corresponding summary row. Skill edits generally insert a new version and readers choose the latest version; the SkillOpt publish path also writes a new team-scoped version directly. These paths do not establish erasure of backups or every local copy.",
+        "sources": [
+          "prune",
+          "schema",
+          "skills",
+          "skillpublish"
+        ]
+      },
+      {
+        "text": "The virtual filesystem exposes memory and session records as files, while grep retrieval searches the summary and raw-session tables together. With a query embedding it unions semantic and lexical candidates, ranks by score, de-duplicates by path and caps each branch; without an embedding it falls back to lexical matching. The code can flag a result set as truncated when caps are reached.",
+        "sources": [
+          "vfs",
+          "grep",
+          "embeddings"
+        ]
+      },
+      {
+        "text": "Code-document search is a separate retrieval path and adds an active-status plus project-key filter, retaining legacy rows whose project field is empty. The ordinary memory/session search does not add an equivalent project or author predicate in the inspected SQL; it uses the path filter and the authenticated org/workspace selected for the request.",
+        "sources": [
+          "grep",
+          "scope"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Search and result formatting code were inspected; no benchmark questions were run or scored.",
+        "sources": [
+          "grep",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Summary replacement, session append, and skill versioning paths were inspected; no correction or staleness probes were run.",
+        "sources": [
+          "schema",
+          "skills",
+          "skillpublish",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Session-prune hard-delete code was inspected; no post-delete reads or backup-retention checks were run.",
+        "sources": [
+          "prune",
+          "vfs",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Workspace routing, API identity and search predicates were inspected; no cross-user, cross-workspace or cross-project workload was executed.",
+        "sources": [
+          "readme",
+          "scope",
+          "grep",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Stored event and skill provenance fields were inspected; no retrieved claim was adjudicated against source text.",
+        "sources": [
+          "schema",
+          "skilldoc",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No runtime timings or consistency probes were collected.",
+        "sources": [
+          "capture",
+          "grep",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No model-token or cost measurements were collected for this review; README figures are upstream-reported and not reproduced.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Schemas and optional embeddings were inspected; no stored-size or storage-efficiency measurements were collected.",
+        "sources": [
+          "schema",
+          "embeddings",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The README describes workspace-level sharing: users in a workspace can read its captured data. Per-directory routing can select another org/workspace for both reads and writes, or disable capture; this review did not test authorization or cross-workspace isolation.",
+        "sources": [
+          "readme",
+          "scope"
+        ]
+      },
+      {
+        "text": "The inspected memory/session search SQL filters by path but not by author or project. A caller may therefore retrieve other workspace members' traces unless the workspace boundary or a higher layer constrains access; code-document search has its own project filter.",
+        "sources": [
+          "grep",
+          "readme"
+        ]
+      },
+      {
+        "text": "Session prune removes raw rows and the matching generated summary for a session. The reviewed path does not demonstrate deletion from backups, caches, exported traces, or copies already pulled to local skill directories.",
+        "sources": [
+          "prune",
+          "vfs",
+          "skilldoc"
+        ]
+      },
+      {
+        "text": "Generated summaries and skills are model-produced artifacts. Provenance fields identify authors, source sessions, agents and versions, but the inspected retrieval path does not adjudicate whether a generated claim is supported by its source events.",
+        "sources": [
+          "schema",
+          "skilldoc",
+          "grep"
+        ]
+      },
+      {
+        "text": "The published LoCoMo performance figures in the README are Activeloop-reported results for its described setup, not results reproduced here. Current retrieval, corrections, deletion, isolation, latency, cost and storage remain unknown from this source-only review.",
+        "sources": [
+          "readme",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "Hivemind, its tests, and benchmark workloads were not run. Source observations and upstream-reported README figures are not Hivemind benchmark results."
+    }
+  }
+}

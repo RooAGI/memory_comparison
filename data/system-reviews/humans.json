@@ -1,0 +1,337 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 310,
+    "slug": "humans",
+    "name": "HUMANs",
+    "repository": "https://github.com/munch2u-a11y/HUMANs",
+    "listed_repository": "https://github.com/munch2u-a11y/HUMANs",
+    "branch": "not verified",
+    "revision": "not verified",
+    "reviewed_at": "2026-11-25T23:52:52Z",
+    "review_timezone": "UTC (checked 2026-11-25 15:52:52 PST; America/Los_Angeles)",
+    "source_status": "not_reviewed",
+    "benchmark_status": "not_run",
+    "summary": "HUMANs is listed at ordinal 310 in the curated catalog, but the listed GitHub repository, pinned revision, README pages, repository API, and current main commit feed were unavailable when checked. Its current canonical upstream, branch, and head SHA could not be verified, so no implementation review is claimed.",
+    "atlas_locator": {
+      "ordinal": 310,
+      "name": "HUMANs",
+      "slug": "humans",
+      "listed_repository": "https://github.com/munch2u-a11y/HUMANs",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/humans.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "catalog_revision": "a1c86c292ac0c8d7f11800d0c2b1462756f9dbe9",
+      "note": "Retained only for curated identity and locator attribution, not as implementation assessment evidence."
+    },
+    "contact": {
+      "email": null,
+      "source_url": null,
+      "checked_urls": [
+        "https://github.com/munch2u-a11y/HUMANs",
+        "https://api.github.com/repos/munch2u-a11y/HUMANs",
+        "https://github.com/munch2u-a11y/HUMANs/commit/a1c86c292ac0c8d7f11800d0c2b1462756f9dbe9",
+        "https://github.com/munch2u-a11y/HUMANs/commits/main.atom",
+        "https://github.com/munch2u-a11y/HUMANs/blob/a1c86c292ac0c8d7f11800d0c2b1462756f9dbe9/README.md",
+        "https://github.com/munch2u-a11y/HUMANs/blob/main/README.md"
+      ],
+      "note": "Official repository and README pages were checked but unavailable; no email could be verified. No profile/commit metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/munch2u-a11y/HUMANs",
+      "https://api.github.com/repos/munch2u-a11y/HUMANs",
+      "https://github.com/munch2u-a11y/HUMANs/commit/a1c86c292ac0c8d7f11800d0c2b1462756f9dbe9",
+      "https://github.com/munch2u-a11y/HUMANs/commits/main.atom",
+      "https://github.com/munch2u-a11y/HUMANs/blob/a1c86c292ac0c8d7f11800d0c2b1462756f9dbe9/README.md",
+      "https://github.com/munch2u-a11y/HUMANs/blob/main/README.md"
+    ],
+    "contact_email_note": "Official README pages were unavailable; no email could be verified or inferred.",
+    "blocker": {
+      "reason": "The catalog lists HUMANs at the listed repository and pins a revision, but official GitHub checks did not permit verification: the repository API returned HTTP 404 Not Found; the repository, pinned commit, pinned README, and main README rendered “Page not found”; and the main.atom commit feed returned “Not Found”. These responses do not establish whether the repository was removed, renamed, private, or temporarily inaccessible. Canonical upstream, default branch, current full head SHA, implementation behavior, and contact remain unverified.",
+      "checked_at": "2026-11-25T23:52:52Z",
+      "evidence": [
+        "https://github.com/munch2u-a11y/HUMANs",
+        "https://api.github.com/repos/munch2u-a11y/HUMANs",
+        "https://github.com/munch2u-a11y/HUMANs/commit/a1c86c292ac0c8d7f11800d0c2b1462756f9dbe9",
+        "https://github.com/munch2u-a11y/HUMANs/commits/main.atom",
+        "https://github.com/munch2u-a11y/HUMANs/blob/a1c86c292ac0c8d7f11800d0c2b1462756f9dbe9/README.md",
+        "https://github.com/munch2u-a11y/HUMANs/blob/main/README.md"
+      ],
+      "results": [
+        {
+          "url": "https://github.com/munch2u-a11y/HUMANs",
+          "result": "GitHub rendered Page not found."
+        },
+        {
+          "url": "https://api.github.com/repos/munch2u-a11y/HUMANs",
+          "result": "HTTP 404; JSON body says Not Found."
+        },
+        {
+          "url": "https://github.com/munch2u-a11y/HUMANs/commit/a1c86c292ac0c8d7f11800d0c2b1462756f9dbe9",
+          "result": "GitHub rendered Page not found."
+        },
+        {
+          "url": "https://github.com/munch2u-a11y/HUMANs/commits/main.atom",
+          "result": "Feed body says Not Found."
+        },
+        {
+          "url": "https://github.com/munch2u-a11y/HUMANs/blob/a1c86c292ac0c8d7f11800d0c2b1462756f9dbe9/README.md",
+          "result": "GitHub rendered Page not found."
+        },
+        {
+          "url": "https://github.com/munch2u-a11y/HUMANs/blob/main/README.md",
+          "result": "GitHub rendered Page not found."
+        }
+      ]
+    },
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and listed locator",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[309], ordinal 310; name, slug, explicit locator, pinned revision",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas attribution for roster identity only",
+        "path": "content/systems/humans.md",
+        "symbol": "Locator attribution only; not implementation assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/humans.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository check",
+        "path": "repository page",
+        "symbol": "Page not found; current canonical upstream not verified",
+        "url": "https://github.com/munch2u-a11y/HUMANs"
+      },
+      {
+        "id": "api",
+        "label": "Official repository API check",
+        "path": "repository metadata API",
+        "symbol": "HTTP 404 Not Found",
+        "url": "https://api.github.com/repos/munch2u-a11y/HUMANs"
+      },
+      {
+        "id": "pin",
+        "label": "Catalog-pinned commit check",
+        "path": "pinned commit page",
+        "symbol": "Page not found; catalog pin is not treated as current head",
+        "url": "https://github.com/munch2u-a11y/HUMANs/commit/a1c86c292ac0c8d7f11800d0c2b1462756f9dbe9"
+      },
+      {
+        "id": "feed",
+        "label": "Current main commit feed check",
+        "path": "main.atom",
+        "symbol": "Not Found; current branch head not verified",
+        "url": "https://github.com/munch2u-a11y/HUMANs/commits/main.atom"
+      },
+      {
+        "id": "readme_pin",
+        "label": "Pinned official README contact check",
+        "path": "README.md at pinned revision",
+        "symbol": "Page not found; email could not be checked",
+        "url": "https://github.com/munch2u-a11y/HUMANs/blob/a1c86c292ac0c8d7f11800d0c2b1462756f9dbe9/README.md"
+      },
+      {
+        "id": "readme_main",
+        "label": "Official main README contact check",
+        "path": "README.md on main",
+        "symbol": "Page not found; email could not be checked",
+        "url": "https://github.com/munch2u-a11y/HUMANs/blob/main/README.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Definitions only, not HUMANs results",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Workload specification, not measurement",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "No runtime or benchmark was performed",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The curated roster identifies the name and listed locator only. Owner, maintainer, product type, and intended users were not independently established from official project materials.",
+        "sources": [
+          "catalog",
+          "repo",
+          "api"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Not assessed. No current official source or documentation was available to inspect.",
+        "sources": [
+          "pin",
+          "readme_pin",
+          "readme_main"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write, update, delete, retrieval, and scope-isolation behavior are unknown because no implementation or official documentation could be inspected.",
+        "sources": [
+          "repo",
+          "api",
+          "readme_pin",
+          "readme_main"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "No implementation was available to inspect and no runtime, tests, or benchmark workload was run.",
+        "sources": [
+          "api",
+          "readme_pin",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale retrieval",
+        "status": "unmeasured",
+        "evidence": "No implementation was available to inspect and no runtime, tests, or benchmark workload was run.",
+        "sources": [
+          "api",
+          "readme_pin",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No implementation was available to inspect and no runtime, tests, or benchmark workload was run.",
+        "sources": [
+          "api",
+          "readme_pin",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "No implementation was available to inspect and no runtime, tests, or benchmark workload was run.",
+        "sources": [
+          "api",
+          "readme_pin",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "No implementation was available to inspect and no runtime, tests, or benchmark workload was run.",
+        "sources": [
+          "api",
+          "readme_pin",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No implementation was available to inspect and no runtime, tests, or benchmark workload was run.",
+        "sources": [
+          "api",
+          "readme_pin",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No implementation was available to inspect and no runtime, tests, or benchmark workload was run.",
+        "sources": [
+          "api",
+          "readme_pin",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No implementation was available to inspect and no runtime, tests, or benchmark workload was run.",
+        "sources": [
+          "api",
+          "readme_pin",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No implementation was available to inspect and no runtime, tests, or benchmark workload was run.",
+        "sources": [
+          "api",
+          "readme_pin",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "Upstream verification is blocked. Official GitHub checks returned 404/Not Found or Page not found for the repository, pinned revision, README pages, and main commit feed. This does not establish whether the project was removed, renamed, private, or temporarily inaccessible. Current canonical upstream, branch, head SHA, implementation behavior, and contact remain unknown.",
+        "sources": [
+          "repo",
+          "api",
+          "pin",
+          "feed",
+          "readme_pin",
+          "readme_main"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No HUMANs runtime, tests, or benchmarks were run; no implementation review is claimed. Project metric definitions and fixtures are specifications, not HUMANs results.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "No HUMANs workload results are available; project fixtures and definitions are specifications only."
+    }
+  }
+}

@@ -1,0 +1,382 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "dovsg",
+    "name": "DovSG",
+    "ordinal": 194,
+    "repository": "https://github.com/BJHYZJ/DovSG",
+    "listed_repository": "https://github.com/BJHYZJ/DovSG",
+    "branch": "master",
+    "revision": "b355987a1ca586f7756f025820fddc24166d75af",
+    "reviewed_at": "2026-11-25T11:20:57Z",
+    "review_timezone": "UTC (2026-11-25 03:20:57 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "DovSG is a research system for mobile manipulation that builds and locally updates a 3D scene graph from RGB-D observations. Object memory combines voxelized geometry with image and text features; an LLM planner decomposes tasks while localization and robot modules execute subtasks. This review describes inspected source and documentation, not measured system performance.",
+    "atlas_locator": {
+      "ordinal": 194,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dovsg.md",
+      "listed_repository": "https://github.com/BJHYZJ/DovSG"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/BJHYZJ/DovSG/blob/b355987a1ca586f7756f025820fddc24166d75af/README.md",
+      "checked_urls": [
+        "https://github.com/BJHYZJ/DovSG/blob/b355987a1ca586f7756f025820fddc24166d75af/README.md"
+      ],
+      "note": "The official README at the reviewed revision was checked for a published contact email; none was found. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/BJHYZJ/DovSG/blob/b355987a1ca586f7756f025820fddc24166d75af/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/BJHYZJ/DovSG/blob/b355987a1ca586f7756f025820fddc24166d75af/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the checked official README. Commit/profile metadata and third-party directories were not used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Project catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 194, DovSG, slug dovsg, listed repository and roster attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster entry",
+        "path": "content/systems/dovsg.md",
+        "symbol": "Curated identity and listed locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dovsg.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "Public BJHYZJ/DovSG; repository overview labels master as default",
+        "url": "https://github.com/BJHYZJ/DovSG"
+      },
+      {
+        "id": "branches",
+        "label": "Official branches page",
+        "path": "branches",
+        "symbol": "Default branch metadata",
+        "url": "https://github.com/BJHYZJ/DovSG/branches"
+      },
+      {
+        "id": "history",
+        "label": "Official master branch Atom feed",
+        "path": "commits/master.atom",
+        "symbol": "Full head b355987a1ca586f7756f025820fddc24166d75af; feed updated 2025-04-17T10:23:08Z",
+        "url": "https://github.com/BJHYZJ/DovSG/commits/master.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified current head commit",
+        "path": "commit",
+        "symbol": "Full current master head b355987a1ca586f7756f025820fddc24166d75af",
+        "url": "https://github.com/BJHYZJ/DovSG/commit/b355987a1ca586f7756f025820fddc24166d75af"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Research scope, robot setup, documented workflow and project description",
+        "url": "https://github.com/BJHYZJ/DovSG/blob/b355987a1ca586f7756f025820fddc24166d75af/README.md"
+      },
+      {
+        "id": "semantic",
+        "label": "Semantic memory and feature extraction",
+        "path": "dovsg/memory/ram_groundingdino_sam2_clip_semantic_memory.py",
+        "symbol": "RAM tags, GroundingDINO/SAM2 detection, CLIP image/text features",
+        "url": "https://github.com/BJHYZJ/DovSG/blob/b355987a1ca586f7756f025820fddc24166d75af/dovsg/memory/ram_groundingdino_sam2_clip_semantic_memory.py"
+      },
+      {
+        "id": "instances",
+        "label": "Instance processing",
+        "path": "dovsg/memory/instances/instance_process.py",
+        "symbol": "Instance records, association weights, thresholds, update/removal machinery",
+        "url": "https://github.com/BJHYZJ/DovSG/blob/b355987a1ca586f7756f025820fddc24166d75af/dovsg/memory/instances/instance_process.py"
+      },
+      {
+        "id": "graph_process",
+        "label": "Scene graph processing",
+        "path": "dovsg/memory/scene_graph/scene_graph_processer.py",
+        "symbol": "Geometry-based relation assignment and graph update/removal",
+        "url": "https://github.com/BJHYZJ/DovSG/blob/b355987a1ca586f7756f025820fddc24166d75af/dovsg/memory/scene_graph/scene_graph_processer.py"
+      },
+      {
+        "id": "graph",
+        "label": "Scene graph data model",
+        "path": "dovsg/memory/scene_graph/graph.py",
+        "symbol": "Parent/child object nodes, relations, scene graph and visualization",
+        "url": "https://github.com/BJHYZJ/DovSG/blob/b355987a1ca586f7756f025820fddc24166d75af/dovsg/memory/scene_graph/graph.py"
+      },
+      {
+        "id": "controller",
+        "label": "Controller and step persistence",
+        "path": "dovsg/controller.py",
+        "symbol": "Scene-tag storage path, update pipeline and per-step serialized snapshots",
+        "url": "https://github.com/BJHYZJ/DovSG/blob/b355987a1ca586f7756f025820fddc24166d75af/dovsg/controller.py"
+      },
+      {
+        "id": "localizer",
+        "label": "Instance localizer",
+        "path": "dovsg/navigation/instances_localizer.py",
+        "symbol": "CLIP query embedding, top match/centroid, top-k A/B pair localization",
+        "url": "https://github.com/BJHYZJ/DovSG/blob/b355987a1ca586f7756f025820fddc24166d75af/dovsg/navigation/instances_localizer.py"
+      },
+      {
+        "id": "planner",
+        "label": "LLM task planner",
+        "path": "dovsg/task_planning/gpt_task_planning.py",
+        "symbol": "GPT-4o-mini task decomposition request, response caching and fixed demonstrations",
+        "url": "https://github.com/BJHYZJ/DovSG/blob/b355987a1ca586f7756f025820fddc24166d75af/dovsg/task_planning/gpt_task_planning.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Workload specification only; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Execution status record; no DovSG measured result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The project catalog resolves ordinal 194 as DovSG, slug dovsg, with the listed repository BJHYZJ/DovSG; the pinned Atlas roster record is used only for curated identity and locator attribution, not assessment evidence.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The official README presents DovSG as a robotics research implementation for dynamic open-vocabulary 3D scene graphs in long-term language-guided mobile manipulation, accompanying a 2025 paper.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The repository combines camera perception, mapping, memory, planning, navigation, and manipulation code; it is not a standalone memory service.",
+        "sources": [
+          "readme",
+          "controller"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The documented workflow collects RGB-D frames, estimates poses, constructs a view dataset, builds a 3D scene graph from VLM object representations, extracts LightGlue features for relocalization, decomposes tasks with an LLM, and updates the graph during task execution.",
+        "sources": [
+          "readme",
+          "controller"
+        ]
+      },
+      {
+        "text": "The semantic path uses RAM image tags, GroundingDINO/SAM2 object masks, and CLIP image/text features. Instance records include class identity, confidence/count, mask/image references, voxel indexes, a bounding box, and image/text features.",
+        "sources": [
+          "semantic",
+          "instances"
+        ]
+      },
+      {
+        "text": "The instance processor combines spatial, visual, and text similarity with code-visible weights 0.5/0.4/0.1 and a 0.75 association threshold. Scene-graph nodes hold class/id, parent-child links, parent relation, and part state; the inspected processor assigns an `inside` relation from geometry. Per-step snapshots serialize the view dataset, instances, graph, and LightGlue features.",
+        "sources": [
+          "instances",
+          "graph",
+          "graph_process",
+          "controller"
+        ]
+      },
+      {
+        "text": "The official repository page identifies master as default. The official master Atom feed reports b355987a1ca586f7756f025820fddc24166d75af as its full head, with feed update 2025-04-17T10:23:08Z. Review recorded 2026-11-25T11:20:57Z (UTC; 03:20:57 PST; America/Los_Angeles).",
+        "sources": [
+          "repo",
+          "branches",
+          "history",
+          "head"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write processing tags frames, detects and segments objects, computes CLIP features, associates detections into instances, then builds/updates a geometry-derived scene graph.",
+        "sources": [
+          "semantic",
+          "instances",
+          "graph_process"
+        ]
+      },
+      {
+        "text": "After interaction, the controller increments the step, derives indexes to remove from new observations, updates the view dataset and LightGlue features, updates instances and scene graph, then saves the current step. The graph update removes missing object nodes and affected descendants before rebuilding; this is current-state repair, not a separate mutation ledger in the inspected path.",
+        "sources": [
+          "controller",
+          "graph_process",
+          "graph"
+        ]
+      },
+      {
+        "text": "The localizer encodes text with CLIP and ranks instance features. A single-object query returns the top instance centroid. For A-on-B queries, it takes top-three A and top-five B candidates and returns the A centroid nearest a B candidate; this inspected method does not traverse the scene graph.",
+        "sources": [
+          "localizer"
+        ]
+      },
+      {
+        "text": "The task planner sends a description to GPT-4o-mini with fixed examples and saves a response JSON for reuse. The selected planner source does not pass scene-graph data in the request; how graph state influences all planning decisions remains unverified.",
+        "sources": [
+          "planner",
+          "readme"
+        ]
+      },
+      {
+        "text": "Scene directories are keyed by a scene tag and configuration suffix, with numbered steps. No user/tenant authorization boundary is visible in the inspected local storage path; cross-user isolation was not assessed.",
+        "sources": [
+          "controller"
+        ]
+      },
+      {
+        "text": "Object records retain detection metadata and image references, and full step snapshots are written locally. The selected source does not establish a claim-level evidence model, trust state, or append-only mutation audit.",
+        "sources": [
+          "instances",
+          "controller"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency mechanisms include multi-model perception, weighted association, periodic denoising, feature matching, and serialized per-step snapshots; controller progress/debug output and saved graph/point-cloud artifacts support inspection. No performance or reliability outcomes were measured.",
+        "sources": [
+          "semantic",
+          "instances",
+          "controller",
+          "graph"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval accuracy — unmeasured; CLIP candidate retrieval is implemented, but no cases were scored.",
+        "sources": [
+          "localizer",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Abstention — unknown/unmeasured; a top match is returned in the inspected localizer, and abstention quality was not evaluated.",
+        "sources": [
+          "localizer",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured; scene updates are implemented, but no correction workload was run.",
+        "sources": [
+          "controller",
+          "graph_process",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Deletion leakage — unmeasured; graph removal code was inspected, but no post-deletion retrieval checks were run.",
+        "sources": [
+          "graph_process",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Scope isolation leakage — unmeasured; scene-tag paths are visible, but enforcement and cross-scope leakage were not tested.",
+        "sources": [
+          "controller",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Evidence support precision and citation coverage — unmeasured; no evidence-grounded answer evaluation was run.",
+        "sources": [
+          "instances",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Retrieval latency and write-to-recall delay — unmeasured; no timing samples were collected.",
+        "sources": [
+          "controller",
+          "localizer",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Tokens and cost — unmeasured; the task planner uses an OpenAI model, but no token/price observations were collected.",
+        "sources": [
+          "planner",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Storage efficiency — unmeasured; per-step snapshots are visible, but storage bytes and retention were not measured.",
+        "sources": [
+          "controller",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Benchmark execution is not_run; the project fixture was not executed, and this review provides no DovSG measured result.",
+        "sources": [
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This assessment inspected the official README and selected semantic-memory, instance, scene-graph, controller, localization, and planning sources at one verified head. Other robotics, hardware, navigation, manipulation, evaluation, and dependency paths were not reviewed.",
+        "sources": [
+          "readme",
+          "semantic",
+          "instances",
+          "graph_process",
+          "controller",
+          "localizer",
+          "planner"
+        ]
+      },
+      {
+        "text": "No DovSG runtime, tests, or benchmarks were run. Hardware availability, partial-write recovery, large-scene scaling, and object identity/relocalization reliability therefore remain unknown.",
+        "sources": [
+          "readme",
+          "controller",
+          "status"
+        ]
+      },
+      {
+        "text": "The selected localizer ranks CLIP features and returns centroids. Its behavior with ambiguous labels, absent objects, and changing scenes has not been measured.",
+        "sources": [
+          "localizer",
+          "metrics"
+        ]
+      }
+    ],
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "No DovSG benchmark measurements were collected during this review."
+    }
+  }
+}

@@ -1,0 +1,392 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 238,
+    "slug": "fidelis",
+    "name": "Fidelis Memory",
+    "repository": "https://github.com/hermes-labs-ai/fidelis",
+    "listed_repository": "https://github.com/hermes-labs-ai/fidelis",
+    "branch": "main",
+    "revision": "9504c4a8f2592464112ca771d6aaefec07698d23",
+    "reviewed_at": "2026-11-25T20:22:07Z",
+    "review_timezone": "UTC (checked 2026-11-25 12:22:07 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Fidelis Memory is a local-first Python memory service for coding agents. It stores original passages in a local Chroma vector store, uses configured Ollama embeddings, and exposes bounded retrieval through HTTP and MCP. Its current documented MCP surface supports storage, correction and reads but no record deletion. This review describes source and documentation; runtime quality and resource use were not measured.",
+    "atlas_locator": {
+      "ordinal": 238,
+      "name": "Fidelis Memory",
+      "slug": "fidelis",
+      "listed_repository": "https://github.com/hermes-labs-ai/fidelis",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/fidelis.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": "roli@hermes-labs.ai",
+      "source_url": "https://github.com/hermes-labs-ai/fidelis/blob/9504c4a8f2592464112ca771d6aaefec07698d23/CODE_OF_CONDUCT.md",
+      "checked_urls": [
+        "https://github.com/hermes-labs-ai/fidelis/blob/9504c4a8f2592464112ca771d6aaefec07698d23/CODE_OF_CONDUCT.md"
+      ],
+      "note": "Checked the official pinned Code of Conduct, which publishes roli@hermes-labs.ai as the maintainer contact. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": "roli@hermes-labs.ai",
+    "contact_email_source_url": "https://github.com/hermes-labs-ai/fidelis/blob/9504c4a8f2592464112ca771d6aaefec07698d23/CODE_OF_CONDUCT.md",
+    "contact_email_checked_sources": [
+      "https://github.com/hermes-labs-ai/fidelis/blob/9504c4a8f2592464112ca771d6aaefec07698d23/CODE_OF_CONDUCT.md"
+    ],
+    "contact_email_note": "The official pinned Code of Conduct publishes roli@hermes-labs.ai as the maintainer contact. No commit/profile metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[237], ordinal 238; roster identity, listed repository locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/fidelis.md",
+        "symbol": "Curated identity and repository locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/fidelis.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "",
+        "symbol": "Repository identity and default branch main; checked on review date",
+        "url": "https://github.com/hermes-labs-ai/fidelis"
+      },
+      {
+        "id": "head",
+        "label": "Official current head commit",
+        "path": "",
+        "symbol": "Official GitHub commit API/patch and git remote both identify the full current head SHA",
+        "url": "https://github.com/hermes-labs-ai/fidelis/commit/9504c4a8f2592464112ca771d6aaefec07698d23.patch"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product scope, local architecture, agent integration, verbatim and hybrid retrieval claims",
+        "url": "https://github.com/hermes-labs-ai/fidelis/blob/9504c4a8f2592464112ca771d6aaefec07698d23/README.md"
+      },
+      {
+        "id": "reference",
+        "label": "Pinned technical reference",
+        "path": "docs/full-reference.md",
+        "symbol": "Record model, endpoints, MCP tool contracts, retrieval behavior, configuration and boundaries",
+        "url": "https://github.com/hermes-labs-ai/fidelis/blob/9504c4a8f2592464112ca771d6aaefec07698d23/docs/full-reference.md"
+      },
+      {
+        "id": "security",
+        "label": "Pinned security policy",
+        "path": "SECURITY.md",
+        "symbol": "Loopback/no-network-auth, encryption and screening limitations",
+        "url": "https://github.com/hermes-labs-ai/fidelis/blob/9504c4a8f2592464112ca771d6aaefec07698d23/SECURITY.md"
+      },
+      {
+        "id": "conduct",
+        "label": "Pinned official Code of Conduct",
+        "path": "CODE_OF_CONDUCT.md",
+        "symbol": "Published maintainer contact email",
+        "url": "https://github.com/hermes-labs-ai/fidelis/blob/9504c4a8f2592464112ca771d6aaefec07698d23/CODE_OF_CONDUCT.md"
+      },
+      {
+        "id": "config",
+        "label": "Pinned configuration source",
+        "path": "src/fidelis/config.py",
+        "symbol": "Chroma/Ollama defaults and user_id namespace semantics",
+        "url": "https://github.com/hermes-labs-ai/fidelis/blob/9504c4a8f2592464112ca771d6aaefec07698d23/src/fidelis/config.py"
+      },
+      {
+        "id": "write-gate",
+        "label": "Pinned write gate source",
+        "path": "src/fidelis/write_gate.py",
+        "symbol": "Deterministic write screening behavior",
+        "url": "https://github.com/hermes-labs-ai/fidelis/blob/9504c4a8f2592464112ca771d6aaefec07698d23/src/fidelis/write_gate.py"
+      },
+      {
+        "id": "degrade",
+        "label": "Pinned write/degradation source",
+        "path": "src/fidelis/degrade.py",
+        "symbol": "Verbatim insert, duplicate handling, temporal metadata, queue/replay behavior",
+        "url": "https://github.com/hermes-labs-ai/fidelis/blob/9504c4a8f2592464112ca771d6aaefec07698d23/src/fidelis/degrade.py"
+      },
+      {
+        "id": "temporal",
+        "label": "Pinned temporal model source",
+        "path": "src/fidelis/temporal.py",
+        "symbol": "Temporal fields, content hash, supersession and read-time status behavior",
+        "url": "https://github.com/hermes-labs-ai/fidelis/blob/9504c4a8f2592464112ca771d6aaefec07698d23/src/fidelis/temporal.py"
+      },
+      {
+        "id": "temporal-index",
+        "label": "Pinned temporal sidecar source",
+        "path": "src/fidelis/temporal_index.py",
+        "symbol": "Rebuildable SQLite supersession index and repair behavior",
+        "url": "https://github.com/hermes-labs-ai/fidelis/blob/9504c4a8f2592464112ca771d6aaefec07698d23/src/fidelis/temporal_index.py"
+      },
+      {
+        "id": "temporal-recall",
+        "label": "Pinned temporal retrieval source",
+        "path": "src/fidelis/temporal_recall.py",
+        "symbol": "Read-time annotation, as-of filtering, fail-open sidecar lookup and overfetch",
+        "url": "https://github.com/hermes-labs-ai/fidelis/blob/9504c4a8f2592464112ca771d6aaefec07698d23/src/fidelis/temporal_recall.py"
+      },
+      {
+        "id": "recall-b",
+        "label": "Pinned zero-LLM retrieval source",
+        "path": "src/fidelis/recall_b.py",
+        "symbol": "Multi-query dense retrieval, namespace filtering and reciprocal-rank fusion",
+        "url": "https://github.com/hermes-labs-ai/fidelis/blob/9504c4a8f2592464112ca771d6aaefec07698d23/src/fidelis/recall_b.py"
+      },
+      {
+        "id": "hybrid",
+        "label": "Pinned hybrid retrieval source",
+        "path": "src/fidelis/recall_hybrid.py",
+        "symbol": "Dense and BM25 candidate retrieval, RRF and optional model tiers",
+        "url": "https://github.com/hermes-labs-ai/fidelis/blob/9504c4a8f2592464112ca771d6aaefec07698d23/src/fidelis/recall_hybrid.py"
+      },
+      {
+        "id": "mcp",
+        "label": "Pinned MCP server source",
+        "path": "src/fidelis/mcp_server.py",
+        "symbol": "Six tools, correction flow and bounded non-blocking diagnostic logging",
+        "url": "https://github.com/hermes-labs-ai/fidelis/blob/9504c4a8f2592464112ca771d6aaefec07698d23/src/fidelis/mcp_server.py"
+      },
+      {
+        "id": "server",
+        "label": "Pinned HTTP server source",
+        "path": "src/fidelis/server.py",
+        "symbol": "Loopback HTTP operations, vector retrieval, health and configured user filtering",
+        "url": "https://github.com/hermes-labs-ai/fidelis/blob/9504c4a8f2592464112ca771d6aaefec07698d23/src/fidelis/server.py"
+      },
+      {
+        "id": "browse",
+        "label": "Pinned record browsing source",
+        "path": "src/fidelis/browse.py",
+        "symbol": "ID reads and correction-chain browsing constrained to configured user namespace",
+        "url": "https://github.com/hermes-labs-ai/fidelis/blob/9504c4a8f2592464112ca771d6aaefec07698d23/src/fidelis/browse.py"
+      },
+      {
+        "id": "retrieval-telemetry",
+        "label": "Pinned retrieval telemetry source",
+        "path": "src/fidelis/retrieval_telemetry.py",
+        "symbol": "Optional bounded retrieval diagnostics and query redaction",
+        "url": "https://github.com/hermes-labs-ai/fidelis/blob/9504c4a8f2592464112ca771d6aaefec07698d23/src/fidelis/retrieval_telemetry.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Definitions of project assessment domains",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Project fixture definition, not a Fidelis result",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared project execution status, not a Fidelis result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The repository identifies Hermes Labs as the project organization and presents Fidelis as a local memory service and client integration for coding agents. It supports MCP, a loopback HTTP API, and a CLI; the agent decides when to call memory tools.",
+        "sources": [
+          "readme",
+          "reference"
+        ]
+      },
+      {
+        "text": "The official Code of Conduct publishes roli@hermes-labs.ai as the project maintainer contact; the exact pinned URL is recorded in contact metadata.",
+        "sources": [
+          "conduct"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The default store is a local Chroma collection configured under ~/.cogito/store, with Ollama used for embeddings and optional model-backed paths. A service process binds a configured user_id namespace to reads and writes; the code comments say it is not an authenticated identity.",
+        "sources": [
+          "config",
+          "reference",
+          "security"
+        ]
+      },
+      {
+        "text": "Records keep original text and stable IDs. Temporal writes add service-recorded time and a SHA-256 content hash, plus optional caller-declared event time, validity bounds, source, and superseded IDs. A small SQLite sidecar indexes supersession edges and is rebuildable from vector-store payloads.",
+        "sources": [
+          "degrade",
+          "temporal",
+          "temporal-index"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The current MCP surface exposes fidelis_store, fidelis_correct, fidelis_recall, fidelis_get, fidelis_recent, and fidelis_health. HTTP /store is verbatim; /add can use optional model extraction. A deterministic gate rejects recognized secret-shaped or obvious noise content. Failed dependency-backed writes may be queued for replay, so queued is not yet stored.",
+        "sources": [
+          "reference",
+          "mcp",
+          "write-gate",
+          "degrade"
+        ]
+      },
+      {
+        "text": "Correction writes a new record that supersedes an existing same-namespace ID; the old passage remains available. Temporal reads annotate current, superseded, expired, and not-yet-valid status, usually retaining historical hits after current results. as_of excludes later-recorded items and later correction links.",
+        "sources": [
+          "reference",
+          "temporal",
+          "temporal-recall",
+          "mcp"
+        ]
+      },
+      {
+        "text": "The documented MCP and HTTP operation sets contain no record deletion operation. Uninstalling the local service does not delete its store. This review found no supported user-facing fact-delete path in the reviewed public interface.",
+        "sources": [
+          "reference",
+          "mcp",
+          "readme"
+        ]
+      },
+      {
+        "text": "Fast MCP recall uses bounded local vector search. Zero-LLM recall issues multiple dense subqueries and merges results with reciprocal-rank fusion; thorough retrieval can add BM25 within the dense candidate pool. Optional filter/flagship paths can use configured model endpoints.",
+        "sources": [
+          "reference",
+          "recall-b",
+          "hybrid"
+        ]
+      },
+      {
+        "text": "Vector searches and ID browse operations apply the configured user_id namespace, but this is local partitioning, not tenant authentication. The security policy states that the HTTP service has no network authentication and is intended for trusted loopback use.",
+        "sources": [
+          "config",
+          "server",
+          "recall-b",
+          "browse",
+          "security"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Search paths and result status are implemented; no answers were scored.",
+        "sources": [
+          "reference",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Supersession links and temporal status are implemented; no correction sequence was evaluated.",
+        "sources": [
+          "temporal",
+          "reference",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No supported record-delete operation was found; no deletion probes were run.",
+        "sources": [
+          "reference",
+          "mcp",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Configured namespace filters are present; no isolation workload was run.",
+        "sources": [
+          "config",
+          "server",
+          "browse",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source metadata and temporal provenance are available; no answer evidence was adjudicated.",
+        "sources": [
+          "temporal",
+          "degrade",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No runtime timings were collected.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "No workload or resource measurements were collected.",
+        "sources": [
+          "readme",
+          "config",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded inspection of official docs and selected source files at the verified head. No runtime, tests, or benchmarks were run. Source presence cannot establish retrieval accuracy, useful save behavior, successful deletion, or safe operation under adversarial inputs.",
+        "sources": [
+          "readme",
+          "reference",
+          "security"
+        ]
+      },
+      {
+        "text": "The official policy says screening recognizes common secret patterns but is not comprehensive; local records are not application-encrypted and the HTTP service must not be exposed to untrusted networks. user_id is not an authorization boundary.",
+        "sources": [
+          "write-gate",
+          "security",
+          "config"
+        ]
+      },
+      {
+        "text": "The review did not test backup/restore, concurrent writes, queue recovery, namespace behavior under hostile access, or all client and optional model paths. No documented deletion interface was found; private or future mechanisms were not assessed.",
+        "sources": [
+          "degrade",
+          "browse",
+          "reference"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Fidelis runtime, tests, or benchmarks were run. Source and documentation observations are not Fidelis measurements."
+    }
+  }
+}

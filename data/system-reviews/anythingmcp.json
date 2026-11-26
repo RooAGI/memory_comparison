@@ -1,0 +1,291 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "anythingmcp",
+    "name": "AnythingMCP",
+    "repository": "https://github.com/HelpCode-ai/anythingmcp",
+    "branch": "main",
+    "revision": "e216684cb7b15a78bcba915dc400f91de12dfcb3",
+    "reviewed_at": "2026-11-24T20:56:56Z",
+    "review_timezone": "UTC (2026-11-24 12:56:56 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "AnythingMCP is a self-hosted MCP gateway with workspace memory for facts, preferences, and notes. Its memory service stores personal and organization items in PostgreSQL, offers scoped full-text search, and connects entity-tagged memory to a workspace knowledge graph.",
+    "atlas_locator": {
+      "ordinal": 60,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/anythingmcp.md",
+      "listed_repository": "https://github.com/HelpCode-ai/anythingmcp"
+    },
+    "contact": {
+      "email": "info@helpcode.ai",
+      "source_url": "https://github.com/HelpCode-ai/anythingmcp/blob/e216684cb7b15a78bcba915dc400f91de12dfcb3/README.md",
+      "note": "The official README publishes this address for DPA/AVV requests."
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "HelpCode-ai/anythingmcp; default branch main",
+        "url": "https://github.com/HelpCode-ai/anythingmcp"
+      },
+      {
+        "id": "head",
+        "label": "Verified main branch head",
+        "path": "commit",
+        "symbol": "main HEAD e216684cb7b15a78bcba915dc400f91de12dfcb3",
+        "url": "https://github.com/HelpCode-ai/anythingmcp/commit/e216684cb7b15a78bcba915dc400f91de12dfcb3"
+      },
+      {
+        "id": "readme",
+        "label": "Official repository README",
+        "path": "README.md",
+        "symbol": "project overview and published DPA/AVV contact email",
+        "url": "https://github.com/HelpCode-ai/anythingmcp/blob/e216684cb7b15a78bcba915dc400f91de12dfcb3/README.md"
+      },
+      {
+        "id": "memory-doc",
+        "label": "Workspace memory documentation",
+        "path": "docs/memory.md",
+        "symbol": "memory tools, scopes, approvals, folders, bounds, erasure, full-text search",
+        "url": "https://github.com/HelpCode-ai/anythingmcp/blob/e216684cb7b15a78bcba915dc400f91de12dfcb3/docs/memory.md"
+      },
+      {
+        "id": "graph-doc",
+        "label": "Knowledge Graph and AI skills documentation",
+        "path": "docs/knowledge-graph.md",
+        "symbol": "graph data model and memory integration context",
+        "url": "https://github.com/HelpCode-ai/anythingmcp/blob/e216684cb7b15a78bcba915dc400f91de12dfcb3/docs/knowledge-graph.md"
+      },
+      {
+        "id": "memory-service",
+        "label": "MemoryService implementation",
+        "path": "packages/backend/src/memory/memory.service.ts",
+        "symbol": "scope/access, search, save, update, review, forget, remove, erase, sanitization",
+        "url": "https://github.com/HelpCode-ai/anythingmcp/blob/e216684cb7b15a78bcba915dc400f91de12dfcb3/packages/backend/src/memory/memory.service.ts"
+      },
+      {
+        "id": "memory-controller",
+        "label": "Memory API controller",
+        "path": "packages/backend/src/memory/memory.controller.ts",
+        "symbol": "dashboard and memory operation routes and access checks",
+        "url": "https://github.com/HelpCode-ai/anythingmcp/blob/e216684cb7b15a78bcba915dc400f91de12dfcb3/packages/backend/src/memory/memory.controller.ts"
+      },
+      {
+        "id": "schema",
+        "label": "Prisma data model",
+        "path": "packages/backend/prisma/schema.prisma",
+        "symbol": "MemoryItem fields, relations, indexes, generated search vector",
+        "url": "https://github.com/HelpCode-ai/anythingmcp/blob/e216684cb7b15a78bcba915dc400f91de12dfcb3/packages/backend/prisma/schema.prisma"
+      },
+      {
+        "id": "migration",
+        "label": "Workspace memory database migration",
+        "path": "packages/backend/prisma/migrations/20261019180000_workspace_memory/migration.sql",
+        "symbol": "stored tsvector and GIN index",
+        "url": "https://github.com/HelpCode-ai/anythingmcp/blob/e216684cb7b15a78bcba915dc400f91de12dfcb3/packages/backend/prisma/migrations/20261019180000_workspace_memory/migration.sql"
+      },
+      {
+        "id": "kg-service",
+        "label": "Knowledge graph service",
+        "path": "packages/backend/src/knowledge-graph/kg.service.ts",
+        "symbol": "entity-associated memory facts surfaced through graph retrieval",
+        "url": "https://github.com/HelpCode-ai/anythingmcp/blob/e216684cb7b15a78bcba915dc400f91de12dfcb3/packages/backend/src/knowledge-graph/kg.service.ts"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "global not_run status; no AnythingMCP results",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned workload only",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated system roster locator",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 60, system name, slug, listed locator and source attribution only",
+        "url": "../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The public repository identifies AnythingMCP as an open-source, self-hosted MCP gateway built by HelpCode.ai. Workspace memory is a feature of the larger gateway, exposed through per-server MCP tools and a management API/dashboard; the official memory documentation says it requires an Enterprise licence.",
+        "sources": [
+          "repo",
+          "readme",
+          "memory-doc"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Code observation: the backend MemoryService uses Prisma and PostgreSQL. MemoryItem rows contain organization, personal-or-organization scope, optional owner, fact/preference/note kind, text, tags, active/pending/rejected status, JSON source metadata, optional normalized about entity and organization folder, creator and approver IDs, approval time, and creation/update timestamps. A generated tsvector over content is GIN-indexed.",
+        "sources": [
+          "memory-service",
+          "schema",
+          "migration"
+        ]
+      },
+      {
+        "text": "Organization memory shares the workspace folder tree with AI skills. The docs describe role-limited folder visibility on memory search and graph retrieval. The knowledge graph stores connector/entity/field names and relationships; about-tagged active memory facts can be surfaced through kg_how_to_obtain for callers allowed to read them.",
+        "sources": [
+          "memory-doc",
+          "graph-doc",
+          "kg-service"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Writes — code observation: memory_save stores a personal item for the caller, or an organization proposal for a caller with contribute access. Organization writes default to pending review; workspace settings can enable automatic activation, while dashboard curators can write active items. The service sanitizes credential-like and instruction-override text, normalizes about/tags, and stores source channel, optional MCP server/client, and creator. Code bounds: 2,000 content characters, 10 tags of at most 40 characters, 1,000 personal items per member/workspace, 20,000 organization items per workspace, and 200 pending organization proposals.",
+        "sources": [
+          "memory-service",
+          "memory-controller",
+          "memory-doc"
+        ]
+      },
+      {
+        "text": "Update and review — code observation: dashboard edits update the item in place. Admins/editors may approve or reject pending organization items, storing approver and approval time. The inspected MemoryItem model and service path expose no prior-content revision history; AI-skill versioning is a separate feature.",
+        "sources": [
+          "memory-service",
+          "memory-controller",
+          "schema",
+          "graph-doc"
+        ]
+      },
+      {
+        "text": "Deletion — code observation: memory_forget deletes only the caller's personal item; dashboard removal supports its personal owner or an organization curator. Administrators can erase a member's personal rows in one workspace and this path logs an aggregate erasure security event. The inspected item path has no tombstone or general per-item mutation history. Documentation says account/workspace removal deletes personal memory and that stored rows remain when a licence expires so admins can still erase them.",
+        "sources": [
+          "memory-service",
+          "memory-controller",
+          "memory-doc"
+        ]
+      },
+      {
+        "text": "Retrieval — code observation: search filters to active records in the caller's organization and applies scope, owner, folder visibility, and optional normalized about entity. Empty query returns recently updated visible rows. Text queries become any-word prefix terms (up to 12), PostgreSQL full-text matches are ranked with ts_rank, and a case-insensitive substring search is used if full-text finds no rows. Query input is capped at 300 characters and result count at 1–50 (default 10). Docs describe the simple text configuration and no embedding requirement. The graph tool can return matching active facts subject to the same memory visibility.",
+        "sources": [
+          "memory-service",
+          "memory-doc",
+          "migration",
+          "kg-service"
+        ]
+      },
+      {
+        "text": "Scope isolation — code observation: calls require a user identity, organization membership, and a licensed workspace. Queries filter organization; personal results also filter owner; organization results use access-level and folder-visibility checks. Non-members, deactivated members, or callers without a user identity receive no memory access. These are inspected source predicates; no live leakage test was performed.",
+        "sources": [
+          "memory-service",
+          "memory-controller",
+          "memory-doc"
+        ]
+      },
+      {
+        "text": "Provenance and trust — code observation: rows record whether the source was MCP or UI, optional MCP server/client, creator, and (for approved organization rows) approver and approval time. Documentation says served content is presented as information written by people, not instructions. Input filters refuse recognized credential and prompt-injection patterns. This provenance does not prove factual correctness or source citation support.",
+        "sources": [
+          "schema",
+          "memory-service",
+          "memory-doc"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency and observability: PostgreSQL full-text search uses a generated indexed tsvector; queries are bounded, result counts capped, and writes have item/tag limits. The inspected service logs security events for access/settings changes and aggregate personal-memory erasure, but no general per-item write/update/delete event was found in the inspected operation paths. These are source observations, not measurements.",
+        "sources": [
+          "memory-service",
+          "migration",
+          "memory-controller"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention are unmeasured. Code provides ranked full-text search and substring fallback; no answer-quality or abstention probes were run.",
+        "sources": [
+          "memory-service",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate are unmeasured. Memory rows can be updated in place, with no inspected prior-value history; no correction probes were run.",
+        "sources": [
+          "memory-service",
+          "schema",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Deletion leakage is unmeasured. Delete and erase paths exist, but no post-deletion query or backup/replica erasure investigation was performed.",
+        "sources": [
+          "memory-service",
+          "memory-doc",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Scope-isolation leakage is unmeasured. Organization, owner, access, and folder filters are visible in code; no cross-scope workload was run.",
+        "sources": [
+          "memory-service",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Evidence support and citation coverage are unmeasured. Memory has source-channel and actor metadata but no required supporting-source citation field; no claim-evidence review was run.",
+        "sources": [
+          "schema",
+          "memory-service",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Latency and write-to-recall delay are unmeasured; no system or benchmark timing was collected.",
+        "sources": [
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Tokens, cost, and storage efficiency are unmeasured. Docs state that memory search does not need an embedding provider; no resource measurements were collected.",
+        "sources": [
+          "memory-doc",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Source-visible instrumentation: full-text index and query/result bounds, input-size/count limits, and security events for access/settings changes and erasure are present. This does not establish measured latency, throughput, reliability, or a complete item-level mutation audit.",
+        "sources": [
+          "memory-service",
+          "migration",
+          "memory-controller"
+        ]
+      }
+    ],
+    "limits": [
+      "This is a bounded review of current README, memory/knowledge-graph documentation, memory service/controller/schema, search migration, and graph integration at one SHA.",
+      "The review did not execute AnythingMCP, tests, or benchmark workloads; it does not establish runtime correctness, retrieval quality, isolation under deployment, complete deletion/backup erasure, performance, token use, cost, or storage efficiency.",
+      "Workspace memory is Enterprise-licensed in the official documentation. Source-enforced item limits include 1,000 personal items per member/workspace, 20,000 organization items per workspace, and a 2,000-character item limit.",
+      "The inspected item model has no revision chain or required source citation field. Whether other product-level audit systems retain per-item changes was not established by this bounded inspection."
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "The shared project execution record is not_run and contains no AnythingMCP measurements. The benchmark fixture is planned only; no system, benchmark, or tests were run."
+    }
+  }
+}

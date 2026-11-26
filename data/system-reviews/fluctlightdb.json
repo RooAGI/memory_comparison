@@ -1,0 +1,361 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 245,
+    "slug": "fluctlightdb",
+    "name": "FluctlightDB",
+    "repository": "https://github.com/voxmastery/FluctlightDB",
+    "listed_repository": "https://github.com/voxmastery/FluctlightDB",
+    "branch": "main",
+    "revision": "f8ef9d609ff39b4770b257aaf64d7feb74a08b7a",
+    "reviewed_at": "2026-11-25T23:46:30Z",
+    "review_timezone": "UTC (checked local time: 2026-11-25 15:46:30 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "FluctlightDB is a Rust memory engine with Python and HTTP interfaces. It stores episodic memories as Episodes inside neural Engrams and recalls them from cues through a hybrid index and graph activation path. A brain is persisted in a local brain directory or legacy file; multi-agent/server setups add per-agent or per-tenant storage and access configuration.",
+    "atlas_locator": {
+      "ordinal": 245,
+      "name": "FluctlightDB",
+      "slug": "fluctlightdb",
+      "listed_repository": "https://github.com/voxmastery/FluctlightDB",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/fluctlightdb.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/voxmastery/FluctlightDB/blob/f8ef9d609ff39b4770b257aaf64d7feb74a08b7a/README.md",
+      "checked_urls": [
+        "https://github.com/voxmastery/FluctlightDB/blob/f8ef9d609ff39b4770b257aaf64d7feb74a08b7a/README.md",
+        "https://github.com/voxmastery/FluctlightDB/blob/f8ef9d609ff39b4770b257aaf64d7feb74a08b7a/SECURITY.md"
+      ],
+      "note": "The official pinned README and SECURITY.md were checked. They describe maintainer contact through GitHub but publish no contact email. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/voxmastery/FluctlightDB/blob/f8ef9d609ff39b4770b257aaf64d7feb74a08b7a/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/voxmastery/FluctlightDB/blob/f8ef9d609ff39b4770b257aaf64d7feb74a08b7a/README.md",
+      "https://github.com/voxmastery/FluctlightDB/blob/f8ef9d609ff39b4770b257aaf64d7feb74a08b7a/SECURITY.md"
+    ],
+    "contact_email_note": "No email address was published in the checked official pinned README or SECURITY.md; both exact checked URLs are recorded.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[244], ordinal 245; FluctlightDB identity, explicit listed repository locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/fluctlightdb.md",
+        "symbol": "Pinned curated identity and repository locator; excluded from system assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/fluctlightdb.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository page",
+        "path": "repository page",
+        "symbol": "Canonical voxmastery/FluctlightDB and default branch main",
+        "url": "https://github.com/voxmastery/FluctlightDB"
+      },
+      {
+        "id": "head",
+        "label": "Official current main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Full main head f8ef9d609ff39b4770b257aaf64d7feb74a08b7a, feed update 2026-11-03T06:20:01Z",
+        "url": "https://github.com/voxmastery/FluctlightDB/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "System description, memory API, persistence, retrieval modes, integrations, and published benchmark caveats; checked for contact email",
+        "url": "https://github.com/voxmastery/FluctlightDB/blob/f8ef9d609ff39b4770b257aaf64d7feb74a08b7a/README.md"
+      },
+      {
+        "id": "types",
+        "label": "Episode and provenance types",
+        "path": "crates/fluctlightdb/src/types.rs",
+        "symbol": "Episode fields, provenance and RAG references, experience/sleep/viz reports, recall result model",
+        "url": "https://github.com/voxmastery/FluctlightDB/blob/f8ef9d609ff39b4770b257aaf64d7feb74a08b7a/crates/fluctlightdb/src/types.rs"
+      },
+      {
+        "id": "engram",
+        "label": "Engram data model",
+        "path": "crates/fluctlightdb/src/engram.rs",
+        "symbol": "Engram fields, episode link, neural sets, salience and encoding metadata",
+        "url": "https://github.com/voxmastery/FluctlightDB/blob/f8ef9d609ff39b4770b257aaf64d7feb74a08b7a/crates/fluctlightdb/src/engram.rs"
+      },
+      {
+        "id": "brain",
+        "label": "Brain aggregate and lifecycle",
+        "path": "crates/fluctlightdb/src/brain.rs",
+        "symbol": "FluctlightBrain aggregate, subsystem composition, checkpoint and lifecycle code",
+        "url": "https://github.com/voxmastery/FluctlightDB/blob/f8ef9d609ff39b4770b257aaf64d7feb74a08b7a/crates/fluctlightdb/src/brain.rs"
+      },
+      {
+        "id": "activation",
+        "label": "Activation and recall implementation",
+        "path": "crates/fluctlightdb/src/activation.rs",
+        "symbol": "Cue activation, graph spreading and recall modes",
+        "url": "https://github.com/voxmastery/FluctlightDB/blob/f8ef9d609ff39b4770b257aaf64d7feb74a08b7a/crates/fluctlightdb/src/activation.rs"
+      },
+      {
+        "id": "store",
+        "label": "Snapshot and persistence implementation",
+        "path": "crates/fluctlightdb/src/store.rs",
+        "symbol": "Atomic snapshot save, v3/v4 storage, WAL truncate/flush, verification and backup options",
+        "url": "https://github.com/voxmastery/FluctlightDB/blob/f8ef9d609ff39b4770b257aaf64d7feb74a08b7a/crates/fluctlightdb/src/store.rs"
+      },
+      {
+        "id": "cli",
+        "label": "Official CLI reference",
+        "path": "docs/CLI.md",
+        "symbol": "Experience/recall/forget operations, HTTP forget operations, worker and candidate-cap/cache settings",
+        "url": "https://github.com/voxmastery/FluctlightDB/blob/f8ef9d609ff39b4770b257aaf64d7feb74a08b7a/docs/CLI.md"
+      },
+      {
+        "id": "tenant",
+        "label": "Tenant storage configuration",
+        "path": "crates/fluctlightdb/src/tenant.rs",
+        "symbol": "TenantConfig, hashed tenant path resolution, containment checks and per-tenant resource limits",
+        "url": "https://github.com/voxmastery/FluctlightDB/blob/f8ef9d609ff39b4770b257aaf64d7feb74a08b7a/crates/fluctlightdb/src/tenant.rs"
+      },
+      {
+        "id": "confidence",
+        "label": "Confidence and corroboration",
+        "path": "crates/fluctlightdb/src/confidence.rs",
+        "symbol": "Source-kind priors, recency/corroboration confidence and activation multiplier",
+        "url": "https://github.com/voxmastery/FluctlightDB/blob/f8ef9d609ff39b4770b257aaf64d7feb74a08b7a/crates/fluctlightdb/src/confidence.rs"
+      },
+      {
+        "id": "getting-started",
+        "label": "Getting started guide",
+        "path": "docs/GETTING_STARTED.md",
+        "symbol": "Per-agent brain layout, embedded and shared-server paths, storage notes; version examples are older than current README",
+        "url": "https://github.com/voxmastery/FluctlightDB/blob/f8ef9d609ff39b4770b257aaf64d7feb74a08b7a/docs/GETTING_STARTED.md"
+      },
+      {
+        "id": "multi-agent",
+        "label": "Multi-agent guide",
+        "path": "docs/MULTI_AGENT.md",
+        "symbol": "Project hub plus per-tool agent brain layout, local-first default and team-sync option",
+        "url": "https://github.com/voxmastery/FluctlightDB/blob/f8ef9d609ff39b4770b257aaf64d7feb74a08b7a/docs/MULTI_AGENT.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Published state of audit/hardening and server auth model; checked for a contact email",
+        "url": "https://github.com/voxmastery/FluctlightDB/blob/f8ef9d609ff39b4770b257aaf64d7feb74a08b7a/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Required benchmark metric domains",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned workload fixture definition; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project baseline execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared benchmark run status; no FluctlightDB result was measured in this task",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository presents FluctlightDB as a database engine for AI-agent memory. The repository is under the voxmastery GitHub account; this review does not infer an individual maintainer identity from commit or profile metadata.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The Rust FluctlightBrain is the aggregate for life/development state, graph, hippocampus, cortex, amygdala, prefrontal state and related subsystems. An Episode carries content, context, optional outcome, salience, optional semantic vector, optional agent/tenant identifiers, optional RAG reference, and optional provenance; an Engram couples the episode with sparse neuron sets, salience and encoding metadata.",
+        "sources": [
+          "brain",
+          "types",
+          "engram"
+        ]
+      },
+      {
+        "text": "The README exposes Python entry points such as connect_embedded() and connect_project(), with a Rust core and optional HTTP and MCP integrations. The README describes FTS5/vector candidates plus graph spreading in activate(); activation code implements cue-driven spreading over the brain graph, with vector-fast and agent-fast modes.",
+        "sources": [
+          "readme",
+          "activation"
+        ]
+      },
+      {
+        "text": "Durability is explicit: turn_end(flush=True) commits working-memory content, and checkpoint() persists the brain. Store code writes atomic snapshots in v3 or v4 layouts and truncates/flushes the write-ahead log after a successful locked save; optional backup and post-save verification are environment-controlled.",
+        "sources": [
+          "readme",
+          "store"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: experience() records an episode as an Engram; wm_push() adds working-memory content, which can be flushed at turn end. The public reference also documents bulk ingest/index paths. Capture and salience/provenance fields are supplied through the caller-facing memory API.",
+        "sources": [
+          "readme",
+          "cli",
+          "types",
+          "engram"
+        ]
+      },
+      {
+        "text": "Update/correction: the inspected CLI reference documents adding memories and forgetting an engram by UUID, but does not describe an in-place edit or versioned correction API. A caller can remove an old engram and add a corrected experience; the review did not establish atomic replacement or a retained correction history.",
+        "sources": [
+          "cli",
+          "readme"
+        ]
+      },
+      {
+        "text": "Delete: the shell exposes forget UUID (with --writable); HTTP query operations include forget and forget_before. These are explicit removal operations. This source review did not establish erasure from backups, replicas, previously exported snapshots or every derived/cache structure, nor a deletion audit receipt.",
+        "sources": [
+          "cli",
+          "store",
+          "security"
+        ]
+      },
+      {
+        "text": "Retrieval: recall() is the same-turn working-memory path; activate(cue) performs cue-based retrieval with graph spreading and can combine index candidates and optional semantic input. Results include matching Episodes, activation/completion strength and diagnostic fields; HTTP responses are capped, with the documented default API recall limit of eight.",
+        "sources": [
+          "readme",
+          "activation",
+          "types",
+          "cli"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Cue activation and recall are implemented; no answerable/abstain workload was executed or scored.",
+        "sources": [
+          "readme",
+          "activation",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "The inspected CLI documents forget and new writes but no scored correction sequence; stale-value behavior was not tested.",
+        "sources": [
+          "cli",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Forget and forget_before are documented, but no post-delete probe or durable erasure test was run.",
+        "sources": [
+          "cli",
+          "store",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Per-agent brain directories and server tenant loci are documented/implemented; no cross-agent or cross-tenant leakage workload was run.",
+        "sources": [
+          "getting-started",
+          "tenant",
+          "multi-agent",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Episodes carry provenance and RAG source identifiers and confidence metadata; claim support and citation accuracy were not adjudicated.",
+        "sources": [
+          "types",
+          "confidence",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The sources describe fast/embedded paths, an index, a candidate cap and a recall cache; no latency or write-to-recall timing was measured here.",
+        "sources": [
+          "readme",
+          "cli",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Local snapshot, WAL and directory storage paths were inspected; no token, provider-cost, disk-size or workload storage measurements were collected.",
+        "sources": [
+          "store",
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The review is tied to the current main SHA. The repository has several connection modes and optional retrieval features; actual behavior depends on selected mode and configuration. Public benchmark figures are maintainer-reported in the README and were not independently reproduced or treated as measurements from this review.",
+        "sources": [
+          "readme",
+          "head",
+          "activation"
+        ]
+      },
+      {
+        "text": "Episode agent_id and tenant_id are optional data fields. Separate per-agent brain directories and hashed server tenant loci are documented, but this review does not establish that arbitrary embedded callers receive automatic scope filtering. The official security policy says the HTTP multi-tenant service is not production-hardened and has not had a professional penetration test or formal audit.",
+        "sources": [
+          "types",
+          "getting-started",
+          "tenant",
+          "multi-agent",
+          "security"
+        ]
+      },
+      {
+        "text": "The README and getting-started guide show different package versions/examples, so older guide instructions may lag current main. This review did not run the library, tests, or benchmarks; quality, abstention, correction/deletion leakage, isolation, latency, token use, cost, and storage remain unknown.",
+        "sources": [
+          "readme",
+          "getting-started",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No FluctlightDB runtime, tests or benchmarks were run for this review. Upstream README performance/quality claims are maintainer-reported and are not measurements from this task; source observations and project metric definitions are not benchmark results."
+    }
+  }
+}

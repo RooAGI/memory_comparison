@@ -1,0 +1,335 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "automem",
+    "name": "AutoMem",
+    "repository": "https://github.com/verygoodplugins/automem",
+    "branch": "develop",
+    "revision": "18569b4a1399c31dea3a8ec63c3082ab32f0dfb2",
+    "reviewed_at": "2026-11-24T23:11:43Z",
+    "review_timezone": "UTC (2026-11-24 15:11:43 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/verygoodplugins/automem/blob/18569b4a1399c31dea3a8ec63c3082ab32f0dfb2/README.md","checked_urls":["https://github.com/verygoodplugins/automem/blob/18569b4a1399c31dea3a8ec63c3082ab32f0dfb2/README.md","https://github.com/verygoodplugins/automem/blob/18569b4a1399c31dea3a8ec63c3082ab32f0dfb2/SECURITY.md","https://github.com/verygoodplugins/automem/blob/18569b4a1399c31dea3a8ec63c3082ab32f0dfb2/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "A self-hostable memory API for AI assistants that pairs a FalkorDB graph as its canonical record with Qdrant vectors for semantic retrieval, exposed through REST and MCP integrations. This review reports pinned source and documentation observations; it does not measure runtime quality or performance.",
+    "atlas_locator": {
+      "ordinal": 84,
+      "name": "AutoMem",
+      "slug": "automem",
+      "listed_repository": "https://github.com/verygoodplugins/automem",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/automem.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/verygoodplugins/automem/blob/18569b4a1399c31dea3a8ec63c3082ab32f0dfb2/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/verygoodplugins/automem/blob/18569b4a1399c31dea3a8ec63c3082ab32f0dfb2/README.md",
+      "https://github.com/verygoodplugins/automem/blob/18569b4a1399c31dea3a8ec63c3082ab32f0dfb2/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical official public repository",
+        "path": "repository",
+        "symbol": "verygoodplugins/automem",
+        "url": "https://github.com/verygoodplugins/automem"
+      },
+      {
+        "id": "metadata",
+        "label": "GitHub repository metadata",
+        "path": "repository metadata",
+        "symbol": "default_branch=develop; public organization-owned repository",
+        "url": "https://api.github.com/repos/verygoodplugins/automem"
+      },
+      {
+        "id": "head",
+        "label": "Current default-branch head",
+        "path": "commit",
+        "symbol": "full SHA 18569b4a1399c31dea3a8ec63c3082ab32f0dfb2",
+        "url": "https://github.com/verygoodplugins/automem/commit/18569b4a1399c31dea3a8ec63c3082ab32f0dfb2"
+      },
+      {
+        "id": "feed",
+        "label": "Official current develop commits feed",
+        "path": "commits/develop.atom",
+        "symbol": "head full SHA; feed updated 2026-11-23T01:21:28Z",
+        "url": "https://github.com/verygoodplugins/automem/commits/develop.atom"
+      },
+      {
+        "id": "readme",
+        "label": "README at reviewed revision",
+        "path": "README.md",
+        "url": "https://github.com/verygoodplugins/automem/blob/18569b4a1399c31dea3a8ec63c3082ab32f0dfb2/README.md"
+      },
+      {
+        "id": "api",
+        "label": "API reference at reviewed revision",
+        "path": "docs/API.md",
+        "url": "https://github.com/verygoodplugins/automem/blob/18569b4a1399c31dea3a8ec63c3082ab32f0dfb2/docs/API.md"
+      },
+      {
+        "id": "memory",
+        "label": "Memory create, update, and delete route source",
+        "path": "automem/api/memory.py",
+        "symbol": "POST, PATCH, DELETE and batch write handlers",
+        "url": "https://github.com/verygoodplugins/automem/blob/18569b4a1399c31dea3a8ec63c3082ab32f0dfb2/automem/api/memory.py"
+      },
+      {
+        "id": "recall",
+        "label": "Recall implementation",
+        "path": "automem/api/recall.py",
+        "symbol": "candidate filtering, state handling, replacement traversal, expansion",
+        "url": "https://github.com/verygoodplugins/automem/blob/18569b4a1399c31dea3a8ec63c3082ab32f0dfb2/automem/api/recall.py"
+      },
+      {
+        "id": "payload",
+        "label": "Canonical Qdrant payload builder",
+        "path": "automem/stores/vector_payload.py",
+        "symbol": "build_qdrant_payload; content_fingerprint",
+        "url": "https://github.com/verygoodplugins/automem/blob/18569b4a1399c31dea3a8ec63c3082ab32f0dfb2/automem/stores/vector_payload.py"
+      },
+      {
+        "id": "auth",
+        "label": "API token extraction and enforcement",
+        "path": "automem/api/auth_helpers.py",
+        "symbol": "extract_api_token; require_api_token",
+        "url": "https://github.com/verygoodplugins/automem/blob/18569b4a1399c31dea3a8ec63c3082ab32f0dfb2/automem/api/auth_helpers.py"
+      },
+      {
+        "id": "health",
+        "label": "Official health monitoring guide",
+        "path": "docs/HEALTH_MONITORING.md",
+        "symbol": "database/API checks, graph/vector count drift, alert-only default",
+        "url": "https://github.com/verygoodplugins/automem/blob/18569b4a1399c31dea3a8ec63c3082ab32f0dfb2/docs/HEALTH_MONITORING.md"
+      },
+      {
+        "id": "contact_readme",
+        "label": "Official README checked for published contact email",
+        "path": "README.md",
+        "symbol": "No contact email listed in the reviewed README",
+        "url": "https://github.com/verygoodplugins/automem/blob/18569b4a1399c31dea3a8ec63c3082ab32f0dfb2/README.md"
+      },
+      {
+        "id": "contact_security",
+        "label": "Official SECURITY.md contact check",
+        "path": "SECURITY.md",
+        "symbol": "Pinned path returns File not found",
+        "url": "https://github.com/verygoodplugins/automem/blob/18569b4a1399c31dea3a8ec63c3082ab32f0dfb2/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog identity and source attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "Position 84; Atlas locator attribution retained; assessment descriptions and marks excluded",
+        "url": "../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official GitHub metadata identifies verygoodplugins as the repository-owning organization. The README and API reference describe AutoMem as a self-hostable long-term memory service with REST and MCP interfaces for AI assistants.",
+        "sources": [
+          "metadata",
+          "readme",
+          "api"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README describes FalkorDB as the canonical graph record for memory nodes and typed relationships, and Qdrant as the vector index for memory embeddings. It documents graph-backed degraded recall when Qdrant is unavailable and API failure when the canonical graph store is unavailable.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The memory API accepts content, tags, importance, type, confidence, timestamp, metadata, and temporal validity fields. The common Qdrant payload builder copies content plus a SHA-256 content fingerprint, tag prefixes, ranking fields, temporal state, archive state, metadata, and access/update timestamps from graph properties.",
+        "sources": [
+          "api",
+          "memory",
+          "payload"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: the API documents POST /memory and batch writes. The memory route code validates batch items, writes graph records, upserts or queues Qdrant embeddings, queues enrichment, and emits elapsed-time and vector-status fields. These are implementation paths, not evidence of measured reliability or write-to-recall delay.",
+        "sources": [
+          "api",
+          "memory"
+        ]
+      },
+      {
+        "text": "Update: PATCH /memory/{id} accepts partial content, tag, importance, type, confidence, timestamp, and metadata changes. The current memory route clears content-derived entity/enrichment fields and re-queues enrichment when content changes; the README/API do not promise a general correction history.",
+        "sources": [
+          "api",
+          "memory"
+        ]
+      },
+      {
+        "text": "Delete: the API documents DELETE by memory ID and by tag. This bounded review did not trace all graph, Qdrant, edge, backup, and derived-index cleanup paths, so deletion completeness and post-delete leakage are unknown.",
+        "sources": [
+          "api",
+          "memory"
+        ]
+      },
+      {
+        "text": "Retrieval: GET /recall combines semantic, keyword, metadata, tag, relation, recency, and importance signals. Current-state mode is default and suppresses expired, future, archived, and replaced records; history mode can return them. Replacement traversal is bounded and cycle-safe. Relation/entity expansion and optional scope fallback have explicit tag-scope behavior, but none of this establishes adjudicated recall quality.",
+        "sources": [
+          "readme",
+          "api",
+          "recall"
+        ]
+      },
+      {
+        "text": "Scope: API authentication is a configured service token. The inspected API and token helper do not identify a user, project, or tenant from that token; tag filters are caller-provided retrieval filters rather than an authorization model. Expansion can bypass tag scope by default, and opt-in scope_fallback searches unscoped vectors while labeling those fills.",
+        "sources": [
+          "api",
+          "auth",
+          "recall"
+        ]
+      },
+      {
+        "text": "Provenance: records and recall include IDs, timestamps, metadata, validity fields, and typed relation/replacement context. The reviewed API contract does not establish source-document lineage for every stored memory or claim-level citations in assistant answers.",
+        "sources": [
+          "api",
+          "payload",
+          "recall"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Hybrid retrieval and ranking are visible in docs and code; no adjudicated answerable or no-answer probes were run.",
+        "sources": [
+          "api",
+          "recall",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Patch and current/history filtering are documented; no post-correction probes were run.",
+        "sources": [
+          "api",
+          "memory",
+          "recall",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "ID and tag deletion endpoints are documented, but cross-store erasure completeness and post-delete leakage were not checked.",
+        "sources": [
+          "api",
+          "memory",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Tag filter, relation-expansion, and fallback behavior are source-visible; no cross-scope runtime probes were run.",
+        "sources": [
+          "api",
+          "auth",
+          "recall",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Record identifiers and relation provenance are available, but answer-level evidence support was not evaluated.",
+        "sources": [
+          "api",
+          "payload",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The write route emits elapsed-time fields and background work is queued; no latency distributions or acknowledgement-to-recall timings were collected.",
+        "sources": [
+          "memory",
+          "api",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Embedding and optional enrichment are source-visible; no workload token, charge, or persistent-storage measurements were collected.",
+        "sources": [
+          "readme",
+          "api",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Source-visible observability",
+        "status": "code_observation",
+        "evidence": "The API reference describes operation SSE events and structured elapsed/count/status fields, enrichment queue/status counters, and health monitoring for service connectivity and graph/vector count drift. These are instrumentation surfaces, not observed service outcomes.",
+        "sources": [
+          "memory",
+          "api",
+          "health"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The review is bounded to the official README, API reference, memory and recall routes, Qdrant payload helper, authentication helper, and health monitoring guide. It did not execute AutoMem, inspect every persistence and background-worker path, or trace deletion end to end.",
+        "sources": [
+          "readme",
+          "api",
+          "memory",
+          "recall",
+          "payload",
+          "auth",
+          "health"
+        ]
+      },
+      {
+        "text": "The source and documentation cannot establish answer quality, authorization isolation across a real deployment, deletion propagation to every store and backup, operational recovery success, or production latency. Documentation statements about benchmark outcomes or limitations remain upstream claims and are not measurements made by this review.",
+        "sources": [
+          "readme",
+          "api",
+          "health",
+          "metrics",
+          "record"
+        ]
+      }
+    ]
+  }
+}

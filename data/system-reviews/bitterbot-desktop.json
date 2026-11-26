@@ -1,0 +1,426 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "bitterbot-desktop",
+    "name": "BitterBot Desktop",
+    "repository": "https://github.com/Bitterbot-AI/bitterbot-desktop",
+    "branch": "main",
+    "revision": "a0d01b11fae1a73c482f95d00ab4f8df251d737d",
+    "reviewed_at": "2026-11-25T00:04:35Z",
+    "review_timezone": "UTC (2026-11-25 00:04:35; America/Los_Angeles 2026-11-24 16:04:35 PST)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":"victor@bitterbot.net","source_url":"https://github.com/Bitterbot-AI/bitterbot-desktop/blob/a0d01b11fae1a73c482f95d00ab4f8df251d737d/README.md","note":"Published in the official README."},
+    "summary": "Bitterbot Desktop is a local-first personal agent whose memory combines searchable conversation and file chunks, canonical facts, and a knowledge graph in SQLite. This review describes selected source and official documentation at a verified upstream revision; it does not run the application or measure retrieval quality or performance.",
+    "atlas_locator": {
+      "ordinal": 95,
+      "name": "BitterBot Desktop",
+      "slug": "bitterbot-desktop",
+      "listed_repository": "https://github.com/Bitterbot-AI/bitterbot-desktop",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/bitterbot-desktop.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": "victor@bitterbot.net",
+    "contact_email_source_url": "https://github.com/Bitterbot-AI/bitterbot-desktop/blob/a0d01b11fae1a73c482f95d00ab4f8df251d737d/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/Bitterbot-AI/bitterbot-desktop/blob/a0d01b11fae1a73c482f95d00ab4f8df251d737d/README.md",
+      "https://github.com/Bitterbot-AI/bitterbot-desktop/blob/a0d01b11fae1a73c482f95d00ab4f8df251d737d/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical Bitterbot Desktop repository",
+        "path": "repository",
+        "symbol": "Bitterbot-AI/bitterbot-desktop",
+        "url": "https://github.com/Bitterbot-AI/bitterbot-desktop"
+      },
+      {
+        "id": "history",
+        "label": "Official main branch Atom feed reporting current head",
+        "path": "commits/main.atom",
+        "symbol": "Full SHA a0d01b11fae1a73c482f95d00ab4f8df251d737d; updated 2026-11-24T16:35:08Z",
+        "url": "https://github.com/Bitterbot-AI/bitterbot-desktop/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed full head commit",
+        "path": "commit",
+        "symbol": "full SHA a0d01b11fae1a73c482f95d00ab4f8df251d737d",
+        "url": "https://github.com/Bitterbot-AI/bitterbot-desktop/commit/a0d01b11fae1a73c482f95d00ab4f8df251d737d"
+      },
+      {
+        "id": "readme",
+        "label": "Official README and maintainer contact",
+        "path": "README.md",
+        "url": "https://github.com/Bitterbot-AI/bitterbot-desktop/blob/a0d01b11fae1a73c482f95d00ab4f8df251d737d/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy and security contact",
+        "path": "SECURITY.md",
+        "url": "https://github.com/Bitterbot-AI/bitterbot-desktop/blob/a0d01b11fae1a73c482f95d00ab4f8df251d737d/SECURITY.md"
+      },
+      {
+        "id": "architecture-doc",
+        "label": "Official memory architecture overview",
+        "path": "docs/memory/architecture-overview.md",
+        "url": "https://github.com/Bitterbot-AI/bitterbot-desktop/blob/a0d01b11fae1a73c482f95d00ab4f8df251d737d/docs/memory/architecture-overview.md"
+      },
+      {
+        "id": "memory-how",
+        "label": "Official explanation of how memory works",
+        "path": "docs/memory/how-the-memory-works.md",
+        "url": "https://github.com/Bitterbot-AI/bitterbot-desktop/blob/a0d01b11fae1a73c482f95d00ab4f8df251d737d/docs/memory/how-the-memory-works.md"
+      },
+      {
+        "id": "schema",
+        "label": "SQLite, chunk, vector, FTS and audit schema",
+        "path": "src/memory/memory-schema.ts",
+        "symbol": "ensureMemoryIndexSchema",
+        "url": "https://github.com/Bitterbot-AI/bitterbot-desktop/blob/a0d01b11fae1a73c482f95d00ab4f8df251d737d/src/memory/memory-schema.ts"
+      },
+      {
+        "id": "migrations",
+        "label": "Canonical facts and retrieval trace migrations",
+        "path": "src/memory/migrations.ts",
+        "symbol": "canonical_facts; retrieval_trace",
+        "url": "https://github.com/Bitterbot-AI/bitterbot-desktop/blob/a0d01b11fae1a73c482f95d00ab4f8df251d737d/src/memory/migrations.ts"
+      },
+      {
+        "id": "manager",
+        "label": "Memory indexing, write and retrieval orchestration",
+        "path": "src/memory/manager.ts",
+        "symbol": "MemoryIndexManager",
+        "url": "https://github.com/Bitterbot-AI/bitterbot-desktop/blob/a0d01b11fae1a73c482f95d00ab4f8df251d737d/src/memory/manager.ts"
+      },
+      {
+        "id": "search",
+        "label": "Vector and FTS retrieval SQL",
+        "path": "src/memory/manager-search.ts",
+        "symbol": "searchVector; searchKeyword",
+        "url": "https://github.com/Bitterbot-AI/bitterbot-desktop/blob/a0d01b11fae1a73c482f95d00ab4f8df251d737d/src/memory/manager-search.ts"
+      },
+      {
+        "id": "canonical",
+        "label": "Canonical fact ledger, trust and correction operations",
+        "path": "src/memory/canonical-facts.ts",
+        "symbol": "CanonicalFactsStore.pin; listActive; retire",
+        "url": "https://github.com/Bitterbot-AI/bitterbot-desktop/blob/a0d01b11fae1a73c482f95d00ab4f8df251d737d/src/memory/canonical-facts.ts"
+      },
+      {
+        "id": "owner",
+        "label": "Owner edit, forget, retirement, suppression and audit controls",
+        "path": "src/memory/owner-controls.ts",
+        "symbol": "editMemory; forgetMemory; retireFact",
+        "url": "https://github.com/Bitterbot-AI/bitterbot-desktop/blob/a0d01b11fae1a73c482f95d00ab4f8df251d737d/src/memory/owner-controls.ts"
+      },
+      {
+        "id": "cascade",
+        "label": "Forget cascade and dependent evidence handling",
+        "path": "src/memory/forget-cascade.ts",
+        "symbol": "planForgetCascade; applyForgetCascade",
+        "url": "https://github.com/Bitterbot-AI/bitterbot-desktop/blob/a0d01b11fae1a73c482f95d00ab4f8df251d737d/src/memory/forget-cascade.ts"
+      },
+      {
+        "id": "consolidation",
+        "label": "Decay, merge, soft forgetting and expiry purge",
+        "path": "src/memory/consolidation.ts",
+        "symbol": "ConsolidationEngine.run; purgeExpired",
+        "url": "https://github.com/Bitterbot-AI/bitterbot-desktop/blob/a0d01b11fae1a73c482f95d00ab4f8df251d737d/src/memory/consolidation.ts"
+      },
+      {
+        "id": "trace",
+        "label": "Sampled retrieval trace and lane health checks",
+        "path": "src/memory/retrieval-trace.ts",
+        "symbol": "recordRetrievalTrace; RetrievalObservability",
+        "url": "https://github.com/Bitterbot-AI/bitterbot-desktop/blob/a0d01b11fae1a73c482f95d00ab4f8df251d737d/src/memory/retrieval-trace.ts"
+      },
+      {
+        "id": "graph",
+        "label": "Knowledge graph mutation and edge evidence",
+        "path": "src/memory/knowledge-graph.ts",
+        "symbol": "KnowledgeGraphManager",
+        "url": "https://github.com/Bitterbot-AI/bitterbot-desktop/blob/a0d01b11fae1a73c482f95d00ab4f8df251d737d/src/memory/knowledge-graph.ts"
+      },
+      {
+        "id": "controls-doc",
+        "label": "Owner memory controls, forget and correction behavior",
+        "path": "docs/memory/controls.md",
+        "url": "https://github.com/Bitterbot-AI/bitterbot-desktop/blob/a0d01b11fae1a73c482f95d00ab4f8df251d737d/docs/memory/controls.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture (protocol only)",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated ordinal, listed repository locator and Atlas attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[94], ordinal 95",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas-entry",
+        "label": "Roster attribution target; identity and locator only",
+        "path": "content/systems/bitterbot-desktop.md",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/bitterbot-desktop.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents Bitterbot as an open-source personal agent intended to run on the owner's hardware, with memory and identity stored locally. It names Victor Michael Gil as a builder and community contributors; this is a desktop/local-agent application rather than a hosted memory service.",
+        "sources": [
+          "readme",
+          "architecture-doc"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The memory manager indexes source files and conversation sessions into chunk records and their embeddings. The local SQLite schema includes files, chunks, an embedding cache, FTS5 keyword tables when available, and a separate sqlite-vec vector table managed by the manager. Additional migrations create the canonical-fact ledger, audit and retrieval-trace tables, and graph/dream-related stores.",
+        "sources": [
+          "architecture-doc",
+          "memory-how",
+          "schema",
+          "migrations",
+          "manager"
+        ]
+      },
+      {
+        "text": "A chunk carries source/path and line range, text/hash, embedding model and vector, lifecycle fields, importance and access metadata, and optional evidence references. The separate canonical_facts ledger stores exact keyed values with trust source, scope, confidence/confirmation timestamps, validity window, evidence chunk IDs/reference, and status. Knowledge-graph relationships retain edge validity and supporting chunk IDs.",
+        "sources": [
+          "schema",
+          "migrations",
+          "canonical",
+          "graph"
+        ]
+      },
+      {
+        "text": "The implementation combines indexed archival chunks with a canonical layer that can be injected by key, plus graph and other retrieval lanes. The documented architecture also includes background consolidation and dream cycles. These are source/documentation observations, not evidence that every lane contributes in a given deployment.",
+        "sources": [
+          "architecture-doc",
+          "memory-how",
+          "canonical",
+          "manager",
+          "trace"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write — code observation. File and session indexing creates chunk rows and corresponding vector/keyword index entries; the manager also has embedding-cache and pending-embedding backfill paths. Canonical `memory_pin` writes use a closed reconcile set: add a new key, strengthen a same-value fact, supersede a changed value, or reject a lower-trust/conflicting or invalid write. Sources have explicit trust tiers, with owner pins above agent pins and background extraction/research.",
+        "sources": [
+          "manager",
+          "schema",
+          "canonical",
+          "migrations"
+        ]
+      },
+      {
+        "text": "Update and correction — code observation. Owner editing an editable memory plans a forget cascade and creates a replacement memory, keeping the original source lineage; indexed source files and frozen skills are read-only in the owner controls, while transcript memories can be forgotten rather than edited. A changed canonical value closes the old row's validity interval and inserts a successor, preserving history instead of overwriting it.",
+        "sources": [
+          "owner",
+          "cascade",
+          "canonical",
+          "controls-doc"
+        ]
+      },
+      {
+        "text": "Delete and forgetting — code observation. Owner forget applies a dependency-aware cascade across the selected chunk and dependent facts, graph evidence, and other derived records, writes suppression markers to prevent reindexing the same text, and records a content-redacted audit event. Consolidation marks low-value chunks forgotten/expired and merged chunks archived with a parent; a separate retention purge later deletes their chunk, vector and FTS rows. Canonical facts are retired or superseded as history rather than erased by ordinary reconciliation.",
+        "sources": [
+          "owner",
+          "cascade",
+          "consolidation",
+          "canonical",
+          "schema"
+        ]
+      },
+      {
+        "text": "Retrieval — code observation. Search has vector and FTS5/BM25 lanes with hybrid fusion and further graph/canonical pathways in the manager. The vector path uses sqlite-vec nearest-neighbor matching with a bounded over-fetch followed by model/source filtering; a fallback path parses and scores stored embeddings in process. The FTS path ranks keyword matches with BM25. Canonical exact-key results and active, visible facts can be rendered separately from similarity-gated chunks.",
+        "sources": [
+          "search",
+          "manager",
+          "canonical",
+          "architecture-doc"
+        ]
+      },
+      {
+        "text": "Scope observation. The primary deployment stores one owner's data in a local database. Canonical facts support `global`, `project:<name>`, and `person:<name>` scopes, and prompt rendering checks the active project for project-scoped facts. Guest access filtering is a separate sensitivity/path policy, not a general tenant or per-user namespace on every chunk. The inspected source does not establish multi-tenant isolation.",
+        "sources": [
+          "readme",
+          "canonical",
+          "manager",
+          "owner",
+          "migrations"
+        ]
+      },
+      {
+        "text": "Provenance and evidence — code observation. Chunk records can carry typed evidence references; canonical facts retain supporting chunk IDs and an optional evidence reference; graph edges retain evidence chunk IDs. Owner edit/forget and consolidation write selected audit events, while retrieval traces record layer contribution counts without query text. The audit coverage is distributed across callers, so these fields should not be read as a complete provenance history for every mutation.",
+        "sources": [
+          "schema",
+          "canonical",
+          "graph",
+          "owner",
+          "consolidation",
+          "trace"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency and observability. SQLite, FTS5 and sqlite-vec keep retrieval local; embedding cache and indexes avoid repeated computation/scans. The vector query chooses at least 50 or four times the requested result limit before post-filtering. Consolidation caps pairwise merge inputs at 500 and yields periodically; live chunks load in batches of 50. Retrieval traces are sampled (default 5%) and best-effort, and a contribution monitor can flag lanes that stay inactive while other lanes work. These are implementation details, not measured latency or cost results.",
+        "sources": [
+          "architecture-doc",
+          "schema",
+          "search",
+          "consolidation",
+          "trace",
+          "manager",
+          "metrics"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Search lanes, exact-key canonical lookup and prompt injection are visible in source. No adjudicated answerable or unanswerable retrieval probes were run.",
+        "sources": [
+          "search",
+          "canonical",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Canonical supersession and validity history and owner edit paths are visible; no correction or stale-value evaluation was performed.",
+        "sources": [
+          "canonical",
+          "owner",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Owner forget, suppression, cascades, and expiry purge are implemented in source. No post-deletion retrieval probes were run.",
+        "sources": [
+          "owner",
+          "cascade",
+          "consolidation",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Source shows canonical scopes, project visibility checks, and a local owner database; there was no cross-scope or adversarial isolation test in this review.",
+        "sources": [
+          "canonical",
+          "manager",
+          "readme",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Chunk, canonical fact and graph evidence fields are visible, but no answer-level evidence-support adjudication or citation-coverage measurement was made.",
+        "sources": [
+          "schema",
+          "canonical",
+          "graph",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Source contains bounded search and batching strategies plus sampled traces, but this review collected no runtime timings or write-to-recall observations.",
+        "sources": [
+          "search",
+          "consolidation",
+          "trace",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No prompt-token accounting or provider cost measurement was collected for this system.",
+        "sources": [
+          "manager",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "SQLite schema and index structures were inspected, but no database-size, index-size, or storage-growth measurement was collected.",
+        "sources": [
+          "schema",
+          "architecture-doc",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a source review of selected files at one revision. It cannot establish runtime behavior across configuration variants, model providers, optional SQLite extensions, or deployments.",
+        "sources": [
+          "head",
+          "readme",
+          "architecture-doc"
+        ]
+      },
+      {
+        "text": "The system's local, owner-oriented database and separate guest sensitivity checks do not by themselves demonstrate tenant isolation. Lifecycle handling is split between chunk state and search-index membership; this review did not execute deletion/retrieval sequences to measure whether any stale item can surface.",
+        "sources": [
+          "manager",
+          "search",
+          "consolidation",
+          "owner"
+        ]
+      },
+      {
+        "text": "The inspected sources expose implementation paths and observability hooks but provide no measurements for recall, correction, deletion leakage, scope leakage, latency, tokens, cost or storage. Broader workflows such as dream-cycle quality and distributed skill exchange were outside this bounded review.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture",
+          "architecture-doc"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status: not_run. The project metric definitions and fixture describe measurement domains/protocol, while the project status record does not provide a measured Bitterbot result. No system execution, benchmark workload, or tests were run for this review.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      }
+    ]
+  }
+}

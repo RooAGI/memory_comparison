@@ -1,0 +1,366 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 305,
+    "slug": "holographic",
+    "name": "Holographic",
+    "repository": "https://github.com/itpartypattaya/hermes-plugin-holographic",
+    "listed_repository": "https://github.com/NousResearch/hermes-agent",
+    "branch": "main",
+    "revision": "ceb802be781e9e31cd9509755ad18ea46194a774",
+    "reviewed_at": "2026-11-25T23:28:14Z",
+    "review_timezone": "UTC (checked local time: 2026-11-25 15:28:14 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Holographic is a local SQLite memory provider for Hermes Agent. It stores versioned facts and entity links, and combines multilingual full-text matching, entity-aware recall, trust weighting, and optional holographic vector similarity. This review describes current source behavior; no runtime quality or performance was measured.",
+    "atlas_locator": {
+      "ordinal": 305,
+      "name": "Holographic",
+      "slug": "holographic",
+      "listed_repository": "https://github.com/NousResearch/hermes-agent",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/holographic.md",
+      "revision": "8df0a03793784205833f9e0db12395aa33ada433"
+    },
+    "catalog_position": {
+      "ordinal": 305,
+      "name": "Holographic",
+      "slug": "holographic"
+    },
+    "listed_repository_locator": "https://github.com/NousResearch/hermes-agent",
+    "catalog_source_url": "../data/memory-systems.json",
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/itpartypattaya/hermes-plugin-holographic/blob/ceb802be781e9e31cd9509755ad18ea46194a774/README.md",
+      "checked_urls": [
+        "https://github.com/itpartypattaya/hermes-plugin-holographic/blob/ceb802be781e9e31cd9509755ad18ea46194a774/README.md",
+        "https://hermes-agent.nousresearch.com/docs/user-guide/features/memory-providers"
+      ],
+      "note": "Checked only the maintained official plugin README and official Hermes memory-provider documentation for a published contact email; neither published one. No commit/profile metadata or third-party directories were used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/itpartypattaya/hermes-plugin-holographic/blob/ceb802be781e9e31cd9509755ad18ea46194a774/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/itpartypattaya/hermes-plugin-holographic/blob/ceb802be781e9e31cd9509755ad18ea46194a774/README.md",
+      "https://hermes-agent.nousresearch.com/docs/user-guide/features/memory-providers"
+    ],
+    "contact_email_note": "No email was published in the checked official README or official Hermes provider documentation.",
+    "sources": [
+      {
+        "id": "roster",
+        "label": "Curated catalog identity and listed locator",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[304], ordinal 305; Holographic, holographic, explicit NousResearch/hermes-agent locator and pinned Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/holographic.md",
+        "symbol": "Pinned attribution for curated identity and locator context only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/holographic.md"
+      },
+      {
+        "id": "listed",
+        "label": "Listed official upstream repository",
+        "path": "repository page",
+        "symbol": "Catalog-listed NousResearch/hermes-agent; official repository currently has main as default branch and documents Holographic's move to the catalog plugin",
+        "url": "https://github.com/NousResearch/hermes-agent"
+      },
+      {
+        "id": "repo",
+        "label": "Current maintained Holographic plugin repository",
+        "path": "repository page",
+        "symbol": "Public itpartypattaya/hermes-plugin-holographic fork; GitHub page identifies main branch and README identifies it as maintained implementation",
+        "url": "https://github.com/itpartypattaya/hermes-plugin-holographic"
+      },
+      {
+        "id": "head",
+        "label": "Official current main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Full current plugin head ceb802be781e9e31cd9509755ad18ea46194a774; feed updated 2026-11-24T15:19:48Z",
+        "url": "https://github.com/itpartypattaya/hermes-plugin-holographic/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Maintained plugin README at reviewed head",
+        "path": "README.md",
+        "symbol": "Provider purpose, migration, configuration, actions, scope, optional features, limitations, and contact check",
+        "url": "https://github.com/itpartypattaya/hermes-plugin-holographic/blob/ceb802be781e9e31cd9509755ad18ea46194a774/README.md"
+      },
+      {
+        "id": "provider-docs",
+        "label": "Official Hermes memory providers guide",
+        "path": "Persistent Memory / Memory Providers",
+        "symbol": "Hermes confirms Holographic is maintained by itpartypattaya, catalog-installed, additive to built-in memory, and profile-isolated",
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/memory-providers"
+      },
+      {
+        "id": "memory-docs",
+        "label": "Official Hermes persistent memory guide",
+        "path": "Persistent Memory",
+        "symbol": "Built-in memory behavior and external provider relationship; identifies Holographic as a catalog provider",
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/memory"
+      },
+      {
+        "id": "store",
+        "label": "SQLite fact store and schema at reviewed head",
+        "path": "store.py",
+        "symbol": "Fact/entity/history/embedding schema, FTS5 maintenance, connection management, migrations, and storage limits",
+        "url": "https://github.com/itpartypattaya/hermes-plugin-holographic/blob/ceb802be781e9e31cd9509755ad18ea46194a774/store.py"
+      },
+      {
+        "id": "retrieval",
+        "label": "Retrieval pipeline at reviewed head",
+        "path": "retrieval.py",
+        "symbol": "FTS candidate generation, multilingual term processing, scoring, gates, entity retrieval, decay, cleanup suggestions",
+        "url": "https://github.com/itpartypattaya/hermes-plugin-holographic/blob/ceb802be781e9e31cd9509755ad18ea46194a774/retrieval.py"
+      },
+      {
+        "id": "entities",
+        "label": "Entity resolution and lifecycle at reviewed head",
+        "path": "entities.py",
+        "symbol": "Entity and alias resolution, merges, tombstones, rename/delete, and fact relinking",
+        "url": "https://github.com/itpartypattaya/hermes-plugin-holographic/blob/ceb802be781e9e31cd9509755ad18ea46194a774/entities.py"
+      },
+      {
+        "id": "history",
+        "label": "Fact version, provenance, and forgetting implementation at reviewed head",
+        "path": "history.py",
+        "symbol": "Version history, valid time, origin/source fields, merges, confirmations, keyed tombstones and forgetting",
+        "url": "https://github.com/itpartypattaya/hermes-plugin-holographic/blob/ceb802be781e9e31cd9509755ad18ea46194a774/history.py"
+      },
+      {
+        "id": "experience",
+        "label": "Optional recall outcome journal at reviewed head",
+        "path": "experience.py",
+        "symbol": "Bounded opt-in recall traces and agent-reported outcomes; retention and deletion coupling",
+        "url": "https://github.com/itpartypattaya/hermes-plugin-holographic/blob/ceb802be781e9e31cd9509755ad18ea46194a774/experience.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation domains and protocol definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned evaluation workload; not run in this task",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project baseline execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared project status record; not a Holographic result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The catalog-listed repository is NousResearch/hermes-agent. Current official Hermes documentation says Holographic moved out of core into a catalog plugin maintained by itpartypattaya; the maintained plugin README identifies the standalone repository as the provider that shipped in Hermes. The active implementation reviewed here is that catalog plugin, while the catalog-listed Hermes repository is retained as the roster locator.",
+        "sources": [
+          "roster",
+          "atlas",
+          "listed",
+          "repo",
+          "provider-docs",
+          "readme"
+        ]
+      },
+      {
+        "text": "The maintained README describes a local SQLite provider with no required API key, network access, or model call by default. Optional embedding and reranking integrations can send fact/query text to configured endpoints; these are separate opt-in paths.",
+        "sources": [
+          "readme",
+          "provider-docs"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The central MemoryStore keeps current facts in SQLite, with content, category, tags, trust score, retrieval/helpfulness counts, timestamps, and an optional HRR vector. FTS5 indexes content and tags; triggers update the index when indexed text changes. Entity and fact_entities tables link names/aliases to facts; optional per-fact embeddings and fact-version/history tables extend the store.",
+        "sources": [
+          "store",
+          "history",
+          "readme"
+        ]
+      },
+      {
+        "text": "The plugin is organized into a store and supporting modules for retrieval, HRR encoding, entity resolution, version history, optional embeddings/reranking, and the optional experience journal. Hermes installs it as an external memory provider, alongside rather than replacing Hermes built-in MEMORY.md and USER.md stores.",
+        "sources": [
+          "repo",
+          "readme",
+          "provider-docs",
+          "memory-docs"
+        ]
+      },
+      {
+        "text": "Holographic's configuration supports profile, user, chat, and thread scope modes. The README describes separate local database files for scope identities and says a missing identity prevents reads and writes in the relevant modes. Hermes documentation also describes local storage providers as profile-isolated. These are documented boundaries, not cross-scope test results.",
+        "sources": [
+          "readme",
+          "provider-docs"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: fact_store add records a fact and optional category, tags, entities, validity date, origin, and source metadata. Store code keeps an FTS index and resolves/links entities; writes can also create HRR encodings when NumPy is available. The README documents opt-in turn extraction and mirroring of built-in memory writes; both are separate automatic capture paths.",
+        "sources": [
+          "readme",
+          "store",
+          "entities",
+          "history"
+        ]
+      },
+      {
+        "text": "Update and correction: the action surface includes update/change/correct/revert/merge and history operations. Version history retains prior versions and valid-time bounds; origin and source metadata are attached to versions. Similar facts and possible conflicts are returned as advisories for the agent to decide, rather than automatically proving or reconciling a contradiction.",
+        "sources": [
+          "readme",
+          "history",
+          "store"
+        ]
+      },
+      {
+        "text": "Delete and forgetting: remove/forget deletes a fact and its dependent versions and records keyed digests rather than the forgotten text; entity deletion also leaves keyed tombstones and removes links. The documented controls are local to this SQLite store; the inspected sources do not establish erasure from backups or external copies.",
+        "sources": [
+          "readme",
+          "history",
+          "entities",
+          "store"
+        ]
+      },
+      {
+        "text": "Retrieval: keyword candidates come from FTS5; multilingual stemming, token/character processing, term overlap, Jaccard-style similarity, entity recall, trust weighting, optional HRR similarity, and optional reranking contribute to selection. Before-turn prefetch applies a relevance/coverage gate, caps results and avoids repeating recently injected facts. Probe/reason actions provide entity-centered or compositional queries.",
+        "sources": [
+          "readme",
+          "retrieval",
+          "store"
+        ]
+      },
+      {
+        "text": "The default implementation is local. If optional embeddings or a cross-encoder reranker are configured, the README explicitly labels those paths online and says fact texts and query messages are sent to the named endpoint. Optional experience recording is also off by default and records which facts were emitted plus an agent-reported outcome; the source explicitly says emission does not prove the answer used a fact and outcomes are not human-verified.",
+        "sources": [
+          "readme",
+          "experience"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "not_measured",
+        "evidence": "Source describes FTS, multilingual matching, entity retrieval, scoring, and a prefetch relevance gate. No answerable/unanswerable workload or abstention outcome was scored.",
+        "sources": [
+          "retrieval",
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction and staleness",
+        "status": "not_measured",
+        "evidence": "Versioned updates, valid-time state, origin, and revert are source-visible. No correction accuracy or stale-value probe was run.",
+        "sources": [
+          "history",
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion",
+        "status": "not_measured",
+        "evidence": "Fact and entity forgetting paths with keyed tombstones are present. No deletion-leak test was run, and external copies/backups were not evaluated.",
+        "sources": [
+          "history",
+          "entities",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "not_measured",
+        "evidence": "Profile/user/chat/thread database scoping and missing-identity behavior are documented. No cross-user, chat, thread, or profile leakage workload was run.",
+        "sources": [
+          "readme",
+          "provider-docs",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence and citations",
+        "status": "not_measured",
+        "evidence": "Versions can record source and origin metadata and optional experience traces can identify emitted fact versions. The inspected provider does not establish answer-level citation support or entailment; no claims were adjudicated.",
+        "sources": [
+          "history",
+          "experience",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "not_measured",
+        "evidence": "SQLite/FTS and bounded prefetch are source-visible. No runtime timing or write-to-recall samples were collected.",
+        "sources": [
+          "store",
+          "retrieval",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "not_measured",
+        "evidence": "The README documents prefetch limits and optional online services; no token, cost, database-size, or storage-efficiency measurements were collected.",
+        "sources": [
+          "readme",
+          "store",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "Ranking and trust are retrieval heuristics, not a truth or entailment guarantee. Conflict detection is advisory; agent-provided origin and outcome signals can be inaccurate. Relevance gates and multilingual normalization may miss facts or admit unrelated ones, and no quality evaluation was performed here.",
+        "sources": [
+          "readme",
+          "retrieval",
+          "history"
+        ]
+      },
+      {
+        "text": "The default database is local, but optional embedding and reranking endpoints change the privacy boundary by receiving query and fact text. The README describes the configured scope identities and per-profile files; deployment-level filesystem permissions and real multi-user isolation were not tested.",
+        "sources": [
+          "readme",
+          "provider-docs"
+        ]
+      },
+      {
+        "text": "No reviewed source or test was executed. Any README benchmark figures or synthetic examples remain upstream-reported and are not results for this assessment. Behavior of external memory providers and Hermes built-in memory is outside the Holographic store review.",
+        "sources": [
+          "readme",
+          "provider-docs",
+          "memory-docs",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "Holographic was not run. No tests or benchmark were run. See project metric definitions, fixture, and execution-status record; these define the evaluation and do not contain a Holographic result.",
+      "sources": [
+        "metrics",
+        "fixture",
+        "status"
+      ]
+    }
+  }
+}

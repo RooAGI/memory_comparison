@@ -1,0 +1,271 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 268,
+    "slug": "gortex",
+    "name": "Gortex",
+    "repository": "https://github.com/zzet/gortex",
+    "listed_repository": "https://github.com/zzet/gortex",
+    "branch": "main",
+    "revision": "b6327e53624b3cce99412fa56a5a14cf74de634b",
+    "reviewed_at": "2026-11-25T21:28:44Z",
+    "review_timezone": "UTC (checked 2026-11-25 13:28:44 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Gortex indexes tracked code repositories into a durable SQLite knowledge graph and exposes source-grounded code search and graph queries through CLI, MCP, HTTP, and a daemon. Its documentation also describes project documents and agent-session memories; this source review does not assess every memory lifecycle or measure runtime quality.",
+    "atlas_locator": {
+      "ordinal": 268,
+      "name": "Gortex",
+      "slug": "gortex",
+      "listed_repository": "https://github.com/zzet/gortex",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/gortex.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": "me@zzet.org",
+      "source_url": "https://github.com/zzet/gortex/blob/b6327e53624b3cce99412fa56a5a14cf74de634b/README.md",
+      "checked_urls": [
+        "https://github.com/zzet/gortex/blob/b6327e53624b3cce99412fa56a5a14cf74de634b/README.md"
+      ],
+      "note": "The official pinned README publishes me@zzet.org. No commit/profile metadata, package metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": "me@zzet.org",
+    "contact_email_source_url": "https://github.com/zzet/gortex/blob/b6327e53624b3cce99412fa56a5a14cf74de634b/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/zzet/gortex/blob/b6327e53624b3cce99412fa56a5a14cf74de634b/README.md"
+    ],
+    "contact_email_note": "The official pinned README explicitly publishes me@zzet.org.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[267], ordinal 268; identity, explicit repository locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/gortex.md",
+        "symbol": "Pinned attribution for curated identity and locator only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/gortex.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "",
+        "symbol": "Repository page identifies zzet/gortex, public repository, default branch main",
+        "url": "https://github.com/zzet/gortex"
+      },
+      {
+        "id": "head",
+        "label": "Official main commit feed",
+        "path": "",
+        "symbol": "main.atom identifies full current head b6327e53624b3cce99412fa56a5a14cf74de634b",
+        "url": "https://github.com/zzet/gortex/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project purpose, interfaces, graph and memory claims, published contact, and upstream-reported performance context",
+        "url": "https://github.com/zzet/gortex/blob/b6327e53624b3cce99412fa56a5a14cf74de634b/README.md"
+      },
+      {
+        "id": "architecture-doc",
+        "label": "Pinned architecture and graph schema documentation",
+        "path": "docs/architecture.md",
+        "symbol": "Component/data flow, graph schema, persistence, incremental reconciliation, and logging",
+        "url": "https://github.com/zzet/gortex/blob/b6327e53624b3cce99412fa56a5a14cf74de634b/docs/architecture.md"
+      },
+      {
+        "id": "semantic-search",
+        "label": "Pinned semantic-search documentation",
+        "path": "docs/semantic-search.md",
+        "symbol": "Lexical/vector retrieval, embedding providers, fusion, persistence, reranking, and failure modes",
+        "url": "https://github.com/zzet/gortex/blob/b6327e53624b3cce99412fa56a5a14cf74de634b/docs/semantic-search.md"
+      },
+      {
+        "id": "multi-repo",
+        "label": "Pinned multi-repository and scope documentation",
+        "path": "docs/multi-repo.md",
+        "symbol": "Workspace boundaries, query clamping, file-system scope distinction, repository lifecycle, and known per-tool scope caveats",
+        "url": "https://github.com/zzet/gortex/blob/b6327e53624b3cce99412fa56a5a14cf74de634b/docs/multi-repo.md"
+      },
+      {
+        "id": "edge",
+        "label": "Pinned graph edge implementation",
+        "path": "internal/graph/edge.go",
+        "symbol": "Edge kinds, origin tiers, confidence labels, and provenance semantics",
+        "url": "https://github.com/zzet/gortex/blob/b6327e53624b3cce99412fa56a5a14cf74de634b/internal/graph/edge.go"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation domains and metric definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned benchmark fixture; not executed in this task",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project execution status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status; not a Gortex result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents Gortex as a local code-intelligence engine and agent-context system with CLI, MCP, HTTP, daemon, and web interfaces. It describes repository code, project documents, decisions, and captured agent sessions as accessible memory; this review principally examines the code graph.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The architecture documentation describes a multi-repository indexer, a persistent SQLite graph, graph query engine, MCP and HTTP surfaces, and a long-lived daemon. Tree-sitter extractors create code nodes and relations; resolvers add cross-file and cross-repository edges; filesystem watchers trigger incremental per-file reconciliation.",
+        "sources": [
+          "architecture-doc"
+        ]
+      },
+      {
+        "text": "The graph models files, packages, functions, methods, types, interfaces, imports, contracts, and related code structures as nodes, with edges for calls, definitions, imports, references, data flow, configuration, and contract relations. Nodes use repository-qualified identities; workspaces and projects group repositories for graph queries.",
+        "sources": [
+          "architecture-doc",
+          "edge"
+        ]
+      },
+      {
+        "text": "Edges carry an Origin tier describing resolution evidence, including LSP-resolved, LSP-dispatch, AST-resolved, AST-inferred, text-matched, and speculative. Confidence labels are a separate compatibility signal, not a replacement for origin provenance.",
+        "sources": [
+          "edge"
+        ]
+      },
+      {
+        "text": "The architecture guide describes durable graph writes, in-memory staging during cold indexing, incremental reconciliation on warm restart, and route/timing summaries in daemon logs. These are source-level descriptions, not measurements collected here.",
+        "sources": [
+          "architecture-doc"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Tracking a repository starts indexing. The indexer parses source into graph nodes and edges, resolves relationships, and persists the graph; watchers reindex changed files through incremental patches, while scheduled reconciliation is documented for missed events or downtime.",
+        "sources": [
+          "readme",
+          "architecture-doc"
+        ]
+      },
+      {
+        "text": "Code updates are represented by re-extraction and graph reconciliation. The architecture describes deleting or replacing prior file-derived graph state as files change or disappear; the guide does not establish a tombstone history for old code facts.",
+        "sources": [
+          "architecture-doc",
+          "multi-repo"
+        ]
+      },
+      {
+        "text": "Explicit repository untracking evicts its graph nodes and edges. This is index removal; deletion propagation through backups, independently captured session memories, or external copies is not established by the reviewed sources.",
+        "sources": [
+          "multi-repo"
+        ]
+      },
+      {
+        "text": "Retrieval includes graph traversal and code search. The semantic-search guide describes default lexical FTS5/BM25 plus vector retrieval, adaptive rank fusion, optional embedding providers, and graph-based reranking; the README describes file/line-grounded excerpts and a token budget.",
+        "sources": [
+          "semantic-search",
+          "readme",
+          "edge"
+        ]
+      },
+      {
+        "text": "The repository is principally represented as indexed code and project context. The sources inspected here do not establish conversational memory correction and forgetting semantics for all document and session-memory records.",
+        "sources": [
+          "readme",
+          "architecture-doc"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention: code search and graph traversal exist, but answer correctness and abstention were not evaluated.",
+        "sources": [
+          "readme",
+          "semantic-search"
+        ]
+      },
+      {
+        "text": "Correction and staleness: file edits are incrementally reindexed and graph relations reconciled; correction accuracy and stale-answer rates were not measured.",
+        "sources": [
+          "architecture-doc"
+        ]
+      },
+      {
+        "text": "Deletion: changed/deleted files and explicitly untracked repositories are reconciled or evicted; no deletion-leak or backup-propagation probe was run.",
+        "sources": [
+          "architecture-doc",
+          "multi-repo"
+        ]
+      },
+      {
+        "text": "Scope: workspace and repository/project query controls are documented, with tool-specific caveats and filesystem-surface distinctions; cross-scope isolation was not measured.",
+        "sources": [
+          "multi-repo"
+        ]
+      },
+      {
+        "text": "Evidence: graph edges carry resolution provenance and README describes file/line references; answer evidence support and citation coverage were not adjudicated.",
+        "sources": [
+          "edge",
+          "readme"
+        ]
+      },
+      {
+        "text": "Efficiency: index timing/logging, semantic retrieval, and token-bounded output are described; latency, write-to-recall delay, tokens, cost, and storage efficiency were not measured for this review.",
+        "sources": [
+          "architecture-doc",
+          "semantic-search",
+          "readme",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected the current README, architecture/search/scope documentation, and graph edge source at the verified full head. It did not inspect every graph writer, parser, query, MCP tool, document-memory path, or session-capture lifecycle.",
+        "sources": [
+          "readme",
+          "architecture-doc",
+          "semantic-search",
+          "multi-repo",
+          "edge"
+        ]
+      },
+      {
+        "text": "No runtime, tests, benchmarks, isolation probes, deletion probes, or answer evaluations were run. The inspection cannot establish retrieval quality, abstention, operational reliability, cross-surface scope guarantees, or deletion behavior for every memory type.",
+        "sources": [
+          "readme",
+          "multi-repo",
+          "architecture-doc"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Gortex runtime, tests, or benchmark workload was run. Upstream scale and token-savings statements are not reproduced or treated as project benchmark results.",
+      "metric_definitions": "../METRICS.md",
+      "fixture": "../fixtures/memory-benchmark-v1.json",
+      "execution_status": "../results/initial-baselines-status.json"
+    }
+  }
+}

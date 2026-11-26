@@ -1,0 +1,389 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 300,
+    "slug": "hivemind",
+    "name": "Hivemind",
+    "repository": "https://github.com/causewayai/hivemind",
+    "listed_repository": "https://github.com/causewayai/hivemind",
+    "branch": "main",
+    "revision": "666bfa105a2f70ce53b2704fe896cd14138716f0",
+    "reviewed_at": "2026-11-25T23:12:05Z",
+    "review_timezone": "UTC (checked 2026-11-25 15:12:05 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Hivemind is a local, single-user memory daemon for harnesses. It exposes MCP write and query tools backed by SQLite structured records and sqlite-vec; its default hash embedding is explicitly non-semantic, so semantic retrieval quality is not established by this review.",
+    "atlas_locator": {
+      "ordinal": 300,
+      "name": "Hivemind",
+      "slug": "hivemind",
+      "listed_repository": "https://github.com/causewayai/hivemind",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hivemind.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/causewayai/hivemind/blob/666bfa105a2f70ce53b2704fe896cd14138716f0/README.md",
+      "checked_urls": [
+        "https://github.com/causewayai/hivemind/blob/666bfa105a2f70ce53b2704fe896cd14138716f0/README.md"
+      ],
+      "note": "Checked the official pinned README for a published contact email; none was found. No commit/profile metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/causewayai/hivemind/blob/666bfa105a2f70ce53b2704fe896cd14138716f0/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/causewayai/hivemind/blob/666bfa105a2f70ce53b2704fe896cd14138716f0/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the checked official pinned README. No commit/profile metadata, third-party directory, or inferred address was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[299], ordinal 300; identity, explicit repository locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/hivemind.md",
+        "symbol": "Pinned attribution source for curated locator only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hivemind.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository metadata",
+        "path": "",
+        "symbol": "GitHub repository API identifies causewayai/hivemind and default branch main",
+        "url": "https://api.github.com/repos/causewayai/hivemind"
+      },
+      {
+        "id": "head",
+        "label": "Official current main head",
+        "path": "",
+        "symbol": "GitHub commits/main API returns full current SHA and commit timestamp",
+        "url": "https://api.github.com/repos/causewayai/hivemind/commits/main"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Local Edition, MCP interface, tools, scopes, embedding limitation, data and CI-log cache docs; checked for contact email",
+        "url": "https://github.com/causewayai/hivemind/blob/666bfa105a2f70ce53b2704fe896cd14138716f0/README.md"
+      },
+      {
+        "id": "schema",
+        "label": "Pinned SQLite schema",
+        "path": "internal/store/schema.go",
+        "symbol": "memory_entries, memory_tags, indexes, partial unique external-ID index, and vec0 embedding table",
+        "url": "https://github.com/causewayai/hivemind/blob/666bfa105a2f70ce53b2704fe896cd14138716f0/internal/store/schema.go"
+      },
+      {
+        "id": "store",
+        "label": "Pinned memory store and query implementation",
+        "path": "internal/store/memory.go",
+        "symbol": "Transactional insert/upsert/delete, structured listing, vector candidate search, distance cutoff and filters",
+        "url": "https://github.com/causewayai/hivemind/blob/666bfa105a2f70ce53b2704fe896cd14138716f0/internal/store/memory.go"
+      },
+      {
+        "id": "db-open",
+        "label": "Pinned SQLite store initialization",
+        "path": "internal/store/store.go",
+        "symbol": "One SQLite database, WAL/busy-timeout settings, vector serialization and KNN query",
+        "url": "https://github.com/causewayai/hivemind/blob/666bfa105a2f70ce53b2704fe896cd14138716f0/internal/store/store.go"
+      },
+      {
+        "id": "write",
+        "label": "Pinned MCP write handler",
+        "path": "internal/mcpserver/write.go",
+        "symbol": "Scope/source-type validation and defaults; embedding and store write behavior",
+        "url": "https://github.com/causewayai/hivemind/blob/666bfa105a2f70ce53b2704fe896cd14138716f0/internal/mcpserver/write.go"
+      },
+      {
+        "id": "query",
+        "label": "Pinned MCP query handler",
+        "path": "internal/mcpserver/query.go",
+        "symbol": "Semantic and structured-only retrieval paths; own-session plus shared-user query behavior",
+        "url": "https://github.com/causewayai/hivemind/blob/666bfa105a2f70ce53b2704fe896cd14138716f0/internal/mcpserver/query.go"
+      },
+      {
+        "id": "scopes",
+        "label": "Pinned scope enumeration",
+        "path": "internal/mcpserver/scopes.go",
+        "symbol": "This edition exposes session and user scopes",
+        "url": "https://github.com/causewayai/hivemind/blob/666bfa105a2f70ce53b2704fe896cd14138716f0/internal/mcpserver/scopes.go"
+      },
+      {
+        "id": "daemon",
+        "label": "Pinned daemon composition and transport",
+        "path": "cmd/hivemindd/main.go",
+        "symbol": "Loopback HTTP MCP service, stateless transport, tool registration, and retention ticker startup",
+        "url": "https://github.com/causewayai/hivemind/blob/666bfa105a2f70ce53b2704fe896cd14138716f0/cmd/hivemindd/main.go"
+      },
+      {
+        "id": "embedding",
+        "label": "Pinned default embedding provider",
+        "path": "internal/embedding/hash.go",
+        "symbol": "Deterministic FNV hash stand-in documented in source as non-semantic",
+        "url": "https://github.com/causewayai/hivemind/blob/666bfa105a2f70ce53b2704fe896cd14138716f0/internal/embedding/hash.go"
+      },
+      {
+        "id": "retention",
+        "label": "Pinned CI-log retention sweep",
+        "path": "internal/cilog/retention/sweep.go",
+        "symbol": "Age/size pruning of cached logs and removal of associated memory entries",
+        "url": "https://github.com/causewayai/hivemind/blob/666bfa105a2f70ce53b2704fe896cd14138716f0/internal/cilog/retention/sweep.go"
+      },
+      {
+        "id": "ticker",
+        "label": "Pinned retention ticker",
+        "path": "internal/cilog/retention/ticker.go",
+        "symbol": "Immediate/hourly sweep and log reporting for failures/removals",
+        "url": "https://github.com/causewayai/hivemind/blob/666bfa105a2f70ce53b2704fe896cd14138716f0/internal/cilog/retention/ticker.go"
+      },
+      {
+        "id": "design",
+        "label": "Pinned official design notes",
+        "path": "docs/DESIGN.md",
+        "symbol": "Retrieval cutoff rationale, its HashProvider-specific calibration, and local-vs-cloud tenancy distinction",
+        "url": "https://github.com/causewayai/hivemind/blob/666bfa105a2f70ce53b2704fe896cd14138716f0/docs/DESIGN.md"
+      },
+      {
+        "id": "ci-rules",
+        "label": "Pinned CI log cache usage notes",
+        "path": "docs/ci-log-cache-rules.md",
+        "symbol": "Recommended cache-first flow for harnesses that lack the Claude Code hook",
+        "url": "https://github.com/causewayai/hivemind/blob/666bfa105a2f70ce53b2704fe896cd14138716f0/docs/ci-log-cache-rules.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Project benchmark domains and measurement definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Shared fixture protocol, not a Hivemind result",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status, not a Hivemind result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Hivemind as a local memory store for harnesses, with a daemon exposing stateless MCP over loopback HTTP. This reviewed repository is the Local Edition and targets a single machine and single user; the design notes distinguish cloud tenancy as separate work.",
+        "sources": [
+          "readme",
+          "daemon",
+          "design"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The daemon opens one SQLite database, configures WAL mode and a busy timeout, and creates a structured `memory_entries` table, a tag table, indexes, and a sqlite-vec `vec0` table sized to the configured embedding dimension. Entry rows hold content, session or user scope, optional session ID, source, source type, optional external ID, and creation/update timestamps; tags and vectors are stored separately.",
+        "sources": [
+          "schema",
+          "db-open",
+          "store"
+        ]
+      },
+      {
+        "text": "The daemon registers `memory_write`, `memory_query`, and `list_scopes` as MCP tools. Its Streamable HTTP handler is stateless and binds to `127.0.0.1`; callers supply a stable `session_id` for session-scoped operations because it is not derived from the MCP transport session.",
+        "sources": [
+          "daemon",
+          "readme",
+          "scopes"
+        ]
+      },
+      {
+        "text": "A second local workflow caches GitHub Actions logs as files, then records run summaries and failed-job entries in memory with source and external-ID metadata. The daemon’s retention worker sweeps cached logs and deletes memory entries tagged to each removed log path.",
+        "sources": [
+          "readme",
+          "ci-rules",
+          "retention",
+          "ticker"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "`memory_write` defaults to session scope and harness source type, validates the allowed `session`/`user` scopes and `harness`/`etl` source types, clears the session ID for user-scope records, and generates an embedding when none is supplied. Store writes of a new record, its tags, and vector are transactional.",
+        "sources": [
+          "write",
+          "store",
+          "schema"
+        ]
+      },
+      {
+        "text": "When `external_id` is supplied, a partial unique index on `(source, external_id, scope)` makes the store write insert-if-absent. A duplicate returns the existing record unchanged; it does not update content, tags, or embedding. Thus this path is idempotent ingestion, not a general correction/update operation.",
+        "sources": [
+          "schema",
+          "store",
+          "readme"
+        ]
+      },
+      {
+        "text": "The inspected MCP tool set has no general update or delete operation. The underlying store has `DeleteMemory`, which removes the vector row, tags, and entry transactionally; the CI-log retention sweep uses it for entries tied to expired files. The README documents resetting all memory by deleting the database and WAL/SHM files. A targeted user-facing forget tool, tombstone, or mutation audit trail was not found in the reviewed paths.",
+        "sources": [
+          "store",
+          "retention",
+          "readme",
+          "daemon"
+        ]
+      },
+      {
+        "text": "With free text, the query handler embeds the query and searches the caller’s session plus shared user scope. The store requests up to five times `top_k` vector candidates, discards candidates with L2 distance above 1.0, applies scope/session/source filters, then checks whether any requested tag matches and returns up to `top_k`. Omitting query uses structured filters (`external_id`, tags, source), newest first, without embedding or distance cutoff; own-session results are appended before shared-user results and the combined list is truncated.",
+        "sources": [
+          "query",
+          "store",
+          "readme"
+        ]
+      },
+      {
+        "text": "The default `HashProvider` is deterministic and CPU-only but explicitly non-semantic: similar meanings do not imply nearby vectors. The README says free-text recall is expected to work for identical or near-identical text with this provider; conceptual paraphrase recall is not established. The design notes say the 1.0 cutoff is tuned to this provider’s vector spread and needs recalibration for a real embedding model.",
+        "sources": [
+          "embedding",
+          "readme",
+          "design"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Semantic and structured retrieval paths exist; no answerable or unanswerable probes were scored.",
+        "sources": [
+          "query",
+          "store",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "The external-ID path returns an existing record unchanged; no correction sequence or stale-value probe was measured.",
+        "sources": [
+          "store",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Store deletion and CI-log cleanup exist; no post-delete probes, backup checks, or leakage results were collected.",
+        "sources": [
+          "store",
+          "retention",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Query code filters session scope by caller-supplied ID and includes shared user scope; no isolation workload was run.",
+        "sources": [
+          "query",
+          "write",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Records preserve source labels and optional external IDs, but no evidence adjudication or citation scoring was performed.",
+        "sources": [
+          "schema",
+          "write",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No runtime timings or scheduled write-to-recall probes were collected.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "SQLite persistence, vectors, and local log-cache retention are implemented; no token, price, or storage measurements were collected.",
+        "sources": [
+          "db-open",
+          "schema",
+          "retention",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded source review of the current official README, selected implementation files, and design notes at the verified head. Hivemind, its tests, and benchmark workloads were not run; source presence does not establish recall quality, correction quality, or operational behavior.",
+        "sources": [
+          "readme",
+          "store",
+          "metrics"
+        ]
+      },
+      {
+        "text": "The Local Edition has session and shared-user scopes, but the session identifier is supplied by the caller and the daemon is stateless with no session identity derived from transport. The user scope is shared across every local harness and is not a separate account boundary. The review did not test abuse or isolation.",
+        "sources": [
+          "readme",
+          "query",
+          "write",
+          "daemon",
+          "design"
+        ]
+      },
+      {
+        "text": "A user-scope write can be made directly through the optional write fields, while the README’s no-promotion rule describes the absence of a session-memory promotion/update flow. The reviewed path does not provide a human approval mechanism or authenticate who selected user scope.",
+        "sources": [
+          "readme",
+          "write"
+        ]
+      },
+      {
+        "text": "The hash-based default makes semantic similarity claims unsupported. The 1.0 L2 cutoff is provider-specific, and the semantic path only inspects a bounded candidate pool before applying filters, so retrieval behavior with different embeddings or sparse matching candidates remains unmeasured.",
+        "sources": [
+          "embedding",
+          "store",
+          "design"
+        ]
+      },
+      {
+        "text": "The store deletes its database row, tags, and vector in the inspected deletion path, but propagation through filesystem backups, copied databases, or downstream consumers was not established. Hivemind’s broader cloud tenancy, access control, and production readiness are outside this Local Edition review.",
+        "sources": [
+          "store",
+          "readme",
+          "design"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Hivemind runtime, tests, or benchmarks were run. Source observations and project fixture/status files are not Hivemind benchmark results."
+    }
+  }
+}

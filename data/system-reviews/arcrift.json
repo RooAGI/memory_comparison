@@ -1,0 +1,383 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 67,
+    "slug": "arcrift",
+    "name": "ArcRift",
+    "repository": "https://github.com/Eshaan-Nair/ArcRift",
+    "listed_repository": "https://github.com/eshaan-nair/arcrift",
+    "branch": "main",
+    "revision": "5424ea14dd9a848dcbcfb49586f348324999af88",
+    "reviewed_at": "2026-11-24T21:22:33Z",
+    "review_timezone": "UTC (2026-11-24 13:22:33 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "ArcRift is a local-first AI memory application combining a browser extension, desktop dashboard, backend, and MCP server. It stores conversations and extracted graph facts by project/session, then retrieves vector, keyword, and graph context for browser prompts or coding agents. This pinned source review contains no runtime or benchmark results.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/arcrift.md"
+    },
+    "contact": {
+      "email": "eshaannair3456@gmail.com",
+      "source_url": "https://github.com/Eshaan-Nair/ArcRift/blob/5424ea14dd9a848dcbcfb49586f348324999af88/SECURITY.md",
+      "checked_urls": [
+        "https://github.com/Eshaan-Nair/ArcRift/blob/5424ea14dd9a848dcbcfb49586f348324999af88/SECURITY.md"
+      ],
+      "note": "The official pinned SECURITY.md publishes this address for vulnerability reports."
+    },
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated system roster",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[66], curated ordinal 67: name, slug, listed repository locator, and source attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas attribution only",
+        "path": "content/systems/arcrift.md",
+        "symbol": "Roster source attribution only; Atlas assessment content and marks excluded",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/arcrift.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official ArcRift repository",
+        "path": "",
+        "symbol": "Canonical public repository; repository page identifies main as default branch",
+        "url": "https://github.com/Eshaan-Nair/ArcRift"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed current main head",
+        "path": "",
+        "symbol": "Official repository page latest commit and commit page confirm full SHA 5424ea14dd9a848dcbcfb49586f348324999af88",
+        "url": "https://github.com/Eshaan-Nair/ArcRift/commit/5424ea14dd9a848dcbcfb49586f348324999af88"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Product, interfaces, memory features, local models, and project credit",
+        "url": "https://github.com/Eshaan-Nair/ArcRift/blob/5424ea14dd9a848dcbcfb49586f348324999af88/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Architecture guide",
+        "path": "ARCHITECTURE.md",
+        "symbol": "Component architecture, data flow, schemas, integrations, and security model",
+        "url": "https://github.com/Eshaan-Nair/ArcRift/blob/5424ea14dd9a848dcbcfb49586f348324999af88/ARCHITECTURE.md"
+      },
+      {
+        "id": "rag",
+        "label": "RAG pipeline guide",
+        "path": "RAG_PIPELINE.md",
+        "symbol": "Chunking, retrieval, thresholds, fusion, and documented pipeline",
+        "url": "https://github.com/Eshaan-Nair/ArcRift/blob/5424ea14dd9a848dcbcfb49586f348324999af88/RAG_PIPELINE.md"
+      },
+      {
+        "id": "store-tool",
+        "label": "MCP store_memory implementation",
+        "path": "backend/src/mcp/tools/store.ts",
+        "symbol": "Session lookup and creation, chat storage, graph extraction, vector chunk writes, and session stats",
+        "url": "https://github.com/Eshaan-Nair/ArcRift/blob/5424ea14dd9a848dcbcfb49586f348324999af88/backend/src/mcp/tools/store.ts"
+      },
+      {
+        "id": "recall-tool",
+        "label": "MCP recall_context implementation",
+        "path": "backend/src/mcp/tools/recall.ts",
+        "symbol": "Session lookup, scoped graph and vector retrieval, sanitization, formatting, and optional debug engines",
+        "url": "https://github.com/Eshaan-Nair/ArcRift/blob/5424ea14dd9a848dcbcfb49586f348324999af88/backend/src/mcp/tools/recall.ts"
+      },
+      {
+        "id": "prune-tool",
+        "label": "MCP prune_memory implementation",
+        "path": "backend/src/mcp/tools/prune.ts",
+        "symbol": "Entity extraction fallback and session-scoped graph/vector deletion",
+        "url": "https://github.com/Eshaan-Nair/ArcRift/blob/5424ea14dd9a848dcbcfb49586f348324999af88/backend/src/mcp/tools/prune.ts"
+      },
+      {
+        "id": "chat-route",
+        "label": "Chat HTTP routes",
+        "path": "backend/src/routes/chat.ts",
+        "symbol": "PII scrubbing, asynchronous ingestion queue, session validation, chat retrieval and delete route",
+        "url": "https://github.com/Eshaan-Nair/ArcRift/blob/5424ea14dd9a848dcbcfb49586f348324999af88/backend/src/routes/chat.ts"
+      },
+      {
+        "id": "storage",
+        "label": "Storage adapter selection",
+        "path": "backend/src/services/storage.ts",
+        "symbol": "SQLite and Docker storage interfaces and backend selection",
+        "url": "https://github.com/Eshaan-Nair/ArcRift/blob/5424ea14dd9a848dcbcfb49586f348324999af88/backend/src/services/storage.ts"
+      },
+      {
+        "id": "sqlite-schema",
+        "label": "SQLite schema",
+        "path": "backend/src/services/sqlite.ts",
+        "symbol": "Session, full chat, jobs, fact, chunk metadata, vector, sentence, and FTS schemas",
+        "url": "https://github.com/Eshaan-Nair/ArcRift/blob/5424ea14dd9a848dcbcfb49586f348324999af88/backend/src/services/sqlite.ts"
+      },
+      {
+        "id": "session-store",
+        "label": "SQLite session store",
+        "path": "backend/src/services/sqlite-session.ts",
+        "symbol": "Session CRUD, full chat upsert, and SQLite session cleanup",
+        "url": "https://github.com/Eshaan-Nair/ArcRift/blob/5424ea14dd9a848dcbcfb49586f348324999af88/backend/src/services/sqlite-session.ts"
+      },
+      {
+        "id": "graph-store",
+        "label": "SQLite graph store",
+        "path": "backend/src/services/sqlite-graph.ts",
+        "symbol": "Timestamped session facts, scoped related-fact reads, and graph deletion",
+        "url": "https://github.com/Eshaan-Nair/ArcRift/blob/5424ea14dd9a848dcbcfb49586f348324999af88/backend/src/services/sqlite-graph.ts"
+      },
+      {
+        "id": "vector-store",
+        "label": "SQLite vector store",
+        "path": "backend/src/services/sqlite-vector.ts",
+        "symbol": "Chunk and sentence embeddings, FTS candidates, session filters, thresholds, pruning, and cleanup",
+        "url": "https://github.com/Eshaan-Nair/ArcRift/blob/5424ea14dd9a848dcbcfb49586f348324999af88/backend/src/services/sqlite-vector.ts"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Officially published vulnerability contact email and threat model",
+        "url": "https://github.com/Eshaan-Nair/ArcRift/blob/5424ea14dd9a848dcbcfb49586f348324999af88/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Versioned benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README credits ArcRift as built by Eshaan Nair and presents it as a self-hostable memory application for browser AI conversations and coding agents, with a browser extension, desktop dashboard, backend, and MCP server.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The documented architecture comprises a browser extension, a Tauri/React desktop interface, a Node.js backend, and an MCP stdio server. Storage adapters select SQLite/SQLite-vec or a Docker profile using MongoDB, Neo4j, and ChromaDB.",
+        "sources": [
+          "architecture",
+          "storage"
+        ]
+      },
+      {
+        "text": "The SQLite schema separates sessions, full chats, background jobs, graph facts, chunk metadata, sentence metadata, vector tables, and FTS5. Facts carry typed subject/relation/object fields, session ID, and timestamp. Chunks carry session, chunk index, content, and optional file path/hash; vector dimensions are 768.",
+        "sources": [
+          "sqlite-schema",
+          "graph-store",
+          "vector-store"
+        ]
+      },
+      {
+        "text": "Browser ingestion scrubs PII and queues chat processing. The MCP store path separately writes a full chat, attempts graph extraction, creates vector chunks, then updates session counts. The MCP chunker call passes 150-word windows and 50-word overlap; the architecture guide describes 300/80 for the browser chat path.",
+        "sources": [
+          "chat-route",
+          "store-tool",
+          "architecture"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Browser chat save validates its inputs, scrubs PII, enqueues a chat_ingestion job, and returns a job ID. MCP store_memory finds a session by ID or name, creates one if absent, saves the full chat, attempts to extract and save graph triples, stores vector chunks, and updates statistics. Graph extraction failure does not prevent the vector write.",
+        "sources": [
+          "chat-route",
+          "store-tool"
+        ]
+      },
+      {
+        "text": "Full chat saves use an upsert. Vector storage replaces chunk records. The inspected MCP tools expose prune-and-rewrite rather than a general versioned fact correction API; correction coverage and stale-value behavior were not measured.",
+        "sources": [
+          "session-store",
+          "vector-store",
+          "prune-tool"
+        ]
+      },
+      {
+        "text": "MCP pruning derives entities from the request, falls back to long tokens if extraction fails, deletes matching graph facts by session, and deletes chunk text matching the query substring. SQLite session deletion removes vector rows and deletes the session with related metadata/facts/full chats. The HTTP chat DELETE path only calls vector deletion and does not call session deletion in the inspected code.",
+        "sources": [
+          "prune-tool",
+          "session-store",
+          "chat-route"
+        ]
+      },
+      {
+        "text": "MCP recall extracts query entities, looks up up to 15 graph facts for the selected session, retrieves top-N vector chunks, sanitizes chunks, then renders both facts and context. SQLite vector retrieval combines sentence vectors, chunk vectors, and FTS; applies a 0.30 threshold, trims matched sentences, sorts, and caps results. Documentation describes browser hybrid retrieval and a deliberate global cross-project search path.",
+        "sources": [
+          "recall-tool",
+          "vector-store",
+          "rag",
+          "readme"
+        ]
+      },
+      {
+        "text": "Session identifiers scope graph facts and chunk metadata on scoped paths. The explicit global search path omits a session filter. The boundary is session/project scope, not a user or organization identity. Store can fall back from ID to project name, while recall directly looks up its argument as a session ID; the deployed caller contract was not established.",
+        "sources": [
+          "store-tool",
+          "recall-tool",
+          "graph-store",
+          "vector-store",
+          "architecture",
+          "readme"
+        ]
+      },
+      {
+        "text": "Full chats retain text, platform, message count, and timestamps. Graph facts retain typed relations, session ID, and timestamp; chunks retain session/index/text and optional file path/hash. Recall debug output can name retrieval engines, but the inspected fact response does not provide claim-level source spans or citations.",
+        "sources": [
+          "sqlite-schema",
+          "graph-store",
+          "vector-store",
+          "recall-tool"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Scoped graph/vector retrieval and thresholding are source-visible; no answerability fixture outcomes were collected.",
+        "sources": [
+          "recall-tool",
+          "vector-store",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and staleness",
+        "status": "unmeasured",
+        "evidence": "Full-chat upsert and prune-and-rewrite are visible; no correction or stale-value probes were run.",
+        "sources": [
+          "session-store",
+          "prune-tool",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "SQLite cleanup paths are visible, alongside the narrower HTTP DELETE path; no residual-data audit was run.",
+        "sources": [
+          "session-store",
+          "chat-route",
+          "vector-store",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Scoped paths filter by session ID and global search intentionally crosses sessions; no isolation or authorization probes were run.",
+        "sources": [
+          "graph-store",
+          "vector-store",
+          "architecture",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Records contain session/time/type fields and chunks can retain source paths/hashes; no answer citation scoring was done.",
+        "sources": [
+          "sqlite-schema",
+          "graph-store",
+          "vector-store",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Browser ingestion and sentence indexing use background jobs and retrieval uses bounded candidate limits; no timings were collected.",
+        "sources": [
+          "chat-route",
+          "architecture",
+          "vector-store",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "The README describes local Ollama and optional Groq use; no provider usage or token-cost instrumentation was measured.",
+        "sources": [
+          "readme",
+          "security",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Storage footprint",
+        "status": "unmeasured",
+        "evidence": "The schema and storage adapters identify persistence structures; no attributable bytes or growth measurement was collected.",
+        "sources": [
+          "sqlite-schema",
+          "storage",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded inspection of selected docs and SQLite implementations, not an end-to-end runtime review. Runtime retrieval quality, model behavior, prompt-injection resistance, storage-mode parity, authorization, deletion completeness, and performance remain unverified.",
+        "sources": [
+          "architecture",
+          "storage",
+          "security",
+          "status"
+        ]
+      },
+      {
+        "text": "The README and architecture guide mention benchmark values and isolation audits; this review did not reproduce or adjudicate them, and they are not results produced here.",
+        "sources": [
+          "readme",
+          "architecture"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No ArcRift runtime, benchmark workload, build, or tests were run. Source observations and upstream project-reported claims are not measurements from this review.",
+      "metrics_url": "../METRICS.md",
+      "fixture_url": "../fixtures/memory-benchmark-v1.json",
+      "execution_status_url": "../results/initial-baselines-status.json"
+    }
+  }
+}

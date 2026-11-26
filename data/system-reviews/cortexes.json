@@ -1,0 +1,372 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "cortexes",
+    "name": "Cortexes",
+    "ordinal": 164,
+    "repository": "https://github.com/XBlueSky/cortexes",
+    "listed_repository": "https://github.com/XBlueSky/cortexes",
+    "branch": "plugin",
+    "revision": "4bcbd96230cab4b46d2be9a47f3df9f1efacf65c",
+    "reviewed_at": "2026-11-25T09:47:42Z",
+    "review_timezone": "UTC (2026-11-25 01:47:42 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Cortexes is a Claude Code plugin that records sessions into a Markdown-and-git vault, offers workflows to distill and edit knowledge pages, and retrieves them with a local BM25 index plus an optional Chroma vector index.",
+    "atlas_locator": {
+      "ordinal": 164,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cortexes.md",
+      "listed_repository": "https://github.com/XBlueSky/cortexes"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/XBlueSky/cortexes/blob/4bcbd96230cab4b46d2be9a47f3df9f1efacf65c/README.md",
+      "note": "The official README and SECURITY.md were checked at the reviewed revision; neither publishes a contact email. SECURITY.md directs vulnerability reports to GitHub private vulnerability reporting."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/XBlueSky/cortexes/blob/4bcbd96230cab4b46d2be9a47f3df9f1efacf65c/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/XBlueSky/cortexes/blob/4bcbd96230cab4b46d2be9a47f3df9f1efacf65c/README.md",
+      "https://github.com/XBlueSky/cortexes/blob/4bcbd96230cab4b46d2be9a47f3df9f1efacf65c/SECURITY.md"
+    ],
+    "contact_email_note": "No contact email is published in the checked official README or SECURITY.md. The README directs security issues to the private reporting flow in SECURITY.md; privacy questions may be raised as a GitHub issue.",
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Public repository XBlueSky/cortexes",
+        "url": "https://github.com/XBlueSky/cortexes"
+      },
+      {
+        "id": "branches",
+        "label": "Official repository branches page",
+        "path": "branches",
+        "symbol": "GitHub labels plugin as the default branch",
+        "url": "https://github.com/XBlueSky/cortexes/branches"
+      },
+      {
+        "id": "history",
+        "label": "Official plugin branch commit feed",
+        "path": "commits/plugin.atom",
+        "symbol": "Current branch head 4bcbd96230cab4b46d2be9a47f3df9f1efacf65c, updated 2026-11-25T03:54:58Z",
+        "url": "https://github.com/XBlueSky/cortexes/commits/plugin.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified current head commit",
+        "path": "commit",
+        "symbol": "Full current plugin branch head 4bcbd96230cab4b46d2be9a47f3df9f1efacf65c",
+        "url": "https://github.com/XBlueSky/cortexes/commit/4bcbd96230cab4b46d2be9a47f3df9f1efacf65c"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Product design, vault structure, commands, retrieval, CLI, privacy overview and limitations",
+        "url": "https://github.com/XBlueSky/cortexes/blob/4bcbd96230cab4b46d2be9a47f3df9f1efacf65c/README.md"
+      },
+      {
+        "id": "privacy",
+        "label": "Official privacy and data handling documentation",
+        "path": "PRIVACY.md",
+        "symbol": "Retention, outbound data flows, telemetry, disabling features and deletion limits",
+        "url": "https://github.com/XBlueSky/cortexes/blob/4bcbd96230cab4b46d2be9a47f3df9f1efacf65c/PRIVACY.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Private vulnerability reporting and data handling summary; no email published",
+        "url": "https://github.com/XBlueSky/cortexes/blob/4bcbd96230cab4b46d2be9a47f3df9f1efacf65c/SECURITY.md"
+      },
+      {
+        "id": "session",
+        "label": "Session-end recorder",
+        "path": "hooks/scripts/session-end-record.sh",
+        "symbol": "Automatic filtered Raw writes, atomic target replacement, reclaim and git actions",
+        "url": "https://github.com/XBlueSky/cortexes/blob/4bcbd96230cab4b46d2be9a47f3df9f1efacf65c/hooks/scripts/session-end-record.sh"
+      },
+      {
+        "id": "evolve",
+        "label": "Manual save workflow",
+        "path": "skills/cortex-evolve/SKILL.md",
+        "symbol": "Notes/Projects Markdown frontmatter, index/log update and CLI upsert",
+        "url": "https://github.com/XBlueSky/cortexes/blob/4bcbd96230cab4b46d2be9a47f3df9f1efacf65c/skills/cortex-evolve/SKILL.md"
+      },
+      {
+        "id": "query",
+        "label": "Query workflow",
+        "path": "skills/cortex-query/SKILL.md",
+        "symbol": "Repo/type/category search filters, result interpretation, file reading and grep fallback",
+        "url": "https://github.com/XBlueSky/cortexes/blob/4bcbd96230cab4b46d2be9a47f3df9f1efacf65c/skills/cortex-query/SKILL.md"
+      },
+      {
+        "id": "store",
+        "label": "Vector and document store implementation",
+        "path": "cortex-vec/src/cortex_vec/store.py",
+        "symbol": "Persistent Chroma store, document upsert/delete, summary generation and retrieval",
+        "url": "https://github.com/XBlueSky/cortexes/blob/4bcbd96230cab4b46d2be9a47f3df9f1efacf65c/cortex-vec/src/cortex_vec/store.py"
+      },
+      {
+        "id": "bm25",
+        "label": "BM25 implementation",
+        "path": "cortex-vec/src/cortex_vec/bm25.py",
+        "symbol": "Pickled document records, tokenization, filtering, upsert/delete and lexical ranking",
+        "url": "https://github.com/XBlueSky/cortexes/blob/4bcbd96230cab4b46d2be9a47f3df9f1efacf65c/cortex-vec/src/cortex_vec/bm25.py"
+      },
+      {
+        "id": "fusion",
+        "label": "Hybrid retrieval implementation",
+        "path": "cortex-vec/src/cortex_vec/fusion.py",
+        "symbol": "BM25/vector/optional graph streams, filtering, reciprocal-rank fusion and reranking",
+        "url": "https://github.com/XBlueSky/cortexes/blob/4bcbd96230cab4b46d2be9a47f3df9f1efacf65c/cortex-vec/src/cortex_vec/fusion.py"
+      },
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 164, catalog name, slug, listed locator, repository status and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster entry",
+        "path": "content/systems/cortexes.md",
+        "symbol": "Curated identity/locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cortexes.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Workload specification only; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Execution status record; no Cortexes measured result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Cortexes as a personal knowledge-vault plugin for Claude Code, with the local vault as source of truth and a rebuildable derived search index.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The repository separates Claude Code commands, skills and lifecycle hooks from the Python cortex-vec indexing/search CLI. The user’s vault is ordinary Markdown in a git repository: Raw session records, Notes, Projects, a generated/maintained _index.md and chronological log.md. Chroma and BM25 indexes are local derived data under ~/.cortex/.",
+        "sources": [
+          "readme",
+          "store",
+          "bm25"
+        ]
+      },
+      {
+        "text": "SessionStart presents vault status and offers memory loading; SessionEnd filters and writes session material under Raw/. Manual evolve saves a Markdown page to Notes or Projects, updates the index/log, commits through the documented workflow, then asks cortex-vec to upsert the page. Distill turns Raw records into Notes/Projects; broadcast merges new material into existing pages.",
+        "sources": [
+          "readme",
+          "session",
+          "evolve"
+        ]
+      },
+      {
+        "text": "The vector store persists Chroma documents with page metadata and generated summaries; the lexical index stores tokenized document records as a pickle and rebuilds BM25 scoring state when loaded. Retrieval can combine those streams and optionally add a wikilink graph stream.",
+        "sources": [
+          "store",
+          "bm25",
+          "fusion"
+        ]
+      },
+      {
+        "text": "GitHub’s branches page identifies plugin as the default branch. Its official plugin Atom feed identifies 4bcbd96230cab4b46d2be9a47f3df9f1efacf65c as the current head, updated 2026-11-25T03:54:58Z; the commit page corresponds to that full SHA. Review recorded 2026-11-25 09:47:42 UTC (01:47:42 PST; America/Los_Angeles).",
+        "sources": [
+          "repo",
+          "branches",
+          "history",
+          "head"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Automatic writes occur at SessionEnd. The recorder filters the transcript before writing a Raw record; README documentation says sessions over 4 KB are recorded without a per-session prompt, and CORTEX_SKIP_RECORD=1 skips a session. The hook writes through a sibling temporary file and renames it into place, then can commit the Raw and reclaim strict-prefix duplicate records.",
+        "sources": [
+          "readme",
+          "session"
+        ]
+      },
+      {
+        "text": "Manual evolve creates or edits Markdown pages in Notes/<category>/ or Projects/<repo-name>/ with frontmatter such as title, tags, created date and source. It updates _index.md and log.md and runs cortex-vec upsert. Distill is the Raw-to-page curation workflow; broadcast can fuse material into existing pages. These write paths rely on the plugin instructions and user/model workflow, not a separate immutable claim store.",
+        "sources": [
+          "readme",
+          "evolve"
+        ]
+      },
+      {
+        "text": "The CLI exposes upsert and delete for individual indexed paths and rebuild for the derived indexes. Deleting a vault file alone is not complete erasure: the git history retains committed content, and the privacy policy says users must rewrite history when they need to remove it. The BM25 implementation removes the matching path record; vector deletion operates on the derived Chroma collection. The vault and its indexes are not automatically expired.",
+        "sources": [
+          "readme",
+          "bm25",
+          "store",
+          "privacy"
+        ]
+      },
+      {
+        "text": "Search defaults to BM25 plus vector retrieval fused by reciprocal rank; the README documents default stream weights of 0.4 BM25 and 0.6 vector. Without a configured embedding key or when vector search degrades, the CLI can return BM25-only results. Graph-neighbor expansion and LLM reranking are optional; the query skill supplements results with exact-file reads or grep and can search Raw only when requested.",
+        "sources": [
+          "readme",
+          "fusion",
+          "query"
+        ]
+      },
+      {
+        "text": "The --repo filter narrows Projects pages by repository while Notes pages pass across repositories by design; type and category filters can also be supplied. This is retrieval filtering within a user-selected vault, not tenant isolation. Raw search and the session-start topic listing are separate paths and should not be treated as covered by the Projects filter.",
+        "sources": [
+          "readme",
+          "query",
+          "fusion"
+        ]
+      },
+      {
+        "text": "Provenance is primarily file-level: frontmatter and repository/category metadata, dated Raw records, git history, and generated log entries make files traceable to the vault workflow. The search interface returns titles, metadata and summaries, then expects a second read for precise content; the query documentation says the first layer returns no excerpt. This review found no enforced claim-level citation or evidence object for arbitrary generated answers.",
+        "sources": [
+          "readme",
+          "evolve",
+          "session",
+          "query",
+          "store"
+        ]
+      },
+      {
+        "text": "The project states it has no telemetry or usage reporting. Source-visible controls include local derived indexes, bounded results and distillation pages, degraded-mode notes on stderr, index status, and configurable model providers. These are implementation/documentation observations, not measured efficiency or reliability.",
+        "sources": [
+          "readme",
+          "privacy",
+          "fusion",
+          "store"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention — unmeasured. Hybrid retrieval and empty-result reporting are implemented, but no project answer or abstention probes were run.",
+        "sources": [
+          "readme",
+          "fusion",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured. Pages can be edited or fused through evolve/broadcast, but no correction workload was run or adjudicated.",
+        "sources": [
+          "readme",
+          "evolve",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Deletion leakage — unmeasured. Individual index deletion and user-directed file/history cleanup are documented; no deletion probe or residual-storage check was run.",
+        "sources": [
+          "readme",
+          "bm25",
+          "store",
+          "privacy",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Scope isolation — unmeasured. Repo filters are available for Projects pages while Notes are cross-repo; no cross-repo leakage workload was run.",
+        "sources": [
+          "readme",
+          "query",
+          "fusion",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Evidence support and citation coverage — unmeasured. Files have metadata and source history, but no answer-citation scoring workload was run.",
+        "sources": [
+          "readme",
+          "query",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Retrieval latency — unmeasured; no timing observations were collected.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Write-to-recall delay — unmeasured; no timed write/read probes were collected.",
+        "sources": [
+          "readme",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Token use and cost — unmeasured. The README documents provider/model configuration and optional model calls, but no runtime usage or cost data was collected.",
+        "sources": [
+          "readme",
+          "privacy",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Storage efficiency — unmeasured; no vault/index size or corpus-attributed storage measurements were collected.",
+        "sources": [
+          "readme",
+          "privacy",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency and observability — BM25 token records, persistent vector storage, result limits, configurable retrieval paths, status output and degradation notes are visible in source/docs; none is a performance measurement.",
+        "sources": [
+          "readme",
+          "bm25",
+          "store",
+          "fusion"
+        ]
+      }
+    ],
+    "limits": [
+      "This bounded review inspected the official README, privacy and security policies, SessionEnd recorder, manual save and query workflows, and selected current indexing, lexical retrieval, vector storage and fusion code. It did not inspect every command, hook, parser branch, model provider, vault mutation, or deployment environment.",
+      "No Cortexes runtime, tests, or benchmarks were run. The review does not establish retrieval quality, abstention quality, actual cross-project isolation, correction reliability, deletion leakage, latency, token/cost totals, or storage efficiency.",
+      "The default vault scope is one configured vault. Projects filtering depends on caller-provided repo context and applies to Projects pages; Notes are intentionally cross-repository. This does not establish an adversarial access-control boundary.",
+      "The vault and records persist indefinitely unless the user removes them. Removing a file does not erase it from git history; deleting local indexes does not delete copies already sent to model providers.",
+      "The first search layer does not return source excerpts. A caller or agent must read the returned page to ground a claim; the inspected interface does not enforce citations in generated answers.",
+      "README-reported evaluation instructions and any upstream examples are not this project's measurements. Project benchmark status remains not_run."
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Cortexes runtime, tests, or benchmark workload was executed. Source and documentation observations are not measurements.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

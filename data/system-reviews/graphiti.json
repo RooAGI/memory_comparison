@@ -1,0 +1,315 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 272,
+    "slug": "graphiti",
+    "name": "Graphiti",
+    "repository": "https://github.com/getzep/graphiti",
+    "listed_repository": "https://github.com/getzep/graphiti",
+    "branch": "main",
+    "revision": "b8ea9c5dcba4b0031c9c204f733bcd7ad5e2dadc",
+    "reviewed_at": "2026-11-25T21:54:31Z",
+    "review_timezone": "UTC (checked 2026-11-25 13:54:31 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Graphiti is an open-source Python framework that turns source episodes into a temporal knowledge graph of entities and relationship facts. It keeps episode provenance and supports hybrid graph retrieval; the library supplies graph construction, while a host application must provide production authentication, authorization, and tenant controls. This source review does not measure runtime quality or performance.",
+    "atlas_locator": {
+      "ordinal": 272,
+      "name": "Graphiti",
+      "slug": "graphiti",
+      "listed_repository": "https://github.com/getzep/graphiti",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/graphiti.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/getzep/graphiti/blob/b8ea9c5dcba4b0031c9c204f733bcd7ad5e2dadc/README.md",
+      "checked_urls": [
+        "https://github.com/getzep/graphiti/blob/b8ea9c5dcba4b0031c9c204f733bcd7ad5e2dadc/README.md",
+        "https://github.com/getzep/graphiti/blob/b8ea9c5dcba4b0031c9c204f733bcd7ad5e2dadc/SECURITY.md"
+      ],
+      "note": "Checked only official pinned README and SECURITY.md for a published contact email; neither publishes one. README directs general support to GitHub issues and the security policy to private vulnerability reporting. No commit/profile metadata, package metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/getzep/graphiti/blob/b8ea9c5dcba4b0031c9c204f733bcd7ad5e2dadc/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/getzep/graphiti/blob/b8ea9c5dcba4b0031c9c204f733bcd7ad5e2dadc/README.md",
+      "https://github.com/getzep/graphiti/blob/b8ea9c5dcba4b0031c9c204f733bcd7ad5e2dadc/SECURITY.md"
+    ],
+    "contact_email_note": "No contact email was published in the checked official pinned README or SECURITY.md; no address was inferred from metadata or third-party sources.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[271], ordinal 272; curated identity, explicit locator, Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/graphiti.md",
+        "symbol": "Recorded for catalog attribution and locator context only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/graphiti.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "",
+        "symbol": "Public getzep/graphiti repository page identifies default branch main",
+        "url": "https://github.com/getzep/graphiti"
+      },
+      {
+        "id": "head",
+        "label": "Verified official upstream head",
+        "path": "",
+        "symbol": "Fresh git ls-remote --symref reports HEAD -> refs/heads/main at b8ea9c5dcba4b0031c9c204f733bcd7ad5e2dadc; shallow checkout resolved to same full SHA",
+        "url": "https://github.com/getzep/graphiti/commit/b8ea9c5dcba4b0031c9c204f733bcd7ad5e2dadc"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project positioning, context graph components, ingestion, retrieval, reference server limits, telemetry and support; upstream claims are not measurements",
+        "url": "https://github.com/getzep/graphiti/blob/b8ea9c5dcba4b0031c9c204f733bcd7ad5e2dadc/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Pinned official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Reference server authentication, authorization, cross-group access and trust boundaries",
+        "url": "https://github.com/getzep/graphiti/blob/b8ea9c5dcba4b0031c9c204f733bcd7ad5e2dadc/SECURITY.md"
+      },
+      {
+        "id": "core",
+        "label": "Graphiti orchestration API",
+        "path": "graphiti_core/graphiti.py",
+        "symbol": "add_episode, search/search_, request scope resolution, remove_episode",
+        "url": "https://github.com/getzep/graphiti/blob/b8ea9c5dcba4b0031c9c204f733bcd7ad5e2dadc/graphiti_core/graphiti.py"
+      },
+      {
+        "id": "nodes",
+        "label": "Node and episode models",
+        "path": "graphiti_core/nodes.py",
+        "symbol": "Node.group_id; EpisodicNode source/content/source_description/valid_at/entity_edges/metadata; group delete",
+        "url": "https://github.com/getzep/graphiti/blob/b8ea9c5dcba4b0031c9c204f733bcd7ad5e2dadc/graphiti_core/nodes.py"
+      },
+      {
+        "id": "edges",
+        "label": "Temporal relationship model",
+        "path": "graphiti_core/edges.py",
+        "symbol": "EntityEdge episodes, created_at, expired_at, valid_at and invalid_at",
+        "url": "https://github.com/getzep/graphiti/blob/b8ea9c5dcba4b0031c9c204f733bcd7ad5e2dadc/graphiti_core/edges.py"
+      },
+      {
+        "id": "search",
+        "label": "Hybrid retrieval implementation",
+        "path": "graphiti_core/search/search.py",
+        "symbol": "Search pipeline, group filter propagation, BM25/vector/BFS methods and reranking",
+        "url": "https://github.com/getzep/graphiti/blob/b8ea9c5dcba4b0031c9c204f733bcd7ad5e2dadc/graphiti_core/search/search.py"
+      },
+      {
+        "id": "recipes",
+        "label": "Search configuration recipes",
+        "path": "graphiti_core/search/search_config_recipes.py",
+        "symbol": "Combined BM25/cosine/BFS search and RRF/MMR/cross-encoder recipes",
+        "url": "https://github.com/getzep/graphiti/blob/b8ea9c5dcba4b0031c9c204f733bcd7ad5e2dadc/graphiti_core/search/search_config_recipes.py"
+      },
+      {
+        "id": "edgeops",
+        "label": "Edge extraction and contradiction resolution",
+        "path": "graphiti_core/utils/maintenance/edge_operations.py",
+        "symbol": "Episode-source attachment, fact extraction, temporal invalidation and edge resolution",
+        "url": "https://github.com/getzep/graphiti/blob/b8ea9c5dcba4b0031c9c204f733bcd7ad5e2dadc/graphiti_core/utils/maintenance/edge_operations.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation metric domains; not a Graphiti result",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned fixture, not executed in this review",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared project status record, not a Graphiti result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Graphiti as an open-source Python framework for building and querying temporal context graphs. It is a library that expects the application to supply a graph database, LLM, embedder, and surrounding service; the repository also includes reference MCP and REST servers.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The Graphiti facade combines graph-driver clients, LLM and embedding clients, extraction/resolution routines, and configurable search. Graph records include episodic source nodes, entity nodes, temporal relationship edges, and optional community and saga structures.",
+        "sources": [
+          "core",
+          "nodes",
+          "edges"
+        ]
+      },
+      {
+        "text": "An episode stores raw content, source type and description, group ID, creation time, reference/valid time, and entity-edge references. Derived entity edges store a fact, endpoints, source episode UUIDs, and temporal validity and transaction timestamps. This lets facts be traced back to contributing episode records.",
+        "sources": [
+          "nodes",
+          "edges",
+          "edgeops"
+        ]
+      },
+      {
+        "text": "Drivers abstract graph providers. The README documents Neo4j, FalkorDB, Amazon Neptune, and Relate as supported backends at this head; a configured backend and compatible full-text/vector capabilities affect the available retrieval path.",
+        "sources": [
+          "readme",
+          "core",
+          "search"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: add_episode stores an episode and runs entity and relationship extraction, deduplication/resolution, embedding, graph writes, and temporal contradiction handling. It accepts a reference_time and source metadata, custom entity/edge types, and group scope. Ingestion makes LLM/schema behavior and provider configuration part of the write path.",
+        "sources": [
+          "core",
+          "nodes",
+          "edgeops"
+        ]
+      },
+      {
+        "text": "Update and correction: new episodes add evidence and may resolve duplicate facts or invalidate contradictory edges while retaining temporal history. The inspected public facade does not establish a general arbitrary field-edit API for existing episodes; correction quality depends on extraction and resolution decisions.",
+        "sources": [
+          "core",
+          "edges",
+          "edgeops"
+        ]
+      },
+      {
+        "text": "Delete: remove_episode removes the selected episode, drops its UUID from supported edges, deletes edges with no remaining episode support, removes nodes mentioned only by that episode, and rebuilds summaries for surviving nodes. Node deletion by group is also available. These are graph mutations, not a demonstrated erasure guarantee for backups or external copies.",
+        "sources": [
+          "core",
+          "nodes"
+        ]
+      },
+      {
+        "text": "Retrieval: search offers an edge-oriented hybrid query; search_ accepts a configurable recipe and returns graph result types. Recipes combine BM25/full-text, cosine similarity, and optional BFS, then rerank with RRF, MMR, cross-encoder, or node-distance methods. SearchFilters can constrain validity/transaction dates and graph properties.",
+        "sources": [
+          "core",
+          "search",
+          "recipes"
+        ]
+      },
+      {
+        "text": "Temporal fields distinguish when a fact held (valid_at/invalid_at) from when Graphiti recorded or expired the assertion (created_at/expired_at). Contradiction resolution can set an earlier edge's invalid_at to the newer fact's valid_at while retaining that edge.",
+        "sources": [
+          "edges",
+          "edgeops"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable recall and abstention: hybrid search, temporal filters, and rerankers are implemented. Correct answer retrieval, calibration, and abstention behavior were not measured.",
+        "sources": [
+          "search",
+          "recipes"
+        ]
+      },
+      {
+        "text": "Correction and staleness: episode-driven deduplication and temporal edge invalidation are present. Correction accuracy and stale-value rate were not measured.",
+        "sources": [
+          "core",
+          "edgeops"
+        ]
+      },
+      {
+        "text": "Deletion: remove_episode and group deletion paths exist. Deletion leakage, recovery, and backup propagation were not measured.",
+        "sources": [
+          "core",
+          "nodes"
+        ]
+      },
+      {
+        "text": "Scope isolation: group IDs partition graph records and flow into search and deletion operations. Cross-group isolation was not tested, and group IDs alone are not authorization.",
+        "sources": [
+          "nodes",
+          "search",
+          "security"
+        ]
+      },
+      {
+        "text": "Evidence and citations: derived edges retain episode UUID references and episode records retain source description and raw content. Citation support precision and answer citation coverage were not measured.",
+        "sources": [
+          "nodes",
+          "edges"
+        ]
+      },
+      {
+        "text": "Latency and write-to-recall delay: the source contains timed/traced operations and ingestion configuration. No latency, throughput, or time-to-recall workload was measured.",
+        "sources": [
+          "core",
+          "search",
+          "metrics"
+        ]
+      },
+      {
+        "text": "Tokens, cost, and storage: graph/LLM/embedder choices and concurrency affect resource use; no token, provider cost, storage footprint, or efficiency result was measured.",
+        "sources": [
+          "readme",
+          "core",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The README and security policy explicitly describe the repository's MCP and REST servers as reference implementations without authentication, authorization, or prompt-injection protection; they allow callers to access data across group IDs. They should not be exposed to untrusted networks without host-provided controls.",
+        "sources": [
+          "readme",
+          "security"
+        ]
+      },
+      {
+        "text": "The core library treats episodes within one group as equally trusted; accepted content can alter or invalidate existing facts in that group. The application must decide what to ingest and which group to use.",
+        "sources": [
+          "security"
+        ]
+      },
+      {
+        "text": "This inspection covered selected current documentation and implementation files. It did not execute Graphiti, its test suite, or benchmark fixtures, and cannot establish extraction correctness, tenant isolation in a deployment, operational reliability, or deletion from backups.",
+        "sources": [
+          "readme",
+          "security",
+          "core"
+        ]
+      },
+      {
+        "text": "Graphiti works best with providers that reliably support structured output; the README warns that incompatible or smaller models can yield schema errors and ingestion failures. Backend/provider versions and configuration were not validated by runtime execution.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Graphiti runtime, tests, or benchmark workload was run. Source observations, README statements, metric definitions, and the shared execution status are not Graphiti benchmark measurements.",
+      "metric_definitions": "../METRICS.md",
+      "fixture": "../fixtures/memory-benchmark-v1.json",
+      "execution_status": "../results/initial-baselines-status.json"
+    }
+  }
+}

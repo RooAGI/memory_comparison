@@ -1,0 +1,424 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "browsentic",
+    "name": "Browsentic",
+    "repository": "https://github.com/imshaikot/browsentic",
+    "branch": "main",
+    "revision": "9c0892a457e86cf2a5c3d1f4a8eea7eeb0900632",
+    "reviewed_at": "2026-11-25T00:13:22Z",
+    "review_timezone": "UTC (2026-11-24 16:13:22 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/imshaikot/browsentic/blob/9c0892a457e86cf2a5c3d1f4a8eea7eeb0900632/README.md","checked_urls":["https://github.com/imshaikot/browsentic/blob/9c0892a457e86cf2a5c3d1f4a8eea7eeb0900632/README.md","https://github.com/imshaikot/browsentic/blob/9c0892a457e86cf2a5c3d1f4a8eea7eeb0900632/SECURITY.md","https://github.com/imshaikot/browsentic/blob/9c0892a457e86cf2a5c3d1f4a8eea7eeb0900632/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "Browsentic is a local browser-agent harness with separate persistent context paths for a user profile, site-specific notes or generated maps, and recorded browsing workflows. This review examines selected source at a verified revision and does not run the application or measure memory quality or performance.",
+    "atlas_locator": {
+      "ordinal": 104,
+      "name": "Browsentic",
+      "slug": "browsentic",
+      "listed_repository": "https://github.com/imshaikot/browsentic",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/browsentic.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/imshaikot/browsentic/blob/9c0892a457e86cf2a5c3d1f4a8eea7eeb0900632/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/imshaikot/browsentic/blob/9c0892a457e86cf2a5c3d1f4a8eea7eeb0900632/README.md",
+      "https://github.com/imshaikot/browsentic/blob/9c0892a457e86cf2a5c3d1f4a8eea7eeb0900632/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical repository, identity and main branch",
+        "path": "repository",
+        "symbol": "imshaikot/browsentic",
+        "url": "https://github.com/imshaikot/browsentic"
+      },
+      {
+        "id": "head",
+        "label": "Verified main branch head and review pin",
+        "path": "commit",
+        "symbol": "full SHA 9c0892a457e86cf2a5c3d1f4a8eea7eeb0900632",
+        "url": "https://github.com/imshaikot/browsentic/commit/9c0892a457e86cf2a5c3d1f4a8eea7eeb0900632"
+      },
+      {
+        "id": "readme",
+        "label": "Official project README and contact check",
+        "path": "README.md",
+        "url": "https://github.com/imshaikot/browsentic/blob/9c0892a457e86cf2a5c3d1f4a8eea7eeb0900632/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security reporting guidance and contact check",
+        "path": "SECURITY.md",
+        "url": "https://github.com/imshaikot/browsentic/blob/9c0892a457e86cf2a5c3d1f4a8eea7eeb0900632/SECURITY.md"
+      },
+      {
+        "id": "site-guide",
+        "label": "Site-map generation, review and use",
+        "path": "docs/guide/features/site-maps.md",
+        "url": "https://github.com/imshaikot/browsentic/blob/9c0892a457e86cf2a5c3d1f4a8eea7eeb0900632/docs/guide/features/site-maps.md"
+      },
+      {
+        "id": "recording-guide",
+        "label": "Recording lifecycle and replay behavior",
+        "path": "docs/guide/features/recordings.md",
+        "url": "https://github.com/imshaikot/browsentic/blob/9c0892a457e86cf2a5c3d1f4a8eea7eeb0900632/docs/guide/features/recordings.md"
+      },
+      {
+        "id": "profile-guide",
+        "label": "Profile fields, distribution and boundaries",
+        "path": "docs/guide/features/profile.md",
+        "url": "https://github.com/imshaikot/browsentic/blob/9c0892a457e86cf2a5c3d1f4a8eea7eeb0900632/docs/guide/features/profile.md"
+      },
+      {
+        "id": "profile-model",
+        "label": "Profile type, validation and limits",
+        "path": "src/lib/settings/profile.ts",
+        "symbol": "UserProfile, PROFILE_LIMITS",
+        "url": "https://github.com/imshaikot/browsentic/blob/9c0892a457e86cf2a5c3d1f4a8eea7eeb0900632/src/lib/settings/profile.ts"
+      },
+      {
+        "id": "profile-store",
+        "label": "Local profile read, write and clearing",
+        "path": "src/daemon/profile.ts",
+        "symbol": "readProfile, writeProfile",
+        "url": "https://github.com/imshaikot/browsentic/blob/9c0892a457e86cf2a5c3d1f4a8eea7eeb0900632/src/daemon/profile.ts"
+      },
+      {
+        "id": "site-store",
+        "label": "Site-map staging, metadata, activation and sweep",
+        "path": "src/daemon/agent/site-map-store.ts",
+        "symbol": "stageSiteMap, commitStaging, discardStaging, sweepStaging",
+        "url": "https://github.com/imshaikot/browsentic/blob/9c0892a457e86cf2a5c3d1f4a8eea7eeb0900632/src/daemon/agent/site-map-store.ts"
+      },
+      {
+        "id": "site-contract",
+        "label": "Site-map data model, scrub, validation and bounds",
+        "path": "src/lib/skills/site-map.ts",
+        "symbol": "SiteMapReport, validateSiteMapReport",
+        "url": "https://github.com/imshaikot/browsentic/blob/9c0892a457e86cf2a5c3d1f4a8eea7eeb0900632/src/lib/skills/site-map.ts"
+      },
+      {
+        "id": "sitemap-fetch",
+        "label": "Robots and sitemap fetch budgets and origin restrictions",
+        "path": "src/daemon/agent/sitemap.ts",
+        "symbol": "fetchSiteIndex, MAX_DOCUMENTS, MAX_URLS",
+        "url": "https://github.com/imshaikot/browsentic/blob/9c0892a457e86cf2a5c3d1f4a8eea7eeb0900632/src/daemon/agent/sitemap.ts"
+      },
+      {
+        "id": "skill-store",
+        "label": "Uploaded skill and site-map deletion paths",
+        "path": "src/daemon/agent/skill-store.ts",
+        "symbol": "deleteSkill, deleteSiteMap",
+        "url": "https://github.com/imshaikot/browsentic/blob/9c0892a457e86cf2a5c3d1f4a8eea7eeb0900632/src/daemon/agent/skill-store.ts"
+      },
+      {
+        "id": "skill-router",
+        "label": "Domain-based note selection and overlay routing",
+        "path": "src/daemon/agent/skills.ts",
+        "symbol": "loadSkills, routeSkill, overlaysFor",
+        "url": "https://github.com/imshaikot/browsentic/blob/9c0892a457e86cf2a5c3d1f4a8eea7eeb0900632/src/daemon/agent/skills.ts"
+      },
+      {
+        "id": "prompt",
+        "label": "Prompt assembly, byte caps and note overlays",
+        "path": "src/daemon/agent/prompt.ts",
+        "symbol": "buildSystemPrompt, MAX_PROMPT_BYTES",
+        "url": "https://github.com/imshaikot/browsentic/blob/9c0892a457e86cf2a5c3d1f4a8eea7eeb0900632/src/daemon/agent/prompt.ts"
+      },
+      {
+        "id": "service",
+        "label": "Recording summary injection and omission logs",
+        "path": "src/daemon/agent/service.ts",
+        "symbol": "recordingsBlock",
+        "url": "https://github.com/imshaikot/browsentic/blob/9c0892a457e86cf2a5c3d1f4a8eea7eeb0900632/src/daemon/agent/service.ts"
+      },
+      {
+        "id": "record-store",
+        "label": "Extension-local recording metadata and bodies",
+        "path": "src/lib/bridge/recording-store.ts",
+        "symbol": "putRecording, updateRecordingMeta, removeRecording",
+        "url": "https://github.com/imshaikot/browsentic/blob/9c0892a457e86cf2a5c3d1f4a8eea7eeb0900632/src/lib/bridge/recording-store.ts"
+      },
+      {
+        "id": "record-events",
+        "label": "Recorded browser event shape, redaction and capture limits",
+        "path": "src/lib/recordings/events.ts",
+        "symbol": "RecordedEvent, MAX_EVENTS, isSensitiveField",
+        "url": "https://github.com/imshaikot/browsentic/blob/9c0892a457e86cf2a5c3d1f4a8eea7eeb0900632/src/lib/recordings/events.ts"
+      },
+      {
+        "id": "workflow",
+        "label": "Workflow schema, validation and replay bounds",
+        "path": "src/lib/recordings/workflow.ts",
+        "symbol": "RecordingWorkflow, validateRecordingWorkflow",
+        "url": "https://github.com/imshaikot/browsentic/blob/9c0892a457e86cf2a5c3d1f4a8eea7eeb0900632/src/lib/recordings/workflow.ts"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture and protocol",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated ordinal and listed repository locator only",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[103]",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Roster Atlas source attribution; identity only",
+        "path": "content/systems/browsentic.md",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/browsentic.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents Browsentic as a local browser harness that connects a browser extension and local Bridge to an agent CLI, with an optional MCP endpoint. This is an application with several browser-context stores, not a standalone hosted memory service; the README provides no email contact.",
+        "sources": [
+          "readme",
+          "security"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The profile is a validated JSON object containing contact fields, labeled details and standing instructions. The daemon reads and writes profile.json in local state; clearing all fields removes the file. Profile content is included in side-panel and scheduled-run prompts.",
+        "sources": [
+          "profile-model",
+          "profile-store",
+          "profile-guide"
+        ]
+      },
+      {
+        "text": "Site maps are directory-backed skill overlays. A generated map is represented by Markdown plus map.json, metadata, optional page notes, screenshots and robots/sitemap evidence. The report records summary, landmarks, pages, links and quirks; generated front matter carries domain, provenance and timestamp.",
+        "sources": [
+          "site-store",
+          "site-contract",
+          "site-guide"
+        ]
+      },
+      {
+        "text": "Recordings are held in the browser extension's local storage as an index and separate bodies. Bodies contain timestamped recorded events and may later include a normalized workflow; metadata records host, start URL, state, counts, duration and timestamps.",
+        "sources": [
+          "record-store",
+          "record-events",
+          "workflow",
+          "recording-guide"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Profile updates replace the normalized profile document; clearing it deletes that file. Profile and standing-instruction prompt sections go to side-panel and scheduled tasks but not MCP clients, site mapping, file analysis or conversation titles.",
+        "sources": [
+          "profile-store",
+          "profile-guide",
+          "prompt"
+        ]
+      },
+      {
+        "text": "Mapping is explicitly started, reads sitemap inputs and browses a bounded site, then validates and stages the generated result for review. Activation moves it into the uploaded skills directory; replacement stages the prior directory. A user can discard staged output or delete an active site map; the daemon sweeps abandoned staging after 24 hours.",
+        "sources": [
+          "site-guide",
+          "sitemap-fetch",
+          "site-contract",
+          "site-store",
+          "skill-store"
+        ]
+      },
+      {
+        "text": "Recording follows the user-started tab, caps a session at 15 minutes and filters sensitive fields by type, field name and card-like value. Analysis validates the generated steps. Stored recordings can be renamed or removed, and the oldest entry is dropped when the 20-recording cap is exceeded.",
+        "sources": [
+          "recording-guide",
+          "record-events",
+          "record-store",
+          "workflow"
+        ]
+      },
+      {
+        "text": "At prompt time, site overlays are selected by the active hostname and domain match; the longest match is prioritized, while an explicit @name can attach a note elsewhere. Authored overlays precede generated overlays. The prompt builder logs and omits notes that exceed a 64 KiB prompt; recording summaries have a separate 4 KiB budget and direct read tools can retrieve a chosen recording.",
+        "sources": [
+          "skill-router",
+          "prompt",
+          "service",
+          "recording-guide"
+        ]
+      },
+      {
+        "text": "Profile data has local machine scope, site notes have domain metadata with optional explicit attachment, and recordings live in extension-local storage. These separate routing and storage rules do not establish a general multi-tenant or cross-principal isolation guarantee.",
+        "sources": [
+          "profile-guide",
+          "skill-router",
+          "record-store",
+          "readme"
+        ]
+      },
+      {
+        "text": "Site-map metadata records run ID, host, domain and generation time alongside captured sitemap evidence. Recorded events carry timestamps and URLs, but the inspected workflow model does not preserve a verified event-to-step evidence chain. Profile fields have no source citation or validity history.",
+        "sources": [
+          "site-store",
+          "sitemap-fetch",
+          "record-events",
+          "workflow",
+          "profile-model"
+        ]
+      },
+      {
+        "text": "Code-visible budgets include sitemap fetch limits of 20 documents, 4 MiB per document and 16 MiB total; mapping defaults of 15 pages, 10 screenshots and ten minutes; recordings of 2,000 events/15 minutes; and prompt limits of 64 KiB overall and 4 KiB for recording summaries. The code logs map lifecycle events and omitted prompt context. These are source observations, not measured performance.",
+        "sources": [
+          "sitemap-fetch",
+          "site-contract",
+          "site-store",
+          "record-events",
+          "prompt",
+          "service"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Domain-selected notes, profile prompt content and recording lookup are implemented; no answerable or unanswerable probes were run.",
+        "sources": [
+          "skill-router",
+          "profile-guide",
+          "recording-guide",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Profile edits and site-map replacement are available; no fact-level correction or stale-value adjudication was run.",
+        "sources": [
+          "profile-store",
+          "site-store",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Profile clearing, map removal and recording removal are separate operations; no cross-store or post-deletion probes were run.",
+        "sources": [
+          "profile-store",
+          "skill-store",
+          "record-store",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Host/domain selection and local storage boundaries are visible; no cross-principal or cross-browser isolation probes were run.",
+        "sources": [
+          "skill-router",
+          "profile-guide",
+          "record-store",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Site-map evidence files and recorded events exist, but generated memory claims were not adjudicated against them.",
+        "sources": [
+          "site-store",
+          "record-events",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Prompt assembly and bounded retrieval-context paths are source-visible; no timing measurements were collected.",
+        "sources": [
+          "prompt",
+          "service",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "Prompt size limits are visible but no token usage or provider charges were measured.",
+        "sources": [
+          "prompt",
+          "profile-guide",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Profile files, site-map directories and extension storage are visible; no bytes-per-item measurement was collected.",
+        "sources": [
+          "profile-store",
+          "site-store",
+          "record-store",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded inspection of selected source and documentation at one verified commit. Runtime behavior, map quality, recording fidelity, browser storage retention, authorization behavior and operational performance were not tested.",
+        "sources": [
+          "head",
+          "readme",
+          "site-guide",
+          "recording-guide"
+        ]
+      },
+      {
+        "text": "The profile, generated maps and recordings use separate persistence and deletion paths; deleting one category does not establish erasure from the others or across backups.",
+        "sources": [
+          "profile-store",
+          "skill-store",
+          "record-store"
+        ]
+      },
+      {
+        "text": "The official README and SECURITY.md were checked for a published email. The README directs general questions to contributing or GitHub discussions and SECURITY.md directs vulnerability reports through GitHub advisories; neither publishes a contact email, so contact_email is null.",
+        "sources": [
+          "readme",
+          "security"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status: not_run. No Browsentic application, benchmark workload, or tests were run. Project metric definitions, fixture and status record are protocol/status artifacts, not Browsentic measurements.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

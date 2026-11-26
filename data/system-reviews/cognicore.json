@@ -1,0 +1,429 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 136,
+    "slug": "cognicore",
+    "name": "CogniCore",
+    "repository": "https://github.com/cognicore-dev/cognicore-env",
+    "branch": "main",
+    "revision": "44d06d2dde6ad1a637b169cb3133a291c572a019",
+    "reviewed_at": "2026-11-25T08:38:19Z",
+    "review_timezone": "UTC (2026-11-25 00:38:19 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": "contact@cognicoree.tech",
+      "source_url": "https://www.cognicoree.tech/",
+      "checked_urls": [
+        "https://www.cognicoree.tech/",
+        "https://github.com/cognicore-dev/cognicore-env/blob/44d06d2dde6ad1a637b169cb3133a291c572a019/README.md"
+      ],
+      "note": "The official website's organization metadata publishes this contact email; the pinned README was also checked."
+    },
+    "contact_email": "contact@cognicoree.tech",
+    "contact_email_source_url": "https://www.cognicoree.tech/",
+    "contact_email_checked_sources": [
+      "https://www.cognicoree.tech/",
+      "https://github.com/cognicore-dev/cognicore-env/blob/44d06d2dde6ad1a637b169cb3133a291c572a019/README.md"
+    ],
+    "contact_email_note": "The official website publishes contact@cognicoree.tech in its organization metadata.",
+    "summary": "CogniCore is a local-first session handoff and memory toolkit for Claude Code and Codex, with a SQLite memory SDK and MCP routes. Its hooks capture a project-scoped handoff, resume it within a token budget, and expose overflow details to search. The assessment is based on the current main source; no CogniCore runtime, tests, or benchmark workloads were run.",
+    "atlas_locator": {
+      "ordinal": 136,
+      "name": "CogniCore",
+      "slug": "cognicore",
+      "listed_repository": "https://github.com/cognicore-dev/cognicore-env",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cognicore.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog roster",
+        "path": "data/memory-systems.json",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster attribution only",
+        "path": "content/systems/cognicore.md",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cognicore.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository and default branch",
+        "path": "repository",
+        "symbol": "public repository; default branch main",
+        "url": "https://github.com/cognicore-dev/cognicore-env"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "main commits Atom feed",
+        "symbol": "current main head 44d06d2dde6ad1a637b169cb3133a291c572a019; updated 2026-11-24T07:19:40Z",
+        "url": "https://github.com/cognicore-dev/cognicore-env/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed current full commit",
+        "path": "commit",
+        "symbol": "44d06d2dde6ad1a637b169cb3133a291c572a019",
+        "url": "https://github.com/cognicore-dev/cognicore-env/commit/44d06d2dde6ad1a637b169cb3133a291c572a019"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "url": "https://github.com/cognicore-dev/cognicore-env/blob/44d06d2dde6ad1a637b169cb3133a291c572a019/README.md"
+      },
+      {
+        "id": "architecture_doc",
+        "label": "Architecture documentation",
+        "path": "docs/architecture.md",
+        "url": "https://github.com/cognicore-dev/cognicore-env/blob/44d06d2dde6ad1a637b169cb3133a291c572a019/docs/architecture.md"
+      },
+      {
+        "id": "handoff",
+        "label": "Session handoff schema and selection",
+        "path": "cognicore/memory/handoff.py",
+        "symbol": "cognicore.handoff/v1; rule-based extraction and token-budgeted selection",
+        "url": "https://github.com/cognicore-dev/cognicore-env/blob/44d06d2dde6ad1a637b169cb3133a291c572a019/cognicore/memory/handoff.py"
+      },
+      {
+        "id": "hooks",
+        "label": "Agent hooks",
+        "path": "cognicore/hooks.py",
+        "symbol": "SessionStart, Stop, PreCompact, SessionEnd; project-keyed brief",
+        "url": "https://github.com/cognicore-dev/cognicore-env/blob/44d06d2dde6ad1a637b169cb3133a291c572a019/cognicore/hooks.py"
+      },
+      {
+        "id": "context",
+        "label": "Session capture and resume",
+        "path": "cognicore/memory/context_preservation.py",
+        "symbol": "save_session; resume_session; project_key; redaction and deduplication",
+        "url": "https://github.com/cognicore-dev/cognicore-env/blob/44d06d2dde6ad1a637b169cb3133a291c572a019/cognicore/memory/context_preservation.py"
+      },
+      {
+        "id": "entry",
+        "label": "Memory entry and scope model",
+        "path": "cognicore/memory/base.py",
+        "symbol": "MemoryEntry; MemoryScope; MemoryState; source and mutation fields",
+        "url": "https://github.com/cognicore-dev/cognicore-env/blob/44d06d2dde6ad1a637b169cb3133a291c572a019/cognicore/memory/base.py"
+      },
+      {
+        "id": "sqlite",
+        "label": "SQLite memory backend",
+        "path": "cognicore/memory/sqlite_backend.py",
+        "symbol": "FTS5, optional embeddings, search filters, update and delete methods",
+        "url": "https://github.com/cognicore-dev/cognicore-env/blob/44d06d2dde6ad1a637b169cb3133a291c572a019/cognicore/memory/sqlite_backend.py"
+      },
+      {
+        "id": "experience",
+        "label": "Experience retrieval",
+        "path": "cognicore/experience/retrieval.py",
+        "symbol": "verification-state, invalidation, environment and repository compatibility filters",
+        "url": "https://github.com/cognicore-dev/cognicore-env/blob/44d06d2dde6ad1a637b169cb3133a291c572a019/cognicore/experience/retrieval.py"
+      },
+      {
+        "id": "verification",
+        "label": "Experience evidence verification",
+        "path": "cognicore/experience/verification.py",
+        "symbol": "evidence validation and promotion",
+        "url": "https://github.com/cognicore-dev/cognicore-env/blob/44d06d2dde6ad1a637b169cb3133a291c572a019/cognicore/experience/verification.py"
+      },
+      {
+        "id": "remote",
+        "label": "Hosted experience tools",
+        "path": "cognicore/connectors/remote.py",
+        "symbol": "experience verify evidence defaults and retrieval interface",
+        "url": "https://github.com/cognicore-dev/cognicore-env/blob/44d06d2dde6ad1a637b169cb3133a291c572a019/cognicore/connectors/remote.py"
+      },
+      {
+        "id": "mcp",
+        "label": "Local MCP recall tool",
+        "path": "cognicore/mcp/server.py",
+        "symbol": "cognicore_recall",
+        "url": "https://github.com/cognicore-dev/cognicore-env/blob/44d06d2dde6ad1a637b169cb3133a291c572a019/cognicore/mcp/server.py"
+      },
+      {
+        "id": "utility",
+        "label": "Utility scoring and promotion recommendations",
+        "path": "cognicore/memory/utility.py",
+        "url": "https://github.com/cognicore-dev/cognicore-env/blob/44d06d2dde6ad1a637b169cb3133a291c572a019/cognicore/memory/utility.py"
+      },
+      {
+        "id": "events",
+        "label": "Memory observation event bus",
+        "path": "cognicore/memory/events.py",
+        "symbol": "on_store and on_search observer callbacks",
+        "url": "https://github.com/cognicore-dev/cognicore-env/blob/44d06d2dde6ad1a637b169cb3133a291c572a019/cognicore/memory/events.py"
+      },
+      {
+        "id": "website",
+        "label": "Official CogniCore website",
+        "path": "website contact information",
+        "url": "https://www.cognicoree.tech/"
+      },
+      {
+        "id": "metric_defs",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "result",
+        "label": "Shared benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The README presents CogniCore as local-first session memory for Claude Code and Codex. It documents automatic hook capture/resume, optional hosted sync, MCP tools, and a Python SDK.",
+        "sources": [
+          "readme",
+          "hooks",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Ordinal 136 in the curated roster is CogniCore, slug cognicore, with the explicit listed locator shown here. The pinned Atlas entry is retained only as roster attribution, not as evidence for this assessment.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "GitHub identifies the public cognicore-dev/cognicore-env repository with default branch main. The main commits feed reports full head 44d06d2dde6ad1a637b169cb3133a291c572a019, updated 2026-11-24T07:19:40Z; `git ls-remote` and a shallow checkout independently resolved main and HEAD to that same SHA.",
+        "sources": [
+          "repo",
+          "feed",
+          "head"
+        ]
+      },
+      {
+        "text": "The review does not infer individual maintainer identity. The official website publishes contact@cognicoree.tech; the pinned README was also checked for a contact address.",
+        "sources": [
+          "website",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The primary handoff is a versioned JSON document (`cognicore.handoff/v1`) with sections for goal, state, completed work, decisions, open tasks, facts, exact values, files, code, environment, and provenance. The default extractor uses rules rather than an LLM call, redacts detected secrets, deduplicates repeated statements, and selects content under a token budget.",
+        "sources": [
+          "readme",
+          "handoff",
+          "context"
+        ]
+      },
+      {
+        "text": "The local integration stores sessions, handoff JSON, and searchable memory rows in SQLite. `MemoryEntry` includes text/category, scope and scope_id, session and sequence identifiers, confidence and lifecycle state, source component/agent/task fields, and supersedes/invalidation links. SQLite maintains a full-text FTS5 index with insert/update/delete triggers and can optionally store embeddings.",
+        "sources": [
+          "context",
+          "entry",
+          "sqlite"
+        ]
+      },
+      {
+        "text": "The hooks save at Stop, PreCompact, and SessionEnd and build a project brief at SessionStart. The Python SDK exposes lower-level memory backends and structured experiences; the local MCP server provides memory tools, including recall. The backend publishes on_store and on_search events to registered observer callbacks.",
+        "sources": [
+          "readme",
+          "hooks",
+          "sqlite",
+          "experience",
+          "mcp",
+          "events"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: the session save path builds a handoff from transcript content or an agent-supplied handoff, redacts secrets, derives a project key, stores new searchable rows, and links exact statements already present instead of copying them. Repeated identical session content can return the existing session; repeated saves under a session key update that session.",
+        "sources": [
+          "context",
+          "handoff"
+        ]
+      },
+      {
+        "text": "Update: SQLite exposes field updates for lifecycle, confidence, utility, source metadata, and supersession/invalidation fields. Session saves can update a prior session. The inspected generic entry API does not provide a content-correction history; mutation links are fields, not a guarantee that all writers preserve an audit trail.",
+        "sources": [
+          "sqlite",
+          "entry",
+          "context"
+        ]
+      },
+      {
+        "text": "Delete: the SQLite backend hard-deletes a memory row by entry ID and synchronizes FTS through a trigger. The inspected session path and local MCP recall documentation do not establish end-to-end erasure from synced copies, exports, backups, or every hosted store.",
+        "sources": [
+          "sqlite",
+          "context",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Retrieval: SQLite search uses FTS5 prefix matching and a BM25 fallback; with an embedding provider it evaluates a bounded candidate set and combines semantic similarity with normalized BM25. General search filters archived/deleted states and accepts category, scope, scope_id, and metadata filters. Structured experience retrieval additionally filters invalidated or incompatible experiences and by verification state when required.",
+        "sources": [
+          "sqlite",
+          "experience"
+        ]
+      },
+      {
+        "text": "The local MCP `cognicore_recall` tool accepts query, category, and top_k, but no project or scope argument. Its category-only fallback calls `get_by_category`, which does not apply the active/deleted state predicate used by `search`. Treat this as a limitation of that inspected call path; other integrations and deployments may use different paths.",
+        "sources": [
+          "mcp",
+          "sqlite"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "Search and recall paths are source-visible, but answerable quality and appropriate abstention were not measured.",
+        "sources": [
+          "sqlite",
+          "mcp",
+          "metric_defs",
+          "result",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "The record model has supersedes/invalidation fields and the backend supports field updates; no correction sequence or stale-value probe was run.",
+        "sources": [
+          "entry",
+          "sqlite",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "A backend hard-delete path exists, but no post-delete probe or check of residual copies was run.",
+        "sources": [
+          "sqlite",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Session briefs are keyed by project and SDK search accepts scope predicates; the local MCP recall interface has no scope argument. No cross-project isolation workload was run.",
+        "sources": [
+          "hooks",
+          "context",
+          "sqlite",
+          "mcp",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Entries can retain source identifiers and experiences can carry verification evidence. The verification gate checks command presence, zero exit code, and timestamp in supplied evidence; it does not execute the command or independently prove the evidence is genuine. No claim-to-source adjudication was run.",
+        "sources": [
+          "entry",
+          "verification",
+          "remote",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "The implementation has fallback and optional embedding paths, but no configured latency instrumentation or retrieval workload was measured for this review.",
+        "sources": [
+          "sqlite",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Session save and resume are implemented as separate operations; no scheduled first-correct-recall measurement was collected.",
+        "sources": [
+          "context",
+          "hooks",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "The handoff is selected against a token budget and the default capture path is rule-based; no token usage or provider cost was measured.",
+        "sources": [
+          "handoff",
+          "context",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The local store contains session rows, memory rows, FTS index data, and optionally embeddings; no persistent byte count was collected.",
+        "sources": [
+          "context",
+          "sqlite",
+          "metric_defs",
+          "result"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "Scope depends on the caller. The hook-based session brief uses a project key, and SDK searches can apply scope filters, but local MCP recall does not accept a scope key; category fallback also bypasses the search state filter. Source inspection does not establish isolation for every integration or deployment.",
+        "sources": [
+          "hooks",
+          "context",
+          "sqlite",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Experience verification validates metadata on evidence supplied by the agent and does not run the named command. A structurally valid record therefore does not establish that an independent test actually ran or that its result supports the experience.",
+        "sources": [
+          "verification",
+          "remote"
+        ]
+      },
+      {
+        "text": "Hard deletion from the local SQLite table is not proof of deletion from hosted sync, other databases, backups, or storage remnants. Those paths and retention behavior were not fully audited.",
+        "sources": [
+          "sqlite",
+          "context",
+          "readme"
+        ]
+      },
+      {
+        "text": "This review inspected selected README, handoff, hook, SQLite, experience, and MCP paths at the verified current main SHA. It did not audit every adapter, hosted route, storage backend, or deployment configuration, and it collected no runtime or benchmark results.",
+        "sources": [
+          "repo",
+          "head",
+          "readme"
+        ]
+      }
+    ],
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "This review did not run CogniCore, tests, or benchmarks. Source and documentation observations are not project benchmark results."
+    }
+  }
+}

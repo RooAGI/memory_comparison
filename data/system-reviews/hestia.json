@@ -1,0 +1,412 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 292,
+    "slug": "hestia",
+    "name": "Hestia",
+    "repository": "https://github.com/thefullnacho/hestia",
+    "listed_repository": "https://github.com/thefullnacho/hestia",
+    "branch": "main",
+    "revision": "6489389bbd1671582024cab1975434110d36bfe5",
+    "reviewed_at": "2026-11-25T22:51:40Z",
+    "review_timezone": "UTC (checked 2026-11-25 14:51:40 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Hestia is a local-first household assistant with two distinct memory paths: Markdown soft facts/preferences and structured SQLite entities/events. Its conversational memory supports direct writes and lexical recall; background extraction proposes facts for human approval. This is a pinned source review, not a runtime or benchmark evaluation.",
+    "atlas_locator": {
+      "ordinal": 292,
+      "name": "Hestia",
+      "slug": "hestia",
+      "listed_repository": "https://github.com/thefullnacho/hestia",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hestia.md",
+      "revision": "5ccaa7b4b0f90e1023ca47b3c20eaa626e71f486"
+    },
+    "contact": {
+      "email": null,
+      "source_url": null,
+      "checked_urls": [
+        "https://github.com/thefullnacho/hestia/blob/6489389bbd1671582024cab1975434110d36bfe5/README.md",
+        "https://github.com/thefullnacho/hestia/blob/6489389bbd1671582024cab1975434110d36bfe5/SECURITY.md"
+      ],
+      "note": "Checked only the official pinned README and SECURITY.md for a published contact email; neither publishes one. No commit/profile metadata, inferred address, or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/thefullnacho/hestia/blob/6489389bbd1671582024cab1975434110d36bfe5/README.md",
+      "https://github.com/thefullnacho/hestia/blob/6489389bbd1671582024cab1975434110d36bfe5/SECURITY.md"
+    ],
+    "contact_email_note": "No published contact email was found in the official pinned README or SECURITY.md; those exact URLs were checked.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[291], ordinal 292; name, slug, listed locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/hestia.md",
+        "symbol": "Pinned attribution source for curated identity/locator context only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/hestia.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "",
+        "symbol": "Official repository page identifies thefullnacho/hestia and default branch main",
+        "url": "https://github.com/thefullnacho/hestia"
+      },
+      {
+        "id": "head",
+        "label": "Official current head",
+        "path": "",
+        "symbol": "Official main.atom feed and commit page identify full current SHA and commit timestamp",
+        "url": "https://github.com/thefullnacho/hestia/commit/6489389bbd1671582024cab1975434110d36bfe5"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Current product overview, two memory stores, integrations, private deployment, and project status",
+        "url": "https://github.com/thefullnacho/hestia/blob/6489389bbd1671582024cab1975434110d36bfe5/README.md"
+      },
+      {
+        "id": "design",
+        "label": "Pinned memory design",
+        "path": "MEMORY-DESIGN.md",
+        "symbol": "Memory record design; document marks itself a historical plan and points to current HARNESS.md behavior",
+        "url": "https://github.com/thefullnacho/hestia/blob/6489389bbd1671582024cab1975434110d36bfe5/MEMORY-DESIGN.md"
+      },
+      {
+        "id": "harness",
+        "label": "Pinned harness and learning guide",
+        "path": "HARNESS.md",
+        "symbol": "Current recall, prompt context, routing, background learning, and evaluation behavior",
+        "url": "https://github.com/thefullnacho/hestia/blob/6489389bbd1671582024cab1975434110d36bfe5/HARNESS.md"
+      },
+      {
+        "id": "store",
+        "label": "Pinned Markdown memory store",
+        "path": "brain/memory_store.py",
+        "symbol": "Memory record schema, write, indexing, lexical recall, and context formatting",
+        "url": "https://github.com/thefullnacho/hestia/blob/6489389bbd1671582024cab1975434110d36bfe5/brain/memory_store.py"
+      },
+      {
+        "id": "note",
+        "label": "Pinned background note-taker",
+        "path": "brain/note_taker.py",
+        "symbol": "Extraction prompt, deterministic rejection, deduplication, proposal files, deferred execution, and failure handling",
+        "url": "https://github.com/thefullnacho/hestia/blob/6489389bbd1671582024cab1975434110d36bfe5/brain/note_taker.py"
+      },
+      {
+        "id": "review",
+        "label": "Pinned proposal review operations",
+        "path": "brain/review_notes.py",
+        "symbol": "Human promotion/edit/discard lifecycle and validation",
+        "url": "https://github.com/thefullnacho/hestia/blob/6489389bbd1671582024cab1975434110d36bfe5/brain/review_notes.py"
+      },
+      {
+        "id": "memory_api",
+        "label": "Pinned app memory review API",
+        "path": "brain/memory_api.py",
+        "symbol": "Keep/edit/discard endpoints, request guards, and handoff to review operations",
+        "url": "https://github.com/thefullnacho/hestia/blob/6489389bbd1671582024cab1975434110d36bfe5/brain/memory_api.py"
+      },
+      {
+        "id": "tool",
+        "label": "Pinned memory tool",
+        "path": "brain/tools/memory_tool.py",
+        "symbol": "Model-facing write and recall operations and returned fields",
+        "url": "https://github.com/thefullnacho/hestia/blob/6489389bbd1671582024cab1975434110d36bfe5/brain/tools/memory_tool.py"
+      },
+      {
+        "id": "config",
+        "label": "Pinned path configuration",
+        "path": "brain/config.py",
+        "symbol": "Memory/inbox locations and path overrides",
+        "url": "https://github.com/thefullnacho/hestia/blob/6489389bbd1671582024cab1975434110d36bfe5/brain/config.py"
+      },
+      {
+        "id": "brain",
+        "label": "Pinned prompt/context assembly",
+        "path": "brain/hestia.py",
+        "symbol": "Per-turn memory context injection and health memory count",
+        "url": "https://github.com/thefullnacho/hestia/blob/6489389bbd1671582024cab1975434110d36bfe5/brain/hestia.py"
+      },
+      {
+        "id": "records",
+        "label": "Pinned structured records store",
+        "path": "brain/records_store.py",
+        "symbol": "Separate SQLite entities and timestamped events; distinction from soft-fact memory",
+        "url": "https://github.com/thefullnacho/hestia/blob/6489389bbd1671582024cab1975434110d36bfe5/brain/records_store.py"
+      },
+      {
+        "id": "mcp",
+        "label": "Pinned operator MCP server",
+        "path": "brain/mcp_server.py",
+        "symbol": "Operator tool exposure, read-only default, and audit requirement for enabled writes",
+        "url": "https://github.com/thefullnacho/hestia/blob/6489389bbd1671582024cab1975434110d36bfe5/brain/mcp_server.py"
+      },
+      {
+        "id": "security",
+        "label": "Pinned security policy",
+        "path": "SECURITY.md",
+        "symbol": "Authentication/network boundary and private-data storage posture; checked for published email",
+        "url": "https://github.com/thefullnacho/hestia/blob/6489389bbd1671582024cab1975434110d36bfe5/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Recall, correction, deletion, scope, evidence, latency, write-to-recall, token/cost, and storage metric protocol",
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned synthetic benchmark workload, not an Hestia result",
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status record; no Hestia result is asserted",
+        "url": "../../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents Hestia as a local-first, self-hosted household assistant with one brain, a local LLM endpoint, and scoped tools. The repo is an integrated assistant application, not a standalone memory service.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      },
+      {
+        "text": "The README distinguishes conversational soft facts/preferences from structured SQLite records such as pets, garden, wildlife, and chores. This review focuses on the soft-fact memory and its human-reviewed background proposal flow.",
+        "sources": [
+          "readme",
+          "records"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Soft-fact memory is one Markdown file per record under the configured memory directory. YAML frontmatter stores id, type, confidence, source, last_seen, links, and pinned; the body stores free text. INDEX.md is regenerated from the record files and is a derived listing.",
+        "sources": [
+          "store",
+          "config"
+        ]
+      },
+      {
+        "text": "A separate SQLite records store models entities, aliases, relations, and timestamped events. The README and records-store module distinguish this relational/event history from conversational memory; household state is queried from Home Assistant rather than stored as a soft fact.",
+        "sources": [
+          "readme",
+          "records",
+          "tool"
+        ]
+      },
+      {
+        "text": "The memory context builder searches the shared store using the current user text and injects relevant hits into the prompt with record ID, source, and last-seen date. The model-facing memory tool independently exposes write and recall operations.",
+        "sources": [
+          "brain",
+          "store",
+          "tool"
+        ]
+      },
+      {
+        "text": "The background note-taker reads a recent transcript after the foreground answer, asks a model for up to two durable household facts, and writes candidate Markdown into an inbox. The current design document labels its earlier auto-write/vector plan historical and points readers to the current harness behavior.",
+        "sources": [
+          "note",
+          "design",
+          "harness"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Direct write accepts a content string and one of seven types, creates a slug-derived unique ID, records source and date metadata, writes a Markdown file, and rebuilds INDEX.md. An ID collision gets a numeric suffix; the inspected write path does not compare meaning or replace an existing record.",
+        "sources": [
+          "store",
+          "tool"
+        ]
+      },
+      {
+        "text": "Direct recall tokenizes the query and record ID/body/links, removes a fixed stop list, and scores term matches using corpus rarity and document-length normalization. Pins break ties only after a relevant match. Results default to five and are capped at twenty; context injection truncates each memory body to 1,200 characters.",
+        "sources": [
+          "store",
+          "harness"
+        ]
+      },
+      {
+        "text": "No update or delete operation is exposed by the model-facing memory tool. The inspected write method always creates a new record. A person with filesystem access can edit or remove a live Markdown record; the source inspection found no soft-fact supersession history, tombstone, or dedicated delete API.",
+        "sources": [
+          "tool",
+          "store",
+          "review"
+        ]
+      },
+      {
+        "text": "Background extraction is best-effort and bounded: it skips short user turns, caps proposals at two, normalizes model output, rejects system-talk and wishes/tasks, and deduplicates against live records and inbox items with keyword overlap. Novel proposals remain outside live recall until a person reviews them.",
+        "sources": [
+          "note",
+          "harness"
+        ]
+      },
+      {
+        "text": "A person can keep, edit-and-keep, or discard an inbox proposal in the app; the CLI offers promote and discard. Promotion writes a new live memory with source `reviewed` and removes the proposal file; discard removes only the proposal. Edited text is bounded and rechecked by the note-taker's deterministic filters.",
+        "sources": [
+          "review",
+          "memory_api"
+        ]
+      },
+      {
+        "text": "The note-taker failure path logs an error and returns without failing the already completed conversation. It can defer work to the model-job queue when the backend is deferred, and exposes environment controls for disabling extraction or selecting a local model/server.",
+        "sources": [
+          "note",
+          "config",
+          "harness"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Lexical recall and a prompt instruction to recall saved facts are present; answer accuracy and abstention were not scored.",
+        "sources": [
+          "store",
+          "tool",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "No update operation was found in the model-facing memory path; human editing or a new write is possible, but correction sequences and stale-value rates were not measured.",
+        "sources": [
+          "store",
+          "tool",
+          "review",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "A person can remove a Markdown file, but no model delete operation or post-delete probe was run; erasure from backups or other copies is unknown.",
+        "sources": [
+          "store",
+          "security",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "The soft-fact directory is shared household state without a per-user or tenant key in the inspected store; no cross-user or cross-household isolation workload was run.",
+        "sources": [
+          "store",
+          "config",
+          "brain",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Injected context includes a source label and last-seen date, but not a source passage or conversation reference; no generated answer was adjudicated for evidence support or citations.",
+        "sources": [
+          "store",
+          "brain",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timings or write-to-recall probes were collected.",
+        "sources": [
+          "store",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The source describes local Markdown storage and local-model extraction options; this review measured no tokens, cost, or storage boundary.",
+        "sources": [
+          "note",
+          "config",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The review inspected the official README, memory design and harness documentation, and selected current store, note-taker, review, API, tool, configuration, and prompt-assembly source at the verified head. Hestia, its tests, and benchmarks were not run.",
+        "sources": [
+          "readme",
+          "design",
+          "harness",
+          "store",
+          "note",
+          "review",
+          "memory_api",
+          "tool",
+          "brain"
+        ]
+      },
+      {
+        "text": "The memory store has no tenant authorization key; the repository's security model instead says the brain has no built-in authentication and must remain behind a private network boundary. This review did not test deployed network controls or filesystem permissions.",
+        "sources": [
+          "store",
+          "security"
+        ]
+      },
+      {
+        "text": "The record `source` is a label/date rather than a retained source quote or conversation ID. The inspection does not establish that stored facts are true, that lexical recall handles paraphrases, or that file deletion removes copies from backups.",
+        "sources": [
+          "store",
+          "note",
+          "security"
+        ]
+      },
+      {
+        "text": "The historical MEMORY-DESIGN.md describes vector recall and git-versioned memory, while it labels itself a historical plan; current inspected store code is lexical, and the README/SECURITY documentation says private household memory data is gitignored. The deployed data configuration was not inspected.",
+        "sources": [
+          "design",
+          "store",
+          "readme",
+          "security",
+          "config"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Hestia runtime, tests, or benchmark workload was executed. All required metric domains remain unmeasured for this review; project metric definitions, fixture, and shared execution-status record are protocol/status documents, not Hestia measurements.",
+      "sources": [
+        "metrics",
+        "fixture",
+        "status"
+      ]
+    }
+  }
+}

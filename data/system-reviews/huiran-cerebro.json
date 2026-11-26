@@ -1,0 +1,342 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 309,
+    "slug": "huiran-cerebro",
+    "name": "Huiran-cerebro",
+    "repository": "https://github.com/qilunuojiang9-hue/Huiran-cerebro",
+    "listed_repository": "https://github.com/qilunuojiang9-hue/Huiran-cerebro",
+    "branch": "master",
+    "revision": "a2a77c9e270c234c3619f8777c490a419c8fb832",
+    "reviewed_at": "2026-11-25T23:35:36Z",
+    "review_timezone": "UTC (checked 2026-11-25 15:35:36 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Huiran-cerebro is a local-first Python memory and knowledge system built around SQLite, with Chinese-friendly FTS5, local embeddings, hybrid retrieval, a CLI, web UI, and MCP server. Its current code includes fragment lifecycle review and tombstones, mutation/retrieval audit tables, and namespace-aware paths. This assessment is a source review; no runtime or benchmark result is claimed.",
+    "atlas_locator": {
+      "ordinal": 309,
+      "name": "Huiran-cerebro",
+      "slug": "huiran-cerebro",
+      "listed_repository": "https://github.com/qilunuojiang9-hue/Huiran-cerebro",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/huiran-cerebro.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/qilunuojiang9-hue/Huiran-cerebro/blob/a2a77c9e270c234c3619f8777c490a419c8fb832/README.md",
+      "checked_urls": [
+        "https://github.com/qilunuojiang9-hue/Huiran-cerebro/blob/a2a77c9e270c234c3619f8777c490a419c8fb832/README.md"
+      ],
+      "note": "Checked the official pinned README for a published contact email; none was present. No commit/profile metadata, package metadata, third-party directory, or inferred address was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/qilunuojiang9-hue/Huiran-cerebro/blob/a2a77c9e270c234c3619f8777c490a419c8fb832/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/qilunuojiang9-hue/Huiran-cerebro/blob/a2a77c9e270c234c3619f8777c490a419c8fb832/README.md"
+    ],
+    "contact_email_note": "No email was published in the checked official pinned README. No profile/commit metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[308], ordinal 309; identity, explicit listed locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/huiran-cerebro.md",
+        "symbol": "Pinned attribution for curated identity/locator only; excluded from assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/huiran-cerebro.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "",
+        "symbol": "Official GitHub repository page identifies public qilunuojiang9-hue/Huiran-cerebro and default branch master",
+        "url": "https://github.com/qilunuojiang9-hue/Huiran-cerebro"
+      },
+      {
+        "id": "head",
+        "label": "Official current branch feed",
+        "path": "",
+        "symbol": "master.atom identifies full current head a2a77c9e270c234c3619f8777c490a419c8fb832 and update timestamp 2026-11-20T11:31:40Z",
+        "url": "https://github.com/qilunuojiang9-hue/Huiran-cerebro/commits/master.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project description, architecture, interfaces, operations, integration and upstream-reported claims",
+        "url": "https://github.com/qilunuojiang9-hue/Huiran-cerebro/blob/a2a77c9e270c234c3619f8777c490a419c8fb832/README.md"
+      },
+      {
+        "id": "changelog",
+        "label": "Pinned official change log",
+        "path": "CHANGELOG.md",
+        "symbol": "v1.8–1.9 lifecycle, audit, human review, namespace and orphan-vector fixes",
+        "url": "https://github.com/qilunuojiang9-hue/Huiran-cerebro/blob/a2a77c9e270c234c3619f8777c490a419c8fb832/CHANGELOG.md"
+      },
+      {
+        "id": "core",
+        "label": "Pinned core engine and SQLite schema",
+        "path": "cyber_brain.py",
+        "symbol": "Schema, fragment/content writes, soft deletion, review state, namespace-aware search, embeddings, retrieval and mutation log",
+        "url": "https://github.com/qilunuojiang9-hue/Huiran-cerebro/blob/a2a77c9e270c234c3619f8777c490a419c8fb832/cyber_brain.py"
+      },
+      {
+        "id": "mcp",
+        "label": "Pinned MCP server",
+        "path": "mcp_server.py",
+        "symbol": "MCP tools, arguments and routing for recall, search, memory writes, content writes and session log",
+        "url": "https://github.com/qilunuojiang9-hue/Huiran-cerebro/blob/a2a77c9e270c234c3619f8777c490a419c8fb832/mcp_server.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation domains and metric definitions; not Huiran-cerebro results",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned benchmark fixture; not executed in this task",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project execution status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared execution status; not a Huiran-cerebro result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents Huiran-cerebro as a personal/team memory and knowledge-base engine distributed as local source, with CLI, Flask web interface, and an MCP server for agent clients. The inspected sources do not establish an independently hosted service or production authorization boundary.",
+        "sources": [
+          "readme",
+          "mcp"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The Python `CyberBrain` engine stores four broad domains in one SQLite database: content items, chunked knowledge-base documents, memory fragments and rolling summaries, and entities with time-windowed links. The schema also includes conversations, embeddings, ingestion records, retrieval audits, and mutation history.",
+        "sources": [
+          "core",
+          "readme"
+        ]
+      },
+      {
+        "text": "Memory fragments have typed content, subject, tags, entities, source reference, importance, namespace, lifecycle status, deletion timestamp, and embedding state. The engine uses SQLite FTS5 trigram indexes for Chinese text and a local fastembed/ONNX `BAAI/bge-small-zh-v1.5` embedding path; vectors are stored in the same database.",
+        "sources": [
+          "core",
+          "readme"
+        ]
+      },
+      {
+        "text": "The README describes a CLI and web UI around the shared engine; the MCP adapter exposes seven named operations, including recall, search, memory/content writes, statistics, entity lookup, and session logging. Its default host is loopback, although the command accepts a configurable host.",
+        "sources": [
+          "readme",
+          "mcp"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Memory writes call `add_fragment`, validate the fragment type, infer importance from type and selected Chinese keywords when omitted, default namespace to `default`, store the supplied source reference, and log an add mutation. The core also exposes content and document writes with source tags, authorization references and namespaces; document text is split into overlapping chunks.",
+        "sources": [
+          "core"
+        ]
+      },
+      {
+        "text": "Content items expose `update_content` for supported fields and record changed values in mutation history. In the inspected paths, fragments are created as new rows and lifecycle fields can change, but no general in-place fragment body-edit path was found. `delete_fragment` sets `deleted_at` and logs a mutation; `restore_fragment` can clear that marker. Manual review transitions fragments through `pending_review`, `active`, or `rejected`, and the changelog says retrieval admits active fragments only. Content-item deletion is a separate hard delete operation; the inspected method does not itself record the mutation that fragment deletion records.", 
+        "sources": [
+          "core",
+          "changelog"
+        ]
+      },
+      {
+        "text": "The README documents retrieval over FTS5/BM25, LIKE, entity matching, and semantic vectors fused with reciprocal-rank fusion. The engine uses local vectors and cosine scoring, while memory search filters active/nondeleted fragments and can apply a namespace and age window. The README’s quality claims are upstream statements, not measurements from this review.",
+        "sources": [
+          "readme",
+          "core"
+        ]
+      },
+      {
+        "text": "The MCP `search` tool accepts an optional namespace and passes it to the engine. The MCP `recall` tool exposes query/mode/limit/days but no namespace argument, and its handler calls the core recall path without an explicit namespace. Scope behavior therefore depends on which entry point is used.",
+        "sources": [
+          "mcp",
+          "core"
+        ]
+      }
+    ],
+    "scope": [
+      {
+        "text": "Several write/search APIs carry a namespace, defaulting writes to `default`; indexed vectors are checked against their source record when a namespace is requested. The v1.9 change log records a prior orphan-vector filtering bug and says the fix now excludes both missing source rows and rows from other namespaces.",
+        "sources": [
+          "core",
+          "changelog"
+        ]
+      },
+      {
+        "text": "Namespace filtering is not a complete authorization proof: this review did not inspect a deployed authentication layer, did not probe every search route, and observed that MCP `recall` lacks a namespace argument while generic knowledge-base search methods shown in the core do not consistently expose one. Cross-tenant isolation is unmeasured.",
+        "sources": [
+          "mcp",
+          "core",
+          "metrics"
+        ]
+      }
+    ],
+    "provenance": [
+      {
+        "text": "Fragment records accept a caller-supplied `source_ref`; content and documents carry `source_type`/`source_tag` and `authorization_ref`, and ingestion has source and target record tables. These are provenance fields, not proof that the referenced source was checked or that authorization was enforced.",
+        "sources": [
+          "core"
+        ]
+      },
+      {
+        "text": "Retrieval audits and mutation records are separate. The README describes the mutation table as recording who changed what, while the core source shows mutation events for fragment writes, review, delete, restore and content changes; source inspection does not establish complete audit coverage of every destructive path.",
+        "sources": [
+          "readme",
+          "core"
+        ]
+      },
+      {
+        "text": "The implementation includes human review states for memory fragments and keeps rejected/pending text in the database. Review is an available lifecycle action; the inspected MCP write tool does not require approval before adding a fragment, so the workflow is not an automatic admission gate for every write.",
+        "sources": [
+          "core",
+          "mcp",
+          "changelog"
+        ]
+      }
+    ],
+    "efficiency": [
+      {
+        "text": "SQLite and local embedding inference avoid a required separate database/vector service, and FTS5 trigram is selected for Chinese text. The core semantic search scans stored embedding rows and computes cosine scores before sorting; source inspection does not establish its latency at any particular store size.",
+        "sources": [
+          "readme",
+          "core"
+        ]
+      },
+      {
+        "text": "The README describes retrieval-audit visualization, system statistics, lifecycle maintenance, and daily summaries. The code provides query/result logging and mutation logging, but no operational telemetry or runtime behavior was exercised here.",
+        "sources": [
+          "readme",
+          "core"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Hybrid keyword, entity, and vector retrieval is implemented; no answerability or abstention cases were adjudicated.",
+        "sources": [
+          "readme",
+          "core",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Fragment lifecycle, status changes, and manual review exist; no correction sequence or stale-value probe was run.",
+        "sources": [
+          "core",
+          "changelog",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Memory fragments use reversible tombstones; content rows have a hard-delete method. No recall-after-delete, restore, backup, or leakage probe was run.",
+        "sources": [
+          "core",
+          "changelog",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Namespace parameters and semantic source-row checks exist, with a documented v1.9 fix; no cross-namespace workload was run and not every entry point exposes the same filter.",
+        "sources": [
+          "core",
+          "mcp",
+          "changelog",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Caller-provided source references and authorization labels are stored, but no answers were adjudicated against source evidence.",
+        "sources": [
+          "core",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timing measurements were collected.",
+        "sources": [
+          "core",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The design uses local SQLite and embeddings, but no token, cost, or storage measurements were collected.",
+        "sources": [
+          "readme",
+          "core",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This assessment inspected selected current code and official documentation at the verified branch head. It did not run Huiran-cerebro, its tests, a database migration, or any benchmark. Upstream feature descriptions and change-log validation reports are not reproduced measurements in this review.",
+        "sources": [
+          "readme",
+          "changelog",
+          "core"
+        ]
+      },
+      {
+        "text": "No deployment, authentication, backup/restore, concurrent-writer, model-download, or full cross-route namespace isolation evaluation was performed. The review cannot establish whether configured retrieval returns sufficient evidence or whether a consuming agent uses it correctly.",
+        "sources": [
+          "core",
+          "mcp",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Huiran-cerebro runtime, tests, or project benchmark workload was run. Upstream README and change-log figures are not treated as reproduced project results.",
+      "metric_definitions": "../METRICS.md",
+      "fixture": "../fixtures/memory-benchmark-v1.json",
+      "execution_status": "../results/initial-baselines-status.json"
+    }
+  }
+}

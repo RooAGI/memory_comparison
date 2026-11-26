@@ -1,0 +1,332 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "aurora",
+    "name": "AURORA",
+    "repository": "https://github.com/hamr0/aurora",
+    "branch": "main",
+    "revision": "750a39da51ed947aab851e9fd5c06a2587402e2b",
+    "reviewed_at": "2026-11-24T22:05:57Z",
+    "review_timezone": "UTC (2026-11-24 14:05:57 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/hamr0/aurora/blob/750a39da51ed947aab851e9fd5c06a2587402e2b/README.md","checked_urls":["https://github.com/hamr0/aurora/blob/750a39da51ed947aab851e9fd5c06a2587402e2b/README.md","https://github.com/hamr0/aurora/blob/750a39da51ed947aab851e9fd5c06a2587402e2b/SECURITY.md","https://github.com/hamr0/aurora/blob/750a39da51ed947aab851e9fd5c06a2587402e2b/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "AURORA is a local code-aware memory and intelligence layer for coding assistants. The official repository is archived; this review inspected selected documentation and core storage code at the verified main head and ran no system or benchmark.",
+    "atlas_locator": {
+      "ordinal": 79,
+      "name": "AURORA",
+      "slug": "aurora",
+      "listed_repository": "https://github.com/hamr0/aurora",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/aurora.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/hamr0/aurora/blob/750a39da51ed947aab851e9fd5c06a2587402e2b/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/hamr0/aurora/blob/750a39da51ed947aab851e9fd5c06a2587402e2b/README.md",
+      "https://github.com/hamr0/aurora/blob/750a39da51ed947aab851e9fd5c06a2587402e2b/SECURITY.md",
+      "https://github.com/hamr0/aurora/blob/750a39da51ed947aab851e9fd5c06a2587402e2b/SUPPORT.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository and current branch",
+        "path": "repository",
+        "symbol": "Official GitHub repository page identifies main as default branch, latest short head 750a39d, and archive date 2026-06-14; commit page for the full SHA confirms the matching commit.",
+        "url": "https://github.com/hamr0/aurora/tree/750a39da51ed947aab851e9fd5c06a2587402e2b"
+      },
+      {
+        "id": "head_commit",
+        "label": "Reviewed full commit",
+        "path": "commit/750a39da51ed947aab851e9fd5c06a2587402e2b",
+        "symbol": "Official commit page confirms commit 750a39d at the full reviewed SHA and shows its file change.",
+        "url": "https://github.com/hamr0/aurora/commit/750a39da51ed947aab851e9fd5c06a2587402e2b"
+      },
+      {
+        "id": "root_readme",
+        "label": "Repository README",
+        "path": "README.md",
+        "symbol": "Product description, documented indexing/search, database location, local operation, and README examples.",
+        "url": "https://github.com/hamr0/aurora/blob/750a39da51ed947aab851e9fd5c06a2587402e2b/README.md"
+      },
+      {
+        "id": "core_readme",
+        "label": "Core package README",
+        "path": "packages/core/README.md",
+        "symbol": "Store API overview and CodeChunk example with ID, file path, element type, name, and line bounds.",
+        "url": "https://github.com/hamr0/aurora/blob/750a39da51ed947aab851e9fd5c06a2587402e2b/packages/core/README.md"
+      },
+      {
+        "id": "memory_store",
+        "label": "In-memory store implementation",
+        "path": "packages/core/src/aurora_core/store/memory.py",
+        "symbol": "Selected implementation for in-memory chunk/activation/relationship state, validation, save/get, reset, close, and thread-safety caveat.",
+        "url": "https://github.com/hamr0/aurora/blob/750a39da51ed947aab851e9fd5c06a2587402e2b/packages/core/src/aurora_core/store/memory.py"
+      },
+      {
+        "id": "sqlite_store",
+        "label": "SQLite store implementation",
+        "path": "packages/core/src/aurora_core/store/sqlite.py",
+        "symbol": "SQLite path, thread-local pooled connections, deferred schema setup, transactions, JSON handling, WAL default, and relationship traversal module description.",
+        "url": "https://github.com/hamr0/aurora/blob/750a39da51ed947aab851e9fd5c06a2587402e2b/packages/core/src/aurora_core/store/sqlite.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": null,
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": null,
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "benchmark_status",
+        "label": "Project baseline execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": null,
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog identity and locator attribution only",
+        "path": "data/memory-systems.json",
+        "symbol": "Position 79 name, slug, listed repository locator, and Atlas source attribution only; descriptions and marks excluded from assessment.",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas_report",
+        "label": "Atlas roster attribution source only",
+        "path": "content/systems/aurora.md",
+        "symbol": "Catalog attribution only; descriptive content and capability marks were not used as review evidence.",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/aurora.md"
+      },
+      {
+        "id": "contact_checked",
+        "label": "Official README checked for published contact email",
+        "path": "README.md",
+        "symbol": "Checked the official pinned README; no published email address was found.",
+        "url": "https://github.com/hamr0/aurora/blob/750a39da51ed947aab851e9fd5c06a2587402e2b/README.md"
+      },
+      {
+        "id": "security_checked",
+        "label": "Official repository security policy path checked",
+        "path": "SECURITY.md",
+        "symbol": "The official pinned SECURITY.md path returned File not found.",
+        "url": "https://github.com/hamr0/aurora/blob/750a39da51ed947aab851e9fd5c06a2587402e2b/SECURITY.md"
+      },
+      {
+        "id": "support_checked",
+        "label": "Official repository support document path checked",
+        "path": "SUPPORT.md",
+        "symbol": "The official pinned SUPPORT.md path returned File not found.",
+        "url": "https://github.com/hamr0/aurora/blob/750a39da51ed947aab851e9fd5c06a2587402e2b/SUPPORT.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents AURORA as a local code-memory and code-intelligence framework for coding assistants. It documents a CLI, MCP/LSP-facing tools, code and Markdown indexing, and SQLite-backed local memory. The reviewed paths do not establish a hosted multi-tenant memory service.",
+        "sources": [
+          "root_readme",
+          "core_readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The core package separates chunk types, storage, context, activation, metrics, logging, and resilience. Its example CodeChunk carries an ID, absolute file path, element type, symbol name, and line range; the Store interface saves and retrieves chunks. The inspected in-memory implementation uses separate chunk, activation, and relationship collections.",
+        "sources": [
+          "core_readme",
+          "memory_store"
+        ]
+      },
+      {
+        "text": "The documented product indexer parses code into chunks, uses Git and LSP signals, and includes Markdown documents. Persistent storage is SQLite at the documented default path ~/.aurora/memory.db; the inspected SQLite module describes thread-local pooled connections, lazy schema initialization, transactional error rollback, JSON serialization, relationship traversal, and WAL enabled by default. The indexing pipeline was not inspected.",
+        "sources": [
+          "root_readme",
+          "sqlite_store"
+        ]
+      },
+      {
+        "text": "In-memory save validates the chunk and assigns it by ID; new IDs receive an initial activation entry. The in-memory store is documented as a test-oriented backend and explicitly says it is not thread-safe.",
+        "sources": [
+          "memory_store",
+          "core_readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write/update: the package guide demonstrates save_chunk and get_chunk by ID. The selected in-memory save path overwrites the current object at a matching ID and initializes activation state only for a new ID. This selected path shows no separate revision or supersession record; persistent SQLite mutation behavior was not exhaustively traced.",
+        "sources": [
+          "core_readme",
+          "memory_store",
+          "sqlite_store"
+        ]
+      },
+      {
+        "text": "Index and retrieval: the root README documents `aur mem index .` and `aur mem search <query>`. It describes ranking around activation decay and relevance with Git and LSP enrichment. Those are documentation observations; the indexer/retrieval implementation, scoring formula, query filters, and stale-index cleanup were not inspected.",
+        "sources": [
+          "root_readme"
+        ]
+      },
+      {
+        "text": "Delete/reset: the inspected in-memory store's reset and close clear its in-memory chunks, activations, and relationships. The selected sources do not establish individual deletion, stale-file cleanup, or durable erasure behavior for the SQLite-backed user-facing index.",
+        "sources": [
+          "memory_store",
+          "sqlite_store"
+        ]
+      },
+      {
+        "text": "Scope: the root README documents a per-project `.aurora/memory.db` path and per-project configuration. This suggests project-local placement, but the reviewed code does not establish authenticated user, tenant, or shared-host isolation.",
+        "sources": [
+          "root_readme",
+          "sqlite_store"
+        ]
+      },
+      {
+        "text": "Provenance/evidence: documented chunk fields include file path and source line range; README examples display Git and LSP-derived context and score explanations. File-location metadata can point back to source, but the selected code does not establish evidence adjudication, mutation audit, or citation-support guarantees.",
+        "sources": [
+          "core_readme",
+          "root_readme"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency and observability: SQLite source documents connection pooling, per-thread connections, WAL mode, deferred initialization, transactions, and relationship traversal. The README displays component scores and approximate command speeds as examples; these were not measured in this review.",
+        "sources": [
+          "sqlite_store",
+          "root_readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "No answerable or unanswerable retrieval probes were run; selected sources do not establish an abstention contract.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "benchmark_status",
+          "root_readme"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "No correction or stale-result probes were run; the selected store paths do not establish versioned correction behavior.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "benchmark_status",
+          "memory_store"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No deletion probes were run and durable deletion semantics were not verified in the selected code.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "benchmark_status",
+          "memory_store",
+          "sqlite_store"
+        ]
+      },
+      {
+        "domain": "Scope-isolation leakage",
+        "status": "unmeasured",
+        "evidence": "No cross-project probes were run; project-local database placement does not establish an authorization boundary.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "benchmark_status",
+          "root_readme"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "No output evidence was adjudicated; file and line metadata are not themselves a measurement of support precision.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "benchmark_status",
+          "core_readme"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timing was collected. README approximate speeds and examples are documentation, not measurements from this review.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "benchmark_status",
+          "root_readme"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No token or cost workload was run.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "benchmark_status"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No storage size or corpus efficiency was measured.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "benchmark_status",
+          "sqlite_store"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded review of selected documentation and core store code at the verified archived main head. It did not inspect the complete code/document indexing pipeline, MCP handlers, or full query stack; documented behavior and implementation observations are identified separately.",
+        "sources": [
+          "repo",
+          "root_readme",
+          "core_readme",
+          "sqlite_store"
+        ]
+      },
+      {
+        "text": "A local SQLite path does not prove operating-system permissions, authenticated scope enforcement, or safety for a shared-host deployment. Runtime correctness, quality, deletion guarantees, latency, tokens, and storage outcomes remain unverified.",
+        "sources": [
+          "root_readme",
+          "sqlite_store",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "text": "The official repository README was checked for a published contact email and none was present; the review record stores null with the exact checked URL.",
+        "sources": [
+          "contact_checked"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "summary": "No AURORA system execution or benchmark was performed. Project metrics, fixture, and status record are protocol references only, not results for AURORA.",
+      "metric_sources": [
+        "metrics",
+        "fixture",
+        "benchmark_status"
+      ]
+    }
+  }
+}

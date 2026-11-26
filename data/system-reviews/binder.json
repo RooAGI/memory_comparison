@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 94,
+    "slug": "binder",
+    "name": "Binder",
+    "repository": "https://github.com/mpazik/Binder",
+    "listed_repository": "https://github.com/mpazik/Binder",
+    "branch": "main",
+    "revision": "f72189f6107368f8712915254d52897b3022ef4f",
+    "reviewed_at": "2026-11-24T23:38:42Z",
+    "review_timezone": "UTC (2026-11-24 15:38:42 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Binder is a local-first structured knowledge base for records, configuration, and relations, backed by workspace-local SQLite and hash-linked transactions. This is a source review, not a runtime or benchmark evaluation.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/binder.md"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/mpazik/Binder/blob/f72189f6107368f8712915254d52897b3022ef4f/README.md",
+      "note": "No published email was found in the official pinned README; SECURITY.md is absent at the reviewed revision, and the official project URL redirects to the repository."
+    },
+    "contact_email": null,
+    "contact_checked_sources": [
+      "https://github.com/mpazik/Binder/blob/f72189f6107368f8712915254d52897b3022ef4f/README.md",
+      "https://github.com/mpazik/Binder/blob/f72189f6107368f8712915254d52897b3022ef4f/SECURITY.md",
+      "https://binder.do"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository",
+        "path": "repository metadata",
+        "url": "https://github.com/mpazik/Binder"
+      },
+      {
+        "id": "head",
+        "label": "Current main head metadata",
+        "path": "GitHub commits API for main",
+        "url": "https://api.github.com/repos/mpazik/Binder/commits/main"
+      },
+      {
+        "id": "head-commit",
+        "label": "Reviewed head commit",
+        "path": "commit",
+        "url": "https://github.com/mpazik/Binder/commit/f72189f6107368f8712915254d52897b3022ef4f"
+      },
+      {
+        "id": "readme",
+        "label": "README",
+        "path": "README.md",
+        "symbol": "How it works; agents; transactions; HTTP; roadmap",
+        "url": "https://github.com/mpazik/Binder/blob/f72189f6107368f8712915254d52897b3022ef4f/README.md"
+      },
+      {
+        "id": "schema",
+        "label": "SQLite data schema",
+        "path": "packages/repo/src/schema.ts",
+        "symbol": "recordTable; configTable; transactionTable",
+        "url": "https://github.com/mpazik/Binder/blob/f72189f6107368f8712915254d52897b3022ef4f/packages/repo/src/schema.ts"
+      },
+      {
+        "id": "graph",
+        "label": "Knowledge graph API and orchestration",
+        "path": "packages/repo/src/knowledge-graph.ts",
+        "symbol": "KnowledgeGraph; search; update; apply; rollback; DEFAULT_SEARCH_LIMIT; subscribers",
+        "url": "https://github.com/mpazik/Binder/blob/f72189f6107368f8712915254d52897b3022ef4f/packages/repo/src/knowledge-graph.ts"
+      },
+      {
+        "id": "db",
+        "label": "SQLite transaction wrapper",
+        "path": "packages/repo/src/db.ts",
+        "symbol": "patchTransactionForAsyncCompat; serialized top-level transactions; savepoints",
+        "url": "https://github.com/mpazik/Binder/blob/f72189f6107368f8712915254d52897b3022ef4f/packages/repo/src/db.ts"
+      },
+      {
+        "id": "entity",
+        "label": "Entity persistence and resolution",
+        "path": "packages/repo/src/entity-store.ts",
+        "symbol": "entityRefClause; fetchEntity; resolveExistingEntities; getLastEntityId",
+        "url": "https://github.com/mpazik/Binder/blob/f72189f6107368f8712915254d52897b3022ef4f/packages/repo/src/entity-store.ts"
+      },
+      {
+        "id": "tx-processor",
+        "label": "Transaction input processing",
+        "path": "packages/repo/src/transaction-processor.ts",
+        "symbol": "processTransactionInput; metadata; previous hash; transaction creation",
+        "url": "https://github.com/mpazik/Binder/blob/f72189f6107368f8712915254d52897b3022ef4f/packages/repo/src/transaction-processor.ts"
+      },
+      {
+        "id": "tx-applier",
+        "label": "Transaction apply and rollback",
+        "path": "packages/repo/src/transaction-applier.ts",
+        "symbol": "applyAndSaveTransaction; version-mismatch; rollbackTransaction; invertTransaction; transaction deletion",
+        "url": "https://github.com/mpazik/Binder/blob/f72189f6107368f8712915254d52897b3022ef4f/packages/repo/src/transaction-applier.ts"
+      },
+      {
+        "id": "tx-store",
+        "label": "Transaction persistence",
+        "path": "packages/repo/src/transaction-store.ts",
+        "symbol": "saveTransaction; fetchTransaction; getVersion; metadata fields",
+        "url": "https://github.com/mpazik/Binder/blob/f72189f6107368f8712915254d52897b3022ef4f/packages/repo/src/transaction-store.ts"
+      },
+      {
+        "id": "filters",
+        "label": "Filter compilation",
+        "path": "packages/repo/src/filter-entities.ts",
+        "symbol": "buildWhereClause; $text search; filter normalization; order",
+        "url": "https://github.com/mpazik/Binder/blob/f72189f6107368f8712915254d52897b3022ef4f/packages/repo/src/filter-entities.ts"
+      },
+      {
+        "id": "mcp",
+        "label": "MCP transaction tool",
+        "path": "packages/cli/src/mcp/tools/transact.ts",
+        "symbol": "transact; TransactionInputSchema; $delete; kg.update",
+        "url": "https://github.com/mpazik/Binder/blob/f72189f6107368f8712915254d52897b3022ef4f/packages/cli/src/mcp/tools/transact.ts"
+      },
+      {
+        "id": "mcp-dispatch",
+        "label": "MCP tool dispatch",
+        "path": "packages/cli/src/mcp/tools.ts",
+        "symbol": "getToolsForMcp; executeMcpServerTool; parameter validation",
+        "url": "https://github.com/mpazik/Binder/blob/f72189f6107368f8712915254d52897b3022ef4f/packages/cli/src/mcp/tools.ts"
+      },
+      {
+        "id": "mcp-index",
+        "label": "MCP tool registry",
+        "path": "packages/cli/src/mcp/tools/index.ts",
+        "symbol": "schemaTool; searchTool; transactTool",
+        "url": "https://github.com/mpazik/Binder/blob/f72189f6107368f8712915254d52897b3022ef4f/packages/cli/src/mcp/tools/index.ts"
+      },
+      {
+        "id": "workspace",
+        "label": "Workspace open and resolution",
+        "path": "packages/repo/src/local/open.ts",
+        "symbol": "resolveWorkspaceRoot; open; init; workspace-local database",
+        "url": "https://github.com/mpazik/Binder/blob/f72189f6107368f8712915254d52897b3022ef4f/packages/repo/src/local/open.ts"
+      },
+      {
+        "id": "query-doc",
+        "label": "Query concept documentation",
+        "path": "docs/concepts/query.md",
+        "symbol": "filters; includes; ordering; pagination; search capabilities and proposed extensions",
+        "url": "https://github.com/mpazik/Binder/blob/f72189f6107368f8712915254d52897b3022ef4f/docs/concepts/query.md"
+      },
+      {
+        "id": "transaction-doc",
+        "label": "Transaction concept documentation",
+        "path": "docs/concepts/transaction.md",
+        "symbol": "transaction fields; atomicity; hashing; operations",
+        "url": "https://github.com/mpazik/Binder/blob/f72189f6107368f8712915254d52897b3022ef4f/docs/concepts/transaction.md"
+      },
+      {
+        "id": "changeset-doc",
+        "label": "Changeset concept documentation",
+        "path": "docs/concepts/changeset.md",
+        "symbol": "set; clear; inverse; rebase; entity deletion",
+        "url": "https://github.com/mpazik/Binder/blob/f72189f6107368f8712915254d52897b3022ef4f/docs/concepts/changeset.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas discovery attribution only",
+        "path": "curated report source",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/binder.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository is maintained under the GitHub account mpazik. Its README describes Binder as a headless knowledge base for tools, agents, scripts, and people, distributed as local software and libraries/CLI rather than a hosted service.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The workspace opener resolves an explicit path, BINDER_WORKSPACE, or nearest ancestor marker, then opens workspace-local SQLite. The KnowledgeGraph composes schema-aware entity/config persistence, filtering, relation resolution, and transaction processing.",
+        "sources": [
+          "workspace",
+          "graph",
+          "db"
+        ]
+      },
+      {
+        "text": "SQLite stores records, configs, and transactions. Record/config rows contain IDs, UIDs, optional keys, types, JSON field values, transaction IDs, and tags; transaction rows retain record/config changesets, previous/current hash, author, timestamp, and metadata.",
+        "sources": [
+          "schema",
+          "transaction-doc",
+          "tx-store"
+        ]
+      },
+      {
+        "text": "Schema is data in the config namespace. Transaction input processing applies config changes before record changes, validates changesets, and hashes each transaction with a prior-hash link before the apply-and-save step.",
+        "sources": [
+          "tx-processor",
+          "tx-applier",
+          "transaction-doc"
+        ]
+      },
+      {
+        "text": "The README describes Markdown as a navigable view over entities; editor and LSP clients validate and synchronize file changes with the same workspace repository. MCP exposes schema, search, and transaction tools.",
+        "sources": [
+          "readme",
+          "mcp-index",
+          "workspace"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "MCP transact accepts record and config changesets and calls KnowledgeGraph.update. A typed record creates; key/UID without type addresses an existing record; the tool schema documents $delete for record removal. The response returns transaction ID/hash and affected record/config counts.",
+        "sources": [
+          "mcp",
+          "mcp-dispatch",
+          "graph"
+        ]
+      },
+      {
+        "text": "Field changes are typed set/clear/list/relation operations. Entity deletion clears populated scalar fields and removes multivalue fields, preserving prior values in the reversible changeset. Rollback applies inverse transactions newest-first and then deletes those transaction rows, so rollback intentionally truncates active history.",
+        "sources": [
+          "changeset-doc",
+          "tx-applier",
+          "mcp"
+        ]
+      },
+      {
+        "text": "Search provides structured field filters, nested relation includes, ordering, and pagination. The code defines a default limit of 50 and compiles $text substring filters over supported text fields. The inspected path does not include embeddings or answer generation; query documentation's similarity/hybrid descriptions do not by themselves verify those paths as implemented.",
+        "sources": [
+          "graph",
+          "filters",
+          "query-doc"
+        ]
+      },
+      {
+        "text": "Workspace selection is the visible storage boundary. The reviewed record schema and search path do not impose an account, agent, tenant, or project identity predicate; no runtime authorization or isolation behavior was tested.",
+        "sources": [
+          "workspace",
+          "schema",
+          "filters",
+          "readme"
+        ]
+      },
+      {
+        "text": "Transaction provenance includes author, created time, previous/current hashes, and optional message/source/channel/tags. The model offers mutation history evidence but the inspected record/MCP contract does not provide general claim-level source citations, evidence links, or confidence/trust labels.",
+        "sources": [
+          "transaction-doc",
+          "tx-processor",
+          "tx-store",
+          "mcp"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Structured filters and text matching are present, but no answer quality or abstention workload was run.",
+        "sources": [
+          "graph",
+          "filters",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and staleness",
+        "status": "unmeasured",
+        "evidence": "Updates append changesets and rollback reverses recent transactions; no correction probes were adjudicated.",
+        "sources": [
+          "tx-applier",
+          "changeset-doc",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Deletion uses reversible field clears; no post-delete probes or leakage checks were run.",
+        "sources": [
+          "mcp",
+          "tx-applier",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Workspace-local storage is source-visible, but no cross-workspace or cross-principal probes were captured.",
+        "sources": [
+          "workspace",
+          "schema",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Transactions carry mutation provenance, but the inspected tools lack a general claim-to-source citation contract; no outputs were adjudicated.",
+        "sources": [
+          "transaction-doc",
+          "mcp",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "SQLite reads/writes and a default search limit are visible, but no Binder timing observations were collected.",
+        "sources": [
+          "graph",
+          "db",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No model/token/cost path was found in the inspected repository, search, and transaction interfaces.",
+        "sources": [
+          "readme",
+          "mcp",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "domain": "Persistent storage",
+        "status": "unmeasured",
+        "evidence": "SQLite schema is visible, but no bytes-per-record or corpus size measurement was made.",
+        "sources": [
+          "schema",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded read-only inspection at the recorded revision. Runtime correctness, search relevance, transaction durability, editor synchronization, failure recovery, throughput, and security boundaries were not exercised.",
+        "sources": [
+          "head-commit",
+          "graph",
+          "workspace",
+          "readme"
+        ]
+      },
+      {
+        "text": "Rollback removes selected transaction rows after applying inverses; it is not evidence of secure erasure because old content may remain in other copies, backups, exports, or logs. The reviewed interface also exposes workspace selection without principal-scoped authorization.",
+        "sources": [
+          "tx-applier",
+          "schema",
+          "workspace"
+        ]
+      },
+      {
+        "text": "The README identifies full-text and semantic search as roadmap work. The reviewed filter implementation shows substring matching; similarity/hybrid documentation statements need code-path confirmation beyond the inspected scope.",
+        "sources": [
+          "readme",
+          "filters",
+          "query-doc"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run for Binder. The project metric definitions, fixture, and initial status record are linked as methodology and separate execution tracking, not Binder observations or results.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ]
+  }
+}

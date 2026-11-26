@@ -1,0 +1,246 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 307,
+    "slug": "homebody",
+    "name": "HomeBody",
+    "repository": "https://github.com/Stanford-TML/homebody",
+    "listed_repository": "https://github.com/Stanford-TML/homebody",
+    "branch": "main",
+    "revision": "d7eb20834024f0fdbf2b8357fb55e8bbd01610cf",
+    "reviewed_at": "2026-11-25T23:29:46Z",
+    "review_timezone": "UTC (2026-11-25 15:29:46 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "HomeBody is a humanoid robotics system whose persistent memory stores named, map-bound photographs with spatial pose and optional depth. It recalls historical views by nearby viewpoint rather than searching description text.",
+    "atlas_locator": {
+      "ordinal": 307,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/homebody.md",
+      "listed_repository": "https://github.com/Stanford-TML/homebody"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/Stanford-TML/homebody/blob/d7eb20834024f0fdbf2b8357fb55e8bbd01610cf/README.md",
+      "checked_urls": [
+        "https://github.com/Stanford-TML/homebody/blob/d7eb20834024f0fdbf2b8357fb55e8bbd01610cf/README.md",
+        "https://tml.stanford.edu/homebody/"
+      ],
+      "note": "The official pinned README and official Stanford project page were checked for a published contact email; neither displayed one. No address was inferred from commit/profile metadata or third-party directories."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/Stanford-TML/homebody/blob/d7eb20834024f0fdbf2b8357fb55e8bbd01610cf/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/Stanford-TML/homebody/blob/d7eb20834024f0fdbf2b8357fb55e8bbd01610cf/README.md",
+      "https://tml.stanford.edu/homebody/"
+    ],
+    "contact_email_note": "The official pinned README and official Stanford project page were checked for a published contact email; neither displayed one. No address was inferred from commit/profile metadata or third-party directories.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[306], ordinal 307; identity, explicit repository locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/homebody.md",
+        "symbol": "Pinned attribution for curated identity and locator only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/homebody.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository page",
+        "path": "repository page",
+        "symbol": "Canonical Stanford-TML/homebody; default branch main; current short head d7eb208",
+        "url": "https://github.com/Stanford-TML/homebody"
+      },
+      {
+        "id": "head",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Full current main head d7eb20834024f0fdbf2b8357fb55e8bbd01610cf; updated 2026-11-18T01:37:00Z",
+        "url": "https://github.com/Stanford-TML/homebody/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "HomeBody system, memory-assisted task behavior, setup and stated limitations; checked for published contact email",
+        "url": "https://github.com/Stanford-TML/homebody/blob/d7eb20834024f0fdbf2b8357fb55e8bbd01610cf/README.md"
+      },
+      {
+        "id": "website",
+        "label": "Official Stanford project website",
+        "path": "project page",
+        "symbol": "Project authorship, persistent spatial memory framing, usage claims and stated system limitations; checked for contact email",
+        "url": "https://tml.stanford.edu/homebody/"
+      },
+      {
+        "id": "memory-store",
+        "label": "Pinned named photo memory implementation",
+        "path": "src/homebody/memory/store.py",
+        "symbol": "NamedMemory state, record/assets, atomic writes, pose-based recall/removal, active records, image validation and status",
+        "url": "https://github.com/Stanford-TML/homebody/blob/d7eb20834024f0fdbf2b8357fb55e8bbd01610cf/src/homebody/memory/store.py"
+      },
+      {
+        "id": "binding",
+        "label": "Pinned map and frame binding",
+        "path": "src/homebody/memory/binding.py",
+        "symbol": "MapBinding fields, geometry/navigation digests and current navigation consistency checks",
+        "url": "https://github.com/Stanford-TML/homebody/blob/d7eb20834024f0fdbf2b8357fb55e8bbd01610cf/src/homebody/memory/binding.py"
+      },
+      {
+        "id": "remember",
+        "label": "Pinned remember skill",
+        "path": "src/homebody/skills/remember.py",
+        "symbol": "Passive observation, map-localized photograph write and description prompt",
+        "url": "https://github.com/Stanford-TML/homebody/blob/d7eb20834024f0fdbf2b8357fb55e8bbd01610cf/src/homebody/skills/remember.py"
+      },
+      {
+        "id": "recall",
+        "label": "Pinned recall skill",
+        "path": "src/homebody/skills/recall.py",
+        "symbol": "Pose/k/op validation, map check, valid empty result, historical warning and skill result",
+        "url": "https://github.com/Stanford-TML/homebody/blob/d7eb20834024f0fdbf2b8357fb55e8bbd01610cf/src/homebody/skills/recall.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions; not system evidence",
+        "path": "METRICS.md",
+        "symbol": "Project-defined benchmark domains and metric names",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture; not a HomeBody result",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Shared benchmark inputs and cases",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project execution status record; not a HomeBody result",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared project benchmark execution status",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README identifies HomeBody as a Stanford-TML repository and describes a humanoid system built around a VLM calling composable robot skills. The project website lists Gio Huh, Cayden Gu, Takara E. Truong, C. Karen Liu, and Guy Tevet, with Stanford University and Caltech affiliations. The inspected memory module is a local Python component, not a hosted memory service.",
+        "sources": ["readme", "website", "memory-store"]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "NamedMemory opens one named directory with an atomic memory.json state and content-addressed PNG/NPY assets. Records carry an ID, description, map pose, timestamp, frame ID, image and optional depth asset references, camera metadata, and map binding; state also carries retrieval settings and removal entries.",
+        "sources": ["memory-store"]
+      },
+      {
+        "text": "MapBinding records scene ID/hash, frame ID, navigation hash, and optional geometry hash. Opening requires an explicit binding, and recall checks the current navigation map/frame against it before use.",
+        "sources": ["binding", "memory-store", "recall"]
+      },
+      {
+        "text": "The remember and recall skills are passive: remember observes the current frame and writes it to the configured named memory; recall reads or removes nearby historical views without commanding motion.",
+        "sources": ["remember", "recall"]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The remember skill accepts short text content, observes the current frame, then calls the configured memory's remember method. Its prompt describes the content as a short view description and warns that the observation does not certify future presence.",
+        "sources": ["remember"]
+      },
+      {
+        "text": "The store serializes metadata as JSON and photo/depth assets as digest-named PNG/NPY files. Writes use a thread mutex and exclusive file lock; the complete state is written to a temporary file, flushed and fsynced, atomically replaced, and followed by a directory fsync.",
+        "sources": ["memory-store"]
+      },
+      {
+        "text": "No general update or deduplication operation was found in the inspected memory and skill paths. Repeated remember calls append observations. Recall op remove records removals for the same spatial hits returned by its query; active reads exclude those record IDs while preserving the record and removal metadata in state.",
+        "sources": ["memory-store", "remember", "recall"]
+      },
+      {
+        "text": "Recall accepts a finite map pose, k from 1 to 8, and retrieve or remove operation. It ranks active records by planar distance plus a configured yaw penalty, returns absent when there are no records within radius, and includes historical photographs with their pose, time, description, frame, camera, and asset references.",
+        "sources": ["memory-store", "recall"]
+      },
+      {
+        "text": "A missing recall pose produces an absent result because text search is unavailable. The skill warns that recalled photos are historical and asks the agent to inspect current evidence before inferring that an object remains present or reachable.",
+        "sources": ["recall", "memory-store"]
+      },
+      {
+        "text": "load_image verifies the hit's map binding, active record ID, and unchanged image reference, then reads the digest-validated asset. Store opening rejects a symlinked named directory and requires valid schema and binding metadata.",
+        "sources": ["memory-store", "binding"]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Pose-based nearest-view retrieval and absent results exist in source; no answerable or unanswerable recall probes were scored.",
+        "sources": ["memory-store", "recall", "metrics", "fixture"]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "The reviewed write path appends observations and does not expose correction; no correction sequence or stale-view workload was evaluated.",
+        "sources": ["memory-store", "remember", "metrics", "fixture"]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Removal deactivates returned spatial hits; no post-removal, backup, or physical-asset-erasure probe was run.",
+        "sources": ["memory-store", "recall", "metrics", "fixture"]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Stores are named and map-bound; no cross-store, cross-map, or adversarial isolation workload was run.",
+        "sources": ["memory-store", "binding", "metrics", "fixture"]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Memory records retain photo, pose, time and camera metadata; no evidence-support or citation adjudication was performed.",
+        "sources": ["memory-store", "metrics", "fixture"]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No runtime timings or delayed-recall probes were collected.",
+        "sources": ["metrics", "fixture"]
+      },
+      {
+        "domain": "Tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "The implementation has file-backed images, optional depth and JSON metadata; no token, cost, or storage measurements were collected.",
+        "sources": ["memory-store", "metrics", "fixture"]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded inspection of the official README, project site, and selected memory implementation at the verified head. HomeBody, its tests, and benchmark workloads were not run; code presence does not establish useful recall or safe downstream robot behavior.",
+        "sources": ["readme", "website", "memory-store", "metrics"]
+      },
+      {
+        "text": "The reviewed memory is spatial and photo-based. Descriptions accompany recalled images, but the recall operation requires a map pose and has no text-search path. Behavior with very large record sets and ranking quality were not measured.",
+        "sources": ["memory-store", "recall"]
+      },
+      {
+        "text": "Map/frame hashes check deployment consistency but do not authenticate a user or tenant. Access control across mutually untrusted clients and deployments was outside the reviewed code.",
+        "sources": ["memory-store", "binding"]
+      },
+      {
+        "text": "Removal keeps record/removal state and the reviewed code does not establish secure erasure across backups, copied state, or orphaned digest assets. Crash recovery across every state-and-asset write boundary was not exercised.",
+        "sources": ["memory-store", "recall"]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "HomeBody, its tests, and benchmark workloads were not run. Project metric definitions, fixture cases, and shared execution status are not HomeBody measurements."
+    }
+  }
+}

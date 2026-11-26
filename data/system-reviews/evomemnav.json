@@ -1,0 +1,350 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 231,
+    "slug": "evomemnav",
+    "name": "EvoMemNav",
+    "repository": "https://github.com/caicaiya123/EvoMemNav",
+    "listed_repository": "https://github.com/caicaiya123/EvoMemNav",
+    "branch": "main",
+    "revision": "5770e8cc31763f11374a74483c6e4b1ca982513f",
+    "reviewed_at": "2026-11-25T20:05:30Z",
+    "review_timezone": "UTC (2026-11-25 12:05:30 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "EvoMemNav is a training-free embodied navigation agent. It builds a visual-semantic graph of observed views and objects and uses episode-local verification feedback plus per-scene JSON experience memory to rank candidate views and guide later decisions. This is a source review; the system, tests, and benchmarks were not run.",
+    "atlas_locator": {
+      "ordinal": 231,
+      "name": "EvoMemNav",
+      "slug": "evomemnav",
+      "listed_repository": "https://github.com/caicaiya123/EvoMemNav",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/evomemnav.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/caicaiya123/EvoMemNav/blob/5770e8cc31763f11374a74483c6e4b1ca982513f/README.md",
+      "checked_urls": [
+        "https://github.com/caicaiya123/EvoMemNav/blob/5770e8cc31763f11374a74483c6e4b1ca982513f/README.md"
+      ],
+      "note": "Checked only the official pinned repository README for a published contact email; none was found. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/caicaiya123/EvoMemNav/blob/5770e8cc31763f11374a74483c6e4b1ca982513f/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/caicaiya123/EvoMemNav/blob/5770e8cc31763f11374a74483c6e4b1ca982513f/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the official pinned README.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated memory systems roster",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[230], ordinal 231; name, slug, explicit listed repository, Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/evomemnav.md",
+        "symbol": "Pinned identity/locator attribution only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/evomemnav.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "GitHub repository API",
+        "symbol": "Canonical repository caicaiya123/EvoMemNav; default_branch main",
+        "url": "https://api.github.com/repos/caicaiya123/EvoMemNav"
+      },
+      {
+        "id": "head",
+        "label": "Verified current main head",
+        "path": "Official Git smart transport and shallow checkout",
+        "symbol": "git ls-remote --symref reported HEAD -> refs/heads/main at 5770e8cc31763f11374a74483c6e4b1ca982513f; shallow main checkout resolved to the same SHA",
+        "url": "https://github.com/caicaiya123/EvoMemNav/commit/5770e8cc31763f11374a74483c6e4b1ca982513f"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Project description, architecture, benchmark figures, protocol, evaluation, results; official contact email check",
+        "url": "https://github.com/caicaiya123/EvoMemNav/blob/5770e8cc31763f11374a74483c6e4b1ca982513f/README.md"
+      },
+      {
+        "id": "views",
+        "label": "Observed view records",
+        "path": "evomemnav/memory/views.py",
+        "symbol": "ViewRecord image, pose, detections, object cluster and target fields",
+        "url": "https://github.com/caicaiya123/EvoMemNav/blob/5770e8cc31763f11374a74483c6e4b1ca982513f/evomemnav/memory/views.py"
+      },
+      {
+        "id": "graph",
+        "label": "Visual-semantic memory graph",
+        "path": "evomemnav/memory/vsmgraph.py",
+        "symbol": "Episode-local visited, anchor, frontier, object and room graph structures and reset",
+        "url": "https://github.com/caicaiya123/EvoMemNav/blob/5770e8cc31763f11374a74483c6e4b1ca982513f/evomemnav/memory/vsmgraph.py"
+      },
+      {
+        "id": "experience",
+        "label": "Episode and scene experience memory",
+        "path": "evomemnav/experience/memory.py",
+        "symbol": "STM/LTM data model, JSON persistence, lookup fallback, updates, decay/prune, suppression, callbacks",
+        "url": "https://github.com/caicaiya123/EvoMemNav/blob/5770e8cc31763f11374a74483c6e4b1ca982513f/evomemnav/experience/memory.py"
+      },
+      {
+        "id": "keys",
+        "label": "Goal and spatial keys",
+        "path": "evomemnav/experience/keys.py",
+        "symbol": "L1/L2/L3 goal keys, content digest and spatial grid cell key",
+        "url": "https://github.com/caicaiya123/EvoMemNav/blob/5770e8cc31763f11374a74483c6e4b1ca982513f/evomemnav/experience/keys.py"
+      },
+      {
+        "id": "coarse",
+        "label": "Coarse policy",
+        "path": "evomemnav/policy/coarse.py",
+        "symbol": "Anchor/frontier ranking and candidate budget",
+        "url": "https://github.com/caicaiya123/EvoMemNav/blob/5770e8cc31763f11374a74483c6e4b1ca982513f/evomemnav/policy/coarse.py"
+      },
+      {
+        "id": "fine",
+        "label": "Fine policy",
+        "path": "evomemnav/policy/fine.py",
+        "symbol": "VLM candidate selection retries and anchor confidence gate; goal verification",
+        "url": "https://github.com/caicaiya123/EvoMemNav/blob/5770e8cc31763f11374a74483c6e4b1ca982513f/evomemnav/policy/fine.py"
+      },
+      {
+        "id": "agent",
+        "label": "Agent control and evaluation",
+        "path": "evomemnav/agent.py",
+        "symbol": "Episode lifecycle, experience writes, candidate/verification flow, per-subtask timing and VLM usage recording",
+        "url": "https://github.com/caicaiya123/EvoMemNav/blob/5770e8cc31763f11374a74483c6e4b1ca982513f/evomemnav/agent.py"
+      },
+      {
+        "id": "config",
+        "label": "GOAT-Bench configuration",
+        "path": "cfg/evomemnav_goatbench.yaml",
+        "symbol": "Candidate/suppression/experience budgets, decay, pruning, output location and evaluation settings",
+        "url": "https://github.com/caicaiya123/EvoMemNav/blob/5770e8cc31763f11374a74483c6e4b1ca982513f/cfg/evomemnav_goatbench.yaml"
+      },
+      {
+        "id": "recorder",
+        "label": "Evaluation result recorder",
+        "path": "evomemnav/eval/recorder.py",
+        "symbol": "Per-subtask JSONL records and summary of success, SPL, VLM calls/tokens/time, graph time and steps",
+        "url": "https://github.com/caicaiya123/EvoMemNav/blob/5770e8cc31763f11374a74483c6e4b1ca982513f/evomemnav/eval/recorder.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Comparison metric definitions; not EvoMemNav results",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Shared execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared benchmark execution state; no EvoMemNav measurement claimed",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Planned comparison workload",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned comparison fixture; not an EvoMemNav result",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The episode-local VSMGraph contains visited views and navigability edges, object-rich anchor views, frontier views, object instances, and room labels. View records refer to captured images, positions, detections, and visible-object clusters; the graph resets at episode end.",
+        "sources": [
+          "readme",
+          "views",
+          "graph",
+          "agent"
+        ]
+      },
+      {
+        "text": "ExperienceMemory combines Episode-STM keyed by goal L1 and view ID with per-scene JSON Scene-LTM keyed by goal level and spatial grid cell. Anchor state stores accept/reject counts; frontier state stores moving-average information gain and dead-end rate plus decayed support.",
+        "sources": [
+          "experience",
+          "keys",
+          "config"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Verification decisions update episode anchor counts; rejected views are suppressed for a configured number of navigation steps. Finished frontier legs record newly explored area and whether gain is below the configured dead-end threshold.",
+        "sources": [
+          "experience",
+          "agent",
+          "config"
+        ]
+      },
+      {
+        "text": "At subtask end, Scene-LTM decays previous counts/support, aggregates the subtask outcomes at L1/L2/L3 goal levels, removes low-support or contradicted entries, bounds each goal key by a record cap, and atomically replaces the scene JSON via a temporary file. A new episode clears STM and reloads the scene LTM.",
+        "sources": [
+          "experience",
+          "agent",
+          "config"
+        ]
+      },
+      {
+        "text": "Scene-LTM lookup falls back from exact goal content to category to modality when the more specific level lacks the configured minimum number of stored cells, then reads the current cell. Candidate ranking combines target-category and room hints with anchor reliability or frontier gain/dead-end experience, recency, unexplored area, and path distance; candidate counts are capped before VLM selection.",
+        "sources": [
+          "experience",
+          "keys",
+          "coarse",
+          "agent",
+          "config"
+        ]
+      },
+      {
+        "text": "A non-certain VLM choice of an anchor is redirected to the best frontier if available. Goal verification receives image/object context and, when present, anchor acceptance/rejection counts. Repeated rejections trigger a frontier-only fallback; there is no general user-facing memory CRUD API or explicit per-record/scene purge path in the inspected experience module.",
+        "sources": [
+          "fine",
+          "agent",
+          "experience",
+          "readme"
+        ]
+      },
+      {
+        "text": "Scene files partition persistent records by scene and goal/cell keys organize them within a scene; Episode-STM resets at episode boundaries. The inspected implementation does not establish tenant/user authorization or cross-scene access controls, and no isolation workload was run.",
+        "sources": [
+          "experience",
+          "keys",
+          "agent"
+        ]
+      },
+      {
+        "text": "Experience provenance consists of the agent's own STOP/RESELECT decisions and frontier trajectory outcomes. The inspected aggregate records do not retain source observations, evidence references, reviewer identity, or an event-level audit trail; a mistaken STOP can be counted as an acceptance.",
+        "sources": [
+          "readme",
+          "experience",
+          "agent"
+        ]
+      },
+      {
+        "text": "The configured candidate budgets, capped selection retries, cell lookups, and per-goal record cap are code-level efficiency mechanisms. Evaluation records expose subtask timing, VLM calls/tokens, graph time, and steps, but this review collected no runtime, token, cost, or storage measurements.",
+        "sources": [
+          "config",
+          "agent",
+          "recorder"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Candidate ranking, VLM selection, and a confidence gate were inspected; answerability and abstention workloads were not run.",
+        "sources": [
+          "coarse",
+          "fine",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Accept/reject feedback, decay, and contradiction pruning were inspected; no correction or stale-value probes were run.",
+        "sources": [
+          "experience",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Weak/contradicted-record pruning was inspected; no post-delete or persistent-erasure workload was run.",
+        "sources": [
+          "experience",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Per-scene files and goal/cell keys were inspected; no cross-scene/user isolation workload was run.",
+        "sources": [
+          "experience",
+          "keys",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Visual verification context and aggregate feedback were inspected; source support precision and citation coverage were not scored.",
+        "sources": [
+          "readme",
+          "experience",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Subtask timing fields exist in evaluation output, but no timings or write-to-recall schedule were collected.",
+        "sources": [
+          "agent",
+          "recorder",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The recorder has VLM call/token and cost-related summary fields, but no token, cost, or persistent-storage measurements were collected.",
+        "sources": [
+          "agent",
+          "recorder",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review is tied to the verified current main head. EvoMemNav, its tests, and benchmarks were not run.",
+        "sources": [
+          "repo",
+          "head",
+          "readme"
+        ]
+      },
+      {
+        "text": "README performance tables are upstream-reported and were not reproduced or independently adjudicated. Source inspection cannot establish navigation quality, robustness to mistaken feedback, access-control isolation, persistence recovery, or production efficiency.",
+        "sources": [
+          "readme",
+          "experience",
+          "agent",
+          "metrics"
+        ]
+      },
+      {
+        "text": "The repository has no separate top-level documentation directory; the README contains method, setup, evaluation, and result descriptions. The contact check covered the official pinned README only.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No EvoMemNav runtime, tests, or benchmarks were run. README figures are upstream-reported; project metrics and fixtures are comparison definitions, not EvoMemNav measurements."
+    }
+  }
+}

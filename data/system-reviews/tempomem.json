@@ -1,0 +1,448 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 116,
+    "slug": "tempomem",
+    "name": "Chronotope",
+    "repository": "https://github.com/wikieden/tempomem",
+    "listed_repository": "https://github.com/wikieden/tempomem",
+    "branch": "main",
+    "revision": "92181fbbae7f5e66714aa5e91f61ba9558b1f1aa",
+    "reviewed_at": "2026-11-25T07:48:04Z",
+    "review_timezone": "UTC (2026-11-24 23:48:04 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Chronotope (the tempomem Python package) stores spatial observations in a local SQLite scene graph. Callers submit labeled 3D detections and feature vectors; commits fuse them into persistent object nodes that can be queried by geometry, time, label or optional embeddings and relations. This is a pinned source review, not a runtime or benchmark evaluation.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/tempomem.md"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/wikieden/tempomem/blob/92181fbbae7f5e66714aa5e91f61ba9558b1f1aa/README.md",
+      "note": "No contact email was found in the official README checked at the pinned revision. Author metadata was not used as a contact source."
+    },
+    "contact_email": null,
+    "contact_checked_sources": [
+      "https://github.com/wikieden/tempomem/blob/92181fbbae7f5e66714aa5e91f61ba9558b1f1aa/README.md"
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[115], ordinal 116; identity, listed repository and explicit roster attribution only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas attribution only",
+        "path": "content/systems/tempomem.md",
+        "symbol": "Pinned roster attribution URL; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/tempomem.md"
+      },
+      {
+        "id": "listed_repo_page",
+        "label": "Official listed repository locator",
+        "path": "repository page",
+        "symbol": "Catalog-listed repository page linked in the article; locator attribution only",
+        "url": "https://github.com/wikieden/tempomem"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository metadata",
+        "path": "",
+        "symbol": "Canonical public repository wikieden/tempomem; default branch main",
+        "url": "https://api.github.com/repos/wikieden/tempomem"
+      },
+      {
+        "id": "head",
+        "label": "Official GitHub API current main head",
+        "path": "",
+        "symbol": "Full main head 92181fbbae7f5e66714aa5e91f61ba9558b1f1aa; commit timestamp 2026-07-03T02:13:33Z",
+        "url": "https://api.github.com/repos/wikieden/tempomem/commits/main"
+      },
+      {
+        "id": "revision",
+        "label": "Reviewed upstream head",
+        "path": "",
+        "symbol": "Reviewed full commit SHA 92181fbbae7f5e66714aa5e91f61ba9558b1f1aa",
+        "url": "https://github.com/wikieden/tempomem/commit/92181fbbae7f5e66714aa5e91f61ba9558b1f1aa"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product scope, quickstart, current features, pre-alpha status, dependencies and perception adapter status",
+        "url": "https://github.com/wikieden/tempomem/blob/92181fbbae7f5e66714aa5e91f61ba9558b1f1aa/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Pinned architecture documentation",
+        "path": "docs/en/02-ARCHITECTURE.md",
+        "symbol": "Architecture and data flow; implementation status cross-checked against code",
+        "url": "https://github.com/wikieden/tempomem/blob/92181fbbae7f5e66714aa5e91f61ba9558b1f1aa/docs/en/02-ARCHITECTURE.md"
+      },
+      {
+        "id": "api",
+        "label": "Pinned Python API specification",
+        "path": "spec/API.md",
+        "symbol": "Ingest, query, lifecycle, hierarchy, relations, update/history API and planned boundaries",
+        "url": "https://github.com/wikieden/tempomem/blob/92181fbbae7f5e66714aa5e91f61ba9558b1f1aa/spec/API.md"
+      },
+      {
+        "id": "schema",
+        "label": "Pinned scene graph schema",
+        "path": "spec/SCHEMA.md",
+        "symbol": "SQLite object model, stored observations/nodes/edges, optional vector index and planned indexes",
+        "url": "https://github.com/wikieden/tempomem/blob/92181fbbae7f5e66714aa5e91f61ba9558b1f1aa/spec/SCHEMA.md"
+      },
+      {
+        "id": "fusion",
+        "label": "Pinned fusion arbiter specification",
+        "path": "spec/FUSION-ARBITER.md",
+        "symbol": "Candidate scoring, fusion decisions, maintenance and documented logging design",
+        "url": "https://github.com/wikieden/tempomem/blob/92181fbbae7f5e66714aa5e91f61ba9558b1f1aa/spec/FUSION-ARBITER.md"
+      },
+      {
+        "id": "query_spec",
+        "label": "Pinned query router specification",
+        "path": "spec/QUERY-ROUTER.md",
+        "symbol": "Retriever behavior, future features and stated performance budgets",
+        "url": "https://github.com/wikieden/tempomem/blob/92181fbbae7f5e66714aa5e91f61ba9558b1f1aa/spec/QUERY-ROUTER.md"
+      },
+      {
+        "id": "store_api",
+        "label": "TempoMem public API implementation",
+        "path": "src/tempomem/__init__.py",
+        "symbol": "Ingest, commit, retrieval, serialization, deletion, decay, regions, update, history and merge",
+        "url": "https://github.com/wikieden/tempomem/blob/92181fbbae7f5e66714aa5e91f61ba9558b1f1aa/src/tempomem/__init__.py"
+      },
+      {
+        "id": "frame",
+        "label": "Detection and observation models",
+        "path": "src/tempomem/frame.py",
+        "symbol": "Detection fields, vector validation, geometry and observation shape",
+        "url": "https://github.com/wikieden/tempomem/blob/92181fbbae7f5e66714aa5e91f61ba9558b1f1aa/src/tempomem/frame.py"
+      },
+      {
+        "id": "config",
+        "label": "Fusion configuration",
+        "path": "src/tempomem/config.py",
+        "symbol": "Fusion thresholds, score weights and pending-observation guard",
+        "url": "https://github.com/wikieden/tempomem/blob/92181fbbae7f5e66714aa5e91f61ba9558b1f1aa/src/tempomem/config.py"
+      },
+      {
+        "id": "persist",
+        "label": "SQLite schema",
+        "path": "src/tempomem/persist/schema.sql",
+        "symbol": "Tables, foreign keys, indices and stored observation/node data",
+        "url": "https://github.com/wikieden/tempomem/blob/92181fbbae7f5e66714aa5e91f61ba9558b1f1aa/src/tempomem/persist/schema.sql"
+      },
+      {
+        "id": "store_impl",
+        "label": "Store operations",
+        "path": "src/tempomem/store.py",
+        "symbol": "Node deletion, observation lineage, decay/pruning, linear candidate lookup and statistics",
+        "url": "https://github.com/wikieden/tempomem/blob/92181fbbae7f5e66714aa5e91f61ba9558b1f1aa/src/tempomem/store.py"
+      },
+      {
+        "id": "query_impl",
+        "label": "Query implementation",
+        "path": "src/tempomem/query/__init__.py",
+        "symbol": "Keyword, spatial, temporal, relational, vector and linear retrieval implementations",
+        "url": "https://github.com/wikieden/tempomem/blob/92181fbbae7f5e66714aa5e91f61ba9558b1f1aa/src/tempomem/query/__init__.py"
+      },
+      {
+        "id": "relations",
+        "label": "Geometric relation inference",
+        "path": "src/tempomem/relations.py",
+        "symbol": "Near/on/under relations derived from geometry",
+        "url": "https://github.com/wikieden/tempomem/blob/92181fbbae7f5e66714aa5e91f61ba9558b1f1aa/src/tempomem/relations.py"
+      },
+      {
+        "id": "serialize",
+        "label": "Graph serialization",
+        "path": "src/tempomem/serialize.py",
+        "symbol": "JSON and bounded prompt serialization",
+        "url": "https://github.com/wikieden/tempomem/blob/92181fbbae7f5e66714aa5e91f61ba9558b1f1aa/src/tempomem/serialize.py"
+      },
+      {
+        "id": "open_questions",
+        "label": "Pinned open questions",
+        "path": "docs/en/05-OPEN.md",
+        "symbol": "Unresolved scaling, query, scope and perception questions",
+        "url": "https://github.com/wikieden/tempomem/blob/92181fbbae7f5e66714aa5e91f61ba9558b1f1aa/docs/en/05-OPEN.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Project-wide definitions; not system measurements",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned workload only; not system results",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Initial benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project-wide execution status only; not system results",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "Chronotope is the project name used by the repository README for the tempomem package, a pre-alpha Python library for persistent 3D scene-graph memory. The core accepts caller-provided detections; an RGB-D PerceptionAdapter interface exists, while the README identifies a concrete ConceptGraphs adapter as work in progress.",
+        "sources": [
+          "readme",
+          "frame",
+          "api"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "A .smem file is a SQLite database with episodes, observations, nodes, edges, and node-to-observation links. Nodes aggregate label distribution, confidence, centroid, bounding box, feature vector, observation count, first/last timestamps and optional parent region. Observations retain episode, timestamp, label, confidence, geometry, feature, optional mask and auxiliary JSON.",
+        "sources": [
+          "schema",
+          "persist",
+          "frame"
+        ]
+      },
+      {
+        "text": "add_detections() writes observations and stages their ids; commit() sends pending rows through fusion and commits. Candidate nodes are found by expanded bounding-box scan and scored using geometry, 3D box overlap, feature cosine and label compatibility. The arbiter merges a matching object, rejects a low-confidence unmatched observation, or creates a new object. Regions and geometric relations are separate scene structure.",
+        "sources": [
+          "store_api",
+          "fusion",
+          "config",
+          "store_impl",
+          "relations"
+        ]
+      },
+      {
+        "text": "The optional [vec] extra may enable sqlite-vec for node-feature semantic search; feature blobs remain canonical and the index is rebuildable. Otherwise semantic retrieval scans node features linearly and spatial retrieval scans nodes. Prompt serialization can include hierarchy and relations, cap output by a token budget, and mark omitted nodes.",
+        "sources": [
+          "schema",
+          "query_impl",
+          "serialize",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "add_detections() takes normalized feature vectors, labels, confidence, 3D center and bounding box, timestamp, optional episode/session, mask and aux fields. add_frame() delegates RGB-D processing to a supplied adapter. Fusion runs at commit(), unless the configured pending threshold auto-flushes. update() changes a node label, center or confidence in place; a label change replaces its label distribution. history() returns linked observations; merge() folds objects from another store through fusion.",
+        "sources": [
+          "api",
+          "frame",
+          "store_api",
+          "config"
+        ]
+      },
+      {
+        "text": "forget() hard-deletes a node, its node_obs links, incident edges and properties; it reparents children to avoid dangling region references. The observation rows themselves remain in the observations table after node links are deleted. decay() reduces object confidence by a half-life and prunes below a floor. resplit() and consolidate() are explicit maintenance calls.",
+        "sources": [
+          "api",
+          "store_api",
+          "store_impl"
+        ]
+      },
+      {
+        "text": "query() first attempts relation phrase plus anchor-label lookup. Temporal intent returns recent nodes; spatial queries use linear centroid distance or keyword fallback; semantic queries use a configured encoder with optional sqlite-vec or a linear cosine scan, and without an encoder use label substring matching. answer() requires a caller-provided verbalizer. The API accepts episode labels on write but has no episode retrieval filter.",
+        "sources": [
+          "api",
+          "query_spec",
+          "store_api",
+          "query_impl",
+          "schema"
+        ]
+      },
+      {
+        "text": "Episode/session labels organize observations but do not provide authorization or retrieval filtering in the inspected API. The reviewed code shows no tenant or principal access control; one local SQLite file is the documented persistence unit. Multi-user isolation is unknown and was not tested.",
+        "sources": [
+          "schema",
+          "api",
+          "store_api",
+          "readme"
+        ]
+      },
+      {
+        "text": "Node-to-observation links preserve timestamps, episode IDs and spatial sightings; aux data can contain caller-defined JSON. The model does not require source documents, evidence excerpts, authors, trust assertions or validated citations, and retrieval does not validate factual support. This is observation lineage, not a verified evidence chain.",
+        "sources": [
+          "schema",
+          "persist",
+          "frame",
+          "query_impl"
+        ]
+      },
+      {
+        "text": "Code exposes commit elapsed time and store counts/SQLite bytes. Optional sqlite-vec supports vector search; semantic fallback and spatial lookup scan nodes, and relation inference examines object pairs. Architecture documentation describes structured fusion logs, but this review did not verify all logging paths. Published latency budgets are targets, not measurements.",
+        "sources": [
+          "store_api",
+          "store_impl",
+          "query_impl",
+          "relations",
+          "architecture",
+          "query_spec"
+        ]
+      },
+      {
+        "text": "Retrieval and answer mechanisms are source-visible, but there is no adjudicated answerability or abstention result. No probe evaluated whether returned objects were correct or unsupported questions abstain.",
+        "sources": [
+          "query_impl",
+          "api"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Retrieval mechanisms are source-visible; no answerable or unanswerable probes were evaluated.",
+        "sources": [
+          "query_impl",
+          "api",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "In-place node updates and observation history exist; no correction sequence or stale-value probe was scored.",
+        "sources": [
+          "api",
+          "store_api",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "forget() removes node links and indexes but leaves observation rows; no post-forget retrieval, residual-store or backup test was performed.",
+        "sources": [
+          "store_api",
+          "store_impl",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Episodes carry a session label, but no access-control boundary or cross-session leakage workload was assessed.",
+        "sources": [
+          "schema",
+          "api",
+          "store_api",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Observation lineage and optional aux fields exist; no evidence adjudication or citation check was run.",
+        "sources": [
+          "schema",
+          "frame",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "The code returns commit elapsed time and includes optional vector indexing; no timings or write-to-recall schedule were measured.",
+        "sources": [
+          "store_api",
+          "query_impl",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost and storage",
+        "status": "unmeasured",
+        "evidence": "Design exposes store byte counts and a token-capped serializer; no token, cost or storage workload was measured.",
+        "sources": [
+          "store_api",
+          "serialize",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review covers selected official documentation, specifications and implementation modules at the verified main head. Runtime behavior, production stability, crash recovery, every adapter path and deployed authorization were not established.",
+        "sources": [
+          "readme",
+          "api",
+          "store_api",
+          "persist"
+        ]
+      },
+      {
+        "text": "The repository labels itself pre-alpha. The README marks RGB-D ConceptGraphs integration as work in progress; relation parsing is simple, and episode-scoped retrieval is absent from the inspected query interface.",
+        "sources": [
+          "readme",
+          "api",
+          "query_spec",
+          "open_questions"
+        ]
+      },
+      {
+        "text": "Spatial lookup and semantic fallback use linear scans, while relation inference evaluates object pairs. Optional sqlite-vec exists, but scale, accuracy and latency were not measured.",
+        "sources": [
+          "schema",
+          "store_impl",
+          "query_impl",
+          "relations",
+          "open_questions"
+        ]
+      },
+      {
+        "text": "Hard deletion removes the node and associations but leaves observation rows in SQLite. The reviewed sources do not establish a purge, backup or replica cleanup policy.",
+        "sources": [
+          "store_api",
+          "store_impl",
+          "schema"
+        ]
+      },
+      {
+        "text": "No system operation, benchmark or tests were run. Project metrics, fixture and execution status are context only, not Chronotope measurements.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. Chronotope, its tests and benchmark workload were not executed; this review has no measured quality, latency, token, cost, storage, correction, deletion or isolation results.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "contact_notes": [
+      {
+        "text": "No contact email was found in the official README checked at the reviewed revision. Author or commit metadata was not used.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ]
+  }
+}

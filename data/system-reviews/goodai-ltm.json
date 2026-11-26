@@ -1,0 +1,352 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 265,
+    "slug": "goodai-ltm",
+    "name": "GoodAI LTM",
+    "repository": "https://github.com/GoodAI/goodai-ltm",
+    "listed_repository": "https://github.com/GoodAI/goodai-ltm",
+    "branch": "main",
+    "revision": "22ca10c21771d0192d550517cb06c3aab6e602aa",
+    "reviewed_at": "2026-11-25T21:17:06Z",
+    "review_timezone": "UTC (checked local time: 2026-11-25 13:17:06 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "GoodAI LTM is a Python library for text-based long-term memory and conversational agents. Its low-level memory stores a bounded stream of tokenized text chunks, indexes their embeddings, and retrieves relevant passages; optional models can rewrite queries or memories and rerank retrieved candidates. The repository also includes LTMAgent, which layers dialog and knowledge-base behavior over the memory library.",
+    "atlas_locator": {
+      "ordinal": 265,
+      "name": "GoodAI LTM",
+      "slug": "goodai-ltm",
+      "listed_repository": "https://github.com/GoodAI/goodai-ltm",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/goodai-ltm.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/GoodAI/goodai-ltm/blob/22ca10c21771d0192d550517cb06c3aab6e602aa/README.md",
+      "checked_urls": [
+        "https://github.com/GoodAI/goodai-ltm/blob/22ca10c21771d0192d550517cb06c3aab6e602aa/README.md"
+      ],
+      "note": "The official pinned README was checked and does not publish a project contact email. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/GoodAI/goodai-ltm/blob/22ca10c21771d0192d550517cb06c3aab6e602aa/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/GoodAI/goodai-ltm/blob/22ca10c21771d0192d550517cb06c3aab6e602aa/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the checked official pinned README; this is the exact checked source.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[264], ordinal 265; GoodAI LTM identity, explicit listed repository locator and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/goodai-ltm.md",
+        "symbol": "Pinned roster attribution, used only for identity and locator context",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/goodai-ltm.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "Canonical GoodAI/goodai-ltm and default branch main",
+        "url": "https://api.github.com/repos/GoodAI/goodai-ltm"
+      },
+      {
+        "id": "head",
+        "label": "Official current main head",
+        "path": "GitHub commits API",
+        "symbol": "Current main head 22ca10c21771d0192d550517cb06c3aab6e602aa; commit timestamp 2024-02-28T20:48:35Z",
+        "url": "https://api.github.com/repos/GoodAI/goodai-ltm/commits/main"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project description, low-level API, memory persistence, agent sessions and retrieval output",
+        "url": "https://github.com/GoodAI/goodai-ltm/blob/22ca10c21771d0192d550517cb06c3aab6e602aa/README.md"
+      },
+      {
+        "id": "factory",
+        "label": "Text-memory factory",
+        "path": "goodai/ltm/mem/auto.py",
+        "symbol": "AutoTextMemory.create factory, default providers and configuration",
+        "url": "https://github.com/GoodAI/goodai-ltm/blob/22ca10c21771d0192d550517cb06c3aab6e602aa/goodai/ltm/mem/auto.py"
+      },
+      {
+        "id": "base",
+        "label": "Text-memory API and result model",
+        "path": "goodai/ltm/mem/base.py",
+        "symbol": "RetrievedMemory fields and BaseTextMemory operations",
+        "url": "https://github.com/GoodAI/goodai-ltm/blob/22ca10c21771d0192d550517cb06c3aab6e602aa/goodai/ltm/mem/base.py"
+      },
+      {
+        "id": "chunk",
+        "label": "Chunk record",
+        "path": "goodai/ltm/mem/chunk.py",
+        "symbol": "Chunk fields, token bounds, timestamp, metadata, indexing status and associated keys",
+        "url": "https://github.com/GoodAI/goodai-ltm/blob/22ca10c21771d0192d550517cb06c3aab6e602aa/goodai/ltm/mem/chunk.py"
+      },
+      {
+        "id": "queue",
+        "label": "Chunk queue",
+        "path": "goodai/ltm/mem/chunk_queue.py",
+        "symbol": "Bounded token/chunk storage, key mapping, overlap, section boundaries and queue overflow",
+        "url": "https://github.com/GoodAI/goodai-ltm/blob/22ca10c21771d0192d550517cb06c3aab6e602aa/goodai/ltm/mem/chunk_queue.py"
+      },
+      {
+        "id": "config",
+        "label": "Memory configuration",
+        "path": "goodai/ltm/mem/config.py",
+        "symbol": "Default chunk size, queue capacity, overlap, expansion and reranking parameters",
+        "url": "https://github.com/GoodAI/goodai-ltm/blob/22ca10c21771d0192d550517cb06c3aab6e602aa/goodai/ltm/mem/config.py"
+      },
+      {
+        "id": "default",
+        "label": "Default text-memory implementation",
+        "path": "goodai/ltm/mem/default.py",
+        "symbol": "Add/replace path, vector indexing, state serialization, clear and model configuration",
+        "url": "https://github.com/GoodAI/goodai-ltm/blob/22ca10c21771d0192d550517cb06c3aab6e602aa/goodai/ltm/mem/default.py"
+      },
+      {
+        "id": "foundation",
+        "label": "Retrieval foundation",
+        "path": "goodai/ltm/mem/mem_foundation.py",
+        "symbol": "Vector retrieval, duplicate and overlap reduction, candidate expansion and reranking",
+        "url": "https://github.com/GoodAI/goodai-ltm/blob/22ca10c21771d0192d550517cb06c3aab6e602aa/goodai/ltm/mem/mem_foundation.py"
+      },
+      {
+        "id": "simple-db",
+        "label": "Simple vector database",
+        "path": "goodai/ltm/mem/simple_vector_db.py",
+        "symbol": "In-memory embedding arrays and squared-L2 search implementation",
+        "url": "https://github.com/GoodAI/goodai-ltm/blob/22ca10c21771d0192d550517cb06c3aab6e602aa/goodai/ltm/mem/simple_vector_db.py"
+      },
+      {
+        "id": "delete-example",
+        "label": "Deletion example",
+        "path": "examples/delete_memory.py",
+        "symbol": "Deleting by text key and deleting keys returned by a retrieved memory",
+        "url": "https://github.com/GoodAI/goodai-ltm/blob/22ca10c21771d0192d550517cb06c3aab6e602aa/examples/delete_memory.py"
+      },
+      {
+        "id": "persistence",
+        "label": "Persistence implementation",
+        "path": "goodai/ltm/persistence/json_persistence.py",
+        "symbol": "Queue and vector index persisted as JSON or JSON plus NPZ",
+        "url": "https://github.com/GoodAI/goodai-ltm/blob/22ca10c21771d0192d550517cb06c3aab6e602aa/goodai/ltm/persistence/json_persistence.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation domains and protocol definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned evaluation fixture",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project baseline run status; not a GoodAI LTM result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository describes GoodAI-LTM as a Python package maintained under the GoodAI organization. It offers a low-level text-memory API and an LTMAgent integration; no individual maintainer identity is inferred from commit/profile metadata.",
+        "sources": [
+          "repo",
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "AutoTextMemory.create constructs DefaultTextMemory with a tokenizer, embedding model, bounded ChunkQueue, and simple vector database by default; FAISS flat L2 and optional matching, reranking, rewrite and importance models are configurable.",
+        "sources": [
+          "factory",
+          "default",
+          "config"
+        ]
+      },
+      {
+        "text": "Chunks carry integer ids, token bounds, metadata, importance, timestamps, indexed length and associated text keys. The queue stores token ids and key-to-sequence mappings, applies overlap and section boundaries, and drops oldest chunks after capacity is exceeded. Default settings are 24 tokens per chunk, 50,000 chunks and 50% overlap.",
+        "sources": [
+          "chunk",
+          "queue",
+          "config"
+        ]
+      },
+      {
+        "text": "The simple database retains NumPy vectors and ids and computes squared L2 distances. Explicit persistence APIs serialize the queue and vector database to JSON, JSON plus NPZ, or a state string; the factory alone creates an in-process memory.",
+        "sources": [
+          "simple-db",
+          "default",
+          "persistence",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "add_text accepts text, arbitrary metadata, optional rewrite settings and a timestamp, then returns an integer text key. The implementation tokenizes text, updates queue chunks, and embeds changed chunks in batches; add_separator prevents expansion across section boundaries.",
+        "sources": [
+          "base",
+          "default",
+          "queue"
+        ]
+      },
+      {
+        "text": "replace_text is exposed as keyed mutation and routes through the chunk-queue operation used by DefaultTextMemory. It is an in-memory replacement interface; the reviewed source does not describe a versioned correction ledger or automatic transactional persistence.",
+        "sources": [
+          "base",
+          "default",
+          "queue"
+        ]
+      },
+      {
+        "text": "delete_text removes text by returned key; the official example also deletes every text key attached to a retrieved memory. clear resets the whole queue and vector index. The inspected API/example do not document deletion receipts, tombstones, audit records or backup-erasure guarantees.",
+        "sources": [
+          "base",
+          "delete-example",
+          "default"
+        ]
+      },
+      {
+        "text": "retrieve(query, k) returns ranked passages with timestamp, distance, relevance, optional matching confidence and importance, metadata and associated keys. Retrieval embeds queries, finds vector candidates, removes duplicate chunks, expands adjacent context within limits, then optionally applies matching/reranking and overlap reduction.",
+        "sources": [
+          "readme",
+          "base",
+          "foundation",
+          "default",
+          "config"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Embedding retrieval and optional matching/reranking are implemented; no answer set or abstention behavior was scored.",
+        "sources": [
+          "readme",
+          "foundation",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Keyed replacement exists; no correction sequence or stale-value probe was run.",
+        "sources": [
+          "base",
+          "default",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Keyed deletion and full clear are exposed; no post-delete probe or durable erasure audit was run.",
+        "sources": [
+          "delete-example",
+          "default",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "The low-level API and chunk model contain no scope key; no cross-user workload was run.",
+        "sources": [
+          "base",
+          "chunk",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Metadata and text keys are returned; no claims or citations were adjudicated.",
+        "sources": [
+          "chunk",
+          "base",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Search and indexing code were inspected; no timings or write-to-recall schedule were measured.",
+        "sources": [
+          "default",
+          "foundation",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost and storage",
+        "status": "unmeasured",
+        "evidence": "Token chunk limits and persistence formats were inspected; no workload token, cost, or storage measurements were collected.",
+        "sources": [
+          "config",
+          "persistence",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The default memory is an in-process bounded queue; retaining it across process restarts requires caller-managed state or persistence. The simple vector database performs dense pairwise distance calculations over retained vectors, and corpus-scale performance was not measured.",
+        "sources": [
+          "factory",
+          "queue",
+          "simple-db",
+          "persistence"
+        ]
+      },
+      {
+        "text": "The low-level APIs and chunk records carry no tenant/project/session scope field. Timestamps and arbitrary metadata can carry caller-defined references, but the inspected code does not define verified source provenance or citation support.",
+        "sources": [
+          "base",
+          "chunk",
+          "readme"
+        ]
+      },
+      {
+        "text": "This was a pinned source review only. The library, tests and benchmarks were not run; answer quality, abstention, correction, deletion leakage, isolation, latency, tokens, cost and storage remain unmeasured.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No GoodAI LTM runtime, tests, or benchmarks were run for this review. Source observations and project evaluation definitions are not results measured here."
+    }
+  }
+}

@@ -1,0 +1,302 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 277,
+    "slug": "growmos",
+    "name": "growmos",
+    "repository": "https://github.com/codician-team/growmos",
+    "listed_repository": "https://github.com/codician-team/growmos",
+    "branch": "main",
+    "revision": "510deb2dfee151fb79402b0a3274025f9c1c2c71",
+    "reviewed_at": "2026-11-25T22:10:11Z",
+    "review_timezone": "UTC (checked 2026-11-25 14:10:11 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Growmos is a repository-local knowledge graph for agent memory. It stores typed entities, relations, and provenance in editable JSONL, stages extraction and resolution through agent task packets, and retrieves bounded k-hop graph context with edge citations. This source review does not measure runtime quality or performance.",
+    "atlas_locator": {
+      "ordinal": 277,
+      "name": "growmos",
+      "slug": "growmos",
+      "listed_repository": "https://github.com/codician-team/growmos",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/growmos.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/codician-team/growmos/blob/510deb2dfee151fb79402b0a3274025f9c1c2c71/README.md",
+      "checked_urls": [
+        "https://github.com/codician-team/growmos/blob/510deb2dfee151fb79402b0a3274025f9c1c2c71/README.md",
+        "https://codician-team.github.io/growmos/"
+      ],
+      "note": "Checked the official pinned README and official project website for a published email; neither publishes one. No profile or commit metadata, Atlas description, or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/codician-team/growmos/blob/510deb2dfee151fb79402b0a3274025f9c1c2c71/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/codician-team/growmos/blob/510deb2dfee151fb79402b0a3274025f9c1c2c71/README.md",
+      "https://codician-team.github.io/growmos/"
+    ],
+    "contact_email_note": "No email was published in the checked official pinned README or official project website.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[276], ordinal 277; identity, explicit repository locator, and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/growmos.md",
+        "symbol": "Pinned catalog attribution for curated identity and locator context only; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/growmos.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "GitHub repository page identifies public codician-team/growmos and default branch main",
+        "url": "https://github.com/codician-team/growmos"
+      },
+      {
+        "id": "head",
+        "label": "Official current main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Full head SHA 510deb2dfee151fb79402b0a3274025f9c1c2c71; matches catalog pin",
+        "url": "https://github.com/codician-team/growmos/commits/main.atom"
+      },
+      {
+        "id": "tree",
+        "label": "Official pinned Git tree",
+        "path": "GitHub Git trees API",
+        "symbol": "Tree response identifies the requested full SHA and current source paths",
+        "url": "https://api.github.com/repos/codician-team/growmos/git/trees/510deb2dfee151fb79402b0a3274025f9c1c2c71?recursive=1"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project overview, CLI/MCP surface, pipeline, configuration, and retrieval claims; upstream claims not treated as measured results",
+        "url": "https://github.com/codician-team/growmos/blob/510deb2dfee151fb79402b0a3274025f9c1c2c71/README.md"
+      },
+      {
+        "id": "store",
+        "label": "Pinned source store",
+        "path": "src/growmos/store.py",
+        "symbol": "Source tracking, JSONL persistence, entity/relation merge, direct write operations, provenance and compaction",
+        "url": "https://github.com/codician-team/growmos/blob/510deb2dfee151fb79402b0a3274025f9c1c2c71/src/growmos/store.py"
+      },
+      {
+        "id": "graph",
+        "label": "Pinned graph assembly and retrieval",
+        "path": "src/growmos/graph.py",
+        "symbol": "K-hop traversal, bounded serialization, provenance labels, diagnostics, and relation fact-checking",
+        "url": "https://github.com/codician-team/growmos/blob/510deb2dfee151fb79402b0a3274025f9c1c2c71/src/growmos/graph.py"
+      },
+      {
+        "id": "schema",
+        "label": "Pinned schema and validators",
+        "path": "src/growmos/schema.py",
+        "symbol": "Typed extraction, validation, resolution fallback, and answer shape with cited_edges and not_in_graph",
+        "url": "https://github.com/codician-team/growmos/blob/510deb2dfee151fb79402b0a3274025f9c1c2c71/src/growmos/schema.py"
+      },
+      {
+        "id": "file-format",
+        "label": "Pinned file-format documentation",
+        "path": "docs/file-format.md",
+        "symbol": "Record fields, source status, append-only mentions, relation provenance/corroboration, and profile staleness",
+        "url": "https://github.com/codician-team/growmos/blob/510deb2dfee151fb79402b0a3274025f9c1c2c71/docs/file-format.md"
+      },
+      {
+        "id": "site",
+        "label": "Official Growmos website",
+        "path": "project website",
+        "symbol": "Checked for a published contact email; none found",
+        "url": "https://codician-team.github.io/growmos/"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation definitions; not run in this review",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Fixture not run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "execution_status",
+        "label": "Project execution status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "No Growmos result created or claimed",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes growmos as an open-source, tool-agnostic project built by Codician. It provides a Python CLI, MCP stdio server, and agent integrations; optional headless ingestion uses configured model providers.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Growmos persists repository-local state under .growmos/ as config and schema JSON, run state, sources, raw mentions, canonical entities, aliases, directed relations, profiles, prompts, gold examples, and an append-only journal.",
+        "sources": [
+          "store",
+          "file-format"
+        ]
+      },
+      {
+        "text": "Sources are content-hashed; changed files return to pending. Extraction and resolution use structured JSON task packets; validators reject malformed payloads, drop relations with endpoints absent from the extraction, and retain unmatched names through single-name fallback clusters.",
+        "sources": [
+          "store",
+          "schema",
+          "readme"
+        ]
+      },
+      {
+        "text": "Relations store source IDs and a confidence count equal to distinct source documents. Graph assembly uses in-memory dictionaries and sets, traverses a k-hop neighborhood, and serializes bounded triples with edge IDs and source labels.",
+        "sources": [
+          "store",
+          "graph",
+          "file-format"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "The direct remember path creates or finds a typed entity and appends a mention with its source reference; link creates or resolves endpoint entities and adds a relation; journal appends timestamped text. Document ingestion uses next/apply packets, while optional headless ingest invokes configured model providers.",
+        "sources": [
+          "store",
+          "readme"
+        ]
+      },
+      {
+        "text": "Changed source hashes trigger pending reprocessing. Entity merge combines source references and mention counts, redirects aliases, rewrites relations, then removes the folded entity. The inspected merge path does not retain an explicit durable merge event or correction history.",
+        "sources": [
+          "store",
+          "file-format"
+        ]
+      },
+      {
+        "text": "No general fact-forget/delete operation appears in the README CLI/MCP surface or the inspected store implementation. Merge removes a folded entity, and compact prunes dangling relations and aliases while deduplicating mentions; complete erasure is not established.",
+        "sources": [
+          "readme",
+          "store"
+        ]
+      },
+      {
+        "text": "Query resolves seeds, traverses and serializes an induced k-hop subgraph with caps of 400 nodes and 300 triples by default. The answer schema requires cited edge IDs and a not_in_graph list; fact-checking can return adjacent graph evidence when an exact relation is absent.",
+        "sources": [
+          "graph",
+          "schema",
+          "readme"
+        ]
+      },
+      {
+        "text": "State is rooted in a repository-local .growmos directory; inspected entity, source, alias, and relation records have no user or tenant authorization key. No isolation or authorization probes were run.",
+        "sources": [
+          "store",
+          "file-format"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable recall and abstention: query output is bounded and structured for citations and not-in-graph claims; accuracy and abstention are unmeasured.",
+        "sources": [
+          "graph",
+          "schema",
+          "metrics",
+          "fixture",
+          "execution_status"
+        ]
+      },
+      {
+        "text": "Correction and stale retrieval: source hashes trigger reprocessing and merge rewrites graph references, but correction accuracy and stale-value rate are unmeasured.",
+        "sources": [
+          "store",
+          "metrics",
+          "fixture",
+          "execution_status"
+        ]
+      },
+      {
+        "text": "Deletion leakage: no general delete API was identified in the inspected interface; deletion leakage and completeness are unmeasured.",
+        "sources": [
+          "readme",
+          "store",
+          "metrics",
+          "fixture",
+          "execution_status"
+        ]
+      },
+      {
+        "text": "Scope isolation: repository-local files provide a directory boundary; cross-project, user, or tenant isolation is not established or measured.",
+        "sources": [
+          "store",
+          "file-format",
+          "metrics",
+          "fixture",
+          "execution_status"
+        ]
+      },
+      {
+        "text": "Evidence support and citation coverage: edges expose source labels and answer schema requires edge IDs; citation support was not adjudicated.",
+        "sources": [
+          "graph",
+          "schema",
+          "metrics",
+          "fixture",
+          "execution_status"
+        ]
+      },
+      {
+        "text": "Latency, write-to-recall delay, tokens, cost, and storage efficiency: caps, JSONL persistence, and optional providers are code observations; no workload or resource measurement was collected.",
+        "sources": [
+          "readme",
+          "store",
+          "metrics",
+          "fixture",
+          "execution_status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected selected README, store, graph, schema, and file-format sources at the verified head; Growmos, tests, and benchmark workloads were not run. Upstream evaluation and efficiency claims were not reproduced.",
+        "sources": [
+          "readme",
+          "store",
+          "graph",
+          "schema",
+          "file-format"
+        ]
+      },
+      {
+        "text": "Deletion semantics beyond merge and compaction, durable correction history, authorization boundaries, retrieval quality, evidence support, provider cost, and storage efficiency remain unverified.",
+        "sources": [
+          "store",
+          "graph",
+          "schema",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Growmos runtime, tests, or benchmark workload was run. Upstream claims and the project's evaluation materials are not benchmark results from this review.",
+      "metric_definitions": "../METRICS.md",
+      "fixture": "../fixtures/memory-benchmark-v1.json",
+      "execution_status": "../results/initial-baselines-status.json"
+    }
+  }
+}

@@ -1,0 +1,348 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 142,
+    "slug": "context-infrastructure",
+    "name": "Context Infrastructure",
+    "repository": "https://github.com/grapeot/context-infrastructure",
+    "listed_repository": "https://github.com/grapeot/context-infrastructure",
+    "branch": "main",
+    "revision": "74511fbd5465ac302524d9e6878fab85727fc645",
+    "reviewed_at": "2026-11-25T08:51:22Z",
+    "review_timezone": "UTC (2026-11-25 00:51:22 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Context Infrastructure is a Markdown-based workspace blueprint for coding-agent rules, dated observations, and scheduled L1/L2 agent jobs. Its observer appends tagged observations and its current reflector proposes rule changes for human approval before apply. The review is pinned to the verified main head; no runtime, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 142,
+      "name": "Context Infrastructure",
+      "slug": "context-infrastructure",
+      "listed_repository": "https://github.com/grapeot/context-infrastructure",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/context-infrastructure.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/grapeot/context-infrastructure/blob/74511fbd5465ac302524d9e6878fab85727fc645/README.md",
+      "checked_urls": [
+        "https://github.com/grapeot/context-infrastructure/blob/74511fbd5465ac302524d9e6878fab85727fc645/README.md",
+        "https://github.com/grapeot/context-infrastructure/blob/74511fbd5465ac302524d9e6878fab85727fc645/SECURITY.md"
+      ],
+      "note": "Checked the official pinned README and SECURITY.md path. No email was published in the README; SECURITY.md is absent at the reviewed head."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/grapeot/context-infrastructure/blob/74511fbd5465ac302524d9e6878fab85727fc645/README.md",
+      "https://github.com/grapeot/context-infrastructure/blob/74511fbd5465ac302524d9e6878fab85727fc645/SECURITY.md"
+    ],
+    "contact_email_note": "No contact email was found in the official pinned README; the official SECURITY.md path is absent at the reviewed head. No profile/commit metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[141], ordinal 142: Context Infrastructure, slug context-infrastructure, explicit locator, pinned Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/context-infrastructure.md",
+        "symbol": "Pinned locator used only for curated identity/locator attribution; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/context-infrastructure.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Public repository page identifies main as default branch",
+        "url": "https://github.com/grapeot/context-infrastructure"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Full current main head 74511fbd5465ac302524d9e6878fab85727fc645; updated 2026-11-24T18:54:32Z",
+        "url": "https://github.com/grapeot/context-infrastructure/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Official reviewed head",
+        "path": "commit/74511fbd5465ac302524d9e6878fab85727fc645",
+        "symbol": "Official commit page for verified current main head",
+        "url": "https://github.com/grapeot/context-infrastructure/commit/74511fbd5465ac302524d9e6878fab85727fc645"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project purpose, three-layer layout, workspace model, setup and semantic-search split",
+        "url": "https://github.com/grapeot/context-infrastructure/blob/74511fbd5465ac302524d9e6878fab85727fc645/README.md"
+      },
+      {
+        "id": "prd",
+        "label": "Pinned heartbeat design PRD",
+        "path": "periodic_jobs/ai_heartbeat/docs/PRD.md",
+        "symbol": "L1/L2/L3 design, pull retrieval and observation data flow",
+        "url": "https://github.com/grapeot/context-infrastructure/blob/74511fbd5465ac302524d9e6878fab85727fc645/periodic_jobs/ai_heartbeat/docs/PRD.md"
+      },
+      {
+        "id": "observer",
+        "label": "Pinned L1 observer trigger",
+        "path": "periodic_jobs/ai_heartbeat/src/v0/observer.py",
+        "symbol": "Date idempotency, OpenCode session, observation prompt and append path",
+        "url": "https://github.com/grapeot/context-infrastructure/blob/74511fbd5465ac302524d9e6878fab85727fc645/periodic_jobs/ai_heartbeat/src/v0/observer.py"
+      },
+      {
+        "id": "reflector",
+        "label": "Pinned L2 reflector trigger",
+        "path": "periodic_jobs/ai_heartbeat/src/v0/reflector.py",
+        "symbol": "Candidate proposal, hash snapshot guard, human approval and apply/GC behavior",
+        "url": "https://github.com/grapeot/context-infrastructure/blob/74511fbd5465ac302524d9e6878fab85727fc645/periodic_jobs/ai_heartbeat/src/v0/reflector.py"
+      },
+      {
+        "id": "security_check",
+        "label": "Official SECURITY.md path check",
+        "path": "SECURITY.md",
+        "symbol": "GitHub Contents API returned 404 at reviewed head; checked for published contact",
+        "url": "https://github.com/grapeot/context-infrastructure/blob/74511fbd5465ac302524d9e6878fab85727fc645/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Project evaluation domains and metric definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned workload specification; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Project initial benchmark status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Existing result/status record; this review produced no measurements",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents Context Infrastructure as a reference implementation and workspace blueprint for AI coding agents, with rules, skills, observations, and scheduled jobs; it is not a configured hosted service.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The official repository page identifies main as the default branch. Its main commit feed reports full head 74511fbd5465ac302524d9e6878fab85727fc645, updated 2026-11-24T18:54:32Z.",
+        "sources": [
+          "repo",
+          "feed",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The documented memory structure has session-start L3 rules, a dated L1 observation log, and L2 reflection. Canonical records are Markdown files in the workspace; the trigger scripts delegate inspection and synthesis to an OpenCode agent.",
+        "sources": [
+          "readme",
+          "prd",
+          "observer"
+        ]
+      },
+      {
+        "text": "L1 entries use date headers and High/Medium/Low tags; the PRD describes pulling only task-relevant observations. Semantic search was moved to a separately installed skill repository and is not implemented by this repository alone.",
+        "sources": [
+          "prd",
+          "readme"
+        ]
+      },
+      {
+        "text": "The observer and reflector configure workspace paths in script constants and create OpenCode sessions through a local client; there is no central database or service described for this core.",
+        "sources": [
+          "observer",
+          "reflector",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: the L1 observer checks for an existing date entry, scans workspace changes through an OpenCode agent, and prompts it to append tagged observations and include root-relative file paths. The agent, rather than the trigger script, performs content filtering and summarization.",
+        "sources": [
+          "observer",
+          "prd"
+        ]
+      },
+      {
+        "text": "Update/correction: same-date observer runs skip instead of revising an existing entry. The current reflector's default mode writes rule candidates containing target, change, rationale, and source observations; a rules-directory hash snapshot detects rule edits during proposal generation. A human must approve candidate checkboxes before a separate --apply invocation changes rules.",
+        "sources": [
+          "observer",
+          "reflector"
+        ]
+      },
+      {
+        "text": "Delete/retention: approved apply merges selected candidates, archives them in the candidate file, and garbage-collects observations; the prompt also removes expired Low entries. The inspected Markdown workflow does not establish erasure from Git history, backups, or copies.",
+        "sources": [
+          "reflector",
+          "prd"
+        ]
+      },
+      {
+        "text": "Retrieval: AGENTS.md routes the session into rules and workspace instructions; the PRD describes agent-driven pull of sparse relevant observations. Semantic search is external/optional, and no ranking API or answerability gate was established in this repository review.",
+        "sources": [
+          "readme",
+          "prd"
+        ]
+      },
+      {
+        "text": "Scope isolation: the model is one workspace's shared rules and observation log. The inspected scripts and design do not provide user/tenant/project authorization; deployment must isolate workspaces and enforce filesystem/runtime permissions.",
+        "sources": [
+          "readme",
+          "observer",
+          "prd"
+        ]
+      },
+      {
+        "text": "Provenance: observation entries are dated and tagged, and prompts request relative file paths. Reflector candidates identify source entries, rationale, and intended rule edits. The inspected workflow does not establish durable claim-level citations, truth states, or mutation history; priority tags are not truth verification.",
+        "sources": [
+          "observer",
+          "reflector",
+          "prd"
+        ]
+      },
+      {
+        "text": "Efficiency/observability: plain-text append and selective reads avoid a required database; jobs delegate work to OpenCode. The reflector hashes rules before and after proposal generation. Runtime depends on cron, configured local paths, a working OpenCode server, and model execution; no quantitative performance/usage telemetry was established.",
+        "sources": [
+          "readme",
+          "observer",
+          "reflector"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "No adjudicated query workload or answerability gate was run or established in inspected core sources.",
+        "sources": [
+          "readme",
+          "prd",
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Human-approved rule changes exist, but no correction or stale-retrieval probes were run.",
+        "sources": [
+          "reflector",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Apply-stage observation garbage collection is implemented; no post-delete checks across history, backups, or copies were run.",
+        "sources": [
+          "reflector",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Workspace-based scope is visible, but no cross-workspace or hostile-caller workload was run.",
+        "sources": [
+          "observer",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "No generated answers were adjudicated for source support or citation correctness.",
+        "sources": [
+          "prd",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No latency distribution was collected.",
+        "sources": [
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timed write-then-recall workload was run.",
+        "sources": [
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No token or provider-cost accounting was performed.",
+        "sources": [
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Markdown is the documented canonical store; no corpus storage measurement was collected.",
+        "sources": [
+          "readme",
+          "metrics"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected the README, PRD, observer, and reflector at the verified head; it did not inspect every rule, skill, scheduled job, or the separately installed semantic-search implementation.",
+        "sources": [
+          "readme",
+          "prd",
+          "observer",
+          "reflector"
+        ]
+      },
+      {
+        "text": "The scripts require workspace/model configuration, local OpenCode, and scheduled invocation. No runtime, tests, or benchmarks were run; quality, timing, cost, and storage outcomes remain unknown.",
+        "sources": [
+          "observer",
+          "reflector",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "text": "The human review gate protects rule promotion in the current reflector, but the inspected system does not establish general correction auditing or complete deletion from version history and external copies.",
+        "sources": [
+          "reflector",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Context Infrastructure runtime, tests, or benchmarks were run. Source observations are not benchmark results."
+    }
+  }
+}

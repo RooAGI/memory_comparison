@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "a-memory",
+    "name": "a-memory",
+    "repository": "https://github.com/Cipher208/a-memory",
+    "branch": "master",
+    "revision": "a59057e0e2701d970468a9dfe3562d83d91cd737",
+    "reviewed_at": "2026-11-23T23:30:55Z",
+    "review_timezone": "UTC (checked 2026-11-23 15:30:55 PST)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Python agent-memory package built around local SQLite stores, layered memory, hybrid text and binary retrieval, and graph components. This source review describes mechanisms; no a-memory benchmark or runtime workload was run.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/Cipher208/a-memory"
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "a-memory repository and current default-branch head",
+        "path": "repository",
+        "symbol": "master; head a59057e0e2701d970468a9dfe3562d83d91cd737",
+        "url": "https://github.com/Cipher208/a-memory"
+      },
+      {
+        "id": "readme",
+        "label": "README at reviewed commit",
+        "path": "README.md",
+        "symbol": "four-tier hierarchy; MCP primitives; search and graph overview",
+        "url": "https://github.com/Cipher208/a-memory/blob/a59057e0e2701d970468a9dfe3562d83d91cd737/README.md"
+      },
+      {
+        "id": "core",
+        "label": "Core fact store",
+        "path": "core/memory.py",
+        "symbol": "CoreMemory._init_db; save; get; search; delete; _record_history; _record_temporal",
+        "url": "https://github.com/Cipher208/a-memory/blob/a59057e0e2701d970468a9dfe3562d83d91cd737/core/memory.py"
+      },
+      {
+        "id": "episodes",
+        "label": "Episodic store",
+        "path": "core/episodic.py",
+        "symbol": "EpisodicMemory.save; search; archive_old; delete_by_ids",
+        "url": "https://github.com/Cipher208/a-memory/blob/a59057e0e2701d970468a9dfe3562d83d91cd737/core/episodic.py"
+      },
+      {
+        "id": "reflex",
+        "label": "Reflex buffer",
+        "path": "core/reflex.py",
+        "symbol": "ReflexBuffer.add; get_recent; clear; restore; _save",
+        "url": "https://github.com/Cipher208/a-memory/blob/a59057e0e2701d970468a9dfe3562d83d91cd737/core/reflex.py"
+      },
+      {
+        "id": "epistemic",
+        "label": "Epistemic graph",
+        "path": "graph/epistemic.py",
+        "symbol": "EpistemicGraph.add_node; add_edge; get_neighbors; find_path; delete_nodes",
+        "url": "https://github.com/Cipher208/a-memory/blob/a59057e0e2701d970468a9dfe3562d83d91cd737/graph/epistemic.py"
+      },
+      {
+        "id": "temporal",
+        "label": "Temporal event graph",
+        "path": "graph/temporal.py",
+        "symbol": "TemporalGraph.add_event; link_events; get_timeline; get_causal_chain",
+        "url": "https://github.com/Cipher208/a-memory/blob/a59057e0e2701d970468a9dfe3562d83d91cd737/graph/temporal.py"
+      },
+      {
+        "id": "search",
+        "label": "RAG search strategies",
+        "path": "rag/search.py",
+        "symbol": "search_fts5; search_binary; search_rrf; auto_strategy",
+        "url": "https://github.com/Cipher208/a-memory/blob/a59057e0e2701d970468a9dfe3562d83d91cd737/rag/search.py"
+      },
+      {
+        "id": "server",
+        "label": "MCP server surface",
+        "path": "mcp_server/server.py",
+        "symbol": "resolve_exposure; _scope_tool; _register_all_tools",
+        "url": "https://github.com/Cipher208/a-memory/blob/a59057e0e2701d970468a9dfe3562d83d91cd737/mcp_server/server.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "./METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "./results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "./fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The repository is owned by Cipher208 and describes a-memory as a local-first Python package with an MCP server. This review covers repository code at the pinned commit, not a hosted service or deployment.",
+        "sources": [
+          "repo",
+          "readme",
+          "server"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "README presents four tiers: Reflex, Sessions, Episodic memory, and Core facts, stored in SQLite files. ReflexBuffer defaults to 50 entries and persists optional JSON snapshots through a temporary file, fsync, and atomic replace. CoreMemory facts include layer, user, key, value, importance, kind, expiry, source, metadata, visibility, and timestamps.",
+        "sources": [
+          "readme",
+          "reflex",
+          "core"
+        ]
+      },
+      {
+        "text": "Separate modules model epistemic nodes and edges and a temporal event timeline. README describes typed graph records and temporal history; graph classes expose node, edge, neighbor, path, and timeline operations. This does not establish graph quality or live consistency.",
+        "sources": [
+          "readme",
+          "epistemic",
+          "temporal"
+        ]
+      },
+      {
+        "text": "README describes seven default MCP primitives and optional tool tiers. `think` routes writes among facts, episodes, wiki, or graph; `dream` retrieves across layers. This documents the intended surface, not authorization in every client or deployment.",
+        "sources": [
+          "readme",
+          "server"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: CoreMemory.save uses (layer, user_id, key) as a unique fact key. Existing keys update; new keys insert. Both paths append before/after history and update temporal intervals in the write transaction. README describes `think` routing by importance and relations; no classification result is measured here.",
+        "sources": [
+          "core",
+          "readme"
+        ]
+      },
+      {
+        "text": "Corrections: saving an existing key replaces its current value while history retains snapshots and the temporal table closes the old interval and opens a new one. `get_at_time` and `get_intervals` provide time-based reads; search can mark earlier versions superseded. These mechanisms do not show that arbitrary natural-language corrections are detected or answered correctly.",
+        "sources": [
+          "core"
+        ]
+      },
+      {
+        "text": "Delete: CoreMemory.delete records the prior row, closes its temporal interval, and removes the current fact row atomically. README describes `forget` as context-aware with an undoable Shadow Bin, but that multi-store path was not inspected. Physical erasure across history, graph, episodes, backups, and exports is unknown.",
+        "sources": [
+          "core",
+          "readme"
+        ]
+      },
+      {
+        "text": "Retrieval: CoreMemory.search tokenizes queries, matches key/value text, over-fetches candidates, and ranks by matched-token count then importance; private and hidden rows are suppressed and superseded versions handled. RAG search provides FTS5 with LIKE fallback, binary embedding search, and reciprocal-rank fusion; binary retrieval scans eligible chunks. README describes `dream` as a token-budgeted cross-layer digest. These are implementation descriptions, not recall or latency measurements.",
+        "sources": [
+          "core",
+          "search",
+          "readme"
+        ]
+      },
+      {
+        "text": "Scope: the core table has a unique (layer, user_id, key) index, and core reads, searches, and deletes include layer and user in predicates. This establishes namespace filters in that path, not caller-bound authorization or isolation across every tool and deployment.",
+        "sources": [
+          "core",
+          "server"
+        ]
+      },
+      {
+        "text": "Provenance: core rows carry source and metadata. Updates and deletes append snapshots with a change hash and trigger; temporal intervals retain validity bounds, and results can expose a stable `ariel://` fact URI. This does not establish claim-level citation generation or correctness in answers.",
+        "sources": [
+          "core"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Source describes keyword, FTS5, binary, and fused retrieval, but no captured adjudicated answers or calibrated abstention result is available.",
+        "sources": [
+          "search",
+          "core",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "History and temporal intervals are source mechanisms. No post-correction gold probes ran; accuracy and stale-value rate are unknown.",
+        "sources": [
+          "core",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Core deletion is visible, but no post-delete probes ran. Shadow Bin and cross-store cleanup completeness are unknown.",
+        "sources": [
+          "core",
+          "readme",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Core filters by layer and user ID, but caller-bound isolation across tools and stores was not measured or established.",
+        "sources": [
+          "core",
+          "server",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Stored source metadata and stable fact URIs are not an adjudication of answer support or citations; no response claims were captured.",
+        "sources": [
+          "core",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency, write-to-recall delay, tokens, cost, and storage",
+        "status": "unmeasured",
+        "evidence": "SQLite, indexes, and retrieval algorithms are implementation details. No a-memory workload observations or runtime measurements were collected.",
+        "sources": [
+          "core",
+          "search",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded review at one upstream commit. No system, deployment, or tests were run and no retrieval behavior was measured. Runtime correctness, latency, scaling, crash durability, and security suitability remain unknown.",
+        "sources": [
+          "repo",
+          "readme",
+          "core",
+          "search"
+        ]
+      },
+      {
+        "text": "Atlas supplied the repository locator only. Its descriptions, capability marks, and assessments are not this project's findings.",
+        "sources": [
+          "repo"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run for this review. The project status record is globally `not_run`; metric numerators and denominators are null, and runtime observations are zero. It contains no a-memory-specific result. Fixture counts are planned probes, not measurements.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

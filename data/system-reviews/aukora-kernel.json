@@ -1,0 +1,388 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "aukora-kernel",
+    "name": "Aukora Kernel",
+    "repository": "https://github.com/aumara-xyz/aukora-kernel",
+    "branch": "main",
+    "revision": "b441edc4d17de778d30ae955f46408edae39bffe",
+    "reviewed_at": "2026-11-24T22:00:06Z",
+    "review_timezone": "UTC (2026-11-24 14:00:06 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":"auma@aumara.xyz","source_url":"https://github.com/aumara-xyz/aukora-kernel/blob/b441edc4d17de778d30ae955f46408edae39bffe/SECURITY.md","note":"Published in the official security policy."},
+    "summary": "Aukora Kernel is an authority-and-receipt framework, not a standalone memory database. At the reviewed repository head, memory behavior sits in broader Symbiote host/reference layers: a local IDE JSONL store and an internal Convex memory path. The portable @aukora/kernel verifier/reducer has no persistence capability. This review records source observations only; no runtime or benchmark results were produced.",
+    "atlas_locator": {
+      "ordinal": 75,
+      "name": "Aukora Kernel",
+      "slug": "aukora-kernel",
+      "listed_repository": "https://github.com/aumara-xyz/aukora-kernel",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/aukora-kernel.md",
+      "revision": "b441edc4d17de778d30ae955f46408edae39bffe"
+    },
+    "contact_email": "auma@aumara.xyz",
+    "contact_email_source_url": "https://github.com/aumara-xyz/aukora-kernel/blob/b441edc4d17de778d30ae955f46408edae39bffe/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/aumara-xyz/aukora-kernel/blob/b441edc4d17de778d30ae955f46408edae39bffe/README.md",
+      "https://github.com/aumara-xyz/aukora-kernel/blob/b441edc4d17de778d30ae955f46408edae39bffe/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository and default branch metadata",
+        "path": "repository",
+        "symbol": "Canonical aumara-xyz/aukora-kernel; default branch main",
+        "url": "https://github.com/aumara-xyz/aukora-kernel"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Full head b441edc4d17de778d30ae955f46408edae39bffe; feed updated 2026-07-15T22:00:13Z",
+        "url": "https://github.com/aumara-xyz/aukora-kernel/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed full upstream head",
+        "path": "commit",
+        "symbol": "b441edc4d17de778d30ae955f46408edae39bffe",
+        "url": "https://github.com/aumara-xyz/aukora-kernel/commit/b441edc4d17de778d30ae955f46408edae39bffe"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Portable kernel boundary, wider reference app, system claims and limitations",
+        "url": "https://github.com/aumara-xyz/aukora-kernel/blob/b441edc4d17de778d30ae955f46408edae39bffe/README.md"
+      },
+      {
+        "id": "memory_local",
+        "label": "Symbiote local IDE memory implementation",
+        "path": "apps/symbiote/memory/memory.ts",
+        "symbol": "JSONL model, remember/recall/forget, chain verification",
+        "url": "https://github.com/aumara-xyz/aukora-kernel/blob/b441edc4d17de778d30ae955f46408edae39bffe/apps/symbiote/memory/memory.ts"
+      },
+      {
+        "id": "chain",
+        "label": "Local receipt-chain primitives",
+        "path": "apps/symbiote/memory/chain.ts",
+        "symbol": "Canonical hash serialization and per-chain hash",
+        "url": "https://github.com/aumara-xyz/aukora-kernel/blob/b441edc4d17de778d30ae955f46408edae39bffe/apps/symbiote/memory/chain.ts"
+      },
+      {
+        "id": "aumlok_memory",
+        "label": "Convex AUMLOK memory implementation",
+        "path": "apps/symbiote/convex/aumlokMemory.ts",
+        "symbol": "Manifest-governed write, recall, search candidates, erasure and integrity checks",
+        "url": "https://github.com/aumara-xyz/aukora-kernel/blob/b441edc4d17de778d30ae955f46408edae39bffe/apps/symbiote/convex/aumlokMemory.ts"
+      },
+      {
+        "id": "schema",
+        "label": "Convex schema",
+        "path": "apps/symbiote/convex/schema.ts",
+        "symbol": "Memory table and indexes",
+        "url": "https://github.com/aumara-xyz/aukora-kernel/blob/b441edc4d17de778d30ae955f46408edae39bffe/apps/symbiote/convex/schema.ts"
+      },
+      {
+        "id": "convex_readme",
+        "label": "Symbiote Convex reference README",
+        "path": "apps/symbiote/convex/README.md",
+        "symbol": "Internal-only functions, self-hosted admin access, reference-app boundary",
+        "url": "https://github.com/aumara-xyz/aukora-kernel/blob/b441edc4d17de778d30ae955f46408edae39bffe/apps/symbiote/convex/README.md"
+      },
+      {
+        "id": "boot_recall",
+        "label": "Boot recall integration source",
+        "path": "apps/symbiote/memory/runtime/bootRecall.ts",
+        "symbol": "Recall refresh behavior and explicit no-importer note",
+        "url": "https://github.com/aumara-xyz/aukora-kernel/blob/b441edc4d17de778d30ae955f46408edae39bffe/apps/symbiote/memory/runtime/bootRecall.ts"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy and published contact",
+        "path": "SECURITY.md",
+        "symbol": "Publishes auma@aumara.xyz for private vulnerability reports",
+        "url": "https://github.com/aumara-xyz/aukora-kernel/blob/b441edc4d17de778d30ae955f46408edae39bffe/SECURITY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": null,
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": null,
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project memory benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": null,
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog identity and attribution only",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 75",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Roster attribution source; identity only",
+        "path": "content/systems/aukora-kernel.md",
+        "symbol": null,
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/aukora-kernel.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository belongs to the aumara-xyz organization and presents Aukora as an authorization-and-receipt framework for agents. Its README distinguishes a portable verifier/reducer from the broader PROVEN-LAB reference application; the reviewed memory implementations are in Symbiote host/reference layers.",
+        "sources": [
+          "repo",
+          "readme",
+          "convex_readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The portable packages/kernel boundary is a deterministic verifier/reducer with no filesystem, network, Convex, or persistence capability. Memory behavior therefore belongs to surrounding host/reference code and should not be attributed to the portable package itself.",
+        "sources": [
+          "readme",
+          "convex_readme"
+        ]
+      },
+      {
+        "text": "The local IDE path stores JSONL entries and a separate JSONL receipt log. Entry payloads carry actor, chainKey, sequence, remember/forget operation, tier, content hash and timestamp; entries also carry a previous hash, nullable content and lifecycle status. The separate receipts carry authorization-argument and content hashes rather than plaintext.",
+        "sources": [
+          "memory_local",
+          "chain"
+        ]
+      },
+      {
+        "text": "The Convex path stores owner-root and writer identity, delegation ID, receipt and content hashes, source node, visibility, key/value and optional embedding on aukora_memory rows. The reviewed schema and implementation use owner/key and owner indexes, a search index and a vector index.",
+        "sources": [
+          "aumlok_memory",
+          "schema"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Local remember sends the content through the shared memory permission gate, hashes the content, appends and fsyncs a receipt first, then rewrites and fsyncs the entry file. A failure returns a fail-closed pause result. The module labels recall advisory-only and does not let stored text authorize effects.",
+        "sources": [
+          "memory_local"
+        ]
+      },
+      {
+        "text": "The Convex memory write mutation pins the action and ring, consumes a delegation-manifest use, issues a one-shot grant, checks intent/token authorization, writes a receipt binding manifest and memory data, then inserts the row in one transaction. A conflicting concurrent use sequence refuses rather than spending twice.",
+        "sources": [
+          "aumlok_memory"
+        ]
+      },
+      {
+        "text": "No normal in-place value-update API appeared in the inspected local memory module or Convex write path. Convex write inserts a row; local exposes remember and forget. Higher-level correction behavior in uninspected callers is unknown.",
+        "sources": [
+          "memory_local",
+          "aumlok_memory"
+        ]
+      },
+      {
+        "text": "Local forget clears plaintext and tombstones the row while retaining its content hash and chain link, then records a forget receipt. Convex erase uses an owner-root signature and leaves a scrubbed countable stub with original hashes plus an erasure receipt. The source warns that database versions/pages may remain during backend retention or until vacuum, and unsalted commitments may permit guessed-value confirmation.",
+        "sources": [
+          "memory_local",
+          "aumlok_memory"
+        ]
+      },
+      {
+        "text": "Local recall filters active remember entries by the selected/default chain key, sorts by sequence, and applies an optional tail limit; malformed store content is surfaced as corrupt rather than read as empty. Convex point recall verifies row content against its hash and receipt before returning it to an owner-root or still-authorized delegated writer.",
+        "sources": [
+          "memory_local",
+          "aumlok_memory"
+        ]
+      },
+      {
+        "text": "The Convex full-text and vector search implementations return keys only, with content served through the integrity-checking point-read path. Their source comments explicitly say they are benchmark candidates not called by any lane at this revision, so they are not the active recall route.",
+        "sources": [
+          "aumlok_memory"
+        ]
+      },
+      {
+        "text": "The local store defaults to chainKey auma-ide and filters reads on the supplied/default key; the inspected local API does not authenticate a caller principal, so the chain key is a namespace filter, not identity proof. Convex writes bind to a manifest owner root; point recall permits that root or its delegated writer while the manifest remains valid, while search is owner-root-only. Convex functions are internal-only and the subproject README describes a self-hosted admin-key boundary.",
+        "sources": [
+          "memory_local",
+          "aumlok_memory",
+          "convex_readme"
+        ]
+      },
+      {
+        "text": "Local receipts bind actor, chain key, sequence, operation, content hash, previous hash, timestamp and gate-argument hash. verifyChain recomputes links and cross-checks a separate receipt log; code documents that this is not a signature and does not detect an attacker who consistently rewrites both local files. Convex receipts bind manifest, root, subject, fingerprint, use sequence and memory hash; row reads re-derive the content binding. Receipts substantiate recorded fields, not the truth of remembered content.",
+        "sources": [
+          "memory_local",
+          "chain",
+          "aumlok_memory",
+          "readme"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency: the local path parses the stored file and sorts chain entries for recall, and rewrites the full entry file on mutation while appending receipts. Convex uses indexed owner/key reads and bounded candidate pools for search. Verification exposes lengths, counts, flags and failure reasons. These code paths do not provide measured latency, throughput, token, cost or storage results.",
+        "sources": [
+          "memory_local",
+          "aumlok_memory",
+          "schema"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "The code exposes advisory recall and point-read checks, but no answerable or unanswerable probe was run.",
+        "sources": [
+          "memory_local",
+          "aumlok_memory",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "No in-place update API appeared in inspected files; no correction workload or stale-value probe was run.",
+        "sources": [
+          "memory_local",
+          "aumlok_memory",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Source describes content scrubbing and residual backend retention; no post-erasure leakage probes were run.",
+        "sources": [
+          "memory_local",
+          "aumlok_memory",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Local chain-key filtering and Convex owner/delegation checks are visible in source, but no cross-scope probes were run.",
+        "sources": [
+          "memory_local",
+          "aumlok_memory",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Receipt and content-hash bindings are source-visible; no response claims were adjudicated against evidence.",
+        "sources": [
+          "memory_local",
+          "aumlok_memory",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "Full-file local reads and indexed Convex lookups are implementation observations only; no timed retrievals were collected.",
+        "sources": [
+          "memory_local",
+          "aumlok_memory",
+          "schema",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Write and retrieval paths were inspected but no ordered write-then-recall timing probes were run.",
+        "sources": [
+          "memory_local",
+          "aumlok_memory",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No model-token or service-cost measurements were collected for this review.",
+        "sources": [
+          "readme",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The repository structure and persistence paths are visible, but stored bytes per item and physical erasure were not measured.",
+        "sources": [
+          "memory_local",
+          "aumlok_memory",
+          "schema",
+          "metrics",
+          "record"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review covers selected source pages at the verified head; it is not a full review of the wider organism, all consumers, deployment configuration, or cryptographic implementation. The repository describes itself as PROVEN-LAB/research engineering rather than a production system.",
+        "sources": [
+          "readme",
+          "security"
+        ]
+      },
+      {
+        "text": "The local chain has no signed head in the inspected memory module; its receipt cross-check is limited to the two local files it reads. The Convex erasure path leaves commitments and receipt evidence and documents backend-version/page-retention limits. Neither source review establishes end-to-end physical erasure.",
+        "sources": [
+          "memory_local",
+          "chain",
+          "aumlok_memory"
+        ]
+      },
+      {
+        "text": "Boot recall source says it has no real importer at this revision, with only the pure region transform imported/tested according to its comments. The search/vector functions are described as uncalled candidates. Current deployment and consumer wiring remain unknown because this review did not run the application.",
+        "sources": [
+          "boot_recall",
+          "aumlok_memory"
+        ]
+      },
+      {
+        "text": "All metric domains remain unmeasured. Source topology and upstream descriptions do not establish answer quality, correction quality, isolation under deployment, deletion completeness, or runtime performance.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No Aukora runtime, tests or benchmark workload were executed. Project metric definitions, fixture and the not_run execution-status record define a separate protocol and are not Aukora results.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      }
+    ]
+  }
+}

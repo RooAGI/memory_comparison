@@ -1,0 +1,433 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 190,
+    "slug": "dexto",
+    "name": "Dexto",
+    "repository": "https://github.com/truffle-ai/dexto",
+    "branch": "main",
+    "revision": "c34d726f7d1addfe43c137028f924fc6981c2f03",
+    "reviewed_at": "2026-11-25T11:05:33Z",
+    "review_timezone": "UTC (2026-11-25 03:05:33 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": "founders@dexto.ai",
+      "source_url": "https://dexto.ai/",
+      "checked_urls": [
+        "https://dexto.ai/"
+      ],
+      "note": "Published in the footer of the official Dexto website."
+    },
+    "contact_email": "founders@dexto.ai",
+    "contact_email_source_url": "https://dexto.ai/",
+    "contact_email_checked_sources": [
+      "https://dexto.ai/"
+    ],
+    "contact_email_note": "Official website footer publishes founders@dexto.ai.",
+    "summary": "Dexto is an agent harness with a small persistent-memory facility. Its validated records can be created, updated, deleted, listed, and optionally injected into an agent system prompt. The inspected memory manager provides filtered listing rather than semantic search; no per-memory user or session scope is represented.",
+    "atlas_locator": {
+      "ordinal": 190,
+      "name": "Dexto",
+      "slug": "dexto",
+      "listed_repository": "https://github.com/truffle-ai/dexto",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dexto.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated roster",
+        "path": "data/memory-systems.json",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/dexto.md",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dexto.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository",
+        "symbol": "public repository; default branch main",
+        "url": "https://github.com/truffle-ai/dexto"
+      },
+      {
+        "id": "head",
+        "label": "Verified current main head",
+        "path": "commit",
+        "symbol": "c34d726f7d1addfe43c137028f924fc6981c2f03",
+        "url": "https://github.com/truffle-ai/dexto/commit/c34d726f7d1addfe43c137028f924fc6981c2f03"
+      },
+      {
+        "id": "feed",
+        "label": "Official main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "updated 2026-11-25T06:48:20Z",
+        "url": "https://github.com/truffle-ai/dexto/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "url": "https://github.com/truffle-ai/dexto/blob/c34d726f7d1addfe43c137028f924fc6981c2f03/README.md"
+      },
+      {
+        "id": "website",
+        "label": "Official Dexto website",
+        "path": "homepage footer",
+        "symbol": "contact email",
+        "url": "https://dexto.ai/"
+      },
+      {
+        "id": "memory_docs",
+        "label": "Memory feature documentation",
+        "path": "docs/examples/memory.md",
+        "url": "https://github.com/truffle-ai/dexto/blob/c34d726f7d1addfe43c137028f924fc6981c2f03/docs/examples/memory.md"
+      },
+      {
+        "id": "types",
+        "label": "Memory record types",
+        "path": "packages/core/src/memory/types.ts",
+        "url": "https://github.com/truffle-ai/dexto/blob/c34d726f7d1addfe43c137028f924fc6981c2f03/packages/core/src/memory/types.ts"
+      },
+      {
+        "id": "schemas",
+        "label": "Memory validation and injection config",
+        "path": "packages/core/src/memory/schemas.ts",
+        "url": "https://github.com/truffle-ai/dexto/blob/c34d726f7d1addfe43c137028f924fc6981c2f03/packages/core/src/memory/schemas.ts"
+      },
+      {
+        "id": "manager",
+        "label": "Memory manager",
+        "path": "packages/core/src/memory/manager.ts",
+        "url": "https://github.com/truffle-ai/dexto/blob/c34d726f7d1addfe43c137028f924fc6981c2f03/packages/core/src/memory/manager.ts"
+      },
+      {
+        "id": "store_contract",
+        "label": "Memory store contract",
+        "path": "packages/core/src/storage/memories/types.ts",
+        "url": "https://github.com/truffle-ai/dexto/blob/c34d726f7d1addfe43c137028f924fc6981c2f03/packages/core/src/storage/memories/types.ts"
+      },
+      {
+        "id": "database_store",
+        "label": "Database-backed memory store",
+        "path": "packages/core/src/storage/stores/backend.ts",
+        "url": "https://github.com/truffle-ai/dexto/blob/c34d726f7d1addfe43c137028f924fc6981c2f03/packages/core/src/storage/stores/backend.ts"
+      },
+      {
+        "id": "memory_store",
+        "label": "In-memory store",
+        "path": "packages/core/src/storage/stores/in-memory.ts",
+        "url": "https://github.com/truffle-ai/dexto/blob/c34d726f7d1addfe43c137028f924fc6981c2f03/packages/core/src/storage/stores/in-memory.ts"
+      },
+      {
+        "id": "memory_tools",
+        "label": "Memory tools",
+        "path": "packages/tools-lifecycle/src/memory-tools.ts",
+        "url": "https://github.com/truffle-ai/dexto/blob/c34d726f7d1addfe43c137028f924fc6981c2f03/packages/tools-lifecycle/src/memory-tools.ts"
+      },
+      {
+        "id": "prompt",
+        "label": "Memory prompt contributor",
+        "path": "packages/core/src/systemPrompt/contributors.ts",
+        "url": "https://github.com/truffle-ai/dexto/blob/c34d726f7d1addfe43c137028f924fc6981c2f03/packages/core/src/systemPrompt/contributors.ts"
+      },
+      {
+        "id": "metric_defs",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "result",
+        "label": "Shared benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Dexto as an agent harness for AI applications and says the project is built by Truffle AI. This review covers the repository's TypeScript framework and its core persistent-memory feature.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "Memory persistence is exposed through the core MemoryManager and MemoryStore abstraction, with lifecycle tools and an optional system-prompt contributor.",
+        "sources": [
+          "manager",
+          "store_contract",
+          "memory_tools",
+          "prompt"
+        ]
+      },
+      {
+        "text": "The reviewed catalog position is 190, with Dexto as the system name, dexto as the slug, and the explicit listed repository locator shown in the curated roster. Atlas is retained only as roster attribution.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The public official repository uses main as its default branch. The official commit feed, git ls-remote, and shallow checkout all identify c34d726f7d1addfe43c137028f924fc6981c2f03 as current main head.",
+        "sources": [
+          "repo",
+          "feed",
+          "head"
+        ]
+      },
+      {
+        "text": "The official website publishes founders@dexto.ai.",
+        "sources": [
+          "website"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "A Memory contains a generated identifier, content, creation and update timestamps, optional tags, and optional metadata. The metadata schema defines source as user or system and a pinned Boolean, allows custom metadata, and validates content up to 10,000 characters and at most ten tags of 50 characters each.",
+        "sources": [
+          "types",
+          "schemas"
+        ]
+      },
+      {
+        "text": "MemoryManager validates and assigns IDs and timestamps, then delegates to the MemoryStore contract. The database-backed store stores records under memory:item:<id>; the repository also includes an in-memory implementation. The selected storage configuration controls concrete persistence.",
+        "sources": [
+          "manager",
+          "store_contract",
+          "database_store",
+          "memory_store"
+        ]
+      },
+      {
+        "text": "Five lifecycle tools delegate list, get, create, update, and delete to the agent's manager. Prompt injection is a separate MemoryContributor, configured with a limit, timestamp/tag display, and pinned-only option; memory inclusion defaults to disabled.",
+        "sources": [
+          "memory_tools",
+          "prompt",
+          "schemas"
+        ]
+      },
+      {
+        "text": "The official memory guide describes memory creation and retrieval across sessions and configurable stores. The inspected source instead shows explicit memory tools and optional configured prompt injection, so the code paths here are treated as runtime evidence and guide text as product documentation.",
+        "sources": [
+          "memory_docs",
+          "schemas",
+          "memory_tools"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: create validates input, assigns a 12-character ID and timestamps, validates the complete record, and persists through the store. The memory_create tool defaults source to system and pinned to false.",
+        "sources": [
+          "manager",
+          "memory_tools",
+          "schemas"
+        ]
+      },
+      {
+        "text": "Update: the manager reads the existing record, replaces supplied content/tags, merges metadata, updates updatedAt, and stores the record under the same ID. No revision or supersession chain appears in the inspected model.",
+        "sources": [
+          "manager",
+          "types",
+          "database_store"
+        ]
+      },
+      {
+        "text": "Delete: the manager checks that the ID exists and calls the store delete method. The database-backed store deletes the key; no tombstone or memory-specific mutation history is present in the inspected paths. This does not prove physical erasure from database backups or engine remnants.",
+        "sources": [
+          "manager",
+          "database_store",
+          "store_contract"
+        ]
+      },
+      {
+        "text": "Retrieval: get reads by ID. List reads store records, filters in process by tags, source, and pinned, sorts by updated time, then applies offset and limit. The database implementation loads listed keys sequentially. The reviewed MemoryManager has no vector or semantic search.",
+        "sources": [
+          "manager",
+          "database_store"
+        ]
+      },
+      {
+        "text": "Scope isolation: records and keys have no explicit user, project, workspace, agent, or session scope. The manager documents multi-scope support as future work, and the prompt contributor does not use its context argument to filter records. Outer storage boundaries may vary by deployment; no live isolation check was run.",
+        "sources": [
+          "types",
+          "manager",
+          "database_store",
+          "prompt"
+        ]
+      },
+      {
+        "text": "Provenance: source distinguishes user-created from system-created records; pinned and tags assist selection/organization. The inspected record schema contains no source URI, evidence quotation, confidence, trust state, or mutation history, so these fields do not establish factual support.",
+        "sources": [
+          "types",
+          "schemas"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: list materializes records before filtering/sorting, and the database store performs sequential per-key reads. Prompt insertion can be bounded or pinned-only. Manager lifecycle methods log operation IDs, and the prompt contributor logs count/errors. No memory-specific performance measures were collected.",
+        "sources": [
+          "manager",
+          "database_store",
+          "prompt",
+          "schemas"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "The reviewed manager supports ID reads and filtered list retrieval; no answerability, accuracy, or abstention workload was run.",
+        "sources": [
+          "manager",
+          "metric_defs",
+          "result",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Updates overwrite a record at its current ID; no correction sequence or stale-value probe was run.",
+        "sources": [
+          "manager",
+          "database_store",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The store deletes the record key; no post-delete retrieval or residual-storage check was run.",
+        "sources": [
+          "manager",
+          "database_store",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "The memory model has no explicit scope field; no cross-user, cross-agent, or cross-workspace isolation workload was run.",
+        "sources": [
+          "types",
+          "manager",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Source and pinned metadata exist, but no claim-to-source evidence evaluation was run.",
+        "sources": [
+          "types",
+          "schemas",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No latency workload was run.",
+        "sources": [
+          "manager",
+          "database_store",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timing from acknowledged write to first correct recall was measured.",
+        "sources": [
+          "manager",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No token usage or provider cost was measured.",
+        "sources": [
+          "prompt",
+          "metric_defs",
+          "result"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No memory storage footprint or bytes-per-record comparison was measured.",
+        "sources": [
+          "database_store",
+          "metric_defs",
+          "result"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The inspected code describes simple CRUD and list filtering, not semantic search, evidence-grounded recall, or memory revision history.",
+        "sources": [
+          "manager",
+          "types",
+          "memory_tools"
+        ]
+      },
+      {
+        "text": "No explicit per-record scope key exists. The intended outer boundary depends on how an agent and its storage backend are configured, which source inspection cannot prove for an installation.",
+        "sources": [
+          "types",
+          "manager",
+          "database_store"
+        ]
+      },
+      {
+        "text": "The official memory guide describes automatic learning and store options while the current inspected implementation has explicit tools and optional prompt inclusion; the source-based assessment follows the pinned code and does not claim all guide behavior is active.",
+        "sources": [
+          "memory_docs",
+          "schemas",
+          "memory_tools"
+        ]
+      },
+      {
+        "text": "Logical key deletion does not establish removal from backups or low-level storage remnants; the inspected path does not provide a tombstone or mutation audit.",
+        "sources": [
+          "manager",
+          "database_store"
+        ]
+      },
+      {
+        "text": "No Dexto runtime, tests, or benchmark workloads were run. Retrieval quality, isolation, physical erasure, latency, token usage, cost, and storage efficiency remain unmeasured.",
+        "sources": [
+          "repo",
+          "head",
+          "metric_defs",
+          "result"
+        ]
+      }
+    ],
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "No Dexto runtime, tests, or benchmark workloads were executed for this source review."
+    }
+  }
+}

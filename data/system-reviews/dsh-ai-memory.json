@@ -1,0 +1,450 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "dsh-ai-memory",
+    "name": "dsh-ai-memory",
+    "ordinal": 196,
+    "repository": "https://github.com/zzjzzb/ai-memory",
+    "listed_repository": "https://github.com/zzjzzb/ai-memory",
+    "branch": "main",
+    "revision": "9208281522612ebb349dff2e1b7e07a9c7683def",
+    "reviewed_at": "2026-11-25T11:27:15Z",
+    "review_timezone": "UTC",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "dsh-ai-memory is a local Rust and SQLite memory library for agent harnesses, with optional DeepSeek Harness integration. It stores project-scoped working, episodic, and profile notes; recalls them using recency, keyword, and vector scores; and can build a token-budgeted context pack. Source review only; no runtime, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 196,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dsh-ai-memory.md",
+      "listed_repository": "https://github.com/zzjzzb/ai-memory"
+    },
+    "contact": {
+      "email": null,
+      "source_url": null,
+      "checked_urls": [
+        "https://github.com/zzjzzb/ai-memory/blob/9208281522612ebb349dff2e1b7e07a9c7683def/README.md",
+        "https://github.com/zzjzzb/ai-memory/blob/9208281522612ebb349dff2e1b7e07a9c7683def/CONTRIBUTING.md"
+      ],
+      "note": "The official pinned README and CONTRIBUTING.md were checked; neither publishes a contact email."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/zzjzzb/ai-memory/blob/9208281522612ebb349dff2e1b7e07a9c7683def/README.md",
+      "https://github.com/zzjzzb/ai-memory/blob/9208281522612ebb349dff2e1b7e07a9c7683def/CONTRIBUTING.md"
+    ],
+    "contact_email_note": "No email was published in the official pinned README or CONTRIBUTING.md. No commit/profile metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "Repository page and GitHub repository API",
+        "symbol": "Public canonical repository; main default branch",
+        "url": "https://github.com/zzjzzb/ai-memory"
+      },
+      {
+        "id": "history",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Head 9208281522612ebb349dff2e1b7e07a9c7683def; updated 2026-09-11T06:18:18Z",
+        "url": "https://github.com/zzjzzb/ai-memory/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream commit",
+        "path": "commit",
+        "symbol": "Full head SHA 9208281522612ebb349dff2e1b7e07a9c7683def",
+        "url": "https://github.com/zzjzzb/ai-memory/commit/9208281522612ebb349dff2e1b7e07a9c7683def"
+      },
+      {
+        "id": "tree",
+        "label": "Official Git tree at reviewed revision",
+        "path": "Git trees API",
+        "symbol": "Tree SHA matches reviewed head",
+        "url": "https://api.github.com/repos/zzjzzb/ai-memory/git/trees/9208281522612ebb349dff2e1b7e07a9c7683def?recursive=1"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Product scope, operating model, token budget, defaults and contact check",
+        "url": "https://github.com/zzjzzb/ai-memory/blob/9208281522612ebb349dff2e1b7e07a9c7683def/README.md"
+      },
+      {
+        "id": "contributing",
+        "label": "Pinned official contribution guide",
+        "path": "CONTRIBUTING.md",
+        "symbol": "Contact check and project scope",
+        "url": "https://github.com/zzjzzb/ai-memory/blob/9208281522612ebb349dff2e1b7e07a9c7683def/CONTRIBUTING.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Pinned architecture guide",
+        "path": "docs/ARCHITECTURE.md",
+        "symbol": "Store, project scope, recall and lifecycle architecture",
+        "url": "https://github.com/zzjzzb/ai-memory/blob/9208281522612ebb349dff2e1b7e07a9c7683def/docs/ARCHITECTURE.md"
+      },
+      {
+        "id": "usage",
+        "label": "Pinned usage guide",
+        "path": "docs/USAGE.md",
+        "symbol": "Memory API, policy defaults, recall and explicit maintenance",
+        "url": "https://github.com/zzjzzb/ai-memory/blob/9208281522612ebb349dff2e1b7e07a9c7683def/docs/USAGE.md"
+      },
+      {
+        "id": "types",
+        "label": "Pinned memory types",
+        "path": "src/types.rs",
+        "symbol": "Memory and query/filter data structures",
+        "url": "https://github.com/zzjzzb/ai-memory/blob/9208281522612ebb349dff2e1b7e07a9c7683def/src/types.rs"
+      },
+      {
+        "id": "policy",
+        "label": "Pinned policy implementation",
+        "path": "src/policy.rs",
+        "symbol": "Retention, promotion and hybrid score policies",
+        "url": "https://github.com/zzjzzb/ai-memory/blob/9208281522612ebb349dff2e1b7e07a9c7683def/src/policy.rs"
+      },
+      {
+        "id": "sqlite",
+        "label": "Pinned SQLite store",
+        "path": "src/sqlite.rs",
+        "symbol": "SQLite schema, CRUD, scoped recall and consolidation",
+        "url": "https://github.com/zzjzzb/ai-memory/blob/9208281522612ebb349dff2e1b7e07a9c7683def/src/sqlite.rs"
+      },
+      {
+        "id": "store",
+        "label": "Pinned store interface",
+        "path": "src/store.rs",
+        "symbol": "MemoryStore contract and project-bound handle",
+        "url": "https://github.com/zzjzzb/ai-memory/blob/9208281522612ebb349dff2e1b7e07a9c7683def/src/store.rs"
+      },
+      {
+        "id": "context",
+        "label": "Pinned budgeted context packing",
+        "path": "src/harness/context.rs",
+        "symbol": "Pinned-first ordering and rendered ContextPack",
+        "url": "https://github.com/zzjzzb/ai-memory/blob/9208281522612ebb349dff2e1b7e07a9c7683def/src/harness/context.rs"
+      },
+      {
+        "id": "compact",
+        "label": "Pinned working-memory compactor",
+        "path": "src/harness/compact.rs",
+        "symbol": "Extractive compaction plan and defaults",
+        "url": "https://github.com/zzjzzb/ai-memory/blob/9208281522612ebb349dff2e1b7e07a9c7683def/src/harness/compact.rs"
+      },
+      {
+        "id": "vector",
+        "label": "Pinned vector index",
+        "path": "src/vector.rs",
+        "symbol": "Default brute-force cosine VectorIndex",
+        "url": "https://github.com/zzjzzb/ai-memory/blob/9208281522612ebb349dff2e1b7e07a9c7683def/src/vector.rs"
+      },
+      {
+        "id": "embedder",
+        "label": "Pinned default embedder",
+        "path": "src/embedder.rs",
+        "symbol": "Offline 64-dimensional HashEmbedder",
+        "url": "https://github.com/zzjzzb/ai-memory/blob/9208281522612ebb349dff2e1b7e07a9c7683def/src/embedder.rs"
+      },
+      {
+        "id": "tools",
+        "label": "Pinned DeepSeek Harness tool definitions",
+        "path": "integrations/dsh-ai-memory/src/tools.js",
+        "symbol": "Remember, recall, forget, pin, consolidate and compact tool inputs",
+        "url": "https://github.com/zzjzzb/ai-memory/blob/9208281522612ebb349dff2e1b7e07a9c7683def/integrations/dsh-ai-memory/src/tools.js"
+      },
+      {
+        "id": "plugin",
+        "label": "Pinned DeepSeek Harness plugin",
+        "path": "integrations/dsh-ai-memory/src/index.js",
+        "symbol": "Prompt prefetch and host tool registration",
+        "url": "https://github.com/zzjzzb/ai-memory/blob/9208281522612ebb349dff2e1b7e07a9c7683def/integrations/dsh-ai-memory/src/index.js"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Benchmark-domain definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Workload specification only; not run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project-wide status not_run; not a result record",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Curated Atlas roster attribution",
+        "path": "content/systems/dsh-ai-memory.md",
+        "symbol": "Identity and locator attribution only",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/dsh-ai-memory.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository describes ai-memory as a local Rust + SQLite memory layer that sits under an agent harness. The harness owns model calls and the tool loop; the library stores and recalls project notes and can expose a thin DeepSeek Harness plugin. The codebase is a library plus optional host adapter, not a hosted memory service or full LLM harness.",
+        "sources": [
+          "readme",
+          "architecture",
+          "plugin",
+          "contributing"
+        ]
+      },
+      {
+        "text": "The 196th catalog entry is dsh-ai-memory, with an explicit listed repository URL. The pinned Atlas entry is retained only as roster identity/locator attribution, not as assessment evidence.",
+        "sources": [
+          "atlas"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "A SQLite file can hold multiple projects. A memory row contains a project id, tier (working, episodic, or profile), text, optional JSON metadata, timestamps, access count, pin state, and an embedding stored alongside its record. A per-project MemoryPolicy controls retention, promotion, and recall weights.",
+        "sources": [
+          "types",
+          "policy",
+          "sqlite",
+          "architecture"
+        ]
+      },
+      {
+        "text": "MemoryStore defines project creation, policy changes, remember/remember_many, get/list, pin/unpin, forget, recall, and consolidate; ProjectHandle binds subsequent calls to one project id. The default backend is SqliteStore; callers can inject an Embedder and VectorIndex. The default HashEmbedder is an offline token-hash embedding, and the default vector index computes cosine similarity in process.",
+        "sources": [
+          "store",
+          "sqlite",
+          "embedder",
+          "vector"
+        ]
+      },
+      {
+        "text": "The optional DeepSeek Harness Cordis plugin registers memory tools and can add a prefetch section to the system prompt. The plugin uses the Rust host bridge, with a CLI fallback documented by the project. The model and agent loop remain in the host.",
+        "sources": [
+          "plugin",
+          "tools",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Writes insert memory records with a chosen tier or a small tier heuristic when absent. remember_many is documented as one transaction. The harness plugin exposes remember, recall, forget, pin, and explicit consolidate/compact operations; the Rust API also supports project policies and filtered listing.",
+        "sources": [
+          "store",
+          "sqlite",
+          "types",
+          "tools",
+          "usage"
+        ]
+      },
+      {
+        "text": "The inspected public MemoryStore contract has no update-in-place method. Correction therefore has to be represented by forgetting and writing a replacement, or by another caller-managed convention; the review found no versioned correction ledger in this API.",
+        "sources": [
+          "store",
+          "tools",
+          "types"
+        ]
+      },
+      {
+        "text": "Forgetting a memory deletes by id within a project. Deleting a project is documented to cascade to its memories and embeddings. Consolidation explicitly expires eligible unpinned rows and promotes rows between tiers according to age and access policy. Expired unpinned rows are hidden from recall before consolidation; pinning bypasses expiry.",
+        "sources": [
+          "store",
+          "policy",
+          "usage",
+          "tools"
+        ]
+      },
+      {
+        "text": "Recall is project-scoped and ranks candidates with weighted recency, keyword overlap, and vector similarity. Defaults scan a bounded recent/pinned candidate set and prune to a smaller set before vector scoring; the default vector path is brute-force cosine, while sqlite-vec is optional. The returned pack can prioritize pinned memories, then score and recency.",
+        "sources": [
+          "policy",
+          "sqlite",
+          "vector",
+          "context",
+          "architecture"
+        ]
+      },
+      {
+        "text": "ContextPack renders memory id, tier, score, and text. Budgeted packing uses a token estimator (the default documentation describes ceil(chars/4)), truncates oversized content as needed, and tries candidates in pinned-first, score, recency order. This is context assembly, not citation to an external source.",
+        "sources": [
+          "context",
+          "usage",
+          "readme"
+        ]
+      },
+      {
+        "text": "compact_working is explicit and offline by default: the extractive compactor keeps pinned and newest working rows, folds snippets from older rows into an episodic note, and forgets the folded working rows. Consolidation and compaction are caller-triggered; the project documents no background maintenance job.",
+        "sources": [
+          "compact",
+          "architecture",
+          "usage",
+          "tools"
+        ]
+      },
+      {
+        "text": "Every recall and CRUD method takes a project id, and ProjectHandle fixes that id for its operations; SQL operations are scoped to that project. The plugin uses a configured project id. This is application-level project isolation, not user authentication or a measured security guarantee.",
+        "sources": [
+          "store",
+          "sqlite",
+          "plugin",
+          "readme"
+        ]
+      },
+      {
+        "text": "Records include metadata and operational timestamps, and packs expose id/tier/score. The inspected API does not require source URLs, claim-level evidence, trust state, or generated-answer citations; provenance of remembered text therefore depends on what the caller stores in metadata or surrounding workflow.",
+        "sources": [
+          "types",
+          "context",
+          "tools",
+          "sqlite"
+        ]
+      },
+      {
+        "text": "Efficiency mechanisms include SQLite WAL for file stores, prepared-statement caching, a bounded embedding LRU, cache and busy-timeout defaults, bounded candidate scans, and explicit batch writes. These are code/documentation observations. The repository exposes applied SQLite pragmas for inspection; no runtime telemetry or performance measurement was collected.",
+        "sources": [
+          "sqlite",
+          "architecture",
+          "usage"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval accuracy and abstention — unmeasured. Hybrid recall, empty results, and bounded context packing are present; no fixture cases were run or scored.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status",
+          "sqlite",
+          "context"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured. The inspected public store has no update-in-place API; no correction workload or post-correction probes were run.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status",
+          "store"
+        ]
+      },
+      {
+        "text": "Deletion leak rate — unmeasured. Memory and project deletion operations are present; no post-delete probes, storage inspection, or backup review was performed.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status",
+          "store",
+          "sqlite"
+        ]
+      },
+      {
+        "text": "Scope isolation leak rate — unmeasured. Project predicates and project-bound handles are source-visible; no cross-project leakage workload was executed.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status",
+          "store",
+          "sqlite"
+        ]
+      },
+      {
+        "text": "Evidence support precision and citation coverage — unmeasured. The pack identifies records by id, tier, and score but the inspected API has no required claim-level citation mechanism; no generated answers were adjudicated.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status",
+          "context",
+          "types"
+        ]
+      },
+      {
+        "text": "Retrieval latency and write-to-recall delay — unmeasured. The code has SQLite/cache and bounded-scan mechanisms; this review captured no timings or timed write/recall probes.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status",
+          "sqlite"
+        ]
+      },
+      {
+        "text": "Tokens and cost — unmeasured. The context pack tracks estimated tokens, but no model token totals or costs were collected; the project is designed not to call an LLM in its core memory path.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status",
+          "context",
+          "readme"
+        ]
+      },
+      {
+        "text": "Storage efficiency — unmeasured. SQLite memory and embedding storage are visible in source, but no corpus-attributed disk or database size was measured.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status",
+          "sqlite"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded source review covered the root README, English architecture and usage guides, types, policy, SQLite store, store trait, context packing and compaction, vector/embedder, and the DeepSeek Harness adapter. It did not inspect every helper, CLI route, optional sqlite-vec implementation, or every host integration detail.",
+        "sources": [
+          "readme",
+          "architecture",
+          "usage",
+          "types",
+          "policy",
+          "sqlite",
+          "store",
+          "context",
+          "compact",
+          "vector",
+          "embedder",
+          "tools",
+          "plugin"
+        ]
+      },
+      {
+        "text": "The review used official GitHub repository and commit/tree pages and SHA-pinned source pages. It did not create a local upstream checkout, run the system, or run its tests or benchmarks. Source inspection cannot establish deployed configuration, runtime correctness, answer quality, deletion completeness, effective access control, latency, costs, or storage efficiency.",
+        "sources": [
+          "repo",
+          "history",
+          "head",
+          "tree",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      },
+      {
+        "text": "The README and usage guide describe example scenarios and available Cargo benchmarks, but those statements are upstream documentation rather than results from this review. Project metric definitions, the fixture, and the execution status record are linked separately; benchmark_status remains not_run.",
+        "sources": [
+          "readme",
+          "usage",
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No dsh-ai-memory runtime, tests, or benchmark workloads were run. Source observations and upstream examples are not project measurements.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

@@ -1,0 +1,366 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "bifrost",
+    "name": "Bifrost",
+    "repository": "https://github.com/MegaWiz-Dev-Team/Bifrost",
+    "branch": "main",
+    "revision": "936957b350091997c34380ffdd91b395d47225ae",
+    "reviewed_at": "2026-11-24T23:31:32Z",
+    "review_timezone": "UTC (2026-11-24 15:31:32 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":"paripol@megawiz.co","source_url":"https://github.com/MegaWiz-Dev-Team/Bifrost/blob/936957b350091997c34380ffdd91b395d47225ae/SECURITY.md","note":"Published in the official security policy."},
+    "summary": "Bifrost is a Rust/Axum agent runtime with a small Memvid-backed conversation memory path. The inspected implementation appends each turn as a frame and exposes a search tool; this review records source observations, not measured quality or performance.",
+    "atlas_locator": {
+      "ordinal": 92,
+      "name": "Bifrost",
+      "slug": "bifrost",
+      "listed_repository": "https://github.com/MegaWiz-Dev-Team/Bifrost",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/bifrost.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": "paripol@megawiz.co",
+    "contact_email_source_url": "https://github.com/MegaWiz-Dev-Team/Bifrost/blob/936957b350091997c34380ffdd91b395d47225ae/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/MegaWiz-Dev-Team/Bifrost/blob/936957b350091997c34380ffdd91b395d47225ae/README.md",
+      "https://github.com/MegaWiz-Dev-Team/Bifrost/blob/936957b350091997c34380ffdd91b395d47225ae/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical public repository and default branch",
+        "path": "repository",
+        "symbol": "main is the default branch",
+        "url": "https://github.com/MegaWiz-Dev-Team/Bifrost"
+      },
+      {
+        "id": "head",
+        "label": "Verified current main head",
+        "path": "commit",
+        "symbol": "full SHA 936957b350091997c34380ffdd91b395d47225ae",
+        "url": "https://github.com/MegaWiz-Dev-Team/Bifrost/commit/936957b350091997c34380ffdd91b395d47225ae"
+      },
+      {
+        "id": "feed",
+        "label": "Official current main commits feed",
+        "path": "commits/main.atom",
+        "symbol": "head SHA and update timestamp",
+        "url": "https://github.com/MegaWiz-Dev-Team/Bifrost/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Official project README",
+        "path": "README.md",
+        "symbol": "runtime and memory overview",
+        "url": "https://github.com/MegaWiz-Dev-Team/Bifrost/blob/936957b350091997c34380ffdd91b395d47225ae/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy; published contact email",
+        "path": "SECURITY.md",
+        "symbol": "paripol@megawiz.co",
+        "url": "https://github.com/MegaWiz-Dev-Team/Bifrost/blob/936957b350091997c34380ffdd91b395d47225ae/SECURITY.md"
+      },
+      {
+        "id": "memvid",
+        "label": "Memvid file manager and search request construction",
+        "path": "src/memory/memvid_manager.rs",
+        "symbol": "MemvidManager::commit_memory and search_memory",
+        "url": "https://github.com/MegaWiz-Dev-Team/Bifrost/blob/936957b350091997c34380ffdd91b395d47225ae/src/memory/memvid_manager.rs"
+      },
+      {
+        "id": "tool",
+        "label": "Agent memory search tool contract",
+        "path": "src/memory/tool.rs",
+        "symbol": "MemvidSearchTool::call; top_k=5",
+        "url": "https://github.com/MegaWiz-Dev-Team/Bifrost/blob/936957b350091997c34380ffdd91b395d47225ae/src/memory/tool.rs"
+      },
+      {
+        "id": "overseer",
+        "label": "Swarm memory retrieval, checkpoint and write integration",
+        "path": "src/swarm_engine/overseer.rs",
+        "symbol": "Memvid integration in OverseerManager::run_swarm",
+        "url": "https://github.com/MegaWiz-Dev-Team/Bifrost/blob/936957b350091997c34380ffdd91b395d47225ae/src/swarm_engine/overseer.rs"
+      },
+      {
+        "id": "memory_note",
+        "label": "Agent memory evolution design note",
+        "path": "docs/design/agent-memory-evolution.md",
+        "symbol": "current design background and proposed erasure/compaction work",
+        "url": "https://github.com/MegaWiz-Dev-Team/Bifrost/blob/936957b350091997c34380ffdd91b395d47225ae/docs/design/agent-memory-evolution.md"
+      },
+      {
+        "id": "main",
+        "label": "Runtime initialization and telemetry wiring",
+        "path": "src/main.rs",
+        "symbol": "MEMVID_DATA_DIR and OTLP setup",
+        "url": "https://github.com/MegaWiz-Dev-Team/Bifrost/blob/936957b350091997c34380ffdd91b395d47225ae/src/main.rs"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project baseline status record",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project memory benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog identity and source attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 92; Atlas locator only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Catalog source attribution for Bifrost",
+        "path": "content/systems/bifrost.md",
+        "symbol": "Atlas revision 19199a4fc249e89c0793be06f0b166b358089ba0",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/bifrost.md"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes Bifrost as a self-hosted agent runtime in the Asgard platform. The public repository is owned by the MegaWiz-Dev-Team GitHub organization; no individual maintainer identity is asserted. This review concerns its conversation-memory slice, not the full agent platform.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Documentation observation: the README describes an Axum/Rust runtime with Memvid .mv2 files alongside Qdrant, Neo4j, and PageIndex retrieval components. It claims an independent file per agent. Current inspected code narrows that claim: Overseer passes tenant_id into the manager's agent_id argument, so the actual Memvid key uses tenant and session.",
+        "sources": [
+          "readme",
+          "memvid",
+          "overseer"
+        ]
+      },
+      {
+        "text": "Code observation: MemvidManager owns a base directory (MEMVID_DATA_DIR, default data/agents), then creates or opens a capsule named agent_<id>_session_<id>.mv2. Writes store UTF-8 text with an optional title and commit it. The manager adds no separate frame schema, patient metadata, source citation, or provenance record.",
+        "sources": [
+          "main",
+          "memvid",
+          "overseer"
+        ]
+      },
+      {
+        "text": "A separate short-term layer stores JSON conversation history in swarm_checkpoints.state_json, keyed by tenant and a patient-prefixed session identifier when a patient is present. The design note says this history is loaded in full each turn without truncation. The patient prefix is not used in the Memvid capsule key.",
+        "sources": [
+          "overseer",
+          "memory_note"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write — code observation. After orchestration, Overseer formats the original user query and final answer into a text frame, titles it with session and current time, and calls commit_memory with tenant ID and raw session ID (or anon). The method appends and commits. A commit error is logged without failing the response. This path uses the original query, unlike paths that use a scrubbed query value.",
+        "sources": [
+          "overseer",
+          "memvid"
+        ]
+      },
+      {
+        "text": "Update and delete — no per-frame correction, deletion, retention, or erasure operation appears in the inspected manager or tool API. The design note describes frames as immutable and append-only and says no prune/delete path is wired. Frame deletion, vacuum, redaction, and stronger ACL enforcement are proposals in that note, not implemented findings at this revision.",
+        "sources": [
+          "memvid",
+          "tool",
+          "memory_note"
+        ]
+      },
+      {
+        "text": "Retrieval — the search tool accepts only a query and binds capsule identifiers at construction. It requests five hits with 200-character snippets. Memvid search supplies no URI or scope filter, no time boundary, and ACL enforcement in Audit mode. Missing capsules return an empty response. Tool output contains only hit title and text, omitting timing, engine, and count metadata.",
+        "sources": [
+          "tool",
+          "memvid",
+          "overseer"
+        ]
+      },
+      {
+        "text": "The Overseer constructs the search tool for regular tool-calling providers; bypass providers search directly and add results to manual context. At both read and write call sites, the manager's agent_id parameter receives tenant_id, not the request agent ID.",
+        "sources": [
+          "overseer",
+          "tool"
+        ]
+      },
+      {
+        "text": "Scope and isolation — the Memvid filename separates tenant and session, not agent, patient, or user. Different agents using the same tenant/session therefore address the same capsule; missing sessions map to a shared anon capsule within that tenant. Search uses scope=None and Audit-mode ACL handling. The inspected code does not show patient-level or per-agent isolation for this path. SQL checkpoints separately use tenant and patient-prefixed session scope.",
+        "sources": [
+          "memvid",
+          "overseer",
+          "memory_note"
+        ]
+      },
+      {
+        "text": "Provenance and evidence — a frame preserves query/answer text and a generated title, but the inspected write path supplies no message ID, patient tag, source-document ID, citation, confidence, or mutation history. Retrieval returns snippets without a source locator. This records stored content, not whether a later answer is supported by external evidence.",
+        "sources": [
+          "overseer",
+          "memvid",
+          "tool"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency and observability — search bounds hit count and snippet size, and the Memvid response includes elapsed time and engine metadata. The tool discards those fields. Runtime tracing spans, orchestration-latency logs, search-query logs, and memory-write error logs are present. These are source-visible mechanisms, not measured latency or cost.",
+        "sources": [
+          "memvid",
+          "tool",
+          "overseer",
+          "main"
+        ]
+      },
+      {
+        "text": "The design note describes full checkpoint-history loading and warns that prompt context grows with conversation length. Its compaction and selective-erasure steps are proposals. The Memvid write also uses the original query rather than the scrubbed safe_query used elsewhere in the inspected orchestration path.",
+        "sources": [
+          "memory_note",
+          "overseer"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "A query tool and search path exist, but no answerable-question or abstention workload was run.",
+        "sources": [
+          "tool",
+          "memvid",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "No correction API was found in the inspected memory slice; no stale-value probes were run.",
+        "sources": [
+          "memvid",
+          "tool",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No deletion/erasure API is wired in the inspected manager; no post-deletion leak workload was run.",
+        "sources": [
+          "memvid",
+          "memory_note",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Code exposes tenant/session file naming and audit-mode search, but no isolation probes were run.",
+        "sources": [
+          "memvid",
+          "overseer",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Frames preserve query and answer text, but no answer-support or citation-quality adjudication was performed.",
+        "sources": [
+          "overseer",
+          "tool",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "SearchResponse has elapsed_ms and writes commit synchronously in the inspected method, but no latency distribution or recall-delay measurement was collected.",
+        "sources": [
+          "memvid",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No token, provider-cost, context-size, or capsule-growth measurements were collected.",
+        "sources": [
+          "overseer",
+          "memory_note",
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code/documentation",
+        "evidence": "Bounded hit count/snippets, a returned search timer, orchestration latency logging, tracing spans, and error logs are visible in code. Search metadata is not surfaced by the tool, and these mechanisms are not performance measurements.",
+        "sources": [
+          "memvid",
+          "tool",
+          "overseer",
+          "main"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This was a bounded review of the pinned README, manager, tool, orchestration call sites, runtime initialization, and memory design note. The runtime, tests, and fixture were not run. Memvid internals, deployment authorization, backup/replica retention, actual cross-tenant behavior under deployment, and production performance were not independently audited.",
+        "sources": [
+          "readme",
+          "memvid",
+          "tool",
+          "overseer",
+          "main",
+          "memory_note"
+        ]
+      },
+      {
+        "text": "The README's per-agent capsule statement and sub-millisecond retrieval claim are documentation claims, not confirmed by the inspected call path or measured here. The source shows tenant/session arguments and a timer field, but this review collected no timing result.",
+        "sources": [
+          "readme",
+          "memvid",
+          "overseer"
+        ]
+      },
+      {
+        "text": "The curated catalog was used only for ordinal, listed locator, and source attribution. Atlas descriptions, marks, and layout were not assessment evidence.",
+        "sources": [
+          "roster",
+          "atlas"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is not_run. No Bifrost runtime, tests, or benchmark workload was executed. Project metric definitions, fixture, and baseline-status record are linked for protocol reference only; this review contributes no Bifrost measurements.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

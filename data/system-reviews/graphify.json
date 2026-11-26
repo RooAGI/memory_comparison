@@ -1,0 +1,328 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 271,
+    "slug": "graphify",
+    "name": "Graphify",
+    "repository": "https://github.com/Graphify-Labs/graphify",
+    "listed_repository": "https://github.com/Graphify-Labs/graphify",
+    "branch": "v8",
+    "revision": "02c27dc246cd7bc359d0f4acaf53a3fce595bc1e",
+    "reviewed_at": "2026-11-25T21:55:18Z",
+    "review_timezone": "UTC (checked local time: 2026-11-25 13:55:18 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Graphify is a local-first codebase knowledge graph and agent context tool. It builds a persistent graph from source, documents and media, then exposes graph queries through a CLI or MCP. A separate work-memory path stores Q&A records and derives a lessons artifact from recorded outcomes; this review describes source behavior and does not establish runtime quality or performance.",
+    "atlas_locator": {
+      "ordinal": 271,
+      "name": "Graphify",
+      "slug": "graphify",
+      "listed_repository": "https://github.com/Graphify-Labs/graphify",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/graphify.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": "founders@graphify.com",
+      "source_url": "https://graphify.com/contact",
+      "checked_urls": [
+        "https://graphify.com/contact"
+      ],
+      "note": "The official Graphify contact page publishes this address. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": "founders@graphify.com",
+    "contact_email_source_url": "https://graphify.com/contact",
+    "contact_email_checked_sources": [
+      "https://graphify.com/contact"
+    ],
+    "contact_email_note": "Published on the official Graphify website contact page; no commit/profile metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated roster identity and locator",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[270], ordinal 271; Graphify identity, explicit listed repository and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/graphify.md",
+        "symbol": "Used only for curated identity and locator context; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/graphify.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository metadata",
+        "path": "repository API",
+        "symbol": "Canonical repository Graphify-Labs/graphify; default branch v8",
+        "url": "https://api.github.com/repos/Graphify-Labs/graphify"
+      },
+      {
+        "id": "head",
+        "label": "Official current v8 commit",
+        "path": "GitHub commits API",
+        "symbol": "Full current v8 head 02c27dc246cd7bc359d0f4acaf53a3fce595bc1e; commit timestamp 2026-11-25T13:52:34Z",
+        "url": "https://api.github.com/repos/Graphify-Labs/graphify/commits/v8"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "CLI features, persistent graph files, query surfaces, limitations, privacy and documented benchmark claims",
+        "url": "https://github.com/Graphify-Labs/graphify/blob/02c27dc246cd7bc359d0f4acaf53a3fce595bc1e/README.md"
+      },
+      {
+        "id": "how",
+        "label": "Pinned how-it-works guide",
+        "path": "docs/how-it-works.md",
+        "symbol": "Extraction passes, confidence tags, graph schema, cache and architecture",
+        "url": "https://github.com/Graphify-Labs/graphify/blob/02c27dc246cd7bc359d0f4acaf53a3fce595bc1e/docs/how-it-works.md"
+      },
+      {
+        "id": "ingest",
+        "label": "Pinned capture and work-memory implementation",
+        "path": "graphify/ingest.py",
+        "symbol": "save_query_result: timestamped Q&A Markdown records, outcomes, corrections and source-node references",
+        "url": "https://github.com/Graphify-Labs/graphify/blob/02c27dc246cd7bc359d0f4acaf53a3fce595bc1e/graphify/ingest.py"
+      },
+      {
+        "id": "reflect",
+        "label": "Pinned work-memory reflection implementation",
+        "path": "graphify/reflect.py",
+        "symbol": "Outcome aggregation, decayed scores, corroboration, staleness checks and learning sidecar",
+        "url": "https://github.com/Graphify-Labs/graphify/blob/02c27dc246cd7bc359d0f4acaf53a3fce595bc1e/graphify/reflect.py"
+      },
+      {
+        "id": "serve",
+        "label": "Pinned MCP graph reader",
+        "path": "graphify/serve.py",
+        "symbol": "Loads graph.json, attaches learning overlay, and exposes graph tools; local path and transport configuration",
+        "url": "https://github.com/Graphify-Labs/graphify/blob/02c27dc246cd7bc359d0f4acaf53a3fce595bc1e/graphify/serve.py"
+      },
+      {
+        "id": "querylog",
+        "label": "Pinned query logging implementation",
+        "path": "graphify/querylog.py",
+        "symbol": "Query logging is opt-in in current code; optional JSONL fields and response logging",
+        "url": "https://github.com/Graphify-Labs/graphify/blob/02c27dc246cd7bc359d0f4acaf53a3fce595bc1e/graphify/querylog.py"
+      },
+      {
+        "id": "security",
+        "label": "Pinned security policy",
+        "path": "SECURITY.md",
+        "symbol": "Network boundaries and local/HTTP server security model",
+        "url": "https://github.com/Graphify-Labs/graphify/blob/02c27dc246cd7bc359d0f4acaf53a3fce595bc1e/SECURITY.md"
+      },
+      {
+        "id": "contact",
+        "label": "Official Graphify contact page",
+        "path": "website contact page",
+        "symbol": "Published project contact email founders@graphify.com",
+        "url": "https://graphify.com/contact"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Benchmark fixture definition",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository describes Graphify as an open-source Python CLI and MCP server for turning codebases and related documents into a queryable knowledge graph. This review covers the repository implementation; Graphify Cloud and its hosted shared-memory product are separate services and are not assessed from the open-source source tree.",
+        "sources": [
+          "repo",
+          "readme",
+          "contact"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The documented pipeline has three passes: local tree-sitter and built-in parsing for code structure; local faster-whisper transcription for audio/video; and optional model-assisted semantic extraction for documents, papers, images and transcripts. The code graph is serialized as NetworkX node-link JSON; node records include IDs, labels, file type and source file, while edges carry relation, confidence tag and source file. The graph also carries schema and producer-version metadata.",
+        "sources": [
+          "how",
+          "readme"
+        ]
+      },
+      {
+        "text": "Graphify performs community detection over graph relationships rather than maintaining a separate embedding or vector index. It writes graph.json, an HTML visualization and a report under graphify-out by default. The separate work-memory feature stores timestamped Q&A Markdown records under graphify-out/memory and can derive LESSONS.md plus a .graphify_learning.json sidecar; the sidecar is an overlay and does not rewrite the structural graph.",
+        "sources": [
+          "how",
+          "readme",
+          "ingest",
+          "reflect",
+          "serve"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Build/write: extraction creates or rebuilds the project graph from selected files. The documented update command re-extracts changed files, and content-hash caching skips unchanged files. Separately, graphify save-result writes a uniquely named Markdown Q&A record with date, question, answer, optional outcome (useful, dead_end or corrected), optional correction text, and up to ten source-node IDs. URL ingest can save a fetched source as annotated Markdown for later extraction.",
+        "sources": [
+          "readme",
+          "how",
+          "ingest"
+        ]
+      },
+      {
+        "text": "Update and correction: graphify update is the documented incremental graph refresh path. Work-memory saves append separate records; the inspected save path does not edit an earlier answer. A correction is represented by a new record and negative/corrected outcome signal, then reflect aggregates it. This is not a general versioned fact store or an automatic overwrite of a previous Q&A.",
+        "sources": [
+          "readme",
+          "ingest",
+          "reflect"
+        ]
+      },
+      {
+        "text": "Delete: the reviewed work-memory implementation has no user-facing delete or erasure operation for saved Q&A records; removal of the Markdown files is an external filesystem action. Graph rebuilding/update behavior for removed source files was not independently exercised here. The CLI supports uninstall --purge for generated graph data, but this review did not execute it and it is not a per-memory deletion audit.",
+        "sources": [
+          "readme",
+          "ingest",
+          "security"
+        ]
+      },
+      {
+        "text": "Retrieval: graphify query returns a question-scoped subgraph; path traces relationships between nodes; explain summarizes a selected node. MCP exposes graph tools such as query_graph, shortest_path, get_node, get_neighbors, community and graph_stats over a selected graph.json. Reflection-derived learning annotations are attached to node output as display metadata; source code describes them as display-only.",
+        "sources": [
+          "readme",
+          "how",
+          "serve",
+          "reflect"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Graph queries and path traversal are implemented, but no answer set, abstention workload or adjudicated retrieval result was run in this review.",
+        "sources": [
+          "readme",
+          "how",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction and stale values",
+        "status": "unmeasured",
+        "evidence": "Work-memory stores corrected outcomes and reflect scores source nodes with time decay; no correction sequence or stale-answer workload was run.",
+        "sources": [
+          "ingest",
+          "reflect",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No memory deletion probe, graph purge, or post-deletion retrieval check was run.",
+        "sources": [
+          "readme",
+          "ingest",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "The local CLI graph is selected by project graph path; no authenticated tenant boundary or cross-project isolation workload was evaluated.",
+        "sources": [
+          "readme",
+          "serve",
+          "security",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Edges retain source-file provenance and extracted/inferred/ambiguous labels, but answer support precision and citation coverage were not adjudicated.",
+        "sources": [
+          "how",
+          "readme",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Hash-based incremental extraction and graph query code were inspected; no latency or freshness timings were collected.",
+        "sources": [
+          "readme",
+          "how",
+          "querylog",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost and storage",
+        "status": "unmeasured",
+        "evidence": "Local graph files and optional model-assisted document extraction are documented; no tokens, provider cost, or storage volume were measured.",
+        "sources": [
+          "readme",
+          "how",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a local source review, not a runtime assessment. The default local graph and Q&A memory are filesystem-scoped to a project directory; the reviewed community code does not provide a general authenticated tenant isolation layer. The optional HTTP MCP server is a network surface whose host, API-key and deployment configuration affect exposure.",
+        "sources": [
+          "readme",
+          "serve",
+          "security"
+        ]
+      },
+      {
+        "text": "Confidence labels communicate extraction provenance, not truth: EXTRACTED describes source-explicit relationships, INFERRED records model/resolver inference with a score, and AMBIGUOUS marks uncertain relations. These tags do not establish that a final natural-language answer is supported. Work-memory lessons use decayed positive and negative signals and a corroboration threshold, but annotations are display-only and no runtime outcome was evaluated.",
+        "sources": [
+          "how",
+          "reflect",
+          "serve"
+        ]
+      },
+      {
+        "text": "The pinned README and querylog implementation disagree about query logging: the README says queries are logged by default, while current querylog.py makes logging opt-in and disabled unless a path or enable flag is set. The implementation is the inspected code evidence; this inconsistency is a documentation limitation.",
+        "sources": [
+          "readme",
+          "querylog"
+        ]
+      },
+      {
+        "text": "No Graphify runtime, tests or benchmarks were run. Recall quality, abstention, correction accuracy, deletion leakage, project isolation, evidence support, latency, write-to-recall delay, token use, cost and storage efficiency remain unknown.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Graphify runtime, tests, or benchmark workload was executed for this review. Source observations and the project's benchmark definitions are not measured results."
+    }
+  }
+}

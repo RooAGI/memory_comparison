@@ -1,0 +1,89 @@
+# AI Agents in Depth source review
+
+**Review status:** Reviewed from code  
+**Benchmark status:** Benchmark not run  
+**Roster ordinal / name / slug:** 36 / AI Agents in Depth / ai-agent-book  
+**Listed repository locator:** [bojieli/ai-agent-book](https://github.com/bojieli/ai-agent-book)  
+**Current canonical repository:** [bojieli/ai-agent-book](https://github.com/bojieli/ai-agent-book)  
+**Default branch / reviewed head:** main / `f36d57f515ddc93867e45f23ce34fe4165335ff8`  
+**Review time:** 2026-11-24 19:40:20 UTC (11:40:20 PST; America/Los_Angeles).
+
+## Identity and scope
+
+The curated roster places **AI Agents in Depth** at ordinal 36, slug `ai-agent-book`, with listed locator `https://github.com/bojieli/ai-agent-book`. The roster retains attribution to the Agent Memory Atlas entry at revision `19199a4fc249e89c0793be06f0b166b358089ba0`; that link is used only to identify and attribute the catalog entry. Atlas descriptions, marks and layout were not used as assessment evidence.[[curated roster](../data/memory-systems.json)] [[Atlas attribution source](https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/ai-agent-book.md)]
+
+A fresh read of the official Git remote identified `main` as the default branch and `f36d57f515ddc93867e45f23ce34fe4165335ff8` as both its head and current commit. A shallow checkout at that SHA resolved to the same commit and the official `bojieli/ai-agent-book` remote.[[canonical repository](<https://github.com/bojieli/ai-agent-book>)][[reviewed head](<https://github.com/bojieli/ai-agent-book/commit/f36d57f515ddc93867e45f23ce34fe4165335ff8>)]
+
+The README presents this repository as the open source companion to Li Bojie’s book *AI Agents in Depth*. It contains a manuscript, examples, and experiments. The implementation observations in this review are bounded to the Chapter 3 `user-memory` companion project; they do not describe every chapter or claim that the repository as a whole is one deployed memory service.[[official README](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/README.en.md>)][[Chapter 3 overview](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/book-en/chapter3.md>)][[user-memory guide](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/README.md>)]
+
+## Summary
+
+The selected Chapter 3 example teaches persistent user memory with four text or JSON-card encodings. A dialogue agent reads stored context while a separate background processor uses an LLM agent and memory tools to add, update, or delete records. State is stored in local JSON files keyed by user ID, with conversation history in a separate file. This is educational companion code with configurable model-provider APIs, not a hosted multi-tenant service.[[user-memory guide](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/README.md>)][[memory manager](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/memory_manager.py?plain=1>)][[background processor](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/background_memory_processor.py?plain=1>)]
+
+## Who and what
+
+The repository README attributes the book to Li Bojie. The reviewed subject here is the book’s Chapter 3 user-memory teaching implementation, which includes a command-line demo, Python modules, memory formats, provider adapters, and evaluation helpers. It is not presented as an independently packaged or hosted memory service.[[official README](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/README.en.md>)][[user-memory guide](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/README.md>)]
+
+## Architecture and data model
+
+**Code and documentation observations.** The chapter guide separates conversational response from background memory maintenance: the conversational agent reads memory; `BackgroundMemoryProcessor` analyzes recent turns and invokes `UserMemoryAgent`; `MemoryManager` owns persistence. Processing can run at a configured conversation interval. The code has multiple provider adapters, selected through configuration.[[user-memory guide](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/README.md>)][[conversation agent](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/conversational_agent.py?plain=1>)][[background processor](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/background_memory_processor.py?plain=1>)][[agent tools](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/agent.py?plain=1>)]
+
+The modes are `notes`, `enhanced_notes`, `json_cards`, and `advanced_json_cards`. The first two share the note manager. Notes contain an ID, text, session ID, creation/update timestamps, and tags. Basic JSON cards are nested by category, subcategory, and key, with a value, source session, and update time. Advanced cards retain arbitrary fields plus creation/update timestamps and source session metadata; prompts recommend backstory, person, and relationship fields.[[memory manager](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/memory_manager.py?plain=1>)][[agent tools](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/agent.py?plain=1>)][[configuration](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/config.py?plain=1>)]
+
+Each memory file is named from the configured user ID under `MEMORY_STORAGE_DIR`; conversation turns are stored separately under `CONVERSATION_HISTORY_DIR`. Both stores serialize JSON through a temporary file and replace the destination. These files are local application state; this inspection found no database-backed authorization boundary in the selected example.[[memory manager](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/memory_manager.py?plain=1>)][[conversation history](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/conversation_history.py?plain=1>)][[configuration](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/config.py?plain=1>)]
+
+## Write, update, delete, and retrieval
+
+**Write and update — code observations.** The background agent has add, update, delete, and search tools. Adding a note assigns a UUID; adding a card uses a category/key address. Updates replace note content or the addressed card value/object and refresh timestamps and source-session metadata. For notes, the default `MAX_MEMORY_ITEMS` is 100; an add above the limit sorts by update time and retains the newest notes. That cap is applied by the note manager, not uniformly to every card mode.[[agent tools](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/agent.py?plain=1>)][[memory manager](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/memory_manager.py?plain=1>)][[configuration](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/config.py?plain=1>)]
+
+An update overwrites the active note/card content; the selected manager code does not keep prior versions as a mutation history. The note manager also has a deterministic consolidation method that merges normalized duplicate notes and can resolve same-tag conflicts, but this is separate from the LLM-driven update path.[[memory manager](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/memory_manager.py?plain=1>)][[background processor](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/background_memory_processor.py?plain=1>)]
+
+**Delete — code observation.** Deletion removes a record from the selected active in-memory collection and saves the JSON file. The manager exposes clearing all memories for a user. The conversation history is a separate store and the memory deletion method does not delete it; the reviewed path does not provide a tombstone or durable mutation audit.[[memory manager](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/memory_manager.py?plain=1>)][[conversation history](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/conversation_history.py?plain=1>)]
+
+**Retrieval — code observations.** A conversational path formats stored memories into the model context. Memory-manager search is case-insensitive substring matching over note text/tags or card keys/values; the inspected implementation scans the in-memory collection. Conversation history search scans turns by substring unless optional Dify search is configured. The example therefore exposes full-context and simple-search paths rather than a unified, ranked retrieval index.[[memory manager](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/memory_manager.py?plain=1>)][[conversation history](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/conversation_history.py?plain=1>)][[conversation agent](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/conversational_agent.py?plain=1>)]
+
+## Scope isolation, provenance, and evidence
+
+Memory and conversation files are selected with a caller-provided user ID, and memory records carry a session ID. Conversation turns also carry session ID, timestamp, and turn number. These fields provide basic partitioning and context, but the selected code does not show authentication or enforce that a caller is entitled to a given user ID. Per-user filenames alone do not establish cross-user isolation in a shared deployment.[[memory manager](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/memory_manager.py?plain=1>)][[conversation history](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/conversation_history.py?plain=1>)][[configuration](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/config.py?plain=1>)]
+
+Notes and cards retain a session/source label and timestamps; advanced cards can include free-text backstory. The selected data model does not attach an exact source turn, quoted evidence span, or source document ID to each memory. Logs can display tool operations and reasons, but that is not the same as durable evidence lineage or answer-level citations.[[memory manager](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/memory_manager.py?plain=1>)][[agent tools](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/agent.py?plain=1>)][[background processor](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/background_memory_processor.py?plain=1>)]
+
+## Source-visible efficiency and observability
+
+The note cap bounds note count when enabled, but search and full-context formatting iterate or render the stored memories; the JSON card modes do not use that note-specific cap. The conversation code avoids storing a repeated memory-context block in each raw user turn, though it still supplies memory context to the current model request. These are source-visible design details, not measured token or latency savings.[[memory manager](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/memory_manager.py?plain=1>)][[conversation agent](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/conversational_agent.py?plain=1>)][[configuration](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/config.py?plain=1>)]
+
+The code logs provider, session, processing, memory-operation, and error information. In verbose paths it also logs prompts and memory context. Evaluation helpers record output artifacts and token/latency fields; the inspection did not run those helpers or measure this review’s system. Logs and evaluation artifacts are observability hooks, not operational telemetry or benchmark results for this task.[[agent tools](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/agent.py?plain=1>)][[background processor](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/background_memory_processor.py?plain=1>)][[user-memory guide](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/README.md>)]
+
+## Project metric domains
+
+Every metric defined by this comparison project is **unmeasured for this review**. In particular, no answerable recall or abstention, correction/staleness, deletion leakage, cross-user scope, evidence/citation, retrieval latency, write-to-recall delay, token/cost, or storage probes were run. Code structure and any upstream chapter artifacts are not results from this review.[[metric definitions](../METRICS.md)][[benchmark status](../results/initial-baselines-status.json)][[fixture](../fixtures/memory-benchmark-v1.json)]
+
+## Limits and unknowns
+
+This is a bounded inspection of the book README, Chapter 3 memory guide, and selected implementation files at the verified repository head. The example and its tests were not run. The inspection cannot establish answer quality, reliable correction behavior, complete deletion, cross-user authorization, runtime performance, external-provider cost, or operational resilience.[[official README](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/README.en.md>)][[Chapter 3 overview](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/book-en/chapter3.md>)][[memory manager](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/memory_manager.py?plain=1>)]
+
+The official English README and root README were checked for a published contact email; neither publishes one. The JSON records `contact_email: null` and the exact checked README URLs. No commit metadata, personal profile email, or inferred address was used.[[official README](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/README.md>)][[English README](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/README.en.md>)]
+
+## Benchmark status
+
+**Benchmark not run.** No system execution, chapter example, benchmark, or tests were run. The project metric definitions, fixture, and execution status are protocol artifacts, not measurements for this source review.[[metric definitions](../METRICS.md)][[benchmark status](../results/initial-baselines-status.json)][[fixture](../fixtures/memory-benchmark-v1.json)]
+
+## Sources
+
+- [Canonical public repository](<https://github.com/bojieli/ai-agent-book>)
+- [Reviewed main head](<https://github.com/bojieli/ai-agent-book/commit/f36d57f515ddc93867e45f23ce34fe4165335ff8>)
+- [Official English README](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/README.en.md>)
+- [Chapter 3 overview](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/book-en/chapter3.md>)
+- [Chapter 3 user-memory guide](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/README.md>)
+- [Memory managers](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/memory_manager.py?plain=1>)
+- [Memory-processing agent and tools](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/agent.py?plain=1>)
+- [Background processor](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/background_memory_processor.py?plain=1>)
+- [Conversational agent](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/conversational_agent.py?plain=1>)
+- [Memory configuration](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/config.py?plain=1>)
+- [Conversation history](<https://github.com/bojieli/ai-agent-book/blob/f36d57f515ddc93867e45f23ce34fe4165335ff8/chapter3/user-memory/conversation_history.py?plain=1>)
+- [Project metric definitions](../METRICS.md)
+- [Project benchmark execution status](../results/initial-baselines-status.json)
+- [Project benchmark fixture](../fixtures/memory-benchmark-v1.json)
+- [Curated identity and source attribution](../data/memory-systems.json)
+
+**Verification boundary:** no AI Agents in Depth system execution, benchmark, or tests were run.

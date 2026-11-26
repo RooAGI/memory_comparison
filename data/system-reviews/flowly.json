@@ -1,0 +1,376 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 244,
+    "slug": "flowly",
+    "name": "Flowly",
+    "repository": "https://github.com/Nocetic/flowly",
+    "listed_repository": "https://github.com/Nocetic/flowly",
+    "branch": "main",
+    "revision": "05efe13436db77adffb888795d8dd47f9a87d19a",
+    "reviewed_at": "2026-11-25T20:36:57Z",
+    "review_timezone": "UTC (checked local time: 2026-11-25 12:36:57 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Flowly is a self-hosted personal agent with a layered memory system: workspace Markdown notes, a SQLite-backed chunk search index, a temporal knowledge graph, and a separate SQLite governance store for confidence, privacy, lifecycle and audit metadata. The reviewed code combines keyword retrieval with optional embeddings and background consolidation; these source observations do not establish retrieval quality or isolation.",
+    "atlas_locator": {
+      "ordinal": 244,
+      "name": "Flowly",
+      "slug": "flowly",
+      "listed_repository": "https://github.com/Nocetic/flowly",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/flowly.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": "contact@nocetic.com",
+      "source_url": "https://github.com/Nocetic/flowly/blob/05efe13436db77adffb888795d8dd47f9a87d19a/SECURITY.md",
+      "checked_urls": [
+        "https://github.com/Nocetic/flowly/blob/05efe13436db77adffb888795d8dd47f9a87d19a/SECURITY.md"
+      ],
+      "note": "The official pinned SECURITY.md directs vulnerability reports to this address. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": "contact@nocetic.com",
+    "contact_email_source_url": "https://github.com/Nocetic/flowly/blob/05efe13436db77adffb888795d8dd47f9a87d19a/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/Nocetic/flowly/blob/05efe13436db77adffb888795d8dd47f9a87d19a/SECURITY.md"
+    ],
+    "contact_email_note": "Official pinned SECURITY.md publishes contact@nocetic.com for private vulnerability reports.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated roster entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[243], ordinal 244; name, slug, explicit listed repository and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/flowly.md",
+        "symbol": "Curated identity and locator attribution only; not used as assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/flowly.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "Canonical Nocetic/flowly repository; page identifies main as default branch and links latest commit",
+        "url": "https://github.com/Nocetic/flowly"
+      },
+      {
+        "id": "head",
+        "label": "Official current main head commit patch",
+        "path": "commit 05efe13436db77adffb888795d8dd47f9a87d19a",
+        "symbol": "The official main page links commit 05efe13; its official patch supplies full SHA 05efe13436db77adffb888795d8dd47f9a87d19a and commit timestamp",
+        "url": "https://github.com/Nocetic/flowly/commit/05efe13436db77adffb888795d8dd47f9a87d19a.patch"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project description, runtime, memory product claims, CLI and system overview",
+        "url": "https://github.com/Nocetic/flowly/blob/05efe13436db77adffb888795d8dd47f9a87d19a/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Pinned official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Published security contact email and stated trust model",
+        "url": "https://github.com/Nocetic/flowly/blob/05efe13436db77adffb888795d8dd47f9a87d19a/SECURITY.md"
+      },
+      {
+        "id": "governance",
+        "label": "Memory governance store",
+        "path": "flowly/memory/governance.py",
+        "symbol": "Lifecycle state machine, SQLite schema/store, provenance, audit and serialized writer",
+        "url": "https://github.com/Nocetic/flowly/blob/05efe13436db77adffb888795d8dd47f9a87d19a/flowly/memory/governance.py"
+      },
+      {
+        "id": "coordinator",
+        "label": "Memory governance coordinator",
+        "path": "flowly/memory/coordinator.py",
+        "symbol": "Recall facade, privacy filtering, live tool post-write mirror, and summary refresh",
+        "url": "https://github.com/Nocetic/flowly/blob/05efe13436db77adffb888795d8dd47f9a87d19a/flowly/memory/coordinator.py"
+      },
+      {
+        "id": "summary",
+        "label": "Memory summary renderer",
+        "path": "flowly/memory/summary.py",
+        "symbol": "Generated prompt block, active/privacy selection and duplicate-note handling",
+        "url": "https://github.com/Nocetic/flowly/blob/05efe13436db77adffb888795d8dd47f9a87d19a/flowly/memory/summary.py"
+      },
+      {
+        "id": "manager",
+        "label": "Memory index manager",
+        "path": "flowly/memory/manager.py",
+        "symbol": "Workspace memory file indexing, lazy sync, hybrid search and status",
+        "url": "https://github.com/Nocetic/flowly/blob/05efe13436db77adffb888795d8dd47f9a87d19a/flowly/memory/manager.py"
+      },
+      {
+        "id": "indexer",
+        "label": "SQLite memory indexer",
+        "path": "flowly/memory/indexer.py",
+        "symbol": "Chunk, file and FTS5 schema; optional vector storage and index operations",
+        "url": "https://github.com/Nocetic/flowly/blob/05efe13436db77adffb888795d8dd47f9a87d19a/flowly/memory/indexer.py"
+      },
+      {
+        "id": "search",
+        "label": "Memory search",
+        "path": "flowly/memory/search.py",
+        "symbol": "Keyword/vector retrieval and score combination",
+        "url": "https://github.com/Nocetic/flowly/blob/05efe13436db77adffb888795d8dd47f9a87d19a/flowly/memory/search.py"
+      },
+      {
+        "id": "kg",
+        "label": "Temporal knowledge graph",
+        "path": "flowly/memory/knowledge_graph.py",
+        "symbol": "Entity, alias and triple model; temporal validity and graph read/write operations",
+        "url": "https://github.com/Nocetic/flowly/blob/05efe13436db77adffb888795d8dd47f9a87d19a/flowly/memory/knowledge_graph.py"
+      },
+      {
+        "id": "consolidate",
+        "label": "Memory consolidation",
+        "path": "flowly/memory/consolidate.py",
+        "symbol": "LLM-proposed lifecycle operations, validation and audit application",
+        "url": "https://github.com/Nocetic/flowly/blob/05efe13436db77adffb888795d8dd47f9a87d19a/flowly/memory/consolidate.py"
+      },
+      {
+        "id": "dreamer",
+        "label": "Background memory dreamer",
+        "path": "flowly/memory/dreamer.py",
+        "symbol": "Cross-session extraction candidates, confidence thresholds, watermark and single-writer behavior",
+        "url": "https://github.com/Nocetic/flowly/blob/05efe13436db77adffb888795d8dd47f9a87d19a/flowly/memory/dreamer.py"
+      },
+      {
+        "id": "embeddings",
+        "label": "Embedding provider abstraction",
+        "path": "flowly/memory/embeddings.py",
+        "symbol": "Optional OpenAI/Gemini embeddings and provider resolution",
+        "url": "https://github.com/Nocetic/flowly/blob/05efe13436db77adffb888795d8dd47f9a87d19a/flowly/memory/embeddings.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation domains and metric definitions",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned evaluation fixture definition",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Initial benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project-level execution status; not a Flowly measurement",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official repository describes Flowly as a personal AI agent that runs on the operator's machine and provides a shared memory across its terminal and messaging surfaces. The inspected memory code is a subsystem of the broader Python agent rather than a standalone memory service. No individual maintainer identity is inferred.",
+        "sources": [
+          "readme",
+          "repo",
+          "governance",
+          "manager"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The memory design has multiple stores. Free-form notes live in workspace MEMORY.md and dated notes; structured facts live in a SQLite temporal knowledge graph; lifecycle metadata and references live in memory_governance.sqlite3 under the state directory; and a workspace-specific SQLite index stores searchable chunks and optional embedding vectors. Governance items reference KG triples, memory-file anchors, inline text, or imported Obsidian notes rather than replacing those engines.",
+        "sources": [
+          "readme",
+          "governance",
+          "kg",
+          "manager",
+          "indexer"
+        ]
+      },
+      {
+        "text": "The graph stores entities, aliases and triples with subject, predicate, object, valid_from/valid_to, confidence, source and extraction timestamp. The separate index tracks files and chunk line ranges, hashes, text, optional JSON-encoded embeddings and FTS5 rows. The manager defaults to 400-token chunks with 80-token overlap and a maximum of six results; these are configuration defaults, not measured operating characteristics.",
+        "sources": [
+          "kg",
+          "indexer",
+          "manager"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "**Write paths.** The README describes live memory tools, a background dreamer that extracts across sessions, and a consolidation pass. The governance coordinator's post_tool_call hook mirrors successful memory_append and knowledge_graph operations into governance; the governance store therefore wraps the primary memory engines and this hook is downstream of the successful tool call. The dreamer uses a watermark and single-writer lock, retries extraction failures without advancing the watermark, and commits candidates through the governance state machine.",
+        "sources": [
+          "readme",
+          "coordinator",
+          "governance",
+          "dreamer"
+        ]
+      },
+      {
+        "text": "**Trust and review.** Governance records candidate, active, needs_review, stale, superseded and rejected states with enforced transitions, confidence, privacy level and an append-only transition audit. Consolidation lets an LLM propose merge, supersede or stale operations, then validates and applies those operations in code. The coordinator excludes secret items from recall and generated MEMORY.md content; sensitive items require explicit inclusion in recall. These controls govern their respective paths and do not show that every primary write is withheld pending review.",
+        "sources": [
+          "governance",
+          "coordinator",
+          "summary",
+          "consolidate"
+        ]
+      },
+      {
+        "text": "**Update and correction.** User-facing lifecycle actions include accepting, rejecting, correcting and undoing memories. Consolidation can supersede redundant items, mark outdated items stale, and merge duplicates by superseding an item into another. A superseded graph fact can have its validity closed and can be restored by undo. These mechanisms preserve lifecycle state and audit transitions, rather than demonstrating one immutable version history for every edit.",
+        "sources": [
+          "readme",
+          "coordinator",
+          "governance",
+          "consolidate",
+          "kg"
+        ]
+      },
+      {
+        "text": "**Delete.** The inspected governance state model has no delete transition and treats rejection as terminal; consolidation operations also explicitly avoid deleting items. The graph has temporal invalidation and retains triples with validity fields. I did not find a hard-erasure path in these inspected lifecycle and graph sources. This is limited to the inspected APIs and does not establish that no other product or manual filesystem deletion route exists.",
+        "sources": [
+          "governance",
+          "consolidate",
+          "kg",
+          "readme"
+        ]
+      },
+      {
+        "text": "**Retrieval.** The agent's memory_recall path reads active governed items and applies privacy rules; the graph provides entity, relationship and as-of queries. The separate workspace search manager lazily syncs Markdown files and retrieves text through FTS5 plus optional vector embeddings, with a hybrid result path. If no embedding provider is configured, the manager reports keyword-only search. The memory and graph paths are distinct and the reviewed sources do not establish a universal ranking or answer-generation policy across them.",
+        "sources": [
+          "coordinator",
+          "summary",
+          "kg",
+          "manager",
+          "indexer",
+          "search",
+          "embeddings"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Recall, graph query and hybrid text search implementations were inspected; no answerable-query set or abstention workload was evaluated.",
+        "sources": [
+          "coordinator",
+          "manager",
+          "search",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Correction, undo, supersession and stale operations were inspected; no correction workload was scored.",
+        "sources": [
+          "governance",
+          "consolidate",
+          "kg",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Lifecycle rejection and graph invalidation were inspected; no erase or post-delete leakage probe was run.",
+        "sources": [
+          "governance",
+          "kg",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "The index manager is keyed by workspace and the governance store is located under a state directory; no cross-profile or cross-workspace isolation workload was run.",
+        "sources": [
+          "manager",
+          "governance",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "The stores retain source-session/message fields, graph source labels and timestamps; generated claims and answers were not adjudicated for support or citation coverage.",
+        "sources": [
+          "governance",
+          "kg",
+          "dreamer",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Index synchronization is lazy and debounced in source; this review collected no timings or end-to-end write-to-recall measurements.",
+        "sources": [
+          "manager",
+          "indexer",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Chunking, SQLite indexing and embedding provider selection were inspected; no token, API cost, storage growth or resource measurements were collected.",
+        "sources": [
+          "manager",
+          "indexer",
+          "manager",
+          "embeddings",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a source review at a verified upstream commit, not a runtime, security or quality assessment. The review did not run Flowly, its tests or benchmarks. Tool wiring and optional providers may change behavior based on configuration.",
+        "sources": [
+          "readme",
+          "manager",
+          "embeddings",
+          "metrics"
+        ]
+      },
+      {
+        "text": "Governance and underlying content are separate layers, and the post-tool hook mirrors successful primary writes into governance. Status filtering in governed recall therefore should not be read as proof that unreviewed content is absent from every other prompt or storage path. Workspace/state-directory organization suggests where data is stored, but this inspection is not an adversarial test of tenant isolation.",
+        "sources": [
+          "governance",
+          "coordinator",
+          "summary",
+          "manager"
+        ]
+      },
+      {
+        "text": "The inspected code shows references and provenance fields, not an adjudicated evidence guarantee. Graph invalidation and lifecycle status changes do not establish physical erasure from all files, backups or derived copies. No support precision, citation coverage, stale-value, deletion leakage, isolation, latency, cost or storage result is claimed.",
+        "sources": [
+          "governance",
+          "kg",
+          "metrics",
+          "status"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No Flowly runtime, tests or benchmarks were run. Source observations and project metric definitions are not benchmark results."
+    }
+  }
+}

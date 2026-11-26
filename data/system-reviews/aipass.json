@@ -1,0 +1,427 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "aipass",
+    "name": "AIPass",
+    "repository": "https://github.com/AIOSAI/AIPass",
+    "branch": "main",
+    "revision": "7670b1131a63ffa5699a9f620e37cccddc725979",
+    "reviewed_at": "2026-11-24T20:15:01Z",
+    "review_timezone": "UTC (2026-11-24 12:15:01 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":"aipass.system@gmail.com","source_url":"https://github.com/AIOSAI/AIPass/blob/7670b1131a63ffa5699a9f620e37cccddc725979/SECURITY.md","note":"Published in the official security policy."},
+    "summary": "AIPass is a local agent workspace whose in-tree memory branch keeps agent state in bounded .trinity JSON files and archives older entries into ChromaDB for semantic search across branches.",
+    "atlas_locator": {
+      "ordinal": 46,
+      "name": "AIPass",
+      "slug": "aipass",
+      "listed_repository": "https://github.com/AIOSAI/AIPass",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/aipass.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": "aipass.system@gmail.com",
+    "contact_email_source_url": "https://github.com/AIOSAI/AIPass/blob/7670b1131a63ffa5699a9f620e37cccddc725979/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/AIOSAI/AIPass/blob/7670b1131a63ffa5699a9f620e37cccddc725979/README.md",
+      "https://github.com/AIOSAI/AIPass/blob/7670b1131a63ffa5699a9f620e37cccddc725979/SECURITY.md",
+      "https://aipass.ai/"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository and listed locator",
+        "path": "repository",
+        "symbol": "canonical AIOSAI/AIPass; default branch main",
+        "url": "https://github.com/AIOSAI/AIPass"
+      },
+      {
+        "id": "head",
+        "label": "Official main head and reviewed commit",
+        "path": "refs/heads/main",
+        "symbol": "git ls-remote --symref and main Atom feed agree on full SHA 7670b1131a63ffa5699a9f620e37cccddc725979; shallow checkout matched",
+        "url": "https://github.com/AIOSAI/AIPass/commit/7670b1131a63ffa5699a9f620e37cccddc725979"
+      },
+      {
+        "id": "readme",
+        "label": "Official repository README",
+        "path": "README.md",
+        "symbol": "AIPass overview, per-agent .trinity memory, local files and vector archive",
+        "url": "https://github.com/AIOSAI/AIPass/blob/7670b1131a63ffa5699a9f620e37cccddc725979/README.md"
+      },
+      {
+        "id": "memory-readme",
+        "label": "Memory branch architecture and inventory",
+        "path": "src/aipass/memory/README.md",
+        "symbol": "entry types, rollover, search, scope, module layout and dependencies",
+        "url": "https://github.com/AIOSAI/AIPass/blob/7670b1131a63ffa5699a9f620e37cccddc725979/src/aipass/memory/README.md"
+      },
+      {
+        "id": "trinity-doc",
+        "label": "Trinity data shape and write rules",
+        "path": "src/aipass/memory/docs/trinity_standard.md",
+        "symbol": "closed entry schema, caps, authored vs carried entries, damaged-file behavior",
+        "url": "https://github.com/AIOSAI/AIPass/blob/7670b1131a63ffa5699a9f620e37cccddc725979/src/aipass/memory/docs/trinity_standard.md"
+      },
+      {
+        "id": "rollover-doc",
+        "label": "Rollover pipeline documentation",
+        "path": "src/aipass/memory/docs/rollover_pipeline.md",
+        "symbol": "trigger, extraction, embedding, Chroma upsert, trim ordering and retries",
+        "url": "https://github.com/AIOSAI/AIPass/blob/7670b1131a63ffa5699a9f620e37cccddc725979/src/aipass/memory/docs/rollover_pipeline.md"
+      },
+      {
+        "id": "push-doc",
+        "label": "Trinity push documentation",
+        "path": "src/aipass/memory/docs/trinity_push.md",
+        "symbol": "verbatim archive, read-back verification, prune behavior, todo backlog",
+        "url": "https://github.com/AIOSAI/AIPass/blob/7670b1131a63ffa5699a9f620e37cccddc725979/src/aipass/memory/docs/trinity_push.md"
+      },
+      {
+        "id": "vector-doc",
+        "label": "Vector search documentation",
+        "path": "src/aipass/memory/docs/vector_search.md",
+        "symbol": "subprocess isolation, model, filtering, timeouts and plan ID matching",
+        "url": "https://github.com/AIOSAI/AIPass/blob/7670b1131a63ffa5699a9f620e37cccddc725979/src/aipass/memory/docs/vector_search.md"
+      },
+      {
+        "id": "memory-files",
+        "label": "Memory JSON file read/write implementation",
+        "path": "src/aipass/memory/apps/handlers/json/memory_files.py",
+        "symbol": "root write fence, entry validation, atomic temp-and-replace writes",
+        "url": "https://github.com/AIOSAI/AIPass/blob/7670b1131a63ffa5699a9f620e37cccddc725979/src/aipass/memory/apps/handlers/json/memory_files.py"
+      },
+      {
+        "id": "entry-limits",
+        "label": "Entry shape and limits implementation",
+        "path": "src/aipass/memory/apps/handlers/json/entry_limits.py",
+        "symbol": "authored/carried classification and cap validation",
+        "url": "https://github.com/AIOSAI/AIPass/blob/7670b1131a63ffa5699a9f620e37cccddc725979/src/aipass/memory/apps/handlers/json/entry_limits.py"
+      },
+      {
+        "id": "config",
+        "label": "Memory configuration loader",
+        "path": "src/aipass/memory/apps/handlers/json/config_loader.py",
+        "symbol": "configured schema, entry caps, keep counts and budgets",
+        "url": "https://github.com/AIOSAI/AIPass/blob/7670b1131a63ffa5699a9f620e37cccddc725979/src/aipass/memory/apps/handlers/json/config_loader.py"
+      },
+      {
+        "id": "query",
+        "label": "Semantic search query executor",
+        "path": "src/aipass/memory/apps/handlers/search/query_executor.py",
+        "symbol": "query embeddings, Chroma search, 0.40 threshold, top-result filter and logging",
+        "url": "https://github.com/AIOSAI/AIPass/blob/7670b1131a63ffa5699a9f620e37cccddc725979/src/aipass/memory/apps/handlers/search/query_executor.py"
+      },
+      {
+        "id": "lane",
+        "label": "Subprocess storage lane",
+        "path": "src/aipass/memory/apps/handlers/storage/lane.py",
+        "symbol": "ML child-process request/response, timeout and error logging",
+        "url": "https://github.com/AIOSAI/AIPass/blob/7670b1131a63ffa5699a9f620e37cccddc725979/src/aipass/memory/apps/handlers/storage/lane.py"
+      },
+      {
+        "id": "chroma",
+        "label": "Chroma storage and retrieval implementation",
+        "path": "src/aipass/memory/apps/handlers/storage/chroma_subprocess.py",
+        "symbol": "branch/type collections, content hash IDs, metadata and source deletion op",
+        "url": "https://github.com/AIOSAI/AIPass/blob/7670b1131a63ffa5699a9f620e37cccddc725979/src/aipass/memory/apps/handlers/storage/chroma_subprocess.py"
+      },
+      {
+        "id": "rollover",
+        "label": "Rollover orchestrator",
+        "path": "src/aipass/memory/apps/handlers/rollover/orchestrator.py",
+        "symbol": "batch embed/store, write trimmed source last, reports stage failures",
+        "url": "https://github.com/AIOSAI/AIPass/blob/7670b1131a63ffa5699a9f620e37cccddc725979/src/aipass/memory/apps/handlers/rollover/orchestrator.py"
+      },
+      {
+        "id": "scope",
+        "label": "Branch read/write scope discovery",
+        "path": "src/aipass/memory/apps/handlers/monitor/detector.py",
+        "symbol": "registry-derived write scope, declared external read scope, root fence",
+        "url": "https://github.com/AIOSAI/AIPass/blob/7670b1131a63ffa5699a9f620e37cccddc725979/src/aipass/memory/apps/handlers/monitor/detector.py"
+      },
+      {
+        "id": "fence",
+        "label": "Write path fence",
+        "path": "src/aipass/memory/apps/handlers/write_fence.py",
+        "symbol": "write scope validation and refusal",
+        "url": "https://github.com/AIOSAI/AIPass/blob/7670b1131a63ffa5699a9f620e37cccddc725979/src/aipass/memory/apps/handlers/write_fence.py"
+      },
+      {
+        "id": "push",
+        "label": "Trinity push implementation",
+        "path": "src/aipass/memory/apps/handlers/templates/trinity_push.py",
+        "symbol": "archive, verify, then prune; records provenance metadata",
+        "url": "https://github.com/AIOSAI/AIPass/blob/7670b1131a63ffa5699a9f620e37cccddc725979/src/aipass/memory/apps/handlers/templates/trinity_push.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": null,
+        "url": "../../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": null,
+        "url": "../../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": null,
+        "url": "../../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "roster",
+        "label": "Curated catalog identity and attribution only",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 46",
+        "url": "../../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Roster attribution source (identity only)",
+        "path": "content/systems/aipass.md",
+        "symbol": null,
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/aipass.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy and contact",
+        "path": "SECURITY.md",
+        "symbol": "publishes aipass.system@gmail.com for vulnerability reports",
+        "url": "https://github.com/AIOSAI/AIPass/blob/7670b1131a63ffa5699a9f620e37cccddc725979/SECURITY.md"
+      },
+      {
+        "id": "site",
+        "label": "Official project website checked for contact",
+        "path": "https://aipass.ai/",
+        "symbol": "no contact email published in visible site text",
+        "url": "https://aipass.ai/"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "AIPass is a local agent workspace and orchestration system. Its in-tree @memory branch manages per-branch .trinity JSON memory, bounded entry shapes, rollover to vector storage, semantic search, and a todo backlog.",
+        "sources": [
+          "readme",
+          "memory-readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The memory branch separates CLI and per-verb modules from handlers for JSON, rollover, monitoring, templates, search, storage, and schema normalization. The README describes sessions, key learnings, observations, and todos as the main .trinity data.",
+        "sources": [
+          "memory-readme"
+        ]
+      },
+      {
+        "text": "memory.config.json defines the closed entry field shape, caps, keep counts, and file budgets. Writes validate authored fields; the gate distinguishes changed entries from unchanged carried entries.",
+        "sources": [
+          "trinity-doc",
+          "entry-limits",
+          "config"
+        ]
+      },
+      {
+        "text": "Rollover stores older entries in branch/type Chroma collections. IDs are content hashes with optional source-file salt; metadata includes source fields and timestamp. Todos are moved to backlog files rather than embedded.",
+        "sources": [
+          "rollover-doc",
+          "chroma",
+          "push-doc"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "**Write.** Memory JSON writes are fenced to the AIPass root, validated against configured limits, and committed with a same-directory temporary file and atomic replacement. Invalid or unmeasurable authored content is refused.",
+        "sources": [
+          "memory-files",
+          "trinity-doc"
+        ]
+      },
+      {
+        "text": "**Update.** Entries change through edits to the JSON memory file and the same write gate. The reviewed source does not establish a separate append-only record history for each edit.",
+        "sources": [
+          "memory-files",
+          "trinity-doc"
+        ]
+      },
+      {
+        "text": "**Rollover and deletion.** Rollover extracts the oldest entries over configured keep counts, stores them, then trims the source file. The trinity push archives verbatim, reads back and verifies stored content before pruning. The current command docs do not establish a user-facing permanent delete or complete vector-expungement command; an internal source-delete operation exists.",
+        "sources": [
+          "rollover-doc",
+          "push-doc",
+          "chroma",
+          "memory-readme"
+        ]
+      },
+      {
+        "text": "**Retrieval.** Search embeds the query with fastembed, searches Chroma, filters empty or below-0.40 similarity results, and returns at most the requested count (default five). It supports branch/type filters and exact plan-ID pinning. The default global search can span branch collections; live JSON records are not established as part of vector search before archival.",
+        "sources": [
+          "vector-doc",
+          "query",
+          "chroma",
+          "memory-readme"
+        ]
+      },
+      {
+        "text": "**Scope isolation.** Branch labels and type filters organize vector records. The monitor derives a root-fenced registry write scope and a broader declared external read scope. The review does not establish that branch names alone form an authenticated tenant boundary or that all callers always constrain search.",
+        "sources": [
+          "scope",
+          "fence",
+          "query"
+        ]
+      },
+      {
+        "text": "**Provenance and evidence.** Vector metadata preserves source file and timestamp fields when provided; push archives attach branch/source metadata and verifies exact content before pruning. This is record provenance, not evidence adjudication or answer citation coverage; no such outcome was measured.",
+        "sources": [
+          "chroma",
+          "push",
+          "push-doc"
+        ]
+      },
+      {
+        "text": "**Source-visible efficiency and observability.** ML libraries run in child processes; embedding and search calls have timeouts; configured entry/keep limits bound some inputs. Logs report search counts, rollover stages, and bounded subprocess failure details. These controls and logs do not measure runtime performance.",
+        "sources": [
+          "vector-doc",
+          "lane",
+          "query",
+          "rollover",
+          "config"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "Semantic search, a 0.40 threshold and a top-result limit are visible; answer quality and abstention were not evaluated.",
+        "sources": [
+          "query",
+          "vector-doc",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "File edits and archival are visible; no correction workload or stale-value adjudication was run.",
+        "sources": [
+          "memory-files",
+          "rollover-doc",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Rollover and push prune after archive; permanent deletion semantics were not established and no deletion probes were run.",
+        "sources": [
+          "push-doc",
+          "chroma",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Branch filtering and registry fences are source-visible; no cross-branch isolation workload was run.",
+        "sources": [
+          "scope",
+          "fence",
+          "query",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Archive metadata contains source details, but answer support and citations were not adjudicated.",
+        "sources": [
+          "chroma",
+          "push",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Subprocess timeouts and caching are visible; end-to-end latency and delay were not measured.",
+        "sources": [
+          "vector-doc",
+          "lane",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens, cost, and storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No token, cost or storage measurements were collected.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Source-visible efficiency and observability",
+        "status": "available in code and documentation",
+        "evidence": "Child-process isolation, timeouts, configured bounds, stage logging and query operation logs are visible, without runtime measurements.",
+        "sources": [
+          "vector-doc",
+          "lane",
+          "query",
+          "rollover",
+          "config"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "The review covered memory documentation and selected code paths for JSON writes, schema limits, scope discovery, rollover, push, vector storage, and search. It did not inspect every memory module or integration caller; caller-level search scoping and full deletion behavior across local/global stores remain unknown.",
+        "sources": [
+          "memory-readme",
+          "scope",
+          "query",
+          "chroma"
+        ]
+      },
+      {
+        "text": "Source establishes implementation details only. It cannot establish real recall, abstention, correction, deletion, isolation, evidence quality, latency, cost, or storage outcomes without a controlled run.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark not run. No AIPass runtime, test suite, or benchmark workload was run. Project metrics, fixture, and status files are protocol references, not AIPass measurements.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

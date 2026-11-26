@@ -1,0 +1,541 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 154,
+    "slug": "core-redplanet",
+    "name": "CORE",
+    "repository": "https://github.com/RedPlanetHQ/core",
+    "listed_repository": "https://github.com/RedPlanetHQ/core",
+    "branch": "main",
+    "revision": "b9da284b13aa64a0938043cde9ce9a46cffe9b5e",
+    "reviewed_at": "2026-11-25T09:21:12Z",
+    "review_timezone": "UTC (2026-11-25 01:21:12 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "CORE is a self-hosted personal AI workspace whose memory pipeline turns conversations and connected-app content into source episodes, extracted facts and topic labels. Graph facts live in Neo4j, voice-oriented aspects in Postgres, and embeddings in vector namespaces. Retrieval routes queries through label and language-model classification to graph/vector handlers. This is a source review at the verified main head; no runtime, tests or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 154,
+      "name": "CORE",
+      "slug": "core-redplanet",
+      "listed_repository": "https://github.com/RedPlanetHQ/core",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/core-redplanet.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": "harshith@poozle.dev",
+      "source_url": "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/README.md",
+      "checked_urls": [
+        "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/README.md"
+      ],
+      "note": "The official README publishes this address under Vulnerabilities. It is recorded as the project's published security contact, not as a general support address."
+    },
+    "contact_email": "harshith@poozle.dev",
+    "contact_email_source_url": "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/README.md"
+    ],
+    "contact_email_note": "Published in the official README for vulnerability reports; not presented as a general support address. No commit/profile metadata, personal profile, third-party directory or inferred address was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[153], ordinal 154: CORE, slug core-redplanet, explicit listed repository and pinned Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/core-redplanet.md",
+        "symbol": "Pinned report used only for curated identity and locator; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/core-redplanet.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream Git remote",
+        "path": "GitHub repository refs",
+        "symbol": "git ls-remote --symref resolved HEAD to refs/heads/main",
+        "url": "https://github.com/RedPlanetHQ/core"
+      },
+      {
+        "id": "head",
+        "label": "Verified upstream head",
+        "path": "commit metadata",
+        "symbol": "Full SHA and commit timestamp from a shallow clone of official main",
+        "url": "https://github.com/RedPlanetHQ/core/commit/b9da284b13aa64a0938043cde9ce9a46cffe9b5e"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Project scope, memory, ingestion, benchmark statement and published vulnerability contact",
+        "url": "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/README.md"
+      },
+      {
+        "id": "memory",
+        "label": "Pinned memory overview",
+        "path": "docs/memory/overview.mdx",
+        "symbol": "Memory primitives, storage layout, labels, retrieval and conflict overview",
+        "url": "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/docs/memory/overview.mdx"
+      },
+      {
+        "id": "ingest",
+        "label": "Pinned ingestion guide",
+        "path": "docs/memory/how-core-ingests.mdx",
+        "symbol": "Episode/entity/statement pipeline, provenance, aspect split, embeddings and conflict handling",
+        "url": "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/docs/memory/how-core-ingests.mdx"
+      },
+      {
+        "id": "searchdoc",
+        "label": "Pinned search guide",
+        "path": "docs/memory/how-core-searches.mdx",
+        "symbol": "V2 routing, handlers, retrieval paths, reranking and V1 fallback",
+        "url": "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/docs/memory/how-core-searches.mdx"
+      },
+      {
+        "id": "aspects",
+        "label": "Pinned aspect guide",
+        "path": "docs/memory/aspects.mdx",
+        "symbol": "Twelve fact aspects and graph versus voice storage",
+        "url": "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/docs/memory/aspects.mdx"
+      },
+      {
+        "id": "model",
+        "label": "Pinned graph model types",
+        "path": "packages/types/src/graph/graph.entity.ts",
+        "symbol": "Episode, statement and entity fields including provenance and temporal fields",
+        "url": "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/packages/types/src/graph/graph.entity.ts"
+      },
+      {
+        "id": "knowledge",
+        "label": "Pinned ingestion implementation",
+        "path": "apps/webapp/app/services/knowledgeGraph.server.ts",
+        "symbol": "Episode persistence, normalization, embedding, extraction, writes and processing metrics",
+        "url": "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/apps/webapp/app/services/knowledgeGraph.server.ts"
+      },
+      {
+        "id": "episode",
+        "label": "Pinned episode storage helpers",
+        "path": "apps/webapp/app/services/graphModels/episode.ts",
+        "symbol": "Episode/vector search, deletion and associated embedding/aspect cleanup",
+        "url": "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/apps/webapp/app/services/graphModels/episode.ts"
+      },
+      {
+        "id": "statement",
+        "label": "Pinned statement helpers",
+        "path": "apps/webapp/app/services/graphModels/statement.ts",
+        "symbol": "Triple provenance and statement invalidation operations",
+        "url": "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/apps/webapp/app/services/graphModels/statement.ts"
+      },
+      {
+        "id": "voice",
+        "label": "Pinned voice-aspect store",
+        "path": "apps/webapp/app/services/aspectStore.server.ts",
+        "symbol": "Postgres voice-aspect rows, provenance, embeddings, invalidation and active queries",
+        "url": "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/apps/webapp/app/services/aspectStore.server.ts"
+      },
+      {
+        "id": "resolution",
+        "label": "Pinned graph-resolution job",
+        "path": "apps/webapp/app/jobs/ingest/graph-resolution.logic.ts",
+        "symbol": "Candidate matching, model resolution, duplicate cleanup and contradiction invalidation",
+        "url": "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/apps/webapp/app/jobs/ingest/graph-resolution.logic.ts"
+      },
+      {
+        "id": "aspect_resolution",
+        "label": "Pinned voice-aspect resolution",
+        "path": "apps/webapp/app/jobs/ingest/aspect-resolution.logic.ts",
+        "symbol": "Similarity and model-based duplicate/evolution decisions",
+        "url": "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/apps/webapp/app/jobs/ingest/aspect-resolution.logic.ts"
+      },
+      {
+        "id": "version",
+        "label": "Pinned document versioning",
+        "path": "apps/webapp/app/services/episodeVersioning.server.ts",
+        "symbol": "Document content/chunk hash comparison and version creation",
+        "url": "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/apps/webapp/app/services/episodeVersioning.server.ts"
+      },
+      {
+        "id": "diff",
+        "label": "Pinned document differ",
+        "path": "apps/webapp/app/services/episodeDiffer.server.ts",
+        "symbol": "Changed-content extraction; deletion text omitted from change summary",
+        "url": "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/apps/webapp/app/services/episodeDiffer.server.ts"
+      },
+      {
+        "id": "v2",
+        "label": "Pinned V2 search",
+        "path": "apps/webapp/app/services/search-v2/index.ts",
+        "symbol": "Workspace resolution, routed search, token budget, response-time logging and recall analytics",
+        "url": "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/apps/webapp/app/services/search-v2/index.ts"
+      },
+      {
+        "id": "router",
+        "label": "Pinned V2 query router",
+        "path": "apps/webapp/app/services/search-v2/router.ts",
+        "symbol": "Topic-label vector routing and LLM query classification",
+        "url": "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/apps/webapp/app/services/search-v2/router.ts"
+      },
+      {
+        "id": "provider_v2",
+        "label": "Pinned Neo4j V2 search",
+        "path": "packages/providers/src/graph/neo4j/domains/searchV2.ts",
+        "symbol": "Graph predicates for user/workspace, temporal visibility and labels",
+        "url": "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/packages/providers/src/graph/neo4j/domains/searchV2.ts"
+      },
+      {
+        "id": "provider_v1",
+        "label": "Pinned Neo4j V1 search",
+        "path": "packages/providers/src/graph/neo4j/domains/search.ts",
+        "symbol": "BM25 and graph search filters and temporal predicates",
+        "url": "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/packages/providers/src/graph/neo4j/domains/search.ts"
+      },
+      {
+        "id": "delete",
+        "label": "Pinned Neo4j delete",
+        "path": "packages/providers/src/graph/neo4j/domains/episode.ts",
+        "symbol": "Episode delete and orphan cleanup; statement invalidation for changed document versions",
+        "url": "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/packages/providers/src/graph/neo4j/domains/episode.ts"
+      },
+      {
+        "id": "delete_range",
+        "label": "Pinned date-range delete route",
+        "path": "apps/webapp/app/routes/api.v1.memory.delete-range.tsx",
+        "symbol": "Workspace-scoped recent-document deletion path",
+        "url": "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/apps/webapp/app/routes/api.v1.memory.delete-range.tsx"
+      },
+      {
+        "id": "mcp",
+        "label": "Pinned MCP memory tools",
+        "path": "apps/webapp/app/utils/mcp/memory.ts",
+        "symbol": "memory_ingest and memory_search tool contracts",
+        "url": "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/apps/webapp/app/utils/mcp/memory.ts"
+      },
+      {
+        "id": "mcpops",
+        "label": "Pinned MCP memory operations",
+        "path": "apps/webapp/app/utils/mcp/memory-operations.ts",
+        "symbol": "Ingest queue and search argument dispatch",
+        "url": "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/apps/webapp/app/utils/mcp/memory-operations.ts"
+      },
+      {
+        "id": "workspace",
+        "label": "Pinned workspace resolver",
+        "path": "apps/webapp/app/models/workspace.server.ts",
+        "symbol": "Membership validation and default workspace selection",
+        "url": "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/apps/webapp/app/models/workspace.server.ts"
+      },
+      {
+        "id": "budget",
+        "label": "Pinned recall token budget",
+        "path": "apps/webapp/app/services/search/tokenBudget.ts",
+        "symbol": "10,000-token default and tail-drop behavior",
+        "url": "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/apps/webapp/app/services/search/tokenBudget.ts"
+      },
+      {
+        "id": "telemetry",
+        "label": "Pinned telemetry guide",
+        "path": "docs/TELEMETRY.md",
+        "symbol": "Declared telemetry events, data and opt-out settings",
+        "url": "https://github.com/RedPlanetHQ/core/blob/b9da284b13aa64a0938043cde9ce9a46cffe9b5e/docs/TELEMETRY.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Metric definitions, not measurements",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Versioned workload specification; not run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Project benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Existing project execution status; no CORE result from this review",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents CORE as an open-source, self-hosted personal AI OS with a web application, integrations, messaging interfaces and coding-agent workflows. This review focuses on the persistent memory path, not the whole product.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The listed locator is RedPlanetHQ/core. The official Git remote's symbolic HEAD resolves to main; a shallow checkout of main resolves to b9da284b13aa64a0938043cde9ce9a46cffe9b5e, whose commit timestamp is 2026-11-24T15:51:41+05:30. This review is pinned to that SHA.",
+        "sources": [
+          "catalog",
+          "atlas",
+          "repo",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "An Episode preserves original content and source/time/session/label/workspace metadata. Ingestion normalizes and embeds it, then extracts graph and voice facts; entity and statement resolution run in follow-on jobs.",
+        "sources": [
+          "model",
+          "knowledge",
+          "ingest",
+          "resolution",
+          "aspect_resolution"
+        ]
+      },
+      {
+        "text": "The 12 aspects split into six graph aspects represented as subject-predicate-object triples in Neo4j, and six voice aspects stored as complete statements in Postgres. Facts link to source episodes. Embeddings occupy entity, statement, episode, label, aspect and compacted-session namespaces.",
+        "sources": [
+          "memory",
+          "ingest",
+          "aspects",
+          "model",
+          "voice"
+        ]
+      },
+      {
+        "text": "Documented entry points include integration sync, Butler conversations, document uploads and MCP memory_ingest. MCP ingest requires a session ID and accepts optional labels; it queues work. Documents use content and chunk hashes for versioning, while conversations are append-oriented.",
+        "sources": [
+          "readme",
+          "ingest",
+          "mcp",
+          "mcpops",
+          "version"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "addEpisode creates or loads an episode, gathers session context, normalizes and saves content, stores embeddings, extracts graph triples and voice aspects, and writes graph-fact/entity embeddings. The code records processing durations and token-use counters.",
+        "sources": [
+          "knowledge",
+          "mcpops"
+        ]
+      },
+      {
+        "text": "For changed documents, versioning compares content and chunk hashes; follow-on resolution can invalidate statements from replaced chunks. Graph resolution gathers structural and vector candidates, then a model identifies duplicates or contradictions. Contradicted statements receive invalidAt and invalidatedBy; duplicate provenance moves to the existing statement before duplicate nodes and embeddings are deleted. Voice-aspect resolution separately decides duplicate, evolution or new. Correction is model-mediated and was not measured.",
+        "sources": [
+          "version",
+          "diff",
+          "resolution",
+          "statement",
+          "aspect_resolution",
+          "voice"
+        ]
+      },
+      {
+        "text": "The episode-delete path removes the episode, orphaned statements/entities, associated graph embeddings and voice aspects with no remaining episode provenance. A date-range route deletes recent workspace documents and their sessions. These are application-store observations; complete erasure from every provider copy, backup or integration is unknown.",
+        "sources": [
+          "episode",
+          "delete",
+          "delete_range",
+          "voice"
+        ]
+      },
+      {
+        "text": "V2 resolves the workspace, searches topic labels by vector, then uses a structured LLM router for aspects, query type, time and entity hints. Dedicated handlers cover aspect, entity, temporal, facets, exploratory and relationship queries, combining graph, vector and voice-aspect results. Optional Cohere reranking is followed by a 10,000-token default budget that drops episodes from the tail. Older workspace versions can fall back to V1 BM25, vector and graph traversal when V2 returns no results. This review did not establish answer accuracy or claim-level citation quality.",
+        "sources": [
+          "searchdoc",
+          "router",
+          "v2",
+          "provider_v2",
+          "provider_v1",
+          "budget",
+          "voice"
+        ]
+      },
+      {
+        "text": "Scope isolation: the V2 entry point validates a requested workspace against active user membership or chooses the user's first active workspace. Graph queries include user predicates and conditionally add workspace predicates; some provider interfaces accept workspaceId as optional. Labels and voice-aspect retrieval also support workspace filters. No cross-user/workspace probes were run.",
+        "sources": ["workspace", "v2", "provider_v2", "provider_v1", "voice", "mcp"]
+      },
+      {
+        "text": "Provenance and evidence: episodes preserve original text and source metadata. Graph statements include validAt, invalidAt and invalidatedBy and link to source episodes; voice aspects retain episode UUIDs. This gives origin and temporal lineage in storage, but the model does not establish calibrated confidence, factuality, or answer-level support scores.",
+        "sources": ["model", "ingest", "knowledge", "statement", "voice", "searchdoc"]
+      },
+      {
+        "text": "Efficiency and observability: ingestion batches embedding writes and logs token counters and processing times. V2 combines retrieval paths, can rerank, and applies a token ceiling; search logs response time/result counts and writes recall analytics. Telemetry documentation describes default feature and error events with opt-out settings. These are observations, not measured latency, cost or storage efficiency.",
+        "sources": ["knowledge", "v2", "budget", "telemetry"]
+      }
+    ],
+    "scope": "The V2 entry point validates a requested workspace against active user membership or chooses the user's first active workspace. Graph queries include user predicates and conditionally add workspace predicates; some provider interfaces accept workspaceId as optional. Labels and voice-aspect retrieval also support workspace filters. These are code observations; no cross-user/workspace probes were run.",
+    "scope_sources": [
+      "workspace",
+      "v2",
+      "provider_v2",
+      "provider_v1",
+      "voice",
+      "mcp"
+    ],
+    "provenance": "Episodes preserve original text and source metadata. Graph statements include validAt, invalidAt and invalidatedBy and link to source episodes; voice aspects retain episode UUIDs. This gives origin and temporal lineage in storage. The inspected model does not establish calibrated confidence, factuality, or answer-level evidence-support scores.",
+    "provenance_sources": [
+      "model",
+      "ingest",
+      "knowledge",
+      "statement",
+      "voice",
+      "searchdoc"
+    ],
+    "efficiency": "Ingestion batches embedding writes and logs token counters and processing times. V2 combines retrieval paths, can rerank, and applies a token ceiling; search logs response time/result counts and writes recall analytics. Telemetry documentation describes default feature and error events with opt-out settings. These are source/documentation observations, not measured latency, cost or storage efficiency.",
+    "efficiency_sources": [
+      "knowledge",
+      "v2",
+      "budget",
+      "telemetry"
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "No fixture queries or adjudicated answer outcomes were run; source inspection cannot establish accuracy or abstention quality.",
+        "sources": [
+          "searchdoc",
+          "v2",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Correction uses model-mediated duplicate/contradiction and aspect-evolution decisions; no probes were run or adjudicated.",
+        "sources": [
+          "resolution",
+          "aspect_resolution",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Application deletion paths were inspected, but no post-delete recall checks or checks of backups, provider copies or integrations were run.",
+        "sources": [
+          "episode",
+          "delete",
+          "delete_range",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "User and optional workspace filters are visible in source; no cross-scope workload was run.",
+        "sources": [
+          "workspace",
+          "provider_v1",
+          "provider_v2",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Provenance links to source episodes were inspected; generated responses were not captured or adjudicated for support or citation coverage.",
+        "sources": [
+          "ingest",
+          "searchdoc",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "The source logs timings and documents a latency target, but no latency samples were collected for this review.",
+        "sources": [
+          "v2",
+          "knowledge",
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Ingestion is queued and has follow-on resolution; no timed write-then-recall probes were run.",
+        "sources": [
+          "mcpops",
+          "knowledge",
+          "resolution",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "Ingestion token counters and recall token budgets are source observations; no provider usage or monetary cost was measured.",
+        "sources": [
+          "knowledge",
+          "budget",
+          "metrics",
+          "result"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Neo4j, Postgres and vector storage were inspected, but no corpus size or per-item storage measurements were taken.",
+        "sources": [
+          "memory",
+          "model",
+          "voice",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected selected memory guides, ingestion and resolution jobs, persistence helpers, search paths, workspace resolution, deletion and telemetry. It did not inspect every connector, hosting mode, provider implementation or UI workflow.",
+        "sources": [
+          "memory",
+          "ingest",
+          "knowledge",
+          "resolution",
+          "aspect_resolution",
+          "v2",
+          "provider_v1",
+          "provider_v2",
+          "delete",
+          "telemetry"
+        ]
+      },
+      {
+        "text": "The README reports a LoCoMo accuracy figure and links to a separate benchmark repository. This review did not inspect or reproduce that run; it is not a measurement from this review. Project domains remain unmeasured here.",
+        "sources": [
+          "readme",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "text": "Source inspection cannot establish runtime correctness under concurrent ingestion, isolation under adversarial conditions, deployment authorization beyond the inspected paths, or deletion from every copy and backup.",
+        "sources": [
+          "knowledge",
+          "workspace",
+          "provider_v2",
+          "delete",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No CORE runtime, tests or benchmarks were run. Source observations and the README's benchmark statement are not results from this project review."
+    }
+  }
+}

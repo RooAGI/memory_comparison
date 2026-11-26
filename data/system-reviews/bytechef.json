@@ -1,0 +1,329 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "bytechef",
+    "name": "ByteChef",
+    "repository": "https://github.com/bytechefhq/bytechef",
+    "branch": "master",
+    "revision": "93adcdf6635bc944816ad18fdf39c7ae472f5e87",
+    "reviewed_at": "2026-11-25T00:39:42Z",
+    "review_timezone": "UTC (2026-11-25 00:39:42; PST 2026-11-24 16:39:42; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":"support@bytechef.io","source_url":"https://github.com/bytechefhq/bytechef/blob/93adcdf6635bc944816ad18fdf39c7ae472f5e87/README.md","note":"Published in the official README."},
+    "summary": "ByteChef combines workflow-integrated chat-memory backends with a document knowledge base. The reviewed knowledge-base path loads, chunks, embeds and retrieves documents through a shared pgvector vector store, with metadata filters and knowledge-base scoping. This is a source review, not a runtime or benchmark measurement.",
+    "atlas_locator": {
+      "ordinal": 107,
+      "name": "ByteChef",
+      "slug": "bytechef",
+      "listed_repository": "https://github.com/bytechefhq/bytechef",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/bytechef.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": "support@bytechef.io",
+    "contact_email_source_url": "https://github.com/bytechefhq/bytechef/blob/93adcdf6635bc944816ad18fdf39c7ae472f5e87/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/bytechefhq/bytechef/blob/93adcdf6635bc944816ad18fdf39c7ae472f5e87/README.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical official repository and default branch",
+        "path": "repository",
+        "symbol": "bytechefhq/bytechef; default branch master",
+        "url": "https://github.com/bytechefhq/bytechef"
+      },
+      {
+        "id": "head",
+        "label": "Current full head commit",
+        "path": "commit",
+        "symbol": "master head 93adcdf6635bc944816ad18fdf39c7ae472f5e87",
+        "url": "https://github.com/bytechefhq/bytechef/commit/93adcdf6635bc944816ad18fdf39c7ae472f5e87.patch"
+      },
+      {
+        "id": "feed",
+        "label": "Official master commits feed",
+        "path": "commits/master.atom",
+        "symbol": "head full SHA and update time 2026-11-24T22:06:07Z",
+        "url": "https://github.com/bytechefhq/bytechef/commits/master.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Official README and published contact",
+        "path": "README.md",
+        "symbol": "chat memory, knowledge base, setup requirements, support contact",
+        "url": "https://github.com/bytechefhq/bytechef/blob/93adcdf6635bc944816ad18fdf39c7ae472f5e87/README.md"
+      },
+      {
+        "id": "handler",
+        "label": "Knowledge-base component registration and actions",
+        "path": "server/libs/modules/components/ai/vectorstore/knowledgebase/src/main/java/com/bytechef/component/ai/vectorstore/knowledgebase/KnowledgeBaseComponentHandler.java",
+        "symbol": "load/search/update/delete; vector store cluster elements",
+        "url": "https://github.com/bytechefhq/bytechef/blob/93adcdf6635bc944816ad18fdf39c7ae472f5e87/server/libs/modules/components/ai/vectorstore/knowledgebase/src/main/java/com/bytechef/component/ai/vectorstore/knowledgebase/KnowledgeBaseComponentHandler.java"
+      },
+      {
+        "id": "kb-model",
+        "label": "Knowledge-base configuration and chunk settings",
+        "path": "server/libs/platform/platform-knowledge-base/platform-knowledge-base-api/src/main/java/com/bytechef/platform/knowledgebase/domain/KnowledgeBase.java",
+        "symbol": "environment, tags, chunk size, overlap, version",
+        "url": "https://github.com/bytechefhq/bytechef/blob/93adcdf6635bc944816ad18fdf39c7ae472f5e87/server/libs/platform/platform-knowledge-base/platform-knowledge-base-api/src/main/java/com/bytechef/platform/knowledgebase/domain/KnowledgeBase.java"
+      },
+      {
+        "id": "document-model",
+        "label": "Document storage and lifecycle model",
+        "path": "server/libs/platform/platform-knowledge-base/platform-knowledge-base-api/src/main/java/com/bytechef/platform/knowledgebase/domain/KnowledgeBaseDocument.java",
+        "symbol": "file entry, status, tags, actor/time, version",
+        "url": "https://github.com/bytechefhq/bytechef/blob/93adcdf6635bc944816ad18fdf39c7ae472f5e87/server/libs/platform/platform-knowledge-base/platform-knowledge-base-api/src/main/java/com/bytechef/platform/knowledgebase/domain/KnowledgeBaseDocument.java"
+      },
+      {
+        "id": "chunk-model",
+        "label": "Document chunk and retrieval result model",
+        "path": "server/libs/platform/platform-knowledge-base/platform-knowledge-base-api/src/main/java/com/bytechef/platform/knowledgebase/domain/KnowledgeBaseDocumentChunk.java",
+        "symbol": "parent document, vector-store ID, file content, transient metadata/text/score",
+        "url": "https://github.com/bytechefhq/bytechef/blob/93adcdf6635bc944816ad18fdf39c7ae472f5e87/server/libs/platform/platform-knowledge-base/platform-knowledge-base-api/src/main/java/com/bytechef/platform/knowledgebase/domain/KnowledgeBaseDocumentChunk.java"
+      },
+      {
+        "id": "load",
+        "label": "Document load and transformer orchestration",
+        "path": "server/libs/modules/components/ai/vectorstore/knowledgebase/src/main/java/com/bytechef/component/ai/vectorstore/knowledgebase/action/KnowledgeBaseLoadAction.java",
+        "symbol": "document reader and split/enrich transformers",
+        "url": "https://github.com/bytechefhq/bytechef/blob/93adcdf6635bc944816ad18fdf39c7ae472f5e87/server/libs/modules/components/ai/vectorstore/knowledgebase/src/main/java/com/bytechef/component/ai/vectorstore/knowledgebase/action/KnowledgeBaseLoadAction.java"
+      },
+      {
+        "id": "search",
+        "label": "Query, tag, filter, top-K, and threshold behavior",
+        "path": "server/libs/modules/components/ai/vectorstore/knowledgebase/src/main/java/com/bytechef/component/ai/vectorstore/knowledgebase/action/KnowledgeBaseSearchAction.java",
+        "symbol": "semantic and filter-only search paths",
+        "url": "https://github.com/bytechefhq/bytechef/blob/93adcdf6635bc944816ad18fdf39c7ae472f5e87/server/libs/modules/components/ai/vectorstore/knowledgebase/src/main/java/com/bytechef/component/ai/vectorstore/knowledgebase/action/KnowledgeBaseSearchAction.java"
+      },
+      {
+        "id": "update",
+        "label": "Document and chunk replacement operation",
+        "path": "server/libs/modules/components/ai/vectorstore/knowledgebase/src/main/java/com/bytechef/component/ai/vectorstore/knowledgebase/action/KnowledgeBaseUpdateAction.java",
+        "symbol": "replace selected document/chunk; metadata filters",
+        "url": "https://github.com/bytechefhq/bytechef/blob/93adcdf6635bc944816ad18fdf39c7ae472f5e87/server/libs/modules/components/ai/vectorstore/knowledgebase/src/main/java/com/bytechef/component/ai/vectorstore/knowledgebase/action/KnowledgeBaseUpdateAction.java"
+      },
+      {
+        "id": "delete",
+        "label": "Metadata-filter document deletion",
+        "path": "server/libs/modules/components/ai/vectorstore/knowledgebase/src/main/java/com/bytechef/component/ai/vectorstore/knowledgebase/action/KnowledgeBaseDeleteAction.java",
+        "symbol": "delete by filter through vector-store adapter",
+        "url": "https://github.com/bytechefhq/bytechef/blob/93adcdf6635bc944816ad18fdf39c7ae472f5e87/server/libs/modules/components/ai/vectorstore/knowledgebase/src/main/java/com/bytechef/component/ai/vectorstore/knowledgebase/action/KnowledgeBaseDeleteAction.java"
+      },
+      {
+        "id": "vectorstore",
+        "label": "Knowledge-base vector-store load/update and storage adapter",
+        "path": "server/libs/modules/components/ai/vectorstore/knowledgebase/src/main/java/com/bytechef/component/ai/vectorstore/knowledgebase/util/KnowledgeBaseVectorStore.java",
+        "symbol": "metadata construction, document/chunk/file storage, embedding store integration",
+        "url": "https://github.com/bytechefhq/bytechef/blob/93adcdf6635bc944816ad18fdf39c7ae472f5e87/server/libs/modules/components/ai/vectorstore/knowledgebase/src/main/java/com/bytechef/component/ai/vectorstore/knowledgebase/util/KnowledgeBaseVectorStore.java"
+      },
+      {
+        "id": "wrapper",
+        "label": "Knowledge-base query and metadata-delete scope wrapper",
+        "path": "server/libs/modules/components/ai/vectorstore/knowledgebase/src/main/java/com/bytechef/component/ai/vectorstore/knowledgebase/util/KnowledgeBaseVectorStoreWrapper.java",
+        "symbol": "AND knowledge_base_id with query and filter expressions",
+        "url": "https://github.com/bytechefhq/bytechef/blob/93adcdf6635bc944816ad18fdf39c7ae472f5e87/server/libs/modules/components/ai/vectorstore/knowledgebase/src/main/java/com/bytechef/component/ai/vectorstore/knowledgebase/util/KnowledgeBaseVectorStoreWrapper.java"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "../METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "../results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "../fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "curated",
+        "label": "Curated roster identity and source attribution",
+        "path": "../data/memory-systems.json",
+        "symbol": "ordinal 107",
+        "url": "../data/memory-systems.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents ByteChef as an open-source AI-agent and workflow automation platform maintained by the ByteChef team. It lists eight chat-memory backends and a built-in knowledge-base/vector-store path; this review focuses on the latter.",
+        "sources": [
+          "readme",
+          "handler"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The knowledge-base component registers load, search, update, and delete actions plus vector-store and search cluster elements for agent workflows. It wires these through platform knowledge-base services and a shared Spring AI vector store.",
+        "sources": [
+          "handler"
+        ]
+      },
+      {
+        "text": "A knowledge-base record carries a name, description, environment, tags, optimistic version, and chunk settings. The source defaults are maxChunkSize 1024, minChunkSizeChars 100, and overlap 200.",
+        "sources": [
+          "kb-model"
+        ]
+      },
+      {
+        "text": "Document rows carry a file-storage entry, knowledge-base ID, size, tags, status, created/modified actor and timestamps, and version. Chunk rows link to a document and vector-store ID, with file content; retrieval text, metadata, and score are transient fields.",
+        "sources": [
+          "document-model",
+          "chunk-model"
+        ]
+      },
+      {
+        "text": "The adapter adds knowledge-base, document, chunk, environment, and tag metadata around vector records. README setup instructions say the internal knowledge base requires PostgreSQL with pgvector and that the shared embedding model is globally configured.",
+        "sources": [
+          "vectorstore",
+          "load",
+          "readme"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Load reads documents through a selected reader and configured splitter/enricher transformers, then sends transformed records through the shared vector-store adapter. The load action chooses the target knowledge-base ID.",
+        "sources": [
+          "load",
+          "vectorstore"
+        ]
+      },
+      {
+        "text": "Update selects a document or chunk to replace, optionally using metadata filters. The adapter removes old chunk rows and matching vector entries before loading replacements; document-level update can inherit existing metadata and overlay new values.",
+        "sources": [
+          "update",
+          "vectorstore"
+        ]
+      },
+      {
+        "text": "Delete is available by metadata filter. The wrapper adds the selected knowledge-base ID condition to metadata-filter deletions; complete physical erasure through backups and external storage retention was not inspected.",
+        "sources": [
+          "delete",
+          "wrapper"
+        ]
+      },
+      {
+        "text": "Search supports vector similarity for nonblank queries and filter-only retrieval when a query is empty but tags or metadata filters are present. Top-K defaults to 10, threshold to 0.0, tag filters are OR-ed, and the selected knowledge-base predicate is AND-ed with other filters.",
+        "sources": [
+          "search",
+          "wrapper"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "metric": "Answerable recall and abstention",
+        "status": "not_measured",
+        "evidence": "The source shows semantic vector retrieval and a filter-only route, but no answer-quality or abstention probes were run.",
+        "sources": [
+          "search",
+          "wrapper",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "metric": "Correction accuracy and stale-value rate",
+        "status": "not_measured",
+        "evidence": "Source has document/chunk replacement operations and version fields; no correction adjudication or stale-value workload was run.",
+        "sources": [
+          "update",
+          "vectorstore",
+          "document-model",
+          "chunk-model",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "metric": "Deletion leak rate",
+        "status": "not_measured",
+        "evidence": "Metadata-filter deletion exists and is KB-scoped in the wrapper; no post-delete leak check or backup-erasure audit was performed.",
+        "sources": [
+          "delete",
+          "wrapper",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "metric": "Scope isolation leak rate",
+        "status": "not_measured",
+        "evidence": "Query filters bind vector retrieval to a KB ID in source; no cross-tenant or cross-KB isolation experiment was run.",
+        "sources": [
+          "wrapper",
+          "handler",
+          "metrics",
+          "fixture"
+        ]
+      },
+      {
+        "metric": "Evidence support and citation coverage",
+        "status": "not_measured",
+        "evidence": "Document/chunk IDs, file references, metadata, and similarity scores are inspectable; no generated-answer support or citation adjudication was conducted.",
+        "sources": [
+          "document-model",
+          "chunk-model",
+          "vectorstore",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "metric": "Latency, write-to-recall delay, tokens/cost, and storage",
+        "status": "not_measured",
+        "evidence": "Source exposes chunking, top-K, threshold, and byte-accounting controls, but no system or benchmark measurements were collected.",
+        "sources": [
+          "kb-model",
+          "search",
+          "vectorstore",
+          "metrics",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded read-only inspection of the official README, knowledge-base component actions, vector-store wrapper and adapter, and domain models at the verified head. It does not establish deployed configuration, relevance quality, or runtime reliability.",
+        "sources": [
+          "readme",
+          "handler",
+          "vectorstore"
+        ]
+      },
+      {
+        "text": "The wrapper demonstrates query-level KB scoping for vector similarity search and metadata-filter deletion. It does not alone establish tenant authorization or isolation across every vector-store access path.",
+        "sources": [
+          "wrapper",
+          "handler"
+        ]
+      },
+      {
+        "text": "The inspected provenance fields link stored documents and chunks to files, actors, times, versions, and retrieval metadata; they do not prove claim correctness, end-to-end answer citations, or erasure from backups/replicas.",
+        "sources": [
+          "document-model",
+          "chunk-model",
+          "vectorstore",
+          "delete"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No ByteChef runtime, benchmark workload, or tests were run. Source observations are not measured results.",
+      "sources": [
+        "metrics",
+        "status",
+        "fixture"
+      ]
+    }
+  }
+}

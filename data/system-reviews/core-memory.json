@@ -1,0 +1,306 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "core-memory",
+    "name": "Core Memory",
+    "ordinal": 155,
+    "repository": "https://github.com/JohnnyFiv3r/Core-Memory",
+    "listed_repository": "https://github.com/JohnnyFiv3r/Core-Memory",
+    "branch": "main",
+    "revision": "79f6004653d8b162768c3fc67229c9672fade92e",
+    "reviewed_at": "2026-11-25T09:20:38Z",
+    "review_timezone": "UTC (2026-11-25 01:20:38 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Core Memory is a self-hosted Rust memory engine whose durable record is PostgreSQL. It stores source events verbatim, adds model-produced reads and judged relationships as separate records, and retrieves matching stored text with current/disputed state and relationship context.",
+    "atlas_locator": {
+      "ordinal": 155,
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/core-memory.md",
+      "listed_repository": "https://github.com/JohnnyFiv3r/Core-Memory"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/JohnnyFiv3r/Core-Memory/blob/79f6004653d8b162768c3fc67229c9672fade92e/README.md",
+      "note": "No contact email is published in the checked official README. The official SECURITY.md path was also checked and returns GitHub File not found."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/JohnnyFiv3r/Core-Memory/blob/79f6004653d8b162768c3fc67229c9672fade92e/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/JohnnyFiv3r/Core-Memory/blob/79f6004653d8b162768c3fc67229c9672fade92e/README.md",
+      "https://github.com/JohnnyFiv3r/Core-Memory/blob/79f6004653d8b162768c3fc67229c9672fade92e/SECURITY.md"
+    ],
+    "contact_email_note": "No email published in the official README; it directs bug and feature reports to issues and otherwise says to reach out to maintainers. The official SECURITY.md path is absent at the reviewed head.",
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "Current canonical repository; default branch main",
+        "url": "https://github.com/JohnnyFiv3r/Core-Memory"
+      },
+      {
+        "id": "history",
+        "label": "Official main branch history",
+        "path": "commits/main.atom",
+        "symbol": "Current main head 79f6004653d8b162768c3fc67229c9672fade92e; updated 2026-11-23T06:03:15Z",
+        "url": "https://github.com/JohnnyFiv3r/Core-Memory/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified full-SHA head commit",
+        "path": "commit",
+        "symbol": "Current main head 79f6004653d8b162768c3fc67229c9672fade92e",
+        "url": "https://github.com/JohnnyFiv3r/Core-Memory/commit/79f6004653d8b162768c3fc67229c9672fade92e"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "Product model, features, maintainers, erasure, consent, recall, efficiency and upstream-reported evaluation",
+        "url": "https://github.com/JohnnyFiv3r/Core-Memory/blob/79f6004653d8b162768c3fc67229c9672fade92e/README.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Architecture documentation",
+        "path": "docs/architecture.md",
+        "symbol": "Crate boundaries, schema/data model, admission, model calls, scope, recall, erasure and operational limits",
+        "url": "https://github.com/JohnnyFiv3r/Core-Memory/blob/79f6004653d8b162768c3fc67229c9672fade92e/docs/architecture.md"
+      },
+      {
+        "id": "engine",
+        "label": "Engine admission implementation",
+        "path": "crates/core-memory-core/src/engine.rs",
+        "symbol": "Event validation, identity, deterministic chunking and transactional admission pipeline",
+        "url": "https://github.com/JohnnyFiv3r/Core-Memory/blob/79f6004653d8b162768c3fc67229c9672fade92e/crates/core-memory-core/src/engine.rs"
+      },
+      {
+        "id": "store",
+        "label": "Store contract",
+        "path": "crates/core-memory-core/src/store.rs",
+        "symbol": "Durable store interfaces, atomic admission, permits, reads, judging and erasure records",
+        "url": "https://github.com/JohnnyFiv3r/Core-Memory/blob/79f6004653d8b162768c3fc67229c9672fade92e/crates/core-memory-core/src/store.rs"
+      },
+      {
+        "id": "recall",
+        "label": "Recall request implementation",
+        "path": "crates/core-memory-core/src/recall.rs",
+        "symbol": "Recall query validation, scope grants, result limits and follow limits",
+        "url": "https://github.com/JohnnyFiv3r/Core-Memory/blob/79f6004653d8b162768c3fc67229c9672fade92e/crates/core-memory-core/src/recall.rs"
+      },
+      {
+        "id": "security",
+        "label": "Checked official security-policy path",
+        "path": "SECURITY.md",
+        "symbol": "Checked at reviewed head; GitHub reports file not found; no contact email found in README",
+        "url": "https://github.com/JohnnyFiv3r/Core-Memory/blob/79f6004653d8b162768c3fc67229c9672fade92e/SECURITY.md"
+      },
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 155, name, slug, explicit listed repository locator and Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster locator",
+        "path": "content/systems/core-memory.md",
+        "symbol": "Curated roster attribution only; not used as assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/core-memory.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned workload only; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Shared not_run status; no Core Memory measurements",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README names John Inniger and Chris Dedow as maintainers and describes Core Memory 2 as a self-hosted memory engine, not a hosted service.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The Rust workspace separates contracts and deterministic chunking from the engine pipeline, PostgreSQL store, JSONL source reader, model transports, command/HTTP sidecar, and facade. PostgreSQL is the sole durable store in the core_memory schema.",
+        "sources": [
+          "readme",
+          "architecture",
+          "store"
+        ]
+      },
+      {
+        "text": "A SourceEvent is keyed by scope, source namespace, external ID, and revision. Its original bytes are divided into deterministic lossless chunks; source chunks and whole tool calls are represented as beads, while the judge can add textless group beads. Workspace-keyed deterministic IDs support replay identity.",
+        "sources": [
+          "architecture",
+          "engine",
+          "store"
+        ]
+      },
+      {
+        "text": "GitHub identifies main as the default branch; the official main Atom feed and commit page identify 79f6004653d8b162768c3fc67229c9672fade92e as current head. Reviewed 2026-11-25 09:20:38 UTC (01:20:38 PST; America/Los_Angeles).",
+        "sources": [
+          "repo",
+          "history",
+          "head"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Admission validates and chunks an event before writing its event, text, facets, beads, and optional checkpoint atomically. Identity is checked before chunking; identical reoffers return replay, while conflicting identities are refused or handled as a new revision when the profile allows editable records. Outcomes are typed.",
+        "sources": [
+          "engine",
+          "architecture",
+          "store"
+        ]
+      },
+      {
+        "text": "Configured readers label chunks and locate entities/actions/outcomes as byte ranges in source text; tool readers create short action/outcome records; a judge can write fixed-vocabulary arrows. Replacement/withdrawal becomes effective only after a second read agrees, while contradictions keep both sides current and disputed. Reader and judge calls are optional configuration.",
+        "sources": [
+          "readme",
+          "architecture",
+          "engine"
+        ]
+      },
+      {
+        "text": "Erasure governance functions remove an event's text and derived reads in one transaction, mark beads erased, keep identifier tombstones, and append an erasure journal. The architecture warns that PostgreSQL pages, indexes, WAL, and backups can retain deleted bytes until operator rewrite/reindex and backup expiry.",
+        "sources": [
+          "architecture",
+          "readme"
+        ]
+      },
+      {
+        "text": "Recall uses PostgreSQL full-text search without a model call. The query path validates size, control characters, requested limits and scope grants; the store filters by scopes, can substitute a successor for replaced matches, returns current/disputed status, and follows judge arrows within a bounded limit.",
+        "sources": [
+          "readme",
+          "recall",
+          "architecture"
+        ]
+      },
+      {
+        "text": "Source scope is enforced with token grants, query scope checks and PostgreSQL row security. Judging is workspace-wide across scopes that permit the model destination, so cross-scope relationships are possible by design; this is a design observation, not a measured isolation outcome.",
+        "sources": [
+          "readme",
+          "architecture",
+          "recall"
+        ]
+      },
+      {
+        "text": "The system retains source event text and key/time metadata, reader span offsets, read/binding identity, tool outcome reader/compressor identity, judge read and verdict IDs/scopes/revisions, and fixed-type relationship edges. This establishes record origin and relation provenance, not claim-level citations for arbitrary generated answers.",
+        "sources": [
+          "readme",
+          "architecture",
+          "store"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention — unmeasured. Full-text retrieval and typed input refusals are implemented; no answer or abstention probes were adjudicated.",
+        "sources": [
+          "readme",
+          "recall",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate — unmeasured. Replacement/withdrawal is represented by judged arrows with a second read; no correction probes were run.",
+        "sources": [
+          "architecture",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Deletion leakage — unmeasured. Transactional logical erasure and tombstones are implemented; no post-erasure probes or physical-storage checks were run.",
+        "sources": [
+          "architecture",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Scope-isolation leakage — unmeasured. Token scope grants and row security are documented; no paired permitted/forbidden-scope workload was run.",
+        "sources": [
+          "architecture",
+          "recall",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Evidence support and citation coverage — unmeasured. Source spans and record provenance exist; no generated claims or citations were scored.",
+        "sources": [
+          "architecture",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Retrieval latency and write-to-recall delay — unmeasured. No runtime timing observations were collected.",
+        "sources": [
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Tokens and cost — unmeasured. No model calls were run and no provider usage or charges were collected.",
+        "sources": [
+          "architecture",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Storage efficiency — unmeasured. No corpus-attributed logical or physical storage size was collected.",
+        "sources": [
+          "architecture",
+          "metrics",
+          "status"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency/observability — implemented controls include full-text indexing, bounded query/follow limits, leased work queues, configurable reader lanes and budget receipts. These are code/documentation observations, not measurements.",
+        "sources": [
+          "readme",
+          "architecture",
+          "store"
+        ]
+      }
+    ],
+    "limits": [
+      "This is a bounded read-only review of the official README, architecture document, engine admission implementation, store contract, and recall request implementation. It did not trace every PostgreSQL query/migration, provider adapter, sidecar route, or deployment configuration.",
+      "No Core Memory runtime, test suite, or benchmark was run. This review does not establish runtime correctness, retrieval quality, isolation under adversarial use, complete physical erasure, latency, write-to-recall delay, token/cost totals, or storage efficiency.",
+      "A workspace judge intentionally sees eligible memories from its scopes together. Scope grants constrain caller recall and model consent, but workspace-wide judging remains a cross-scope relationship surface.",
+      "Erasure removes logical rows and indexed text transactionally, while database pages, WAL, and backups may retain physical copies until operator cleanup and retention expiry.",
+      "The README reports an upstream adversarial evaluation; its reported counts are not independently re-run or treated as this project's measurement."
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Core Memory runtime, tests, or benchmark workload was executed. Source and documentation observations are not measurements.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

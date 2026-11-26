@@ -1,0 +1,357 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 146,
+    "slug": "agent-context-os",
+    "name": "Context OS",
+    "repository": "https://github.com/conorbronsdon/agent-context-os",
+    "branch": "main",
+    "revision": "1a9c688606801de6454a175081d406f47020a144",
+    "reviewed_at": "2026-11-25T08:58:47Z",
+    "review_timezone": "UTC (2026-11-25 00:58:47 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": null,
+      "source_url": null,
+      "checked_urls": [
+        "https://github.com/conorbronsdon/agent-context-os/blob/1a9c688606801de6454a175081d406f47020a144/README.md",
+        "https://github.com/conorbronsdon/agent-context-os/blob/1a9c688606801de6454a175081d406f47020a144/SECURITY.md",
+        "https://github.com/conorbronsdon/agent-context-os/blob/1a9c688606801de6454a175081d406f47020a144/CONTRIBUTING.md"
+      ],
+      "note": "No published contact email was found in the checked official README, security policy, or contributor guide."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/conorbronsdon/agent-context-os/blob/1a9c688606801de6454a175081d406f47020a144/README.md",
+      "https://github.com/conorbronsdon/agent-context-os/blob/1a9c688606801de6454a175081d406f47020a144/SECURITY.md",
+      "https://github.com/conorbronsdon/agent-context-os/blob/1a9c688606801de6454a175081d406f47020a144/CONTRIBUTING.md"
+    ],
+    "contact_email_note": "No email was published in these checked official project documents; no profile, commit metadata, or third-party directory was used.",
+    "summary": "Context OS is a Git-backed context and workflow template for coding agents. It keeps durable context in Markdown and uses shared lifecycle code to produce digest-bound proposals and local receipts for reviewed changes. This review describes selected source at a pinned commit; no runtime, tests, or benchmark workload was run.",
+    "atlas_locator": {
+      "ordinal": 146,
+      "name": "Context OS",
+      "slug": "agent-context-os",
+      "listed_repository": "https://github.com/conorbronsdon/agent-context-os",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agent-context-os.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated system roster",
+        "path": "data/memory-systems.json",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/agent-context-os.md",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/agent-context-os.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository",
+        "symbol": "public repository; default branch main",
+        "url": "https://github.com/conorbronsdon/agent-context-os"
+      },
+      {
+        "id": "main_feed",
+        "label": "Official main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "full head 1a9c688606801de6454a175081d406f47020a144; updated 2026-11-17T22:00:23Z",
+        "url": "https://github.com/conorbronsdon/agent-context-os/commits/main.atom"
+      },
+      {
+        "id": "commit",
+        "label": "Reviewed full upstream commit",
+        "path": "commit",
+        "symbol": "1a9c688606801de6454a175081d406f47020a144",
+        "url": "https://github.com/conorbronsdon/agent-context-os/commit/1a9c688606801de6454a175081d406f47020a144"
+      },
+      {
+        "id": "readme",
+        "label": "Official README at reviewed commit",
+        "path": "README.md",
+        "url": "https://github.com/conorbronsdon/agent-context-os/blob/1a9c688606801de6454a175081d406f47020a144/README.md"
+      },
+      {
+        "id": "continuity",
+        "label": "Continuity briefing and receipt history implementation",
+        "path": "contextos/continuity.py",
+        "url": "https://github.com/conorbronsdon/agent-context-os/blob/1a9c688606801de6454a175081d406f47020a144/contextos/continuity.py"
+      },
+      {
+        "id": "kernel",
+        "label": "Lifecycle kernel implementation",
+        "path": "contextos/kernel.py",
+        "url": "https://github.com/conorbronsdon/agent-context-os/blob/1a9c688606801de6454a175081d406f47020a144/contextos/kernel.py"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "url": "https://github.com/conorbronsdon/agent-context-os/blob/1a9c688606801de6454a175081d406f47020a144/SECURITY.md"
+      },
+      {
+        "id": "contributing",
+        "label": "Official contributor documentation",
+        "path": "CONTRIBUTING.md",
+        "url": "https://github.com/conorbronsdon/agent-context-os/blob/1a9c688606801de6454a175081d406f47020a144/CONTRIBUTING.md"
+      },
+      {
+        "id": "metric_defs",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "results",
+        "label": "Project execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents Context OS as a Git-backed context and workflow layer with Markdown state, provider-neutral workflow skills, and host adapters. It identifies Conor Bronsdon as creator; this review does not infer other maintainer identities.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "At catalog ordinal 146, the roster names Context OS, slug agent-context-os, and lists the explicit repository locator. The pinned Atlas item is retained only as identity and locator attribution.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The listed repository is the public upstream; its repository page identifies main as the default branch. The official main feed and commit page identify full head 1a9c688606801de6454a175081d406f47020a144.",
+        "sources": [
+          "repo",
+          "main_feed",
+          "commit"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README describes plain Markdown as the durable state layer, with identity, projects, state, sessions, routing instructions, and portable skills. Host-specific commands, hooks, and permissions live in adapter directories; registered runtimes route to the shared deterministic lifecycle kernel.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The documented lifecycle is setup, start, update, and end. Start produces a read-only continuity briefing; update and end create reviewed proposals for state/session changes. The README says accepted proposals are applied with a digest and receipts, keeping the human-facing adapters separate from shared state transitions.",
+        "sources": [
+          "readme",
+          "kernel"
+        ]
+      },
+      {
+        "text": "The briefing implementation reads fixed lifecycle sources plus explicitly selected Markdown files. Each source result includes freshness, normalized-text and raw hashes, and an optional expected-revision check; it labels the output a preview, not proof that a host loaded the files.",
+        "sources": [
+          "continuity"
+        ]
+      },
+      {
+        "text": "Git is both the repository format and an important evidence boundary. In split-root mode the README documents separate ContextRoot and WorkingRoot: the former is writable context, while the latter supplies bounded Git identity/status/history evidence and receives no lifecycle files.",
+        "sources": [
+          "readme",
+          "kernel"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write and update: lifecycle requests are represented as proposals with reviewed diffs and a digest-bound apply step. The README describes setup, checkpoint/update, and end-session handoff flows; the continuity source exposes a read-only briefing and history view rather than writing context itself.",
+        "sources": [
+          "readme",
+          "kernel",
+          "continuity"
+        ]
+      },
+      {
+        "text": "Delete and archival: the inspected README and selected continuity implementation describe lifecycle updates and local receipts, but this review did not establish a general record-level forget API, a deletion propagation contract, or byte-erasure behavior. Those behaviors remain unknown outside the selected paths.",
+        "sources": [
+          "readme",
+          "continuity"
+        ]
+      },
+      {
+        "text": "Retrieval: start assembles state, priorities, decisions, and the recent session handoff. A briefing can include at most 24 explicitly selected Markdown sources, only reads regular files up to 1 MiB, includes bounded excerpts, and can compare selected sources against supplied normalized-text SHA-256 expectations.",
+        "sources": [
+          "readme",
+          "continuity"
+        ]
+      },
+      {
+        "text": "Scope isolation: in a split-root setup, ContextRoot is the only write target and WorkingRoot contributes bounded Git evidence. The kernel and briefing code use root/path guards for local state. This is a source-level boundary; it does not prove the host permission model or security isolation of a running agent.",
+        "sources": [
+          "readme",
+          "continuity",
+          "security"
+        ]
+      },
+      {
+        "text": "Provenance and evidence: briefing sources carry repository-relative paths, freshness labels, and hashes, with optional expected-hash checks. The history view joins local receipts to proposal diffs by digest and reports before/after file hashes, but warns that receipts may be missing or edited, runtime identity is self-reported, approval is not authenticated, and the view is not a complete Git or host read history.",
+        "sources": [
+          "continuity",
+          "kernel"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: plain files avoid a required external memory database. Briefings bound additional sources, file size, excerpts, and history to 1,000 receipts. The inspected paths expose freshness and revision diagnostics and local receipt history; no runtime telemetry, latency, token, cost, or storage measurements were collected.",
+        "sources": [
+          "readme",
+          "continuity"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "The briefing path selects and renders context files; no answerability, retrieval-quality, or abstention workload was run.",
+        "sources": [
+          "continuity",
+          "metric_defs",
+          "results",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "Reviewed update proposals and freshness/revision checks are source-visible; no correction or stale-value sequence was run.",
+        "sources": [
+          "readme",
+          "continuity",
+          "metric_defs",
+          "results"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No deletion leakage or residual-content workload was run, and the inspected sources do not establish a general deletion contract.",
+        "sources": [
+          "readme",
+          "continuity",
+          "metric_defs",
+          "results"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Root and path boundaries are documented and implemented in inspected paths; no cross-project or cross-user isolation workload was run.",
+        "sources": [
+          "readme",
+          "continuity",
+          "security",
+          "metric_defs",
+          "results"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Briefings expose file paths and hashes; no generated-claim support or citation-coverage adjudication was performed.",
+        "sources": [
+          "continuity",
+          "metric_defs",
+          "results"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No latency distribution was collected for briefing or search paths.",
+        "sources": [
+          "metric_defs",
+          "results"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timed write-then-briefing workload was run.",
+        "sources": [
+          "readme",
+          "continuity",
+          "metric_defs",
+          "results"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No provider token usage or cost accounting was collected.",
+        "sources": [
+          "readme",
+          "metric_defs",
+          "results"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "The system uses Markdown and Git-backed state, but no corpus footprint was measured.",
+        "sources": [
+          "readme",
+          "metric_defs",
+          "results"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded inspection of the README, shared lifecycle kernel, continuity reporting, and official security/contributor documents. It does not audit every runtime adapter, workflow, operating system, provider integration, or error path.",
+        "sources": [
+          "readme",
+          "continuity",
+          "kernel"
+        ]
+      },
+      {
+        "text": "Local receipt history is not an authenticated or complete audit trail: the source explicitly warns receipts can be missing or edited, runtime is self-reported, human approval is not authenticated, and host reads are not recorded.",
+        "sources": [
+          "continuity"
+        ]
+      },
+      {
+        "text": "The source review cannot establish live host enforcement, runtime scope isolation, correctness of stored context, retrieval quality, physical deletion, reliability, or performance.",
+        "sources": [
+          "readme",
+          "continuity",
+          "security",
+          "metric_defs"
+        ]
+      },
+      {
+        "text": "No Context OS runtime, tests, or benchmarks were run. The project metric document and fixture define measurement protocol; the shared execution record is not a Context OS result.",
+        "sources": [
+          "metric_defs",
+          "fixture",
+          "results"
+        ]
+      }
+    ],
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "Benchmark status is not_run. No Context OS runtime, tests, or benchmark workload was executed for this source review."
+    }
+  }
+}

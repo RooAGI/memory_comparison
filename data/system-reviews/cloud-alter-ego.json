@@ -1,0 +1,418 @@
+{
+  "schema_version": 1,
+  "article": {
+    "ordinal": 131,
+    "slug": "cloud-alter-ego",
+    "name": "Cloud Alter Ego",
+    "repository": "https://github.com/SebastiaanBoon/cloud-alter-ego",
+    "listed_repository": "https://github.com/SebastiaanBoon/cloud-alter-ego",
+    "branch": "main",
+    "revision": "3f8b3bb4bfe243dacef2903e27a3f569638b622f",
+    "reviewed_at": "2026-11-25T08:21:07Z",
+    "review_timezone": "UTC (2026-11-25 00:21:07 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/SebastiaanBoon/cloud-alter-ego/blob/3f8b3bb4bfe243dacef2903e27a3f569638b622f/README.md",
+      "note": "No contact email is published in the official pinned README. The official pinned SECURITY.md was also checked; it directs vulnerability reports through GitHub private vulnerability reporting and publishes no email."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/SebastiaanBoon/cloud-alter-ego/blob/3f8b3bb4bfe243dacef2903e27a3f569638b622f/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/SebastiaanBoon/cloud-alter-ego/blob/3f8b3bb4bfe243dacef2903e27a3f569638b622f/README.md",
+      "https://github.com/SebastiaanBoon/cloud-alter-ego/blob/3f8b3bb4bfe243dacef2903e27a3f569638b622f/SECURITY.md"
+    ],
+    "contact_email_note": "No published contact email was found in the official pinned README or SECURITY.md; security reports are directed to GitHub private vulnerability reporting.",
+    "summary": "A self-managed Git repository and Python hooks that inject working rules, journal turns, save session transcripts and sync contexts for coding agents. Recall is file reading guided by the agent, with no measured benchmark result.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cloud-alter-ego.md"
+    },
+    "sources": [
+      {
+        "id": "roster",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[130]: Cloud Alter Ego; slug cloud-alter-ego; explicit listed repository and Atlas source attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster attribution only",
+        "path": "content/systems/cloud-alter-ego.md",
+        "symbol": "Catalog attribution at revision 19199a4fc249e89c0793be06f0b166b358089ba0, used only for identity and locator context",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cloud-alter-ego.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Public SebastiaanBoon/cloud-alter-ego; repository page shows main as default branch",
+        "url": "https://github.com/SebastiaanBoon/cloud-alter-ego"
+      },
+      {
+        "id": "history",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Full current main head 3f8b3bb4bfe243dacef2903e27a3f569638b622f; feed updated 2026-11-19T20:13:52Z",
+        "url": "https://github.com/SebastiaanBoon/cloud-alter-ego/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed full upstream head",
+        "path": "commit",
+        "symbol": "3f8b3bb4bfe243dacef2903e27a3f569638b622f",
+        "url": "https://github.com/SebastiaanBoon/cloud-alter-ego/commit/3f8b3bb4bfe243dacef2903e27a3f569638b622f"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned README and contact check",
+        "path": "README.md",
+        "symbol": "System description, layout, hook flow, setup, concurrency, privacy and deletion limits; checked for published contact email",
+        "url": "https://github.com/SebastiaanBoon/cloud-alter-ego/blob/3f8b3bb4bfe243dacef2903e27a3f569638b622f/README.md"
+      },
+      {
+        "id": "workflow",
+        "label": "Pinned workflow documentation",
+        "path": "WORKFLOW.md",
+        "symbol": "Hooks, context selection, journal and session-save behavior, syncing, and documented retrieval limits",
+        "url": "https://github.com/SebastiaanBoon/cloud-alter-ego/blob/3f8b3bb4bfe243dacef2903e27a3f569638b622f/WORKFLOW.md"
+      },
+      {
+        "id": "session",
+        "label": "SessionStart hook",
+        "path": "tools/session_start.py",
+        "symbol": "Pull/sync attempt, per-session context resolution, preferences injection and context-reading instructions",
+        "url": "https://github.com/SebastiaanBoon/cloud-alter-ego/blob/3f8b3bb4bfe243dacef2903e27a3f569638b622f/tools/session_start.py"
+      },
+      {
+        "id": "journal",
+        "label": "Automatic journal hook and sync",
+        "path": "tools/auto_journal.py",
+        "symbol": "Question/answer extraction, truncation, journal write, serialized Git sync, status and error reporting",
+        "url": "https://github.com/SebastiaanBoon/cloud-alter-ego/blob/3f8b3bb4bfe243dacef2903e27a3f569638b622f/tools/auto_journal.py"
+      },
+      {
+        "id": "save",
+        "label": "Session transcript save hook",
+        "path": "tools/save_session.py",
+        "symbol": "Context resolution, transcript rendering/redaction, saved files and Git commit/pull/push behavior",
+        "url": "https://github.com/SebastiaanBoon/cloud-alter-ego/blob/3f8b3bb4bfe243dacef2903e27a3f569638b622f/tools/save_session.py"
+      },
+      {
+        "id": "note",
+        "label": "Context and manual journal CLI",
+        "path": "tools/note.py",
+        "symbol": "Client/project context folders, session and device-default markers, journal append and available commands",
+        "url": "https://github.com/SebastiaanBoon/cloud-alter-ego/blob/3f8b3bb4bfe243dacef2903e27a3f569638b622f/tools/note.py"
+      },
+      {
+        "id": "redact",
+        "label": "Secret redaction helper",
+        "path": "tools/redact.py",
+        "symbol": "Known token/key/password patterns applied to journal and transcript content",
+        "url": "https://github.com/SebastiaanBoon/cloud-alter-ego/blob/3f8b3bb4bfe243dacef2903e27a3f569638b622f/tools/redact.py"
+      },
+      {
+        "id": "attributes",
+        "label": "Journal merge policy",
+        "path": ".gitattributes",
+        "symbol": "Union merge driver configured for journal Markdown files",
+        "url": "https://github.com/SebastiaanBoon/cloud-alter-ego/blob/3f8b3bb4bfe243dacef2903e27a3f569638b622f/.gitattributes"
+      },
+      {
+        "id": "security",
+        "label": "Pinned security policy and contact check",
+        "path": "SECURITY.md",
+        "symbol": "Private vulnerability reporting instructions; checked for published contact email",
+        "url": "https://github.com/SebastiaanBoon/cloud-alter-ego/blob/3f8b3bb4bfe243dacef2903e27a3f569638b622f/SECURITY.md"
+      },
+      {
+        "id": "preferences",
+        "label": "Pinned working rules",
+        "path": "preferences.md",
+        "symbol": "Rules injected at SessionStart, including guidance to read context files and the stated private-repository policy",
+        "url": "https://github.com/SebastiaanBoon/cloud-alter-ego/blob/3f8b3bb4bfe243dacef2903e27a3f569638b622f/preferences.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Definitions for quality, scope, evidence, timing, token/cost and storage domains",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Planned synthetic cases, not this system's results",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "No benchmark result for this review; benchmark status remains not_run",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "Catalog ordinal 131 identifies Cloud Alter Ego, slug cloud-alter-ego, with the explicit listed locator https://github.com/SebastiaanBoon/cloud-alter-ego. The pinned Atlas report is retained only for roster identity and locator attribution, not as assessment evidence.",
+        "sources": [
+          "roster",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The official public repository page shows main as its default branch. GitHub's main commit feed reports full head 3f8b3bb4bfe243dacef2903e27a3f569638b622f and was updated at 2026-11-19T20:13:52Z; the repository page shows the matching abbreviated head.",
+        "sources": [
+          "repo",
+          "history",
+          "head"
+        ]
+      },
+      {
+        "text": "The README describes a self-managed Git repository and Python hooks for Claude Code and Codex. It separately describes Alter Ego as a remote MCP connector; this review assesses the local repository system, not that hosted connector.",
+        "sources": [
+          "readme",
+          "workflow"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The memory is a directory tree rather than a database or embedding index. Shared profile/rules live in identity.md and preferences.md; clients/ and projects/ hold context READMEs, monthly journal Markdown, and saved sessions. skills/ and techniques/ contain optional reference material. Git is documented as the source of truth across clones.",
+        "sources": [
+          "readme",
+          "workflow",
+          "session"
+        ]
+      },
+      {
+        "text": "SessionStart attempts to repair/pull repository state, determines the session context, and injects the full preferences.md plus instructions to read the active context README and newest journal. Claude Code hooks capture prompt and answer events; Codex uses a notify callback. SessionEnd saves a transcript. The documented core is plain Python with no third-party dependencies.",
+        "sources": [
+          "workflow",
+          "session",
+          "journal",
+          "save",
+          "readme"
+        ]
+      },
+      {
+        "text": "Context pointers are per-session files under .current-context.d when a session ID is known, with a gitignored .current-context device default and clients/_unsorted fallback. Monthly journal files are append-oriented text. Saved Claude transcripts have JSONL and readable Markdown forms; known secret patterns are redacted before journal/transcript content is saved.",
+        "sources": [
+          "note",
+          "save",
+          "redact",
+          "readme",
+          "attributes"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: UserPromptSubmit and Stop hooks extract and shorten the latest user question and assistant answer, append them to the active context journal, and start Git synchronization. The agent is also instructed to add one meaningful summary line per turn with note.py. SessionEnd stores the transcript and commits changes. These are source-visible behaviors, not runtime results.",
+        "sources": [
+          "workflow",
+          "journal",
+          "note",
+          "save"
+        ]
+      },
+      {
+        "text": "Update or correction: note.py appends new lines; working rules, profile, READMEs and other context files can be edited as ordinary files. I found no structured fact-replacement, supersession or correction API in the inspected local repository paths. Journals are intended to be append-only and Git history retains earlier content.",
+        "sources": [
+          "note",
+          "workflow",
+          "readme",
+          "attributes"
+        ]
+      },
+      {
+        "text": "Delete: I found no dedicated forget/delete command in the inspected CLI and hooks. Files can be edited or removed manually, but Git history and other clones retain prior versions unless separately cleaned. SessionEnd removes the previous saved file for the same session before writing its newer, fuller transcript; that is session-save replacement, not a general memory deletion contract.",
+        "sources": [
+          "note",
+          "save",
+          "readme",
+          "workflow"
+        ]
+      },
+      {
+        "text": "Retrieval: there is no automatic semantic or keyword search engine in the inspected local core. SessionStart injects preferences and asks the agent to open the current context README and newest journal; further recall is agent-directed file reading. Full transcripts are archived in sessions/ but are not described as automatically searched at startup.",
+        "sources": [
+          "workflow",
+          "session",
+          "readme"
+        ]
+      },
+      {
+        "text": "Scope: context files are organized under client/project folders and each session can select a folder. Missing session context falls back to a device-wide default or _unsorted. The repository can contain multiple clients and projects, and the instructions direct the agent to read selected files; I found no access-control or enforced read filter separating folders.",
+        "sources": [
+          "note",
+          "session",
+          "workflow",
+          "readme",
+          "preferences"
+        ]
+      },
+      {
+        "text": "Provenance and evidence: journal entries carry local timestamps and context paths; saved transcripts preserve conversation events and tool-use/result markers, and Git records repository history. Automatic journal lines are shortened, while session transcripts retain more content after redaction. The inspected output format does not provide claim-level source citations or a guarantee that a later answer is supported by its recalled lines.",
+        "sources": [
+          "journal",
+          "note",
+          "save",
+          "redact",
+          "readme"
+        ]
+      },
+      {
+        "text": "Efficiency and observability: hooks avoid model calls for mechanical question/answer capture, while one agent-written summary line adds token use. Journal lines are truncated, appends are local, and sync uses a lock plus retries around pull/push; journal files use Git's union merge. Sync health/status and error logs are present, and SessionStart warns when injected context is too long. No efficiency or reliability measurements were collected.",
+        "sources": [
+          "workflow",
+          "journal",
+          "session",
+          "attributes",
+          "readme"
+        ]
+      },
+      {
+        "text": "Concurrency behavior differs by file type. The repository documents union merges for journal Markdown; other files use ordinary Git merging and can conflict when devices edit the same lines. Session IDs provide distinct active-context pointers for parallel sessions on one device, but this does not enforce access isolation.",
+        "sources": [
+          "readme",
+          "workflow",
+          "note",
+          "attributes"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "The local design provides prompt/context file reading but no evaluated answerable-recall or abstention behavior; no probes were run.",
+        "sources": [
+          "workflow",
+          "session",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and staleness",
+        "status": "unmeasured",
+        "evidence": "No structured correction workflow or stale-value probe was evaluated.",
+        "sources": [
+          "note",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No general delete contract or post-delete leakage audit was evaluated; Git history and clones can retain content.",
+        "sources": [
+          "readme",
+          "save",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "Folders and session context pointers organize reads and writes; no cross-context isolation probe was run.",
+        "sources": [
+          "note",
+          "session",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Conversation provenance is retained, but no answer-level source support or citation coverage was adjudicated.",
+        "sources": [
+          "save",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No retrieval latency workload was run.",
+        "sources": [
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No timed write-then-recall workload was run.",
+        "sources": [
+          "journal",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No token or cost measurement was collected.",
+        "sources": [
+          "readme",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No storage-size or per-item efficiency measurement was collected.",
+        "sources": [
+          "save",
+          "metrics"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This review inspected the official README, workflow guide, session and journaling hooks, context CLI, redaction helper and Git journal merge rule at one verified revision. It did not trace every optional tool, installer mutation, platform-specific behavior, or all error paths.",
+        "sources": [
+          "readme",
+          "workflow",
+          "session",
+          "journal",
+          "save",
+          "note"
+        ]
+      },
+      {
+        "text": "No Cloud Alter Ego runtime, tests or benchmark workloads were run. Retrieval quality, abstention, sync reliability, write-to-recall delay, token use, cost, storage growth, deletion completeness and isolation remain unmeasured.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "record"
+        ]
+      },
+      {
+        "text": "Redaction only covers known patterns and the README warns it does not catch every secret. Automatically pushed journals and transcripts can therefore retain sensitive material; private repository access and user handling remain important operational assumptions.",
+        "sources": [
+          "redact",
+          "readme",
+          "security"
+        ]
+      },
+      {
+        "text": "A per-session context marker is a selection convention, not an authenticated principal or storage boundary. Git history, device clones and remote copies also mean removing a current file does not establish complete erasure.",
+        "sources": [
+          "note",
+          "readme",
+          "workflow",
+          "metrics"
+        ]
+      }
+    ],
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "No Cloud Alter Ego benchmark execution was performed; source structure and documentation are not benchmark results."
+    }
+  }
+}

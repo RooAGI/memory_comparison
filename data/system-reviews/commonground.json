@@ -1,0 +1,435 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 140,
+    "slug": "commonground",
+    "name": "CommonGround Kernel",
+    "repository": "https://github.com/Intelligent-Internet/CommonGround",
+    "listed_repository": "https://github.com/Intelligent-Internet/CommonGround",
+    "branch": "main",
+    "revision": "10b50ddb0fb4f0d5b4a58e841d6f40b52a3cbd5b",
+    "reviewed_at": "2026-11-25T08:46:00Z",
+    "review_timezone": "UTC (2026-11-25 00:46:00 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "CommonGround Kernel v3r1 is a PostgreSQL-backed ledger and turn-lifecycle foundation for durable, inspectable agent work. It stores turn-scoped semantic records as references to CardBox payloads and exposes project, turn, and agent feeds; the reviewed kernel does not provide semantic search or a complete private-memory product. This source assessment is not a runtime or benchmark result.",
+    "atlas_locator": {
+      "ordinal": 140,
+      "name": "CommonGround Kernel",
+      "slug": "commonground",
+      "listed_repository": "https://github.com/Intelligent-Internet/CommonGround",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/commonground.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": null,
+      "checked_urls": [
+        "https://github.com/Intelligent-Internet/CommonGround/blob/10b50ddb0fb4f0d5b4a58e841d6f40b52a3cbd5b/README.md",
+        "https://github.com/Intelligent-Internet/CommonGround/blob/10b50ddb0fb4f0d5b4a58e841d6f40b52a3cbd5b/SECURITY.md"
+      ],
+      "note": "No published contact email found in the official pinned README or SECURITY.md. No commit/profile metadata or third-party directory was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/Intelligent-Internet/CommonGround/blob/10b50ddb0fb4f0d5b4a58e841d6f40b52a3cbd5b/README.md",
+      "https://github.com/Intelligent-Internet/CommonGround/blob/10b50ddb0fb4f0d5b4a58e841d6f40b52a3cbd5b/SECURITY.md"
+    ],
+    "contact_email_note": "No published email in the checked official README or SECURITY.md; both exact pinned URLs are recorded.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog identity and ordinal",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[139], ordinal 140: CommonGround Kernel, slug commonground, explicit listed repository locator, pinned Atlas attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Atlas roster attribution only",
+        "path": "content/systems/commonground.md",
+        "symbol": "Pinned attribution used only to resolve curated name, slug and listed locator; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/commonground.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official upstream repository",
+        "path": "repository page",
+        "symbol": "Public Intelligent-Internet/CommonGround repository page identifies main as the default branch",
+        "url": "https://github.com/Intelligent-Internet/CommonGround"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Full current main head 10b50ddb0fb4f0d5b4a58e841d6f40b52a3cbd5b; feed updated 2026-05-20T11:33:59Z",
+        "url": "https://github.com/Intelligent-Internet/CommonGround/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed upstream head",
+        "path": "commit",
+        "symbol": "10b50ddb0fb4f0d5b4a58e841d6f40b52a3cbd5b",
+        "url": "https://github.com/Intelligent-Internet/CommonGround/commit/10b50ddb0fb4f0d5b4a58e841d6f40b52a3cbd5b"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "v3r1 preview scope, memory-ready boundary, local setup, current integration and limitations; checked for contact",
+        "url": "https://github.com/Intelligent-Internet/CommonGround/blob/10b50ddb0fb4f0d5b4a58e841d6f40b52a3cbd5b/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Pinned official SECURITY.md",
+        "path": "SECURITY.md",
+        "symbol": "Private vulnerability reporting path; no published contact email; checked for contact",
+        "url": "https://github.com/Intelligent-Internet/CommonGround/blob/10b50ddb0fb4f0d5b4a58e841d6f40b52a3cbd5b/SECURITY.md"
+      },
+      {
+        "id": "intro",
+        "label": "Pinned system introduction",
+        "path": "docs/en/introduction/what-is-commonground.md",
+        "symbol": "Kernel purpose and memory boundary",
+        "url": "https://github.com/Intelligent-Internet/CommonGround/blob/10b50ddb0fb4f0d5b4a58e841d6f40b52a3cbd5b/docs/en/introduction/what-is-commonground.md"
+      },
+      {
+        "id": "schema",
+        "label": "Pinned PostgreSQL schema",
+        "path": "CommonGround/infra/postgres.py",
+        "symbol": "Agent, turn, semantic-record, ledger and scope-index tables, project-key constraints and foreign keys",
+        "url": "https://github.com/Intelligent-Internet/CommonGround/blob/10b50ddb0fb4f0d5b4a58e841d6f40b52a3cbd5b/CommonGround/infra/postgres.py"
+      },
+      {
+        "id": "semantic",
+        "label": "Pinned semantic kernel",
+        "path": "CommonGround/kernel/semantic.py",
+        "symbol": "Claim-gated append, same-project CardBox validation, turn-scoped semantic listing",
+        "url": "https://github.com/Intelligent-Internet/CommonGround/blob/10b50ddb0fb4f0d5b4a58e841d6f40b52a3cbd5b/CommonGround/kernel/semantic.py"
+      },
+      {
+        "id": "repositories",
+        "label": "Pinned repository implementation",
+        "path": "CommonGround/infra/repositories.py",
+        "symbol": "Semantic record reads/writes, ledger event writes and project/turn/agent feeds",
+        "url": "https://github.com/Intelligent-Internet/CommonGround/blob/10b50ddb0fb4f0d5b4a58e841d6f40b52a3cbd5b/CommonGround/infra/repositories.py"
+      },
+      {
+        "id": "sdk",
+        "label": "Pinned Kernel SDK",
+        "path": "CommonGround/sdk/composites.py",
+        "symbol": "Context hydration, feed reads and work-memory report payload/source_refs flow",
+        "url": "https://github.com/Intelligent-Internet/CommonGround/blob/10b50ddb0fb4f0d5b4a58e841d6f40b52a3cbd5b/CommonGround/sdk/composites.py"
+      },
+      {
+        "id": "lifecycle",
+        "label": "Pinned lifecycle kernel",
+        "path": "CommonGround/kernel/lifecycle.py",
+        "symbol": "Turn claim, suspend/resume/finish lifecycle and trace-context handling",
+        "url": "https://github.com/Intelligent-Internet/CommonGround/blob/10b50ddb0fb4f0d5b4a58e841d6f40b52a3cbd5b/CommonGround/kernel/lifecycle.py"
+      },
+      {
+        "id": "auth",
+        "label": "Pinned request authentication",
+        "path": "CommonGround/service/auth.py",
+        "symbol": "Bearer credential validation and caller project/agent identity matching",
+        "url": "https://github.com/Intelligent-Internet/CommonGround/blob/10b50ddb0fb4f0d5b4a58e841d6f40b52a3cbd5b/CommonGround/service/auth.py"
+      },
+      {
+        "id": "routes",
+        "label": "Pinned service routes",
+        "path": "CommonGround/service/routes.py",
+        "symbol": "v3r1 write/read routes and exposed API surface",
+        "url": "https://github.com/Intelligent-Internet/CommonGround/blob/10b50ddb0fb4f0d5b4a58e841d6f40b52a3cbd5b/CommonGround/service/routes.py"
+      },
+      {
+        "id": "http",
+        "label": "Pinned HTTP reference",
+        "path": "docs/en/reference/http.md",
+        "symbol": "Public route inventory including semantic append and turn/agent/project feeds",
+        "url": "https://github.com/Intelligent-Internet/CommonGround/blob/10b50ddb0fb4f0d5b4a58e841d6f40b52a3cbd5b/docs/en/reference/http.md"
+      },
+      {
+        "id": "submodule",
+        "label": "Pinned CardBox submodule declaration",
+        "path": ".gitmodules",
+        "symbol": "Repository delegates payload storage to the CG-Cardbox submodule",
+        "url": "https://github.com/Intelligent-Internet/CommonGround/blob/10b50ddb0fb4f0d5b4a58e841d6f40b52a3cbd5b/.gitmodules"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Definitions for recall, correction, deletion, scope, evidence and efficiency metrics",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Synthetic benchmark workload and expected outcomes; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Project baseline execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Project execution tracking; CommonGround not run as part of this review",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "Catalog ordinal 140 identifies CommonGround Kernel, slug commonground, with the explicit listed repository locator. The pinned Atlas record is attribution for roster identity/locator only, not assessment evidence.",
+        "sources": [
+          "catalog",
+          "atlas"
+        ]
+      },
+      {
+        "text": "The official repository page identifies main as default branch. Its main feed reports full head 10b50ddb0fb4f0d5b4a58e841d6f40b52a3cbd5b updated 2026-05-20T11:33:59Z; git ls-remote and a shallow checkout independently resolved the same SHA.",
+        "sources": [
+          "repo",
+          "feed",
+          "head"
+        ]
+      },
+      {
+        "text": "The project describes v3r1 as a preview kernel for durable public work records, distinct from a complete private-memory product.",
+        "sources": [
+          "readme",
+          "intro"
+        ]
+      },
+      {
+        "text": "The official pinned README and SECURITY.md were checked for a published contact email; neither publishes one.",
+        "sources": [
+          "readme",
+          "security"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "PostgreSQL stores agent and credential state, turns and claim state, semantic-record references, and a project ledger. A semantic record carries project/record IDs, turn and sequence, role, CardBox reference, and creation time; payload text is external to this table.",
+        "sources": [
+          "schema"
+        ]
+      },
+      {
+        "text": "The ledger stores a monotonically sequenced event, project, type, subject, actor, optional cause, timestamp, note, annotations and optional payload reference. A separate index maps events to project/turn/agent scopes for feed reads.",
+        "sources": [
+          "schema",
+          "repositories"
+        ]
+      },
+      {
+        "text": "The repository declares CG-Cardbox as a submodule. The shallow checkout did not initialize it, so this review does not establish CardBox payload internals, retention, deletion, or backup behavior.",
+        "sources": [
+          "submodule",
+          "schema"
+        ]
+      },
+      {
+        "text": "The kernel represents durable work through Agents, Turns, turn-owned public semantics, claim fencing, and causal lineage. Its own README describes it as memory-ready rather than a complete memory system.",
+        "sources": [
+          "readme",
+          "intro"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: a worker appends a semantic record with an active claim. The semantic kernel enforces same-project CardBox reference and existence before inserting a new turn-sequenced record. Work-memory reports accept records with optional source_refs and place report payloads into CardBox before indexing them in the kernel.",
+        "sources": [
+          "semantic",
+          "sdk",
+          "routes"
+        ]
+      },
+      {
+        "text": "Update/correction: semantic records are appended; no semantic update method was found in the inspected API. Turn lifecycle state changes are separate. A later record can represent a correction, but the kernel does not define supersession, validity intervals, or a current-fact selection rule.",
+        "sources": [
+          "semantic",
+          "lifecycle",
+          "schema"
+        ]
+      },
+      {
+        "text": "Delete: the inspected HTTP routes expose no semantic-record or payload deletion operation. A foreign key cascades semantic rows when a turn is deleted, but the inspected service has no such public turn-delete route; CardBox payload erasure was not assessed.",
+        "sources": [
+          "routes",
+          "http",
+          "schema",
+          "submodule"
+        ]
+      },
+      {
+        "text": "Retrieval: the SDK reads records by project and turn in increasing turn sequence, then hydrates CardBox references. Ledger feeds read after a ledger sequence, either across a project or through the project/turn/agent scope index. These are identity and order based, not semantic search.",
+        "sources": [
+          "sdk",
+          "repositories",
+          "readme"
+        ]
+      },
+      {
+        "text": "Scope: requests authenticate a bearer credential and require its project and agent to match request identity. Composite project keys, project-matched payload references, and project-scoped feed indexes enforce boundaries in the inspected code; isolation was not tested under deployment.",
+        "sources": [
+          "auth",
+          "schema",
+          "repositories"
+        ]
+      },
+      {
+        "text": "Provenance/evidence: ledger entries name actor, subject, and optional cause, and may include annotations, notes, and payload references. Work-memory report records can carry source_refs. The implementation does not itself adjudicate evidence support or guarantee claim-level citations to consumers.",
+        "sources": [
+          "schema",
+          "repositories",
+          "sdk"
+        ]
+      },
+      {
+        "text": "Efficiency/observability: sequence-based indexed feeds and caller-supplied limits support incremental reads. The reviewed paths use PostgreSQL and CardBox rather than model inference. The API accepts trace context and operation metadata; selected kernel methods discard trace context, while ledger annotations can carry operation notes/reasons.",
+        "sources": [
+          "repositories",
+          "routes",
+          "lifecycle",
+          "sdk"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded source review of the README, selected introduction and HTTP reference, PostgreSQL schema/repository, semantic/lifecycle kernels, SDK paths, auth, and submodule declaration. It does not cover every integration, adapter, deployment, error path, or CardBox implementation.",
+        "sources": [
+          "readme",
+          "intro",
+          "http",
+          "schema",
+          "repositories",
+          "semantic",
+          "lifecycle",
+          "sdk",
+          "auth",
+          "submodule"
+        ]
+      },
+      {
+        "text": "The public material identifies v3r1 as an initial preview and notes incompatibility with the earlier v1 preview. Operational stability and compatibility beyond the documented branch are not established by this inspection.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The kernel has no inspected semantic search or update/delete API for stored semantic records. How higher layers select a corrected value or erase linked payloads remains unknown.",
+        "sources": [
+          "semantic",
+          "routes",
+          "http",
+          "submodule"
+        ]
+      },
+      {
+        "text": "No CommonGround runtime, tests, or benchmarks were run. Recall quality, correction behavior, deletion completeness, project isolation under load, evidence support, latency, token/cost usage, and storage efficiency are unmeasured.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "The inspected kernel offers turn/sequence and feed reads rather than semantic recall; no benchmark cases were executed.",
+        "sources": [
+          "sdk",
+          "repositories",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "The semantic API appends records but does not specify how a current value is selected; no correction probes were run.",
+        "sources": [
+          "semantic",
+          "schema",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No public semantic/payload deletion route was found, and no deletion or post-delete probes were attempted; CardBox behavior was not inspected.",
+        "sources": [
+          "routes",
+          "submodule",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Scope isolation leak rate",
+        "status": "unmeasured",
+        "evidence": "Project-keyed authentication and schema constraints are present, but no cross-project workload was run.",
+        "sources": [
+          "auth",
+          "schema",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Reports accept source_refs, but no generated claims were adjudicated against retained evidence.",
+        "sources": [
+          "sdk",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No retrieval requests were executed or timed.",
+        "sources": [
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No acknowledged write followed by scheduled recall probes was performed.",
+        "sources": [
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No model/provider workload or usage/cost accounting was performed.",
+        "sources": [
+          "readme",
+          "metrics"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No corpus bytes were measured; the payload store is delegated to a submodule whose implementation was outside the checkout.",
+        "sources": [
+          "submodule",
+          "metrics"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "No CommonGround runtime, tests, or benchmark execution was performed. Source structure and project fixtures are not benchmark results."
+    }
+  }
+}

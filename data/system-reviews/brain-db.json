@@ -1,0 +1,362 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "brain-db",
+    "name": "Brain",
+    "repository": "https://github.com/arc-labs-ai/brain-db",
+    "branch": "main",
+    "revision": "69d36cb615140dadc8356ef143eeb57fb19dba65",
+    "reviewed_at": "2026-11-24T23:49:15Z",
+    "review_timezone": "UTC (2026-11-24 15:49:15 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {"email":null,"source_url":"https://github.com/arc-labs-ai/brain-db/blob/69d36cb615140dadc8356ef143eeb57fb19dba65/README.md","checked_urls":["https://github.com/arc-labs-ai/brain-db/blob/69d36cb615140dadc8356ef143eeb57fb19dba65/README.md","https://github.com/arc-labs-ai/brain-db/blob/69d36cb615140dadc8356ef143eeb57fb19dba65/SECURITY.md","https://github.com/arc-labs-ai/brain-db/blob/69d36cb615140dadc8356ef143eeb57fb19dba65/SUPPORT.md"],"note":"No published contact email was found in the checked official README, SECURITY.md, or SUPPORT.md. Example configuration values were not treated as project contacts."},
+    "summary": "Brain is a pre-release Rust memory database with a binary wire protocol. It stores raw experiences alongside typed entities, claims, and relations, and combines semantic, lexical, and graph retrieval. This review records source observations, not measured system or benchmark results.",
+    "atlas_locator": {
+      "ordinal": 98,
+      "name": "Brain",
+      "slug": "brain-db",
+      "listed_repository": "https://github.com/arc-labs-ai/brain-db",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/brain-db.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/arc-labs-ai/brain-db/blob/69d36cb615140dadc8356ef143eeb57fb19dba65/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/arc-labs-ai/brain-db/blob/69d36cb615140dadc8356ef143eeb57fb19dba65/README.md",
+      "https://github.com/arc-labs-ai/brain-db/blob/69d36cb615140dadc8356ef143eeb57fb19dba65/SECURITY.md"
+    ],
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Official repository page",
+        "path": "repository",
+        "symbol": "Canonical public repository arc-labs-ai/brain-db",
+        "url": "https://github.com/arc-labs-ai/brain-db"
+      },
+      {
+        "id": "head",
+        "label": "Current full head commit",
+        "path": "commit",
+        "symbol": "main HEAD 69d36cb615140dadc8356ef143eeb57fb19dba65",
+        "url": "https://github.com/arc-labs-ai/brain-db/commit/69d36cb615140dadc8356ef143eeb57fb19dba65"
+      },
+      {
+        "id": "feed",
+        "label": "Official main commits feed",
+        "path": "commits/main.atom",
+        "symbol": "Head checked against git ls-remote --symref",
+        "url": "https://github.com/arc-labs-ai/brain-db/commits/main.atom"
+      },
+      {
+        "id": "readme",
+        "label": "Official README",
+        "path": "README.md",
+        "symbol": "System description, architecture, deployment, status, limitations and contact check",
+        "url": "https://github.com/arc-labs-ai/brain-db/blob/69d36cb615140dadc8356ef143eeb57fb19dba65/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "Threat model and reporting instructions; no email published in this document",
+        "url": "https://github.com/arc-labs-ai/brain-db/blob/69d36cb615140dadc8356ef143eeb57fb19dba65/SECURITY.md"
+      },
+      {
+        "id": "memory-model",
+        "label": "Memory data model and lifecycle",
+        "path": "spec/02_data_model/02_memory.md",
+        "symbol": "Memory fields, identifiers, scope, lifecycle and forget behavior",
+        "url": "https://github.com/arc-labs-ai/brain-db/blob/69d36cb615140dadc8356ef143eeb57fb19dba65/spec/02_data_model/02_memory.md"
+      },
+      {
+        "id": "statement-model",
+        "label": "Typed statement data model",
+        "path": "spec/02_data_model/07_statement.md",
+        "symbol": "Fact, Preference and Event mutation contracts, provenance, evidence and time",
+        "url": "https://github.com/arc-labs-ai/brain-db/blob/69d36cb615140dadc8356ef143eeb57fb19dba65/spec/02_data_model/07_statement.md"
+      },
+      {
+        "id": "statement-crud",
+        "label": "Statement creation implementation",
+        "path": "crates/brain-metadata/src/statement/crud.rs",
+        "symbol": "Validation, duplicate handling, supersession and contradiction audit",
+        "url": "https://github.com/arc-labs-ai/brain-db/blob/69d36cb615140dadc8356ef143eeb57fb19dba65/crates/brain-metadata/src/statement/crud.rs"
+      },
+      {
+        "id": "supersede",
+        "label": "Statement supersession implementation",
+        "path": "crates/brain-metadata/src/statement/supersede.rs",
+        "symbol": "Atomic chain update, scope guard, validity and record-time invalidation",
+        "url": "https://github.com/arc-labs-ai/brain-db/blob/69d36cb615140dadc8356ef143eeb57fb19dba65/crates/brain-metadata/src/statement/supersede.rs"
+      },
+      {
+        "id": "forget-plan",
+        "label": "FORGET operation plan",
+        "path": "crates/brain-planner/src/plan/forget.rs",
+        "symbol": "Soft/hard forget steps and hard-mode text/vector zeroing flags",
+        "url": "https://github.com/arc-labs-ai/brain-db/blob/69d36cb615140dadc8356ef143eeb57fb19dba65/crates/brain-planner/src/plan/forget.rs"
+      },
+      {
+        "id": "write-path",
+        "label": "Storage write path documentation",
+        "path": "spec/08_storage/03_write_path.md",
+        "symbol": "WAL ordering, write path and forget execution behavior",
+        "url": "https://github.com/arc-labs-ai/brain-db/blob/69d36cb615140dadc8356ef143eeb57fb19dba65/spec/08_storage/03_write_path.md"
+      },
+      {
+        "id": "retrieval",
+        "label": "Retrieval architecture",
+        "path": "spec/13_retrievers/00_purpose.md",
+        "symbol": "Semantic, lexical, graph retrieval, fusion and result shaping",
+        "url": "https://github.com/arc-labs-ai/brain-db/blob/69d36cb615140dadc8356ef143eeb57fb19dba65/spec/13_retrievers/00_purpose.md"
+      },
+      {
+        "id": "query-pipeline",
+        "label": "Query pipeline and filter ordering",
+        "path": "spec/13_retrievers/05_retrieval_query.md",
+        "symbol": "Query planning, filtering, ranking, explain and trace surfaces",
+        "url": "https://github.com/arc-labs-ai/brain-db/blob/69d36cb615140dadc8356ef143eeb57fb19dba65/spec/13_retrievers/05_retrieval_query.md"
+      },
+      {
+        "id": "tenancy",
+        "label": "Tenancy and isolation model",
+        "path": "spec/20_tenancy/00_purpose.md",
+        "symbol": "Namespace/space/session scope and credential-bound ownership",
+        "url": "https://github.com/arc-labs-ai/brain-db/blob/69d36cb615140dadc8356ef143eeb57fb19dba65/spec/20_tenancy/00_purpose.md"
+      },
+      {
+        "id": "observability",
+        "label": "Observability signal definitions",
+        "path": "spec/17_observability/01_signals.md",
+        "symbol": "Metrics, logs, traces, cardinality, request/retriever and writer signals",
+        "url": "https://github.com/arc-labs-ai/brain-db/blob/69d36cb615140dadc8356ef143eeb57fb19dba65/spec/17_observability/01_signals.md"
+      },
+      {
+        "id": "retriever-metrics",
+        "label": "Per-retriever metrics implementation",
+        "path": "crates/brain-ops/src/metrics/retriever.rs",
+        "symbol": "Invocation/candidate counters and per-lane latency histograms",
+        "url": "https://github.com/arc-labs-ai/brain-db/blob/69d36cb615140dadc8356ef143eeb57fb19dba65/crates/brain-ops/src/metrics/retriever.rs"
+      },
+      {
+        "id": "roster",
+        "label": "Curated system roster",
+        "path": "../data/memory-systems.json",
+        "symbol": "Position 98 identity, slug, listed locator and attribution only",
+        "url": "data/memory-systems.json"
+      },
+      {
+        "id": "atlas-attribution",
+        "label": "Atlas catalog attribution",
+        "path": "pinned report",
+        "symbol": "Identity and source attribution only; excluded as assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/brain-db.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "../METRICS.md",
+        "url": "METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "../fixtures/memory-benchmark-v1.json",
+        "url": "fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "status",
+        "label": "Project benchmark execution status",
+        "path": "../results/initial-baselines-status.json",
+        "url": "results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The repository describes Brain as an open-source Rust memory database shipped as a server with a binary wire protocol. It names arc-labs-ai as the repository organization; this review does not infer individual maintainer roles. Client SDKs and other interfaces are separate projects.",
+        "sources": [
+          "readme",
+          "repo"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The system models four related records: raw Memory text and embedding, Entity, typed Statement, and Relation. Memories carry immutable namespace-space ownership, session grouping, event/write timestamps, salience, lifecycle state, and source request identity. Statements distinguish Fact, Preference, and Event semantics and carry confidence, evidence, validity and record-time fields.",
+        "sources": [
+          "memory-model",
+          "statement-model",
+          "readme"
+        ]
+      },
+      {
+        "text": "The README and specifications describe one Rust server using a binary CBOR protocol, sharded storage, a write-ahead log, metadata tables, vector and lexical indexes, and typed graph retrieval. The typed records are derived from memories through extraction and only persist when the active schema permits their types.",
+        "sources": [
+          "readme",
+          "retrieval",
+          "statement-model"
+        ]
+      },
+      {
+        "text": "Namespace is the tenant boundary; Space is the inner agent/application boundary. Ownership is stamped from authenticated connection scope. Session is a grouping key rather than an isolation boundary; namespace-wide recall widens space scope within that namespace.",
+        "sources": [
+          "tenancy",
+          "memory-model",
+          "query-pipeline"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "ENCODE stores text with an embedding, owner scope, timestamps and source request identity, then schedules extraction into typed records. The repository describes request IDs for idempotency. Statement creation validates predicate/subject, deduplicates identical active records and handles single-valued kinds through supersession; contradictory overlapping Facts coexist with an audit marker.",
+        "sources": [
+          "readme",
+          "memory-model",
+          "statement-crud"
+        ]
+      },
+      {
+        "text": "When one statement supersedes another, the implementation checks the old row's owner scope and kind/subject/predicate, then atomically inserts a linked successor and updates the prior row's current, validity and record-invalidation fields. This supplies correction history for typed statements, not a general update API for raw memories.",
+        "sources": [
+          "supersede",
+          "statement-model"
+        ]
+      },
+      {
+        "text": "RECALL combines semantic HNSW, lexical BM25, and graph retrieval, fuses ranked lists, then applies type/time/confidence/tombstone/supersession filters. Query routing changes lane weights and pool widths; client RECALL returns shaped membership, while operator explain/trace surfaces expose plan and lane detail.",
+        "sources": [
+          "retrieval",
+          "query-pipeline",
+          "readme"
+        ]
+      },
+      {
+        "text": "FORGET supports soft and hard modes. Soft forget hides a memory and retains its contents during the default grace interval for possible restoration. Hard mode adds text/vector removal and is irreversible. The write path also cascades through derived records; later reclamation retires storage slots, and arena capacity does not shrink at the filesystem level.",
+        "sources": [
+          "memory-model",
+          "forget-plan",
+          "write-path"
+        ]
+      },
+      {
+        "text": "Source and evidence are represented in typed records: statement evidence references source memories, while retrieval results retain contributing retriever identity and fused score. The code records provenance links but does not itself establish that a claim is true.",
+        "sources": [
+          "statement-model",
+          "retrieval"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "metric": "Answerable recall and abstention",
+        "status": "not_measured",
+        "evidence": "The code and specifications define membership outcomes, retrieval fusion and filters; this review ran no adjudicated answerable or unanswerable queries.",
+        "sources": [
+          "retrieval",
+          "query-pipeline",
+          "metrics"
+        ]
+      },
+      {
+        "metric": "Correction and stale values",
+        "status": "not_measured",
+        "evidence": "Typed statements support supersession and record-time queries, but no correction-quality or stale-answer workload was measured.",
+        "sources": [
+          "statement-model",
+          "supersede",
+          "query-pipeline"
+        ]
+      },
+      {
+        "metric": "Deletion leakage",
+        "status": "not_measured",
+        "evidence": "Soft/hard forgetting and cascade behavior are source-visible; no post-forget probe or backup/restore erasure test was run.",
+        "sources": [
+          "memory-model",
+          "forget-plan",
+          "write-path"
+        ]
+      },
+      {
+        "metric": "Scope isolation",
+        "status": "not_measured",
+        "evidence": "Namespace and space boundaries are specified and threaded into retrieval; no adversarial isolation workload was executed.",
+        "sources": [
+          "tenancy",
+          "query-pipeline"
+        ]
+      },
+      {
+        "metric": "Evidence and citations",
+        "status": "not_measured",
+        "evidence": "Statements carry evidence references to memories, and results expose contributing retrieval lanes; no evidence-support precision or citation coverage was measured.",
+        "sources": [
+          "statement-model",
+          "retrieval"
+        ]
+      },
+      {
+        "metric": "Latency and write-to-recall delay",
+        "status": "not_measured",
+        "evidence": "Per-query and per-retriever latency metrics are defined and implemented, but no runtime metrics were collected.",
+        "sources": [
+          "observability",
+          "retriever-metrics"
+        ]
+      },
+      {
+        "metric": "Tokens, cost, and storage",
+        "status": "not_measured",
+        "evidence": "Source documents describe model, storage, and cost accounting; this review did not run workloads or inspect a measured result record.",
+        "sources": [
+          "readme",
+          "observability",
+          "memory-model"
+        ]
+      },
+      {
+        "metric": "Efficiency and observability",
+        "status": "not_measured",
+        "evidence": "Source exposes request, writer, retriever, extractor and forget signals, plus logs and traces. These are implementation observations, not observed runtime measurements.",
+        "sources": [
+          "observability",
+          "retriever-metrics"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "Brain is pre-release v0.4.0; the repository says protocol, storage layouts and schema remain in flux. It documents single-node and Linux-only operation, English-focused embeddings, one embedding model per deployment, disabled cross-encoder reranking and summarization defaults, and no bundled client.",
+        "sources": [
+          "readme"
+        ]
+      },
+      {
+        "text": "The README identifies design limits including no per-memory ACLs and raw-memory RECALL not resolving supersession. Scope is bounded at namespace and space; session is not an isolation boundary.",
+        "sources": [
+          "readme",
+          "tenancy"
+        ]
+      },
+      {
+        "text": "This is a bounded source review. It cannot establish production correctness, quality, latency, cost, adversarial isolation, actual erasure in backups or snapshots, or behavior across deployment configurations. Documentation targets and source-visible counters are not measured results.",
+        "sources": [
+          "readme",
+          "observability",
+          "retrieval"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Benchmark status is not_run. This review did not execute Brain, tests, or benchmark workloads. Project metric definitions and fixture describe planned evaluation; the shared status record is not a Brain result.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "status"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,357 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 53,
+    "slug": "sovereign",
+    "name": "AMITY / Archangel-8",
+    "repository": "https://github.com/Renkasha/Amity-v2.0",
+    "listed_repository": "https://github.com/Renkasha/Sovereign",
+    "branch": "main",
+    "revision": "51adca7874f7b286684f76b982000b707c687fa0",
+    "reviewed_at": "2026-11-24T20:36:16Z",
+    "review_timezone": "UTC (2026-11-24 12:36:16 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "AMITY is a local Python session-memory and CovenantVault implementation paired with a C++ sensory/orchestration layer and optional ZeroMQ IPC. The curated repository locator currently returns 404; this review uses the same-owner public Amity-v2.0 repository as the current AMITY candidate and records lineage as unresolved.",
+    "atlas_locator": {
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "url": "https://github.com/Renkasha/Sovereign"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/Renkasha/Amity-v2.0/blob/51adca7874f7b286684f76b982000b707c687fa0/README.md",
+      "note": "No published contact email was found in the checked official README."
+    },
+    "contact_email": null,
+    "contact_checked_sources": [
+      "https://github.com/Renkasha/Amity-v2.0/blob/51adca7874f7b286684f76b982000b707c687fa0/README.md"
+    ],
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated catalog order and entry",
+        "path": "data/memory-systems.json",
+        "symbol": "systems[52], ordinal 53",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Catalog source attribution only",
+        "path": "content/systems/sovereign.md",
+        "symbol": "catalog attribution at revision 19199a4fc249e89c0793be06f0b166b358089ba0",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/sovereign.md"
+      },
+      {
+        "id": "listed",
+        "label": "Catalog-listed repository locator (current 404)",
+        "path": "Renkasha/Sovereign",
+        "symbol": "official GitHub repository page returned Page not found",
+        "url": "https://github.com/Renkasha/Sovereign"
+      },
+      {
+        "id": "owner",
+        "label": "Repository owner profile and public repository list",
+        "path": "Renkasha profile",
+        "symbol": "public repositories include Amity-v2.0",
+        "url": "https://github.com/Renkasha"
+      },
+      {
+        "id": "repo",
+        "label": "Current public AMITY candidate repository",
+        "path": "repository page",
+        "symbol": "Renkasha/Amity-v2.0; default branch main",
+        "url": "https://github.com/Renkasha/Amity-v2.0"
+      },
+      {
+        "id": "head",
+        "label": "Current main commit metadata",
+        "path": "main commit endpoint",
+        "symbol": "full SHA 51adca7874f7b286684f76b982000b707c687fa0",
+        "url": "https://api.github.com/repos/Renkasha/Amity-v2.0/commits/main"
+      },
+      {
+        "id": "tree",
+        "label": "Reviewed repository tree",
+        "path": "repository tree",
+        "symbol": "commit 51adca7874f7b286684f76b982000b707c687fa0",
+        "url": "https://github.com/Renkasha/Amity-v2.0/tree/51adca7874f7b286684f76b982000b707c687fa0"
+      },
+      {
+        "id": "readme",
+        "label": "Official project README",
+        "path": "README.md",
+        "symbol": "architecture, claimed capabilities, limitations, contact check",
+        "url": "https://github.com/Renkasha/Amity-v2.0/blob/51adca7874f7b286684f76b982000b707c687fa0/README.md"
+      },
+      {
+        "id": "python",
+        "label": "Python session and memory implementation",
+        "path": "amity_v2.py",
+        "symbol": "SessionState, SessionManager, Orchestrator8, CovenantVault",
+        "url": "https://github.com/Renkasha/Amity-v2.0/blob/51adca7874f7b286684f76b982000b707c687fa0/amity_v2.py"
+      },
+      {
+        "id": "ipc",
+        "label": "Python ZeroMQ bridge",
+        "path": "amity_ipc.py",
+        "symbol": "ZmqPublisher, ZmqCommandServer, AmityIpcBridge",
+        "url": "https://github.com/Renkasha/Amity-v2.0/blob/51adca7874f7b286684f76b982000b707c687fa0/amity_ipc.py"
+      },
+      {
+        "id": "orchestrator_h",
+        "label": "C++ orchestrator interface and telemetry",
+        "path": "AmityMasterOrchestrator.hpp",
+        "symbol": "UnifiedTelemetry, component members, IPC and sovereignty operations",
+        "url": "https://github.com/Renkasha/Amity-v2.0/blob/51adca7874f7b286684f76b982000b707c687fa0/AmityMasterOrchestrator.hpp"
+      },
+      {
+        "id": "orchestrator_cpp",
+        "label": "C++ orchestrator implementation",
+        "path": "AmityMasterOrchestrator.cpp",
+        "symbol": "processIncomingTelemetry, getTelemetry, processBeat, restCycle",
+        "url": "https://github.com/Renkasha/Amity-v2.0/blob/51adca7874f7b286684f76b982000b707c687fa0/AmityMasterOrchestrator.cpp"
+      },
+      {
+        "id": "sovereignty_h",
+        "label": "C++ sovereignty interface",
+        "path": "AmitySovereigntyArtery.hpp",
+        "symbol": "energy, boundary, and thresholds",
+        "url": "https://github.com/Renkasha/Amity-v2.0/blob/51adca7874f7b286684f76b982000b707c687fa0/AmitySovereigntyArtery.hpp"
+      },
+      {
+        "id": "sovereignty_cpp",
+        "label": "C++ sovereignty implementation",
+        "path": "AmitySovereigntyArtery.cpp",
+        "symbol": "ingestBeat, recover, forceRest",
+        "url": "https://github.com/Renkasha/Amity-v2.0/blob/51adca7874f7b286684f76b982000b707c687fa0/AmitySovereigntyArtery.cpp"
+      },
+      {
+        "id": "sensory",
+        "label": "C++ sensory packet and buffer",
+        "path": "AmitySensoryBuffer.hpp",
+        "symbol": "SensoryPacket, AmityTranslationBuffer",
+        "url": "https://github.com/Renkasha/Amity-v2.0/blob/51adca7874f7b286684f76b982000b707c687fa0/AmitySensoryBuffer.hpp"
+      },
+      {
+        "id": "ring",
+        "label": "C++ ring buffer",
+        "path": "RealTimeRingBuffer.hpp",
+        "symbol": "push, pop, size, capacity",
+        "url": "https://github.com/Renkasha/Amity-v2.0/blob/51adca7874f7b286684f76b982000b707c687fa0/RealTimeRingBuffer.hpp"
+      },
+      {
+        "id": "ingress",
+        "label": "C++ ingress queue",
+        "path": "AmityIngressQueue.hpp",
+        "symbol": "priority queue and process counter",
+        "url": "https://github.com/Renkasha/Amity-v2.0/blob/51adca7874f7b286684f76b982000b707c687fa0/AmityIngressQueue.hpp"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The reviewed artifact is a public source repository rather than a hosted memory service. Its README presents Python session, memory and ethics code alongside C++ sensory/orchestration code and optional ZeroMQ IPC. The inspected paths do not establish production deployment or physical sensor integration.",
+        "sources": [
+          "repo",
+          "readme",
+          "python",
+          "orchestrator_h"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Python SessionState stores a required pilot_signature, timestamps, bounded sensory and episodic deques, sample_count and a sensory overflow counter. SensorReading contains timestamp, profile, frequency, friction and temperature; EpisodicMemory contains timestamp, event_type and an arbitrary content dictionary. Defaults cap sensory samples at 1,000 and episodes at 20,000.",
+        "sources": [
+          "python"
+        ]
+      },
+      {
+        "text": "Orchestrator8 dispatches packets to sensory, emotional, memory and sovereignty handlers. MemoryArtery appends an episode for packets with priority tier at least 7. Sensory deque overflow is counted before its oldest item is displaced; the episodic deque has no matching overflow counter.",
+        "sources": [
+          "python"
+        ]
+      },
+      {
+        "text": "The C++ master owns sensory, flavor, emotional, simulation, ingress, emitter-lock, sandbox, sovereignty and IPC components, plus sensory/flavor/emotional ring buffers. Its UnifiedTelemetry returns energy, boundary, sensory buffer pressure, emitter lock, simulation state and emotional warmth. The inspected code does not show a shared persistent store between C++ buffers and Python episodes.",
+        "sources": [
+          "orchestrator_h",
+          "orchestrator_cpp",
+          "ring"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Session writes append to bounded deques. save_to_file serializes the retained state as JSON; its default atomic mode writes a temporary file, flushes and fsyncs it, then replaces the destination. Periodic saving is opt-in and defaults to a 60-second interval. load_from_file reconstructs state and derives pilot_signature from the file rather than from a separately supplied expected identity.",
+        "sources": [
+          "python"
+        ]
+      },
+      {
+        "text": "daily_recall(days) scans the episode deque and filters by timestamp cutoff; it does not search or rank text. CovenantVault recall scans entries by category and age. generate_briefing orders SACRED, PERMANENT and PROMISE before the top-valence JOY and DAILY entries, then truncates to max_memories.",
+        "sources": [
+          "python"
+        ]
+      },
+      {
+        "text": "CovenantVault remember appends a list-length ID, timestamp, content, category, valence, tags and source string, then rewrites the JSON vault. Unknown categories become DAILY. decay_check physically removes expired entries; recall merely omits expired entries. No general episode update or delete API was found in the inspected methods.",
+        "sources": [
+          "python"
+        ]
+      },
+      {
+        "text": "The vault requires a constructor pilot signature and rejects a loaded pilot value that differs. Session buffers have no tenant, user or project scope argument. A source string on vault records and arbitrary episode payloads do not establish validated provenance or claim-level evidence.",
+        "sources": [
+          "python"
+        ]
+      },
+      {
+        "text": "The ZeroMQ bridge serializes telemetry as JSON. The inspected C++ telemetry handler looks for a sensory_reading substring and constructs a fixed sample packet rather than parsing the JSON payload. The README also describes IPC as stubbed unless ZeroMQ is linked; interoperability was not executed or verified.",
+        "sources": [
+          "ipc",
+          "orchestrator_cpp",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval and abstention",
+        "status": "unmeasured",
+        "evidence": "Timestamp cutoff and vault-category retrieval are visible, but no AMITY outputs were captured or adjudicated against eligible answerable or unanswerable probes.",
+        "sources": [
+          "python",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale values",
+        "status": "unmeasured",
+        "evidence": "No general update or supersession API was found in the inspected session/vault methods, and no correction probes were run.",
+        "sources": [
+          "python",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Vault decay_check prunes expired records, but no explicit user-directed delete path was found in the inspected memory API and no post-delete probes were run.",
+        "sources": [
+          "python",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "A pilot signature is retained and checked by the vault loader, but no cross-principal or cross-file isolation probes were captured.",
+        "sources": [
+          "python",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Vault source is a string and episode content is caller-defined; no outputs were adjudicated for source support or citation coverage.",
+        "sources": [
+          "python",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No AMITY request timings or scheduled write-to-recall probes were collected.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No model usage, token accounting, or cost measurement was collected for this review.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      },
+      {
+        "domain": "Persistent storage",
+        "status": "unmeasured",
+        "evidence": "JSON persistence is visible in source, but stored bytes and bytes per accepted item were not measured.",
+        "sources": [
+          "python",
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This is a bounded, read-only source review at the recorded SHA. It did not run or build AMITY, run tests, exercise the IPC or persistence paths, or inspect every repository component. Source and README claims do not establish correctness, concurrency safety, hardware behavior, security, reliability, or performance.",
+        "sources": [
+          "repo",
+          "tree",
+          "readme",
+          "python",
+          "ipc",
+          "orchestrator_cpp"
+        ]
+      },
+      {
+        "text": "The curated Sovereign locator currently returns 404. The owner profile and current Amity-v2.0 repository expose a matching AMITY identity, but the inspected public pages do not prove direct repository lineage; this review records that uncertainty explicitly.",
+        "sources": [
+          "listed",
+          "owner",
+          "repo",
+          "catalog",
+          "atlas"
+        ]
+      }
+    ],
+    "benchmark": [
+      {
+        "text": "Status: Benchmark not run for AMITY. No AMITY runtime, benchmark workload, tests, or build were run. Shared metric definitions and fixture describe the protocol; the execution-status record contains no AMITY result, and planned fixture counts are not measurements.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ]
+  }
+}

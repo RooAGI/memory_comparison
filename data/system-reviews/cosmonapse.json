@@ -1,0 +1,434 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "cosmonapse",
+    "name": "Cosmonapse",
+    "ordinal": 166,
+    "repository": "https://github.com/Cosmonapse/cosmonapse-core",
+    "listed_repository": "https://github.com/Cosmonapse/cosmonapse-core",
+    "branch": "main",
+    "revision": "bdb0be8e54190a4e41a34859d4c225571b5bc5b9",
+    "reviewed_at": "2026-11-25T09:53:41Z",
+    "review_timezone": "UTC (2026-11-25 01:53:41 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Cosmonapse is an event-driven runtime and Python SDK for distributed AI agents. Its optional Engram interface routes memory reads and writes as typed Signals over the same bus as task and tool events. The shipped Engram backends provide simple tagged/substring or merge-key lookup over in-memory, SQLite, and PostgreSQL records; richer retrieval is left to custom backends. This is a source review only; no runtime, tests, or benchmarks were run.",
+    "atlas_locator": {
+      "ordinal": 166,
+      "name": "Cosmonapse",
+      "slug": "cosmonapse",
+      "listed_repository": "https://github.com/Cosmonapse/cosmonapse-core",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cosmonapse.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/Cosmonapse/cosmonapse-core/blob/bdb0be8e54190a4e41a34859d4c225571b5bc5b9/README.md",
+      "checked_urls": [
+        "https://github.com/Cosmonapse/cosmonapse-core/blob/bdb0be8e54190a4e41a34859d4c225571b5bc5b9/README.md"
+      ],
+      "note": "Checked the official pinned README for a published contact email; none was found."
+    },
+    "contact_email": null,
+    "contact_email_source_url": null,
+    "contact_email_checked_sources": [
+      "https://github.com/Cosmonapse/cosmonapse-core/blob/bdb0be8e54190a4e41a34859d4c225571b5bc5b9/README.md"
+    ],
+    "contact_email_note": "No contact email was published in the official pinned README. No commit/profile metadata or third-party directory was used.",
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Catalog identity and roster attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 166, Cosmonapse, slug cosmonapse, explicit listed repository; Atlas attribution retained for identity/locator only",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster entry, attribution only",
+        "path": "content/systems/cosmonapse.md",
+        "symbol": "Curated identity and repository locator context; not assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/cosmonapse.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official GitHub repository",
+        "path": "repository page",
+        "symbol": "Public canonical Cosmonapse repository; GitHub identifies main as the default branch",
+        "url": "https://github.com/Cosmonapse/cosmonapse-core"
+      },
+      {
+        "id": "feed",
+        "label": "Official main branch Atom feed",
+        "path": "commits/main.atom",
+        "symbol": "Latest main entry full SHA bdb0be8e54190a4e41a34859d4c225571b5bc5b9; feed updated 2026-11-19T15:40:22Z",
+        "url": "https://github.com/Cosmonapse/cosmonapse-core/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified official full-SHA head commit",
+        "path": "commit/bdb0be8e54190a4e41a34859d4c225571b5bc5b9",
+        "symbol": "Current main head bdb0be8e54190a4e41a34859d4c225571b5bc5b9",
+        "url": "https://github.com/Cosmonapse/cosmonapse-core/commit/bdb0be8e54190a4e41a34859d4c225571b5bc5b9"
+      },
+      {
+        "id": "readme",
+        "label": "Pinned official README",
+        "path": "README.md",
+        "symbol": "Runtime architecture, participants, transports, observability, and product overview",
+        "url": "https://github.com/Cosmonapse/cosmonapse-core/blob/bdb0be8e54190a4e41a34859d4c225571b5bc5b9/README.md"
+      },
+      {
+        "id": "sdk_readme",
+        "label": "Pinned Python SDK README",
+        "path": "packages/python-sdk/README.md",
+        "symbol": "Engram integration, backend options, caller helpers and setup",
+        "url": "https://github.com/Cosmonapse/cosmonapse-core/blob/bdb0be8e54190a4e41a34859d4c225571b5bc5b9/packages/python-sdk/README.md"
+      },
+      {
+        "id": "engram_design",
+        "label": "Engram design",
+        "path": "design/ENGRAM_DESIGN.md",
+        "symbol": "Engram interface, routing, operations, scope context, deadlines, and saga design; document labels itself a draft",
+        "url": "https://github.com/Cosmonapse/cosmonapse-core/blob/bdb0be8e54190a4e41a34859d4c225571b5bc5b9/design/ENGRAM_DESIGN.md"
+      },
+      {
+        "id": "envelope",
+        "label": "Signal envelope specification",
+        "path": "design/ENVELOPE_SPEC.md",
+        "symbol": "Signal IDs, trace and parent lineage, RECALL/IMPRINT messages and cancellation",
+        "url": "https://github.com/Cosmonapse/cosmonapse-core/blob/bdb0be8e54190a4e41a34859d4c225571b5bc5b9/design/ENVELOPE_SPEC.md"
+      },
+      {
+        "id": "engram_base",
+        "label": "Engram interface implementation",
+        "path": "packages/python-sdk/cosmonapse/engram/base.py",
+        "symbol": "Backend contract, handlers, recall/imprint lifecycle and result types",
+        "url": "https://github.com/Cosmonapse/cosmonapse-core/blob/bdb0be8e54190a4e41a34859d4c225571b5bc5b9/packages/python-sdk/cosmonapse/engram/base.py"
+      },
+      {
+        "id": "memory",
+        "label": "In-memory Engram implementation",
+        "path": "packages/python-sdk/cosmonapse/engram/memory.py",
+        "symbol": "In-memory entry shape, recall filters, merge operations and ephemeral lifecycle",
+        "url": "https://github.com/Cosmonapse/cosmonapse-core/blob/bdb0be8e54190a4e41a34859d4c225571b5bc5b9/packages/python-sdk/cosmonapse/engram/memory.py"
+      },
+      {
+        "id": "sqlite",
+        "label": "SQLite Engram implementation",
+        "path": "packages/python-sdk/cosmonapse/engram/sqlite.py",
+        "symbol": "SQLite schema, indexes, async execution, operations and logical deletion",
+        "url": "https://github.com/Cosmonapse/cosmonapse-core/blob/bdb0be8e54190a4e41a34859d4c225571b5bc5b9/packages/python-sdk/cosmonapse/engram/sqlite.py"
+      },
+      {
+        "id": "postgres",
+        "label": "PostgreSQL Engram implementation",
+        "path": "packages/python-sdk/cosmonapse/engram/postgres.py",
+        "symbol": "PostgreSQL schema, JSONB/tags indexes, pooling and operations",
+        "url": "https://github.com/Cosmonapse/cosmonapse-core/blob/bdb0be8e54190a4e41a34859d4c225571b5bc5b9/packages/python-sdk/cosmonapse/engram/postgres.py"
+      },
+      {
+        "id": "client",
+        "label": "Engram caller client",
+        "path": "packages/python-sdk/cosmonapse/engram/client.py",
+        "symbol": "Trace-linked request/reply, correlation, deadlines, cancellation and acknowledgement behavior",
+        "url": "https://github.com/Cosmonapse/cosmonapse-core/blob/bdb0be8e54190a4e41a34859d4c225571b5bc5b9/packages/python-sdk/cosmonapse/engram/client.py"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Evaluation domains and measures",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Specified workload only; not executed",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Project execution status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "Existing benchmark status; no Cosmonapse result asserted",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README presents Core as an event-driven protocol/runtime with a Python SDK and CLI; Genesis is the designer and Prism is the observability UI. The README says Genesis and Prism have no runtime dependency on each other or on Core.",
+        "sources": [
+          "readme",
+          "sdk_readme"
+        ]
+      },
+      {
+        "text": "GitHub identifies main as the default branch. The official main Atom feed reports bdb0be8e54190a4e41a34859d4c225571b5bc5b9 as its latest commit, and the official commit page confirms that full SHA. Reviewed 2026-11-25T09:53:41Z (UTC; 2026-11-25 01:53:41 PST; America/Los_Angeles).",
+        "sources": [
+          "repo",
+          "feed",
+          "head"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Cosmonapse models agents and services as participants on a message bus (Synapse). Neurons are async functions hosted by Axons and connected through Dendrites; tools are Effectors and user/API entry points are Receptors. There is no required central scheduler or supervisor loop.",
+        "sources": [
+          "readme",
+          "sdk_readme"
+        ]
+      },
+      {
+        "text": "Engram is an optional bus-addressed memory participant, separate from the Neuron. A host Dendrite attaches it; RECALL/RECALLED and IMPRINT/IMPRINTED Signals keep memory operations on the task trace. The protocol treats record schema as the backend's responsibility.",
+        "sources": [
+          "engram_design",
+          "envelope",
+          "engram_base"
+        ]
+      },
+      {
+        "text": "The SDK ships InMemoryEngram, SqliteEngram, and PostgresEngram. Records include id, content, tags, version, creation/update timestamps, optional merge_key and metadata. SQLite stores JSON-encoded content/tags/metadata and soft-delete timestamp; PostgreSQL stores JSONB content/metadata, text-array tags, and similar version/time/deletion fields.",
+        "sources": [
+          "sdk_readme",
+          "memory",
+          "sqlite",
+          "postgres"
+        ]
+      },
+      {
+        "text": "The current main head is reviewed from its pinned README, Engram design/specification and Python SDK sources. ENGRAM_DESIGN.md is marked Draft v0.1 (last updated 2026-05-29); implementation details below are grounded in the SDK files at the reviewed head.",
+        "sources": [
+          "engram_design",
+          "engram_base",
+          "memory",
+          "sqlite",
+          "postgres"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "A Neuron receives injected recall and imprint helpers when its Axon is bound to an Engram. The helper emits a typed Signal over the hosting Dendrite and correlates replies by parent_id; the memory backend remains outside the Neuron's direct imports.",
+        "sources": [
+          "sdk_readme",
+          "engram_base",
+          "client",
+          "envelope"
+        ]
+      },
+      {
+        "text": "The built-in backends support add, append, merge, upsert, and delete operations. Merge/upsert use a merge_key; merge updates content/tags/metadata and increments version, while upsert replaces a matching record. In-memory operations are process-local; SQLite and PostgreSQL persist entries and track deleted_at. In-memory delete evicts an entry; SQL backends mark it logically deleted so normal reads can exclude it.",
+        "sources": [
+          "memory",
+          "sqlite",
+          "postgres"
+        ]
+      },
+      {
+        "text": "Default recall is modest: case-insensitive substring search over entry content, exact tag or merge_key matching, optional all-tags/since/until filters, and top_k (default 50). The SDK README points to custom Engram backends for vector or BM25 retrieval; the shipped simple stores do not implement those strategies.",
+        "sources": [
+          "memory",
+          "sqlite",
+          "postgres",
+          "sdk_readme"
+        ]
+      },
+      {
+        "text": "The design supports explicit Engram id or typed engram_kind routing, first/merge/all response modes, optional filters, trace/session/project context_ref, best-effort deadlines, and minimum confidence. Client code maps timeout and parent-task termination to EngramTimeout and EngramCancelled. The default records themselves do not enforce user/project authorization or partition data by context_ref; such isolation must be supplied by the backend/hosting application.",
+        "sources": [
+          "engram_design",
+          "client",
+          "engram_base",
+          "memory",
+          "sqlite",
+          "postgres"
+        ]
+      },
+      {
+        "text": "Signal id, trace_id, and parent_id provide request and causal lineage, and returned records can expose backend id, score, version and took_ms. Entry content and metadata are otherwise opaque caller/backend values; the shipped schema does not require source URLs, claim citations, trust grades, or review status.",
+        "sources": [
+          "envelope",
+          "engram_design",
+          "engram_base",
+          "memory",
+          "sqlite",
+          "postgres"
+        ]
+      },
+      {
+        "text": "Operational surfaces include dispatch/recall deadlines, request correlation, cancellation, and Prism/Doppler views that can inspect Signal traces and timing. SQLite calls run in the default thread-pool executor; SQLite/PostgreSQL index Engram kind and merge keys, PostgreSQL adds a GIN index on tags. These are implementation controls, not observed performance results.",
+        "sources": [
+          "readme",
+          "sdk_readme",
+          "client",
+          "sqlite",
+          "postgres",
+          "envelope"
+        ]
+      },
+      {
+        "text": "Contact check: the official README was inspected at the pinned revision and publishes no contact email. No commit/profile metadata or third-party directory was used.",
+        "sources": [
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "Substring/tag/merge-key recall was inspected; no answerability workload or response scoring was performed.",
+        "sources": [
+          "memory",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Merge/upsert and version changes are implemented; no correction or stale-value probes were run.",
+        "sources": [
+          "memory",
+          "sqlite",
+          "postgres",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "Delete semantics are backend-specific (in-memory eviction versus SQL deleted_at); no post-delete probes or storage/backup checks were made.",
+        "sources": [
+          "memory",
+          "sqlite",
+          "postgres",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "context_ref is carried in the protocol but no default-store authorization isolation was established; no cross-scope workload was run.",
+        "sources": [
+          "engram_design",
+          "memory",
+          "sqlite",
+          "postgres",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Evidence support precision and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Signal lineage exists, but entry-level evidence fields are optional opaque data and no claim-support scoring was performed.",
+        "sources": [
+          "envelope",
+          "engram_base",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Retrieval latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No measurements or timed probes were collected.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No runtime, provider usage or charges were measured.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Store schemas and indexes were inspected; no corpus-attributed storage size was measured.",
+        "sources": [
+          "sqlite",
+          "postgres",
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This bounded source review inspected official project and SDK documentation plus the Engram interface, in-memory, SQLite, PostgreSQL, and caller-client implementations. It did not inspect every transport adapter, migration/upgrade path, deployment arrangement, custom Engram, or production authorization layer.",
+        "sources": [
+          "readme",
+          "sdk_readme",
+          "engram_design",
+          "engram_base",
+          "memory",
+          "sqlite",
+          "postgres",
+          "client"
+        ]
+      },
+      {
+        "text": "The Engram design document is explicitly a draft. The shipped default query is substring/tag/merge-key based; applications needing vector or BM25 search must supply a richer backend.",
+        "sources": [
+          "engram_design",
+          "memory",
+          "sqlite",
+          "postgres"
+        ]
+      },
+      {
+        "text": "The protocol carries context_ref and describes it as scope context, but the shipped backend records and queries do not independently provide tenant authorization. Isolation and access control depend on custom backend and hosting code.",
+        "sources": [
+          "engram_design",
+          "memory",
+          "sqlite",
+          "postgres"
+        ]
+      },
+      {
+        "text": "SQL delete is a logical deleted_at mark and the in-memory store is ephemeral. The review did not verify physical erasure, backup retention, SQL transactions under failure, or behavior across all merge/replay edge cases.",
+        "sources": [
+          "memory",
+          "sqlite",
+          "postgres"
+        ]
+      },
+      {
+        "text": "No Cosmonapse runtime, tests, or benchmark fixture was executed. The review cannot establish correctness under load, retrieval quality, deployed isolation, latency, costs, or storage efficiency.",
+        "sources": [
+          "metrics",
+          "fixture",
+          "result"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Cosmonapse runtime, tests, or benchmark workload was executed. Source inspection and upstream design statements are not project measurements.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    }
+  }
+}

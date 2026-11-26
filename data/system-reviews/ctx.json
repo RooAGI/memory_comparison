@@ -1,0 +1,332 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 174,
+    "slug": "ctx",
+    "name": "ctx",
+    "repository": "https://github.com/ActiveMemory/ctx",
+    "branch": "main",
+    "revision": "a0058eacc06a4e2a5423aafbdfdd927966d078ca",
+    "reviewed_at": "2026-11-25T22:21:18Z",
+    "review_timezone": "UTC",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/ActiveMemory/ctx/blob/a0058eacc06a4e2a5423aafbdfdd927966d078ca/README.md",
+      "checked_urls": [
+        "https://github.com/ActiveMemory/ctx/blob/a0058eacc06a4e2a5423aafbdfdd927966d078ca/README.md"
+      ],
+      "note": "No contact email was found in the checked official README; no account, commit, or third-party metadata was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/ActiveMemory/ctx/blob/a0058eacc06a4e2a5423aafbdfdd927966d078ca/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/ActiveMemory/ctx/blob/a0058eacc06a4e2a5423aafbdfdd927966d078ca/README.md"
+    ],
+    "contact_email_note": "No contact email was found in the checked official README.",
+    "summary": "ActiveMemory/ctx is a file based context system for coding assistants. Its Go CLI manages project-local .context/ Markdown files for tasks, decisions, learnings, conventions, session journals, and knowledge workflows. This is a selected source review, not a runtime or benchmark result.",
+    "atlas_locator": {
+      "ordinal": 174,
+      "name": "ctx",
+      "slug": "ctx",
+      "listed_repository": "https://github.com/ActiveMemory/ctx",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/ctx.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Curated system catalog",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 174 identity, slug and listed locator",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster attribution only",
+        "path": "content/systems/ctx.md",
+        "symbol": "identity and locator attribution only; not implementation evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/ctx.md"
+      },
+      {
+        "id": "repo",
+        "label": "Official ActiveMemory/ctx repository",
+        "path": "repository page",
+        "symbol": "listed locator opens this repository; default branch main",
+        "url": "https://github.com/ActiveMemory/ctx"
+      },
+      {
+        "id": "history",
+        "label": "Official main branch commit feed",
+        "path": "commits/main.atom",
+        "symbol": "full current head and feed update timestamp",
+        "url": "https://github.com/ActiveMemory/ctx/commits/main.atom"
+      },
+      {
+        "id": "head",
+        "label": "Verified reviewed head commit",
+        "path": "commit",
+        "symbol": "a0058eacc06a4e2a5423aafbdfdd927966d078ca",
+        "url": "https://github.com/ActiveMemory/ctx/commit/a0058eacc06a4e2a5423aafbdfdd927966d078ca"
+      },
+      {
+        "id": "other_ctx_open",
+        "label": "Separate ctx-open repository",
+        "path": "README.md",
+        "symbol": "separate repository at its reviewed revision; not a redirect target or assessment source",
+        "url": "https://github.com/diegoxtr/ctx-open/blob/c31d84e07c830f2d126f780f65ad2b0228fe54eb/README.md"
+      },
+      {
+        "id": "readme",
+        "label": "Official ActiveMemory/ctx README",
+        "path": "README.md",
+        "symbol": "file based model, project boundary, CLI, install, knowledge workflows and license",
+        "url": "https://github.com/ActiveMemory/ctx/blob/a0058eacc06a4e2a5423aafbdfdd927966d078ca/README.md"
+      },
+      {
+        "id": "context",
+        "label": "Context command reference",
+        "path": "docs/cli/context.md",
+        "symbol": "Markdown targets, typed writes, provenance fields, archive/snapshot and cleanup commands",
+        "url": "https://github.com/ActiveMemory/ctx/blob/a0058eacc06a4e2a5423aafbdfdd927966d078ca/docs/cli/context.md"
+      },
+      {
+        "id": "journal",
+        "label": "Journal command reference",
+        "path": "docs/cli/journal.md",
+        "symbol": "session discovery, imports, user edits, lock behavior and retrieval commands",
+        "url": "https://github.com/ActiveMemory/ctx/blob/a0058eacc06a4e2a5423aafbdfdd927966d078ca/docs/cli/journal.md"
+      },
+      {
+        "id": "dream_guard",
+        "label": "Dream write-scope guard",
+        "path": "internal/dream/guard.go",
+        "symbol": "selected code inspection of sanctioned paths and promotion exception",
+        "url": "https://github.com/ActiveMemory/ctx/blob/a0058eacc06a4e2a5423aafbdfdd927966d078ca/internal/dream/guard.go"
+      },
+      {
+        "id": "metrics_doc",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "evaluation domains; no ctx measurements",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "status",
+        "label": "Shared benchmark execution status",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "project execution status; not a ctx result",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Planned benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "workload specification only; not run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The target is the explicitly listed ActiveMemory/ctx repository, a public file based Go project whose README describes context persistence for coding assistants and publishes an Apache-2.0 license. No contact email was found in the checked README.",
+        "sources": [
+          "catalog",
+          "repo",
+          "readme"
+        ]
+      },
+      {
+        "text": "The separate diegoxtr/ctx-open repository has a different README and implementation. The listed ActiveMemory URL did not redirect there; the earlier article had conflated the two catalog records.",
+        "sources": [
+          "repo",
+          "other_ctx_open"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "The README and CLI reference describe project-local .context/ Markdown files as the storage surface. Task, decision, learning and convention commands map to TASKS.md, DECISIONS.md, LEARNINGS.md and CONVENTIONS.md; commands resolve the project from the current working directory and require Git.",
+        "sources": [
+          "readme",
+          "context"
+        ]
+      },
+      {
+        "text": "The journal command imports supported assistant transcripts into editable files under .context/journal/. The reference documents incremental import, growth detection, preservation of edited entries, and optional entry locks.",
+        "sources": [
+          "journal"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Write: typed CLI commands add tasks, decisions, learnings and conventions to named Markdown files. The reference documents provenance fields including session ID, branch and commit, plus structured decision and learning fields.",
+        "sources": [
+          "context"
+        ]
+      },
+      {
+        "text": "Update and cleanup: the reference documents task completion, archive and snapshot operations, formatting, sync and drift checks. Journal import checks for edits before rewriting grown transcripts and supports locks. The inspected references do not establish a general deletion API or that every edit retains prior values.",
+        "sources": [
+          "context",
+          "journal"
+        ]
+      },
+      {
+        "text": "Retrieval: the README demonstrates ctx agent --budget to produce an AI-ready context packet. Journal commands list, filter, and show session records. Retrieval ranking and recall quality were not established by these selected sources.",
+        "sources": [
+          "readme",
+          "journal"
+        ]
+      },
+      {
+        "text": "Scope and provenance: documented CLI context is rooted at the current project and its .context directory; context entries can record session ID, branch and commit. The selected dream code has a path write guard for dreams/ and ideas/, with a promotion exception for specs/. This does not prove read isolation, general authorization, or runtime enforcement across every write path.",
+        "sources": [
+          "readme",
+          "context",
+          "dream_guard"
+        ]
+      },
+      {
+        "text": "Evidence and efficiency: structured fields and imported transcripts can retain source context, and the CLI offers a context packet budget. These mechanisms do not validate the truth of stored claims. No latency, token, cost, or storage measurement was collected.",
+        "sources": [
+          "context",
+          "journal",
+          "readme",
+          "metrics_doc",
+          "status",
+          "fixture"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "domain": "Answerable retrieval accuracy and abstention",
+        "status": "unmeasured",
+        "evidence": "Context packet and journal retrieval commands are documented; no retrieval or abstention probes were run.",
+        "sources": [
+          "readme",
+          "journal",
+          "metrics_doc",
+          "status"
+        ]
+      },
+      {
+        "domain": "Correction accuracy and stale-value rate",
+        "status": "unmeasured",
+        "evidence": "Edit, sync, drift, and journal protection behavior are documented; no correction workload was run.",
+        "sources": [
+          "context",
+          "journal",
+          "metrics_doc",
+          "status"
+        ]
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "The inspected references describe archival and snapshots but do not establish general deletion behavior; no deletion workload was run.",
+        "sources": [
+          "context",
+          "metrics_doc",
+          "status"
+        ]
+      },
+      {
+        "domain": "Scope isolation leak rate",
+        "status": "unmeasured",
+        "evidence": "The README describes a current-project .context boundary and selected dream code has write guards; no cross-project probe was run.",
+        "sources": [
+          "readme",
+          "dream_guard",
+          "metrics_doc",
+          "status"
+        ]
+      },
+      {
+        "domain": "Evidence support and citation coverage",
+        "status": "unmeasured",
+        "evidence": "Entries can carry provenance metadata; no claim-to-source adjudication was run.",
+        "sources": [
+          "context",
+          "metrics_doc",
+          "status"
+        ]
+      },
+      {
+        "domain": "Retrieval latency",
+        "status": "unmeasured",
+        "evidence": "No timed retrieval workload or latency distribution was collected.",
+        "sources": [
+          "readme",
+          "metrics_doc",
+          "status"
+        ]
+      },
+      {
+        "domain": "Write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "Writes and context packet generation are documented; searchable-after-write timing was not measured.",
+        "sources": [
+          "context",
+          "readme",
+          "metrics_doc",
+          "status"
+        ]
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "The CLI exposes a context budget; no token or provider-cost results were collected.",
+        "sources": [
+          "readme",
+          "metrics_doc",
+          "status"
+        ]
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "Markdown file storage is documented; no bytes-per-item or storage footprint measurement was made.",
+        "sources": [
+          "context",
+          "journal",
+          "metrics_doc",
+          "status"
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "text": "This record is based on selected pinned documentation and one code file. It does not establish behavior across the full codebase, runtime correctness, or robustness under concurrency and failure.",
+        "sources": [
+          "readme",
+          "context",
+          "journal",
+          "dream_guard"
+        ]
+      },
+      {
+        "text": "The reviewed README documents local project files and current-directory scoping. The review did not establish a multi-user authorization boundary or read isolation.",
+        "sources": [
+          "readme",
+          "dream_guard"
+        ]
+      },
+      {
+        "text": "No ctx workload, tests or benchmarks were executed. All metric domains remain unmeasured.",
+        "sources": [
+          "metrics_doc",
+          "status",
+          "fixture"
+        ]
+      }
+    ],
+    "project_benchmark_results": {
+      "status": "not_measured",
+      "note": "No ctx runtime, tests, or benchmark workloads were executed for this source review."
+    }
+  }
+}

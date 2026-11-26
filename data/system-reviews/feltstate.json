@@ -1,0 +1,295 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "slug": "feltstate",
+    "name": "feltstate",
+    "repository": "https://github.com/Morephine/feltstate",
+    "branch": "main",
+    "revision": "39f32e4ac30427871a71bfeafa3efa3c64598e5e",
+    "reviewed_at": "2026-11-25T20:19:23Z",
+    "review_timezone": "UTC (2026-11-25 12:19:23 PST; America/Los_Angeles)",
+    "source_status": "reviewed_from_code",
+    "benchmark_status": "not_run",
+    "summary": "Feltstate is a local Python reference library that pairs a structured, decaying fact store with optional provenance, lifecycle, and affect mechanisms. This source review records implementation observations, not measured quality or performance.",
+    "ordinal": 236,
+    "listed_repository": "https://github.com/Morephine/feltstate",
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/Morephine/feltstate/blob/39f32e4ac30427871a71bfeafa3efa3c64598e5e/SECURITY.md",
+    "contact_email_checked_sources": [
+      "https://github.com/Morephine/feltstate/blob/39f32e4ac30427871a71bfeafa3efa3c64598e5e/README.md",
+      "https://github.com/Morephine/feltstate/blob/39f32e4ac30427871a71bfeafa3efa3c64598e5e/SECURITY.md"
+    ],
+    "contact_email_note": "No published contact email was found in the official pinned README or SECURITY.md. SECURITY.md directs vulnerability reports through GitHub private security advisories. No commit/profile metadata or third-party directory was used.",
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/Morephine/feltstate/blob/39f32e4ac30427871a71bfeafa3efa3c64598e5e/SECURITY.md",
+      "checked_urls": [
+        "https://github.com/Morephine/feltstate/blob/39f32e4ac30427871a71bfeafa3efa3c64598e5e/README.md",
+        "https://github.com/Morephine/feltstate/blob/39f32e4ac30427871a71bfeafa3efa3c64598e5e/SECURITY.md"
+      ],
+      "note": "Checked only the official pinned repository README and SECURITY.md; no email was published."
+    },
+    "atlas_locator": {
+      "ordinal": 236,
+      "name": "feltstate",
+      "slug": "feltstate",
+      "listed_repository": "https://github.com/Morephine/feltstate",
+      "listed_revision": "3a9f7f528ce8ea481a11d87ab3454044401de9e1",
+      "listed_revision_status": "pinned",
+      "listed_revision_url": "https://github.com/Morephine/feltstate/commit/3a9f7f528ce8ea481a11d87ab3454044401de9e1",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/feltstate.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0",
+      "use": "Curated identity and locator attribution only; not assessment evidence."
+    },
+    "sources": [
+      {
+        "id": "repo",
+        "label": "Canonical public GitHub repository and default branch",
+        "path": "repository",
+        "symbol": "Morephine/feltstate; default branch main",
+        "url": "https://github.com/Morephine/feltstate"
+      },
+      {
+        "id": "head-api",
+        "label": "Official current main commit API",
+        "path": "commits/main",
+        "symbol": "full SHA 39f32e4ac30427871a71bfeafa3efa3c64598e5e",
+        "url": "https://api.github.com/repos/Morephine/feltstate/commits/main"
+      },
+      {
+        "id": "head",
+        "label": "Reviewed current main head",
+        "path": "commit",
+        "symbol": "full SHA 39f32e4ac30427871a71bfeafa3efa3c64598e5e",
+        "url": "https://github.com/Morephine/feltstate/commit/39f32e4ac30427871a71bfeafa3efa3c64598e5e"
+      },
+      {
+        "id": "readme",
+        "label": "Official project README",
+        "path": "README.md",
+        "symbol": "architecture, memory design, lifecycle, scope, and stated limits",
+        "url": "https://github.com/Morephine/feltstate/blob/39f32e4ac30427871a71bfeafa3efa3c64598e5e/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Official security policy",
+        "path": "SECURITY.md",
+        "symbol": "local-storage limits, external data handling, deletion guarantees and contact check",
+        "url": "https://github.com/Morephine/feltstate/blob/39f32e4ac30427871a71bfeafa3efa3c64598e5e/SECURITY.md"
+      },
+      {
+        "id": "canon",
+        "label": "Structured fact store",
+        "path": "feltstate/memory/canon.py",
+        "symbol": "Canon; JSONL persistence, salience, corrections, retrieval and scope API",
+        "url": "https://github.com/Morephine/feltstate/blob/39f32e4ac30427871a71bfeafa3efa3c64598e5e/feltstate/memory/canon.py"
+      },
+      {
+        "id": "extract",
+        "label": "Optional fact proposal pipeline",
+        "path": "feltstate/memory/extract.py",
+        "symbol": "FactExtractor, LLMFactExtractor, commit_to_canon",
+        "url": "https://github.com/Morephine/feltstate/blob/39f32e4ac30427871a71bfeafa3efa3c64598e5e/feltstate/memory/extract.py"
+      },
+      {
+        "id": "context",
+        "label": "Transcript context resolver",
+        "path": "feltstate/memory/context.py",
+        "symbol": "get_turn_context, get_turn_range_context",
+        "url": "https://github.com/Morephine/feltstate/blob/39f32e4ac30427871a71bfeafa3efa3c64598e5e/feltstate/memory/context.py"
+      },
+      {
+        "id": "keyweb",
+        "label": "Word-key relation and chain retrieval",
+        "path": "feltstate/memory/keyweb.py",
+        "symbol": "digest_canon, key_hits, walk_edges, chain",
+        "url": "https://github.com/Morephine/feltstate/blob/39f32e4ac30427871a71bfeafa3efa3c64598e5e/feltstate/memory/keyweb.py"
+      },
+      {
+        "id": "reaper",
+        "label": "Lifecycle physical deletion and recovery",
+        "path": "feltstate/memory/lifecycle/reaper.py",
+        "symbol": "execute and replay_if_pending; tombstone-first cascade",
+        "url": "https://github.com/Morephine/feltstate/blob/39f32e4ac30427871a71bfeafa3efa3c64598e5e/feltstate/memory/lifecycle/reaper.py"
+      },
+      {
+        "id": "roster",
+        "label": "Curated roster ordinal and Atlas attribution",
+        "path": "data/memory-systems.json",
+        "symbol": "ordinal 236 identity, explicit repository locator, pinned Atlas source attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "atlas",
+        "label": "Pinned Atlas roster attribution (identity and locator only)",
+        "path": "content/systems/feltstate.md",
+        "symbol": "catalog attribution; not used as assessment evidence",
+        "url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/feltstate.md"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "record",
+        "label": "Project benchmark execution-status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "shared not_run status; no Feltstate measurements",
+        "url": "../results/initial-baselines-status.json"
+      },
+      {
+        "id": "fixture",
+        "label": "Project benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "planned workload only; not executed in this review",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      }
+    ],
+    "who_what": [
+      {
+        "text": "The official README describes a Python reference library for companion agents, combining persistent affect and structured memory with optional lifecycle and integration modules. It is a public source repository, not a hosted service. The README disclaims claims about consciousness and human-like emotion.",
+        "sources": [
+          "repo",
+          "readme",
+          "roster",
+          "atlas"
+        ]
+      }
+    ],
+    "architecture": [
+      {
+        "text": "Canon persists compact structured 5W1H records as JSON Lines in confirmed, pending, and archived files. It computes current salience from intensity, age, reinforcement, and recall counts; the optional archive has a configurable cap. The package also supplies optional extraction, transcript context, affect, key-web, skill, lifecycle, and dashboard modules.",
+        "sources": [
+          "canon",
+          "readme",
+          "context"
+        ]
+      },
+      {
+        "text": "The current canonical repository is Morephine/feltstate. GitHub identifies main as the default branch; the official commits API resolves its current head to 39f32e4ac30427871a71bfeafa3efa3c64598e5e. Review time: 2026-11-25 20:19:23 UTC (12:19:23 PST; America/Los_Angeles).",
+        "sources": [
+          "repo",
+          "head-api",
+          "head"
+        ]
+      }
+    ],
+    "behavior": [
+      {
+        "text": "Explicit add/ask operations write or stage a fact; entries deduplicate by actor/object and repeated entries reinforce the record. Correction supersedes a prior row, retraction retains an audit record, and a separate optional extractor proposes facts for confirmation through the pending tier.",
+        "sources": [
+          "canon",
+          "extract"
+        ]
+      },
+      {
+        "text": "Lifecycle deletion is a distinct physical-removal path: the reaper fsyncs a pending plan, appends a transaction-keyed legal_death tombstone before deleting rows from supplied stores and snapshots, then clears the plan. Replay is idempotent. Source material is only marked eligible, and snapshots not supplied to the reaper are outside its reach.",
+        "sources": [
+          "readme",
+          "reaper",
+          "security"
+        ]
+      },
+      {
+        "text": "Retrieval includes lexical search and salience-scored recall; temporal history can answer as-of queries. The optional key web stores word keys and judged edges on rows, admits candidates during a one-time write-side collision pass, and reconstructs related facts by query-key hits, edge walking, and event-time ordering.",
+        "sources": [
+          "canon",
+          "keyweb"
+        ]
+      },
+      {
+        "text": "The inspected API exposes region and optional actor filters, but no tenant/user/session boundary was established in the store. The application must separate store and transcript paths to obtain deployment-level isolation.",
+        "sources": [
+          "canon",
+          "readme"
+        ]
+      },
+      {
+        "text": "Optional fingerprints, source pointers, fusion lineage, and transcript-context resolvers can connect a distilled memory to source turns. Resolution requires caller-owned records and a loader; hash checking does not retrieve source material. This review did not establish that every memory write carries evidence pointers.",
+        "sources": [
+          "readme",
+          "extract",
+          "context",
+          "reaper"
+        ]
+      },
+      {
+        "text": "Source-visible efficiency and observability: the default Canon reloads flat files on each O(n) operation and uses lexical scoring; compaction bounds the archive, while key-web collision work runs once per new record. The code logs when cross-process locking is unavailable and the README describes a read-only dashboard. These are implementation surfaces, not runtime measurements.",
+        "sources": [
+          "canon",
+          "keyweb",
+          "readme"
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "text": "Answerable retrieval and abstention are unmeasured. Lexical recall and key-web retrieval exist in source; no probes were run.",
+        "sources": [
+          "canon",
+          "keyweb",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Correction accuracy and stale-value rate are unmeasured. Supersession and temporal history are visible in source; no correction probes were run.",
+        "sources": [
+          "canon",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Deletion leakage is unmeasured. Source documents a tombstone-first deletion path with explicit limits; no post-delete workload ran.",
+        "sources": [
+          "reaper",
+          "security",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Scope-isolation leakage is unmeasured. The inspected API offers region and actor filters but no tenant boundary; no cross-scope probes ran.",
+        "sources": [
+          "canon",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Evidence support and citation coverage are unmeasured. Optional provenance and transcript resolution are present; no generated claims were scored against sources.",
+        "sources": [
+          "readme",
+          "context",
+          "metrics",
+          "record"
+        ]
+      },
+      {
+        "text": "Latency, write-to-recall delay, tokens, cost, and storage efficiency are unmeasured. No system or benchmark workload was run; the fixture is a planned workload only.",
+        "sources": [
+          "metrics",
+          "record",
+          "fixture"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "note": "No Feltstate runtime, tests, or benchmark workload was run. Source observations are not results and no metric values were produced.",
+      "metric_definitions": "../METRICS.md",
+      "execution_status_record": "../results/initial-baselines-status.json",
+      "fixture": "../fixtures/memory-benchmark-v1.json"
+    },
+    "limits": [
+      "This is a bounded read-only review of the pinned README, security policy, and selected current Canon, extraction, context, key-web, and deletion source. Other modules and edge cases were not exhaustively traced.",
+      "No system, tests, or benchmark workload was executed. Runtime correctness, retrieval quality, abstention, tenant isolation in the host application, crash recovery, and metric values remain unverified.",
+      "The default flat-file store is aimed at one companion's modest fact corpus. Fleet-scale storage, semantic retrieval, and cross-user isolation require additional application or storage design.",
+      "Source-pointer resolution depends on the caller retaining fingerprint data and source transcripts and supplying a loader. The reaper does not purge source archives, snapshots it is not given, or external backups; deletion is not cryptographic erasure.",
+      "The README describes affect dynamics as configurable design parameters rather than quantities fitted to human measurements."
+    ]
+  }
+}

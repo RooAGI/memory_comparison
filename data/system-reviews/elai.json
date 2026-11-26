@@ -1,0 +1,201 @@
+{
+  "schema_version": "1.0.0",
+  "article": {
+    "ordinal": 210,
+    "slug": "elai",
+    "name": "ELAI",
+    "repository": "https://github.com/DITlieD/ELAI-archive",
+    "listed_repository": "https://github.com/DITlieD/ELAI-archive",
+    "branch": "not verified",
+    "revision": "not verified",
+    "reviewed_at": "2026-11-25T12:20:02Z",
+    "review_timezone": "UTC (2026-11-25 04:20:02 PST; America/Los_Angeles)",
+    "source_status": "not_reviewed",
+    "benchmark_status": "not_run",
+    "summary": "ELAI could not be source-reviewed because its listed official GitHub repository and checked endpoints returned not found. Current branch, head SHA, implementation, and published contact remain unverified; no implementation or benchmark claims are made.",
+    "atlas_locator": {
+      "ordinal": 210,
+      "name": "ELAI",
+      "slug": "elai",
+      "listed_repository": "https://github.com/DITlieD/ELAI-archive",
+      "repository_status": "explicit",
+      "source_url": "https://github.com/neoneye/agent-memory-atlas/blob/19199a4fc249e89c0793be06f0b166b358089ba0/content/systems/elai.md",
+      "revision": "19199a4fc249e89c0793be06f0b166b358089ba0"
+    },
+    "contact": {
+      "email": null,
+      "source_url": "https://github.com/DITlieD/ELAI-archive/blob/main/README.md",
+      "checked_urls": [
+        "https://github.com/DITlieD/ELAI-archive",
+        "https://api.github.com/repos/DITlieD/ELAI-archive",
+        "https://github.com/DITlieD/ELAI-archive/blob/main/README.md",
+        "https://github.com/DITlieD/ELAI-archive/blob/main/SECURITY.md",
+        "https://github.com/DITlieD/ELAI-archive/commits/main.atom",
+        "https://github.com/DITlieD/ELAI-archive/commit/26bf2bc72d030a2d5ec022f04e1f9603bb285ae1"
+      ],
+      "note": "Official README returned Page not found; contact could not be verified. No address was inferred and no profile or third-party source was used."
+    },
+    "contact_email": null,
+    "contact_email_source_url": "https://github.com/DITlieD/ELAI-archive/blob/main/README.md",
+    "contact_email_checked_sources": [
+      "https://github.com/DITlieD/ELAI-archive",
+      "https://api.github.com/repos/DITlieD/ELAI-archive",
+      "https://github.com/DITlieD/ELAI-archive/blob/main/README.md",
+      "https://github.com/DITlieD/ELAI-archive/blob/main/SECURITY.md",
+      "https://github.com/DITlieD/ELAI-archive/commits/main.atom",
+      "https://github.com/DITlieD/ELAI-archive/commit/26bf2bc72d030a2d5ec022f04e1f9603bb285ae1"
+    ],
+    "contact_email_note": "Official README was unavailable (Page not found); no contact email could be verified.",
+    "review_blocker": {
+      "reason": "Official repository page/API, README, SECURITY.md, main commit feed, and catalog-pinned commit page returned not found. Read-only git ls-remote could not obtain refs. Canonical current repository state, default branch, current full SHA, implementation, and a published contact email could not be verified. The catalog pin is retained as roster attribution only.",
+      "evidence_urls": [
+        "https://github.com/DITlieD/ELAI-archive",
+        "https://api.github.com/repos/DITlieD/ELAI-archive",
+        "https://github.com/DITlieD/ELAI-archive/blob/main/README.md",
+        "https://github.com/DITlieD/ELAI-archive/blob/main/SECURITY.md",
+        "https://github.com/DITlieD/ELAI-archive/commits/main.atom",
+        "https://github.com/DITlieD/ELAI-archive/commit/26bf2bc72d030a2d5ec022f04e1f9603bb285ae1"
+      ]
+    },
+    "sources": [
+      {
+        "id": "catalog",
+        "label": "Catalog identity and listed repository",
+        "path": "data/memory-systems.json",
+        "symbol": "Ordinal 210 ELAI identity and roster attribution",
+        "url": "../data/memory-systems.json"
+      },
+      {
+        "id": "repository",
+        "label": "Official listed repository",
+        "path": "repository page",
+        "symbol": "Page not found",
+        "url": "https://github.com/DITlieD/ELAI-archive"
+      },
+      {
+        "id": "api",
+        "label": "Official repository API",
+        "path": "repository metadata endpoint",
+        "symbol": "HTTP 404 Not Found",
+        "url": "https://api.github.com/repos/DITlieD/ELAI-archive"
+      },
+      {
+        "id": "readme",
+        "label": "Official README checked for contact",
+        "path": "README.md",
+        "symbol": "Page not found; no source contents or email available",
+        "url": "https://github.com/DITlieD/ELAI-archive/blob/main/README.md"
+      },
+      {
+        "id": "security",
+        "label": "Official SECURITY.md checked for contact",
+        "path": "SECURITY.md",
+        "symbol": "Page not found",
+        "url": "https://github.com/DITlieD/ELAI-archive/blob/main/SECURITY.md"
+      },
+      {
+        "id": "feed",
+        "label": "Official main commit feed",
+        "path": "commits/main.atom",
+        "symbol": "Not Found; default branch and SHA not verified",
+        "url": "https://github.com/DITlieD/ELAI-archive/commits/main.atom"
+      },
+      {
+        "id": "pinned",
+        "label": "Catalog-pinned commit page",
+        "path": "catalog revision",
+        "symbol": "Page not found; not treated as a current source pin",
+        "url": "https://github.com/DITlieD/ELAI-archive/commit/26bf2bc72d030a2d5ec022f04e1f9603bb285ae1"
+      },
+      {
+        "id": "metrics",
+        "label": "Project metric definitions",
+        "path": "METRICS.md",
+        "symbol": "Definitions only",
+        "url": "../METRICS.md"
+      },
+      {
+        "id": "fixture",
+        "label": "Benchmark fixture",
+        "path": "fixtures/memory-benchmark-v1.json",
+        "symbol": "Not run",
+        "url": "../fixtures/memory-benchmark-v1.json"
+      },
+      {
+        "id": "result",
+        "label": "Benchmark status record",
+        "path": "results/initial-baselines-status.json",
+        "symbol": "No ELAI result",
+        "url": "../results/initial-baselines-status.json"
+      }
+    ],
+    "who_what": [],
+    "sections": [],
+    "metrics": [
+      {
+        "domain": "Answerable recall and abstention",
+        "status": "unmeasured",
+        "evidence": "No ELAI source or runtime evidence was available."
+      },
+      {
+        "domain": "Correction and staleness",
+        "status": "unmeasured",
+        "evidence": "No ELAI source or runtime evidence was available."
+      },
+      {
+        "domain": "Deletion leakage",
+        "status": "unmeasured",
+        "evidence": "No ELAI source or runtime evidence was available."
+      },
+      {
+        "domain": "Scope isolation",
+        "status": "unmeasured",
+        "evidence": "No ELAI source or runtime evidence was available."
+      },
+      {
+        "domain": "Evidence and citation support",
+        "status": "unmeasured",
+        "evidence": "No ELAI source or runtime evidence was available."
+      },
+      {
+        "domain": "Latency and write-to-recall delay",
+        "status": "unmeasured",
+        "evidence": "No ELAI source or runtime evidence was available."
+      },
+      {
+        "domain": "Tokens and cost",
+        "status": "unmeasured",
+        "evidence": "No ELAI source or runtime evidence was available."
+      },
+      {
+        "domain": "Storage efficiency",
+        "status": "unmeasured",
+        "evidence": "No ELAI source or runtime evidence was available."
+      }
+    ],
+    "limits": [
+      {
+        "text": "Official repository page/API, README, SECURITY.md, main commit feed, and catalog-pinned commit page returned not found. Read-only git ls-remote could not obtain refs. Canonical current repository state, default branch, current full SHA, implementation, and a published contact email could not be verified. The catalog pin is retained as roster attribution only.",
+        "sources": [
+          "repository",
+          "api",
+          "readme",
+          "security",
+          "feed",
+          "pinned"
+        ]
+      }
+    ],
+    "benchmark": {
+      "status": "not_run",
+      "result_record": "results/initial-baselines-status.json",
+      "fixture": "fixtures/memory-benchmark-v1.json",
+      "note": "ELAI could not be source-reviewed or run; no benchmark was run.",
+      "sources": [
+        "metrics",
+        "fixture",
+        "result"
+      ]
+    }
+  }
+}
