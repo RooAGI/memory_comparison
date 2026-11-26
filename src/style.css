@@ -51,6 +51,9 @@ h1,h2,h3,p{margin-top:0}
 .search-field>span:first-child{font-size:1.35rem;color:var(--blue)}
 .search-field input{width:100%;border:0;background:transparent;font:inherit;color:var(--ink);outline:0}
 .filter-field{display:flex;align-items:center;gap:9px;font-size:.83rem;color:var(--muted)}
+.reset-filters{height:44px;padding:0 12px;border:1px solid #9eabc0;background:var(--surface);color:var(--blue);font:inherit;cursor:pointer}
+.reset-filters:hover{background:#e8edf5}
+.reset-filters:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
 select{font:inherit;color:var(--ink);background:var(--surface);border:1px solid #9eabc0;padding:10px}
 .result-count{font:400 .72rem var(--mono);color:var(--muted);margin:0 0 0 auto}
 .article-row{display:grid;grid-template-columns:48px minmax(0,1fr) 205px;gap:18px;padding:23px 0;border-bottom:1px solid var(--line)}
