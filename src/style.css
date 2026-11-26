@@ -25,7 +25,7 @@ a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(-
 .site{min-height:100vh;display:flex;flex-direction:column}
 .topbar{min-height:72px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 max(5vw,24px);gap:24px;background:#fff}
 .wordmark{text-decoration:none;font-weight:800;letter-spacing:-.045em;display:flex;align-items:center;gap:12px}
-.mark{display:grid;place-items:center;width:32px;height:32px;background:var(--blue);color:#fff;font:800 17px/1 var(--mono);transform:rotate(-3deg)}
+.brand-logo{display:block;width:40px;height:40px;object-fit:contain;border-radius:9px}
 .topbar nav{display:flex;gap:7px;font-size:.9rem}
 .topbar nav a{text-decoration:none;color:#4c5c72;padding:10px 12px;border-bottom:2px solid transparent}
 .topbar nav a:hover,.topbar nav a[aria-current=page]{color:var(--blue-dark);border-color:var(--blue)}
